@@ -1,0 +1,560 @@
+BASE "ARM5e_Core_Character" {
+    NAME "Ars Magica 5th Edition Definitive - Character creation, Houses, and Virtue/Flaw framework"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+
+    # Core Rulebook: Character creation process, Characteristic buying,
+    # experience allocation, Hermetic Houses, Virtue & Flaw rules.
+
+    # ===========================
+    # CHARACTER CREATION FRAMEWORK
+    # ===========================
+
+    ^"Character Creation" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+
+        # Detailed Character Creation Summary:
+        # 1. Pick a character concept
+        # 2. Magi only: Pick a House
+        # 3. Pick Virtues and Flaws (balanced points)
+        # 4. Buy Characteristics (7 points)
+        # 5. Early Childhood (75 XP native language + 45 XP childhood skills)
+        # 6. Later Life (15 XP/year in Abilities)
+        # 7. Magi only: Apprenticeship (240 XP Arts/Abilities + 120 spell levels)
+        # 8. Magi only: Years after apprenticeship (30 pts/year)
+        # 9. Personality Traits
+        # 10. Reputations (if granted by V&F)
+        # 11. Confidence (Companions and Magi only)
+        # 12. Equipment
+
+        RULES {
+            #ARM200aB2cD4eF6gH8iJ0kL: creation_step_1_concept
+            #ARM201mN3oP5qR7sT9uV1wX: creation_step_4_buy_characteristics
+            #ARM202yZ4aB6cD8eF0gH2iJ: creation_step_5_early_childhood
+            #ARM203kL5mN7oP9qR1sT3uV: creation_step_6_later_life
+        }
+    }
+
+    ^"Characteristic Buying" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+
+        # Start with 7 points. All characters use the same table.
+        # Score +3 costs 6, +2 costs 3, +1 costs 1, 0 costs 0,
+        # -1 gains 1, -2 gains 3, -3 gains 6.
+        # For magi: Intelligence is central to lab work, Stamina
+        # important for spellcasting, Communication for writing books.
+
+        COST_TABLE {
+            "+3" COST 6
+            "+2" COST 3
+            "+1" COST 1
+            "0" COST 0
+            "-1" GAIN 1
+            "-2" GAIN 3
+            "-3" GAIN 6
+        }
+
+        PROPERTIES {
+            ^"Starting Points" INTEGER 7
+        }
+
+        RULES {
+            #ARM204wX6yZ8aB0cD2eF4gH: seven_points_to_spend
+            #ARM205iJ7kL9mN1oP3qR5sT: negative_scores_gain_points
+        }
+    }
+
+    ^"Early Childhood" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+
+        # All characters receive:
+        # - 75 XP in native language (normally granting score 5)
+        # - 45 XP spread among: Area Lore, Athletics, Awareness,
+        #   Brawl, Charm, Folk Ken, Guile, Living Language (other
+        #   than native), Stealth, Survival, Swim
+
+        PROPERTIES {
+            ^"Native Language XP" INTEGER 75
+            ^"Childhood XP" INTEGER 45
+        }
+
+        RULES {
+            #ARM206uV8wX0yZ2aB4cD6eF: native_language_75_xp
+            #ARM207gH9iJ1kL3mN5oP7qR: childhood_skills_45_xp
+        }
+    }
+
+    ^"Later Life" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+
+        # 15 XP per year after early childhood (until apprenticeship
+        # for magi). Spread between any Abilities the character can
+        # learn based on Virtues and Flaws.
+        # Characters with Wealthy Major Virtue get 20 XP/year.
+        # Characters with Poor Major Flaw get 10 XP/year.
+
+        PROPERTIES {
+            ^"XP Per Year" INTEGER 15
+            ^"Wealthy XP Per Year" INTEGER 20
+            ^"Poor XP Per Year" INTEGER 10
+        }
+
+        RULES {
+            #ARM208sT0uV2wX4yZ6aB8cD: fifteen_xp_per_year_default
+            #ARM209eF1gH3iJ5kL7mN9oP: wealthy_twenty_xp_per_year
+            #ARM210pQ2rS4tU6vW8xY0zA: poor_ten_xp_per_year
+        }
+    }
+
+    # ===========================
+    # MAGUS-SPECIFIC CREATION
+    # ===========================
+
+    ^"Apprenticeship" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Magi undergo a 15-year apprenticeship. During this time:
+        # - 240 XP divided between Hermetic Arts and non-Supernatural
+        #   Abilities (or Supernatural Abilities if magus has relevant Virtue)
+        # - 120 levels of spells, no single spell higher than
+        #   Technique + Form + Intelligence + Magic Theory + 3
+        # - Apply relevant Virtues and Flaws when calculating max spell level
+
+        PROPERTIES {
+            ^"Duration" STRING "15 years"
+            ^"Apprenticeship XP" INTEGER 240
+            ^"Starting Spell Levels" INTEGER 120
+        }
+
+        RULES {
+            #ARM211bC3dE5fG7hI9jK1lM: apprenticeship_240_xp
+            #ARM212mN4oP6qR8sT0uV2wX: starting_spells_120_levels
+            #ARM213xY5zA7bC9dE1fG3hI: max_spell_level_te_plus_fo_plus_int_plus_mt_plus_3
+        }
+    }
+
+    ^"Post-Apprenticeship" DEF {
+        APPLIES TO [^"Magus"]
+
+        # For experienced magi, each year after apprenticeship grants
+        # 30 points divided between: XP in Arts, XP in Abilities,
+        # and levels of spells (same level limit as apprenticeship).
+
+        PROPERTIES {
+            ^"Points Per Year" INTEGER 30
+        }
+
+        RULES {
+            #ARM214iJ6kL8mN0oP2qR4sT: thirty_points_per_year_post_apprenticeship
+        }
+    }
+
+    # ===========================
+    # VIRTUE AND FLAW FRAMEWORK
+    # ===========================
+
+    ^"Virtue" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+
+        # Benefits that cost points. Major = 3 points, Minor = 1 point.
+        # A character's total Virtue points must equal total Flaw points.
+        # May only be taken once unless description says otherwise.
+
+        PROPERTIES {
+            ^"Virtue Name" STRING REQUIRED
+            ^"Size" ENUM ["Free", "Minor", "Major"]
+            ^"Category" ENUM ["Hermetic", "Supernatural", "General", "Social Status", "Story", "Personality"]
+        }
+
+        RULES {
+            #ARM215uV7wX9yZ1aB3cD5eF: major_virtue_costs_3_points
+            #ARM216gH8iJ0kL2mN4oP6qR: minor_virtue_costs_1_point
+            #ARM217sT9uV1wX3yZ5aB7cD: virtue_points_must_equal_flaw_points
+        }
+    }
+
+    ^"Flaw" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+
+        # Disadvantages or story hooks that grant points. Major = 3 pts,
+        # Minor = 1 pt. Two broad types:
+        # - General/Hermetic/Supernatural: hinder the character
+        # - Personality/Social Status/Story: enhance stories
+
+        PROPERTIES {
+            ^"Flaw Name" STRING REQUIRED
+            ^"Size" ENUM ["Free", "Minor", "Major"]
+            ^"Category" ENUM ["Hermetic", "Supernatural", "General", "Social Status", "Story", "Personality"]
+        }
+
+        RULES {
+            #ARM218eF0gH2iJ4kL6mN8oP: major_flaw_grants_3_points
+            #ARM219pQ1rS3tU5vW7xY9zA: minor_flaw_grants_1_point
+        }
+    }
+
+    ^"Virtue and Flaw Rules" DEF {
+
+        # Rules governing V&F selection by character type.
+
+        RULES {
+            #ARM220aB2cD4eF6gH8iJ0kL: all_characters_must_take_one_social_status
+            #ARM221mN3oP5qR7sT9uV1wX: max_one_story_flaw_guideline
+            #ARM222yZ4aB6cD8eF0gH2iJ: max_one_major_personality_flaw
+            #ARM223kL5mN7oP9qR1sT3uV: max_two_personality_flaws_total
+            #ARM224wX6yZ8aB0cD2eF4gH: vf_taken_once_unless_stated_otherwise
+        }
+
+        GROG_RULES {
+            # Up to 3 points of Flaws, equal points of Virtues
+            # No Major Virtues or Flaws, no Story Flaws
+            # No Hermetic V&F, no The Gift
+            #ARM225iJ7kL9mN1oP3qR5sT: grog_max_3_points_flaws
+            #ARM226uV8wX0yZ2aB4cD6eF: grog_no_major_vf
+            #ARM227gH9iJ1kL3mN5oP7qR: grog_no_story_flaws
+            #ARM228sT0uV2wX4yZ6aB8cD: grog_no_gift
+        }
+
+        COMPANION_RULES {
+            # Up to 10 points of Flaws, equal points of Virtues
+            # No more than 5 Minor Flaws
+            # No Hermetic V&F unless has The Gift (unusual)
+            #ARM229eF1gH3iJ5kL7mN9oP: companion_max_10_points_flaws
+            #ARM230pQ2rS4tU6vW8xY0zA: companion_max_5_minor_flaws
+            #ARM231aB3cD5eF7gH9iJ1kL: companion_no_hermetic_vf_without_gift
+        }
+
+        MYTHIC_COMPANION_RULES {
+            # Up to 10 points of Flaws
+            # 2 points of Virtues per 1 point of Flaws (max 20 Virtue points)
+            # Must take free defining Virtue for type
+            # Gains a free Minor Virtue from type
+            #ARM232mN4oP6qR8sT0uV2wX: mythic_companion_max_10_flaws
+            #ARM233xY5zA7bC9dE1fG3hI: mythic_companion_2_to_1_virtue_ratio
+        }
+
+        MAGI_RULES {
+            # Up to 10 points of Flaws, equal points of Virtues
+            # No more than 5 Minor Flaws
+            # No more than 1 Major Hermetic Virtue
+            # Must take The Gift and Hermetic Magus Social Status
+            # Free Minor Virtue from House choice
+            # Should take at least one Hermetic Flaw
+            #ARM234iJ6kL8mN0oP2qR4sT: magi_max_10_points_flaws
+            #ARM235uV7wX9yZ1aB3cD5eF: magi_max_5_minor_flaws
+            #ARM236gH8iJ0kL2mN4oP6qR: magi_max_1_major_hermetic_virtue
+            #ARM237sT9uV1wX3yZ5aB7cD: magi_must_have_gift
+            #ARM238eF0gH2iJ4kL6mN8oP: magi_must_have_hermetic_magus_status
+            #ARM239pQ1rS3tU5vW7xY9zA: magi_free_minor_virtue_from_house
+            #ARM240aB2cD4eF6gH8iJ0kL: magi_should_have_hermetic_flaw
+        }
+    }
+
+    # ===========================
+    # THE GIFT
+    # ===========================
+
+    ^"The Gift" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Mythic Companion"]
+
+        # A special free Virtue. Allows learning Hermetic magic and
+        # Supernatural Abilities. All magi must have it. Imposes
+        # social penalties: -3 to all social interaction rolls with
+        # those who are not magi or used to The Gift.
+        # Three variants:
+        # - The Gift (normal): -3 social penalty
+        # - Gentle Gift (Minor Hermetic Virtue): no social penalty
+        # - Blatant Gift (Major Hermetic Flaw): -6 social penalty
+
+        PROPERTIES {
+            ^"Cost" STRING "Free"
+            ^"Social Penalty" INTEGER -3
+        }
+
+        RULES {
+            #ARM241mN3oP5qR7sT9uV1wX: gift_required_for_hermetic_magic
+            #ARM242yZ4aB6cD8eF0gH2iJ: gift_minus_3_social_penalty
+            #ARM243kL5mN7oP9qR1sT3uV: gift_allows_learning_supernatural_abilities
+            #ARM244wX6yZ8aB0cD2eF4gH: gentle_gift_removes_social_penalty
+            #ARM245iJ7kL9mN1oP3qR5sT: blatant_gift_doubles_social_penalty
+        }
+    }
+
+    # ===========================
+    # THE TWELVE HOUSES OF HERMES
+    # ===========================
+
+    ^"House" DEF {
+        APPLIES TO [^"Magus"]
+
+        ENUM ["Bjornaer", "Bonisagus", "Criamon", "Ex Miscellanea",
+              "Flambeau", "Guernicus", "Jerbiton", "Mercere",
+              "Merinita", "Tremere", "Tytalus", "Verditius"]
+
+        # Every Hermetic magus belongs to one of the twelve Houses.
+        # House membership grants a particular benefit at character
+        # creation. Houses are divided into four types:
+        # - True Lineage: trained by a member of the House
+        # - Societas: joined by choice based on shared philosophy
+        # - Mystery Cult: initiated into the House's mysteries
+
+        RULES {
+            #ARM246uV8wX0yZ2aB4cD6eF: magus_belongs_to_exactly_one_house
+        }
+    }
+
+    ^"House Bjornaer" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Mystery Cult. Magi who are animals as well as humans.
+        # Each Bjornaer magus has a Heartbeast — an animal form
+        # they can assume. They reject familiar bonds.
+        # Benefit: Heartbeast (free), beginning score of 1 in
+        # Heartbeast Ability.
+
+        PROPERTIES {
+            ^"House Type" STRING "Mystery Cult"
+            ^"Benefit" STRING "Heartbeast, beginning score of 1 in Heartbeast Ability"
+        }
+    }
+
+    ^"House Bonisagus" DEF {
+        APPLIES TO [^"Magus"]
+
+        # True Lineage. Founded by Bonisagus, creator of Hermetic
+        # theory. Divided between researchers (who push magical
+        # boundaries) and politicians (Trianomae, who maintain
+        # the Order's political structure).
+        # Benefit: Puissant Magic Theory (researchers) or
+        # Puissant Intrigue (politicians).
+
+        PROPERTIES {
+            ^"House Type" STRING "True Lineage"
+            ^"Benefit" STRING "Puissant Magic Theory (researchers) or Puissant Intrigue (politicians)"
+        }
+    }
+
+    ^"House Criamon" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Mystery Cult. Mystical philosophers seeking the answer
+        # to the Enigma. They are covered in mystical tattoos
+        # and follow cryptic paths of enlightenment.
+        # Benefit: The Enigma (free), beginning score of 1 in
+        # Enigmatic Wisdom.
+
+        PROPERTIES {
+            ^"House Type" STRING "Mystery Cult"
+            ^"Benefit" STRING "The Enigma, beginning score of 1 in Enigmatic Wisdom"
+        }
+    }
+
+    ^"House Ex Miscellanea" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Societas. A diverse collection of magi from many different
+        # traditions, not all fully Hermetic. Each tradition within
+        # the House has its own unique powers and flaws.
+        # Benefit: A free Minor Hermetic Virtue, a free Major
+        # non-Hermetic Virtue, and a compulsory Major Hermetic Flaw.
+        # These are in addition to normal allowance.
+
+        PROPERTIES {
+            ^"House Type" STRING "Societas"
+            ^"Benefit" STRING "Free Minor Hermetic Virtue + free Major non-Hermetic Virtue + compulsory Major Hermetic Flaw (representing tradition)"
+        }
+    }
+
+    ^"House Flambeau" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Societas. Martial masters of fire and destruction.
+        # Flambeau magi are warriors, and many volunteer
+        # to hunt down enemies of the Order.
+        # Benefit: Puissant Perdo or Puissant Ignem.
+
+        PROPERTIES {
+            ^"House Type" STRING "Societas"
+            ^"Benefit" STRING "Puissant Perdo or Puissant Ignem"
+        }
+    }
+
+    ^"House Guernicus" DEF {
+        APPLIES TO [^"Magus"]
+
+        # True Lineage. Investigators, lawyers, and mediators.
+        # The Quaesitores enforce the Code of Hermes and
+        # investigate magical crimes.
+        # Benefit: Hermetic Prestige.
+
+        PROPERTIES {
+            ^"House Type" STRING "True Lineage"
+            ^"Benefit" STRING "Hermetic Prestige"
+        }
+    }
+
+    ^"House Jerbiton" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Societas. Nobles, scholars, and artists. Jerbiton magi
+        # value beauty and culture, and maintain strong
+        # connections with mundane society.
+        # Benefit: A Minor Virtue relating to scholarship, arts,
+        # or mundane interaction.
+
+        PROPERTIES {
+            ^"House Type" STRING "Societas"
+            ^"Benefit" STRING "A Minor Virtue relating to scholarship, arts, or mundane interaction"
+        }
+    }
+
+    ^"House Mercere" DEF {
+        APPLIES TO [^"Magus"]
+
+        # True Lineage. Messengers of the Order (Redcaps).
+        # Most Mercere are unGifted Redcaps (created as companions).
+        # Gifted Mercere are full Hermetic magi.
+        # Benefit: Puissant Creo or Puissant Muto.
+        # Note: unGifted Redcaps take the Redcap Major Status Virtue.
+
+        PROPERTIES {
+            ^"House Type" STRING "True Lineage"
+            ^"Benefit" STRING "Puissant Creo or Puissant Muto"
+        }
+    }
+
+    ^"House Merinita" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Mystery Cult. Faerie magi with deep connections to the
+        # Faerie realm. They study faerie magic and often interact
+        # with faerie beings.
+        # Benefit: Faerie Magic (free), beginning score of 1 in
+        # Faerie Magic Ability.
+
+        PROPERTIES {
+            ^"House Type" STRING "Mystery Cult"
+            ^"Benefit" STRING "Faerie Magic, beginning score of 1 in Faerie Magic Ability"
+        }
+    }
+
+    ^"House Tremere" DEF {
+        APPLIES TO [^"Magus"]
+
+        # True Lineage. A hierarchical and disciplined House.
+        # Tremere magi value loyalty, organization, and strategic
+        # thinking. They excel at certamen (formal magical dueling).
+        # Benefit: Minor Magical Focus (certamen).
+
+        PROPERTIES {
+            ^"House Type" STRING "True Lineage"
+            ^"Benefit" STRING "Minor Magical Focus (certamen)"
+        }
+    }
+
+    ^"House Tytalus" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Societas. Magi who thrive on conflict of any sort.
+        # They believe that struggle makes one stronger and
+        # seek out challenges constantly.
+        # Benefit: Self-Confident.
+
+        PROPERTIES {
+            ^"House Type" STRING "Societas"
+            ^"Benefit" STRING "Self-Confident"
+        }
+    }
+
+    ^"House Verditius" DEF {
+        APPLIES TO [^"Magus"]
+
+        # Mystery Cult. Crafters of enchanted items. Verditius
+        # magi are the finest magical craftspeople in the Order,
+        # but cannot cast spells without their casting tools.
+        # Benefit: Verditius Magic (free).
+
+        PROPERTIES {
+            ^"House Type" STRING "Mystery Cult"
+            ^"Benefit" STRING "Verditius Magic"
+        }
+    }
+
+    # ===========================
+    # DEFAULT SOCIAL STATUSES (FREE)
+    # ===========================
+
+    ^"Hermetic Magus" DEF {
+        APPLIES TO [^"Magus"]
+        # Free Social Status. All Hermetic magi take this.
+        # Provides legal standing within the Order of Hermes.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+
+    ^"Covenfolk" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        # Free Social Status. Default for members of a covenant
+        # who are not magi. Includes servants, guards, craftspeople.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+
+    ^"Peasant" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        # Free Social Status. The vast majority of the medieval
+        # population. Tied to the land and their lord.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+
+    ^"Wanderer" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        # Free Social Status. Someone without a fixed home
+        # or social ties. Includes travelers, beggars, outlaws.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+
+    ^"Merchant" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        # Free Social Status. A trader or shopkeeper.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+
+    ^"Craftsman" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        # Free Social Status. A skilled artisan.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+
+    ^"Townsman" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        # Free Social Status. A resident of a town or city.
+        PROPERTIES {
+            ^"Type" STRING "Social Status"
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+        }
+    }
+}

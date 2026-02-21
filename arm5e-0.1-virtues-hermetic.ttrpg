@@ -1,0 +1,599 @@
+EXTENSION "ARM5e_Virtues_Hermetic" {
+    NAME "Ars Magica 5th Edition Definitive - Hermetic Virtues"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Character"
+
+    # All Hermetic Virtues: only available to magi (characters with The Gift
+    # and Hermetic training). Organized by Major/Minor/Free.
+
+    # ===========================
+    # MAJOR HERMETIC VIRTUES
+    # ===========================
+
+    #ARM500aB2cD4eF6gH8iJ0kL ^"Diedne Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM501mN3oP5qR7sT9uV1wX: Non-fatiguing Spontaneous: may divide by 5 (no stress, no botch) OR divide by 2 (stress die, may botch)
+            #ARM502yZ4aB6cD8eF0gH2iJ: Fatiguing Spontaneous: lowest applicable Art is doubled before dividing by 2
+            #ARM503kL5mN7oP9qR1sT3uV: Must keep lineage hidden; requires a Major Story Flaw (e.g., Dark Secret) in addition to normal Flaw allowance
+        }
+    }
+
+    #ARM504wX6yZ8aB0cD2eF4gH ^"Elemental Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM505iJ7kL9mN1oP3qR5sT: Elemental Forms are Aquam, Auram, Ignem, and Terram
+            #ARM506uV8wX0yZ2aB4cD6eF: WHEN [gaining XP in one elemental Form] THEN gain half SQ (rounded up) in each of the other three
+            #ARM507gH9iJ1kL3mN5oP7qR: WHEN [spell has elemental Form as primary and another element as requisite] THEN use primary Form even if requisite is lower
+        }
+    }
+
+    #ARM508sT0uV2wX4yZ6aB8cD ^"Flawless Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM509eF1gH3iJ5kL7mN9oP: All spells learned automatically start with Spell Mastery 1
+            #ARM50AqR2sT4uV6wX8yZ0aB: All Advancement Totals for Spell Mastery Abilities are doubled
+        }
+    }
+
+    #ARM50BcD3eF5gH7iJ9kL1mN ^"Flexible Formulaic Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM50CoP4qR6sT8uV0wX2yZ: May raise/lower casting level by 1 magnitude to change one of R/D/T by one step
+            #ARM50DaB5cD7eF9gH1iJ3kL: OR change one R/D/T parameter to another at same level without modifying casting level
+            #ARM50EmN6oP8qR0sT2uV4wX: Cannot manipulate Ritual magic; cannot violate normal Formulaic limits
+        }
+    }
+
+    #ARM50FyZ7aB9cD1eF3gH5iJ ^"Gentle Gift" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM510kL8mN0oP2qR4sT6uV: Does not suffer the usual social penalties from The Gift when interacting with people and animals
+        }
+    }
+
+    #ARM511wX9yZ1aB3cD5eF7gH ^"Leper Magus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM512iJ0kL2mN4oP6qR8sT: Corpus spells cast on self are at +5 effective level
+            #ARM513uV1wX3yZ5aB7cD9eF: Can use Perdo Corpus to channel disease effects through spells
+        }
+    }
+
+    #ARM514gH2iJ4kL6mN8oP0qR ^"Life-Linked Spontaneous Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM515sT3uV5wX7yZ9aB1cD: May take body levels of damage to boost Spontaneous casting total
+            #ARM516eF4gH6iJ8kL0mN2oP: Each level of wound taken adds +5 to Casting Total
+        }
+    }
+
+    #ARM517qR5sT7uV9wX1yZ3aB ^"Mercurian Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM518cD6eF8gH0iJ2kL4mN: Ritual spells cost half the normal vis
+            #ARM519oP7qR9sT1uV3wX5yZ: Non-fatiguing Spontaneous magic only (cannot use fatiguing Spontaneous)
+            #ARM51AaB8cD0eF2gH4iJ6kL: Bonus to Wizard's Communion participation
+        }
+    }
+
+    #ARM51BmN9oP1qR3sT5uV7wX ^"Mythic Blood" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM51CyZ0aB2cD4eF6gH8iJ: Gain a Minor Magical Focus (free, does not count against Virtue limit)
+            #ARM51DkL1mN3oP5qR7sT9uV: Gain one supernatural power usable at will (equivalent to a Formulaic spell of level 30 or less)
+            #ARM51EwX2yZ4aB6cD8eF0gH: -1 to all Aging rolls
+            #ARM51FiJ3kL5mN7oP9qR1sT: Do not need to spend Fatigue to cast non-fatiguing Spontaneous spells if Casting Total (before division) is less than or equal to known spell level
+        }
+    }
+
+    #ARM520uV4wX6yZ8aB0cD2eF ^"Faerie-Raised Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM521gH5iJ7kL9mN1oP3qR: May spend XP from Exposure, Adventure, and Practice on spells mimicking observed supernatural effects
+            #ARM522sT6uV8wX0yZ2aB4cD: Spell invention cost: magnitude + 4 XP (level 5 or less costs level in XP, min 1)
+            #ARM523eF7gH9iJ1kL3mN5oP: Requirement: Tech + Form + Int + Magic Theory >= spell level - 10
+            #ARM524qR8sT0uV2wX4yZ6aB: Similar spell bonus: XP cost increased by half (rounded up)
+            #ARM525cD9eF1gH3iJ5kL7mN: Includes Spell Improvisation: add known similar spell's magnitude to Spontaneous Casting Total
+        }
+    }
+
+    # ===========================
+    # MINOR HERMETIC VIRTUES
+    # ===========================
+
+    #ARM526oP0qR2sT4uV6wX8yZ ^"Adept Laboratory Student" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM527aB1cD3eF5gH7iJ9kL: +6 bonus to Lab Totals when working from lab texts of others (including reinventing spells)
+        }
+    }
+
+    #ARM528mN2oP4qR6sT8uV0wX ^"Affinity with Art" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARM529yZ3aB5cD7eF9gH1iJ: All Advancement Totals for one Hermetic Art are increased by one half (rounded up)
+            #ARM52AkL4mN6oP8qR0sT2uV: At character creation, XP put into that Art also increased by one half (rounded up)
+            #ARM52BwX5yZ7aB9cD1eF3gH: May take this Virtue twice, for two different Arts
+        }
+    }
+
+    #ARM52CiJ6kL8mN0oP2qR4sT ^"Atlantean Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM52DuV7wX9yZ1aB3cD5eF: Grants access to special Range: Water-way (same level as Sight)
+            #ARM52EgH8iJ0kL2mN4oP6qR: Grants access to special Duration: Storm (same level as Concentration)
+            #ARM52FsT9uV1wX3yZ5aB7cD: Grants access to special Target: Body-of-water (same level as Structure)
+        }
+    }
+
+    #ARM530eF0gH2iJ4kL6mN8oP ^"Boosted Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM531qR1sT3uV5wX7yZ9aB: By spending 1 pawn of vis per magnitude boost, may increase R/D/T or size by 1 magnitude each
+            #ARM532cD2eF4gH6iJ8kL0mN: Casting success, Fatigue, and Penetration based on original spell level
+            #ARM533oP3qR5sT7uV9wX1yZ: +1 botch die per pawn used; no effect on Spontaneous or Ritual spells
+        }
+    }
+
+    #ARM534aB4cD6eF8gH0iJ2kL ^"Cautious Sorcerer" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM535mN5oP7qR9sT1uV3wX: Roll 3 fewer botch dice when casting spells and in lab work
+            #ARM536yZ6aB8cD0eF2gH4iJ: Cannot reduce below 1 botch die; applied before other reductions (e.g., Spell Mastery)
+        }
+    }
+
+    #ARM537kL7mN9oP1qR3sT5uV ^"Cyclic Magic (positive)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM538wX8yZ0aB2cD4eF6gH: +3 bonus to all Casting Scores during the positive phase of the cycle
+            #ARM539iJ9kL1mN3oP5qR7sT: Also applies to Lab Totals if positive phase covers the whole season
+            #ARM53AuV0wX2yZ4aB6cD8eF: Cycle must be regular; positive and negative phases must be equal in length
+        }
+    }
+
+    #ARM53BgH1iJ3kL5mN7oP9qR ^"Deft Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM53CsT2uV4wX6yZ8aB0cD: No penalty to Casting Total for non-standard voicings/gestures in the chosen Form
+            #ARM53DeF3gH5iJ7kL9mN1oP: Includes casting with no voice or gestures (e.g., in non-human form)
+        }
+    }
+
+    #ARM53EqR4sT6uV8wX0yZ2aB ^"Enduring Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM53FcD5eF7gH9iJ1kL3mN: Spell durations tend to last longer; storyguide rolls simple die and multiplies normal duration
+            #ARM540oP6qR8sT0uV2wX4yZ: Does not affect Concentration, Momentary, or Ring durations; does not affect Ritual spells
+        }
+    }
+
+    #ARM541aB7cD9eF1gH3iJ5kL ^"Exotic Casting" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM542mN8oP0qR2sT4uV6wX: Uses non-Hermetic methods; attempts to identify the Form of effects are vs EF 15 (magnitude not subtracted)
+        }
+    }
+
+    #ARM543yZ9aB1cD3eF5gH7iJ ^"Extractor of (Form) Vis" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARM544kL0mN2oP4qR6sT8uV: Can extract (Form) vis from a Magic aura that exemplifies the Form
+            #ARM545wX1yZ3aB5cD7eF9gH: Lab activity; pawns extracted = CEIL(CrVi(Fo) Lab Total / 10)
+        }
+    }
+
+    #ARM546iJ2kL4mN6oP8qR0sT ^"Fast Caster" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM547uV3wX5yZ7aB9cD1eF: +3 to Initiative to cast spells in combat
+            #ARM548gH4iJ6kL8mN0oP2qR: +3 to rolls to determine fast casting speed
+        }
+    }
+
+    #ARM549sT5uV7wX9yZ1aB3cD ^"Free Study" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM54AeF6gH8iJ0kL2mN4oP: +3 to Source Quality when studying from raw vis
+        }
+    }
+
+    #ARM54BqR7sT9uV1wX3yZ5aB ^"Harnessed Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM54CcD8eF0gH2iJ4kL6mN: Can suppress or cancel own spells at will without needing to use Perdo Vim
+        }
+    }
+
+    #ARM54DoP9qR1sT3uV5wX7yZ ^"Hermetic Prestige" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM54EaB0cD2eF4gH6iJ8kL: Good Reputation of level 3 within the Order of Hermes
+        }
+    }
+
+    #ARM54FmN1oP3qR5sT7uV9wX ^"Inventive Genius" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM550yZ2aB4cD6eF8gH0iJ: +3 to Lab Total for inventing new spells, and +6 for creating new enchantments
+        }
+    }
+
+    #ARM551kL3mN5oP7qR9sT1uV ^"Life Boost" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM552wX4yZ6aB8cD0eF2gH: May expend Fatigue levels to boost Formulaic Casting Total by +5 per level
+        }
+    }
+
+    #ARM553iJ5kL7mN9oP1qR3sT ^"Magical Memory" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM554uV6wX8yZ0aB2cD4eF: Can memorize and later reproduce Lab Texts from memory without having the original
+        }
+    }
+
+    #ARM555gH7iJ9kL1mN3oP5qR ^"Mastered Spells" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM556sT8uV0wX2yZ4aB6cD: Begin play with 50 XP in Spell Mastery Abilities, distributed among known spells
+        }
+    }
+
+    #ARM557eF9gH1iJ3kL5mN7oP ^"Method Caster" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM558qR0sT2uV4wX6yZ8aB: +3 to Casting Totals when following a specific, rigid procedure
+        }
+    }
+
+    #ARM559cD1eF3gH5iJ7kL9mN ^"Minor Magical Focus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM55AoP2qR4sT6uV8wX0yZ: Double the lowest Art applicable to spells/lab activities within a narrow magical focus
+            #ARM55BaB3cD5eF7gH9iJ1kL: Focus must be narrower than a single Hermetic Form
+        }
+    }
+
+    #ARM55CmN4oP6qR8sT0uV2wX ^"Major Magical Focus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM55DyZ5aB7cD9eF1gH3iJ: Double the lowest Art applicable to spells/lab activities within the focus area
+            #ARM55EkL6mN8oP0qR2sT4uV: Focus may be as broad as a single Hermetic Form
+        }
+    }
+
+    #ARM55FwX7yZ9aB1cD3eF5gH ^"Personal Vis Source" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM560iJ8kL0mN2oP4qR6sT: You have a personal source of vis; gain a small amount (typically 1-3 pawns) each year
+        }
+    }
+
+    #ARM561uV9wX1yZ3aB5cD7eF ^"Potent Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]     # Minor or Major depending on scope
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM562gH0iJ2kL4mN6oP8qR: Gain bonus to Casting Totals and Lab Totals from using casting items relevant to the focus
+            #ARM563sT1uV3wX5yZ7aB9cD: Bonus equals number of applicable Shape and Material bonuses
+        }
+    }
+
+    #ARM564eF2gH4iJ6kL8mN0oP ^"Puissant Art" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+            ^"Repeatable" BOOLEAN true
+            ^"Bonus" INTEGER 3
+        }
+        RULES {
+            #ARM565qR3sT5uV7wX9yZ1aB: +3 to all totals using the selected Art (not reflected in Art score, added afterward)
+        }
+    }
+
+    #ARM566cD4eF6gH8iJ0kL2mN ^"Quiet Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM567oP5qR7sT9uV1wX3yZ: Casting penalty for quiet voice reduced (from -5 to 0 for soft voice; from -10 to -5 for no voice)
+        }
+    }
+
+    #ARM568aB6cD8eF0gH2iJ4kL ^"Secondary Insight" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM569mN7oP9qR1sT3uV5wX: When studying one Art, gain bonus XP in two other Arts
+        }
+    }
+
+    #ARM56AyZ8aB0cD2eF4gH6iJ ^"Study Bonus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM56BkL9mN1oP3qR5sT7uV: +2 to all Source Qualities when studying Arts from books
+        }
+    }
+
+    #ARM56CwX0yZ2aB4cD6eF8gH ^"Subtle Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM56DiJ1kL3mN5oP7qR9sT: No gestures needed to cast spells; eliminates the -5 penalty for no gestures
+        }
+    }
+
+    #ARM56EuV2wX4yZ6aB8cD0eF ^"Tethered Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM56FgH3iJ5kL7mN9oP1qR: Spells are easier to cast within a limited range but harder or impossible beyond it
+        }
+    }
+
+    # ===========================
+    # FREE HERMETIC VIRTUES
+    # ===========================
+
+    #ARM570sT4uV6wX8yZ0aB2cD ^"Hermetic Magus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Free"]
+            ^"Category" ENUM ["Hermetic", "Social Status"]
+        }
+        RULES {
+            #ARM571eF5gH7iJ9kL1mN3oP: You are a member of the Order of Hermes, protected by its Code
+            #ARM572qR6sT8uV0wX2yZ4aB: May learn Hermetic Arts and Parma Magica
+            #ARM573cD7eF9gH1iJ3kL5mN: Bound by the Oath of Hermes
+        }
+    }
+
+    #ARM574oP8qR0sT2uV4wX6yZ ^"The Enigma" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM575aB9cD1eF3gH5iJ7kL: Initiated into Outer Mystery of The Enigma; member of House Criamon
+            #ARM576mN0oP2qR4sT6uV8wX: Gains Enigmatic Wisdom 1
+            #ARM577yZ1aB3cD5eF7gH9iJ: Free for all Criamon magi at character creation
+        }
+    }
+
+    #ARM578kL2mN4oP6qR8sT0uV ^"Faerie Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM579wX3yZ5aB7cD9eF1gH: Initiated into Outer Mystery of Faerie Magic; member of House Merinita
+            #ARM57AiJ4kL6mN8oP0qR2sT: Gains Faerie Magic 1
+            #ARM57BuV5wX7yZ9aB1cD3eF: Free for all Merinita magi at character creation
+        }
+    }
+
+    #ARM57CgH6iJ8kL0mN2oP4qR ^"Heartbeast" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM57DsT7uV9wX1yZ3aB5cD: Initiated into Outer Mystery of Heartbeast; member of House Bjornaer
+            #ARM57EeF8gH0iJ2kL4mN6oP: Can transform into heartbeast form and back at will
+            #ARM57FqR9sT1uV3wX5yZ7aB: Gains Heartbeast 1
+            #ARM580cD0eF2gH4iJ6kL8mN: Free for all Bjornaer magi at character creation
+        }
+    }
+
+    #ARM581oP1qR3sT5uV7wX9yZ ^"Verditius Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        RULES {
+            #ARM582aB2cD4eF6gH8iJ0kL: Initiated into Outer Mystery of Verditius Magic; member of House Verditius
+            #ARM583mN3oP5qR7sT9uV1wX: Add Craft Ability score to Lab Totals when creating enchanted items
+            #ARM584yZ4aB6cD8eF0gH2iJ: Cannot cast Formulaic spells without casting tools (foci); -5 penalty without
+            #ARM585kL5mN7oP9qR1sT3uV: Free for all Verditius magi at character creation
+        }
+    }
+}

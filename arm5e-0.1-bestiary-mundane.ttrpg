@@ -1,0 +1,407 @@
+EXTENSION "ARM5e_Bestiary_Mundane" {
+    NAME "Ars Magica 5th Edition Definitive - Mundane Beasts"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Base"
+
+    # Mundane Beasts: stat blocks for common animals of Mythic Europe.
+    # Animals have Cunning instead of Intelligence.
+    # Mundane creatures do NOT have a Might score.
+    # Beasts fight using combat options from the Obstacles chapter.
+    # Only one natural weapon may be used per round.
+
+    # ===========================
+    # MUNDANE BEASTS (Alphabetical)
+    # ===========================
+
+    #ARM1430xY4zA6bC8dE0fG2h ^"Adder" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Viperis"
+            ^"Cunning" INTEGER -1
+            ^"Perception" INTEGER -2
+            ^"Presence" INTEGER -6
+            ^"Communication" INTEGER -6
+            ^"Strength" INTEGER -8
+            ^"Stamina" INTEGER 2
+            ^"Dexterity" INTEGER 2
+            ^"Quickness" INTEGER 3
+            ^"Size" INTEGER -4
+            ^"Confidence Score" INTEGER 0
+            ^"Soak" INTEGER 2
+        }
+        RULES {
+            #ARM1431qR7sT9uV1wX3yZ5a: Virtues: Lightning Reflexes; Flaws: Infamous
+            #ARM1432bC8dE0fG2hI4jK6lM: Qualities: Ambush Predator, Loathsome Appearance, Slippery, Venomous
+            #ARM1433nO9pQ1rS3tU5vW7xY: Personality Traits: Hostile +2
+            #ARM1434zA0bC2dE4fG6hI8jK: Reputations: Venomous (local) 4
+            #ARM1435lM1nO3pQ5rS7tU9vW: Fangs: Init +3, Attack +8, Defense +7 (*+6 to Defense vs grapple attacks), Damage -7
+            #ARM1436xY2zA4bC6dE8fG0hI: Natural Weapons — Fangs: Init 0, Atk +3, Def +1, Dam +1
+            #ARM1437jK3lM5nO7pQ9rS1tU: Fatigue Levels: OK, -1, -3, -5, Unconscious
+            #ARM1438vW4xY6zA8bC0dE2fG: Wound Penalties: -1 (1), -3 (2), -5 (3), Incapacitated (4), Dead (5+)
+            #ARM1439hI5jK7lM9nO1pQ3rS: Abilities: Awareness 2 (prey), Brawl 2 (fangs), Hunt 4 (rodents), Stealth 4 (stalking prey), Survival 3 (grassy areas)
+            #ARM143AtU6vW8xY0zA2bC4dE: Venomous Bite — compare Attack Advantage to victim's armor Protection (not Soak); if higher, victim suffers adder venom effects regardless of actual wound
+        }
+    }
+
+    #ARM1440fG3hI5jK7lM9nO1pQ ^"Bear" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Ursus"
+            ^"Cunning" INTEGER 1
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER 0
+            ^"Communication" INTEGER -5
+            ^"Strength" INTEGER 6
+            ^"Stamina" INTEGER 4
+            ^"Dexterity" INTEGER 2
+            ^"Quickness" INTEGER 0
+            ^"Size" INTEGER 2
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Soak" INTEGER 10
+        }
+        RULES {
+            #ARM1441rS2tU4vW6xY8zA0bC: Virtues: Ferocity (when injured), Improved Characteristics (x2), Tough; Flaws: Greedy (minor), Reclusive
+            #ARM1442dE3fG5hI7jK9lM1nO: Qualities: Aggressive, Extra Natural Weapons (claws), Fast Runner, Grapple, Hardy, Imposing Appearance, Large Claws, Pursuit Predator, Tough Hide
+            #ARM1443pQ4rS6tU8vW0xY2zA: Personality Traits: Brave +3, Slothful +3, Aggressive +2
+            #ARM1444bC5dE7fG9hI1jK3lM: Reputations: Ferocious (local) 2
+            #ARM1445nO6pQ8rS0tU2vW4xY: Claws: Init 0, Attack +13, Defense +9, Damage +10
+            #ARM1446zA7bC9dE1fG3hI5jK: Teeth: Init 0, Attack +11, Defense +7, Damage +7
+            #ARM1447lM8nO0pQ2rS4tU6vW: Grapple: Init 0, Attack +7, Defense +5, Damage n/a
+            #ARM1448xY9zA1bC3dE5fG7hI: Natural Weapons — Large Claws: Init 0, Atk +5, Def +3, Dam +4; Teeth: Init 0, Atk +3, Def +1, Dam +1; Protection +3 (tough hide and thick fur)
+            #ARM1449jK0lM2nO4pQ6rS8tU: Fatigue Levels: OK, 0/0, -1/-1, -3, -5, Unconscious
+            #ARM144AvW1xY3zA5bC7dE9fG: Wound Penalties: -1 (1-7), -3 (8-14), -5 (15-21), Incapacitated (22-28), Dead (29+)
+            #ARM144BhI2jK4lM6nO8pQ0rS: Abilities: Athletics 3 (sprinting), Awareness 3 (prey), Brawl 5 (claws), Hunt 4 (deer), Survival 5 (foraging), Swim 3 (against the current)
+            #ARM144CtU3vW5xY7zA9bC1dE: Fast Runner — +3 bonus to rolls involving running; can stand on hind legs to attack mounted opponents; can climb trees; strong swimmer
+        }
+    }
+
+    #ARM1450fG4hI6jK8lM0nO2pQ ^"Boar, Wild" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Aper"
+            ^"Cunning" INTEGER 0
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER -4
+            ^"Communication" INTEGER -5
+            ^"Strength" INTEGER 2
+            ^"Stamina" INTEGER 2
+            ^"Dexterity" INTEGER 0
+            ^"Quickness" INTEGER 1
+            ^"Size" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Soak" INTEGER 7
+        }
+        RULES {
+            #ARM1451rS3tU5vW7xY9zA1bC: Virtues: Berserk, Enduring Constitution, Ferocity (when cornered), Tough; Flaws: Greedy (minor), Wrathful (minor)
+            #ARM1452dE4fG6hI8jK0lM2nO: Qualities: Aggressive, Hardy, Herd Animal, Tireless, Tough Hide
+            #ARM1453pQ5rS7tU9vW1xY3zA: Personality Traits: Brave +4, Angry +3
+            #ARM1454bC6dE8fG0hI2jK4lM: Reputations: Ill-tempered (local) 2
+            #ARM1455nO7pQ9rS1tU3vW5xY: Tusks: Init +1, Attack +10, Defense +9, Damage +7
+            #ARM1456zA8bC0dE2fG4hI6jK: Tusks (berserk): Init +1, Attack +12, Defense +7, Damage +7
+            #ARM1457lM9nO1pQ3rS5tU7vW: Natural Weapons — Tusks: Init 0, Atk +4, Def +2, Dam +5; Protection +2 (tough hide)
+            #ARM1458xY0zA2bC4dE6fG8hI: Fatigue Levels: OK, 0/0, 0/0, -2/-2, -4, Unconscious
+            #ARM1459jK1lM3nO5pQ7rS9tU: Wound Penalties: -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20), Dead (21+)
+            #ARM145AvW2xY4zA6bC8dE0fG: Abilities: Athletics 4 (sprinting), Awareness 3 (foraging), Brawl 5 (tusks), Survival 5 (forests)
+            #ARM145BhI3jK5lM7nO9pQ1rS: Largest boars are Size +1; size varies from 8 stone (112 lbs) to over 30 stone (420 lbs)
+        }
+    }
+
+    #ARM1460tU4vW6xY8zA0bC2dE ^"Bull" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Taurus"
+            ^"Cunning" INTEGER -2
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER -4
+            ^"Communication" INTEGER -4
+            ^"Strength" INTEGER 5
+            ^"Stamina" INTEGER 3
+            ^"Dexterity" INTEGER 0
+            ^"Quickness" INTEGER -1
+            ^"Size" INTEGER 2
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Soak" INTEGER 8
+        }
+        RULES {
+            #ARM1461fG5hI7jK9lM1nO3pQ: Virtues: Affinity with Brawl, Ferocity (charging), Tough; Flaws: Oversensitive (to provocation)
+            #ARM1462rS6tU8vW0xY2zA4bC: Qualities: Aggressive, Domesticated, Tough Hide
+            #ARM1463dE7fG9hI1jK3lM5nO: Personality Traits: Aggressive +2
+            #ARM1464pQ8rS0tU2vW4xY6zA: Reputations: Strong 4 (local)
+            #ARM1465bC9dE1fG3hI5jK7lM: Horns: Init 0, Attack +8, Defense +3, Damage +7
+            #ARM1466nO0pQ2rS4tU6vW8xY: Natural Weapons — Large Horns: Init +2, Atk +3, Def +2, Dam +3; Protection +2 (tough hide)
+            #ARM1467zA1bC3dE5fG7hI9jK: Fatigue Levels: OK, 0/0, -1/-1, -3, -5, Unconscious
+            #ARM1468lM2nO4pQ6rS8tU0vW: Wound Penalties: -1 (1-7), -3 (8-14), -5 (15-21), Incapacitated (22-28), Dead (29+)
+            #ARM1469xY3zA5bC7dE9fG1hI: Abilities: Athletics 4 (charging), Awareness 3 (predators), Brawl 5 (horns)
+            #ARM146AjK4lM6nO8pQ0rS2tU: When charging, exerts itself for Attack bonus and may simultaneously spend Confidence; Affinity with Brawl reflects rapid combat learning
+        }
+    }
+
+    #ARM1470vW5xY7zA9bC1dE3fG ^"Cat" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Felis"
+            ^"Cunning" INTEGER 0
+            ^"Perception" INTEGER 1
+            ^"Presence" INTEGER -2
+            ^"Communication" INTEGER -4
+            ^"Strength" INTEGER -7
+            ^"Stamina" INTEGER 0
+            ^"Dexterity" INTEGER 3
+            ^"Quickness" INTEGER 4
+            ^"Size" INTEGER -3
+            ^"Confidence Score" INTEGER 0
+            ^"Soak" INTEGER 1
+        }
+        RULES {
+            #ARM1471hI6jK8lM0nO2pQ4rS: Virtues: Perfect Balance, Puissant Awareness, Sharp Ears; Flaws: Nocturnal
+            #ARM1472tU7vW9xY1zA3bC5dE: Qualities: Ambush Predator, Crafty, Good Jumper, Skilled Climber, Thick Fur
+            #ARM1473fG8hI0jK2lM4nO6pQ: Personality Traits: Curious +4, Timid +2
+            #ARM1474rS9tU1vW3xY5zA7bC: Reputations: Evil 2 (local) — strongest in Celtic areas, weaker or unknown elsewhere
+            #ARM1475dE0fG2hI4jK6lM8nO: Claws: Init +3, Attack +8, Defense +10, Damage -5
+            #ARM1476pQ1rS3tU5vW7xY9zA: Teeth: Init +4, Attack +8, Defense +7, Damage -6
+            #ARM1477bC2dE4fG6hI8jK0lM: Natural Weapons — Claws: Init -1, Atk +2, Def +3, Dam +2; Teeth: Init 0, Atk +3, Def +1, Dam +1; Protection +1 (dense fur)
+            #ARM1478nO3pQ5rS7tU9vW1xY: Fatigue Levels: OK, 0, -1, -3, -5, Unconscious
+            #ARM1479zA4bC6dE8fG0hI2jK: Wound Penalties: -1 (1-2), -3 (3-4), -5 (5-6), Incapacitated (7-8), Dead (9+)
+            #ARM147AlM5nO7pQ9rS1tU3vW: Abilities: Athletics 3 (jumping), Awareness 4+2 (at night), Brawl 2 (claws), Hunt 4 (mice), Stealth 4 (stalking)
+            #ARM147BxY6zA8bC0dE2fG4hI: Excellent climbers and jumpers — +3 bonus to appropriate rolls; generally flees from any opponent larger than itself
+        }
+    }
+
+    #ARM1480jK7lM9nO1pQ3rS5tU ^"Falcon" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Falco"
+            ^"Cunning" INTEGER -1
+            ^"Perception" INTEGER 3
+            ^"Presence" INTEGER -1
+            ^"Communication" INTEGER -2
+            ^"Strength" INTEGER -6
+            ^"Stamina" INTEGER 2
+            ^"Dexterity" INTEGER 1
+            ^"Quickness" INTEGER 6
+            ^"Size" INTEGER -3
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Soak" INTEGER -2
+        }
+        RULES {
+            #ARM1481vW8xY0zA2bC4dE6fG: Virtues: Ferocity (swooping attack), Keen Vision; Flaws: Fragile Constitution
+            #ARM1482hI9jK1lM3nO5pQ7rS: Qualities: Accomplished Flier, Extra Natural Weapons, Fast Flier, Keen Eyesight, Pursuit Predator
+            #ARM1483tU0vW2xY4zA6bC8dE: Personality Traits: Fierce +3
+            #ARM1484fG1hI3jK5lM7nO9pQ: Reputations: None
+            #ARM1485rS2tU4vW6xY8zA0bC: Talons: Init +5, Attack +6, Defense +12, Damage -4
+            #ARM1486dE3fG5hI7jK9lM1nO: Beak: Init +6, Attack +6, Defense +9, Damage -5
+            #ARM1487pQ4rS6tU8vW0xY2zA: Natural Weapons — Talons: Init -1, Atk +2, Def +3, Dam +2; Beak: Init 0, Atk +3, Def +1, Dam +1
+            #ARM1488bC5dE7fG9hI1jK3lM: Fatigue Levels: OK, 0/0, -1, -3, -5, Unconscious
+            #ARM1489nO6pQ8rS0tU2vW4xY: Wound Penalties: -1 (1-2), -3 (3-4), -5 (5-6), Incapacitated (7-8), Dead (9+)
+            #ARM148AzA7bC9dE1fG3hI5jK: Abilities: Athletics 5 (swift flight), Awareness 4 (spotting prey), Brawl 2 (talons), Hunt 4 (game birds), Survival 3 (cold climates)
+            #ARM148BlM8nO0pQ2rS4tU6vW: Stats are for a gyrfalcon (largest falcon); other species are Size -4; all falcons gain +3 bonus to rolls involving speed
+        }
+    }
+
+    #ARM1490xY9zA1bC3dE5fG7hI ^"Horse, Courser" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Equus"
+            ^"Cunning" INTEGER -2
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER 0
+            ^"Communication" INTEGER -4
+            ^"Strength" INTEGER 4
+            ^"Stamina" INTEGER 3
+            ^"Dexterity" INTEGER -2
+            ^"Quickness" INTEGER 2
+            ^"Size" INTEGER 2
+            ^"Confidence Score" INTEGER 0
+            ^"Soak" INTEGER 3
+        }
+        RULES {
+            #ARM1491jK0lM2nO4pQ6rS8tU: Virtues: Long-Winded, Improved Characteristics; Flaws: Fear (loud noises), Noncombatant
+            #ARM1492vW1xY3zA5bC7dE9fG: Qualities: Domesticated, Fast Runner, Good Jumper, Herd Animal, Imposing Appearance, Tireless
+            #ARM1493hI2jK4lM6nO8pQ0rS: Personality Traits: Skittish +3, Brave -2
+            #ARM1494tU3vW5xY7zA9bC1dE: Reputations: None
+            #ARM1495fG4hI6jK8lM0nO2pQ: Hooves: Init +4, Attack 0, Defense +4, Damage +5
+            #ARM1496rS5tU7vW9xY1zA3bC: Natural Weapons — Hooves (kick): Init +2, Atk +2, Def +2, Dam +1
+            #ARM1497dE6fG8hI0jK2lM4nO: Fatigue Levels: OK, 0/0, -1/-1, -3, -5, Unconscious
+            #ARM1498pQ7rS9tU1vW3xY5zA: Wound Penalties: -1 (1-7), -3 (8-14), -5 (16-21), Incapacitated (22-28), Dead (29+)
+            #ARM1499bC8dE0fG2hI4jK6lM: Abilities: Athletics 4 (long-distance running), Awareness 3 (noises)
+            #ARM149AnO9pQ1rS3tU5vW7xY: Swift light horse; not trained for battle; +3 to rolls involving running or jumping
+            #ARM149BzA0bC2dE4fG6hI8jK: Variant — Charger: replace Noncombatant with Proud (minor), Brave 0, add Brawl 2 (hooves)
+            #ARM149ClM1nO3pQ5rS7tU9vW: Variant — Palfrey: reduce Quickness by 2, increase Dexterity by 2; gentle riding horse with Noncombatant
+        }
+    }
+
+    #ARM14A0xY2zA4bC6dE8fG0hI ^"Horse, Destrier" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Equus"
+            ^"Cunning" INTEGER -2
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER 0
+            ^"Communication" INTEGER -4
+            ^"Strength" INTEGER 6
+            ^"Stamina" INTEGER 3
+            ^"Dexterity" INTEGER 1
+            ^"Quickness" INTEGER -1
+            ^"Size" INTEGER 3
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Soak" INTEGER 3
+        }
+        RULES {
+            #ARM14A1jK3lM5nO7pQ9rS1tU: Virtues: Ferocity (when ridden in battle), Improved Characteristics, Long-Winded; Flaws: Proud (minor)
+            #ARM14A2vW4xY6zA8bC0dE2fG: Qualities: Domesticated, Fast Runner, Herd Animal, Imposing Appearance, Tireless
+            #ARM14A3hI5jK7lM9nO1pQ3rS: Personality Traits: Loyal +2, Brave +1
+            #ARM14A4tU6vW8xY0zA2bC4dE: Reputations: Aggressive (local) 1
+            #ARM14A5fG7hI9jK1lM3nO5pQ: Hooves: Init +1, Attack +7, Defense +5, Damage +7
+            #ARM14A6rS8tU0vW2xY4zA6bC: Natural Weapons — Hooves (kick): Init +2, Atk +2, Def +2, Dam +1
+            #ARM14A7dE9fG1hI3jK5lM7nO: Fatigue Levels: OK, 0/0, -1/-1, -3, -5, Unconscious
+            #ARM14A8pQ0rS2tU4vW6xY8zA: Wound Penalties: -1 (1-8), -3 (9-16), -5 (17-24), Incapacitated (25-32), Dead (33+)
+            #ARM14A9bC1dE3fG5hI7jK9lM: Abilities: Athletics 5 (balancing), Brawl 3 (hooves)
+            #ARM14AAnO2pQ4rS6tU8vW0xY: Heavy warhorse; trained to charge without fear; can rear and fight with forehooves; +3 bonus to rolls involving speed; too heavy for jumping
+        }
+    }
+
+    #ARM14B0zA3bC5dE7fG9hI1jK ^"Hound" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Canis"
+            ^"Cunning" INTEGER 0
+            ^"Perception" INTEGER 2
+            ^"Presence" INTEGER -4
+            ^"Communication" INTEGER 0
+            ^"Strength" INTEGER 0
+            ^"Stamina" INTEGER 2
+            ^"Dexterity" INTEGER 1
+            ^"Quickness" INTEGER 2
+            ^"Size" INTEGER 0
+            ^"Confidence Score" INTEGER 0
+            ^"Soak" INTEGER 2
+        }
+        RULES {
+            #ARM14B1lM4nO6pQ8rS0tU2vW: Virtues: Improved Characteristics, Long-Winded, Sharp Ears; Flaws: Reckless
+            #ARM14B2xY5zA7bC9dE1fG3hI: Qualities: Domesticated, Keen Sense of Smell, Pack Animal, Pursuit Predator, Vocal
+            #ARM14B3jK6lM8nO0pQ2rS4tU: Personality Traits: Loyal +3, Reckless +3, Brave +2
+            #ARM14B4vW7xY9zA1bC3dE5fG: Reputations: Loyal 2 (local)
+            #ARM14B5hI8jK0lM2nO4pQ6rS: Bite: Init +2, Attack +8, Defense +7, Damage +1
+            #ARM14B6tU9vW1xY3zA5bC7dE: Natural Weapons — Teeth (bite): Init 0, Atk +3, Def +1, Dam +1
+            #ARM14B7fG0hI2jK4lM6nO8pQ: Fatigue Levels: OK, 0/0, -1, -3, -5, Unconscious
+            #ARM14B8rS1tU3vW5xY7zA9bC: Wound Penalties: -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20), Dead (21+)
+            #ARM14B9dE2fG4hI6jK8lM0nO: Abilities: Athletics 3 (distance running), Awareness 3 (keeping watch), Brawl 3 (bite), Hunt 4 (track by scent)
+            #ARM14BApQ3rS5tU7vW9xY1zA: Stats are for a bloodhound; +3 bonus to smell-related rolls; +3 to endurance-related rolls (Long-Winded); a pack may fight as a trained group under a human Master of the Pack
+            #ARM14BBbC4dE6fG8hI0jK2lM: Size variants — greyhound/basset/dalmatian: Size -1; spaniels/terriers/corgi: Size -2; lap-dogs/small terriers: Size -3
+        }
+    }
+
+    #ARM14C0nO5pQ7rS9tU1vW3xY ^"Lion" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Leo"
+            ^"Cunning" INTEGER 2
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER 0
+            ^"Communication" INTEGER 0
+            ^"Strength" INTEGER 6
+            ^"Stamina" INTEGER 3
+            ^"Dexterity" INTEGER 2
+            ^"Quickness" INTEGER 1
+            ^"Size" INTEGER 2
+            ^"Confidence Score" INTEGER 2
+            ^"Confidence Points" INTEGER 6
+            ^"Soak" INTEGER 8
+        }
+        RULES {
+            #ARM14C1zA6bC8dE0fG2hI4jK: Virtues: Ferocity (self-defense), Improved Characteristics (x2), Puissant Brawl, Self-Confident, Tough; Flaws: Proud, Weakness (submission)
+            #ARM14C2lM7nO9pQ1rS3tU5vW: Qualities: Aggressive, Ambush Predator, Crafty, Good Jumper, Hardy, Imposing Appearance, Large Claws, Large Teeth, Tough Hide, Vocal
+            #ARM14C3xY8zA0bC2dE4fG6hI: Personality Traits: Brave +5, Fierce +5
+            #ARM14C4jK9lM1nO3pQ5rS7tU: Reputations: Fierce (local) 4
+            #ARM14C5vW0xY2zA4bC6dE8fG: Claws: Init +1, Attack +15, Defense +12, Damage +10
+            #ARM14C6hI1jK3lM5nO7pQ9rS: Bite: Init +1, Attack +13, Defense +9, Damage +9
+            #ARM14C7tU2vW4xY6zA8bC0dE: Natural Weapons — Large Claws: Init 0, Atk +5, Def +3, Dam +4; Large Teeth: Init 0, Atk +4, Def +1, Dam +3; Protection +2 (hide)
+            #ARM14C8fG3hI5jK7lM9nO1pQ: Fatigue Levels: OK, 0/0, -1, -3, -5, Unconscious
+            #ARM14C9rS4tU6vW8xY0zA2bC: Wound Penalties: -1 (1-7), -3 (8-14), -5 (15-21), Incapacitated (22-28), Dead (29+)
+            #ARM14CAdE5fG7hI9jK1lM3nO: Abilities: Athletics 5 (pouncing), Awareness 2 (smell), Brawl 5+2 (claws), Hunt 4 (deer), Stealth 4 (stalking), Survival 5 (arid climates)
+            #ARM14CBpQ6rS8tU0vW2xY4zA: Impressive leaps — +3 to jump-related rolls; can leap high enough to attack a mounted rider; will not attack a man who lies prostrate
+        }
+    }
+
+    #ARM14D0bC7dE9fG1hI3jK5lM ^"Stag" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Cervus"
+            ^"Cunning" INTEGER -2
+            ^"Perception" INTEGER 2
+            ^"Presence" INTEGER 0
+            ^"Communication" INTEGER -5
+            ^"Strength" INTEGER 2
+            ^"Stamina" INTEGER 2
+            ^"Dexterity" INTEGER 0
+            ^"Quickness" INTEGER 2
+            ^"Size" INTEGER 2
+            ^"Confidence Score" INTEGER 0
+            ^"Soak" INTEGER 2
+        }
+        RULES {
+            #ARM14D1nO8pQ0rS2tU4vW6xY: Virtues: Higher Purpose (protect the herd), Improved Characteristics; Flaws: None listed
+            #ARM14D2zA9bC1dE3fG5hI7jK: Qualities: Defensive Fighter, Extra Natural Weapons, Fast Runner, Good Jumper, Large Antlers, Sharp Ears
+            #ARM14D3lM0nO2pQ4rS6tU8vW: Personality Traits: Brave +1
+            #ARM14D4xY1zA3bC5dE7fG9hI: Reputations: Noble (local) 2
+            #ARM14D5jK2lM4nO6pQ8rS0tU: Antlers: Init +4, Attack +7, Defense +8, Damage +5
+            #ARM14D6vW3xY5zA7bC9dE1fG: Hooves: Init +4, Attack +6, Defense +8, Damage +3
+            #ARM14D7hI4jK6lM8nO0pQ2rS: Dodge: Init +2, Attack n/a, Defense +7, Damage n/a
+            #ARM14D8tU5vW7xY9zA1bC3dE: Natural Weapons — Large Antlers (autumn/winter): Init +2, Atk +3, Def +2, Dam +3; Hooves (spring, after shedding antlers): Init +2, Atk +2, Def +2, Dam +1
+            #ARM14D9fG6hI8jK0lM2nO4pQ: Fatigue Levels: OK, 0, -1, -3, -5, Unconscious
+            #ARM14DArS7tU9vW1xY3zA5bC: Wound Penalties: -1 (1-7), -3 (8-14), -5 (15-21), Incapacitated (22-28), Dead (29+)
+            #ARM14DBdE8fG0hI2jK4lM6nO: Abilities: Athletics 4 (sprinting), Awareness 3 (predators), Brawl 4 (dodge), Survival 3 (woodlands)
+            #ARM14DCpQ9rS1tU3vW5xY7zA: Stats are for the red deer; Size varies +1 to +2 depending on grazing; does are smaller and lack antlers; +3 bonus to rolls involving running or jumping; stag usually flees, drawing enemies from herd
+        }
+    }
+
+    #ARM14E0bC0dE2fG4hI6jK8lM ^"Wolf" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Mundane Beast"
+            ^"Latin" TEXT "Lupus"
+            ^"Cunning" INTEGER 2
+            ^"Perception" INTEGER 0
+            ^"Presence" INTEGER -2
+            ^"Communication" INTEGER 0
+            ^"Strength" INTEGER -1
+            ^"Stamina" INTEGER 3
+            ^"Dexterity" INTEGER 2
+            ^"Quickness" INTEGER 2
+            ^"Size" INTEGER -1
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Soak" INTEGER 4
+        }
+        RULES {
+            #ARM14E1nO1pQ3rS5tU7vW9xY: Virtues: Improved Characteristics (x2), Ferocity (when hungry), Long-Winded, Sharp Ears; Flaws: Compulsion (killing), Infamous
+            #ARM14E2zA2bC4dE6fG8hI0jK: Qualities: Aggressive, Hardy, Keen Sense of Smell, Pack Animal/Pack Leader, Pursuit Predator, Sharp Ears, Thick Fur, Vocal
+            #ARM14E3lM3nO5pQ7rS9tU1vW: Personality Traits: Brave +3, Cowardly +3
+            #ARM14E4xY4zA6bC8dE0fG2hI: Reputations: Bloodthirsty (local) 4
+            #ARM14E5jK5lM7nO9pQ1rS3tU: Teeth: Init +2, Attack +11, Defense +9, Damage 0
+            #ARM14E6vW6xY8zA0bC2dE4fG: Natural Weapons — Teeth: Init 0, Atk +3, Def +1, Dam +1; Protection +1 (thick fur)
+            #ARM14E7hI7jK9lM1nO3pQ5rS: Fatigue Levels: OK, 0/0, -1/-1, -3, -5, Unconscious
+            #ARM14E8tU8vW0xY2zA4bC6dE: Wound Penalties: -1 (1-4), -3 (5-8), -5 (9-12), Incapacitated (13-16), Dead (17+)
+            #ARM14E9fG9hI1jK3lM5nO7pQ: Abilities: Athletics 5 (distance running), Awareness 3 (smell), Brawl 5 (teeth), Hunt 4 (track by smell), Survival 3 (winter)
+            #ARM14EArS0tU2vW4xY6zA8bC: Compulsion Flaw reflects medieval perception; individual wolves (e.g. Animal Companions) may substitute another Personality Flaw
+            #ARM14EBdE1fG3hI5jK7lM9nO: Pack leader has Leadership 5 (wolves); a pack may fight as a trained group when its leader is present
+        }
+    }
+}

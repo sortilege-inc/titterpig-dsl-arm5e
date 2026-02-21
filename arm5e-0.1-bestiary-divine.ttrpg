@@ -1,0 +1,384 @@
+EXTENSION "ARM5e_Bestiary_Divine" {
+    NAME "Ars Magica 5th Edition Definitive - Creatures of the Divine"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Base"
+
+    # Introductory notes about divine creatures:
+    # - Use normal rules for Magic Resistance, Penetration, and dispelling
+    # - Not direct interventions by God, thus not omnipotent
+    # - Cannot have True Faith (limited to beings not already part of Divine Realm)
+    # - Never bothered by The Gift - judge people by actions and hearts
+
+    # ===========================
+    # ANGELIC POWERS (shared)
+    # ===========================
+
+    # All angels possess the following powers:
+    # - Angelic Mantle (2 points, +12, Corpus): Manifest in mundane world with mortal flesh;
+    #   form is entirely intellect but appears real; must follow natural laws while in Mantle;
+    #   if "killed" in Mantle, return to spiritual form and may re-manifest immediately.
+    # - Enfolding (2 or 10 points, +10, Vim): Grant comfort and protection to the pious;
+    #   2 points protects the soul/mind from supernatural powers for a few moments;
+    #   10 points protects the body, rendering completely invulnerable for up to one combat round.
+    # - Envisioning (1 or 5 points, +0, Mentem): Appear in dreams (1 point) or while awake
+    #   (5 points) to impart a Divine message; may target anyone over any distance.
+
+    # ===========================
+    # GABRIEL, THE ARCHANGEL OF PROPHECY
+    # ===========================
+
+    #ARM1800xY4zA6bC8dE0fG2hIj ^"Gabriel, the Archangel of Prophecy" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Creature of the Divine"
+            ^"Creature Type" TEXT "Angel (Archangel)"
+            ^"Divine Might" INTEGER 100
+            ^"Might Form" TEXT "Mentem"
+            ^"Intelligence" INTEGER 10
+            ^"Perception" INTEGER 10
+            ^"Presence" INTEGER 10
+            ^"Communication" INTEGER 10
+            ^"Strength" INTEGER 8
+            ^"Stamina" INTEGER 8
+            ^"Dexterity" INTEGER 8
+            ^"Quickness" INTEGER 8
+            ^"Size" INTEGER 0
+            ^"Age" TEXT "n/a"
+            ^"Confidence Score" INTEGER 7
+            ^"Confidence Points" INTEGER 50
+            ^"Soak" INTEGER 8
+            ^"Encumbrance" INTEGER 0
+        }
+        RULES {
+            # --- Virtues and Flaws ---
+            #ARM1801aK3mR5tW7yB9dF1hJ: Virtue - Good Teacher
+            #ARM1802cL4nS6uX8zA0eG2iK: Virtue - Inspirational
+
+            # --- Personality Traits ---
+            #ARM1803dM5oT7vY9aB1fH3jL: Personality Trait - Compassionate +3
+            #ARM1804eN6pU8wZ0bC2gI4kM: Personality Trait - Intellectual +3
+            #ARM1805fO7qV9xA1cD3hJ5lN: Personality Trait - Just +3
+            #ARM1806gP8rW0yB2dE4iK6mO: Personality Trait - Love of God +5
+            #ARM1807hQ9sX1zC3eF5jL7nP: Personality Trait - Patient +3
+
+            # --- Reputations ---
+            #ARM1808iR0tY2aD4fG6kM8oQ: Reputation - Messenger of God 5 (among Jews, Christians and Muslims)
+
+            # --- Combat ---
+            #ARM1809jS1uZ3bE5gH7lN9pR: Combat (Fist) - Init +8, Attack +19, Defense +19, Damage +8
+
+            # --- Fatigue and Wounds ---
+            #ARM180AkT2vA4cF6hI8mO0qS: Fatigue levels - OK, 0/0/0, -1/-1, -3, -5, Unconscious
+            #ARM180BlU3wB5dG7iJ9nP1rT: Wound Penalties - -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)
+
+            # --- Abilities ---
+            #ARM180CmV4xC6eH8jK0oQ2sU: Ability - Awareness 10 (the uneducated)
+            #ARM180DnW5yD7fI9kL1pR3tV: Ability - Charm 10 (pupils)
+            #ARM180EoX6zE8gJ0lM2qS4uW: Ability - Brawl 10 (fist)
+            #ARM180FpY7aF9hK1mN3rT5vX: Ability - Leadership 10 (calling attention)
+            #ARM1810qZ8bG0iL2nO4sU6wY: Ability - Teaching 15 (Theology)
+            #ARM1811rA9cH1jM3oP5tV7xZ: Ability - All knowledge at a score of 15
+
+            # --- Powers ---
+            #ARM1812sB0dI2kN4pQ6uW8yA: Power - Enlighten (variable points, Init +0, Mentem): Can implant any Knowledge into the mind of another at a cost of 1 Might per experience point implanted; may not raise any Ability score over 15
+            #ARM1813tC1eJ3lO5qR7vX9zB: Power - Spirit Form (0 points, Init +30, Vim): Can become a creature of pure spirit; unable to affect or be affected physically
+            #ARM1814uD2fK4mP6rS8wY0aC: Power - Subtle Form (0 points, Init +0, Corpus): Can change appearance to look like any human being; statistics do not change
+
+            # --- Equipment ---
+            #ARM1815vE3gL5nQ7sT9xZ1bD: Equipment - Robes
+
+            # --- Vis ---
+            #ARM1816wF4hM6oR8tU0yA2cE: Vis - 20 pawns of Mentem in head
+
+            # --- Appearance ---
+            #ARM1817xG5iN7pS9uV1zB3dF: Appearance - Usually takes the form of a compassionate, gentle man, sometimes with wings growing from shoulders or arms; in natural form is a 600-winged figure large enough to stand astride the horizon
+        }
+    }
+
+    # ===========================
+    # KOLAZONTA, THE CHASTISER
+    # ===========================
+
+    #ARM1818yH6jO8qT0vW2aC4eG ^"Kolazonta, the Chastiser" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Creature of the Divine"
+            ^"Creature Type" TEXT "Angel"
+            ^"Divine Might" INTEGER 30
+            ^"Might Form" TEXT "Ignem"
+            ^"Intelligence" INTEGER 3
+            ^"Perception" INTEGER 3
+            ^"Presence" INTEGER 3
+            ^"Communication" INTEGER 3
+            ^"Strength" INTEGER 2
+            ^"Stamina" INTEGER 5
+            ^"Dexterity" INTEGER 1
+            ^"Quickness" INTEGER 1
+            ^"Size" INTEGER 0
+            ^"Confidence Score" INTEGER 2
+            ^"Confidence Points" INTEGER 15
+            ^"Soak" INTEGER 5
+            ^"Encumbrance" INTEGER 0
+        }
+        RULES {
+            # --- Virtues and Flaws ---
+            #ARM1819zI7kP9rU1wX3bD5fH: Virtue - Greater Immunity (Fire)
+
+            # --- Personality Traits ---
+            #ARM181AaJ8lQ0sV2xY4cE6gI: Personality Trait - Love of God +5
+            #ARM181BbK9mR1tW3yZ5dF7hJ: Personality Trait - Grim +4
+            #ARM181CcL0nS2uX4zA6eG8iK: Personality Trait - Remorseless +3
+
+            # --- Reputations ---
+            #ARM181DdM1oT3vY5aB7fH9jL: Reputation - Scourge of the Impious 3 (amongst Jews)
+
+            # --- Combat ---
+            #ARM181EeN2pU4wZ6bC8gI0kM: Combat (Flaming Fist) - Init +1, Attack +6, Defense +6, Damage +7; fire is natural and ignores Magic Resistance (but not Soak from Arts)
+
+            # --- Fatigue and Wounds ---
+            #ARM181FfO3qV5xA7cD9hJ1lN: Fatigue levels - OK, 0, -1, -3, -5, Unconscious
+            #ARM1820gP4rW6yB8dE0iK2mO: Wound Penalties - -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)
+
+            # --- Abilities ---
+            #ARM1821hQ5sX7zC9eF1jL3nP: Ability - Brawl 4 (fists)
+            #ARM1822iR6tY8aD0fG2kM4oQ: Ability - Dominion Lore 6 (angels)
+            #ARM1823jS7uZ9bE1gH3lN5pR: Ability - Theology 6 (sin)
+
+            # --- Powers ---
+            #ARM1824kT8vA0cF2hI4mO6qS: Power - Chastise the Sinful (5 points, Init +1, Corpus): As Curse of the Unportended Plague
+            #ARM1825lU9wB1dG3iJ5nP7rT: Power - Cloud Form (0 points, Init +30, Auram): Can take the form of a cloud at will, making him immune to all physical attacks (may be targeted by Auram spells)
+            #ARM1826mV0xC2eH4jK6oQ8sU: Power - Fiery Form (0 points, Init +30, Ignem): May become a fiery man at will, doing +5 damage to anyone within 5 feet
+
+            # --- Equipment ---
+            #ARM1827nW1yD3fI5kL7pR9tV: Equipment - None
+
+            # --- Vis ---
+            #ARM1828oX2zE4gJ6lM8qS0uW: Vis - 4 pawns Corpus throughout body, 2 pawns Ignem in veins
+
+            # --- Appearance ---
+            #ARM1829pY3aF5hK7mN9rT1vX: Appearance - Most often appears as a dark, ominous cloud; may rarely manifest as a man made of white fire, with veins of flame and eyes of lightning
+        }
+    }
+
+    # ===========================
+    # LUPERSUS
+    # ===========================
+
+    #ARM182AqZ4bG6iL8nO0sU2wY ^"Lupersus" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Creature of the Divine"
+            ^"Creature Type" TEXT "Divine Beast"
+            ^"Divine Might" INTEGER 20
+            ^"Might Form" TEXT "Animal"
+            ^"Intelligence" INTEGER 0
+            ^"Perception" INTEGER 3
+            ^"Presence" INTEGER 3
+            ^"Communication" INTEGER -2
+            ^"Strength" INTEGER 2
+            ^"Stamina" INTEGER 3
+            ^"Dexterity" INTEGER 1
+            ^"Quickness" INTEGER 2
+            ^"Size" INTEGER -1
+            ^"Age" TEXT "n/a"
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 6
+            ^"Soak" INTEGER 7
+            ^"Encumbrance" INTEGER 0
+        }
+        RULES {
+            # --- Virtues and Flaws ---
+            #ARM182BrA5cH7jM9oP1tV3xZ: Virtues and Flaws - None
+
+            # --- Personality Traits ---
+            #ARM182CsB6dI8kN0pQ2uW4yA: Personality Trait - Loyal +3
+            #ARM182DtC7eJ9lO1qR3vX5zB: Personality Trait - Patient +2
+            #ARM182EuD8fK0mP2rS4wY6aC: Personality Trait - Helpful +2
+
+            # --- Reputations ---
+            #ARM182FvE9gL1nQ3sT5xZ7bD: Reputations - None
+
+            # --- Combat ---
+            #ARM1830wF0hM2oR4tU6yA8cE: Combat (Bite) - Init +8, Attack +11, Defense +16, Damage +8
+
+            # --- Fatigue and Wounds ---
+            #ARM1831xG1iN3pS5uV7zB9dF: Fatigue levels - OK, 0/0/0/0/0/0, -1, -3, -5, Unconscious
+            #ARM1832yH2jO4qT6vW8aC0eG: Wound Penalties - -1 (1-4), -3 (5-8), -5 (9-12), Incapacitated (13-16)
+
+            # --- Abilities ---
+            #ARM1833zI3kP5rU7wX9bD1fH: Ability - Area Lore 5 (food sources)
+            #ARM1834aJ4lQ6sV8xY0cE2gI: Ability - Awareness 5 (threats to his charge)
+            #ARM1835bK5mR7tW9yZ1dF3hJ: Ability - Brawl 4 (bite)
+            #ARM1836cL6nS8uX0zA2eG4iK: Ability - Divine Lore 5 (saints)
+            #ARM1837dM7oT9vY1aB3fH5jL: Ability - Hunt 8 (rabbits)
+            #ARM1838eN8pU0wZ2bC4gI6kM: Ability - Stealth 8 (hiding from humans)
+            #ARM1839fO9qV1xA3cD5hJ7lN: Ability - Survival 8 (hills)
+
+            # --- Powers ---
+            #ARM183AgP0rW2yB4dE6iK8mO: Power - Perfect Defender (1 point, Init +20, Animal): If acting as defender for another character in combat, +10 bonus to Defense for duration of combat (until disengaged)
+
+            # --- Equipment ---
+            #ARM183BhQ1sX3zC5eF7jL9nP: Equipment - None
+
+            # --- Vis ---
+            #ARM183CiR2tY4aD6fG8kM0oQ: Vis - 4 pawns of Animal in the whole body
+
+            # --- Appearance and Notes ---
+            #ARM183DjS3uZ5bE7gH9lN1pR: Appearance - A silver-gray wolf with a noble bearing; never gets dirty no matter what terrain he runs through
+            #ARM183EkT4vA6cF8hI0mO2qS: Note - Lupersus is not an angel; he is a divine creature and does not have the shared angelic powers; sent by God to guard a holy hermit, provide food, and lead those in need of advice to the hermit
+        }
+    }
+
+    # ===========================
+    # NASIR, THE HELPER
+    # ===========================
+
+    #ARM183FlU5wB7dG9iJ1nP3rT ^"Nasir, the Helper" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Creature of the Divine"
+            ^"Creature Type" TEXT "Angel"
+            ^"Divine Might" INTEGER 25
+            ^"Might Form" TEXT "Corpus"
+            ^"Intelligence" INTEGER 2
+            ^"Perception" INTEGER 2
+            ^"Presence" INTEGER 2
+            ^"Communication" INTEGER 2
+            ^"Strength" INTEGER 0
+            ^"Stamina" INTEGER 1
+            ^"Dexterity" INTEGER 2
+            ^"Quickness" INTEGER 2
+            ^"Size" INTEGER 0
+            ^"Age" TEXT "n/a"
+            ^"Apparent Age" INTEGER 33
+            ^"Confidence Score" INTEGER 2
+            ^"Confidence Points" INTEGER 10
+            ^"Soak" INTEGER 1
+            ^"Encumbrance" INTEGER 0
+        }
+        RULES {
+            # --- Virtues and Flaws ---
+            #ARM1840mV6xC8eH0jK2oQ4sU: Virtue - Ways of the (Local Environment)
+            #ARM1841nW7yD9fI1kL3pR5tV: Virtue - Animal Ken
+            #ARM1842oX8zE0gJ2lM4qS6uW: Virtue - Wilderness Sense
+
+            # --- Personality Traits ---
+            #ARM1843pY9aF1hK3mN5rT7vX: Personality Trait - Compassionate +3
+            #ARM1844qZ0bG2iL4nO6sU8wY: Personality Trait - Just +3
+            #ARM1845rA1cH3jM5oP7tV9xZ: Personality Trait - Love of God +5
+
+            # --- Reputations ---
+            #ARM1846sB2dI4kN6pQ8uW0yA: Reputations - None
+
+            # --- Combat ---
+            #ARM1847tC3eJ5lO7qR9vX1zB: Combat (Fist) - Init +2, Attack +8, Defense +8, Damage +0
+
+            # --- Fatigue and Wounds ---
+            #ARM1848uD4fK6mP8rS0wY2aC: Fatigue levels - OK, 0, -1, -3, -5, Unconscious
+            #ARM1849vE5gL7nQ9sT1xZ3bD: Wound Penalties - -1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)
+
+            # --- Abilities ---
+            #ARM184AwF6hM8oR0tU2yA4cE: Ability - Animal Handling 8 (horses)
+            #ARM184BxG7iN9pS1uV3zB5dF: Ability - Animal Ken 8 (horses)
+            #ARM184CyH8jO0qT2vW4aC6eG: Ability - Athletics 8 (climbing)
+            #ARM184DzI9kP1rU3wX5bD7fH: Ability - Awareness 8 (natural hazards)
+            #ARM184EaJ0lQ2sV4xY6cE8gI: Ability - Brawl 5 (fist)
+            #ARM184FbK1mR3tW5yZ7dF9hJ: Ability - Chirurgy 8 (bind wound)
+            #ARM1850cL2nS4uX6zA8eG0iK: Ability - Dominion Lore 8 (angels)
+            #ARM1851dM3oT5vY7aB9fH1jL: Ability - Swim 8 (rough water)
+            #ARM1852eN4pU6wZ8bC0gI2kM: Ability - Theology 8 (angelology)
+            #ARM1853fO5qV7xA9cD1hJ3lN: Ability - Wilderness Sense 8 (local environment)
+
+            # --- Powers ---
+            #ARM1854gP6rW8yB0dE2iK4mO: Power - Calming Touch (3 points, Init +0, Animal/Mentem): By touching the target, Nasir can calm their fears, making them feel reassured in the face of dangerous terrain
+            #ARM1855hQ7sX9zC1eF3jL5nP: Power - Spirit Form (0 points, Init +30, Vim): Can become a creature of pure spirit; unable to affect or be affected physically
+            #ARM1856iR8tY0aD2fG4kM6oQ: Power - Steadying Hand (5 points, Init +30, Animal/Corpus): By touching the target, assures their footsteps are firm; target will not slip or fall as long as contact is maintained
+            #ARM1857jS9uZ1bE3gH5lN7pR: Power - Subtle Form (0 points, Init +0, Corpus): Can change appearance to look like any human being; statistics do not change
+
+            # --- Equipment ---
+            #ARM1858kT0vA2cF4hI6mO8qS: Equipment - Travelling clothes
+
+            # --- Vis ---
+            #ARM1859lU1wB3dG5iJ7nP9rT: Vis - 4 pawns of Terram in feet
+
+            # --- Appearance and Notes ---
+            #ARM185AmV2xC4eH6jK8oQ0sU: Appearance - An unassuming man dressed in well-worn travelling clothes
+            #ARM185BnW3yD5fI7kL9pR1tV: Note - A minor angel charged with the safety of pious travellers; appears by mundane means from just out of sight, provides aid, and leaves before being questioned closely
+        }
+    }
+
+    # ===========================
+    # SEFERIEL
+    # ===========================
+
+    #ARM185CoX4zE6gJ8lM0qS2uW ^"Seferiel" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Type" TEXT "Creature of the Divine"
+            ^"Creature Type" TEXT "Angel"
+            ^"Divine Might" INTEGER 50
+            ^"Might Form" TEXT "Corpus"
+            ^"Intelligence" INTEGER 5
+            ^"Perception" INTEGER 5
+            ^"Presence" INTEGER 5
+            ^"Communication" INTEGER 5
+            ^"Strength" INTEGER 5
+            ^"Stamina" INTEGER 5
+            ^"Dexterity" INTEGER 5
+            ^"Quickness" INTEGER 5
+            ^"Size" INTEGER 1
+            ^"Age" TEXT "n/a"
+            ^"Apparent Age" INTEGER 30
+            ^"Confidence Score" INTEGER 3
+            ^"Confidence Points" INTEGER 18
+            ^"Soak" INTEGER 20
+            ^"Encumbrance" INTEGER 0
+        }
+        RULES {
+            # --- Virtues and Flaws ---
+            #ARM185DpY5aF7hK9mN1rT3vX: Virtues and Flaws - None
+
+            # --- Personality Traits ---
+            #ARM185EqZ6bG8iL0nO2sU4wY: Personality Trait - Just +3
+            #ARM185FrA7cH9jM1oP3tV5xZ: Personality Trait - Love of God +5
+            #ARM1860sB8dI0kN2pQ4uW6yA: Personality Trait - Curious +2
+            #ARM1861tC9eJ1lO3qR5vX7zB: Personality Trait - Merciful +2
+
+            # --- Reputations ---
+            #ARM1862uD0fK2mP4rS6wY8aC: Reputations - None
+
+            # --- Combat ---
+            #ARM1863vE1gL3nQ5sT7xZ9bD: Combat (Flaming Greatsword) - Init +18, Attack +21, Defense +18, Damage +25; both greatsword and fire are natural (made by God) and not magically resisted
+
+            # --- Fatigue and Wounds ---
+            #ARM1864wF2hM4oR6tU8yA0cE: Fatigue levels - OK, 0/0/0/0/0/0, -1, -3, -5, Unconscious
+            #ARM1865xG3iN5pS7uV9zB1dF: Wound Penalties - -1 (1-6), -3 (7-12), -5 (13-18), Incapacitated (19-24)
+
+            # --- Abilities ---
+            #ARM1866yH4jO6qT8vW0aC2eG: Ability - Awareness 5 (casting magic)
+            #ARM1867zI5kP7rU9wX1bD3fH: Ability - Charm 3 (magi)
+            #ARM1868aJ6lQ8sV0xY2cE4gI: Ability - Divine Lore 10 (angels)
+            #ARM1869bK7mR9tW1yZ3dF5hJ: Ability - Great Weapon 7 (greatsword)
+            #ARM186AcL8nS0uX2zA4eG6iK: Ability - Leadership 7 (magi)
+            #ARM186BdM9oT1vY3aB5fH7jL: Ability - Magic Theory 10 (theological implications)
+            #ARM186CeN0pU2wZ4bC6gI8kM: Ability - Order of Hermes Lore 10 (interactions with the Church)
+            #ARM186DfO1qV3xA5cD7hJ9lN: Ability - Theology 10 (angelology)
+
+            # --- Powers ---
+            #ARM186EgP2rW4yB6dE8iK0mO: Power - Magic (1 or more points, Init +18, by effect): Can duplicate any Hermetic magic effect at a cost of 1 Might Point per two magnitudes; no limit other than remaining Might Pool; includes ritual effects without vis or extended time
+            #ARM186FhQ3sX5zC7eF9jL1nP: Power - Spirit Form (0 points, Init +30, Vim): Can become a creature of pure spirit; unable to affect or be affected physically
+            #ARM1870iR4tY6aD8fG0kM2oQ: Power - Subtle Form (0 points, Init +0, Corpus): Can change appearance to look like any human being; statistics do not change
+
+            # --- Equipment ---
+            #ARM1871jS5uZ7bE9gH1lN3pR: Equipment - Shining white robes, flaming greatsword
+
+            # --- Vis ---
+            #ARM1872kT6vA8cF0hI2mO4qS: Vis - 10 pawns of Ignem in the sword
+
+            # --- Appearance and Notes ---
+            #ARM1873lU7wB9dG1iJ3nP5rT: Appearance - A large man with golden-tinged skin and burning-bright hair, dressed in a white robe that shines like the stars, carrying a burning greatsword
+            #ARM1874mV8xC0eH2jK4oQ6sU: Note - Angel with special responsibility for Hermetic magi; seeks to draw them closer to God but sometimes acts as instrument of God's vengeance; finds magi fascinating and often pretends to be a magus; suitable antagonist for the Plagued by Angel Story Flaw
+        }
+    }
+}

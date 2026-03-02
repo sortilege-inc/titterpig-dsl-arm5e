@@ -1,0 +1,777 @@
+EXTENSION "ARM5e_Spells_Aquam" {
+    NAME "Ars Magica 5th Edition Definitive - Aquam Spells"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Magic"
+
+    # Aquam Form spells: affect water and other liquids.
+    # Basic Individual: a pool of water about 5 paces across and 2 feet deep.
+    # Organized by Technique, then by Level.
+
+    # ===========================
+    # CREO AQUAM GUIDELINES
+    # ===========================
+
+    #ARMC80aQ1bR2cS3dT4eU5f ^"Creo Aquam Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+        }
+        RULES {
+            #ARMC80g: Water created temporarily quenches thirst but provides no lasting benefits to the drinker. It can be used to wash, and things washed stay clean.
+            #ARMC80h: Slightly unnatural liquids are one magnitude harder than water, very unnatural liquids are two magnitudes harder, and require a Muto requisite.
+            #ARMC80i: Poisons created at the guideline level have an Ease Factor of 3. Each magnitude added to the level of the spell adds 3 to the Ease Factor.
+            #ARMC80j: General: Create a corrosive substance doing +(Level) damage.
+            #ARMC80k: Level 2: Fill a container with water (or some other natural liquid, with appropriate requisites).
+            #ARMC80m: Level 3: Create water (or some other natural liquid) that is not contained (for example, spread over a surface).
+            #ARMC80n: Level 3: Create ice in a natural shape, such as a floe or icicle.
+            #ARMC80p: Level 4: Create water (or some other natural liquid) in an unnatural shape (for example, in a sphere over someone's head) but water so created will behave normally.
+            #ARMC80q: Level 4: Create a spring with a low rate of flow.
+            #ARMC80r: Level 5: Create a poison that causes a Light Wound.
+            #ARMC80s: Level 5: Create a spring with a high rate of flow.
+            #ARMC80t: Level 10: Create a geyser with a very high rate of flow.
+            #ARMC80u: Level 10: Create poison that causes a Medium Wound.
+            #ARMC80v: Level 15: Create poison that causes a Heavy Wound.
+            #ARMC80w: Level 20: Create a poison that causes an Incapacitating Wound.
+            #ARMC80x: Level 25: Create a poison that causes a Fatal Wound.
+            #ARMC80y: Level 25: Create a water elemental from a base amount of elemental material. (Ritual)
+        }
+    }
+
+    # ===========================
+    # CREO AQUAM SPELLS
+    # ===========================
+
+    #ARMC81aB2cD4eF6gH8iJ0k ^"Footsteps of Slippery Oil" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +1 Diameter"
+        }
+        RULES {
+            #ARMC81m: From each of the next ten footsteps the caster of this spell takes, nonflammable grease spreads out, leaving a slick area 10 paces wide.
+            #ARMC81n: Dexterity stress rolls are required to remain upright whenever a character on the oil does something more challenging than walking. A roll against an Ease Factor of 6 is needed for the average maneuver, with Ease Factors of up to 15 needed to (for example) make a right turn at full speed on a smooth, greased surface.
+            #ARMC81p: The duration is the length of time that the oil lasts.
+            #ARMC81q: This spell was invented by a rather good-natured magus, and the gestures associated with the most common variations of the spell are as comical as the effects themselves. You stand first on one leg, and then the other, vigorously rubbing the bottom of each upturned foot, as if spreading on a salve.
+        }
+    }
+
+    #ARMC82aB2cD4eF6gH8iJ0k ^"Creeping Oil" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +2 Sun"
+        }
+        RULES {
+            #ARMC82m: Saturates a porous material with flammable oil. When casting this spell, you make a flicking motion with your index finger and thumb, as if propelling something at the target.
+            #ARMC82n: A dot of oil appears on the target after the spell is finished, and slowly spreads over the target, saturating enough cloth to cover a person.
+            #ARMC82p: If used on a person's clothes and ignited, the oil does +12 damage the first round, +6 the second, and +0 the third.
+        }
+    }
+
+    #ARMC83aB2cD4eF6gH8iJ0k ^"Mighty Torrent of Water" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice"
+        }
+        RULES {
+            #ARMC83m: A 3-foot-diameter jet of water sprays from your outstretched arms towards your target. The target of this gusher of water takes +10 damage and must make a Strength + Size stress roll against an Ease Factor of 9 or be sent flying back.
+            #ARMC83n: Marbaid of Flambeau's wizard's sigil is connected to his obsession with blood. In his version of the spell the target is hit by a gush of blood, and the stains do not go away until sunrise/sunset. This does not require a requisite, as it is a purely cosmetic effect.
+        }
+    }
+
+    #ARMC84aB2cD4eF6gH8iJ0k ^"Deluge of Rushing and Dashing" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +1 Concentration, +3 size, so that the whole stream floods"
+        }
+        RULES {
+            #ARMC84m: Causes a stream to flood, starting at the stream's nearest point to you and continuing downstream. The results of this spell are generally quite impressive. As the stream overflows its original bed, it becomes a raging torrent, sucking in everything near it. Damage from the spell can last for many years.
+            #ARMC84n: As long as you concentrate, the stream remains at flood levels.
+            #ARMC84p: Anyone caught near the stream when it floods is struck by the rush of water (+10 damage), caught up in the flood, and dragged along.
+            #ARMC84q: Every round, a victim makes a Strength + Swim stress roll against an Ease Factor of 9. Success means the character escapes the flood. Otherwise, the character loses one Fatigue level and takes +5 damage. Any who fall unconscious drown. This roll is repeated until the character either escapes the flood or dies.
+        }
+    }
+
+    # ===========================
+    # INTELLEGO AQUAM GUIDELINES
+    # ===========================
+
+    #ARMC85aQ1bR2cS3dT4eU5f ^"Intellego Aquam Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+        }
+        RULES {
+            #ARMC85g: Intellego Aquam spells do not normally require requisites depending on the type of liquid targeted.
+            #ARMC85h: Botched InAq spells generally provide false information.
+            #ARMC85i: Level 1: Make a sense unaffected by water.
+            #ARMC85j: Level 2: Get an image of water within range.
+            #ARMC85k: Level 3: Get an image of water and its immediate surroundings within range.
+            #ARMC85m: Level 3: Learn the natural properties of a liquid.
+            #ARMC85n: Level 4: Learn the natural properties of a mixture of liquids.
+            #ARMC85p: Level 5: Learn the magical properties of a liquid.
+            #ARMC85q: Level 10: Learn the magical properties of a mixture of liquids.
+            #ARMC85r: Level 15: Speak with a natural body of water.
+            #ARMC85s: Level 20: Speak with an artificial body of water (like a fountain).
+        }
+    }
+
+    # ===========================
+    # INTELLEGO AQUAM SPELLS
+    # ===========================
+
+    #ARMC86aB2cD4eF6gH8iJ0k ^"Clear Sight of the Naiad" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Vision"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 1, +4 Vision"
+        }
+        RULES {
+            #ARMC86m: You can see as clearly through water as through air, for a single moment.
+        }
+    }
+
+    #ARMC87aB2cD4eF6gH8iJ0k ^"Subtle Taste of Poison and Purity" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Taste"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Concentration"
+        }
+        RULES {
+            #ARMC87m: You can taste all of the properties of any liquid or mixture of liquids.
+            #ARMC87n: Unlike Touch of the Pearls, you can use this sense on any number of liquids during the duration of the spell, but you must taste the liquids in question.
+        }
+    }
+
+    #ARMC88aB2cD4eF6gH8iJ0k ^"Touch of the Pearls" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch"
+        }
+        RULES {
+            #ARMC88m: Tells you whether a liquid you hold or touch is poisonous, just as a pearl sometimes does.
+            #ARMC88n: Safer than Subtle Taste of Poison and Purity, as you don't have to taste the possibly poisonous liquid.
+            #ARMC88p: In Verdan of Ex Miscellanea's version of the spell, poisonous liquids turn a faint green. According to his sigil, all his spells involve the color green.
+        }
+    }
+
+    #ARMC89aB2cD4eF6gH8iJ0k ^"Call of the Rushing Waters" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +4 Arcane Connection, +1 Concentration"
+        }
+        RULES {
+            #ARMC89m: Allows you to find any natural body of water for which you have an Arcane Connection (for example, a vial of water from it).
+            #ARMC89n: Once you cast the spell, you can hear the water while you concentrate. Following the sound eventually brings you to the water, but you must make simple Perception rolls against an Ease Factor of 6 to follow the sound accurately (roll once per day for long journeys).
+            #ARMC89p: If you break concentration, you must cast the spell again. A body of water that does not move or that makes little noise requires a roll against an Ease Factor of 9 to be traced.
+        }
+    }
+
+    #ARMC8AaB2cD4eF6gH8iJ0k ^"Voice of the Lake" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +1 Touch, +1 Concentration"
+        }
+        RULES {
+            #ARMC8Am: You can hold a conversation with a body of water. A body of water usually knows about things directly in contact with it, such as boats and fish.
+            #ARMC8An: Genuine lakes are too complex for this spell to affect; they are not Individuals of Aquam.
+            #ARMC8Ap: In Chavin of Tytalus's version of this spell, the lake always sounds strong, masculine, and arrogant.
+        }
+    }
+
+    #ARMC8BaB2cD4eF6gH8iJ0k ^"Enchantment of the Scrying Pool" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" TEXT "Imaginem"
+            ^"Design" TEXT "Special spell"
+        }
+        RULES {
+            #ARMC8Bm: Turns a body of water into a scrying pool. Innately magical people (including most companions with mystical powers) who look into the pool can see any spot they know of that is within sight of some natural body of water.
+            #ARMC8Bn: The view you get is the same view that someone would have from a low boat on the water, either close to shore or far from shore, as desired. Maximum range for scrying is 500 miles; the range of the spell is the range to the pool when the spell is cast.
+            #ARMC8Bp: This ritual is not entirely of Hermetic magic, and does not conform to the normal InAq guidelines. It is an old Mercurian ritual that has become known throughout the Order, and which appears to use one body of water as an Arcane Connection to any other body of water.
+            #ARMC8Bq: A number of theoreticians would like to make that work more generally, but so far this has not proved possible.
+        }
+    }
+
+    # ===========================
+    # MUTO AQUAM GUIDELINES
+    # ===========================
+
+    #ARMC8CaQ1bR2cS3dT4eU5f ^"Muto Aquam Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Aquam"]
+        }
+        RULES {
+            #ARMC8Cg: You cannot transform liquids within someone's body unless the spell is designed that way (and has a Corpus or Animal requisite).
+            #ARMC8Ch: Muto Aquam botches might change liquids inside the caster, change the wrong liquid outside him, or change the liquid in the wrong way.
+            #ARMC8Ci: Poisons created at the guideline level have an Ease Factor of 3. For every magnitude added to the spell, add three to the Ease Factor.
+            #ARMC8Cj: General: Change a liquid into a liquid that does +(Level) points of damage on contact.
+            #ARMC8Ck: General: Convert part of a water elemental's body into another type of water (salt water to fresh water, etc.), reducing the elemental's Might pool by the level of the spell +2 magnitudes. If the elemental is not destroyed by this effect, when the duration ends it can restore this Might by re-absorbing the matter.
+            #ARMC8Cm: Level 2: Change a natural liquid into another natural liquid.
+            #ARMC8Cn: Level 2: Change a liquid into a poison causing a Light Wound.
+            #ARMC8Cp: Level 3: Change a liquid into a poison causing a Medium Wound.
+            #ARMC8Cq: Level 3: Change a natural liquid into a slightly unnatural liquid (for example, make blue water or strawberry flavored castor oil), or vice versa.
+            #ARMC8Cr: Level 4: Change a liquid into an unrelated solid or gas (with requisites; Terram for solids and Auram for gases).
+            #ARMC8Cs: Level 4: Change a natural liquid into two or more different natural liquids, with the two types separate (although they will mix again normally).
+            #ARMC8Ct: Level 4: Change a liquid into a poison causing a Heavy Wound.
+            #ARMC8Cu: Level 4: Change a liquid into a very unnatural liquid (for example, a shocking pink liquid that causes bizarre hallucinations) -- requisites will often be required.
+            #ARMC8Cv: Level 5: Change a liquid into a mixture of any liquid, solid (with Terram requisite), or gas (with Auram requisite).
+            #ARMC8Cw: Level 5: Change a liquid into a slightly unnatural solid or gas.
+            #ARMC8Cx: Level 5: Change a liquid into a poison causing an Incapacitating Wound.
+            #ARMC8Cy: Level 10: Change a liquid into a very unnatural solid or gas.
+            #ARMC8Cz: Level 10: Change a liquid into a poison causing a Fatal Wound.
+        }
+    }
+
+    # ===========================
+    # MUTO AQUAM SPELLS
+    # ===========================
+
+    #ARMC8DaB2cD4eF6gH8iJ0k ^"Incantation of Putrid Wine" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Room"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 Touch, +2 Sun, +2 Room"
+        }
+        RULES {
+            #ARMC8Dm: Makes all liquids within the target room vile and malodorous. The room where this spell is cast may not lose the stench for weeks or months.
+            #ARMC8Dn: Note that this spell only affects liquids that are in the room when it is cast, and they remain malodorous even if removed from the room.
+        }
+    }
+
+    #ARMC8EaB2cD4eF6gH8iJ0k ^"Lungs of the Fish" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Auram"
+            ^"Design" TEXT "Base 4, +1 Touch, +2 Sun, +1 Part"
+        }
+        RULES {
+            #ARMC8Em: Turns water into air as it enters your lungs, allowing you to breathe water as you do air.
+            #ARMC8En: This spell puzzles Hermetic theoreticians, as it behaves like a dynamic container target despite not being a container target. All known attempts to create analogous effects have failed, even though analysis of this spell has not revealed any sign of non-Hermetic influence, or integrated experimentation.
+            #ARMC8Ep: Most magi just point to it as an example of how Hermetic magic is not fully understood, and get on with their lives.
+        }
+    }
+
+    #ARMC8FaB2cD4eF6gH8iJ0k ^"Vile Water of Sterility" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 4 (a very unnatural liquid), +1 Touch, +4 Year, +2 Group, +2 size"
+        }
+        RULES {
+            #ARMC8Fm: Ruins a body of water up to the size of a small lake, making it unfit for natural habitation and consumption.
+            #ARMC8Fn: The water becomes dark and murky, and noxious fumes emanate from it. Vegetation on the banks either dies or becomes corrupt. Nearby trees become gnarled and blackened, and land animals flee the area.
+        }
+    }
+
+    # ===========================
+    # PERDO AQUAM GUIDELINES
+    # ===========================
+
+    #ARMC90aQ1bR2cS3dT4eU5f ^"Perdo Aquam Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Aquam"]
+        }
+        RULES {
+            #ARMC90g: As magnitudes in these spells rise, the destruction caused becomes more subtle, or more pervasive.
+            #ARMC90h: Destroying water that is part of something, such as the fluid in a human being, requires a target of Part. Destroying water that is merely on someone, such as the water making a person wet, only needs a target of Individual.
+            #ARMC90i: Perdo Aquam botches might destroy all water in the caster, as Curse of the Desert, or create water instead of destroying it.
+            #ARMC90j: General: Destroy sufficient matter to reduce a water elemental's Might Score by the level of the spell +2 magnitudes.
+            #ARMC90k: Level 4: Completely dry something (up to the size of a small house) that is wet.
+            #ARMC90m: Level 5: Greatly reduce the amount of a liquid without destroying it completely.
+            #ARMC90n: Level 10: Destroy a liquid (requisites may be required).
+            #ARMC90p: Level 15: Destroy one property of a liquid (like alcohol's ability to intoxicate or sea water's saltiness).
+            #ARMC90q: Level 20: Destroy a small spring, so that it never flows again.
+        }
+    }
+
+    # ===========================
+    # PERDO AQUAM SPELLS
+    # ===========================
+
+    #ARMC91aB2cD4eF6gH8iJ0k ^"Comfort of the Drenched Traveler" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch"
+        }
+        RULES {
+            #ARMC91m: Dries a person and his or her clothes.
+        }
+    }
+
+    #ARMC92aB2cD4eF6gH8iJ0k ^"Parching Wind" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +2 Voice, +1 Part"
+        }
+        RULES {
+            #ARMC92m: Removes most of the water from any object, including plants (with a Herbam requisite), possibly making the object brittle and fragile.
+            #ARMC92n: With a Corpus or Animal requisite, the spell can affect humans or animals. This causes +10 damage, against which armor is no defense, and makes the target extremely thirsty.
+        }
+    }
+
+    #ARMC93aB2cD4eF6gH8iJ0k ^"Closing the Earth's Gate" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 20, +1 Touch"
+        }
+        RULES {
+            #ARMC93m: Dries a single spring, so that it never flows again. This spell targets the spring, not the water in it at a particular time, so the spring does not start to flow again later.
+        }
+    }
+
+    #ARMC94aB2cD4eF6gH8iJ0k ^"Curse of the Desert" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +1 Part"
+        }
+        RULES {
+            #ARMC94m: Removes virtually all the fluid from the target's body, doing +15 damage, which armor does not protect against.
+            #ARMC94n: The target must drink within a few minutes of being struck with this spell, or it dies. Casting requisites are Animal for beasts, and Corpus for humans.
+        }
+    }
+
+    #ARMC95aB2cD4eF6gH8iJ0k ^"Calling the Odious Drought" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 50
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" TEXT "Auram"
+            ^"Design" TEXT "Base 5, +1 Touch, +4 Year, +4 Boundary, no increase for requisite"
+        }
+        RULES {
+            #ARMC95m: Causes a drought over the surrounding area. Only one-tenth the normal rain falls, streams dry up, and rivers dwindle.
+        }
+    }
+
+    # ===========================
+    # REGO AQUAM GUIDELINES
+    # ===========================
+
+    #ARMC96aQ1bR2cS3dT4eU5f ^"Rego Aquam Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+        }
+        RULES {
+            #ARMC96g: Rego Aquam can change water into ice or steam, because these are both states that water can have naturally.
+            #ARMC96h: Rego Aquam botches generally involve spectacular and dangerous loss of control of the water.
+            #ARMC96i: Add one magnitude if the controlled movement is slightly unnatural, two if it is very unnatural.
+            #ARMC96j: General: Ward against beings associated with Aquam from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)
+            #ARMC96k: Level 1: Control a liquid in an extremely gentle way.
+            #ARMC96m: Level 3: Change a liquid into the corresponding solid or gas (for example, change water into ice or steam). This does not require requisites.
+            #ARMC96n: Level 4: Control a liquid in a forceful but calm way, such as a fast but constant current.
+            #ARMC96p: Level 4: Transport a liquid instantly up to 5 paces. Add 1 magnitude to increase the distance to 50 paces, 2 magnitudes for 500 paces, 3 magnitudes for 1 league, 4 magnitudes for seven leagues, and 5 magnitudes to a place for which you have an Arcane Connection.
+            #ARMC96q: Level 5: Ward against mundane water.
+            #ARMC96r: Level 5: Control a liquid in a violent way.
+            #ARMC96s: Level 5: Control a disembodied spirit associated with Aquam.
+            #ARMC96t: Level 5: Completely control a water elemental.
+            #ARMC96u: Level 10: Control a liquid in an extremely violent way.
+            #ARMC96v: Level 15: Summon a disembodied spirit associated with Aquam.
+            #ARMC96w: Level 20: Ward against liquids. (Touch, Ring, Circle)
+        }
+    }
+
+    # ===========================
+    # REGO AQUAM SPELLS
+    # ===========================
+
+    #ARMC97aB2cD4eF6gH8iJ0k ^"Ward Against Faeries of the Waters" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Ritual" BOOLEAN false
+            ^"LevelNote" TEXT "General"
+            ^"Design" TEXT "Base spell"
+        }
+        RULES {
+            #ARMC97m: No water faerie whose Faerie Might is equal to or less than the level of the spell can affect those targeted by the spell.
+            #ARMC97n: Faeries cannot directly or indirectly break the magic circle, nor can they use ranged attacks or magic to affect those within it.
+            #ARMC97p: Seen from certain angles at night, the ring appears as a light blue dome.
+        }
+    }
+
+    #ARMC98aB2cD4eF6gH8iJ0k ^"Cloak of the Duck's Feathers" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 1, +1 Touch, +2 Sun, +1 for slightly unnatural control"
+        }
+        RULES {
+            #ARMC98m: Makes water run off one object or creature, protecting the target and the target's apparel from dampness.
+            #ARMC98n: The spell is broken if the target is submerged in water.
+        }
+    }
+
+    #ARMC99aB2cD4eF6gH8iJ0k ^"Break the Oncoming Wave" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Concentration, ward, so the target is the warded Individual, not the water"
+        }
+        RULES {
+            #ARMC99m: Breaks all waves and torrents of water (including magical ones) just before they touch you. The water either crashes to the ground or flows around you in a truly impressive display.
+            #ARMC99n: In Ferramentum of Verditius's version of this spell, the water breaks precisely one inch from the target, leaving a very clean line showing where the waves stopped. All of his spells may be recognized by their orderliness.
+        }
+    }
+
+    #ARMC9AaB2cD4eF6gH8iJ0k ^"Breath of Winter" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +2 Sun, +1 Part"
+        }
+        RULES {
+            #ARMC9Am: Turns a circle of water up to five paces across into snow. The Duration ensures that it will not melt until the spell expires, no matter how warm the weather.
+        }
+    }
+
+    #ARMC9BaB2cD4eF6gH8iJ0k ^"Push of the Gentle Wave" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice, +1 Concentration"
+        }
+        RULES {
+            #ARMC9Bm: A low wave is formed to propel a small boat slowly through the water. When casting this spell, you commonly make a pushing gesture.
+            #ARMC9Bn: This spell, and other similar ones, pick out a particular current in the body of water and make it behave as desired, and thus have Individual Targets.
+            #ARMC9Bp: In Silva of Merinita's version of this spell, the wave occasionally drifts or bobs about, as if it is happy and playful.
+        }
+    }
+
+    #ARMC9CaB2cD4eF6gH8iJ0k ^"Bridge of Frost" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +2 Sun, +1 Part, +1 size, +1 to allow various shapes"
+        }
+        RULES {
+            #ARMC9Cm: Causes a thick layer of frost (firm enough to walk on) to form on the surface of a body of water. The frost can take any shape up to fifteen paces in any direction.
+            #ARMC9Cn: In Cralian of Tremere's version of this spell, the frost is so crystal clear that it can hardly be seen. All of his spells are very subtle.
+        }
+    }
+
+    #ARMC9DaB2cD4eF6gH8iJ0k ^"Chaos of the Angry Waves" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +2 Voice, +1 Concentration, +1 Part, +1 size"
+        }
+        RULES {
+            #ARMC9Dm: Causes water to churn wildly, overturning small water craft and forcing Swim rolls at -6, in a circular area 20 paces across.
+        }
+    }
+
+    #ARMC9EaB2cD4eF6gH8iJ0k ^"Parting the Waves" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Touch, +1 Concentration, +2 Group"
+        }
+        RULES {
+            #ARMC9Em: Parts a body of water, revealing a dry path 5 paces wide along the bottom.
+            #ARMC9En: Very large bodies of water are too large for the Group target, and are thus unaffected.
+        }
+    }
+
+    #ARMC9FaB2cD4eF6gH8iJ0k ^"Waves of Drowning and Smashing" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +3 Sight, +1 size"
+        }
+        RULES {
+            #ARMC9Fm: Raises a wave 5 feet high and 30 paces wide, which can submerge swimmers, overturn rowboats, and damage sailing ships.
+            #ARMC9Fn: It starts as a small, curved wave and grows for the first 10 paces, at which point it reaches maximum size. If it travels 100 paces without striking an object large enough to break it up, it dissipates.
+        }
+    }
+
+    #ARMCA0aB2cD4eF6gH8iJ0k ^"Ice of Drowning" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5 (for the violent pounding), +2 Voice, +1 Concentration, +1 Part, +1 size, +1 additional effect, changing the water to ice"
+        }
+        RULES {
+            #ARMCA0m: Turns part of the water in a circle 10 paces across into large, jagged chunks of ice and drives them to pound against anything on the water's surface.
+            #ARMCA0n: The ice can punch holes in small boats but does not damage ships. Any swimmers in the area take +15 damage, and suffer -6 and two extra botch checks on Swim rolls.
+        }
+    }
+
+    #ARMCA1aB2cD4eF6gH8iJ0k ^"Pull of the Watery Grave" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +3 Sight, +1 Concentration, +1 size"
+        }
+        RULES {
+            #ARMCA1m: Creates a powerful undercurrent that drags any object smaller than a rowboat 25 fathoms (150 feet) into the depths.
+            #ARMCA1n: Each of those caught in the undercurrent must make a Strength + Swim stress roll against an Ease Factor of 9 to avoid being dragged down. A roll is made each round that the spell is maintained.
+        }
+    }
+
+    #ARMCA2aB2cD4eF6gH8iJ0k ^"Tower of Whirling Water" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +1 Concentration, +2 Group"
+        }
+        RULES {
+            #ARMCA2m: Creates a waterspout that moves under your mental direction. It causes a simple die + 15 damage to anyone it hits (no Attack roll necessary).
+            #ARMCA2n: In addition, those struck must make a Quickness stress roll against an Ease Factor of 6 to avoid being sucked up by the waterspout. Those who fail are helplessly pulled into the spout and begin to drown immediately.
+            #ARMCA2p: When the waterspout fails, they fall up to 20 feet to the water's surface.
+            #ARMCA2q: If you direct the waterspout to move across land, you must make an Intelligence + Concentration stress roll against an Ease Factor of 9 each round to maintain it.
+        }
+    }
+
+    #ARMCA3aB2cD4eF6gH8iJ0k ^"Neptune's Wrath" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 10, +3 Sight, +3 size, ritual for large effect"
+        }
+        RULES {
+            #ARMCA3m: A gigantic wave is created in a very large body of water, only 20 feet high but up to a mile wide, capable of capsizing ships at sea, smashing and drowning people near shore, and seriously damaging coastline communities.
+            #ARMCA3n: The tidal wave needs 5 miles of water surface to build itself up to proper proportions. The magus cannot control the wave without casting another spell.
+        }
+    }
+}

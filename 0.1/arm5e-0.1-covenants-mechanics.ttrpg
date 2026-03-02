@@ -1,0 +1,1063 @@
+EXTENSION "ARM5e_Covenants_Mechanics" {
+    NAME "Ars Magica 5th Edition Definitive - Covenant Creation and Management"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Base"
+
+    # ===========================
+    # COVENANT SEASONS
+    # ===========================
+    # Covenants pass through four seasons reflecting their lifecycle.
+    # Spring: newly established, few resources, weak magi
+    # Summer: firmly established, still growing
+    # Autumn: living off past glories, most powerful covenants
+    # Winter: in decline, on the way to oblivion
+
+    #ARM1300pK7wQ3rT9xB5hN1mJ ^"Covenant Season" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Season" ENUM ["Spring", "Summer", "Autumn", "Winter"]
+        }
+        RULES {
+            #ARM1301vF4yD8gL2cA6sU0eR: ^"Spring" covenants are recently established with few resources and weak magi
+            #ARM1302bH9jM5kP1nW7tX3qZ: ^"Summer" covenants are firmly established and still growing in power
+            #ARM1303dC6fI2lO8rS4uY0wA: ^"Autumn" covenants are the most powerful but have ceased growing
+            #ARM1304hG3kJ7mN1pQ5tV9xB: ^"Winter" covenants are in decline, populated by old and peculiar magi
+        }
+    }
+
+    # ===========================
+    # POWER LEVELS AND BUILD POINTS
+    # ===========================
+    # Accessible power level determines Build Points and resource limits.
+
+    #ARM1305lE8nH4qK0sM6wP2yR ^"Power Level" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Level" ENUM ["Low", "Medium", "High", "Legendary"]
+        }
+        RULES {
+            #ARM1306rT5vX1bD7fG3jL9mN: ^"Low" grants 0-300 Build Points, max spell/effect level 25, no minimum age
+            #ARM1307wA8cF4eI0hK6kO2pQ: ^"Medium" grants 300-1250 Build Points, max level 40, minimum 10 years old
+            #ARM1308xB3dG9fJ5iL1lN7qS: ^"High" grants 1250-2500 Build Points, no level limit, minimum 50 years old
+            #ARM1309yC2eH8gK4jM0mO6rT: ^"Legendary" grants 2500+ Build Points, no level limit, minimum 100 years old
+        }
+    }
+
+    # ===========================
+    # BASELINE COVENANT
+    # ===========================
+    # The base covenant before Boons and Hooks:
+    # - Stone building with enough room for magi and covenfolk
+    # - Level 3 Magic aura
+    # - No magical resources
+    # - Sufficient mundane resources for day-to-day upkeep
+    # - About 1 grog per magus, 2 other covenfolk per magus
+    # - Blacksmith, carpenter, maybe bookbinder available
+    # - Hard to get into but could not withstand serious military assault
+    # - Aging Modifier 0
+
+    #ARM130AuV5wX1yZ7aB3cD9eF ^"Covenant Baseline" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Base Aura" INTEGER 3
+            ^"Base Aging Modifier" INTEGER 0
+            ^"Base Income Type" TEXT "Typical"
+            ^"Base Income" INTEGER 100
+        }
+        RULES {
+            #ARM130BgH4jK0lM6nP2qR8s: Base covenant is a stone building in a level 3 Magic aura
+            #ARM130CiT5uV1wX7yZ3aB9c: About 1 grog per magus and 2 other covenfolk per magus
+            #ARM130DkE6mH2nJ8pL4qN0rS: One Typical source of income providing ~100 pounds/year for ~6 magi
+            #ARM130EoF3sI9tK5uM1vO7wQ: Adjust income by 15 pounds per magus above or below 6
+        }
+    }
+
+    # ===========================
+    # LIBRARY RESOURCES (BUILD POINTS)
+    # ===========================
+
+    #ARM1310aR8bT4cV0dX6eZ2fA ^"Art Summa" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Subject" TEXT REQUIRED
+            ^"Level" INTEGER MIN 1 MAX 20 REQUIRED
+            ^"Quality" INTEGER MIN 1 MAX 22 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM1311gB5hD1iF7jH3kJ9lL: Build Point cost = Level + Quality
+            #ARM1312mN6oP2qR8sT4uV0wX: Level must not exceed 20
+            #ARM1313yZ7aB3cD9eF5gH1iJ: Quality must not exceed 11 + (20 - Level), and must not exceed 22
+        }
+    }
+
+    #ARM1314kL8mN4oP0qR6sT2uV ^"Ability Summa" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Subject" TEXT REQUIRED
+            ^"Level" INTEGER MIN 1 MAX 8 REQUIRED
+            ^"Quality" INTEGER MIN 1 MAX 22 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM1315wX5yZ1aB7cD3eF9gH: Build Point cost = Quality + (3 x Level)
+            #ARM1316iJ6kL2mN8oP4qR0sT: Level must not exceed 8
+            #ARM1317uV7wX3yZ9aB5cD1eF: Quality must not exceed 11 + 3 x (8 - Level), and must not exceed 22
+        }
+    }
+
+    #ARM1318gH4iJ0kL6mN2oP8qR ^"Tractatus" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Subject" TEXT REQUIRED
+            ^"Quality" INTEGER MIN 1 MAX 11 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM1319sT5uV1wX7yZ3aB9cD: Build Point cost = Quality
+            #ARM131AeF6gH2iJ8kL4mN0oP: Quality may not exceed 11
+        }
+    }
+
+    # ===========================
+    # LAB TEXTS AND CASTING TABLETS
+    # ===========================
+
+    #ARM131BqR3sT9uV5wX1yZ7aB ^"Lab Texts" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Total Levels" INTEGER MIN 0 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM131CcD8eF4gH0iJ6kL2mN: 1 Build Point per 5 levels of Lab Texts
+            #ARM131DoP9qR5sT1uV7wX3yZ: Maximum level of individual Lab Text limited by Power Level
+        }
+    }
+
+    #ARM131EaB4cD0eF6gH2iJ8kL ^"Casting Tablets" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Total Levels" INTEGER MIN 0 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM131FmN5oP1qR7sT3uV9wX: 2 Build Points per 5 levels of Casting Tablets
+            #ARM1320yZ6aB2cD8eF4gH0iJ: Same maximum level limits as Lab Texts
+        }
+    }
+
+    # ===========================
+    # VIS RESOURCES
+    # ===========================
+
+    #ARM1321kL7mN3oP9qR5sT1uV ^"Vis Source" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Art" TEXT REQUIRED
+            ^"Pawns Per Year" INTEGER MIN 1 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM1322wX8yZ4aB0cD6eF2gH: 5 Build Points per pawn of vis available each year
+        }
+    }
+
+    #ARM1323iJ9kL5mN1oP7qR3sT ^"Vis Stocks" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Art" TEXT REQUIRED
+            ^"Pawns" INTEGER MIN 1 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM1324uV0wX6yZ2aB8cD4eF: 1 Build Point per 5 pawns of vis in stock
+            #ARM1325gH1iJ7kL3mN9oP5qR: Once vis stocks are used, they are gone until characters find more in play
+        }
+    }
+
+    # ===========================
+    # ENCHANTED ITEMS
+    # ===========================
+
+    #ARM1326sT2uV8wX4yZ0aB6cD ^"Enchanted Item (Covenant)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Effect Level" INTEGER MIN 1 REQUIRED
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM1327eF3gH9iJ5kL1mN7oP: 2 Build Points per 5 levels of effect (including modifications)
+            #ARM1328qR4sT0uV6wX2yZ8aB: Maximum effect level limited by Power Level
+        }
+    }
+
+    # ===========================
+    # SPECIALISTS
+    # ===========================
+
+    #ARM1329cD5eF1gH7iJ3kL9mN ^"Teacher (Covenant)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Communication" INTEGER
+            ^"Teaching" INTEGER
+            ^"Highest Ability" INTEGER
+            ^"Build Point Cost" INTEGER
+            ^"Available Seasons" INTEGER 2
+        }
+        RULES {
+            #ARM132AoP6qR2sT8uV4wX0yZ: Build Point cost = Communication + Teaching + Highest Ability score
+            #ARM132BaB7cD3eF9gH5iJ1kL: Teachers cannot have The Gift and cannot teach Hermetic Arts
+            #ARM132CmN8oP4qR0sT6uV2wX: Ability scores limited by age as for newly created characters
+            #ARM132DyZ9aB5cD1eF7gH3iJ: Available to teach 2 seasons per year as directed by magi
+        }
+    }
+
+    #ARM132EkL0mN6oP2qR8sT4uV ^"Specialist (Covenant)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Highest Ability" INTEGER
+            ^"Build Point Cost" INTEGER
+        }
+        RULES {
+            #ARM132FwX1yZ7aB3cD9eF5gH: Build Point cost = Highest Ability score used to serve the covenant
+            #ARM1330iJ2kL8mN4oP0qR6sT: Ability scores limited by age as for newly created characters
+        }
+    }
+
+    # ===========================
+    # PRE-BUILT COVENANT RESOURCES
+    # ===========================
+
+    #ARM1331uV3wX9yZ5aB1cD7eF ^"Weak Covenant Resources" DEF {
+        APPLIES TO [^"Covenant"]
+        # 200 Build Points, suitable for Spring or accessible Winter resources
+        PROPERTIES {
+            ^"Build Points" INTEGER 200
+            ^"Season" TEXT "Spring"
+        }
+        RULES {
+            #ARM1332gH4iJ0kL6mN2oP8qR: Library: 3 Art summae (level 15/quality 12, level 12/quality 12, level 6/quality 21)
+            #ARM1333sT5uV1wX7yZ3aB9cD: Library: 1 Ability summa (level 4/quality 10), 4 tractatus (quality 11, 10, 10, 9)
+            #ARM1334eF6gH2iJ8kL4mN0oP: Lab Texts: 200 levels of spells, none over level 25
+            #ARM1335qR7sT3uV9wX5yZ1aB: Vis: 1+ sources providing total of 4 pawns per year, no stocks
+        }
+    }
+
+    #ARM1336cD8eF4gH0iJ6kL2mN ^"Medium Covenant Resources" DEF {
+        APPLIES TO [^"Covenant"]
+        # 800 Build Points, suitable for early Summer or accessible Autumn resources
+        PROPERTIES {
+            ^"Build Points" INTEGER 800
+            ^"Season" TEXT "Summer"
+        }
+        RULES {
+            #ARM1337oP9qR5sT1uV7wX3yZ: Library: 8 Art summae (3 at L16/Q15, 5 at L6/Q21), 3 Ability summae, 7 tractatus
+            #ARM1338aB0cD6eF2gH8iJ4kL: Lab Texts: 1000 levels of spells, none over level 40
+            #ARM1339mN1oP7qR3sT9uV5wX: Vis: 3+ sources, different Arts, total 20 pawns/year, 100 pawns stock
+            #ARM133AyZ2aB8cD4eF0gH6iJ: Enchanted Items: 200 levels, highest effect 40, 100+ levels in lesser devices
+        }
+    }
+
+    #ARM133BkL3mN9oP5qR1sT7uV ^"Powerful Covenant Resources" DEF {
+        APPLIES TO [^"Covenant"]
+        # 2000 Build Points, suitable for high Summer or accessible powerful Autumn
+        PROPERTIES {
+            ^"Build Points" INTEGER 2000
+            ^"Season" TEXT "Autumn"
+        }
+        RULES {
+            #ARM133CwX4yZ0aB6cD2eF8gH: Library: 17 Art summae (1+ per Art), 6 Ability summae, 30 tractatus
+            #ARM133DiJ5kL1mN7oP3qR9sT: Lab Texts: 2500 levels of spells, no upper limit on individual level
+            #ARM133EuV6wX2yZ8aB4cD0eF: Vis: 5+ sources, different Arts, total 50 pawns/year, 250 pawns stock
+            #ARM133FgH7iJ3kL9mN5oP1qR: Enchanted Items: 500 levels, 1+ effect over 30, 100+ levels in lesser devices
+        }
+    }
+
+    # ===========================
+    # HOOKS (MINOR)
+    # ===========================
+    # Hooks are story-driving features. Each Minor Hook provides 1 point for Boons.
+
+    #ARM1340sT8uV4wX0yZ6aB2cD ^"Contested Resource" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARM1341eF9gH5iJ1kL7mN3oP: Access to one resource is contested; getting it requires a story
+            #ARM1342qR0sT6uV2wX8yZ4aB: One story generally secures the resource for five years
+            #ARM1343cD1eF7gH3iJ9kL5mN: May be Unknown when the saga starts
+        }
+    }
+
+    #ARM1344oP2qR8sT4uV0wX6yZ ^"Favors" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1345aB3cD9eF5gH1iJ7kL: Covenant owes favors to another covenant, mundane lord, bishop, or creature
+            #ARM1346mN4oP0qR6sT2uV8wX: The creditor cannot give orders but the covenant is obliged to help
+            #ARM1347yZ5aB1cD7eF3gH9iJ: May be Unknown if obligations were incurred by other members
+        }
+    }
+
+    #ARM1348kL6mN2oP8qR4sT0uV ^"Hermetic Politics" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1349wX7yZ3aB9cD5eF1gH: Covenant is engaged in Hermetic favor-trading politics
+            #ARM134AiJ8kL4mN0oP6qR2sT: At saga start, covenant owes 3 favors and is owed 3 favors
+        }
+    }
+
+    #ARM134BuV9wX5yZ1aB7cD3eF ^"Monster (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARM134CgH0iJ6kL2mN8oP4qR: A powerful supernatural creature lives near the covenant
+            #ARM134DsT1uV7wX3yZ9aB5cD: Should be too powerful for PCs to defeat at saga start
+            #ARM134EeF2gH8iJ4kL0mN6oP: May be Unknown; creature can be aligned with any realm
+        }
+    }
+
+    #ARM134FqR3sT9uV5wX1yZ7aB ^"Poverty (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1350cD4eF0gH6iJ2kL8mN: Covenant has only one Lesser source of income with little surplus
+            #ARM1351oP5qR1sT7uV3wX9yZ: Major expenses require a story to fund
+        }
+    }
+
+    #ARM1352aB6cD2eF8gH4iJ0kL ^"Protector" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARM1353mN7oP3qR9sT5uV1wX: Covenant is responsible for protecting something (village, grove, weaker covenant)
+        }
+    }
+
+    #ARM1354yZ8aB4cD0eF6gH2iJ ^"Regio (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1355kL9mN5oP1qR7sT3uV: There is a regio on the covenant site, though the covenant is not in it
+            #ARM1356wX0yZ6aB2cD8eF4gH: Magi do not know everything in the regio
+            #ARM1357iJ1kL7mN3oP9qR5sT: If the regio is not Magical (Divine, Faerie, or Infernal), counts as additional Minor Hook
+        }
+    }
+
+    #ARM1358uV2wX8yZ4aB0cD6eF ^"Rival (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1359gH3iJ9kL5mN1oP7qR: Someone or some group works to undermine or stymie the covenant
+            #ARM135AsT4uV0wX6yZ2aB8cD: Rival may be much weaker than the covenant; may be Unknown
+        }
+    }
+
+    #ARM135BeF5gH1iJ7kL3mN9oP ^"Road (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM135CqR6sT2uV8wX4yZ0aB: Covenant is on an important mundane road, river, or sea route
+            #ARM135DcD7eF3gH9iJ5kL1mN: People often turn up bringing or causing stories
+        }
+    }
+
+    #ARM135EoP8qR4sT0uV6wX2yZ ^"Superiors (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM135FaB9cD5eF1gH7iJ3kL: Player characters are not in charge and do not control covenant resources
+            #ARM1360mN0oP6qR2sT8uV4wX: Superiors cannot order PCs about, but PCs lack resource control
+        }
+    }
+
+    #ARM1361yZ1aB7cD3eF9gH5iJ ^"Urban (Minor)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1362kL2mN8oP4qR0sT6uV: Covenant is in a small market town; many inhabitants are not part of it
+        }
+    }
+
+    # ===========================
+    # HOOKS (MAJOR)
+    # ===========================
+    # Each Major Hook provides 3 points for Boons.
+
+    #ARM1363wX3yZ9aB5cD1eF7gH ^"Beholden" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1364iJ4kL0mN6oP2qR8sT: Covenant owes favors to someone who can give the covenant orders
+            #ARM1365uV5wX1yZ7aB3cD9eF: Covenant decides on best way to carry out orders, but must comply
+        }
+    }
+
+    #ARM1366gH6iJ2kL8mN4oP0qR ^"Castle" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1367sT7uV3wX9yZ5aB1cD: Covenant occupies a castle, claiming political power backed by force
+            #ARM1368eF8gH4iJ0kL6mN2oP: Temporal and spiritual authorities cannot ignore a covenant with a castle
+            #ARM1369qR9sT5uV1wX7yZ3aB: Knights from a castle can raid targets up to 10 miles away
+        }
+    }
+
+    #ARM136AcD0eF6gH2iJ8kL4mN ^"Monster (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM136BoP1qR7sT3uV9wX5yZ: A powerful mystical creature lives inside the covenant
+            #ARM136CaB2cD8eF4gH0iJ6kL: Should be too powerful for PCs to defeat at saga start
+        }
+    }
+
+    #ARM136DmN3oP9qR5sT1uV7wX ^"Mundane Politics" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM136EyZ4aB0cD6eF2gH8iJ: Covenant is deeply ensnared in mundane politics
+            #ARM136FkL5mN1oP7qR3sT9uV: Must keep the Quaesitores from becoming too interested
+        }
+    }
+
+    #ARM1370wX6yZ2aB8cD4eF0gH ^"Poverty (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1371iJ7kL3mN9oP5qR1sT: Covenant has no source of income and no mundane resources
+            #ARM1372uV8wX4yZ0aB6cD2eF: Even providing daily food requires stories
+        }
+    }
+
+    #ARM1373gH9iJ5kL1mN7oP3qR ^"Regio (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1374sT0uV6wX2yZ8aB4cD: Regio on covenant site; inhabitants occasionally come out and cause problems
+            #ARM1375eF1gH7iJ3kL9mN5oP: If non-magical regio, counts as additional Minor Hook
+        }
+    }
+
+    #ARM1376qR2sT8uV4wX0yZ6aB ^"Rival (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1377cD3eF9gH5iJ1kL7mN: Someone or some group works to destroy the covenant
+            #ARM1378oP4qR0sT6uV2wX8yZ: Rival has comparable power to the covenant
+        }
+    }
+
+    #ARM1379aB5cD1eF7gH3iJ9kL ^"Road (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM137AmN6oP2qR8sT4uV0wX: Covenant is on an important mystical trail
+            #ARM137ByZ7aB3cD9eF5gH1iJ: Supernatural creatures from one or more realms often turn up
+        }
+    }
+
+    #ARM137CkL8mN4oP0qR6sT2uV ^"Superiors (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM137DwX9yZ5aB1cD7eF3gH: Player characters can be given orders by ranking members
+            #ARM137EiJ0kL6mN2oP8qR4sT: Orders must be obeyed to retain membership
+        }
+    }
+
+    #ARM137FuV1wX7yZ3aB9cD5eF ^"Unknown" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1380gH2iJ8kL4mN0oP6qR: Taken by one player who acts as storyguide for that aspect
+            #ARM1381sT3uV9wX5yZ1aB7cD: Player chooses a Minor Hook to be the unknown, but it counts as Major for Boons
+            #ARM1382eF4gH0iJ6kL2mN8oP: Other players have no idea what stories this Hook will generate
+        }
+    }
+
+    #ARM1383qR5sT1uV7wX3yZ9aB ^"Urban (Major)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Hook"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM1384cD6eF2gH8iJ4kL0mN: Covenant is in a city; vast majority of inhabitants are not covenant members
+        }
+    }
+
+    # ===========================
+    # BOONS (MINOR)
+    # ===========================
+    # Each Minor Boon costs 1 Hook point. Cannot be bought with Build Points.
+
+    #ARM1385oP7qR3sT9uV5wX1yZ ^"Aura (Minor Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+            ^"Max Repeats" INTEGER 7
+        }
+        RULES {
+            #ARM1386aB8cD4eF0gH6iJ2kL: Increases covenant Magic aura by 1 point (up to aura 10 total)
+            #ARM1387mN9oP5qR1sT7uV3wX: All covenfolk must live within the aura
+        }
+    }
+
+    #ARM1388yZ0aB6cD2eF8gH4iJ ^"Edifice" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1389kL1mN7oP3qR9sT5uV: A major building erected to inspire awe
+            #ARM138AwX2yZ8aB4cD0eF6gH: Does not require Castle Hook unless grouped structures form a threatening castle
+        }
+    }
+
+    #ARM138BiJ3kL9mN5oP1qR7sT ^"Hidden Resources" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+            ^"Hidden Build Points" INTEGER 250
+        }
+        RULES {
+            #ARM138CuV4wX0yZ6aB2cD8eF: 250 Build Points of resources not immediately available to player characters
+            #ARM138DgH5iJ1kL7mN3oP9qR: May be lost within the covenant or restricted to higher-ranked magi
+        }
+    }
+
+    #ARM138EsT6uV2wX8yZ4aB0cD ^"Important Building" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARM138FeF7gH3iJ9kL5mN1oP: An additional large and important building not covered by another Boon
+        }
+    }
+
+    #ARM1390qR8sT4uV0wX6yZ2aB ^"Prestige (Minor Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+            ^"Repeatable" BOOLEAN true
+            ^"Reputation Score" INTEGER 3
+        }
+        RULES {
+            #ARM1391cD9eF5gH1iJ7kL3mN: Covenant and members are well-regarded; Reputation score of 3
+            #ARM1392oP0qR6sT2uV8wX4yZ: Each repeat applies to a different group
+        }
+    }
+
+    #ARM1393aB1cD7eF3gH9iJ5kL ^"Regio (Minor Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1394mN2oP8qR4sT0uV6wX: Covenant is in a Magical regio that can be entered in several ways
+            #ARM1395yZ3aB9cD5eF1gH7iJ: Covenant may limit entry but measures are never perfect
+        }
+    }
+
+    #ARM1396kL4mN0oP6qR2sT8uV ^"Seclusion" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM1397wX5yZ1aB7cD3eF9gH: Very remote location, very rarely gets visitors
+            #ARM1398iJ6kL2mN8oP4qR0sT: Cannot be taken with Road or Urban Hooks; Redcaps still visit
+        }
+    }
+
+    #ARM1399uV7wX3yZ9aB5cD1eF ^"Shell Keep" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+            ^"Requires" TEXT "Castle Hook"
+        }
+        RULES {
+            #ARM139AgH8iJ4kL0mN6oP2qR: Stone wall 2 stories high atop a motte, replacing wooden palisade
+            #ARM139BsT9uV5wX1yZ7aB3cD: Wall is 8-15 feet thick with crenelated walkway; comfortable interior buildings
+            #ARM139CeF0gH6iJ2kL8mN4oP: Bailey palisade replaced with thick stone wall ~30 feet high
+        }
+    }
+
+    #ARM139DqR1sT7uV3wX9yZ5aB ^"Tower Keep" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+            ^"Requires" TEXT "Castle Hook"
+        }
+        RULES {
+            #ARM139EcD2eF8gH4iJ0kL6mN: Tower keep is usually 4 stories high, square or rectangular
+            #ARM139FoP3qR9sT5uV1wX7yZ: Entry via external stairway to second floor; crenelated battlements on top
+            #ARM13A0aB4cD0eF6gH2iJ8kL: Surrounded by a courtyard with wall ~30 feet high
+        }
+    }
+
+    #ARM13A1mN5oP1qR7sT3uV9wX ^"Wealth (Minor Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Minor"]
+        }
+        RULES {
+            #ARM13A2yZ6aB2cD8eF4gH0iJ: One Typical source of income is upgraded to Greater (~250 pounds/year)
+            #ARM13A3kL7mN3oP9qR5sT1uV: Magi and covenfolk live very comfortably with a large surplus for luxuries
+        }
+    }
+
+    # ===========================
+    # BOONS (MAJOR)
+    # ===========================
+    # Each Major Boon costs 3 Hook points.
+
+    #ARM13A4wX8yZ4aB0cD6eF2gH ^"Aura (Major Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM13A5iJ9kL5mN1oP7qR3sT: Aura of a limited area increases by 1 point (above aura 5)
+            #ARM13A6uV0wX6yZ2aB8cD4eF: Covenfolk can live mostly outside the elevated aura to avoid Warping
+        }
+    }
+
+    #ARM13A7gH1iJ7kL3mN9oP5qR ^"Curtain Walls and Mural Towers" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Major"]
+            ^"Requires" TEXT "Castle Hook"
+        }
+        RULES {
+            #ARM13A8sT2uV8wX4yZ0aB6cD: Crenelated wall ~30 feet high, 8-20 feet thick, around the bailey
+            #ARM13A9eF3gH9iJ5kL1mN7oP: Multiple mural towers protect the curtain wall (as many as the troupe desires)
+            #ARM13AAqR4sT0uV6wX2yZ8aB: Includes one minor keep Boon (Shell or Tower)
+        }
+    }
+
+    #ARM13ABcD5eF1gH7iJ3kL9mN ^"Prestige (Major Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Major"]
+            ^"Repeatable" BOOLEAN true
+            ^"Reputation Score" INTEGER 9
+        }
+        RULES {
+            #ARM13ACoP6qR2sT8uV4wX0yZ: Covenant is famous; Reputation score of 9
+            #ARM13ADaB7cD3eF9gH5iJ1kL: Members are well-treated and people are reluctant to cross the covenant
+        }
+    }
+
+    #ARM13AEmN8oP4qR0sT6uV2wX ^"Regio (Major Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM13AFyZ9aB5cD1eF7gH3iJ: Covenant is in a Magical regio that can only be entered if guided by a native
+        }
+    }
+
+    #ARM13B0kL0mN6oP2qR8sT4uV ^"Wealth (Major Boon)" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Type" ENUM ["Boon"]
+            ^"Size" ENUM ["Major"]
+        }
+        RULES {
+            #ARM13B1wX1yZ7aB3cD9eF5gH: One Typical source of income upgraded to Legendary (~1000 pounds/year)
+            #ARM13B2iJ2kL8mN4oP0qR6sT: Magi can live in kingly luxury; covenfolk likewise
+        }
+    }
+
+    # ===========================
+    # PRE-BUILT COVENANT SITUATIONS
+    # ===========================
+
+    #ARM13B3uV3wX9yZ5aB1cD7eF ^"Autumn Power Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Situation Type" TEXT "Autumn Power"
+        }
+        RULES {
+            #ARM13B4gH4iJ0kL6mN2oP8qR: Hooks: Hermetic Politics (Minor), Protector (Minor), Castle (Major), Rival (Major), Superiors (Major)
+            #ARM13B5sT5uV1wX7yZ3aB9cD: Boons: Aura (Minor) x2, Edifice (Minor), Hidden Resources (Minor), Prestige (Minor), Curtain Walls (Major), Wealth (Major)
+        }
+    }
+
+    #ARM13B6eF6gH2iJ8kL4mN0oP ^"Mundane Lord Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Situation Type" TEXT "Mundane Lord"
+        }
+        RULES {
+            #ARM13B7qR7sT3uV9wX5yZ1aB: Hooks: Castle (Major), Mundane Politics (Major)
+            #ARM13B8cD8eF4gH0iJ6kL2mN: Boons: Edifice (Minor), Tower Keep (Minor), Wealth (Minor), Prestige (Major)
+        }
+    }
+
+    #ARM13B9oP9qR5sT1uV7wX3yZ ^"Powerful Location Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Situation Type" TEXT "Powerful Location"
+        }
+        RULES {
+            #ARM13BAaB0cD6eF2gH8iJ4kL: Hooks: Monster (Minor) x2, Regio (Major)
+            #ARM13BBmN1oP7qR3sT9uV5wX: Boons: Aura (Minor) x5 (covenfolk suffer Warping from high aura)
+        }
+    }
+
+    #ARM13BCyZ2aB8cD4eF0gH6iJ ^"Struggling Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Situation Type" TEXT "Struggling"
+        }
+        RULES {
+            #ARM13BDkL3mN9oP5qR1sT7uV: Hooks: Contested Resource (Minor), Poverty (Major)
+            #ARM13BEwX4yZ0aB6cD2eF8gH: Boons: Aura (Minor) x2, Regio (Minor), Seclusion (Minor)
+        }
+    }
+
+    #ARM13BFiJ5kL1mN7oP3qR9sT ^"Urban Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Situation Type" TEXT "Urban"
+        }
+        RULES {
+            #ARM13C0uV6wX2yZ8aB4cD0eF: Hooks: Urban (Major)
+            #ARM13C1gH7iJ3kL9mN5oP1qR: Boons: Aura (Minor), Regio (Minor), Wealth (Minor)
+        }
+    }
+
+    #ARM13C2sT8uV4wX0yZ6aB2cD ^"Winter Ruins Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Situation Type" TEXT "Winter Ruins"
+        }
+        RULES {
+            #ARM13C3eF9gH5iJ1kL7mN3oP: Hooks: Contested Resource (Minor) x3, Monster (Major), Poverty (Minor)
+            #ARM13C4qR0sT6uV2wX8yZ4aB: Boons: Aura (Minor) x2, Edifice (Minor) x2, Hidden Resources (Minor) x3
+        }
+    }
+
+    # ===========================
+    # COVENANT LOYALTY
+    # ===========================
+
+    #ARM13C5cD1eF7gH3iJ9kL5mN ^"Prevailing Loyalty" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Base Loyalty" INTEGER
+            ^"Situational Modifiers" INTEGER DEFAULT 0
+            ^"Familiarity Points" INTEGER DEFAULT 0
+            ^"Event Modifiers" INTEGER DEFAULT 0
+            ^"Total Loyalty Points" INTEGER
+            ^"Prevailing Loyalty Score" INTEGER
+        }
+        RULES {
+            #ARM13C6oP2qR8sT4uV0wX6yZ: Base Loyalty = total of Gift modifiers / number of magi in covenant
+            #ARM13C7aB3cD9eF5gH1iJ7kL: The Gentle Gift or No Gift contributes 0 to modifier total
+            #ARM13C8mN4oP0qR6sT2uV8wX: The Gift contributes -30 to modifier total per magus with it
+            #ARM13C9yZ5aB1cD7eF3gH9iJ: The Blatant Gift contributes -105 to modifier total per magus with it
+            #ARM13CAkL6mN2oP8qR4sT0uV: Total loyalty points converted to score using Ability Advancement table
+            #ARM13CBwX7yZ3aB9cD5eF1gH: Individual covenfolk vary by up to 3 points from Prevailing Loyalty
+        }
+    }
+
+    #ARM13CCiJ8kL4mN0oP6qR2sT ^"Loyalty Situational Modifiers" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Living Conditions" INTEGER DEFAULT 0
+            ^"Equipment" INTEGER DEFAULT 0
+            ^"Money" INTEGER DEFAULT 0
+        }
+        RULES {
+            #ARM13CDuV9wX5yZ1aB7cD3eF: Living Conditions: -2 Aging mod = -20; -1 = -10; 0 = 0; +1 = +10; +2 = +20
+            #ARM13CEgH0iJ6kL2mN8oP4qR: Equipment: Inexpensive only = -10; Standard = 0; Std+Expensive = +10; Any = +20
+            #ARM13CFsT1uV7wX3yZ9aB5cD: Money: No salary = -20; Half wages = -10; Standard = 0; 1.5x = +10; 2x = +20
+            #ARM13D0eF2gH8iJ4kL0mN6oP: Pension upon retirement (+10); Turb Captain adds +Prs+Leadership
+            #ARM13D1qR3sT9uV5wX1yZ7aB: Steward adds +Prs+Profession:Steward; Chamberlain adds +Prs+Profession:Chamberlain
+        }
+    }
+
+    #ARM13D2cD4eF0gH6iJ2kL8mN ^"Loyalty Familiarity" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM13D3oP5qR1sT7uV3wX9yZ: Covenant gains 2 loyalty points per year of existence
+            #ARM13D4aB6cD2eF8gH4iJ0kL: Maximum familiarity points equals absolute value of Base Loyalty
+        }
+    }
+
+    #ARM13D5mN7oP3qR9sT5uV1wX ^"Loyalty Event Modifiers" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM13D6yZ8aB4cD0eF6gH2iJ: Rudeness/Minor Humiliation: -1 point
+            #ARM13D7kL9mN5oP1qR7sT3uV: Oblivious/Public Humiliation: -3 points
+            #ARM13D8wX0yZ6aB2cD8eF4gH: Malicious/Restraint: -6 points
+            #ARM13D9iJ1kL7mN3oP9qR5sT: Callous disregard/Infliction of Pain: -9 points
+            #ARM13DAuV2wX8yZ4aB0cD6eF: Deliberate Cruelty/Brutal Punishment: -12 points
+            #ARM13DBgH3iJ9kL5mN1oP7qR: Heinous Malfeasance: -15 points
+            #ARM13DCsT4uV0wX6yZ2aB8cD: Magi personal actions benefiting covenfolk can add loyalty (use penalty scale)
+        }
+    }
+
+    # ===========================
+    # SAMPLE PREVAILING LOYALTY SCORES
+    # ===========================
+
+    #ARM13DDeF5gH1iJ7kL3mN9oP ^"Prevailing Loyalty Scale" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM13DEqR6sT2uV8wX4yZ0aB: Score -6: Covenfolk deeply unhappy, on verge of revolt, productivity halved
+            #ARM13DFcD7eF3gH9iJ5kL1mN: Score -4: Not happy but self-interest keeps them in place, no trust in magi
+            #ARM13E0oP8qR4sT0uV6wX2yZ: Score -2: Will not betray under most circumstances, still wary of magi
+            #ARM13E1aB9cD5eF1gH7iJ3kL: Score 0: Moderately content, treat magi as gentry
+            #ARM13E2mN0oP6qR2sT8uV4wX: Score +2: Unusually loyal, close-mouthed around strangers
+            #ARM13E3yZ1aB7cD3eF9gH5iJ: Score +4: Treat magi as close family, will not betray except under severe duress
+            #ARM13E4kL2mN8oP4qR0sT6uV: Score +6: Extraordinary service, grogs may lay down lives, productivity increased
+        }
+    }
+
+    # ===========================
+    # COVENANT FINANCES
+    # ===========================
+
+    #ARM13E5wX3yZ9aB5cD1eF7gH ^"Source of Income" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Category" ENUM ["None", "Lesser", "Typical", "Greater", "Legendary"]
+            ^"Annual Income" INTEGER
+            ^"Source Type" TEXT
+        }
+        RULES {
+            #ARM13E6iJ4kL0mN6oP2qR8sT: None (Poverty Major Hook): 0 pounds
+            #ARM13E7uV5wX1yZ7aB3cD9eF: Lesser (Poverty Minor Hook): ~40 pounds
+            #ARM13E8gH6iJ2kL8mN4oP0qR: Typical (no Hook/Boon): ~100 pounds
+            #ARM13E9sT7uV3wX9yZ5aB1cD: Greater (Wealth Minor Boon): ~250 pounds
+            #ARM13EAeF8gH4iJ0kL6mN2oP: Legendary (Wealth Major Boon): ~1000 pounds
+        }
+    }
+
+    # ===========================
+    # EXPENDITURE
+    # ===========================
+
+    #ARM13EBqR9sT5uV1wX7yZ3aB ^"Covenfolk Categories" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM13ECcD0eF6gH2iJ8kL4mN: Craftsmen: Have Craft Ability, produce wares; allow cost savings
+            #ARM13EDoP1qR7sT3uV9wX5yZ: Dependents: Residents who do no useful work (children 5+, infirm, retirees)
+            #ARM13EEaB2cD8eF4gH0iJ6kL: Grogs: Full-time soldiers for martial defense
+            #ARM13EFmN3oP9qR5sT1uV7wX: Laborers: Workers who gather food; allow cost saving on Provisions
+            #ARM13F0yZ4aB0cD6eF2gH8iJ: Servants: Prepare food, clean, household tasks
+            #ARM13F1kL5mN1oP7qR3sT9uV: Specialists: Important covenant roles (autocrat, steward, turb captain, scribe)
+            #ARM13F2wX6yZ2aB8cD4eF0gH: Teamsters: Procure and transport provisions and supplies
+        }
+    }
+
+    #ARM13F3iJ7kL3mN9oP5qR1sT ^"Points of Inhabitants" DEF {
+        APPLIES TO [^"Covenant"]
+        # Spring/Winter values; Summer/Autumn are doubled
+        PROPERTIES {
+            ^"Season Multiplier" ENUM ["Spring/Winter", "Summer/Autumn"]
+        }
+        RULES {
+            #ARM13F4uV8wX4yZ0aB6cD2eF: Magus or Noble: 5 pts (Spring/Winter), 10 pts (Summer/Autumn)
+            #ARM13F5gH9iJ5kL1mN7oP3qR: Companion: 3 pts (Spring/Winter), 5 pts (Summer/Autumn)
+            #ARM13F6sT0uV6wX2yZ8aB4cD: Specialist or Craftsman: 2 pts (Spring/Winter), 3 pts (Summer/Autumn)
+            #ARM13F7eF1gH7iJ3kL9mN5oP: Other Covenfolk: 1 pt (Spring/Winter), 2 pts (Summer/Autumn)
+            #ARM13F8qR2sT8uV4wX0yZ6aB: Horse: 1 pt (both); Impoverished magi may reduce to 3 pts
+        }
+    }
+
+    #ARM13F9cD3eF9gH5iJ1kL7mN ^"Yearly Expenditure" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Buildings Cost" INTEGER
+            ^"Consumables Cost" INTEGER
+            ^"Provisions Cost" INTEGER
+            ^"Wages Cost" INTEGER
+            ^"Inflation Cost" INTEGER DEFAULT 0
+            ^"Laboratories Cost" INTEGER
+            ^"Weapons and Armor Cost" INTEGER
+            ^"Writing Materials Cost" INTEGER
+            ^"Total Expenditure" INTEGER
+        }
+        RULES {
+            #ARM13FAoP4qR0sT6uV2wX8yZ: Buildings: 1 pound per 10 points of inhabitants; +2 per Minor building Boon, +5 per Major
+            #ARM13FBaB5cD1eF7gH3iJ9kL: Consumables: 2 pounds per 10 points of inhabitants
+            #ARM13FCmN6oP2qR8sT4uV0wX: Provisions: 5 pounds per 10 points of inhabitants
+            #ARM13FDyZ7aB3cD9eF5gH1iJ: Wages: 2 pounds per 10 points of inhabitants; +1 per penny daily to soldiers
+            #ARM13FEkL8mN4oP0qR6sT2uV: Inflation: starts at 0, increases ~1 pound per 100 pounds expenditure per year
+            #ARM13FFwX9yZ5aB1cD7eF3gH: Laboratories: 1 pound per 10 points of laboratories
+            #ARM1400iJ0kL6mN2oP8qR4sT: Weapons and Armor: 1 pound per 320 points of weapons/armor
+            #ARM1401uV1wX7yZ3aB9cD5eF: Writing Materials: 1 pound per magus, scribe, bookbinder, or illuminator
+        }
+    }
+
+    #ARM1402gH2iJ8kL4mN0oP6qR ^"Points of Laboratories" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM1403sT3uV9wX5yZ1aB7cD: Upkeep -5 = 1 pt; -4 = 2; -3 = 3; -2 = 5; -1 = 7; 0 = 10 pts
+            #ARM1404eF4gH0iJ6kL2mN8oP: Upkeep +1 = 15; +2 = 30; +3 = 60; +4 = 100; +5 = 150 pts
+            #ARM1405qR5sT1uV7wX3yZ9aB: Above +5: each additional level adds (new Upkeep x 10) points
+            #ARM1406cD6eF2gH8iJ4kL0mN: Multiplier: Light use (avg 1 season) x0.5; Typical (2 seasons) x1; Heavy (3+) x1.5
+        }
+    }
+
+    #ARM1407oP7qR3sT9uV5wX1yZ ^"Points of Weapons and Armor" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM1408aB8cD4eF0gH6iJ2kL: Weapon/shield: Inexpensive 1, Standard 4, Expensive 16 pts
+            #ARM1409mN9oP5qR1sT7uV3wX: Partial armor: Inexpensive 2, Standard 8, Expensive 32 pts
+            #ARM140AyZ0aB6cD2eF8gH4iJ: Full armor: Inexpensive 4, Standard 16, Expensive 64 pts
+            #ARM140BkL1mN7oP3qR9sT5uV: Ballista/light catapult: Expensive 16 pts; Heavy catapult/trebuchet: Expensive 32 pts
+        }
+    }
+
+    # ===========================
+    # COST SAVING
+    # ===========================
+
+    #ARM140CwX2yZ8aB4cD0eF6gH ^"Cost Saving" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM140DiJ3kL9mN5oP1qR7sT: Each laborer reduces Provisions expenditure by 1 pound
+            #ARM140EuV4wX0yZ6aB2cD8eF: Every 5 laborers makes 1 teamster redundant, saving 1 additional pound
+            #ARM140FgH5iJ1kL7mN3oP9qR: Max laborer savings = 50% of Provisions total
+            #ARM1410sT6uV2wX8yZ4aB0cD: Common craftsman saves 1 + (Craft Ability / 2, rounded down) pounds
+            #ARM1411eF7gH3iJ9kL5mN1oP: Rare craftsman saves (Craft Ability) pounds
+            #ARM1412qR8sT4uV0wX6yZ2aB: Per-craft cost saving limit: Buildings 50%, Consumables 20%, Labs 50%, Provisions 50%, Weapons 50%, Writing 50%
+            #ARM1413cD9eF5gH1iJ7kL3mN: Magic items: save 1 pound per magnitude of effect per year
+            #ARM1414oP0qR6sT2uV8wX4yZ: Ritual spells: save ~5 pounds per magnitude per casting
+        }
+    }
+
+    # ===========================
+    # MINIMUM REQUIRED COVENFOLK
+    # ===========================
+
+    #ARM1415aB1cD7eF3gH9iJ5kL ^"Minimum Covenfolk Requirements" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM1416mN2oP8qR4sT0uV6wX: Servants required: 2 per 10 points of inhabitants (excluding laborers, servants, teamsters)
+            #ARM1417yZ3aB9cD5eF1gH7iJ: Teamsters required: 1 per 10 points of (all except laborers and teamsters, minus 2x laborers)
+            #ARM1418kL4mN0oP6qR2sT8uV: If fewer than minimums, storyguide determines consequences (overwork, self-service)
+        }
+    }
+
+    # ===========================
+    # THE MYTHIC POUND
+    # ===========================
+
+    #ARM1419wX5yZ1aB7cD3eF9gH ^"Mythic Pound" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM141AiJ6kL2mN8oP4qR0sT: 1 Mythic Pound = 1 pound of silver = annual income of a typical peasant
+            #ARM141BuV7wX3yZ9aB5cD1eF: 1 Mythic Pound = enough to maintain an average Hermetic laboratory for 1 year
+        }
+    }
+
+    # ===========================
+    # COVENANT IN PLAY
+    # ===========================
+
+    #ARM141CgH8iJ4kL0mN6oP2qR ^"Covenant in Play" DEF {
+        APPLIES TO [^"Covenant"]
+        RULES {
+            #ARM141DsT9uV5wX1yZ7aB3cD: Covenants do not gain Build Points during play
+            #ARM141EeF0gH6iJ2kL8mN4oP: Characters create enchanted devices, write books, and trade for resources
+            #ARM141FqR1sT7uV3wX9yZ5aB: If a Boon is lost, characters get story opportunities to regain it (becomes a Hook)
+            #ARM1420cD2eF8gH4iJ0kL6mN: If a Boon is gained, covenant should gain a corresponding Hook
+            #ARM1421oP3qR9sT5uV1wX7yZ: Minor Hooks take ~6 stories to resolve; Major Hooks take ~20 stories
+        }
+    }
+}

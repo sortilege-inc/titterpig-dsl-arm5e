@@ -1,0 +1,574 @@
+EXTENSION "ARM5e_Flaws_Supernatural" {
+    NAME "Ars Magica 5th Edition Definitive - Supernatural Flaws"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Character"
+
+    # All Supernatural Flaws. Available to any character type unless noted.
+    # Organized by Major/Minor.
+    # ID Range: #ARMB00 onward.
+
+    # ===========================
+    # MAJOR SUPERNATURAL FLAWS
+    # ===========================
+
+    #ARMB00qT4vB8nK2xR6jW0pF ^"Age Quickly" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB01dH7mL3sY9cA5gN1eZ: Effective age increases two years for every year that passes
+            #ARMB02rJ6wP0tX4bF8kQ2vMx: Make two aging rolls each year instead of one
+            #ARMB03yC9hU5lE1oS7iW3aGq: Longevity Rituals and other supernatural means must deal with effective age, not actual age
+        }
+    }
+
+    #ARMB04fN2qD8vK4xB0rT6jPm ^"Blatant Magical Air" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB05mZ7gL3cH9eA5sW1yUn: Requires Magical Air or The Gift to take this Flaw
+            #ARMB06pR8tF2kN6wJ0bX4hDa: –6 penalty to social actions; immediately hated and feared by mundane population
+            #ARMB07sG1vA9dK5nT3yQ8cLw: Same effect as Blatant Gift; may not have both Flaws
+        }
+    }
+
+    #ARMB08wL4zE6hR2mU0pY7jBx ^"Bound to (Realm)" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB09cF3kN7qA1tY5gW9hMr: Must live in supernatural aura of 5 or greater aligned to chosen realm (Divine, Faerie, Infernal, or Magic)
+            #ARMB0AtH8bJ4eP0mX6rD2sKv: If most of a season is spent outside such an aura, make Stamina Roll vs EF (9 – Size)
+            #ARMB0BxQ5yU1gL7cN3wA9fRp: Failure causes Heavy wound; two consecutive failures cause Incapacitating wound instead
+        }
+    }
+
+    #ARMB0CnV6zK2hE8dB4jT0qSw ^"False Power" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+            ^"Tainted" BOOLEAN true
+        }
+        RULES {
+            #ARMB0DaR9mG5tL1xP7kW3cHn: One Supernatural Virtue is associated with the Infernal realm in addition to its normal realm
+            #ARMB0EeY4bJ0sQ6vF2nD8hTk: Power appears unholy when subjected to Divine or Infernal investigation
+            #ARMB0FjU7gN3wA9cK5rX1pBm: May be taken multiple times; subsequent instances are Minor Flaws
+            #ARMB0GqL2tE8hR4mZ6yD0sVx: Character may choose to treat power as Infernal, gaining Infernal aura bonuses but confirming its nature
+            #ARMB0HvP5kW1bJ7fN3gA9cTr: Sincere repentance and ceremonial absolution can remove this Flaw, but also removes the modified Virtue
+        }
+    }
+
+    #ARMB0JzR8dK4xQ0mT6hL2eGs ^"Greater Malediction" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB0KcV3yN7gA1tW5bJ9fPm: Cursed by a supernatural power in a way that greatly hinders you
+            #ARMB0LhE6sQ2kR8pU4dX0nBw: Effects should be comparable to those of other Major Flaws; almost any Flaw could be the result of a curse
+        }
+    }
+
+    #ARMB0MtG9wL5aJ1cF7rK3hYx ^"Horrifying Appearance – Snake Legs" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB0NbP4eR0mD6kQ2tV8sXn: No legs; hips give rise to two or more snake-like tails
+            #ARMB0QfW7yA3gN9hU5jL1cBr: Movement not hindered under most circumstances
+            #ARMB0RkT2xE8dK4pZ6qJ0mHv: Can hide deformity under clothing but cannot move without revealing it; must feign being crippled while stationary
+        }
+    }
+
+    #ARMB0SsY5nG1wR7bF3hD9cLp ^"Hunger for (Form) Magic" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB0TvA8kQ4eJ0tP6dW2mXn: Must consume 1 pawn of vis corresponding to a chosen Form each season
+            #ARMB0UzL3hR9gN5bK1cY7fSw: If unable to consume vis in a season, lose one Long-Term Fatigue Level that cannot be regained until vis is consumed
+            #ARMB0VeP6tW2mD8jA4kR0nBx: Fatigue loss is cumulative; 4 missed seasons results in Dazed with –5 penalty
+            #ARMB0WhF9sQ5gL1cJ7yN3bTr: Consuming 1 pawn restores one Fatigue Level after one hour has elapsed
+        }
+    }
+
+    #ARMB0XnK4rE0tA6dY2pV8gHm ^"Lycanthrope" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB0YqL7wJ3hR9cF5bK1sTx: Cursed to change form into a dangerous predator (wolf, lynx, bear) on nights of the full moon
+            #ARMB0ZvN2gD8eA4kP0tW6mXn: Full transformation takes one round; no items or clothing transform between shapes
+            #ARMB10sE5hR1cJ7yQ3bK9fLw: Intelligence of an animal while changed; react to all stimuli as an animal
+            #ARMB11xA8dN4gP0tV6mW2kSr: No memory of actions in animal form, save occasionally in dreams; may not realize you are cursed
+            #ARMB12cF3jL9eQ5hR1bK7yTx: Animal form is between Size –1 (wolf) and Size +2 (bear); +3 Soak in animal form only
+            #ARMB13hN6tW2gD8kA4pV0mXs: Fully healed of all wounds incurred in animal form upon resuming human form at dawn
+            #ARMB14qR9eJ5cL1bY7fK3sTw: Not immune to normal weapons; curse does not infect bite victims
+        }
+    }
+
+    #ARMB15vP4gA0tN6dW2hR8kXm ^"Raised from the Dead" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural", "Story"]
+        }
+        RULES {
+            #ARMB16zL7eJ3cQ9hR5bK1fTx: Died and brought back to life through a holy miracle
+            #ARMB17sN2gD8kA4pV0mW6tXr: Begin with at least 3 Warping Points plus 1 per year since resurrection
+            #ARMB18xF5hR1eJ7cL3bQ9yKw: Automatically receive 1 additional Warping Point every year
+            #ARMB19cA8dN4gP0tV6kW2mSn: Level 4 Reputation in area where miracle occurred
+            #ARMB1AhR3eJ9cL5bQ1yK7fTx: No memory of what happened while dead; may have unexplained virtuous impulses
+        }
+    }
+
+    # ===========================
+    # MINOR SUPERNATURAL FLAWS
+    # ===========================
+
+    #ARMB1BvN6gD2kA8pV4mW0tXr ^"Baneful Circumstances" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB1CzL3eJ9cR5bQ1hK7fTw: Supernatural nature weakens character in relatively common circumstances (e.g., touching ground, presence of women)
+            #ARMB1DsF8dN4gP0tA6kW2mXn: Cannot recover Fatigue, heal wounds, or recover Might during these circumstances
+            #ARMB1ExR5hJ1eL7cQ3bK9yTw: If more than half the year is spent in these conditions, must make additional Aging roll even if normally immune
+        }
+    }
+
+    #ARMB1FcA2gD8kN4pV0mW6tSr ^"Bound to (Role)" DEF {
+        APPLIES TO [^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB1GhR7eJ3cL9bQ5yK1fTx: Character is physically bonded to a device or place through mystic event, warping, or magical experimentation
+            #ARMB1HvN6gD2kA8pV4mW0tXs: If separated from bonded device or place, must make deprivation checks as if deprived of food (every 3 days)
+            #ARMB1JzL3eF9cR5bQ1hK7dTw: Includes effects of Unaging Virtue, but apparent age advances with physical age
+            #ARMB1KsA8dN4gP0tR6kW2mXn: Retains need to sleep and breathe; those not physically bonded retain other physical needs
+            #ARMB1LxR5hJ1eL7cQ3bK9yTr: May originate from any Supernatural Realm; only available to grogs
+        }
+    }
+
+    #ARMB1McF2gD8kN4pV0mW6aSw ^"Broken Vessel" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB1NhR7eJ3cL9bQ5yK1fTx: Requires at least one Supernatural Ability or Art improved through experience points
+            #ARMB1QvN6gD2kA8pV4mW0tXs: When a zero is rolled on any Stress Roll for Supernatural Abilities, Powers, or spells, lose 5 XP from affected Ability or Art
+            #ARMB1RzL3eF9cR5bQ1hK7dTw: On a botch, lose enough XP to reduce score in affected Art or Ability by one full level (or 5 XP, whichever is greater)
+        }
+    }
+
+    #ARMB1SsA8dN4gP0tR6kW2mXn ^"Corrupted Abilities" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+            ^"Tainted" BOOLEAN true
+        }
+        RULES {
+            #ARMB1TxR5hJ1eL7cQ3bK9yTw: One or more Abilities taught by a demon or corrupted source
+            #ARMB1UcF2gD8kN4pV0mW6aSr: Selfish or sinful use of corrupted Ability receives +3 bonus to roll
+            #ARMB1VhR7eJ3cL9bQ5yK1fTx: Succeeding because of the bonus grants 5 XP in that Ability
+            #ARMB1WvN6gD2kA8pV4mW0tXs: Neutral or selfless uses receive –3 penalty; failing because of this penalty causes loss of 5 XP
+            #ARMB1XzL3eF9cR5bQ1hK7dTw: Any use of corrupted Ability is an unholy act sensed by Divine Powers
+        }
+    }
+
+    #ARMB1YsA8dN4gP0tR6kW2mXn ^"Curse of Slander" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural", "General"]
+        }
+        RULES {
+            #ARMB1ZxR5hJ1eL7cQ3bK9yTw: Unpleasant rumors spread about you wherever you stay; can be bad luck or supernatural curse
+            #ARMB20cF2gD8kN4pV0mW6aSr: After one season in an area, gain bad Reputation at level 1 (Local); gains 1 point per further season
+            #ARMB21hR7eJ3cL9bQ5yK1fTx: At a covenant, Reputation increases in intervals of years rather than seasons
+            #ARMB22vN6gD2kA8pV4mW0tXs: If character leaves an area, Reputation stops increasing and may fall at troupe's discretion
+        }
+    }
+
+    #ARMB23zL3eF9cR5bQ1hK7dTw ^"Cursed Guile" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB24sA8dN4gP0tR6kW2mXn: Three extra botch dice when using Guile; probably results from Infernal influence
+            #ARMB25xR5hJ1eL7cQ3bK9yTw: Rarely believed even when honest; must make Communication + Guile roll vs EF 9 to be believed when telling the truth at important moments
+        }
+    }
+
+    #ARMB26cF2gD8kN4pV0mW6aSr ^"Deteriorating Power" DEF {
+        APPLIES TO [^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARMB27hR7eJ3cL9bQ5yK1fTx: One power (Greater, Lesser, or Ritual) reduces in effectiveness over time
+            #ARMB28vN6gD2kA8pV4mW0tXs: Penalty linked to (age / 10), (Might Score – Might Pool / 5), or Warping Score
+            #ARMB29zL3eF9cR5bQ1hK7dTw: May be taken more than once for different powers
+        }
+    }
+
+    #ARMB2AsA8dN4gP0tR6kW2mXn ^"Evil Eye" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2BxR5hJ1eL7cQ3bK9yTw: Characters making stress rolls in your presence are subject to an additional botch die
+            #ARMB2CcF2gD8kN4pV0mW6aSr: Others may protect themselves with an amulet, ritual, or Magic Resistance of 0 or more (including Aegis of the Hearth)
+        }
+    }
+
+    #ARMB2DhR7eJ3cL9bQ5yK1fTx ^"Exiled Atlantean" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2EvN6gD2kA8pV4mW0tXs: Character is an exiled Atlantean, tainted by contact with the surface world
+            #ARMB2FzL3eF9cR5bQ1hK7dTw: Cannot return to home magic regio; exile enforced by the nature of the regio itself
+            #ARMB2GsA8dN4gP0tR6kW2mXn: Exile applies even if the Atlantean left involuntarily; no authority figure to appeal to
+        }
+    }
+
+    #ARMB2HxR5hJ1eL7cQ3bK9yTw ^"Flawed Powers" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2JcF2gD8kN4pV0mW6aSr: Requires at least one Major Supernatural Virtue
+            #ARMB2KhR7eJ3cL9bQ5yK1fTx: Supernatural powers suffer effects of a Major Hermetic Flaw (commonly Restriction or Necessary Condition)
+            #ARMB2LvN6gD2kA8pV4mW0tXs: Flaw applied to Supernatural Virtues rather than Hermetic magic; Hermetic-only Flaws cannot be chosen
+        }
+    }
+
+    #ARMB2MzL3eF9cR5bQ1hK7dTw ^"Fluctuating Fortune" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2NsA8dN4gP0tR6kW2mXn: Finances alternate between Wealthy (one year) and Poor (the next) regardless of success or precautions
+            #ARMB2QxR5hJ1eL7cQ3bK9yTw: Wealthy year requires only 1 season of work; Poor year requires 3 seasons of work
+            #ARMB2RcF2gD8kN4pV0mW6aSr: Cycle always opposes financial desires: no money when needed most, abundance when superfluous
+        }
+    }
+
+    #ARMB2ShR7eJ3cL9bQ5yK1fTx ^"Folk Magic" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2TvN6gD2kA8pV4mW0tXs: Character's supernatural nature is especially vulnerable to folk magic traditions and remedies
+            #ARMB2UzL3eF9cR5bQ1hK7dTw: Traditional wards, charms, and folk rituals have enhanced effect against the character
+        }
+    }
+
+    #ARMB2VsA8dN4gP0tR6kW2mXn ^"(Form) Monstrosity" DEF {
+        APPLIES TO [^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2WxR5hJ1eL7cQ3bK9yTw: Physical deformity related to a specific Hermetic Form (e.g., Animal: extra head; Aquam: gills on land; Corpus: human limbs; Ignem: fiery breath; Herbam: branch tail)
+            #ARMB2XcF2gD8kN4pV0mW6aSr: Deformity is noticeable and may cause social penalties or practical hindrances
+        }
+    }
+
+    #ARMB2YhR7eJ3cL9bQ5yK1fTx ^"Inscribed Shadow" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB2ZvN6gD2kA8pV4mW0tXs: Stigmata reflected by glowing symbols in character's shadow; causes alarm among non-magicians
+            #ARMB30zL3eF9cR5bQ1hK7dTw: Other Criamon magi get +3 on all rolls to read your stigmata
+            #ARMB31sA8dN4gP0tR6kW2mXn: Glowing symbols burn brighter when there is insufficient light to form a shadow
+            #ARMB32xR5hJ1eL7cQ3bK9yTw: Only characters with stigmata may have this Flaw (normally magi of House Criamon)
+        }
+    }
+
+    #ARMB33cF2gD8kN4pV0mW6aSr ^"Lesser Malediction" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB34hR7eJ3cL9bQ5yK1fTx: Cursed by some supernatural power
+            #ARMB35vN6gD2kA8pV4mW0tXs: Effects should be about as bad as other Minor General Flaws
+        }
+    }
+
+    #ARMB36zL3eF9cR5bQ1hK7dTw ^"Manifest Sin" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB37sA8dN4gP0tR6kW2mXn: A past sin or crime stains the character's spirit and is visible to those with supernatural perception (Second Sight, Sense Holiness & Unholiness, etc.)
+            #ARMB38xR5hJ1eL7cQ3bK9yTw: Manifestation appropriate to the sin (blood on hands for violence, lustful expression for lust, etc.)
+            #ARMB39cF2gD8kN4pV0mW6aSr: –1 penalty to all social interaction rolls from intangible aura of past sins
+            #ARMB3AhR7eJ3cL9bQ5yK1fTx: May spend a Faith Point to banish manifestation for Sun duration, suspending social penalty
+            #ARMB3BvN6gD2kA8pV4mW0tXs: Originates from Divine or Infernal Realm as mark of punishment, penitence, or temptation
+        }
+    }
+
+    #ARMB3CzL3eF9cR5bQ1hK7dTw ^"Monstrous Blood" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB3DsA8dN4gP0tR6kW2mXn: Essential nature changed through exposure to the Magic realm, often from relationship to a magic being
+            #ARMB3ExR5hJ1eL7cQ3bK9yTw: –1 bonus to all Aging rolls; may learn Magic Lore during character creation
+            #ARMB3FcF2gD8kN4pV0mW6aSr: Gains minor physical deformity appropriate to Magic being type (animal features, decreased Characteristic, mental block, or constant detrimental Lesser Power)
+            #ARMB3GhR7eJ3cL9bQ5yK1fTx: Appearance changed enough that others immediately recognize something is wrong; poor Reputation level 3 among magic beings
+        }
+    }
+
+    #ARMB3HvN6gD2kA8pV4mW0tXs ^"Necessary (Realm) Aura for (Ability)" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB3JzL3eF9cR5bQ1hK7dTw: –3 penalty to all totals generated with a particular Ability when not in the specified supernatural aura
+            #ARMB3KsA8dN4gP0tR6kW2mXn: Chosen Ability should be one frequently used in service to covenant or daily activities
+            #ARMB3LxR5hJ1eL7cQ3bK9yTw: When applied to Craft or Profession, also reduces Labor Points accumulated when not in appropriate aura
+            #ARMB3McF2gD8kN4pV0mW6aSr: May take once per Ability; troupe should ensure the Flaw actually limits the character
+        }
+    }
+
+    #ARMB3NhR7eJ3cL9bQ5yK1fTx ^"Prohibition" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB3QvN6gD2kA8pV4mW0tXs: Conditional Curse (geas) cast upon you; must obey restrictions or suffer the full curse
+            #ARMB3RzL3eF9cR5bQ1hK7dTw: Troupe must agree on both the restriction and the curse that strikes if broken
+        }
+    }
+
+    #ARMB3SsA8dN4gP0tR6kW2mXn ^"(Realm) Stigmatic" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB3TxR5hJ1eL7cQ3bK9yTw: Manifests physical phenomena in auras of strength 4+ aligned to chosen realm or when affected by powers of 4th magnitude+
+            #ARMB3UcF2gD8kN4pV0mW6aSr: Common stigmata: dark skin marks, blood from orifices, spontaneous wounds, limb twisting, minor animal features
+            #ARMB3VhR7eJ3cL9bQ5yK1fTx: Lose one Long-Term Fatigue level that cannot recover while under that Realm's influence; stigmata fade when Fatigue recovers
+            #ARMB3WvN6gD2kA8pV4mW0tXs: If Warping Point gained from sensitive Realm, stigmata erupt violently causing Light Wound plus Fatigue; remain until wound heals
+        }
+    }
+
+    #ARMB3XzL3eF9cR5bQ1hK7dTw ^"Restricted Power" DEF {
+        APPLIES TO [^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARMB3YsA8dN4gP0tR6kW2mXn: One supernatural power (Focus, Greater, Lesser, Personal, or Ritual) is limited in use
+            #ARMB3ZxR5hJ1eL7cQ3bK9yTw: Must perform special ceremony, or power only functions on limited targets or in specific circumstances
+            #ARMB40cF2gD8kN4pV0mW6aSr: May be taken once per power the character possesses
+        }
+    }
+
+    #ARMB41hR7eJ3cL9bQ5yK1fTx ^"Slow Power" DEF {
+        APPLIES TO [^"Companion", ^"Grog", ^"Creature"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+            ^"Repeatable" BOOLEAN true
+        }
+        RULES {
+            #ARMB42vN6gD2kA8pV4mW0tXs: One supernatural power requires an additional round of preparation to activate
+            #ARMB43zL3eF9cR5bQ1hK7dTw: May be taken more than once for multiple powers, but not more than once for a single power
+        }
+    }
+
+    #ARMB44sA8dN4gP0tR6kW2mXn ^"Stigmatic Catalyst" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB45xR5hJ1eL7cQ3bK9yTw: Presence sometimes causes symbolic marks to appear on bodies of people nearby without Magic Resistance
+            #ARMB46cF2gD8kN4pV0mW6aSr: Cannot control this process; Intelligence + Enigmatic Wisdom roll vs EF 6 to identify purification needed
+            #ARMB47hR7eJ3cL9bQ5yK1fTx: Stigmatized people may react hostilely if they realize the source
+            #ARMB48vN6gD2kA8pV4mW0tXs: Normally found among magi of House Criamon
+        }
+    }
+
+    #ARMB49zL3eF9cR5bQ1hK7dTw ^"Susceptibility to Sunlight" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB4AsA8dN4gP0tR6kW2mXn: –2 penalty to all rolls involving sight in bright environments such as a cloudless day
+            #ARMB4BxR5hJ1eL7cQ3bK9yTw: Lose one Fatigue level per Diameter if outdoors at noon on a hot summer day
+            #ARMB4CcF2gD8kN4pV0mW6aSr: Fatigue loss occurs more slowly in less-intense sunlight and warmth
+        }
+    }
+
+    #ARMB4DhR7eJ3cL9bQ5yK1fTx ^"Susceptibility to Warping" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB4EvN6gD2kA8pV4mW0tXs: In any year character gains a Warping Point from any Realm or source, gain one additional Warping Point from that same Realm
+            #ARMB4FzL3eF9cR5bQ1hK7dTw: If Warping Points gained from multiple Realms in a year, gain one extra point per Realm
+            #ARMB4GsA8dN4gP0tR6kW2mXn: Additional points do not contribute to Wizard's Twilight or other events as they accrete slowly over the year
+        }
+    }
+
+    #ARMB4HxR5hJ1eL7cQ3bK9yTw ^"Unruly Air" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB4JcF2gD8kN4pV0mW6aSr: In social situations with multiple people, slightest behavior subtly pushes others to extreme behavior
+            #ARMB4KhR7eJ3cL9bQ5yK1fTx: Either the life of the party or its death, depending on prevailing mood of the crowd
+            #ARMB4LvN6gD2kA8pV4mW0tXs: Influence is linked to magical nature; others with Magic Resistance are not influenced
+        }
+    }
+
+    #ARMB4MzL3eF9cR5bQ1hK7dTw ^"Viaticarus" DEF {
+        APPLIES TO [^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB4NsA8dN4gP0tR6kW2mXn: Received sacrament of Extreme Unction while at death's door, but survived
+            #ARMB4QxR5hJ1eL7cQ3bK9yTw: Immune to temptations of demons; cannot be affected by their Obsession power
+            #ARMB4RcF2gD8kN4pV0mW6aSr: Skin has unusual pallor, sunken eyes; gradually resembles a corpse more as he ages
+            #ARMB4ShR7eJ3cL9bQ5yK1fTx: Penalty to all social interaction rolls equal to Decrepitude score
+            #ARMB4TvN6gD2kA8pV4mW0tXs: Cannot cross thresholds with traditional wards (salt lines, iron nails) set by anyone with (Realm) Lore 1+
+            #ARMB4UzL3eF9cR5bQ1hK7dTw: Repulsed by any magical warding against creatures with Corpus or Mentem Might (including Aegis of the Hearth)
+            #ARMB4VsA8dN4gP0tR6kW2mXn: Both exclusions negated if invited to cross by ward's creator or resident
+        }
+    }
+
+    #ARMB4WxR5hJ1eL7cQ3bK9yTw ^"Visions" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural", "Story"]
+        }
+        RULES {
+            #ARMB4XcF2gD8kN4pV0mW6aSr: Often see images related to emotionally or magically laden events; may be past, possible future, or distant occurrence
+            #ARMB4YhR7eJ3cL9bQ5yK1fTx: Visions often symbolic or confusing; usually come at quiet times or places connected with powerful events
+            #ARMB4ZvN6gD2kA8pV4mW0tXs: May warn of dangers or get you involved in matters you would otherwise avoid
+            #ARMB50zL3eF9cR5bQ1hK7dTw: Visions come purely at storyguide's discretion and reveal only what storyguide wants to reveal
+        }
+    }
+
+    #ARMB51sA8dN4gP0tR6kW2mXn ^"Warped by Magic" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        RULES {
+            #ARMB52xR5hJ1eL7cQ3bK9yTw: Character has suffered from early exposure to magic and starts with additional Warping Points
+            #ARMB53cF2gD8kN4pV0mW6aSr: May spend experience points on Magic Lore during character creation
+            #ARMB54hR7eJ3cL9bQ5yK1fTx: For magi, represents Warping gained before apprenticeship
+            #ARMB55vN6gD2kA8pV4mW0tXs: With troupe permission, may be modified to represent Warping from other Realms
+        }
+    }
+}

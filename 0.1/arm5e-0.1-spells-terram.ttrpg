@@ -1,0 +1,942 @@
+EXTENSION "ARM5e_Spells_Terram" {
+    NAME "Ars Magica 5th Edition Definitive - Terram Spells"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Magic"
+
+    # Terram Form spells: affect earth, stone, metal, and glass.
+    # Basic Individual: a cubic pace of dirt (about 10 cubic feet); a tenth of that for stone/metal.
+    # For base metals, the base Individual is a cubic foot; for precious metals, a cubic inch.
+    # For gemstones, the base Individual is one cubic inch.
+    # Organized by Technique (Creo, Intellego, Muto, Perdo, Rego), then by Level.
+
+    # ===========================
+    # CREO TERRAM GUIDELINES
+    # ===========================
+    # Creating earth in an elaborate shape or with a Muto requisite for unnatural
+    # properties is one level of magnitude higher than listed guidelines.
+    # Level 1:  Create sand, dirt, mud, or clay.
+    # Level 3:  Create stone or glass.
+    # Level 5:  Create base metal.
+    # Level 15: Create precious metal.
+    # Level 25: Create gemstone.
+    #           Create an earth elemental from a base amount of elemental matter. (Ritual)
+    # Repair a crafted item, returning it to an "as new" state (same level as creation).
+
+    # ===========================
+    # CREO TERRAM SPELLS
+    # ===========================
+
+    #ARM1100aB2cD4eF6gH8iJ0k ^"Seal the Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 1, +2 Voice, +2 Sun, +2 Group"
+        }
+        RULES {
+            #ARM1101: Creates enough dirt to fill in a pit of up to 6 paces across and 3 paces deep
+        }
+    }
+
+    #ARM1102aB2cD4eF6gH8iJ0k ^"Touch of Midas" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 15, +1 Touch"
+        }
+        RULES {
+            #ARM1103: Creates a roughly spherical lump of gold about six inches across, weighing about eighty pounds
+            #ARM1104: Enough money to keep a peasant family in comfort for about three hundred years
+        }
+    }
+
+    #ARM1105aB2cD4eF6gH8iJ0k ^"Wall of Protecting Stone" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +2 Sun, +2 size"
+        }
+        RULES {
+            #ARM1106: Makes a wall of granite up to 25 paces wide, 4 paces high, and 1 pace thick
+            #ARM1107: One needs miner's tools to break through it, though it can be toppled if it is not connected to a support on its side or top
+        }
+    }
+
+    #ARM1108aB2cD4eF6gH8iJ0k ^"Conjuring the Mystic Tower" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 3, +1 Touch, +4 size, +3 elaborate design"
+        }
+        RULES {
+            #ARM1109: An elaborately carved tower, formed from a single block of stone, rises out of the ground
+            #ARM110A: The tower stands 80 feet high and is 30 feet wide, with a foundation set 20 feet into the ground
+            #ARM110B: You determine the design of the chambers within
+        }
+    }
+
+    # ===========================
+    # INTELLEGO TERRAM GUIDELINES
+    # ===========================
+    # Intellego Terram spell levels are not affected by the material of the thing
+    # affected, except as explicitly noted in the guidelines.
+    # Level 2:  Learn one visible property of an object.
+    # Level 4:  Learn one mundane property of an object. See an object and its surroundings.
+    # Level 5:  Learn all components of a mixture or alloy.
+    # Level 10: Learn all the natural properties of an object.
+    # Level 15: Sense all the mundane properties of a composite object.
+    # Level 20: Learn the magical properties of an object.
+    #           Make your senses unhindered by earth (e.g., see right through a rock).
+    #           Speak with a natural rock (e.g., a boulder).
+    # Level 25: Speak with an artificial rock (e.g., a statue).
+    # Level 30: Commune with a natural rock. Speak with a metal object.
+    # Level 35: Commune with an artificial rock (e.g., a statue).
+    # Level 40: Commune with a metal object (e.g., a knife).
+
+    # ===========================
+    # INTELLEGO TERRAM SPELLS
+    # ===========================
+
+    #ARM110CaB2cD4eF6gH8iJ0k ^"Probe for Pure Silver" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Smell"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 Smell"
+        }
+        RULES {
+            #ARM110D: You can smell silver, and follow the scent
+        }
+    }
+
+    #ARM110EaB2cD4eF6gH8iJ0k ^"Eyes of the Eons" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice"
+        }
+        RULES {
+            #ARM110F: Determines the age of any nonliving target to within 10% of its actual age
+        }
+    }
+
+    #ARM1110aB2cD4eF6gH8iJ0k ^"Eyes of the Treacherous Terrain" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 Conc, +4 Vision"
+        }
+        RULES {
+            #ARM1111: You can tell intuitively if any natural terrain you see is treacherous, such as if a rock field is prone to sliding
+        }
+    }
+
+    #ARM1112aB2cD4eF6gH8iJ0k ^"The Miner's Keen Eye" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 Conc, +4 Vision, +1 see through intervening material"
+        }
+        RULES {
+            #ARM1113: You can see any one type of mineral (gold, diamond, sand), specified at the time of casting, through up to 3 paces of intervening material
+            #ARM1114: You have a good idea of how much is there and how pure it is, if appropriate
+        }
+    }
+
+    #ARM1115aB2cD4eF6gH8iJ0k ^"Tracks of the Faerie Glow" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Creo"
+            ^"Design" TEXT "Base 4, +1 Conc, +4 Vision, +1 Creo effect"
+        }
+        RULES {
+            #ARM1116: Causes even faintly perceptible tracks of a specific being to glow with a faint magic light, making them stand out when you are within 30 paces of them
+            #ARM1117: The glow provides a bonus to Tracking rolls depending on the relationship between the target and the terrain
+            #ARM1118: Magically related to the terrain +2; native to the terrain +4; neutral to the terrain +6; inimical to the terrain +8
+            #ARM1119: Tracking at night without a light source doubles the bonus
+        }
+    }
+
+    #ARM111AaB2cD4eF6gH8iJ0k ^"Stone Tell of the Mind that Sits" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 20, +1 Touch, +1 Conc"
+        }
+        RULES {
+            #ARM111B: Allows you to talk with natural stone
+            #ARM111C: A stone's answers feel slow and ponderous, but do not actually take any longer than a normal conversation
+            #ARM111D: Though a stone is usually willing to talk, its direction sense and awareness of quickly moving things (such as people) are limited
+        }
+    }
+
+    #ARM111EaB2cD4eF6gH8iJ0k ^"Sense the Feet that Tread the Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch, +1 Conc, +1 Part, +3 size"
+        }
+        RULES {
+            #ARM111F: You touch the earth and feel what is moving along the ground within a mile of where you stand
+            #ARM1120: You can tell the direction, distance, weight, number, and manner of movement of moving things
+        }
+    }
+
+    #ARM1121aB2cD4eF6gH8iJ0k ^"Dream of the Mind that Sits" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 50
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Creo"
+            ^"Design" TEXT "Base 30, +1 Touch, +2 Sun, +1 Creo effect"
+        }
+        RULES {
+            #ARM1122: Allows you to probe the memories of a spirit within a natural stone object; the spell also perfects those memories
+            #ARM1123: Probing is extremely slow, a typical session lasts between six and twelve hours, during which the caster is oblivious to the outside world
+            #ARM1124: The spell allows the caster to perceive and relive events witnessed by the spirit, as it recalls them
+            #ARM1125: Larger stone objects have more powerful spirits and so have better perceptions
+        }
+    }
+
+    # ===========================
+    # MUTO TERRAM GUIDELINES
+    # ===========================
+    # The targets below are for changing dirt. To change to or from sand, mud, or
+    # clay, use the same level. To change to or from stone or glass, add one
+    # magnitude. To change to or from metal or gemstone, add two magnitudes.
+    # These adjustments only apply once (changing metal to metal is only +2 magnitudes).
+    # General: Convert part of an earth elemental's body into another type of earth,
+    #          reducing the elemental's Might pool by the level of the spell +2 magnitudes.
+    # Level 1:  Change one property of dirt.
+    # Level 2:  Change dirt to another type of natural earth (e.g., sand to loam).
+    # Level 3:  Change dirt so that it is slightly unnatural (requisites may be required).
+    #           Change dirt into a liquid or gas (with requisites).
+    #           Change dirt to stone, or vice versa.
+    # Level 4:  Change dirt so that it is highly unnatural (requisites often required).
+    #           Change dirt into a mixture of liquids, solids, and gases (with requisites).
+    #           Change dirt into a plant (with requisites).
+    #           Make something grow to ten times its previous volume.
+    # Level 5:  Change dirt into a slightly unnatural liquid or gas (with requisites).
+    #           Change dirt into an animal (with requisites).
+    # Level 10: Change dirt into a highly unnatural liquid or gas (with requisites).
+
+    # ===========================
+    # MUTO TERRAM SPELLS
+    # ===========================
+
+    #ARM1126aB2cD4eF6gH8iJ0k ^"Supple Iron and Rigid Rope" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +2 Sun"
+        }
+        RULES {
+            #ARM1127: Makes a flexible object stiff or a stiff object flexible
+            #ARM1128: Casting requisites of Forms appropriate to the materials affected are required
+            #ARM1129: Despite the name, this spell is not high enough level to affect iron
+        }
+    }
+
+    #ARM112AaB2cD4eF6gH8iJ0k ^"The Crystal Dart" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Rego"
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Rego requisite"
+        }
+        RULES {
+            #ARM112B: Transforms a stone into a 10-inch crystal dart that rises from the ground at your feet, floats into the air, and speeds off like an arrow at a target within Voice range
+            #ARM112C: Does +5 damage (because of the sharp edges of the crystal as much as its speed) and always hits its target
+            #ARM112D: Must Penetrate Magic Resistance to have any real effect
+        }
+    }
+
+    #ARM112EaB2cD4eF6gH8iJ0k ^"Rock of Viscid Clay" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 stone, +1 Touch, +2 Sun, +1 Part"
+        }
+        RULES {
+            #ARM112F: Softens rock enough that it may be dug out, molded, and otherwise manipulated in the same way that hard river clay can be
+            #ARM1130: The rock is slightly sticky
+            #ARM1131: The spell affects rock in a roughly spherical shape with a three-foot diameter
+        }
+    }
+
+    #ARM1132aB2cD4eF6gH8iJ0k ^"Edge of the Razor" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +2 Sun, +2 metal"
+        }
+        RULES {
+            #ARM1133: Sharpens any metal edge to a degree unequaled by manual methods
+            #ARM1134: An edged or pointed weapon gains a +2 bonus to Damage
+            #ARM1135: Good-natured magi reward grogs by enchanting their weapons this way, though the resulting sword is resisted by Magic Resistance
+        }
+    }
+
+    #ARM1136aB2cD4eF6gH8iJ0k ^"Earth that Breaks No More" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 stone, +1 Touch, +2 Sun, +1 Part, +1 size"
+        }
+        RULES {
+            #ARM1137: Turns a volume of packed dirt up to ten cubic paces into stone
+        }
+    }
+
+    #ARM1138aB2cD4eF6gH8iJ0k ^"Object of Increased Size" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch, +2 Sun, +1 stone"
+        }
+        RULES {
+            #ARM1139: Enlarges an inanimate object originally no bigger than a large chest
+            #ARM113A: The object doubles in each dimension and increases its weight eight times
+            #ARM113B: The size increase is based on the object's original, natural size, so casting the spell more than once on an object has no effect
+            #ARM113C: Noble elements like gold, silver, and gems are not affected by this spell
+            #ARM113D: If any part of the item resists growth, the item as a whole does not grow
+            #ARM113E: Casting requisites are required for the appropriate Form for the target
+        }
+    }
+
+    #ARM113FaB2cD4eF6gH8iJ0k ^"Teeth of the Earth Mother" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +2 Sun, +2 Group, +2 fancy effect"
+        }
+        RULES {
+            #ARM1140: Twenty pointed pillars of white marble spring up from the ground to a height of 12 feet, forming a circle 3 paces in diameter
+            #ARM1141: At their tops, the pillars are thin and as sharp as spears; at the base, where they touch, they are 18 inches thick
+            #ARM1142: When the pillars spring up, they can be used to cage people, to form a wall, or to skewer enemies
+            #ARM1143: Climbing to the top requires three Dexterity + Athletics stress rolls against an Ease Factor of 12, and the tops break away when the target reaches them, causing the victim to fall
+            #ARM1144: Skewering a target does +25 damage, possibly more on following rounds if the victim struggles or is exceptionally heavy
+            #ARM1145: When the spell ends, the pillars crumble to dust
+        }
+    }
+
+    # ===========================
+    # PERDO TERRAM GUIDELINES
+    # ===========================
+    # To destroy sand, mud, or clay, use the same level as for earth. To destroy
+    # stone or glass, add one magnitude. To destroy metal or gemstone, add two magnitudes.
+    # General: Destroy sufficient matter to reduce an earth elemental's Might Score
+    #          by the level of the spell +2 magnitudes.
+    # Level 2: Weaken dirt.
+    # Level 3: Destroy dirt.
+    # Level 5: Destroy one aspect of dirt, such as its weight or its cohesiveness.
+
+    # ===========================
+    # PERDO TERRAM SPELLS
+    # ===========================
+
+    #ARM1146aB2cD4eF6gH8iJ0k ^"Fist of Shattering" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 stone, +2 Voice"
+        }
+        RULES {
+            #ARM1147: An object of stone or weaker material up to a pace across breaks apart
+            #ARM1148: The appropriate Form for the target is a casting requisite
+        }
+    }
+
+    #ARM1149aB2cD4eF6gH8iJ0k ^"Rusted Decay of Ten-Score Years" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 metal, +2 Voice"
+        }
+        RULES {
+            #ARM114A: The metal of the target becomes so thoroughly rusted that it breaks if used in any demanding way (e.g., used to strike a blow in combat or to pry open a door)
+            #ARM114B: It also loses any sharpness it might once have had
+        }
+    }
+
+    #ARM114CaB2cD4eF6gH8iJ0k ^"Pit of the Gaping Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Part, +1 size"
+        }
+        RULES {
+            #ARM114D: The dirt in a circle 6 paces across recedes into the ground, leaving a pit 9 feet deep
+            #ARM114E: If the target area contains material other than dirt, that material is not affected
+        }
+    }
+
+    #ARM114FaB2cD4eF6gH8iJ0k ^"Obliteration of the Metallic Barrier" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Rego"
+            ^"Design" TEXT "Base 3, +2 metal, +1 Touch, +1 size, +1 Rego to fling the fragments away"
+        }
+        RULES {
+            #ARM1150: Shatters a barrier of metal or stone up to one foot thick
+            #ARM1151: Those within one pace of the barrier, on the opposite side from you, take +10 Damage
+            #ARM1152: Alchemically refined and magical metals may be able to withstand this spell
+        }
+    }
+
+    #ARM1153aB2cD4eF6gH8iJ0k ^"Stone to Falling Dust" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 metal/gems, +3 Sight"
+        }
+        RULES {
+            #ARM1154: One solid non-living object turns to a pile of dust
+            #ARM1155: The object must be a base Individual or smaller, so a stone item can be a pace across while a metal item can only be one tenth that size
+            #ARM1156: A casting requisite may be required, of the Form appropriate to the target
+        }
+    }
+
+    #ARM1157aB2cD4eF6gH8iJ0k ^"End of the Mighty Castle" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Structure"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 stone, +2 Voice, +3 Str"
+        }
+        RULES {
+            #ARM1158: A single stone structure, such as a castle keep or manor house, crumbles to dust and small pebbles
+            #ARM1159: Anyone inside at the time takes +10 damage from falling and having stones land on them, possibly more if the structure is particularly large
+        }
+    }
+
+    #ARM115AaB2cD4eF6gH8iJ0k ^"Cascade of Rocks" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 stone, +3 Sight, +1 Part, +4 size"
+        }
+        RULES {
+            #ARM115B: Makes a cliff collapse, causing an avalanche
+            #ARM115C: The effects depend on the size of the cliff and what lies below it
+        }
+    }
+
+    # ===========================
+    # REGO TERRAM GUIDELINES
+    # ===========================
+    # The guidelines for controlling dirt, sand, mud, or clay are listed below.
+    # Add one magnitude to control stone or glass, and two for metal or gemstone,
+    # unless the item is simply being moved from one place to another.
+    # General: Ward against beings associated with Terram from one supernatural realm
+    #          with Might less than or equal to the level of the spell. (Touch, Ring, Circle)
+    # Level 1:  Control or move dirt in a natural fashion.
+    # Level 2:  Control or move dirt in a slightly unnatural fashion.
+    #           Keep dirt away from you, under your conscious control.
+    #           Shape and form dirt, as if a craftsman had worked it.
+    # Level 3:  Control or move dirt in a very unnatural fashion.
+    # Level 4:  Transport a non-living object instantly up to 5 paces.
+    #           (+1 mag for 50 paces, +2 for 500, +3 for 1 league, +4 for 7 leagues,
+    #            +5 for Arcane Connection distance)
+    # Level 5:  Keep all dirt away from your body, or ward a target against dirt.
+    #           Control a disembodied spirit associated with Terram.
+    #           Completely control an earth elemental.
+    #           Hurl a hard projectile with enough force to do +5 damage (range increment 20 paces).
+    # Level 10: Hurl a hard projectile with enough force to do +10 damage (range increment 20 paces).
+    # Level 15: Summon a disembodied spirit associated with Terram.
+    #           Hurl a hard projectile with enough force to do +15 damage (range increment 20 paces).
+
+    # ===========================
+    # REGO TERRAM SPELLS
+    # ===========================
+
+    #ARM115DaB2cD4eF6gH8iJ0k ^"Ward Against Faeries of the Mountain" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 0
+            ^"LevelNote" TEXT "General"
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "As Ward Against Faeries of the Waters (ReAq Gen), but for faeries of earth and stone"
+        }
+        RULES {
+            #ARM115E: Keeps out faeries of earth and stone with Might less than or equal to the level of the spell
+            #ARM115F: At some angles at night, the ring may be seen as a dark brown dome
+        }
+    }
+
+    #ARM1160aB2cD4eF6gH8iJ0k ^"Unseen Arm" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARM1161: Slowly moves a nonliving thing, like a mug, instrument, or small pouch of coins; it cannot oppose intentional resistance
+            #ARM1162: Cannot be used to pull something from a person's hand or to move something that is held
+            #ARM1163: Casting requisites of an appropriate Form for the target are required
+        }
+    }
+
+    #ARM1164aB2cD4eF6gH8iJ0k ^"Trackless Step" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 Touch, +2 Special (based on Concentration), +1 Part"
+        }
+        RULES {
+            #ARM1165: You leave no tracks in the earth until you come to a stop, such as to rest or fight
+            #ARM1166: This spell draws on pre-Hermetic traditions and does not perfectly fit the categories of Hermetic magic
+        }
+    }
+
+    #ARM1167aB2cD4eF6gH8iJ0k ^"Wielding the Invisible Sling" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice"
+        }
+        RULES {
+            #ARM1168: Hurls any nearby object that could normally be thrown by a person at any target within range
+            #ARM1169: The object must not be held down or otherwise restrained
+            #ARM116A: Damage depends on the object thrown, up to +5 for a fist-sized stone
+            #ARM116B: The object always hits, but it is resisted by Magic Resistance
+            #ARM116C: Casting requisites of an appropriate Form for the target are required
+        }
+    }
+
+    #ARM116DaB2cD4eF6gH8iJ0k ^"Invisible Sling of Vilano" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Touch"
+        }
+        RULES {
+            #ARM116E: Hurls a stone (of a size that could be thrown with a mundane sling) at a target within range
+            #ARM116F: Unlike Wielding the Invisible Sling, this spell hurls the stone as a projectile
+            #ARM1170: An aiming roll is required to hit the intended target, but if it succeeds, Magic Resistance offers no protection
+            #ARM1171: The stone inflicts +5 damage on impact and has a range increment of 20 paces
+        }
+    }
+
+    #ARM1172aB2cD4eF6gH8iJ0k ^"The Forgiving Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 Voice, +1 Part, +1 size"
+        }
+        RULES {
+            #ARM1173: Loosens earth in a 15-pace-by-15-pace area to a depth of one foot, making packed dirt as loose as plowed ground
+        }
+    }
+
+    #ARM1174aB2cD4eF6gH8iJ0k ^"The Unseen Porter" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARM1175: Like Unseen Arm (ReTe 5), but it can carry large objects such as crates
+            #ARM1176: Roughly speaking, it has the capabilities of a very strong person (Str +5)
+            #ARM1177: The heavier the object is, the slower the unseen porter moves
+            #ARM1178: If delicacy is required, high Finesse stress rolls (Ease Factor 12 or so) are needed
+            #ARM1179: The spell can only carry inanimate objects, and cannot carry you; it also cannot lift things more than 6 feet above the ground
+            #ARM117A: Casting requisites of an appropriate Form for the target are required
+        }
+    }
+
+    #ARM117BaB2cD4eF6gH8iJ0k ^"Unyielding Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 Voice, +1 Part, +1 size"
+        }
+        RULES {
+            #ARM117C: Compacts the surface of the ground in a 15-pace-by-15-pace area to a depth of one foot, making it more solid
+            #ARM117D: Mud becomes as soft earth, and soft earth becomes as packed dirt
+        }
+    }
+
+    #ARM1180aB2cD4eF6gH8iJ0k ^"The Earth's Carbuncle" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Muto"
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Part, +1 Muto requisite"
+        }
+        RULES {
+            #ARM1181: Causes a 1-pace circle of ground to become jagged stone, just under the surface, and those fragments burst into the air
+            #ARM1182: Anyone standing on the circle is thrown into the air and hit with flying debris; Damage is +10
+        }
+    }
+
+    #ARM1183aB2cD4eF6gH8iJ0k ^"Hands of the Grasping Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Diam, +1 Part"
+        }
+        RULES {
+            #ARM1184: Earthen hands from beneath the target rise out of the ground, and grasp the target's ankles
+            #ARM1185: To break free requires a Strength stress roll of 15+; one attempt is allowed per round, and each requires a Fatigue roll
+            #ARM1186: Each hand can be destroyed by beating its +25 Soak roll (hacking weapons do double normal damage) and inflicting a Light Wound
+        }
+    }
+
+    #ARM1187aB2cD4eF6gH8iJ0k ^"Crest of the Earth Wave" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Part, +2 size"
+        }
+        RULES {
+            #ARM1188: Creates a wave in the earth that starts at your feet and travels out to the range of your Voice in a designated direction
+            #ARM1189: It starts as a narrow ripple and within 5 paces reaches its full size of 5 feet high and 30 paces wide, moving about 50 paces per round
+            #ARM118A: Those caught in its path must make Dexterity stress rolls against an Ease Factor of 12 to leap over the wave, or they are tossed aside and take +10 Damage
+            #ARM118B: The wave overturns trees and damages buildings in its path
+        }
+    }
+
+    #ARM118CaB2cD4eF6gH8iJ0k ^"Creeping Chasm" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Part, +3 size, +1 fancy effect"
+        }
+        RULES {
+            #ARM118D: Creates a chasm that runs from the ground in front of your feet towards some target within range that you designate
+            #ARM118E: The chasm travels about 4 paces per round, growing wider as it travels, reaching a maximum width of 20 feet at a distance of 30 paces
+            #ARM118F: The chasm is 20 to 30 feet deep, and the sides are likely to collapse, so any caught in it are in a bind
+            #ARM1190: To avoid the growing chasm, a target must make a Quickness stress roll against an Ease Factor of 9
+            #ARM1191: The spell effect lasts a moment, creating the stresses that open the chasm over a few rounds; normal forces of the earth tend to close the chasm in a week or so
+        }
+    }
+
+    #ARM1192aB2cD4eF6gH8iJ0k ^"Earth Shock" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Part, +4 size"
+        }
+        RULES {
+            #ARM1193: Shakes the ground in a 100-pace radius
+            #ARM1194: All affected must make a Quickness - Encumbrance stress roll against an Ease Factor of 10 or fall
+            #ARM1195: Modifiers: standing still +2; on solid stone +2; moving slowly +0; on earth +0; running -2; standing on a narrow bridge -6
+        }
+    }
+
+    #ARM1196aB2cD4eF6gH8iJ0k ^"The Earth Split Asunder" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +1 Special based on Mom, +1 Part, +2 size, +1 fancy effect"
+        }
+        RULES {
+            #ARM1197: Creates a 5-foot-wide, 60-foot-long, 10-foot-deep crack in the ground
+            #ARM1198: It opens on one round, stays open for another round, and closes at the start of a third round, crushing all within it for +25 damage
+            #ARM1199: You must maintain concentration for all three rounds, or the pit slowly closes over an hour's time rather than shutting quickly and violently
+            #ARM119A: To avoid the pit, those in its vicinity other than the caster must make a Quickness stress roll against an Ease Factor of 9
+            #ARM119B: Falling in incurs +5 damage; to escape, another such roll is made; unless outside help is provided, people in the pit only get one chance to escape
+        }
+    }
+
+    #ARM119CaB2cD4eF6gH8iJ0k ^"Hermes' Portal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 75
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Mercurian Ritual"
+        }
+        RULES {
+            #ARM119D: Creates a magical portal through which people, animals, and objects can travel almost instantaneously
+            #ARM119E: The ritual must be cast twice, simultaneously at two different locations, and after the rituals are performed, there is a magical connection between them
+            #ARM119F: The magi conducting each ritual must have an Arcane Connection (such as a clod of dirt) to the other location
+            #ARM11A0: The portal is activated by some command word or ritual determined when the portal is enchanted
+            #ARM11A1: Inanimate things and unwilling creatures may be transmitted if someone else says the command word and pushes the subject through
+        }
+    }
+}

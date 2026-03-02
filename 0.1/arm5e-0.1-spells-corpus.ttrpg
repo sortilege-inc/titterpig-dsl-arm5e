@@ -1,0 +1,1159 @@
+EXTENSION "ARM5e_Spells_Corpus" {
+    NAME "Ars Magica 5th Edition Definitive - Corpus Spells"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Magic"
+
+    # Corpus Form spells: affect the human body.
+    # Basic Individual: an adult human (Size 0).
+    # Organized by Technique (Creo, Intellego, Muto, Perdo, Rego), then by Level.
+    # Guidelines summarized first per Technique, then named spells follow.
+
+    # ===========================
+    # CREO CORPUS
+    # ===========================
+
+    #ARMD80qR4vN8tL2xB6jW0pF ^"Creo Corpus Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+        }
+        RULES {
+            #ARMD81dH7mK3sY9cA5gN1eZ: Level 1: Give a character a +1 bonus to Recovery rolls
+            #ARMD82rJ6wP0tX4bF8kQ2vM: Level 1: The target's wounds are treated as one category less serious for the purposes of activities while injured
+            #ARMD83yC9hU5lE1oS7iW3aG: Level 2: Give a character a +3 bonus to Recovery rolls
+            #ARMD84fN2qD8vK4xB0rT6jP: Level 2: Preserve a corpse from decay
+            #ARMD85mZ7gL3cH9eA5sW1yU: Level 3: Give a character a +6 bonus to Recovery rolls
+            #ARMD86pR8tF2kN6wJ0bX4hD: Level 3: Prevent all of a target's wounds from getting any worse
+            #ARMD87aV5cQ1nS3eG9jY7uL: Level 4: Give a character a +9 bonus to Recovery rolls
+            #ARMD88bW4dT0oU2fH8kZ6xM: Level 5: Give a character a +12 bonus to Recovery rolls
+            #ARMD89cX3eR9pV1gI7lA5yN: Level 5: Create an entire human corpse
+            #ARMD8AdY2fS8qW0hJ6mB4zO: Level 10: Give a character a +15 bonus to Recovery rolls
+            #ARMD8BeZ1gT7rX9iK5nC3aP: Level 15: Heal a Light Wound
+            #ARMD8CfA0hU6sY8jL4oD2bQ: Level 15: Give a character a +18 bonus to Recovery rolls
+            #ARMD8DgB9iV5tZ7kM3pE1cR: Level 15: Resolve a minor aging crisis
+            #ARMD8EhC8jW4uA6lN2qF0dS: Level 20: Heal a Medium Wound
+            #ARMD8FiD7kX3vB5mO1rG9eT: Level 20: Heal the debilitating after-effects of a disease, poison, or injury
+            #ARMD8GjE6lY2wC4nP0sH8fU: Level 20: Resolve a serious aging crisis
+            #ARMD8HkF5mZ1xD3oQ9tI7gV: Level 25: Heal a Heavy Wound
+            #ARMD8IlG4nA0yE2pR8uJ6hW: Level 25: Improve all wounds by one level of severity
+            #ARMD8JmH3oB9zF1qS7vK5iX: Level 25: Restore a lost limb
+            #ARMD8KnI2pC8aG0rT6wL4jY: Level 25: Resolve a major aging crisis
+            #ARMD8LoJ1qD7bH9sU5xM3kZ: Level 30: Heal an Incapacitating Wound
+            #ARMD8MpK0rE6cI8tV4yN2lA: Level 30: Increase one of a person's physical Characteristics by one point, to no more than 0
+            #ARMD8NqL9sF5dJ7uW3zO1mB: Level 30: Cause a person to reach full physical maturity over the course of a single day or night (requires Sun Duration)
+            #ARMD8OrM8tG4eK6vX2aP0nC: Level 35: Resolve a critical aging crisis
+            #ARMD8PsN7uH3fL5wY1bQ9oD: Level 35: Heal all wounds
+            #ARMD8QtO6vI2gM4xZ0cR8pE: Level 35: Resolve a terminal aging crisis
+            #ARMD8RuP5wJ1hN3yA9dS7qF: Level 40: Increase one of a person's physical Characteristics by one point, to no more than +1
+            #ARMD8SvQ4xK0iO2zB8eT6rG: Level 45: Increase one of a person's physical Characteristics by one point, to no more than +2
+            #ARMD8TwR3yL9jP1aC7fU5sH: Level 50: Increase one of a person's physical Characteristics by one point, to no more than +3
+            #ARMD8UxS2zM8kQ0bD6gV4tI: Level 55: Increase one of a person's physical Characteristics by one point, to no more than +4
+            #ARMD8VyT1aN7lR9cE5hW3uJ: Level 60: Increase one of a person's physical Characteristics by one point, to no more than +5 (further increases are not natural and cannot be effected by Creo magic)
+            #ARMD8WzU0bO6mS8dF4iX2vK: Level 70: Raise the dead, to a point (see The Shadow of Life Renewed)
+        }
+    }
+
+    # --- Creo Corpus Spells ---
+
+    #ARMD8XaV9cP5nT7eG3jY1wL ^"Bind Wound" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +2 Sun"
+        }
+        RULES {
+            #ARMD8YbW8dQ4oU6fH2kZ0xM: Binds the target's wounds so that he can undertake any activity without risk of worsening wounds; wound penalties still apply and target cannot heal naturally while under the spell's influence
+        }
+    }
+
+    #ARMD8ZcX7eR3pV5gI1lA9yN ^"Charm Against Putrefaction" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +1 Touch, +3 Moon"
+        }
+        RULES {
+            #ARMD90dY6fS2qW4hJ0mB8zO: Prevents decay of a human corpse, or of a severed body part; necromancers use it to preserve their revived corpses
+        }
+    }
+
+    #ARMD91eZ5gT1rX3iK9nC7aP ^"The Chirurgeon's Healing Touch" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 15, +1 Touch"
+        }
+        RULES {
+            #ARMD92fA4hU0sY2jL8oD6bQ: Heals a single Light Wound suffered by the person touched; does not heal damage from poison or disease
+        }
+    }
+
+    #ARMD93gB3iV9tZ1kM7pE5cR ^"Purification of the Festering Wounds" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch, +3 Moon"
+        }
+        RULES {
+            #ARMD94hC2jW8uA0lN6qF4dS: The target gains a +9 bonus to Recovery rolls, as long as he has been under the influence of this spell for the whole of the recovery interval; recovery interval counted from the time the spell is cast
+        }
+    }
+
+    #ARMD95iD1kX7vB9mO5rG3eT ^"Gentle Touch of the Purified Body" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 15, +1 Touch"
+        }
+        RULES {
+            #ARMD96jE0lY6wC8nP4sH2fU: The target is cured of a Light Wound caused by poison or disease; does not heal damage caused by injury
+        }
+    }
+
+    #ARMD97kF9mZ5xD7oQ3tI1gV ^"Restoration of the Defiled Body" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 20, +1 Touch"
+        }
+        RULES {
+            #ARMD98lG8nA4yE6pR2uJ0hW: Removes the crippling or malignant after-effects of any injury, poison, disease, or premature aging; effects of natural aging cannot be undone; does not heal wounds, only extra effects
+        }
+    }
+
+    #ARMD99mH7oB3zF5qS1vK9iX ^"The Severed Limb Made Whole" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 25, +1 Touch, -1 because the old limb is needed"
+        }
+        RULES {
+            #ARMD9AnI6pC2aG4rT0wL8jY: A detached limb can be reattached, but decay remains; after one day the limb is weak; after seven days it is nearly useless and infects the target (Stamina stress roll vs EF 6 or take Medium Wound); after two weeks the limb is completely useless
+        }
+    }
+
+    #ARMD9BoJ5qD1bH3sU9xM7kZ ^"Cheating the Reaper" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 25, +1 Touch"
+        }
+        RULES {
+            #ARMD9CpK4rE0cI2tV8yN6lA: Resolves a major (or less severe) crisis caused by aging; the target still requires rest for the remainder of the season to recover fully; each application causes Warping
+        }
+    }
+
+    #ARMD9DqL3sF9dJ1uW7zO5mB ^"Incantation of the Body Made Whole" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 35, +1 Touch"
+        }
+        RULES {
+            #ARMD9ErM2tG8eK0vX6aP4nC: Heals all damage to a human body at the conclusion of the ritual; can only heal wounds, not missing limbs, diseases, or damage from poisons
+        }
+    }
+
+    #ARMD9FsN1uH7fL9wY5bQ3oD ^"The Shadow of Life Renewed" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 75
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" TEXT "Mentem"
+            ^"Design" TEXT "Base 70, +1 Touch, no addition for requisite"
+        }
+        RULES {
+            #ARMD9GtO0vI6gM8xZ4cR2pE: Brings the semblance of life to a corpse; during the ritual healing spells work on the corpse (body must be physically whole or it dies again); for each day dead roll for aging; roll a simple die for result quality (1: body dissolves, 2: possessed by supernatural entity, 3: mindless corpse, 4-5: automaton with no Abilities over 3, 6-7: automaton with normal Abilities, 8: self-directed but demented, 9-10: person with will but no personality); the revived person is not truly alive, cannot gain experience points, and must make an aging roll each year
+        }
+    }
+
+    # ===========================
+    # INTELLEGO CORPUS
+    # ===========================
+
+    #ARMD9HuP9wJ5hN7yA3dS1qF ^"Intellego Corpus Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+        }
+        RULES {
+            #ARMD9IvQ8xK4iO6zB2eT0rG: Level 3: Locate a person
+            #ARMD9JwR7yL3jP5aC1fU9sH: Level 4: Sense very general information about a body
+            #ARMD9KxS6zM2kQ4bD0gV8tI: Level 5: Sense a specific piece of information about a body
+            #ARMD9LyT5aN1lR3cE9hW7uJ: Level 5: Speak with a dead body
+            #ARMD9MzU4bO0mS2dF8iX6vK: Level 10: Sense all useful information about a body
+        }
+    }
+
+    # --- Intellego Corpus Spells ---
+
+    #ARMD9NaV3cP9nT1eG7jY5wL ^"Sight of the True Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Vision"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Variable base (General level spell)"
+        }
+        RULES {
+            #ARMD9ObW2dQ8oU0fH6kZ4xM: You see the true, original form of any person whose form has been changed or masked; can see through mundane masks and disguises at level 10, and can see through the effects of other spells equal to or lower than this spell's level
+        }
+    }
+
+    #ARMD9PcX1eR7pV9gI5lA3yN ^"Physician's Eye" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch"
+        }
+        RULES {
+            #ARMD9QdY0fS6qW8hJ4mB2zO: Determines the general health of a single person; specific afflictions appear as areas of yellow coloration on the person's body; a Perception + Medicine stress roll is required to identify unusual diseases (Ease Factor determined by rarity)
+        }
+    }
+
+    #ARMD9ReZ9gT5rX7iK3nC1aP ^"Revealed Flaws of Mortal Flesh" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Touch"
+        }
+        RULES {
+            #ARMD9SfA8hU4sY6jL2oD0bQ: You are able to find any medical defects in a person or being you are touching; provides more information than Physician's Eye
+        }
+    }
+
+    #ARMD9TgB7iV3tZ5kM1pE9cR ^"Whispers Through the Black Gate" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Mentem"
+            ^"Design" TEXT "Base 5, +1 Touch, +1 Conc, no cost for requisite"
+        }
+        RULES {
+            #ARMD9UhC6jW2uA4lN0qF8dS: You can speak through the barrier between the dead and the living to one corpse that has not yet decayed into a skeleton; the corpse cannot have been buried in Church burial nor belonged to a spirit that went straight to Heaven; the spirit is not compelled to tell the truth; all those around you can hear the voice of the corpse
+        }
+    }
+
+    #ARMD9ViD5kX1vB3mO9rG7eT ^"The Inexorable Search" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +4 Arc, +1 Conc"
+        }
+        RULES {
+            #ARMD9WjE4lY0wC2nP8sH6fU: Determines the location of a specific person; requires a map and an Arcane Connection; after casting you move your finger over the map (one hour per square foot); when your finger passes over the person's location you sense their presence; locates the person to within a thumb's width on the map
+        }
+    }
+
+    #ARMD9XkF3mZ9xD1oQ7tI5gV ^"The Eye of the Sage" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Imaginem"
+            ^"Design" TEXT "Base 4, +4 Arc, +1 Conc, +1 requisite"
+        }
+        RULES {
+            #ARMD9YlG2nA8yE0pR6uJ4hW: Lets you see a specific person and what is within one pace of that person; the image is clear enough to allow reading
+        }
+    }
+
+    # ===========================
+    # MUTO CORPUS
+    # ===========================
+
+    #ARMD9ZmH1oB7zF9qS5vK3iX ^"Muto Corpus Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+        }
+        RULES {
+            #ARMDA0nI0pC6aG8rT4wL2jY: Level 2: Change someone to give them a minor ability
+            #ARMDA1oJ9qD5bH7sU3xM1kZ: Level 2: Utterly change the appearance or size of a person (must still remain human in form)
+            #ARMDA2pK8rE4cI6tV2yN0lA: Level 3: Change non-living human bone to have an unnatural property (requisites may be needed)
+            #ARMDA3qL7sF3dJ5uW1zO9mB: Level 3: Make a body resistant to damage (+1 Soak)
+            #ARMDA4rM6tG2eK4vX0aP8nC: Level 5: Add or remove human body parts from the target so that he no longer looks human (parts are normally functional; Target is Part, not Individual)
+            #ARMDA5sN5uH1fL3wY9bQ7oD: Level 10: Turn a human into a land animal (with an Animal requisite)
+            #ARMDA6tO4vI0gM2xZ8cR6pE: Level 10: Make a body resistant to damage (+2 Soak)
+            #ARMDA7uP3wJ9hN1yA7dS5qF: Level 15: Make a body resistant to damage (+3 Soak)
+            #ARMDA8vQ2xK8iO0zB6eT4rG: Level 20: Turn a human into a bird or a fish (Animal requisite)
+            #ARMDA9wR1yL7jP9aC5fU3sH: Level 20: Make a body resistant to damage (+4 Soak)
+            #ARMDAAxS0zM6kQ8bD4gV2tI: Level 25: Turn a human into a solid inanimate object (Terram requisite)
+            #ARMDAByT9aN5lR7cE3hW1uJ: Level 25: Make a body resistant to damage (+5 Soak)
+            #ARMDACzU8bO4mS6dF2iX0vK: Level 25: Turn a human into a plant (Herbam requisite)
+            #ARMDADaV7cP3nT5eG1jY9wL: Level 30: Turn a human into an insubstantial object (Auram requisite)
+        }
+    }
+
+    # --- Muto Corpus Spells ---
+
+    #ARMDAEbW6dQ2oU4fH0kZ8xM ^"Eyes of the Cat" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 2, +1 Touch, +2 Sun, requisite free"
+        }
+        RULES {
+            #ARMDAFcX5eR1pV3gI9lA7yN: The target gains the eyes of a cat, allowing him or her to see in near darkness (but not in absolute darkness, such as a lightless subterranean cavern)
+        }
+    }
+
+    #ARMDAGdY4fS0qW2hJ8mB6zO ^"Disguise of the New Visage" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +2 Sun, +1 Part"
+        }
+        RULES {
+            #ARMDAHeZ3gT9rX1iK7nC5aP: The target's facial features are transformed to any approximately human configuration you choose
+        }
+    }
+
+    #ARMDAIfA2hU8sY0jL6oD4bQ ^"Preternatural Growth and Shrinking" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Touch, +2 Sun, +1 because the spell allows growth or two kinds of shrinking"
+        }
+        RULES {
+            #ARMDAJgB1iV7tZ9kM5pE3cR: Adds +1 to the target's normal Size or decreases it by up to 2 points
+        }
+    }
+
+    #ARMDAKhC0jW6uA8lN4qF2dS ^"Arm of the Infant" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice, +2 Sun, +1 Part"
+        }
+        RULES {
+            #ARMDALiD9kX5vB7mO3rG1eT: Shrinks a person's arm to half its original length and makes it pudgy, like an infant's
+        }
+    }
+
+    #ARMDAMjE8lY4wC6nP2sH0fU ^"Gift of the Bear's Fortitude" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +2 Sun"
+        }
+        RULES {
+            #ARMDANkF7mZ3xD5oQ1tI9gV: Your flesh becomes resistant to physical damage; you get +3 to your Soak; your flesh is tough and insensitive, any rolls involving sensitive touch (such as picking a lock) are at -1
+        }
+    }
+
+    #ARMDAOlG6nA2yE4pR0uJ8hW ^"Shape of the Woodland Prowler" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 10, +1 Touch, +2 Sun"
+        }
+        RULES {
+            #ARMDAPmH5oB1zF3qS9vK7iX: You place a wolf skin over yourself or another and the target changes into a wolf; the target may change back at will, ending the spell; you must first acquire the skin of a wolf to be able to end the spell early
+        }
+    }
+
+    #ARMDAQnI4pC0aG2rT8wL6jY ^"Cloak of Black Feathers" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 20, +2 Sun"
+        }
+        RULES {
+            #ARMDARoJ3qD9bH1sU7xM5kZ: You hang a small cape of raven feathers on your back and transform into a raven; you can resume human form at will, but doing so ends the spell
+        }
+    }
+
+    #ARMDASpK2rE8cI0tV6yN4lA ^"Curse of Circe" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 10, +2 Voice, +2 Sun"
+        }
+        RULES {
+            #ARMDATqL1sF7dJ9uW5zO3mB: Turns a person into a pig
+        }
+    }
+
+    #ARMDAUrM0tG6eK8vX4aP2nC ^"Stance of the Patient Tree" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Herbam"
+            ^"Design" TEXT "Base 25, +2 Sun"
+        }
+        RULES {
+            #ARMDAVsN9uH5fL7wY3bQ1oD: You turn yourself into a tree about 12 feet high with a trunk about a foot thick; you can sense only the most basic things (night and day, strong winds, things that can affect a tree); you can resume human form at will, ending the spell; while in tree form you do not heal wounds or restore Fatigue; the tree branch you use determines the kind of tree
+        }
+    }
+
+    #ARMDAWtO8vI4gM6xZ2cR0pE ^"Cloak of Mist" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Auram"
+            ^"Design" TEXT "Base 30, +2 Sun"
+        }
+        RULES {
+            #ARMDAXuP7wJ3hN5yA1dS9qF: You turn yourself into a thick, cohesive mist of approximately human size; you can float through the air at walking speed and can see and hear; you can seep through cracks but cannot move through solid objects; you may return to human form at any time, ending the spell; as mist you are subject to the forces of the wind
+        }
+    }
+
+    #ARMDAYvQ6xK2iO4zB0eT8rG ^"Transform to Water" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Aquam"
+            ^"Design" TEXT "Base 30, +2 Sun"
+        }
+        RULES {
+            #ARMDAZwR5yL1jP3aC9fU7sH: You turn yourself into water, one pint for every pound of your weight; you can hold yourself together unless someone makes an effort to separate you; you can roll slowly across the ground but cannot move uphill; you can hear sounds, feel things that touch you, and sense temperature; you can resume human form at will, ending the spell; you cannot resume human form if a significant part of your body/water is separated from the rest
+        }
+    }
+
+    #ARMDB0xS4zM0kQ2bD8gV6tI ^"The Silent Vigil" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Terram"
+            ^"Design" TEXT "Base 25, +3 Moon, +1 for special effect"
+        }
+        RULES {
+            #ARMDB1yT3aN9lR1cE7hW5uJ: You can move into and become part of a rock formation at least twice your size; while in the stone you can hear what is going on around you but cannot use other senses; the spell lasts until you come out, and you must come out where you went in; you have no need for food or drink, though you do age; rolls to recover from Fatigue or wounds take twice as long while in the stone
+        }
+    }
+
+    #ARMDB2zU2bO8mS0dF6iX4vK ^"Mists of Change" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 60
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 10, +2 Voice, +4 Year, +4 Bound, slightly nonstandard effect"
+        }
+        RULES {
+            #ARMDB3aV1cP7nT9eG5jY3wL: A whipping wind arises and patches of mist roll across the landscape; when mist envelops a person they cannot move, and when it blows away they are transformed into a random creature (roll simple die: 1 Wolf, 2 Horse, 3 Brown Bear, 4 Large Toad, 5 Ferret, 6 Viper, 7 Boar/Sow, 8 Dog, 9 Cat, 0 Other); people transformed retain human minds but inherit passions and instincts of new forms; transformations last for a Year
+        }
+    }
+
+    # ===========================
+    # PERDO CORPUS
+    # ===========================
+
+    #ARMDB4bW0dQ6oU8fH4kZ2xM ^"Perdo Corpus Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+        }
+        RULES {
+            #ARMDB5cX9eR5pV7gI3lA1yN: Level 3: Do superficial damage to a body (for example, remove its hair)
+            #ARMDB6dY8fS4qW6hJ2mB0zO: Level 4: Cause a person pain, but do no real damage
+            #ARMDB7eZ7gT3rX5iK1nC9aP: Level 5: Inflict a Light Wound
+            #ARMDB8fA6hU2sY4jL0oD8bQ: Level 5: Destroy a corpse
+            #ARMDB9gB5iV1tZ3kM9pE7cR: Level 5: Hamper a person without actually injuring them (e.g., make them lame, blur their eyesight); heals as a Light Wound
+            #ARMDBAhC4jW0uA2lN8qF6dS: Level 10: Inflict a Medium Wound
+            #ARMDBBiD3kX9vB1mO7rG5eT: Level 10: Cause the loss of a Fatigue level
+            #ARMDBCjE2lY8wC0nP6sH4fU: Level 15: Age someone by up to five years
+            #ARMDBDkF1mZ7xD9oQ5tI3gV: Level 15: Cripple a limb, making it unusable (but still capable of healing); the damage heals as a Medium Wound
+            #ARMDBElG0nA6yE8pR4uJ2hW: Level 15: Destroy one of a person's minor senses; the damage heals as a Medium Wound
+            #ARMDBFmH9oB5zF7qS3vK1iX: Level 15: Inflict a Heavy Wound
+            #ARMDBGnI8pC4aG6rT2wL0jY: Level 20: Destroy one of a person's major senses; heals as a Heavy Wound
+            #ARMDBHoJ7qD3bH5sU1xM9kZ: Level 20: Inflict a major disease
+            #ARMDBIpK6rE2cI4tV0yN8lA: Level 20: Destroy or sever a limb, so that it cannot heal naturally
+            #ARMDBJqL5sF1dJ3uW9zO7mB: Level 20: Inflict an Incapacitating Wound
+            #ARMDBKrM4tG0eK2vX8aP6nC: Level 30: Kill a person
+            #ARMDBLsN3uH9fL1wY7bQ5oD: Level 40: Destroy one property of a person, such as their weight or solidity
+        }
+    }
+
+    # --- Perdo Corpus Spells ---
+
+    #ARMDBMtO2vI8gM0xZ6cR4pE ^"Touch of the Goose Feather" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +2 Voice"
+        }
+        RULES {
+            #ARMDBNuP1wJ7hN9yA5dS3qF: The target lets out a loud sneeze; spellcasters who sneeze must make Intelligence + Concentration stress rolls against Ease Factor 12 to maintain concentration; others get -1 on most activities at the moment of the sneeze
+        }
+    }
+
+    #ARMDBOvQ0xK6iO8zB4eT2rG ^"Dust to Dust" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +2 Voice"
+        }
+        RULES {
+            #ARMDBPwR9yL5jP7aC3fU1sH: Turns a dead body or mindless undead body to dust in two rounds; does not affect undead possessed by spirits; to do this to an animal corpse requires a Perdo Animal spell
+        }
+    }
+
+    #ARMDBQxS8zM4kQ6bD2gV0tI ^"The Wound that Weeps" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +2 Voice"
+        }
+        RULES {
+            #ARMDBRyT7aN3lR5cE1hW9uJ: When casting this spell you point at the victim and a large wound opens on his or her body; the wound is not deep but bleeds profusely; this is only a Light Wound, but it looks bad
+        }
+    }
+
+    #ARMDBSzU6bO2mS4dF0iX8vK ^"Invocation of Weariness" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice"
+        }
+        RULES {
+            #ARMDBTaV5cP1nT3eG9jY7wL: The target loses a Fatigue level; the phrases used with this spell are usually singsong melodies which lull the victim into drowsiness
+        }
+    }
+
+    #ARMDBUbW4dQ0oU2fH8kZ6xM ^"Incantation of the Milky Eyes" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +2 Voice, -1 (as per source adjustment)"
+        }
+        RULES {
+            #ARMDBVcX3eR9pV1gI7lA5yN: Blinds a target, leaving the eyes milky with cataracts; this heals as a Medium Wound
+        }
+    }
+
+    #ARMDBWdY2fS8qW0hJ6mB4zO ^"Twist of the Tongue" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +2 Voice, +1 Part"
+        }
+        RULES {
+            #ARMDBXeZ1gT7rX9iK5nC3aP: Twists the target's tongue into a spiral, completely destroying the ability to speak; a grave offense to a magus; the damage heals as a Medium Wound
+        }
+    }
+
+    #ARMDBYfA0hU6sY8jL4oD2bQ ^"Bane of the Decrepit Body" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +2 Voice"
+        }
+        RULES {
+            #ARMDBZgB9iV5tZ7kM3pE1cR: The target ages 5 years; determine effects normally; this spell does not work on children younger than age 16
+        }
+    }
+
+    #ARMDC0hC8jW4uA6lN2qF0dS ^"Curse of the Leprous Flesh" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 20, +1 Touch"
+        }
+        RULES {
+            #ARMDC1iD7kX3vB5mO1rG9eT: Inflicts leprosy on the target, causing flesh to rot off in weeks; the target takes an Incapacitating Wound and must roll to recover; the target also loses a point of Stamina by the time the disease ends; if the victim succeeds a Stamina roll against EF 6 when the spell is cast, he shakes off the disease (though feels unwell for a few days)
+        }
+    }
+
+    #ARMDC2jE6lY2wC4nP0sH8fU ^"Grip of the Choking Hand" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDC3kF5mZ1xD3oQ9tI7gV: The target feels an invisible strangling hand on the throat; each round the target loses a Fatigue level; once the target falls unconscious the spell has no further effect; the spell works by seriously constricting the target's windpipe
+        }
+    }
+
+    #ARMDC4lG4nA0yE2pR8uJ6hW ^"Clenching Grasp of the Crushed Heart" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 30, +2 Voice"
+        }
+        RULES {
+            #ARMDC5mH3oB9zF1qS7vK5iX: When casting this spell you make a clenching motion with your hand; the victim doubles over and dies at once
+        }
+    }
+
+    #ARMDC6nI2pC8aG0rT6wL4jY ^"The Kiss of Death" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 30, +1 Touch, +2 for no words"
+        }
+        RULES {
+            #ARMDC7oJ1qD7bH9sU5xM3kZ: The person you kiss dies a sudden death; the only mark on the corpse is the black imprint of your lips; you do not need to speak when casting this spell and thus gain no penalty from silence (this is why the spell is higher level than the guidelines would indicate)
+        }
+    }
+
+    #ARMDC8pK0rE6cI8tV4yN2lA ^"Curse of the Unportended Plague" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 55
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 20, +3 Sight, +4 Bound"
+        }
+        RULES {
+            #ARMDC9qL9sF5dJ7uW3zO1mB: Starts a plague in a city or other Boundary; everyone within the boundary is afflicted with the disease when the ritual is complete, suffering as described under Curse of the Leprous Flesh; the conditions causing the disease last but a moment, so people entering the area after the spell is cast are safe; using or even transcribing this spell is rigorously discouraged by most of the Order of Hermes
+        }
+    }
+
+    # ===========================
+    # REGO CORPUS
+    # ===========================
+
+    #ARMDCArM8tG4eK6vX2aP0nC ^"Rego Corpus Guidelines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Guideline"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+        }
+        RULES {
+            #ARMDCBsN7uH3fL5wY1bQ9oD: General: Ward against creatures associated with Corpus from one realm (Divine, Faerie, Infernal, or Magic) with a Might less than or equal to the level of the spell (Touch, Ring, Circle); Hermetic magi have no Might and are not affected
+            #ARMDCCtO6vI2gM4xZ0cR8pE: Level 2: Make a target lose control of a body part
+            #ARMDCDuP5wJ1hN3yA9dS7qF: Level 3: Move a target slowly in one direction, as long as the surface can support its weight
+            #ARMDCEvQ4xK0iO2zB8eT6rG: Level 3: Invoke a minor symptom of a disease without creating any underlying malaise (e.g. rash, mild fever, cough)
+            #ARMDCFwR3yL9jP1aC7fU5sH: Level 4: Control the large-scale physical movements of a target
+            #ARMDCGxS2zM8kQ0bD6gV4tI: Level 4: Move a target slowly in any direction you please
+            #ARMDCHyT1aN7lR9cE5hW3uJ: Level 4: Move a target slowly straight up, or in one direction over surfaces that cannot support it
+            #ARMDCIzU0bO6mS8dF4iX2vK: Level 5: Hold a target's body motionless
+            #ARMDCJaV9cP5nT7eG3jY1wL: Level 5: Invoke a major symptom of a disease without creating any underlying malaise (e.g. vomiting, boils, paralysis)
+            #ARMDCKbW8dQ4oU6fH2kZ0xM: Level 5: Move a target slowly in any direction you please, even if the target is unsupported
+            #ARMDCLcX7eR3pV5gI1lA9yN: Level 5: Perform a trivial surgical procedure (inflicting a Fatigue level)
+            #ARMDCMdY6fS2qW4hJ0mB8zO: Level 5: Control a disembodied spirit associated with Corpus
+            #ARMDCNeZ5gT1rX3iK9nC7aP: Level 10: Control a target's motions
+            #ARMDCOfA4hU0sY2jL8oD6bQ: Level 10: Eliminate the penalties of Fatigue and wounds
+            #ARMDCPgB3iV9tZ1kM7pE5cR: Level 10: Animate a corpse
+            #ARMDCQhC2jW8uA0lN6qF4dS: Level 10: Transport the target instantly up to 5 paces
+            #ARMDCRiD1kX7vB9mO5rG3eT: Level 10: Perform a minor surgical procedure, inflicting a Light Wound or preventing a Light Wound from worsening
+            #ARMDCSjE0lY6wC8nP4sH2fU: Level 15: Direct the flow of bodily energy
+            #ARMDCTkF9mZ5xD7oQ3tI1gV: Level 15: Move a target quickly in any direction you please, even if it is unsupported
+            #ARMDCUlG8nA4yE6pR2uJ0hW: Level 15: Summon a disembodied spirit associated with Corpus
+            #ARMDCVmH7oB3zF5qS1vK9iX: Level 15: Transport the target instantly up to 50 paces
+            #ARMDCWnI6pC2aG4rT0wL8jY: Level 15: Ward a target against other human beings (to ward off a Hermetic magus, the ward must penetrate his Magic Resistance)
+            #ARMDCXoJ5qD1bH3sU9xM7kZ: Level 15: Perform a major surgical procedure, inflicting a Medium Wound or preventing a Medium Wound from worsening
+            #ARMDCYpK4rE0cI2tV8yN6lA: Level 20: Transport the target instantly up to 500 paces
+            #ARMDCZqL3sF9dJ1uW7zO5mB: Level 20: Perform a critical surgical procedure, preventing a Heavy Wound from worsening
+            #ARMDD0rM2tG8eK0vX6aP4nC: Level 25: Transport the target instantly up to one league
+            #ARMDD1sN1uH7fL9wY5bQ3oD: Level 25: Perform a life-saving surgical procedure, preventing an Incapacitating or Fatal Wound from worsening
+            #ARMDD2tO0vI6gM8xZ4cR2pE: Level 30: Transport the target instantly up to seven leagues
+            #ARMDD3uP9wJ5hN7yA3dS1qF: Level 35: Transport the target instantly to a place you have an Arcane Connection to
+        }
+    }
+
+    # --- Rego Corpus Spells ---
+
+    #ARMDD4vQ8xK4iO6zB2eT0rG ^"Curse of the Unruly Tongue" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDD5wR7yL3jP5aC1fU9sH: Causes the target to stutter and slur words; Communication rolls are at -3; spoken spells are at -6 to the spellcasting roll and there is an extra botch die
+        }
+    }
+
+    #ARMDD6xS6zM2kQ4bD0gV8tI ^"Spasms of the Uncontrolled Hand" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 2, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDD7yT5aN1lR3cE9hW7uJ: One of the target's hands spasms, causing him to drop anything he is holding in it; the hand keeps spasming for as long as you concentrate
+        }
+    }
+
+    #ARMDD8zU4bO0mS2dF8iX6vK ^"Rise of the Feathery Body" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Touch, +1 Conc"
+        }
+        RULES {
+            #ARMDD9aV3cP9nT1eG7jY5wL: Allows the target to float vertically to any height, carrying up to 50 pounds, and rising as fast as smoke rises (slower if carrying a heavy load); the target cannot move horizontally through this spell
+        }
+    }
+
+    #ARMDDAbW2dQ8oU0fH6kZ4xM ^"Despair of the Quivering Manacles" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDDBcX1eR7pV9gI5lA3yN: Your target shakes vigorously from side to side without falling; those affected get -3 on rolls requiring physical movement and -1 to most other rolls
+        }
+    }
+
+    #ARMDDCdY0fS6qW8hJ4mB2zO ^"Endurance of the Berserkers" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Conc"
+        }
+        RULES {
+            #ARMDDDeZ9gT5rX7iK3nC1aP: Your body acts as though it were unwounded and unfatigued for as long as you concentrate; keep track of actual Fatigue levels lost while berserk because when the spell wears off you lose those levels; if you run out of Fatigue levels the spell terminates immediately and you fall unconscious; a character under this spell does risk worsening wounds but may not notice
+        }
+    }
+
+    #ARMDDEfA8hU4sY6jL2oD0bQ ^"Gift of the Frog's Legs" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Touch"
+        }
+        RULES {
+            #ARMDDFgB7iV3tZ5kM1pE9cR: Allows the target to leap up to 15 feet vertically or 25 feet horizontally (2 feet less for every Encumbrance point); the person must make a Dexterity - Encumbrance stress roll against EF 0 to land without injury (miss: Light Wound; botch: Medium Wound); the target can only leap once per casting and must leap within ten seconds; a running start does not improve the leap
+        }
+    }
+
+    #ARMDDGhC6jW2uA4lN0qF8dS ^"Lifting the Dangling Puppet" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDDHiD5kX1vB3mO9rG7eT: Lifts a person of Size +1 or less vertically into the air; you can make the target rise or descend as fast as smoke rises, but a heavier person rises more slowly and falls more quickly
+        }
+    }
+
+    #ARMDDIjE4lY0wC2nP8sH6fU ^"The Gift of Vigor" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +1 Touch"
+        }
+        RULES {
+            #ARMDDJkF3mZ9xD1oQ7tI5gV: Transfers bodily energy from you to any target at a lower Fatigue level than you; you assume the target's current Fatigue level and the target assumes your previous level; if you lose a Fatigue level from casting this spell the loss comes after the transfer
+        }
+    }
+
+    #ARMDDKlG2nA8yE0pR6uJ4hW ^"Awaken the Slumbering Corpse" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDDLmH1oB7zF9qS5vK3iX: Causes a corpse to function at your verbal command; commands have to be very simple (like "attack anyone who comes through here"); the corpse used cannot have been buried by Church ceremony
+        }
+    }
+
+    #ARMDDMnI0pC6aG8rT4wL2jY ^"Strings of the Unwilling Marionette" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMDDNoJ9qD5bH7sU3xM1kZ: You can control the physical movements of a person such as walking, standing, and turning; if the target resists the movements are jerky; the target can yell but you can prevent intelligible speech by controlling the target's mouth; the target must be conscious to be moved about
+        }
+    }
+
+    #ARMDDOpK8rE4cI6tV2yN0lA ^"Seven-League Stride" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 30"
+        }
+        RULES {
+            #ARMDDPqL7sF3dJ5uW1zO9mB: Transports you to any place within seven leagues that you can see or that you have an Arcane Connection with; if you fail an Intelligence + Finesse stress roll against EF 9 your arrival goes slightly awry (e.g. you might fall or be facing the wrong way); a botch means you appear in the wrong place, perhaps even in a wall
+        }
+    }
+
+    #ARMDDQrM6tG2eK4vX0aP8nC ^"The Leap of Homecoming" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 35"
+        }
+        RULES {
+            #ARMDDRsN5uH1fL3wY9bQ7oD: Transports you to any place to which you have an Arcane Connection; most magi use this to return to their laboratories
+        }
+    }
+}

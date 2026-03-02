@@ -1,0 +1,987 @@
+EXTENSION "ARM5e_Spells_Mentem" {
+    NAME "Ars Magica 5th Edition Definitive - Mentem Spells"
+    VERSION "0.1"
+    RELEASE_DATE "2025-06-01"
+    DEPENDS_ON "ARM5e_Core_Magic"
+
+    # Mentem Form spells: affect the human mind (thoughts, emotions, memories).
+    # Basic Individual: one human mind.
+    # Organized by Technique (Creo, Intellego, Muto, Perdo, Rego), then by Level.
+
+    # ===========================
+    # CREO MENTEM GUIDELINES
+    # ===========================
+    # In addition to healing minds, these spells can create thoughts, emotions,
+    # and memories in another person's mind. These creations interact normally
+    # with the target's other thoughts, and may be changed in the process.
+    #
+    # Level 3:  Form words in another's mind.
+    # Level 4:  Put a thought or emotion into another's mind.
+    #           Restore a memory of a brief event to a fresh state, as long as a
+    #           fragment of it remains. The affected memory can be no more
+    #           extensive than a short conversation (two or three rounds).
+    # Level 5:  Create a memory in another's mind.
+    #           Restore a memory of an event to a fresh state, as long as a
+    #           fragment of it remains. The affected memory can be no more
+    #           extensive than about two minutes.
+    # Level 10: Restore a memory of a day's events to a fresh state, as long as
+    #           a fragment of it remains. Events are remembered as if they had
+    #           occurred only an hour before.
+    #           Spark a twinge of conscience in an intelligent being's mind,
+    #           overriding the temporary obsession of a demon.
+    # Level 30: Increase one of a person's mental Characteristics by one point,
+    #           to no more than 0.
+    # Level 35: Increase one of a person's mental Characteristics by one point,
+    #           to no more than +1.
+    # Level 40: Increase one of a person's mental Characteristics by one point,
+    #           to no more than +2.
+    # Level 45: Increase one of a person's mental Characteristics by one point,
+    #           to no more than +3.
+    # Level 50: Increase one of a person's mental Characteristics by one point,
+    #           to no more than +4.
+    # Level 55: Increase one of a person's mental Characteristics by one point,
+    #           to no more than +5.
+
+    # ===========================
+    # CREO MENTEM SPELLS
+    # ===========================
+
+    #ARMF80aB2cD4eF6gH8iJ0k ^"Words of the Unbroken Silence" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +3 Sight"
+        }
+        RULES {
+            #ARMF80a: Lets you say two words directly to the mind of a target
+            #ARMF80b: The target can recognize your voice and knows that the message is of supernatural origin
+        }
+    }
+
+    #ARMF81aB2cD4eF6gH8iJ0k ^"Panic of the Trembling Heart" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF81a: Creates an overpowering fear in one person of a specific object, person, or place
+        }
+    }
+
+    #ARMF82aB2cD4eF6gH8iJ0k ^"Rising Ire" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF82a: Makes the target furious at someone or something of your choice
+            #ARMF82b: A stress roll against an Ease Factor of 9 using an appropriate Personality Trait (like Calm) can hold the anger in check, but it is felt strongly regardless of the roll
+        }
+    }
+
+    #ARMF83aB2cD4eF6gH8iJ0k ^"Memory of the Distant Dream" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF83a: Inserts a full and complete memory into a person's mind
+            #ARMF83b: If the target gives the memory some thought and concentration, and makes an Intelligence roll against an Ease Factor of 9, the memory is revealed as false
+            #ARMF83c: When the duration expires, the memory vanishes, although the subject may remember remembering it
+        }
+    }
+
+    #ARMF84aB2cD4eF6gH8iJ0k ^"Pains of the Perpetual Worry" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +3 Moon"
+        }
+        RULES {
+            #ARMF84a: Gives someone a nagging, taunting, painful emotion -- a recurrent sense of anxiety, a fear of something he or she does not know, a fear of everything, and a fear of nothing
+            #ARMF84b: To have this spell cast on you is truly a curse
+        }
+    }
+
+    #ARMF85aB2cD4eF6gH8iJ0k ^"Weight of a Thousand Hells" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +3 Moon, +1 complex effect"
+        }
+        RULES {
+            #ARMF85a: Causes the victim to feel the despair, anguish, pain, and sorrow of a thousand sinners in Hell
+            #ARMF85b: The victim loses almost all motivation and earthly cares; all he can feel is his own pain -- endless, inexorable, and searing
+            #ARMF85c: Appropriate Personality Trait rolls suffer a harmful adjustment of -5, and the target suffers -2 on any rolls that require thought or concentration
+            #ARMF85d: The target has a strong tendency to do nothing but brood
+        }
+    }
+
+    #ARMF86aB2cD4eF6gH8iJ0k ^"Gift of Reason" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 30, +1 Touch"
+        }
+        RULES {
+            #ARMF86a: Permanently increases the target's Intelligence by 1 point, to no higher than 0
+        }
+    }
+
+    # ===========================
+    # INTELLEGO MENTEM GUIDELINES
+    # ===========================
+    # These spells are superb for cutting through the confusion of social
+    # interaction and the endless banter of the rabble. The InAn spells that
+    # deal with the mind may also be used for ideas and guidelines for this
+    # section.
+    #
+    # Note that writing does not contain any information of itself, and is
+    # generally Animal and Herbam or Terram, for the materials, not Mentem.
+    # To translate writing, you need someone who can read it, although you
+    # could read the translation from their mind.
+    #
+    # In general, a momentary Mentem spell can answer a single question,
+    # although it is not necessary that the answer be expressible in a brief
+    # form.
+    #
+    # Level 4:  Sense the state of consciousness of one intelligent being
+    #           (for example, asleep, awake, meditating, dead, drugged, insane,
+    #           or comatose).
+    # Level 5:  Sense a single emotion in a being.
+    #           Understand the meaning behind spoken sounds.
+    # Level 10: Sense all of the emotions in a being.
+    #           Discover the truth of a statement.
+    # Level 15: Speak with any one human.
+    #           Read a person's surface thoughts.
+    #           Pick a single answer from the mind of a target.
+    # Level 20: Read the last day's memories from one person.
+    # Level 25: Learn all the information you wish from a person's mind.
+
+    # ===========================
+    # INTELLEGO MENTEM SPELLS
+    # ===========================
+
+    #ARMF87aB2cD4eF6gH8iJ0k ^"Sight of the Transparent Motive" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Eye"
+        }
+        RULES {
+            #ARMF87a: Detects the general motive most powerfully influencing the target at the moment
+            #ARMF87b: General motives are such things as fear, anger, and greed, not specific things like the desire to look good before one's superiors
+        }
+    }
+
+    #ARMF88aB2cD4eF6gH8iJ0k ^"Perception of the Conflicting Motives" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Eye"
+        }
+        RULES {
+            #ARMF88a: You can detect the conflicting motives behind one target's actions
+            #ARMF88b: You might learn that a guard feels conflict between fear and duty
+            #ARMF88c: This spell is often used before application of a Muto or Rego spell, since it is usually easier to change a target's emotions after you've sensed them than it is to create emotions
+        }
+    }
+
+    #ARMF89aB2cD4eF6gH8iJ0k ^"Frosty Breath of the Spoken Lie" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Eye, +1 Conc, mist is a purely cosmetic effect and thus is free"
+        }
+        RULES {
+            #ARMF89a: For as long as you maintain this spell, the target exhales a misty breath with each spoken lie
+            #ARMF89b: Small bits of ice form on the person's lips if the lie is particularly severe
+            #ARMF89c: In winter, when breath is visible anyway, lies produce a greater than normal amount of mist
+            #ARMF89d: A target who makes a Communication + Guile stress roll against an Ease Factor of 15 can determine whether any given statement will be taken by the spell as a lie
+            #ARMF89e: The spell can be defeated through extensive Auram and Perdo Auram spells, and a demon is able to manipulate it in any way it wishes, as demons are the embodiment of deception and are never caught in a lie if they do not wish to be
+            #ARMF89f: House Guernicus brought the Order this spell, and it is a very poor Quaesitor who is without it
+        }
+    }
+
+    #ARMF8AaB2cD4eF6gH8iJ0k ^"Posing the Silent Question" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +1 Eye"
+        }
+        RULES {
+            #ARMF8Aa: You can ask one silent mental question of the target, then detect the answer
+            #ARMF8Ab: The truth of the answer is limited by the knowledge of the target
+            #ARMF8Ac: Questions to the effect of "What would you do if...?" often receive inaccurate replies; you are likely to get what the target thinks he would do, not necessarily what he would really do
+            #ARMF8Ad: The target of this spell does not notice the questioning unless he or she resists the spell, in which case they notice the attempt
+        }
+    }
+
+    #ARMF8BaB2cD4eF6gH8iJ0k ^"Thoughts Within Babble" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Hearing"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Conc, +3 Hearing"
+        }
+        RULES {
+            #ARMF8Ba: You can understand the speech of those within the target area
+            #ARMF8Bb: Perception or Communication stress rolls are needed for difficult exchanges
+            #ARMF8Bc: You also understand people who misuse a language that you do speak; you know what they meant to say, as well as hearing what they actually said
+        }
+    }
+
+    #ARMF8CaB2cD4eF6gH8iJ0k ^"Peering into the Mortal Mind" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 25, +1 Eye"
+        }
+        RULES {
+            #ARMF8Ca: You can thoroughly probe and understand the contents of the mind of the target, including his or her immediate and long-term motives, personal strengths and weaknesses, and other pertinent information
+        }
+    }
+
+    # ===========================
+    # MUTO MENTEM GUIDELINES
+    # ===========================
+    # Muto Mentem spells give a mind properties it could not naturally acquire.
+    # These fall into three main categories:
+    # First, changing memories. While memories may decay over time, they do not
+    # naturally change radically, so making them do so is Muto.
+    # Second, emotions and thoughts that people cannot normally feel. This
+    # includes the thoughts of animals and similar.
+    # Third, non-mental properties. This covers making a mind physical, and is
+    # very difficult.
+    #
+    # While Intellego spells can grant magical senses to a single person,
+    # granting a magical sense to multiple people is a function of Muto Mentem.
+    # The base level is one magnitude higher than the level of an Intellego
+    # spell to grant that sense at a Range of Personal and Duration of
+    # Momentary, and the Muto Mentem spell has requisites of Intellego and the
+    # appropriate Form or Forms.
+    #
+    # Level 1:  Make a minor change in a person's memory of an event.
+    # Level 2:  Make a major change to a person's memory of an event.
+    # Level 3:  Make a major change to a person's memory of a series of events.
+    #           Make a major change to a person's emotion.
+    # Level 4:  Make major changes to a person's memory of a period of their
+    #           life. Completely change a person's emotions.
+    # Level 5:  Turn a single memory or emotion into a solid object (Requisite
+    #           of the Form of the shape). The person whose memory or emotion
+    #           was transformed must be touching the item to feel the emotion
+    #           or recall the memory. Other people touching the object do not
+    #           experience its mental aspects.
+    # Level 10: Completely rewrite a person's memories.
+    # Level 15: Make a mind or spirit visible (Imaginem requisite).
+    #           Utterly change a person's mind.
+    # Level 25: Make a mind or spirit solid (Requisite of the Form of the shape).
+
+    # ===========================
+    # MUTO MENTEM SPELLS
+    # ===========================
+
+    #ARMF8DaB2cD4eF6gH8iJ0k ^"Recollection of Memories Never Quite Lived" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 1, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF8Da: Changes the target's memory of a detail into a similar, though different, memory
+            #ARMF8Db: The target is no more sure of this manufactured memory than of the authentic one, so he may discover strange fabrications to be false
+        }
+    }
+
+    #ARMF8EaB2cD4eF6gH8iJ0k ^"Mind of the Beast" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 15, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF8Ea: You turn the mind of the target into that of an animal of your choice
+            #ARMF8Eb: The victim acts and thinks like that animal as much as possible; a person who thinks he is a bird will try to fly, but will not be able to
+        }
+    }
+
+    #ARMF8FaB2cD4eF6gH8iJ0k ^"Past of Another" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 10, +1 Eye, +4 Year"
+        }
+        RULES {
+            #ARMF8Fa: The target's memories are completely rewritten, and he is unable to remember his actual life until the effect is dispelled or expires
+        }
+    }
+
+    #ARMF90aB2cD4eF6gH8iJ0k ^"Inmost Companion" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Animal"
+            ^"Design" TEXT "Base 25, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF90a: The target's mind is made physical as a bird
+            #ARMF90b: This bird normally stays close to the target's body; if the target has Magic Resistance, it protects both his body and mind, as normal
+            #ARMF90c: No matter how far it travels, the target's mind controls his body, as well as the bird's, as normal; in particular, it can see through both sets of sense organs
+            #ARMF90d: If the bird is killed, the target also dies, as his mind has been killed
+        }
+    }
+
+    #ARMF91aB2cD4eF6gH8iJ0k ^"Vision of the Haunting Spirits" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Room"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" TEXT "Imaginem"
+            ^"Design" TEXT "Base 15, +1 Touch, +2 Sun, +2 Room"
+        }
+        RULES {
+            #ARMF91a: All spirits within the target area become visible, although they might remain unseen if hiding behind something
+            #ARMF91b: This includes the spirits of living people, which appear as the person normally does
+            #ARMF91c: If the person is invisible or otherwise changed from his normal shape, his normal appearance is superimposed on his current appearance
+        }
+    }
+
+    # ===========================
+    # PERDO MENTEM GUIDELINES
+    # ===========================
+    # Emotions naturally reappear in a person, so spells that destroy them must
+    # have a continuing duration to ensure that they do not come back. Memories
+    # do not naturally return, so Momentary Duration spells remove them forever,
+    # although a person could be told what he had forgotten, or reconstruct the
+    # memory from things he does remember. A continuing spell would prevent a
+    # person from relearning that information, however.
+    #
+    # Level 3:  Remove a minor detail from a person's memory.
+    # Level 4:  Remove an important detail from a person's memory.
+    #           Diminish a single mental capability in a person.
+    #           Reduce the intensity of all of a person's emotions.
+    # Level 5:  Quell an emotion in a person.
+    # Level 10: Remove a minor or short memory from a person's mind.
+    #           Reduce all of a person's mental capabilities.
+    # Level 15: Remove a major or long memory from a person's mind.
+    #           Remove all emotions from a person.
+    #           Drive a person insane.
+    # Level 25: Leave a person a mindless husk.
+
+    # ===========================
+    # PERDO MENTEM SPELLS
+    # ===========================
+
+    #ARMF92aB2cD4eF6gH8iJ0k ^"Lay to Rest the Haunting Spirit" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 0
+            ^"Level_Type" ENUM ["General"]
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base effect"
+        }
+        RULES {
+            #ARMF92a: If your spell Penetrates the resistance of a ghost or similar spirit, it loses a number of points from its Might equal to the level of this spell
+            #ARMF92b: If this reduces the spirit's Might to zero, it vanishes, apparently destroyed
+            #ARMF92c: Philosophers concur that the spirit goes to the afterlife, or is perhaps weakened to helplessness, but is not actually destroyed; souls, after all, are immortal
+        }
+    }
+
+    #ARMF93aB2cD4eF6gH8iJ0k ^"Tip of the Tongue" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 3, +1 Eye, +1 Diam"
+        }
+        RULES {
+            #ARMF93a: Causes the target to forget one word of your choosing
+            #ARMF93b: The target cannot remember that word for the spell's duration, but afterwards he can come up with the word without assistance by making an Intelligence + Concentration stress roll against an Ease Factor of 9
+            #ARMF93c: If the target fails he may try again, but each additional roll adds +1 to the difficulty
+        }
+    }
+
+    #ARMF94aB2cD4eF6gH8iJ0k ^"Trust of Childlike Faith" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +1 Diam"
+        }
+        RULES {
+            #ARMF94a: The target loses judgment and believes almost any passable lie for the duration of the spell
+            #ARMF94b: An Intelligence stress roll against an Ease Factor of 6 is allowed to resist
+            #ARMF94c: Truly incredible lies allow easier resistance rolls
+        }
+    }
+
+    #ARMF95aB2cD4eF6gH8iJ0k ^"Calm the Motion of the Heart" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +2 Voice"
+        }
+        RULES {
+            #ARMF95a: Removes one emotion from the target until it appears again naturally
+            #ARMF95b: An angry person stops being angry, and a curious one stops being inquisitive
+            #ARMF95c: Many a magus finds this spell useful for keeping his apprentice's nose out of his immediate business
+        }
+    }
+
+    #ARMF96aB2cD4eF6gH8iJ0k ^"Enchantment of Detachment" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF96a: Calms and greatly lowers the intensity of the target's current emotions
+        }
+    }
+
+    #ARMF97aB2cD4eF6gH8iJ0k ^"Loss of But a Moment's Memory" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Eye"
+        }
+        RULES {
+            #ARMF97a: Removes up to five continuous minutes from a target's memory, leaving a blank
+            #ARMF97b: You target the loss of memory to a specific event or time
+            #ARMF97c: With an Intelligence stress roll against an Ease Factor of 9, the target realizes that memories of a certain period are missing; this Ease Factor can change, depending on how important the missing memory is and what sort of circumstances surrounded the event
+            #ARMF97d: Careful introspection over a period of time can allow reconstruction of much of the memory, but some details are lost forever
+        }
+    }
+
+    #ARMF98aB2cD4eF6gH8iJ0k ^"Blessing of Childlike Bliss" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMF98a: Reduces an adult mind to a child's level
+            #ARMF98b: The target solves problems, reasons, and expresses emotions as would a three-year-old
+            #ARMF98c: Magi affected cannot cast spells
+            #ARMF98d: At first, anyway, the target is likely to be happy at having lost a world of cares and troubles that are no longer imaginable
+        }
+    }
+
+    #ARMF99aB2cD4eF6gH8iJ0k ^"Passion's Lost Feeling" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +1 Eye, +1 Conc"
+        }
+        RULES {
+            #ARMF99a: The target is unable to feel any sort of emotion and acts listlessly, without motivation or cares
+        }
+    }
+
+    #ARMF9AaB2cD4eF6gH8iJ0k ^"Black Whisper" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 15, +1 Touch, +3 Moon, +1 for not needing to gesture"
+        }
+        RULES {
+            #ARMF9Aa: You whisper a magic sentence in the target's ear; it takes several seconds to speak the sentence, so an unwilling, able-bodied target can stop you
+            #ARMF9Ab: If you speak the whole sentence, the target must make a Stamina stress roll against an Ease Factor of 15 or go completely insane
+            #ARMF9Ac: You need not use your hands for this spell, but you must be able to speak
+        }
+    }
+
+    #ARMF9BaB2cD4eF6gH8iJ0k ^"Poisoning the Will" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 65
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 4, +1 Touch, +3 Moon, +4 Bound, +5 size"
+        }
+        RULES {
+            #ARMF9Ba: You curse a place, be it a valley, town, city, or covenant; the curse gradually saps the will and vitality from the people there
+            #ARMF9Bb: They become less energetic, and slowly stop caring about the place, what happens there, other people, and finally themselves
+            #ARMF9Bc: Colors seem more drab and the days longer, and there is an all-pervading sense of boredom and lassitude
+            #ARMF9Bd: Strong-willed individuals and those with strong Personality Traits are less affected, but still suffer to an extent
+            #ARMF9Be: All Personality Trait rolls while in the area suffer a -3 modifier
+            #ARMF9Bf: This spell affects only those who are within the cursed area, including visitors to it; those who leave the area are overwhelmed by the return of their vigor and sense of purpose
+        }
+    }
+
+    # ===========================
+    # REGO MENTEM GUIDELINES
+    # ===========================
+    # The Rego Animal spells that deal with the mind may also be used as good
+    # guidelines for levels of Rego Mentem spells. Many changes to the mind
+    # are Rego effects, because the mind could naturally assume that state.
+    #
+    # General: Ward against beings associated with Mentem from one supernatural
+    #          realm (Divine, Faerie, Infernal, or Magic) with Might less than
+    #          or equal to the level of the spell. (Touch, Ring, Circle)
+    #          Ward against spirits belonging to one realm (Divine, Faerie,
+    #          Infernal, or Magic) with a Might less than or equal to the level
+    #          of the spell. (Touch, Ring, Circle)
+    # Level 3:  Make a subtle difference to the target's mental state.
+    # Level 4:  Control a target's mental state (for example, awake, asleep,
+    #           or confused).
+    # Level 5:  Control a natural emotion (for example, calm, fear). The target
+    #           must feel the emotion before you can control it.
+    #           Control a disembodied spirit associated with Mentem, such as
+    #           most ghosts.
+    #           Incline a person to a particular sort of response.
+    # Level 10: Control an unnatural emotion (for example, cultivate a person's
+    #           feelings of bravery where he is usually cowardly).
+    #           Imbue all of a person's responses with a particular emotion.
+    # Level 15: Control a person as long as you can see them.
+    #           Summon a disembodied spirit associated with Mentem, such as
+    #           a ghost.
+    # Level 20: Give a person one complex command, which he tries to carry out
+    #           to the best of his ability.
+    # Level 25: Completely control a person's mind and emotions.
+
+    # ===========================
+    # REGO MENTEM SPELLS
+    # ===========================
+
+    #ARMF9CaB2cD4eF6gH8iJ0k ^"Ring of Warding Against Spirits" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 0
+            ^"Level_Type" ENUM ["General"]
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base effect"
+        }
+        RULES {
+            #ARMF9Ca: Only ghosts and spirits with current Magic Might higher than the spell's level can enter the ring you create
+            #ARMF9Cb: At certain angles, the ring may be seen as an orange-hued dome
+            #ARMF9Cc: This spell does not affect ghosts or spirits associated with the other realms
+        }
+    }
+
+    #ARMF9DaB2cD4eF6gH8iJ0k ^"The Call to Slumber" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice"
+        }
+        RULES {
+            #ARMF9Da: The target becomes sleepy and falls asleep within a few seconds
+        }
+    }
+
+    #ARMF9EaB2cD4eF6gH8iJ0k ^"Snap of Awakening" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice"
+        }
+        RULES {
+            #ARMF9Ea: When you snap your fingers you instantly awaken the target from sleep to alert consciousness
+            #ARMF9Eb: Does not work on someone unconscious from Fatigue-level loss, wounds, or magic
+        }
+    }
+
+    #ARMF9FaB2cD4eF6gH8iJ0k ^"Confusion of the Numbed Will" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMFA0a: Confuses a person, who must make an Intelligence stress roll to take any direct action
+            #ARMFA0b: A roll of 12+ ends the spell, while a roll of 9+ lets the character take the intended action, but the spell remains in effect
+            #ARMFA0c: Any lower roll means the character is confused and takes some other type of action
+            #ARMFA0d: When it is imperative for the victim to take an action, the storyguide should allow an appropriate modifier to the roll
+            #ARMFA0e: While under this spell, a character always strikes last in combat and gets at least a -1 on all attacking and defending rolls
+        }
+    }
+
+    #ARMFA1aB2cD4eF6gH8iJ0k ^"Aura of Rightful Authority" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMFA1a: The target of the spell is strongly inclined to obey you, as if you were his natural superior
+        }
+    }
+
+    #ARMFA2aB2cD4eF6gH8iJ0k ^"Coerce the Spirits of the Night" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 5, +2 Voice, +1 Conc"
+        }
+        RULES {
+            #ARMFA2a: Makes a ghost obey you as long as you can coerce it with threats, such as a threat to defile its grave or to banish it to Hell
+            #ARMFA2b: The more lurid and dramatic the threat, the more cooperative the ghost is
+            #ARMFA2c: If the spell penetrates the ghost's Magic Resistance, roll Communication + Leadership to see how effective your threats are
+            #ARMFA2d: The storyguide should always give a bonus or penalty that depends on the potency of the threat, and any roll other than a botch will compel at least minimal obedience
+        }
+    }
+
+    #ARMFA3aB2cD4eF6gH8iJ0k ^"Scent of Peaceful Slumber" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Room"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 4, +2 Voice, +2 Room"
+        }
+        RULES {
+            #ARMFA3a: Everyone in the room falls asleep over a few seconds, with the smell of lilacs in their nostrils
+        }
+    }
+
+    #ARMFA4aB2cD4eF6gH8iJ0k ^"Visions of the Infernal Terrors" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 10, +2 Voice, +2 Sun"
+        }
+        RULES {
+            #ARMFA4a: Causes everything the target sees to look and sound terrifying; the world looks basically the same, save that everything is hideously transformed somehow
+            #ARMFA4b: The target must roll a stress die, adding his Stamina and adding or subtracting an appropriate Personality Trait to see what the effects are
+            #ARMFA4c: A Trait like Brave makes you resistant to fear, while one like Cowardly reduces the result of your roll
+            #ARMFA4d: Roll 0 or less -- Scared to death (literally)
+            #ARMFA4e: Roll 1-5 -- Incapacitated with fear, permanent -1 to Stamina
+            #ARMFA4f: Roll 6-9 -- Incapacitated with fear
+            #ARMFA4g: Roll 10-15 -- Flee, fight at -6 if cornered or obstructed
+            #ARMFA4h: Roll 16+ -- Carry on, -3 on all rolls
+        }
+    }
+
+    #ARMFA5aB2cD4eF6gH8iJ0k ^"Enslave the Mortal Mind" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN false
+            ^"Design" TEXT "Base 25, +1 Eye, +2 Sun"
+        }
+        RULES {
+            #ARMFA5a: Enables you to completely control the loyalty, emotions, desires, interests, and activities of any person
+            #ARMFA5b: People revert to normal when the spell ends, and may be extremely angry with the magus
+        }
+    }
+
+    #ARMFA6aB2cD4eF6gH8iJ0k ^"Incantation of Summoning the Dead" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 15, +4 Arc, +1 Conc"
+        }
+        RULES {
+            #ARMFA6a: Calls up a person's ghost; you must be on the spot where the person died, or must have the corpse (either of these constitutes an Arcane Connection)
+            #ARMFA6b: Alternatively, you can summon any ghost that haunts the area you are in, if you know the ghost's full name, according to the Law of Names
+            #ARMFA6c: Those buried by Church ceremony and those who have gone straight to heaven (that is, saints and crusaders, as opposed to the normal folk who must wait for a time before going on) are not available for summoning
+            #ARMFA6d: This spell is a ritual because it can summon those who are beyond the mortal world, as long as they are not in heaven
+            #ARMFA6e: If the ghost has Magic Resistance, you must penetrate that resistance in order to summon it
+        }
+    }
+
+    #ARMFA7aB2cD4eF6gH8iJ0k ^"The Shrouded Glen" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 3, +1 Touch, +4 Year, +4 Bound"
+        }
+        RULES {
+            #ARMFA7a: Enchants the Boundary in which the ritual is cast so that anyone moving through it is subtly diverted, effectively keeping some place within it from being discovered accidentally
+            #ARMFA7b: Anyone not actively searching for the hidden place never finds it
+            #ARMFA7c: Those actively searching can find the place by making a Perception stress roll against an Ease Factor of 12 (allowed once per day)
+            #ARMFA7d: If the surrounding terrain is more difficult to search than the average forest, the Ease Factor increases; likewise, the Ease Factor drops if the terrain is more open than a forest, and completely open terrain is unsuitable for this spell
+            #ARMFA7e: Once a searcher spots the hidden place, the spell does not prevent approach
+            #ARMFA7f: Those who are present for the ritual are unaffected by the spell; this spell mimics the properties of many faerie forests
+        }
+    }
+
+    #ARMFA8aB2cD4eF6gH8iJ0k ^"Exchange of the Two Minds" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Type" ENUM ["Spell"]
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 55
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" TEXT "Base 20, +1 Touch, +4 Year, +2 Group"
+        }
+        RULES {
+            #ARMFA8a: This spell switches the minds (but not the souls) of two creatures
+            #ARMFA8b: A new body greatly confuses those who are unprepared for the shock, and even those who are ready take a day to adjust completely
+            #ARMFA8c: Magi who transport their own minds into younger, healthier bodies usually find that having a strong body entails having powerful passions that interfere with the clear thinking needed to pursue the magical Arts
+            #ARMFA8d: Both people involved must make a Stamina stress roll against an Ease Factor of 3, rolled before the switch is made, to survive the transfer
+            #ARMFA8e: If only one person fails the roll, that person dies and the spell fails; the other target is unaffected
+        }
+    }
+}

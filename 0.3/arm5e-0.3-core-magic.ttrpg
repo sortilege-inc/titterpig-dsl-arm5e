@@ -1,0 +1,436 @@
+BASE "ARM5e_Core_Magic" {
+    NAME "Ars Magica 5th Edition Definitive - Hermetic Magic"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-02"
+
+    # Hermetic Arts, spell parameters, casting totals, Penetration,
+    # Magic Resistance, Parma Magica, Laboratory activities,
+    # Certamen, Twilight.
+
+    # ===========================
+    # THE HERMETIC ARTS
+    # ===========================
+
+    #ARM5M001aB2cD4eF6gH8iJ0k ^"Hermetic Art" DEF {
+        APPLIES TO [^"Magus"]
+
+        # All Hermetic Arts share this base structure.
+        # XP cost: new_score x (new_score + 1) / 2
+
+        PROPERTIES {
+            ^"Art Name" STRING REQUIRED
+            ^"Abbreviation" STRING
+            ^"Art Type" ENUM ["Technique", "Form"]
+            ^"Score" INTEGER MIN 0 DEFAULT 0
+            ^"Experience Points" INTEGER MIN 0 DEFAULT 0
+        }
+
+        RULES {
+            #ARM5M002mN3oP5qR7sT9uV1w: ART_XP_COST = ^"Score" x (^"Score" + 1) / 2
+        }
+    }
+
+    # --- TECHNIQUES (5) ---
+
+    #ARM5M003yZ4aB6cD8eF0gH2i ^"Creo" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Technique"]
+            ^"Abbreviation" STRING "Cr"
+        }
+        DESCRIPTION """I create. Creates things or makes them better examples of their kind.
+Includes creation and healing. Natural things created are perfect unless
+magus intends otherwise. Artificial things require Finesse roll."""
+    }
+
+    #ARM5M004kL5mN7oP9qR1sT3u ^"Intellego" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Technique"]
+            ^"Abbreviation" STRING "In"
+        }
+        DESCRIPTION """I perceive. Art of perception. Gathers information directly from forms
+of things. Not deceived by mundane disguises. Provides actual nature,
+not appearance."""
+    }
+
+    #ARM5M005wX6yZ8aB0cD2eF4g ^"Muto" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Technique"]
+            ^"Abbreviation" STRING "Mu"
+        }
+        DESCRIPTION """I transform. Grants or removes properties something cannot naturally
+have. Changes must be maintained; revert when spell ends."""
+    }
+
+    #ARM5M006iJ7kL9mN1oP3qR5s ^"Perdo" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Technique"]
+            ^"Abbreviation" STRING "Pe"
+        }
+        DESCRIPTION """I destroy. Makes things worse examples of their kind. Opposite of Creo.
+Can destroy whole things or aspects of things."""
+    }
+
+    #ARM5M007uV8wX0yZ2aB4cD6e ^"Rego" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Technique"]
+            ^"Abbreviation" STRING "Re"
+        }
+        DESCRIPTION """I control. Changes state of a thing to another state it can naturally have.
+Includes movement, crafting (with Finesse), natural state changes."""
+    }
+
+    # --- FORMS (10) ---
+
+    #ARM5M008gH9iJ1kL3mN5oP7q ^"Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "An"
+            ^"Form Bonus Applies" STRING "Soak vs animal attacks; resist animal poisons"
+        }
+        DESCRIPTION """Concerns animals of all kinds. Cannot affect people. A basic Individual
+for Animal is an animal of about the same size as a pony, Size +1 or lower."""
+    }
+
+    #ARM5M009sT0uV2wX4yZ6aB8c ^"Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Aq"
+            ^"Form Bonus Applies" STRING "Resist drowning/thirst; soak vs water jets"
+        }
+        DESCRIPTION """Concerns water and all liquids, and properties of liquidity."""
+    }
+
+    #ARM5M010eF1gH3iJ5kL7mN9o ^"Auram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Au"
+            ^"Form Bonus Applies" STRING "Resist suffocation; soak vs weather phenomena"
+        }
+        DESCRIPTION """Art of air, wind, and weather. Governs gaseous forms."""
+    }
+
+    #ARM5M011qR2sT4uV6wX8yZ0a ^"Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Co"
+            ^"Form Bonus Applies" STRING "Soak vs unarmed human attacks; resist disease"
+        }
+        DESCRIPTION """Art of human bodies, including dead bodies and human-looking
+magical/faerie creatures. Does not apply to aging rolls."""
+    }
+
+    #ARM5M012bC3dE5fG7hI9jK1l ^"Herbam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "He"
+            ^"Form Bonus Applies" STRING "Soak vs wooden weapons; resist herbal poisons; resist starvation"
+        }
+        DESCRIPTION """Concerns plants, trees, and plant matter including dead wood and linen."""
+    }
+
+    #ARM5M013mN4oP6qR8sT0uV2w ^"Ignem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Ig"
+            ^"Form Bonus Applies" STRING "Soak vs fire and cold"
+        }
+        DESCRIPTION """Concerns fire, heat, and light."""
+    }
+
+    #ARM5M014xY5zA7bC9dE1fG3h ^"Imaginem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Im"
+            ^"Form Bonus Applies" STRING "Resist confusion, deafening, nausea from senses"
+        }
+        DESCRIPTION """Concerns species (sense impressions). Affects how things appear
+to the senses. Cannot create actual solidity."""
+    }
+
+    #ARM5M015iJ6kL8mN0oP2qR4s ^"Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Me"
+            ^"Form Bonus Applies" STRING "Resist mundane persuasion, deception, temptation"
+        }
+        DESCRIPTION """Concerns minds, thoughts, and spirits. Can affect bodies of
+noncorporeal beings (ghosts) maintained by spirit's will."""
+    }
+
+    #ARM5M016uV7wX9yZ1aB3cD5e ^"Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Te"
+            ^"Form Bonus Applies" STRING "Soak vs metal/stone weapons; resist mineral poisons"
+        }
+        DESCRIPTION """Concerns solids, especially earth and stone."""
+    }
+
+    #ARM5M017gH8iJ0kL2mN4oP6q ^"Vim" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Art Type" ENUM ["Form"]
+            ^"Abbreviation" STRING "Vi"
+            ^"Form Bonus Applies" STRING "Resist Twilight; soak vs own spell-casting damage"
+        }
+        DESCRIPTION """Concerns raw magical power. Refines use of magic itself.
+Also affects magical, infernal, divine, and faerie creatures."""
+    }
+
+    # ===========================
+    # FORM BONUS
+    # ===========================
+
+    #ARM5M018sT9uV1wX3yZ5aB7c ^"Form Bonus" DEF {
+        APPLIES TO [^"Magus"]
+        FORMULA "CEILING(Form Score / 5)"
+        RULES {
+            #ARM5M019eF0gH2iJ4kL6mN8o: form_bonus_adds_to_resistance_vs_related_hazards
+            #ARM5M020pQ1rS3tU5vW7xY9z: WHEN [multiple Form Bonuses apply] THEN USE highest only
+        }
+    }
+
+    # ===========================
+    # SPELL PARAMETERS
+    # ===========================
+
+    #ARM5M021aB2cD4eF6gH8iJ0k ^"Spell Parameters" DEF {
+        APPLIES TO [^"Magus"]
+
+        DESCRIPTION """Every Hermetic spell has a Technique, Form, and Level.
+Magnitude = Level / 5 (rounded up). Spells also have Range,
+Duration, and Target. Each step increase in R/D/T adds
+1 magnitude (5 levels) to the spell."""
+
+        RULES {
+            #ARM5M022mN3oP5qR7sT9uV1w: MAGNITUDE = CEILING(Spell_Level / 5)
+            #ARM5M023yZ4aB6cD8eF0gH2i: each_rdt_step_adds_1_magnitude
+        }
+    }
+
+    #ARM5M024kL5mN7oP9qR1sT3u ^"Range" DEF {
+        PROPERTIES {
+            ^"Range Level" ENUM ["Personal", "Touch", "Eye", "Voice", "Sight", "Arcane Connection"]
+        }
+        DESCRIPTION """Personal (+0): caster only. Touch/Eye (+1): must touch or make eye contact.
+Voice (+2): as far as voice carries (~15-50 paces). Sight (+3): anything visible.
+Arcane Connection (+4): requires physical link to target."""
+        RULES {
+            #ARM5M025wX6yZ8aB0cD2eF4g: Personal_plus0_Touch_Eye_plus1_Voice_plus2_Sight_plus3_AC_plus4
+        }
+    }
+
+    #ARM5M026iJ7kL9mN1oP3qR5s ^"Duration" DEF {
+        PROPERTIES {
+            ^"Duration Level" ENUM ["Momentary", "Concentration", "Diameter", "Sun", "Ring", "Moon", "Year"]
+        }
+        DESCRIPTION """Momentary (+0): instant. Concentration/Diameter (+1): maintained or ~2 min.
+Sun/Ring (+2): until sunrise/sunset or until ring broken.
+Moon (+3): until both new and full moon set. Year (+4): requires Ritual."""
+        RULES {
+            #ARM5M027uV8wX0yZ2aB4cD6e: Mom_plus0_Conc_Diam_plus1_Sun_Ring_plus2_Moon_plus3_Year_plus4
+            #ARM5M028gH9iJ1kL3mN5oP7q: year_duration_requires_ritual
+        }
+    }
+
+    #ARM5M029sT0uV2wX4yZ6aB8c ^"Target" DEF {
+        PROPERTIES {
+            ^"Target Level" ENUM ["Individual", "Part", "Circle", "Group", "Room", "Structure", "Boundary"]
+        }
+        DESCRIPTION """Individual (+0): one discrete thing. Part (+1): portion of individual.
+Circle (+0 special): bounded by drawn circle. Group (+2): several targets.
+Room (+2): contents of room. Structure (+3): whole building.
+Boundary (+4): everything within a natural boundary; requires Ritual."""
+        RULES {
+            #ARM5M030eF1gH3iJ5kL7mN9o: Ind_plus0_Part_plus1_Group_plus2_Room_plus2_Struct_plus3_Bound_plus4
+            #ARM5M031qR2sT4uV6wX8yZ0a: boundary_target_requires_ritual
+        }
+    }
+
+    # ===========================
+    # CASTING
+    # ===========================
+
+    #ARM5M032bC3dE5fG7hI9jK1l ^"Formulaic Casting" DEF {
+        APPLIES TO [^"Magus"]
+        FORMULA "Casting Total = Technique + Form + Stamina + Aura Modifier + stress die"
+        DESCRIPTION """The standard way to cast a known spell. If Casting Total >= Spell Level,
+the spell succeeds. Excess generates no additional benefit (unlike
+Spontaneous magic)."""
+        RULES {
+            #ARM5M033mN4oP6qR8sT0uV2w: WHEN [Casting Total >= Spell Level] THEN spell succeeds
+            #ARM5M034xY5zA7bC9dE1fG3h: WHEN [Casting Total < Spell Level] THEN spell fails, lose fatigue
+            #ARM5M035iJ6kL8mN0oP2qR4s: WHEN [Casting Total < Spell Level by 10+] THEN risk of botch
+        }
+    }
+
+    #ARM5M036uV7wX9yZ1aB3cD5e ^"Spontaneous Casting" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """Casting a spell without prior study. Two options:
+Fatiguing: (Technique + Form + Stamina + Aura + stress die) / 2
+Non-fatiguing: (Technique + Form + Stamina + Aura) / 5"""
+        RULES {
+            #ARM5M037gH8iJ0kL2mN4oP6q: fatiguing_spontaneous_divides_total_by_2
+            #ARM5M038sT9uV1wX3yZ5aB7c: non_fatiguing_spontaneous_divides_total_by_5_no_die
+            #ARM5M039eF0gH2iJ4kL6mN8o: fatiguing_spontaneous_costs_one_fatigue_level
+        }
+    }
+
+    #ARM5M040pQ1rS3tU5vW7xY9z ^"Ritual Casting" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """Special spells requiring vis and extended casting time.
+All spells with Year duration, Boundary target, or level > 50
+are Rituals. Uses Artes Liberales and Philosophiae in casting."""
+        RULES {
+            #ARM5M041aB2cD4eF6gH8iJ0k: ritual_requires_vis_pawns_equal_to_magnitude
+            #ARM5M042mN3oP5qR7sT9uV1w: ritual_takes_15_minutes_per_magnitude
+            #ARM5M043yZ4aB6cD8eF0gH2i: ritual_uses_artes_liberales_and_philosophiae
+        }
+    }
+
+    # ===========================
+    # PENETRATION AND RESISTANCE
+    # ===========================
+
+    #ARM5M044kL5mN7oP9qR1sT3u ^"Penetration" DEF {
+        APPLIES TO [^"Magus"]
+        FORMULA "Penetration Total = Casting Total - Spell Level + Penetration Bonus"
+        DESCRIPTION """To affect a target with Magic Resistance, the spell must penetrate.
+Penetration Total must exceed the target's Magic Resistance."""
+        RULES {
+            #ARM5M045wX6yZ8aB0cD2eF4g: penetration_bonus_equals_penetration_ability_times_multiplier
+            #ARM5M046iJ7kL9mN1oP3qR5s: arcane_connection_multiplier_increases_penetration
+        }
+    }
+
+    #ARM5M047uV8wX0yZ2aB4cD6e ^"Magic Resistance" DEF {
+        DESCRIPTION """Protection against magical effects. Provided by Parma Magica
+(for magi) or Might score (for supernatural creatures).
+If Penetration Total <= Magic Resistance, the spell has no effect."""
+        RULES {
+            #ARM5M048gH9iJ1kL3mN5oP7q: parma_magica_provides_magic_resistance
+            #ARM5M049sT0uV2wX4yZ6aB8c: might_score_provides_magic_resistance
+            #ARM5M050eF1gH3iJ5kL7mN9o: magic_resistance_does_not_distinguish_harmful_from_helpful
+        }
+    }
+
+    #ARM5M051qR2sT4uV6wX8yZ0a ^"Parma Magica" DEF {
+        APPLIES TO [^"Magus"]
+        FORMULA "Magic Resistance = Parma Magica Score x 5 + Form Bonus"
+        DESCRIPTION """The Shield of Hermes. A magical defense technique that all
+Hermetic magi must learn. Provides Magic Resistance even
+against magic the magus cannot detect."""
+        RULES {
+            #ARM5M052bC3dE5fG7hI9jK1l: parma_magica_must_be_renewed_at_sunrise_and_sunset
+            #ARM5M053mN4oP6qR8sT0uV2w: can_extend_parma_to_protect_others_at_reduced_effectiveness
+        }
+    }
+
+    # ===========================
+    # LABORATORY ACTIVITIES
+    # ===========================
+
+    #ARM5M054xY5zA7bC9dE1fG3h ^"Laboratory" DEF {
+        APPLIES TO [^"Magus"]
+        FORMULA "Lab Total = Technique + Form + Intelligence + Magic Theory + Aura + Lab Bonuses"
+        DESCRIPTION """Magi perform laboratory activities during seasonal downtime.
+Each activity takes one season. Lab Total determines success and quality."""
+    }
+
+    #ARM5M055iJ6kL8mN0oP2qR4s ^"Invent Spell" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """Inventing a new Formulaic or Ritual spell. Accumulate Lab Total points
+across seasons until the total equals or exceeds the spell level."""
+        RULES {
+            #ARM5M056uV7wX9yZ1aB3cD5e: WHEN [accumulated Lab Total >= spell level] THEN spell is invented
+            #ARM5M057gH8iJ0kL2mN4oP6q: similar_spell_bonus_adds_to_lab_total
+        }
+    }
+
+    #ARM5M058sT9uV1wX3yZ5aB7c ^"Enchant Item" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """Creating a magical item. Lesser enchantments (one season),
+invested items (multiple seasons, multiple effects), and
+talismans (personal invested items)."""
+        RULES {
+            #ARM5M059eF0gH2iJ4kL6mN8o: lesser_enchantment_must_complete_in_one_season
+            #ARM5M060pQ1rS3tU5vW7xY9z: invested_item_requires_preparation_then_instillation
+            #ARM5M061aB2cD4eF6gH8iJ0k: talisman_is_personal_invested_item
+        }
+    }
+
+    #ARM5M062mN3oP5qR7sT9uV1w ^"Longevity Ritual" DEF {
+        APPLIES TO [^"Magus"]
+        FORMULA "Longevity Modifier = Lab Total / 5"
+        DESCRIPTION """A ritual that slows aging. Takes one season to create.
+Adds a modifier to aging rolls. Must be renewed with vis
+if the magus suffers an Aging Crisis."""
+        RULES {
+            #ARM5M063yZ4aB6cD8eF0gH2i: costs_1_pawn_creo_vis_plus_1_per_5_years_of_age
+            #ARM5M064kL5mN7oP9qR1sT3u: broken_by_aging_crisis_must_be_recreated
+            #ARM5M065wX6yZ8aB0cD2eF4g: magus_becomes_sterile_after_first_longevity_ritual
+        }
+    }
+
+    #ARM5M066iJ7kL9mN1oP3qR5s ^"Familiar" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """A magical animal bound to the magus through a three-season process:
+1. Find a suitable magical animal (Magic Might)
+2. Bind the familiar (Lab Total in animal's Form)
+3. Enchant bond powers (Lab Total in relevant Arts)"""
+        RULES {
+            #ARM5M067uV8wX0yZ2aB4cD6e: bond_lab_total_must_exceed_mights_score_times_5
+            #ARM5M068gH9iJ1kL3mN5oP7q: familiar_shares_mental_communication_with_magus
+            #ARM5M069sT0uV2wX4yZ6aB8c: bond_provides_three_cord_scores
+        }
+    }
+
+    # ===========================
+    # CERTAMEN
+    # ===========================
+
+    #ARM5M070eF1gH3iJ5kL7mN9o ^"Certamen" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """The Hermetic wizards' duel. A formal magical contest between two
+magi to settle disputes. Each combatant chooses a Technique; the
+defender chooses the Form. The contest involves alternating
+Attack and Defense rounds using Technique+Form+Stamina+stress die."""
+        RULES {
+            #ARM5M071qR2sT4uV6wX8yZ0a: attacker_chooses_technique_defender_chooses_form
+            #ARM5M072bC3dE5fG7hI9jK1l: loser_falls_unconscious
+            #ARM5M073mN4oP6qR8sT0uV2w: loser_must_abide_by_pre_agreed_terms
+        }
+    }
+
+    # ===========================
+    # TWILIGHT
+    # ===========================
+
+    #ARM5M074xY5zA7bC9dE1fG3h ^"Twilight" DEF {
+        APPLIES TO [^"Magus"]
+        DESCRIPTION """A mystical state entered when a magus botches a spell or accumulates
+too much Warping. The magus enters a trance lasting from minutes to
+years. Upon return, the magus may gain insights or suffer madness."""
+        RULES {
+            #ARM5M075iJ6kL8mN0oP2qR4s: triggered_by_magical_botch_or_warping_threshold
+            #ARM5M076uV7wX9yZ1aB3cD5e: comprehension_roll_determines_outcome
+            #ARM5M077gH8iJ0kL2mN4oP6q: good_outcome_grants_virtue_or_insight
+            #ARM5M078sT9uV1wX3yZ5aB7c: bad_outcome_inflicts_flaw_or_madness
+            #ARM5M079eF0gH2iJ4kL6mN8o: final_twilight_at_warping_10_removes_magus_from_play
+        }
+    }
+}

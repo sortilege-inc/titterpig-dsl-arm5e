@@ -1,0 +1,176 @@
+EXTENSION "ARM5e_Bestiary_Divine" {
+    NAME "Ars Magica 5th Edition Definitive - Divine Creatures"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-02"
+    DEPENDS_ON "ARM5e_Core_Base"
+
+    #ARM5CR058aB2cD4eF6gH8iJ ^"Gabriel, the Archangel of Prophecy" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 100
+            ^"Might Type" ENUM ["Divine"]
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 10
+                ^"Perception" INTEGER 10
+                ^"Presence" INTEGER 10
+                ^"Communication" INTEGER 10
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 8
+                ^"Dexterity" INTEGER 8
+                ^"Quickness" INTEGER 8
+            }
+            ^"Virtues and Flaws" STRING "Good Teacher, Inspirational"
+            ^"Personality Traits" STRING "Compassionate +3, Intellectual +3, Just +3, Love of God +5, Patient +3"
+            ^"Combat" STRING "Fist: Init +8, Attack +19, Defense +19, Damage +8"
+            ^"Soak" STRING "+8
+Fatigue levels: OK, 0/0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Abilities" STRING "Awareness 10 (the uneducated), Charm 10 (pupils), Brawl 10 (fist), Leadership 10 (calling attention), Teaching 15 (Theology), All knowledge at a score of 15"
+            ^"Powers" STRING """Enlighten, variable, Init +0, Mentem: Gabriel can implant any Knowledge into the mind of another, at a cost of 1 Might for every experience point implanted. He may not give any character knowledge that takes their Ability score over 15.
+Spirit Form, 0 points, Init +30, Vim: Gabriel can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically.
+Subtle Form, 0 points, Init +0, Corpus: Gabriel can change his appearance to look like any human being. His statistics do not change."""
+            ^"Vis" STRING "20 pawns of Mentem in head."
+            ^"Appearance" STRING """Gabriel usually takes the form of a compassionate, gentle man, sometimes with wings growing from his shoulders or arms.
+More approachable and intellectually-minded than his fellows, the Archangel Gabriel (Jibril or Jabra'il in Islam) is the chief messenger of God, best known for his teaching of the prophet Daniel, his announcing of the incarnation of Christ to the Virgin Mary and his bringing of the revelation of the Qur'an to Muhammad, for whom he also acted as a constant counsellor. He may be encountered by characters who are seeking wisdom, particularly if this wisdom is of a religious nature. He is most likely to be encountered in the form described here; in his natural form he is a 600-winged figure who is large enough to stand astride the horizon.
+Kolazonta, the Chastiser
+…our father Aaron, armed with the censer, ran through the multitude of the people and conquered the fiery angel…"""
+        }
+    }
+
+    #ARM5CR059aB2cD4eF6gH8iJ ^"Kolazonta, the Chastiser" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 30
+            ^"Might Type" ENUM ["Divine"]
+            ^"Form" STRING "Ignem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" STRING "Greater Immunity (Fire)"
+            ^"Personality Traits" STRING "Love of God +5, Grim +4, Remorseless +3"
+            ^"Combat" STRING """Flaming Fist*: Init +1, Attack +6, Defense +6, Damage +7
+* This fire is natural and ignores Magic Resistance, although not Soak from Arts."""
+            ^"Soak" STRING "+5
+Fatigue levels: OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Abilities" STRING "Brawl 4 (fists), Dominion Lore 6 (angels), Theology 6 (sin)"
+            ^"Powers" STRING """Chastise the Sinful, 5 points, +1, Corpus: As Curse of the Unportended Plague.
+Cloud form, 0 points, +30, Auram: Can take on the form of a cloud at will, making him immune to all physical attacks (although he may be targeted by Auram spells).
+Fiery Form, 0 points, +30, Ignem: May become a fiery man at will, doing +5 damage to anyone that approaches within 5 feet."""
+            ^"Vis" STRING "4 pawns Corpus throughout body, 2 pawns Ignem in veins."
+            ^"Appearance" STRING """Kolazonta most often appears as a dark, ominous cloud, but may rarely manifest as a man made of white fire, with veins of flame and eyes of lightning.
+Kolazonta is one of the angels tasked by the lord to chastise His faithful for their failings, and as such he is a servant of Uriel, the Angel of Punishment. Kolazonta was the angel who brought the plague upon the Israelites (in Numbers 16:46-50) for rebelling against Moses. Aaron defeated Kolazonta after Moses told him the punishment was lifted. Kolazonta is a grim angel who executes the chastisement of the Lord without fear or favor. He is often present amidst armies or cities under siege, waiting for the Lord's command to inflict a plague upon the sinful."""
+        }
+    }
+
+    #ARM5CR060aB2cD4eF6gH8iJ ^"Lupersus" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Type" ENUM ["Divine"]
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Personality Traits" STRING "Loyal +3, Patient +2, Helpful +2"
+            ^"Combat" STRING "Bite: Init +8, Attack +11, Defense +16, Damage +8"
+            ^"Soak" STRING "+7
+Fatigue levels: OK, 0/0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-4), -3 (5-8), -5 (9-12), Incapacitated (13-16)"
+            ^"Abilities" STRING "Area Lore 5 (food sources), Awareness 5 (threats to his charge), Brawl 4 (bite), Divine Lore 5 (saints), Hunt 8 (rabbits), Stealth 8 (hiding from humans), Survival 8 (hills)"
+            ^"Powers" STRING "Perfect Defender, 1 point, Init +20, Animal: If Lupersus is acting as a defender to another character in combat, he can use this power to get a +10 bonus to Defense for the duration of the combat. For these purposes, the combat lasts until Lupersus is disengaged."
+            ^"Vis" STRING "4 pawns of Animal, in the whole body."
+            ^"Appearance" STRING """A silver-gray wolf, with a noble bearing. No matter what terrain he runs through, Lupersus never gets dirty.
+Lupersus has been sent by God to guard a holy hermit, provide him with food, and, occasionally, lead those in need of advice to the hermit who can provide it. He cannot speak, and has no wish to do so. While his main focus is on the hermit, Lupersus is generally compassionate, and helps those in trouble whom he finds within his range. Sometimes he leads them to safety, but most people do not trust a wolf. In those cases, he chases them to safety. Lupersus is not an angel, but rather a divine creature, and does not have the powers shared by all angels.
+Nasir, the Helper
+As I was unable to walk, I climbed the mountain on horseback, while its slopes were all covered with pieces of stone and pebbles which slipped backwards under the feet of the horse every time its hoofs struck them [...] It slipped backward, with the pebbles and chips of stone sliding under it, and fell. So I dismounted, assisted the horse to its feet and stopped, unable to move. At that moment a man came down to me from the mountain and held me by the hand, my other hand holding the pack horse, until he got me to the summit. No, by Allah, I did not know who the man was and never saw him again. [...] He was none other than an angel whom Allah, moved by compassion toward me, sent to my aid."""
+        }
+    }
+
+    #ARM5CR061aB2cD4eF6gH8iJ ^"Nasir, the Helper" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 25
+            ^"Might Type" ENUM ["Divine"]
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" STRING "Ways of the (Local Environment); Animal Ken, Wilderness Sense"
+            ^"Personality Traits" STRING "Compassionate +3, Just +3, Love of God +5"
+            ^"Combat" STRING "Fist: Init +2, Attack +8, Defense +8, Damage +0"
+            ^"Soak" STRING "+1
+Fatigue levels: OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Abilities" STRING "Animal Handling 8 (horses), Animal Ken 8 (horses), Athletics 8 (climbing), Awareness 8 (natural hazards), Brawl 5 (fist), Chirurgy 8 (bind wound), Dominion Lore 8 (angels), Swim 8 (rough water), Theology 8 (angelology), Wilderness Sense 8 (local environment)"
+            ^"Powers" STRING """Calming Touch, 3 points, Init +0, Animal/Mentem: By touching the target, Nasir can calm their fears, making them feel reassured in the face of dangerous terrain.
+Spirit Form, 0 points, Init +30, Vim: Nasir can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically.
+Steadying Hand, 5 points, Init +30, Animal/Corpus: By touching the target, Nasir can assure that their footsteps are firm and that they can cross the most impassable of terrain. The target will not slip or fall as long as contact is maintained.
+Subtle Form, 0 points, Init +0, Corpus: Nasir can change his appearance to look like any human being. His statistics do not change."""
+            ^"Vis" STRING "4 pawns of Terram in feet."
+            ^"Appearance" STRING """An unassuming man dressed in well-worn travelling clothes.
+Nasir is a minor angel charged with the safety of pious travellers. He spends most of his time helping those in need, seeming to appear by mundane means from just out of sight, providing what aid he can, and then leaving again before he can be questioned too closely about his origins."""
+        }
+    }
+
+    #ARM5CR062aB2cD4eF6gH8iJ ^"Seferiel" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Type" ENUM ["Divine"]
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 5
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 5
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Personality Traits" STRING "Just +3, Love of God +5, Curious +2, Merciful +2"
+            ^"Combat" STRING "Flaming Greatsword: Init +18, Attack +21, Defense +18, Damage +25 (Note that both the greatsword and the fire are natural, because God made them that way, and thus not magically resisted.)"
+            ^"Soak" STRING "+20
+Fatigue levels: OK, 0/0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-6), -3 (7-12), -5 (13-18), Incapacitated (19-24)"
+            ^"Abilities" STRING "Awareness 5 (casting magic), Charm 3 (magi), Divine Lore 10 (angels), Great Weapon 7 (greatsword), Leadership 7 (magi), Magic Theory 10 (theological implications), Order of Hermes Lore 10 (interactions with the Church), Theology 10 (angelology)"
+            ^"Powers" STRING """Magic, 1 or more points, Init +18, by effect: Seferiel can duplicate any effect of Hermetic magic, at a cost of 1 Might Point for every two magnitudes of the Hermetic effect. There is no limit, other than his remaining Might Pool, on the number of points he can spend on a single effect. This includes ritual effects, for which he needs neither vis nor long periods of time.
+Spirit Form, 0 points, Init +30, Vim: Seferiel can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically.
+Subtle Form, 0 points, Init +0, Corpus: Seferiel can change his appearance to look like any human being. His statistics do not change."""
+            ^"Vis" STRING "10 pawns of Ignem in the sword."
+            ^"Appearance" STRING """A large man, with golden-tinged skin and burning-bright hair, dressed in a white robe that shines like the stars. He carries a burning greatsword.
+Seferiel is an angel with special responsibility for Hermetic magi. Most of the time, he seeks to draw them closer to God, but sometimes he acts as the instrument of God's vengeance against those who are particularly wicked. His attitude depends slightly on whether magic is inherently sinful in your saga; his suggested courses of action depend on this more strongly. However, either way he likes Hermetic magi, in general, and finds them fascinating people. He often pretends to be a magus in order to get to know people better, and find out what they are really like.
+Seferiel sometimes takes an interest in a particular magus, one whom he sees has great potential, and is a suitable antagonist for the Plagued by Angel Story Flaw. His divinely-appointed mission is, however, to the Order as a whole, and he travels across Europe to bring God's message to as many magi as possible."""
+        }
+    }
+
+}

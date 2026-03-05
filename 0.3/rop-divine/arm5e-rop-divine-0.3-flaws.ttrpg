@@ -1,0 +1,246 @@
+EXTENSION "ARM5e_RoP_Div_Flaws" {
+    NAME "Realms of Power: The Divine - Flaws"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Character"
+    # Source: Realms of Power: The Divine
+
+    #ARM5FG001aB2cD4eF6gH8iJ ^"Apostate" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["General"]
+        }
+        DESCRIPTION "You have converted from one faith to another or from one set of beliefs to another. You have a bad reputation at 4 among members of your previous faith, and you may receive some slight distrust from your new faith as well, depending upon how sincere your conversion seems."
+    }
+
+    #ARM5FS001aB2cD4eF6gH8iJ ^"Eremite" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "You do not belong to a holy tradition, as you prefer to explore the mysteries of the divine on your own. You cannot learn Supernatural Abilities from any tradition, favored or not, as you already have your own ideas about influencing the supernatural fixed in your philosophy. You must have True Faith to take this Flaw."
+    }
+
+    #ARM5FS002aB2cD4eF6gH8iJ ^"Non-traditional" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "You do not belong to a holy tradition, as your practices and beliefs are too unusual to be classified by an overarching philosophy. You may still learn Supernatural Abilities from other holy characters who are willing to teach you, though always with a penalty to your Advancement Total  --  you do not have any favored Abilities. You must have True Faith to take this Flaw."
+    }
+
+    #ARM5FG002aB2cD4eF6gH8iJ ^"Raised from the Dead" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Story"]
+        }
+        DESCRIPTION """You died, and were brought back to life through a holy miracle. You begin with at least three Warping points, plus one Warping point for every year that has passed since you were resurrected, and you automatically receive another Warping point every year you continue living. You also have a level 4 reputation in the area where the miracle occurred. You do not remember what happened to you while you were dead, although you may have virtuous impulses that you cannot explain.
+
+New Abilities
+
+ADJURATION*
+
+You are skilled in controlling and banishing supernatural creatures and their powers (see Miraculous Effects, later in this chapter). Specialties: type of creatures (angels, demons, ghosts, faeries), causing a specific effect. (Supernatural)
+
+BLESSING*
+
+You bring about beneficial or protective effects associated with the divine (see Miraculous Effects). Specialties: a particular effect, specific targets, in special circumstances. (Supernatural)
+
+CEREMONY*
+
+This Ability is used in conjunction with another Divine Supernatural Ability or a holy Method and Power to produce a greater effect. You must gather a group together and determine what you are going to do. Since it increases the potency of divine effects, at least one of the participants must possess the Ability (this character is called the focus character), and if it is a Power, whatever Method the character would normally use must be used by each member of the group. Because of this, all of the participants are considered t..."""
+    }
+
+    #ARM5FG003aB2cD4eF6gH8iJ ^"Excommunicate" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Story"]
+        }
+        DESCRIPTION "For your crimes against God and the Church, you have been cast out your faith, undoing your baptism and driving you from your religious community. You have a bad reputation at level 3 within the Church, and cannot benefit from the sacraments."
+    }
+
+    #ARM5FG004aB2cD4eF6gH8iJ ^"Failed Monk" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Social Status"]
+        }
+        DESCRIPTION """You were once a member of a cloistered order, but were cast out for some great sin or gross incompetence, or perhaps you ran away and your abbot might allow you to come back after a suitable punishment. Because of this, you have a poor reputation at level 2 in the local area and within the Church. You no longer need to observe your monastic vows of poverty, chastity, and obedience, though you may still practice them as they might be ingrained in your nature. You may take Academic Abilities during character creation.
+
+Female characters may take this Flaw as Failed Nun."""
+    }
+
+    #ARM5FH001aB2cD4eF6gH8iJ ^"Monastic Vows (hermetic)" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        DESCRIPTION """You have taken vows of poverty, chastity, and obedience to a religious superior, which means that you cannot own vis and must only possess functional magic devices. You cannot marry, and many magi might interpret that as prohibiting binding a familiar. You must do what your master commands in service of your order, though in return you can expect aid and assistance when needed.
+
+PAGAN
+
+Major, Supernatural, Story
+
+You do not follow the teachings of the Church, and have never been baptized. This tends to upset those in authority in Mythic Europe and frighten common people who learn of it. You do not observe Christian holidays, and you try to avoid churchmen and the Dominion. For whatever reason, you cannot pretend to go along with society  --  you might suffer grave supernatural consequences if you take Communion or appear to worship Christ. You may begin with either Magic or Faerie Lore, depending on the specifics of your faith."""
+    }
+
+    #ARM5FG005aB2cD4eF6gH8iJ ^"Unbaptized" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Story"]
+        }
+        DESCRIPTION """You are a Christian who has never been baptized for whatever reason, perhaps because you have some kind of supernatural background that might be undone by the ceremony  --  many magi believe that baptism impairs The Gift. Your faith is important enough to you that you still strive to be virtuous and attend Mass, though you do not benefit from the sacraments. Most common people who discover this fear and avoid you.
+
+Abilities
+
+ARS NOTORIA*
+
+You have memorized divine orations and rituals handed down from King Solomon that allow you to perform a kind of divine magic. Specialties: during a particular season, a specific ring. (Academic, Arcane, Supernatural)
+
+HOLY MUSIC\
+
+This Ability is associated with the Holy Method of Meditation, and allows you to achieve a supernatural state of mind by giving praises to God in music. You must sing a devotional song, rolling your Presence + Music vs. an ease factor based on the circumstances. If you succeed, use your Presence to determine the effect. If you are distracted during the ritual, you must make a Concentration roll to keep your focus.
+
+Specialties: with a certain effect, singing for an audience, affecting a specific person. (Holy Method)
+
+Traditions
+
+HOLY TRADITION: THE CANTORES
+
+Favored Abilities: Blessing, Enchanting Music, Holy Music, Intervention
+
+One of the most moving and spiritual aspects of Christian ceremonies is the music. On High Holy Days, the church is filled with voices raised in devotion to God, and the event becomes a..."""
+    }
+
+    #ARM5FG006aB2cD4eF6gH8iJ ^"Dhimmi" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["General"]
+        }
+        DESCRIPTION "You are a non-Muslim living under Muslim rule. If you are adult and male, you must pay the jizya head tax, and all dhimmis must abide by certain social restrictions (described above), in return for which they receive tolerance and protection from the Muslim authorities. The actual amount a dhimmi has to pay in jizya varies, but rarely exceeds a dinar (a gold coin) per year."
+    }
+
+    #ARM5FG007aB2cD4eF6gH8iJ ^"Eunuch" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["General"]
+        }
+        DESCRIPTION """You are a eunuch, and so are unable to procreate. Regardless of when the operation was carried out, you display outward characteristics identifying you as a eunuch, which may make you seem odd in the eyes of other characters. You enjoy a certain freedom of movement among the sexes, and it is likely you were made a eunuch for work at a harem or a military school. This Flaw is only available to male characters.
+
+Abilities
+
+ISLAMIC LAW*
+
+Academic
+
+This is the Muslim version of Civil & Canon Law. The major sources of Islamic Law are the Qur'an and the Sunna. Specialties: any one of the sources of Islamic Law, particular topics, customs of a particular area.
+
+THEOLOGY: ISLAM*
+
+Academic
+
+This is the Islamic equivalent of Christian Theology. The major sources for Islamic theology are the Qur'an and the Sunna. Specialties: the Qur'an, debates, history, prophets.
+
+Traditions
+
+HOLY TRADITION: SUFIS
+
+Favored Abilities: Ceremony, Meditation, Transcendence, Understanding
+
+Holy characters are quite common in Islam, and many of them are pious individuals who seek a closer experience of God through spiritual quests and ecstatic meditation. By 1220 there are numerous groups of these Muslim mystics, who gather in groups known as tariqas to seek the Divine through their communal meditation rituals. They do not speak of themselves as a tradition, more often simply referring to themselves as "friends" or "like minds," and as a sign of their humility and piety they wear robes of wool, from which t..."""
+    }
+
+    #ARM5FS003aB2cD4eF6gH8iJ ^"The Evil Eye" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """You character bears the Evil Eye, the uncontrolled potential to bring harm to others around her. Characters making stress rolls in her presence are subject to an additional botch die. Characters may protect themselves through the use of an amulet or a ritual, decided upon by the troupe, which does not need to be magical or supernatural in nature. A magic resistance of 0 or more, including the effect of the Aegis of the Hearth, is also sufficient to guard against this effect.
+
+GABAI
+
+Minor, Social Staus
+
+Appointed by the community council, the gabai is the local tax collector. It is his responsibility to ensure that Jewish taxes, payable to the community on such things as wine and meat, are collected from all adult males.
+
+The gabai has a -2 negative Reputation of "Tax Collector" in your his community. This Flaw is compatible with any other Free Social Status Virtue."""
+    }
+
+    #ARM5FH002aB2cD4eF6gH8iJ ^"Karaite Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        DESCRIPTION """In order for your character's magic to conform to scripture, all of his magic, including spells, enchantments, and longevity rituals, must be designed with Holy Magic instead of Magic Theory. Because of the strong restrictions imposed upon his magic by his faith, he cannot seek or accept magical or mundane healing from a non-Karaite source, nor can he accept any other magical effect from a non-Karaite.
+
+Karaites are also restricted from practicing divination, astrology, and the summoning or use of spirits, particularly ghosts. There is nothing within their Holy Magic that prevents them from learning such spells, but casting them renders the caster unclean. Similarly, allowing non-Karaite magic to be cast upon them also renders the Karaite target ritually unclean and their Holy Magic is at risk of failing until they are able to ritually cleanse and purify themselves."""
+    }
+
+    #ARM5FG008aB2cD4eF6gH8iJ ^"Outsider" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Social Status"]
+        }
+        DESCRIPTION """Your character belongs to a group that is readily identifiable and distrusted or disliked by most Europeans, such as the Saracens, Jews, or Moors. However, your character lives in a part of the world where people of their culture are more common, such as the Holy Land, or Iberia, or in an insulated or isolated community where his differences are tolerated and even accepted, such as a large city ghetto or a covenant, so this Flaw rarely affects him as badly as it would in other places. Your character has a bad Reputation of level 1 to 3 (depending upon how easy it is to identify him) among the dominant culture in their region, and people from outside of their sheltered community may shun him, persecute themhim or threaten his life and freedom when he must interact with them. There is no way for your character to lose this Flaw.
+
+This Flaw is usually only appropriate for grogs; companions and magi should take the Major Flaw instead."""
+    }
+
+    #ARM5FG009aB2cD4eF6gH8iJ ^"Tzadik Nistar" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Story"]
+        }
+        DESCRIPTION """Your character is one of the Tzadikim Nistarim, one of the 36 hidden righteous upon which the continuation of the world relies. She is destined to face a moment of moral decision, where she and the world through her will be tested. This moment could be small and personal, or it require a very public act. The result of failing in her test has immediate consequences defined by the storyguide. The Dominion may fall in her community or in the place of her moral failure; the Infernal may claim a new soul; or a whole region may face severe hardship until she puts right her failure. She may suspect that she has been chosen as one of the 36, but she does not know in advance what her personal test will be, though it may be discovered by consulting with prophets and learned men.
+
+>#### Shape and Material Bonuses
+>
+>Characters using the Craft Amulets Ability may use the following bonuses when enchanting amulets. Others may also be used with the troupe's agreement. Herbs and vegetables can only be used in the crafting of Minor Amulets, while minerals and gemstones can also be used in Major Amulets. The total bonus provided by shapes or materials is limited to the character's Craft Amulets Score.
+>
+>Agate: +2 surefootedness (including riding)
+>
+>Amethyst: +3 evil spirits
+>
+>Asparagus: +2 heart or eyes
+>
+>Beryl: +1 aid digestion
+>
+>Bitter Vetch: +2 bowels
+>
+>Black Cumin: +2 ease chest pain
+>
+>Carbuncle: +3 longevity and aging
+>
+>Cucumbers: +2 for laxative effects
+>
+>Dates: +2 treatment of ..."""
+    }
+
+}

@@ -1,0 +1,1095 @@
+EXTENSION "ARM5e_HM_Virtues" {
+    NAME "Hedge Magic Revised - Virtues"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Character"
+    # Source: Hedge Magic Revised
+
+    #ARM5VS001aB2cD4eF6gH8iJ ^"Elemental Affinity" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character has a supernatural affinity with the four elements, such that whenever he studies a particular Ability that is chosen when this Virtue is taken  --  Medicine, Philosophiae, or one type of (Realm) Lore  --  he may divide half as many experience points among his Elementalist Forms.
+
+For example, an elementalist with an Elemental Affinity (Medicine) who gained 8 experience points in Medicine one season would also gain 4 additional experience points to spend among Elementalist Air, Elementalist Earth, Elementalist Fire, or Elementalist Water.
+
+This Virtue may be taken more than once, as long as a different Ability is chosen each time."""
+    }
+
+    #ARM5VS002aB2cD4eF6gH8iJ ^"Elementalist Air" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of air. Taking this Virtue gives the character an initial score of 0 in Elementalist Air (see Elementalist Forms, below), and a Sanguine Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Air / 5)."
+    }
+
+    #ARM5VS003aB2cD4eF6gH8iJ ^"Elementalist Earth" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of earth. Taking this Virtue gives the character an initial score of 0 in Elementalist Earth (see Elementalist Forms, below), and a Melancholic Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Earth / 5)."
+    }
+
+    #ARM5VS004aB2cD4eF6gH8iJ ^"Elementalist Fire" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This power combines with the Elementalist Techniques to affect the element of fire. Taking this Virtue gives the character
+
+an initial score of 0 in Elementalist Fire (see Elementalist Forms, below), and a Choleric Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Fire / 5)."""
+    }
+
+    #ARM5VS005aB2cD4eF6gH8iJ ^"Elementalist Water" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of water. Taking this Virtue gives the character an initial score of 0 in Elementalist Water (see Elementalist Forms, below), and a Phlegmatic Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Water/ 5)."
+    }
+
+    #ARM5VS006aB2cD4eF6gH8iJ ^"Elemental Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character has a supernatural affinity with the four elements, specifically how they interact with each other. If the character studies one of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, or Elementalist Water) during a season, he may assign one additional experience point to each of the other three. If he gains experience in more than one Form in a single season (perhaps from Adventure experience), he cannot assign more than one free experience point to each Ability.
+
+In addition, when affecting multiple elements with his elemental magic, he may use the highest Form score among them rather than the lowest.
+
+A Hermetic version of this Virtue is relatively common among magi of the Order of Hermes (ArM5, page 41), and affects the Forms of Aquam, Auram, Ignem, and Terram instead of the elemental powers."""
+    }
+
+    #ARM5VS007aB2cD4eF6gH8iJ ^"Elemental Medicine" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character has a natural aptitude for elemental magic, based on special understanding of the four humors and the human body. In any season in which the character studies Medicine, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).
+
+In addition, when affecting multiple elements with his elemental magic, he may use
+
+Inedge Magic
+
+his highest Form score rather than his lowest. If the highest score exceeds his score in Medicine, use his score in Medicine instead."""
+    }
+
+    #ARM5VS008aB2cD4eF6gH8iJ ^"Elemental Philosophiae" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character has a natural aptitude for elemental magic, based on a deep understanding of the physical world. In any season in which the character studies Philosophiae, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).
+
+In addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in Philosophiae, use his score in Philosophiae instead."""
+    }
+
+    #ARM5VS009aB2cD4eF6gH8iJ ^"Elemental Theurgy" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character has a supernatural aptitude for elemental magic, based in experience with spirits and beings of a particular realm (usually Magic). In any season in which the character studies (Realm) Lore appropriate to the realm associated with this Virtue, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).
+
+In addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in the appropriate (Realm) Lore, use his score in (Realm) Lore instead."""
+    }
+
+    #ARM5VS010aB2cD4eF6gH8iJ ^"(type) Controlling" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Controlling is an Elementalist Art that can be combined with mastery of the four elements to control the behavior of different types of beings, as described under Elementalist Techniques, later in this chapter. Taking this Virtue gives the character a score of 0 in Controlling.
+
+This Virtue may be taken up to three times, to indicate that the character can control multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Controlling
+
+'Character Creation
+
+Several of the Virtues found in this chapter (Elemental Magic, Elemental Medicine, Elemental Philosophiae, and Elemental Theurgy) give the player experience points in the four Elementalist Forms whenever the character studies a related Ability. In order to approximate this effect during character creation, an optional method is to treat the Virtue as an Affinity with the related Forms. That is, you would calculate the number of experience points spent in the Ability, and divide half that amount among the Forms (or, for Elemental Magic, take the total number of points spent on the four Forms and equally divide half that amount among them).
+
+must be learned separately, but all three use the same Art score, so that a character who takes this Virtue three times would have only one Controlling Art, not (Medicinal) Controlling, (Philosophical) Controlling, and (Theurgical) Controlling."""
+    }
+
+    #ARM5VS011aB2cD4eF6gH8iJ ^"(Type) DiviNING" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This Elementalist Art allows an elementalist to locate, understand, and predict the behavior of the four elements, as described under Elementalist Techniques, later in this chapter. This Virtue gives the character an initial Divining score of 0.
+
+we Fs
+
+Le
+
+This Virtue may be taken up to three times, to indicate that the character can find and comprehend multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Divining must be learned separately, but all three use the same Art score, so that a character that takes this Virtue three times would have only one Divining Art, not (Medicinal) Divining, (Philosophical) Divining, and (Theurgical) Divining."""
+    }
+
+    #ARM5VS012aB2cD4eF6gH8iJ ^"(type) Refining" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """With this Elementalist Art, the character can purify a target by subjecting it to the four elements, as described under Elementalist Tech-
+
+Other Summoning Arts
+
+Summoning powers are also mentioned in Realms of Power: The Infernal (pages 87, 114-115). To distinguish the infernal Summoning Art from elementalist Summoning, you should refer to the infernal version as (Spirit) Summoning, and the elementalist version as (Elemental) Summoning. For example, an elemental theurgist with infernal powers could have (Elemental) Summoning, Controlling, (Spirit) Summoning, and Commanding. Note that
+
+such a character would be able to summon both spirits and elementals with his Summoning Arts, but could only command spirits with his Commanding Art and control elementals with his Controlling Art. If he were to summon a spirit aligned with one of the four elements using either (Spirit) or (Elemental) Summoning, he could affect it with either Commanding or Controlling, as the target would be both an elemental and a spirit.
+
+niques, later in this chapter. Taken as a Virtue, it grants Refining with an initial score of 0.
+
+This Virtue may be taken up to three times, to indicate that the character can refine multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Refining must be learned separately, but all three use the same Art score, so that a character that takes this Virtue three times woul..."""
+    }
+
+    #ARM5VS013aB2cD4eF6gH8iJ ^"(Type) Summoning" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Summoning is an Elementalist Art that allows the character to use his knowledge of the Elementalist Forms to summon a target associated with that element to him. This target is somehow appropriate to his background  --  a disease, an aspect of nature, or an elemental being, as determined by the type of Summoning he learns (Medicinal, Philosophical, or Theurgical). This is described in more detail under Elementalist Techniques, later in
+
+this chapter. Selecting this Virtue gives the
+
+character a score of 0 in Summoning. This Virtue may be taken up to three times, to indicate that the character can summon more than one type of elemental target. The first type chosen requires a Major Virtue, the others are Minor Virtues. Each type of Summoning must be learned separately, but all three types use the same Art score, so that a character that takes this Virtue three times would only have one Summoning Art, not (Medicinal) Summoning, (Philosophical) Summoning, and (Theurgical) Summoning."""
+    }
+
+    #ARM5VS014aB2cD4eF6gH8iJ ^"Cailleach Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character's gruagach tradition has incorporated aspects of the followers of Cailleach, the Pictish earth goddess and companion to Gruagach. When the character casts a spontaneous spell, the lowest applicable Art is doubled before the casting total is divided by two."
+    }
+
+    #ARM5VS015aB2cD4eF6gH8iJ ^"External Soul" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This Virtue prevents a character from dying because of physical injury. A gruagach may only gain this Virtue through Initiation, as described later. As part of the Initiation process, the character and his mentor place the character's soul in a separate object. The character must guard this object closely because any damage to it, even so much as a single scratch, kills the character.
+
+While the character's external soul is intact, he can't be decapitated or have any limb severed. No magic or physical force can dismember the character, and he cannot receive any wound that would result in Incapacitation or Death. If the Damage Table indicates that the character would suffer death or an Incapacitating Wound, the storyguide should distribute the amount of damage among multiple Wound Levels until all of the damage is applied to the character.
+
+For example, Dombnall the gruagach suffers a devastating spear attack in which the Damage Total exceeds his Soak Total by 30 points. Normally this would mean immediate death for Dombnall, but the gruagach has an External Soul, so the storyguide consults the Damage Table (ArM5, page 171) and notifies Dombnall's player that his character has suffered a Heavy Wound and a Medium Wound (18 + 12 = 30, and Dombnall is Large).
+
+Every time a Wound to the character must be redistributed in this manner, the character suffers a Warping Point unless the player succeeds in a stress die roll of the character's Stamina + Pictish against an Ease Factor of 9..."""
+    }
+
+    #ARM5VS016aB2cD4eF6gH8iJ ^"Give" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Technique of Give. It is a Difficult Art that advances as an Ability. It is described more fully later in this chapter and is useless unless the character also possesses one of the Forms in this chapter."
+    }
+
+    #ARM5VS017aB2cD4eF6gH8iJ ^"Take" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Technique of Take. It is a Difficult Art that advances as an Ability. It is described more fully later in this chapter and is useless unless the character also possesses one of the Forms in this chapter."
+    }
+
+    #ARM5VG001aB2cD4eF6gH8iJ ^"Gruagach Master" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Social Status"]
+        }
+        DESCRIPTION """The character is the leader of a gruagach collective. The character has unCifted stu-
+
+dents who provide him with many of the necessities of life. In exchange for these necessities, the character must spend one season per year training those students. If the character is Poor, he only has a few followers with relatively few resources, so he must spend a normal amount of time every year on supporting himself, in addition to the time spent teaching. If the character is Wealthy, he has many apprentices or a few of means. The troupe should determine the level of experience of the students and their identities."""
+    }
+
+    #ARM5VS018aB2cD4eF6gH8iJ ^"Blessing" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Form of Blessing. The Form advances as an Art. It is described more fully later in this chapter and is useless unless the character also possesses a Technique from this chapter."
+    }
+
+    #ARM5VS019aB2cD4eF6gH8iJ ^"Curse" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Form of Curse. The Form advances as an Art. It is described more fully later in this chapter and is useless unless the character also possesses a Technique from this chapter."
+    }
+
+    #ARM5VS020aB2cD4eF6gH8iJ ^"Fetch" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Gruagachan utilize their fetches in their magic, and need not possess this Virtue to do so, but other characters may also have access to a fetch. Fetches are essentially invisible, non-corporeal, magical animal companions. A fetch does not interact with its surroundings and may only become solid if necessary to warn its master of imminent danger; a fetch might bump its master or trip him to prevent him from stepping in a trap or falling to his death, for example. Fetches often embody some aspect of their masters' personality  --  a deceptive character might have a fetch of a wolf, while a wise character might possess the fetch of a raven or owl, for instance.
+
+This Virtue grants the character constant access to her fetch. The fetch has the Supernatural Ability Second Sight with a score of 9, and it is very vigilant. The fetch warns the character when it senses danger. It is nearly impossible to lure the character into an ambush or any form of trap without the fetch warning the character. The warning may be difficult for the character to interpret, and sometimes may be unwarranted because the fetch only has the Cunning of a very bright animal. A gruagachan without this Virtue may only utilize his fetch through Vision magic, and may not even know the shape it takes."""
+    }
+
+    #ARM5VS021aB2cD4eF6gH8iJ ^"Flexible Gruagach Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The gruachach's Formulaic spells are more versatile than most. Instead of being able to vary the Range, Duration, or Target of a known spell by 10 levels, the gruagach is able to vary the spells by 15 levels."
+    }
+
+    #ARM5VS022aB2cD4eF6gH8iJ ^"Shape" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Form of Shape. The Form advances as an Art. It is described more fully later in this chapter and is useless unless the character also possesses a Technique from this chapter."
+    }
+
+    #ARM5VS023aB2cD4eF6gH8iJ ^"Tattoo Mastery" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A character with the Tattoo Mastery Virtue is more adept at creating gruagach tattoos than others. The gruagach may reduce the vis cost of a tattoo by his score in Pictish, but the cost may never be less than half the usual cost."
+    }
+
+    #ARM5VS024aB2cD4eF6gH8iJ ^"Vision" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Form of Vision. The Form advances as an Art. It is described more fully later in this chapter and is useless unless the character also possesses a Technique from this chapter."
+    }
+
+    #ARM5VS025aB2cD4eF6gH8iJ ^"Well-Trained Gruagach" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Due to the skill of the gruagach's master or his extensive time studying under his master, the character may spend an extra 50 experience points on gruagach Arts and take an extra 25 levels of spells. This Virtue may be taken multiple times.
+
+Gruagach Flaws
+
+The list of Flaws below is only suitable for gruagach characters or characters from a related magical tradition."""
+    }
+
+    #ARM5VS026aB2cD4eF6gH8iJ ^"No Tattoo Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The gruagach is unable to understand tattoo creation. The character may not create or investigate a gruagach tattoo."
+    }
+
+    #ARM5VS027aB2cD4eF6gH8iJ ^"Transformation Prone" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character is especially prone to undergoing transformation, the gruagach equivalent of Twilight. The player must roll
+
+to resist transformation on a single magical botch, rather than on a double botch like most gruagachan."""
+    }
+
+    #ARM5VS028aB2cD4eF6gH8iJ ^"Incompatible Hedge Arts" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character is unable to use a single combination of one Technique and Form. The character must possess the ability to use the Technique and Form. For example, a character could be unable to use Give Blessing charms, but would still be able to use Take Blessing, Give Curse, Give Shape, or Give Vision spells."
+    }
+
+    #ARM5VS029aB2cD4eF6gH8iJ ^"Inflexible Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The gruagach's Formulaic spells are not as versatile as most. Instead of being able to vary the Range, Duration, and Target of a known spell by 10 levels, the gruagach is only able to vary his spells by 5 levels."
+    }
+
+    #ARM5VS030aB2cD4eF6gH8iJ ^"Poorly Trained Gruagach" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Due to the incompetence or negligence of the gruagach's master, the character must spend 50 fewer experience points on gruagach Arts and take 25 fewer levels of spells
+
+than normal. This Flaw may be taken multiple times, but may not reduce the gained experience to 0."""
+    }
+
+    #ARM5VS031aB2cD4eF6gH8iJ ^"Weak Tattoo Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The gruagach is not able to fully understand tattoo creation. Halve the character's Lab Total whenever the character creates or investigates a gruagach tattoo.
+
+HERMETIC VIRTUES AND FLAWS FOR GRUAGACHAN
+
+Gruagach characters may possess the equivalent of a number of Hermetic Virtues and Flaws; however, some of the following are only appropriate for characters with The Gift.
+
+Major Hermetic Virtues: Flawless Magic, Gentle Gift, Major Magical Focus, Secondary Insight.
+
+Minor Hermetic Virtues: Adept Laboratory Student, Affinity with Art, Cautious Sorcerer, Deft Form, Fast Caster, Free Study, Harnessed Magic, Inventive Genius, Life Boost, Minor Magical Focus, Magical Memory, Personal Vis Source, Puissant Art, Side Effect, Skilled Parens, Special Circumstances, Subtle Magic.
+
+Major Hermetic Flaws: Blatant Gift, Deficient Technique, Necessary Condition, Painful Magic, Restriction, Short-Ranged Magic, Waster of Vis.
+
+Minor Hermetic Flaws: Careless Sorcerer, Creative Block, Deficient Form, Deleterious Circumstances, Disorientating Magic, Incompatible Arts, Infamous Master, Offensive to Animals, Susceptibility to Divine Power, Susceptibility to Faerie Power, Susceptibility to Infernal Power, Unimaginative Learner, Unpredictable Magic, Warped Magic, Weak Magic, Weird Magic.
+
+Gruagach may only take Hermetic Virtues or Flaws on the above list, unless the troupe decides otherwise, but if the troupe decides a gruagach character may have Quiet Magic, it should be treated as a Major Virtue. T..."""
+    }
+
+    #ARM5VH001aB2cD4eF6gH8iJ ^"Give" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        DESCRIPTION """This Technique governs a gruagach's ability to grant blessings, inflict curses, impart shapes, and provide visions to others. It does not have a close Hermetic equivalent, but encompasses aspects of most Techniques. It can also inflict curses and geasa (singular: geas) on a target.
+
+TAKE
+
+This Technique allows a gruagach to remove something from a target. A Take spell might eliminate an aspect of a target or merely acquire a component of it. This Art covers nearly every Hermetic Technique. It can allow a person to recover from hostile magic, and it can acquire information about a target. Take spells can also remove a character's Virtues and reduce his Abilities.
+
+FORMS
+
+BLESSING
+
+This Form grants the gruagach the ability to confer Virtues, grant bonuses to Abilities, and improve the Characteristics of other characters. In all instances, the gruagach must balance the benefit with a specific prohibition on the target's actions, which if violated causes the benefit to disappear. The more powerful the benefit granted, the more difficult the spell. Take Blessing spells allow the character to nullify certain Virtues or Abilities a character possesses. This Form cannot affect some Virtues  --  Social Statuses and Divine, Infernal, Hermetic, and Faerie Virtues, for example. Virtues that affect the accumulation of experience points, give access to specific Abilities, or grant physical objects may not be affected.
+
+Curse
+
+This Form allows the gruagach to inflict Flaws on a target or to..."""
+    }
+
+    #ARM5VH002aB2cD4eF6gH8iJ ^"General" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        DESCRIPTION """Remove a curse, hex, or continuing spell cast by another.
+Shape Spells
+
+This Form allows a gruagach to alter the physical shape of another or herself. Give Shape spells add features of other creatures or completely transform a willing target. Take Shape spells forcibly seize someone's form and can force the Target to take a foreign shape or allow the caster to mimic his shape. All Shape spells also affect the items carried by the Target, incorporating them into the new form.
+
+GIVE SHAPE
+
+BORROW THE NOSE OF THE HOUND GvSh Level 3
+
+R: Per, D: Sun, T: Ind
+
+The caster's nose turns into that of a hound. The gruagach gets a bonus of +6 to all Perception rolls associated with smelling. The character receives a -3 modifier to all rolls involving interaction with individuals who aren't frequently exposed to the effects of magic.
+
+(Base 1, +2 Sun)
+
+BORROW THE WINGS OF THE EAGLE GvSh Level 10
+
+R: Per, D: Sun, T: Ind
+
+The caster's arms turns into giant wings. The gruagach is able to fly as quickly as a normal horse gallops. The character receives a -6 modifier to all rolls involving trust.
+
+(Base 4, +2 Sun)
+
+Assume the Form of the Ancestors GvSh Level 15 R: Per, D: Sun, T: Ind
+
+For the duration of the spell, the caster grows to giant size. The character's Size increases by +5, but to no more than +5, and for each point of Size the character gains, adjust his Strength by +2 and his Quickness by -1.
+
+(Base 5, +2 Sun)
+
+TAKE SHAPE
+
+RETURN THE LYCANTHROPE TO HIS NATIVE FORM TaSh Level Gen
+
+R:..."""
+    }
+
+    #ARM5VH003aB2cD4eF6gH8iJ ^"General" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+        DESCRIPTION """Cause someone to revert to his true form at Conversation Range.
+Level 5: Turn a human into a land animal.
+
+Level 5: Perfectly mimic the appearance
+
+Level 5: Perfectly mimic the appearance of another person.
+
+Level 5: Change one animal into another. Level 15: Turn a human into a bird or fish.
+
+Level 20: Turn a human into a solid inanimate object.
+
+Level 20: Turn a human into a plant.
+
+Level 25: Turn a human into an insubstantial object.
+
+"THE MAKER OF MAGICIANS
+
+Apowerful gruagach loses his mind and builds an army of gruagachan, using Give Blessing to give his minions the gruagach Techniques and Forms. Other gruagachan see this as an affront to their tradition, but because of the size of his army, they are powerless to stop him. These gruagachan approach the characters for help.
+
+CurseD IF You Do ...
+
+A gruagach curses an ally of the covenant, who then asks the characters for assistance. The curse is too strong for the characters to dispel with general Perdo Vim, so if the characters are unfamiliar with gruagach magic, they must acquire some knowledge of it before removing the curse. If the characters remove the curse, the gruagach discovers their actions, devises a more punitive curse for their ally, and seeks revenge against the covenant for allowing their ally to subvert "justice."
+
+PIG IN A POKE
+
+An apprentice gruagach transforms into fine specimens of various animals, and has his father sell him at market. The gruagach later escapes his purchasers and returns to his fathe..."""
+    }
+
+    #ARM5VG002aB2cD4eF6gH8iJ ^"Mathematicus of Bologna" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Free"]
+            ^"Category" ENUM ["Social Status"]
+        }
+        DESCRIPTION """The character is a member of the magical tradition of the Mathematici of Bologna. The character may cast charms and perform laboratory activities according to the rules of this chapter. To possess this Social Status, the character must have at least one Hedge Technique and Form from this chapter.
+
+A mathematicus must also possess a Social Status that defines his role in mundane society, suitable examples include: Clerk, Gentleman, Landed Noble, Magister in Artibus, Mendicant Friar, or Priest. The Social Statuses listed in the Universities and Medicine chapters of Art & Academe are very appropriate, as are those listed in Realms of Power: The Divine, pages 92-93. These lists are not exhaustive, and the troupe may include additional Social Statuses that are appropriate to the learned magician character. The amount of freedom a mathematicus has to study is based on his other Social Status, or whether he possesses the Wealthy Virtue or Poor Flaw."""
+    }
+
+    #ARM5VS032aB2cD4eF6gH8iJ ^"Entreat the Powers" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This Virtue grants the character the ability to minimize or overcome the negative
+
+Lore of the Mathematici
+
+This is the (Organization) lore of the learned magician tradition based in Bologna. A character with this Ability has knowledge of the following: the general effects that charms and amulet magic produce, the identities of the powerful members of the Mathematici of Bologna, their
+
+history, and the secrets of the tradition. The secrets of the Mathematici include knowledge of the rites and rituals to Initiate another into the powers of the tradition. Other groups of learned magicians may exist in Mythic Europe and possess their own (Organization) Lore Abilities."""
+    }
+
+    #ARM5VS033aB2cD4eF6gH8iJ ^"Mythic Alchemy" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This Virtue grants the character a score of 1 in the Mythic Alchemy Supernatural Ability. Mythic alchemists can actually transmute types of atoms into other types of atoms through the application of magical rather than philosophical techniques. This Ability always requires at least one season of activity in a properly outfitted alchemical laboratory. The rules described here depend on the rules for alchemists given in Art & Academe, Chapter 5: Experimental Philosophy.
+
+Briefly, a formula is invented in a season by acquiring 5 experience points. Formulae are described like spells, with a single parameter called Alteration that describes the magnitude of the change. The formula is used to produce a reagent in a season using a Lab Total equal to Intelligence + Philosophiae, and the alchemist must accumulate points in excess of the formula's level just like inventing a spell. Mythic alchemists are superior to their non-magical brethren in this, and they may add their Mythic Alchemy to their Lab Totals for creating any alchemical reagents.
+
+Those with this Virtue can devise formulae that employ guidelines for alchemical reagents that are not available to those without the Virtue. The changes effected by Mythic Alchemy are permanent transmutations of the elements and result in non-magical substances, which cannot be dispelled. Alchemists without Mythic Alchemy always fail if they try to recreate these formulae from a Laboratory Text.
+
+Learned magicians with the Mythic Alchemy Virtu..."""
+    }
+
+    #ARM5VS034aB2cD4eF6gH8iJ ^"Mythic Herbalism" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Mythic Herbalism is a Major Supernatural Virtue that grants a score of 1 in the Mythic Herbalism Ability. Mythic Herbalism permits a character to create unguents and poultices that can heal the wounded, cure the diseased, or assist the poisoned. The Ability also allows a character to create especially virulent poisons. Finally, the Mythic Herbalist may create potions that grant temporary bonuses to various physical characteristics. The effects of the concoctions are detailed in the nearby chart.
+
+For any creation, the character must spend a number of days equal to one-third the Ease Factor of the intended effect to prepare and brew the necessary ingredients. Anyone with the Ability Profession (Apothecary) and access to plants growing in a Magic aura may supply the ingredients.
+
+The character may create multiple doses of any concoction; the Ease Factor is increased by 1 for each additional dose. The character must select the total number of doses he wishes to create prior to beginning the brewing process. Large batches are more difficult to create because of instability during the brewing process, but they do not take longer to create than a single dose does. The character does not need access to a full Hermetic laboratory, but may create potions with only a few basic tools and a constant source of heat.
+
+At the end of the process, the player must roll the character's Intelligence + Mythic Herbalism against the target Ease Factor. If the roll fails, the concoction is useless. ..."""
+    }
+
+    #ARM5VS035aB2cD4eF6gH8iJ ^"Strong Amulet Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character is especially adept at creating chartae and amulets. When creating either, the character receives a +10 bonus to all Lab Totals."
+    }
+
+    #ARM5VS036aB2cD4eF6gH8iJ ^"Succurro" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Technique of Succurro. It is a Difficult Art that advances as an Ability. It is described more fully later and is useless unless the character also possesses one of the Forms in this chapter."
+    }
+
+    #ARM5VS037aB2cD4eF6gH8iJ ^"Tueor" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Technique of Tueor. It is a Difficult Art that advances as an Ability. It is described more fully later and is useless unless the character also possesses one of the Forms in this chapter."
+    }
+
+    #ARM5VS038aB2cD4eF6gH8iJ ^"Vulnero" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Technique of Vulnero. It is a Difficult Art that advances as an Ability. It is described more fully later and is useless unless the character also possesses one of the Forms in this chapter."
+    }
+
+    #ARM5VS039aB2cD4eF6gH8iJ ^"Entreat the (Realm) Powers" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The player must choose one realm when this Virtue is selected for the character. The character gains the ability to call upon the powers of that realm to minimize or overcome the negative effects associated with using his Magic-aligned abilities in hostile auras (Divine or Infernal). The mechanics for using this Virtue are described fully later, under Magic of the Learned Magicians: Mitigation of Realm Interaction Effects."
+    }
+
+    #ARM5VS040aB2cD4eF6gH8iJ ^"Fortunam" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "This Virtue gives the character the Form of Fortunam. The Form advances as an Art. It is described more fully later and is useless unless the character also possesses a Technique from this chapter."
+    }
+
+    #ARM5VS041aB2cD4eF6gH8iJ ^"Magicam" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This Virtue gives the character the Form of Magicam. The Form advances as an Art. It
+
+is described more fully later and is useless unless the character also possesses a Technique from this chapter."""
+    }
+
+    #ARM5VS042aB2cD4eF6gH8iJ ^"Natural Magician" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This Virtue allows the character to utilize natural magic principles  --  such as elemental forces, natural affinities, magical contagion, and sympathetic connections  --  in performing any Magic-aligned Supernatural Ability to limit or eliminate the negative realm interaction effects of Divine or Infernal realms. Because of the time and materials required to utilize all of the natural magical principles, this ability may only aid activities that take a season or longer to perform.
+
+The player adds his character's Philosophiae score to the Casting Total, Laboratory Total, or Supernatural Ability roll. The Philosophiae score may never be greater than the absolute amount of the negative realm interaction modifier. It is only useful in overcoming the negative realm interaction effects of an aura. The use of this Virtue never assists the character in achieving the initial effect total, and cannot aid in Penetration. This Virtue provides no benefit for activities performed in Faerie or Magic realms. This Virtue may be used in conjunction with Entreat the Powers.
+
+SALUTEM
+
+Minor, Supernatural Form
+
+This Virtue gives the character the Form of Salutem. The Form advances as an Art. It is described more fully later and is useless unless the character also possesses a Technique from this chapter."""
+    }
+
+    #ARM5VG003aB2cD4eF6gH8iJ ^"Skilled Master" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["General"]
+        }
+        DESCRIPTION """Due to the skill of the learned magician's master or his extensive time studying under his master, the character may spend an extra 50 experience points on Arts, Abilities, and charms. This Virtue may be taken multiple times.
+
+FLAWS OF THE LEARNED MAGICIANS
+
+The list of Flaws here is only suitable for learned magician characters or characters from a related magical tradition.
+
+Dedge Magic"""
+    }
+
+    #ARM5VS043aB2cD4eF6gH8iJ ^"Charm Magician" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character may not create amulets, but may create chartae. The character may possess this Virtue in conjunction with the No Chartae Making Flaw, which prevents him from creating any devices in the laboratory."
+    }
+
+    #ARM5VS044aB2cD4eF6gH8iJ ^"Intervention Prone" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character is especially prone to undergoing intervention, the learned magician equivalent of Twilight. The player must roll to resist intervention on a single magical botch, rather than on a double botch like most learned magicians."
+    }
+
+    #ARM5VS045aB2cD4eF6gH8iJ ^"Laboratory Magician" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character may not memorize charms and may only cast charms with the assistance of a text. The character may possess this Virtue in conjunction with the No Text Casting Flaw, which prevents him from casting any charms."
+    }
+
+    #ARM5VS046aB2cD4eF6gH8iJ ^"Weak Verbal Charms" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character is less adept at verbal charms than the typical learned magician. The sum of the character's casting total and his die roll is always divided by five whether he knows the charm or is reading it from a text."
+    }
+
+    #ARM5VS047aB2cD4eF6gH8iJ ^"Incompatible Hedge Arts" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character is unable to use a single combination of one Technique and Form. The character must possess the ability to use the Technique and Form. For example, a character could be unable to use Vulnero Salutem charms, but would still be able to use Tueor Salutem and Succurro Salutem charms."
+    }
+
+    #ARM5VS048aB2cD4eF6gH8iJ ^"No Chartae Making" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character cannot create chartae, but may create amulets. The character may possess this Virtue in conjunction with the Charm Magician Flaw, which prevents him from creating any amulets or chartae."
+    }
+
+    #ARM5VS049aB2cD4eF6gH8iJ ^"No Text Casting" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character can't cast charms from texts. The character may possess this Virtue in conjunction with the Laboratory Magician Flaw, which prevents him from casting any charms."
+    }
+
+    #ARM5VS050aB2cD4eF6gH8iJ ^"Poorly Trained Magician" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "Due to the incompetence or negligence of the learned magician's master, the character may spend 50 fewer experience points on his Arts and charms than normal. This Flaw may be taken multiple times, but may not reduce the available experience points to zero."
+    }
+
+    #ARM5VS051aB2cD4eF6gH8iJ ^"Weak Amulets" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character is less proficient at creating amulets than the typical learned magician. Subtract five from your Lab Total when creating amulets. This Flaw does not affect the character's ability to create chartae."
+    }
+
+    #ARM5VS052aB2cD4eF6gH8iJ ^"Weak Chartae" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The character is less proficient at creating chartae than the typical learned magician. Subtract five from your Lab Total when creating chartae. This Flaw does not affect the character's ability to create amulets.
+
+HERMETIC VIRTUES AND FLAWS FOR LEARNED MAGICIANS
+
+Learned magicians may possess a number of Hermetic Virtues and Flaws. Most of these are suitable for all magicians, but others are only appropriate for those magicians with The Gift.
+
+Major Hermetic Virtues: Gentle Gift, Major Magical Focus, Secondary Insight.
+
+Minor Hermetic Virtues: Adept Laboratory Student, Affinity with Art, Cautious Sorcerer, Deft Form, Enduring Magic, Fast Caster, Harnessed Magic, Inventive Genius, Minor Magical Focus, Magical Memory, Personal Vis Source, Puissant Art, Quiet Magic, Side Effect, Special Circumstances, Subtle Magic.
+
+Major Hermetic Flaws: Blatant Gift, Deficient Technique, Necessary Condition, Painful Magic, Restriction, Rigid Magic, Short-Ranged Magic.
+
+Minor Hermetic Flaws: Careless Sorcerer, Creative Block, Deficient Form, Deleterious Circumstances, Disorientating Magic, Short-Lived Magic, Susceptibility to Divine Power, Susceptibility to Faerie Power, Susceptibility to Infernal Power, Warped Magic, Weak Magic, Weak Scholar, Weird Magic.
+
+Magic of the Learned Magicians
+
+Learned magicians are able to combine their Arts to create two types of magic: verbal charms and written amulets. Verbal charms are quick to cast, have very limited duration, and are the least powerful of a le..."""
+    }
+
+    #ARM5VS053aB2cD4eF6gH8iJ ^"Nightwalker" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """A character with this virtue is able to stray; that is, he may send his spirit away from his body, and have it take material form at a distant place. This separated spirit, in solid or immaterial form, is called a phantasticum. The ability to generate a phantasticum allows the character to accept responsibilities, and perform acts, that are described in greater detail in the following sections.
+
+This Virtue includes all of the following powers:
+
+- The character may stray while insensible, and lead others astray.
+- The character knows a method of forcing insensibility.
+- The character may use the Second Sight Ability in phantastic form, and gains a score of 1 in that Ability. He may not use it while in his body, unless he has the Second Sight Virtue. If he does, he has one score in Second Sight that he uses in both situations.
+- The character involuntarily creates the accouterments usual to his or her tradition while in phantastic form. If these accouterments include traditional weapons, these weapons damage foes despite their apparent fragility.
+- The character may make his spiritual form tangible or intangible using a Stamina + Concentration roll.
+- The character may harm spirits in intangible form, as if both were tangible.
+- The presence of the character in phantastic form causes drowsiness.
+- If the character's tradition uses animal or elemental shapes to travel, for processions, or for fertility battles, the character may do so. While in inhuman form, the character has t..."""
+    }
+
+    #ARM5VS054aB2cD4eF6gH8iJ ^"Versatile Phantasticum" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Versatile Phantasticum is a virtue taken by traditions whose members can fight in animal or elemental form when not at a fertility battle. A character may have a Versatile Phantasticum because all members of the character's regional tradition have one, or because the character has powers superior to those usual to the regional tradition. Traditions that require this Virtue of their members are described below.
+
+Minor Virtues Related To Straying Traditions
+
+Some traditions of nightwalkers have weaker hedge magicians associated with them, who are produced when people develop incomplete versions of the power to stray. These weaker variants do not have the Nightwalker Virtue, and may be taken by grogs."""
+    }
+
+    #ARM5VS055aB2cD4eF6gH8iJ ^"Half Taltós" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """A half taltós is a potential taltós  --  a regional variant of nightwalker described later  --  who failed to defeat an elder taltós at his initiatory battle. In folklore half taltós have a variety of powers, but this Virtue only grants a limited form of Second Sight and the ability to affect spiritual entities with a limited range of physical objects. Half-taltós player characters can be differentiated by selecting other supernatural Virtues.
+
+Second Sight comes only with difficulty to half taltós. They must perform a simple ritual, which varies by taltós and takes a minute, before they can use the Virtue for one minute or until the conclusion of one battle, whichever is longer. Using this ritual repeatedly is very tiring. Each use requires an Athletics + Stamina roll against an Ease Factor of 6, or the half taltós loses a fatigue level.
+
+The half taltós may affect spirits with his personal armaments. These are usually a sword or whip, with a smaller weapon for emergencies. These are physical weapons with a spiritual nature. If a half taltós loses a weapon, it takes a month of occasional work for him to create the Arcane Connection to a new weapon necessary for it to be used to harm spirits."""
+    }
+
+    #ARM5VS056aB2cD4eF6gH8iJ ^"Hamr" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Hamr is a Norse term for what Hermetic scholars would call a corporeal phantasticum. Warriors with a hamr have the ability to enter a trance within sight of the battlefield, so that they can send forth their spirit to do battle in animal shape. An example is the folk hero Boðvar Bjarki, who would hide before battles but was not considered a coward by his fellows because a great white bear would appear in his stead, and he would have the bear's injuries after the battle.
+
+If the warrior's body is found while he is in a trance, he is in a very vulnerable state. His body will not awaken until the hamr returns to it. If the body is killed, the hamr becomes an unusual ghost, and there are several possible outcomes. The hamr may vanish as the character dies. Or the hamr may remain on the battlefield until the battle is over, fulfilling the ghost's last wish. Most hamr are able to remain in the world only until the flesh of their decaying body falls from the bones. But occasionally the hamr remains on Earth indefinitely, single-mindedly seeking out those who killed the magician.
+
+Such nemeses are usually unsuitable as player characters. Only their fixation on revenge allows them to remain in the world, which makes them unable to assist other player characters in stories unrelated to their vengeance. Hamr are also notably animalistic in their thinking, and so are rarely able to plausibly find ways of working patiently and methodically toward the downfall of their foe, as anthropomorp..."""
+    }
+
+    #ARM5VS057aB2cD4eF6gH8iJ ^"Sleepwalker" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Hermetic magi prone to speculation on these things, particularly from the Houses of Bjornaer and Tremere, have noted that there is a class of hedge magicians who sleepwalk within their bamr, rather than entering a trance hidden away from the battlefield. The bamr is larger than a human is, and may appear to be a hybrid of human and animal forms. The magician is cloaked within the phantasticum, the more durable and combatworthy form. In battle, a Heavy Wound may cut the bamr so deeply that the skin of the human within is visible through the laceration. Sleepwalkers are unable to stray, in the sense of their phantasticum losing physical contact with the body, so lack virtually all of the powers of nightwalkers.
+
+Sleepwalkers, like magicians with a bamr, require props and are likely to arrive at tense situations almost out of their minds. It often occurs that those sleepwalking in their bamr act with the ferocity of their animal form, and fail to recognize friends and family who are dear to them in the waking state.
+
+Virtues Nightwalkers Often Possess
+
+The following Virtues are not required of nightwalkers, but individual nightwalkers often have them.
+
+GHOST
+
+Nightwalkers whose bodies die while their phantasticum is absent are usually forced to wander the world as ghosts until their destined hour of death. In at least one tradition of nightwalker, every member becomes one of the unquiet dead unless preventative measures are taken with their corpses. These spirits become very sim..."""
+    }
+
+    #ARM5VS058aB2cD4eF6gH8iJ ^"Deft Rune" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The vitki is particularly skilled with one rune. He suffers no penalty to his Casting Total when he does not inscribe his name or a description of the effect on a script that incorporates this rune. This Virtue may be taken more than once, each time with a different rune."
+    }
+
+    #ARM5VS059aB2cD4eF6gH8iJ ^"Fast Caster" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character can make a rune script much more quickly than other vitkir, accurately inscribing the runes in half the normal time. He can also fast-cast a rune spell, much the same way that magi can fast-cast spontaneous spells, though he must always leave off his name and the description of the effect, as there isn't time to inscribe them."
+    }
+
+    #ARM5VS060aB2cD4eF6gH8iJ ^"Major Rune Focus" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The vitki has a magical focus in a type of rune magic, which is also associated with a particular material. Whenever the vitki inscribes runes into the proper material for an effect associated with the focus, you may double his score in the rune used for the script. (See the Vitkar Magic Foci sidebar for a list of these types and the materials associated with them.)"
+    }
+
+    #ARM5VS061aB2cD4eF6gH8iJ ^"Mastered Rune" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character has mastered a single rune, reducing the frequency of magical accidents. Whenever he inscribes this rune in a rune script, your botch dice are reduced by three (to a minimum of one die), and all penalties to your casting rolls are halved. You may take this Virtue more than once, each time with a different rune."
+    }
+
+    #ARM5VS062aB2cD4eF6gH8iJ ^"Minor Rune Focus" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The vitki has a magical focus with a single rune used in a particular type of rune magic (see the Vitkar Magic Foci sidebar). Whenever the vitki casts a rune spell with an effect appropriate to the focus and the chosen rune, and inscribes this rune into the material associated with the focus, you may double the vitki's score in the rune used for the formula.
+
+hedge Magic
+
+The Order of Odin
+
+The phrase "Order of Odin" is used by magi to describe their idea of an organized group of Scandinavian wizards opposed to the Order of Hermes. It is not generally used by the vitkir. It dates back to the time of the war against Damhan-Allaidh, when there was a great deal of fear and uncertainty about these wizards and their growing power in the British Isles. (For a more-detailed history of the Anglo-Saxon rune wizards, see Ancient Magic, pages 133-136.)
+
+Since then, magi have heard next to nothing about them; whether or not they still pose a threat to the Order of Hermes is a question that can cause a Tribunal to devolve into a cacophony of voices for and against. It's generally accepted that the Order of Hermes is still at war with them, should any of them reappear, and since the Oath states that "the enemies of the Order are my enemies," it's argued that magi have a legal obligation to fight them. Whether or not that means a vitkir must be slain on sight probably depends on the judgment of the magus who encounters him.
+
+If there is indeed a gathering army of rune wizards intent on stri..."""
+    }
+
+    #ARM5VS063aB2cD4eF6gH8iJ ^"Vitkar Virtues" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Gentle Gift Major Rune Focus Mythic Blood Secondary Insight
+
+MINOR, SUPERNATURAL
+
+Affinity with (Rune) Cyclic Magic (positive) Deft Rune Fast Caster Free Study Inoffensive to Animals Inventive Genius
+
+Life Boost Mastered Rune3 Minor Rune Focus Nameless Runes Personal Vis Source Puissant (Rune) Secret Runes* Side Effect Special Circumstances"""
+    }
+
+    #ARM5VS064aB2cD4eF6gH8iJ ^"New or revised Virtues" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character may cast rune spells without inscribing his name into the script at no penalty, though he receives no benefit when he does. The runes still form a magical connection to him that other magic characters can detect with their spells and use to identify him, but it is not obvious to those who can read the writing on the stone."
+    }
+
+    #ARM5VS065aB2cD4eF6gH8iJ ^"Secondary Insight" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "When the vitki is studying any of the runes, he also gains a single experience point in all of the other runes in that same aett. He may not put more than one bonus experience point into a single rune during the same season, even if he studies multiple runes, and if he studies runes from multiple aetts, he must choose which group of seven runes receives the bonus."
+    }
+
+    #ARM5VS066aB2cD4eF6gH8iJ ^"Secret Runes" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The character may hide the runes that describe the effect of his rune scripts without suffering a penalty to his Casting Total, and taking only a -5 penalty when he does not describe the effect at all. He gains no benefit from inscribing the runes normally, but does receive a bonus when he exaggerates the runes. He may take this Virtue twice to eliminate the penalty altogether."
+    }
+
+    #ARM5VG004aB2cD4eF6gH8iJ ^"Vitki" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Free"]
+            ^"Category" ENUM ["Social Status"]
+        }
+        DESCRIPTION """The character is a Norse rune wizard, believed by magi to belong to a group called the Order of Odin. At one time he was respected and feared by other men living in the north, but now very few of his people even know his kind exists. He is still considered by many magi to be an enemy of the Order of Hermes, and those who discover what he is may try to hunt him down and kill him, or else attempt to
+
+force him to teach them his magical secrets.
+
+Vitkir may take Arcane Abilities, Martial Abilities, or Academic Abilities during or after their apprenticeship, just like Hermetic magi, as long as these Abilities are appropriate to their masters' backgrounds (for example, an academic vitki is unlikely to teach his apprentice Great Weapon, and a warrior vitki probably does not ensure his followers are well versed in Philosophiae).
+
+All vitkir must take this as their Social Status Virtue, and it is only available to them.
+
+New or Revised Flaws
+
+Vitki also have these new or revised flaws:"""
+    }
+
+    #ARM5VS067aB2cD4eF6gH8iJ ^"Major Magical Deficiency" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The vitki has a magical deficiency with all of the runes in a single aett. Whenever
+
+Vitkar Magic Foci
+
+A vitkar magic focus is associated with spells that have a particular purpose, such as healing, making war, or seeking knowledge, and is tied to a specific material into which the runes must be carved, such as bone, metal, or stone. If the spell is applicable to the vitki's purpose and uses the proper material for the inscription, he may double his score in the rune used in the spell formula. For a Major focus, any rune with an effect applicable to the magical focus may be used. A Minor focus is tied to a single rune, chosen when the vitki gains the Virtue, and the vitki's spells must use that rune as either the target rune or the effect rune for the focus to apply. Like a Hermetic magic focus, a vitki can only take a single vitkar magic focus at character creation.
+
+Here are some examples of magical foci, taken from the medieval poem Sigrdri-fumál in which the valkyrie Sigrdrífa teaches the hero Sigurðr the seven different uses of rune magic.
+
+Victory Runes (Sigrúnar): These runes are used to ensure the vitki's success in battle, and are carved into metal weapons and armor, usually the blades of swords or long knives. Runes commonly associated with this sort of magic include Tiwaz (T), Othila (O), and Ehwaz (E).
+
+Ale Runes (Olúnar): These runes must be scratched into horn or hardened leather, like a drinking horn, or else into the vitki's own fingernails. They typically gi..."""
+    }
+
+    #ARM5VS068aB2cD4eF6gH8iJ ^"Minor Magical Deficiency" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The vitki has a deficiency with three of the runes. Whenever one of his rune scripts includes these runes, his casting total is halved. Or, the vitki may have a grave deficiency with a single rune, such that he cannot use it in any of his spells."
+    }
+
+    #ARM5VS069aB2cD4eF6gH8iJ ^"Natt-Thel Prone" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The vitki is particularly susceptible to being overwhelmed by the power of magic, and suffers the effects of Nátt-thel (described later) any time you roll a single supernatural botch, rather than a double botch."
+    }
+
+    #ARM5VS070aB2cD4eF6gH8iJ ^"Short-Lived Runes" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The magic in the vitki's runes naturally fades, and unlike other rune spells is not permanent as long as the rune is not damaged. The storyguide should secretly roll a stress die (no botch) on the Nátt-thel Duration Chart to determine how long any given ef-
+
+The vitki can spend Confidence or vis to lengthen the duration, as well as to increase his casting total. The storyguide should add 1 to this duration roll for each pawn or Point spent for this purpose during the casting."""
+    }
+
+    #ARM5VS071aB2cD4eF6gH8iJ ^"Slow Caster" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The vitki's rune scripts require much more time to prepare and execute than that of other vitki, taking him twice as long to carve. It is impossible for him to produce an effect in a single round, though he can manage a hasty spell in two rounds if he takes the  -- 15 penalty and leaves off his name and the description of the effect.
+
+New Abilities
+
+These new abilities are also available:
+
+CRAFT: RUNES
+
+The vitki can carve or inscribe the runic alphabet into many different types of
+
+hedge Magic"""
+    }
+
+    #ARM5VS072aB2cD4eF6gH8iJ ^"Vitkar Flaws" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """Blatant Gift Major Magical Deficiency Magic Addiction Nátt-thel Prone Painful Magic Restriction
+
+MINOR, SUPERNATURAL
+
+Careless Sorcerer Cyclic Magic (negative) Deleterious Circumstances Disorienting Magic Minor Magical Deficiency Offensive to Animals Short-Lived Runes Slow Caster Susceptibility to Divine Power Susceptibility to Faerie Power Susceptibility to Infernal Power Warped Magic Weird Magic
+
+* New or revised Flaws
+
+The Rune Poems
+
+Characters who are interested in learning about the magic of the vitkir can track down a study source in the form of a "rune poem"  --  one of the rare and valuable works written by the vitkir to teach their followers the basics of rune carving and their magic. These texts name each rune and give a brief description in verse. The verses are typically four lines long, one verse for each rune, and describe the rune's mystical properties through imagery. For example, "Wealth / source of discord among kinsmen / and fire of the sea / and path of the serpent" or "Hail / cold grain / and shower of sleet / and sickness of serpents." There are three texts that have spread far enough from the vitkir that they might be found in Mythic Europe: the Icelandic Rune Poem and the Norwegian Rune Poem, both of which use the Younger Futhark alphabet (see The Runes, Modified Runes, later in this chapter, and the Anglo-Saxon Rune Poem, which uses the Futhorc and was translated into Latin by Christian monks, though with many revisions to the text.
+
+material, and th..."""
+    }
+
+}

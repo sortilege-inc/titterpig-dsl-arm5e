@@ -1,0 +1,225 @@
+EXTENSION "ARM5e_HP_Spells_Herbam" {
+    NAME "Hermetic Projects - Herbam Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Hermetic Projects
+
+    #ARM5SP037aB2cD4eF6gH8iJ ^"The Hands of Phereclus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Requisite" STRING "Terram"
+        }
+        DESCRIPTION """Given enough lumber and prepared iron nails and other fixtures, this craft magic spell constructs an entire ship from the assembled raw materials. The design of the ship can be decided as the magus works the spell, and enough lumber can be controlled by the spell to create a ship of up to size +8. The free Terram requisite allows control and manipulation of the nails, bricks, and other mineral elements, but it cannot prepare them from raw materials; they must be in the required state.
+
+As with all craft magic, a Perception + Finesse roll is required and, given the difficulty of creating a full vessel in little more than an instant, the Ease Factor is relatively high. Small ships, up to size +5, can ordinarily be built in a single season, while larger ships take multiple seasons. The following table takes this into account and provides a guide to Craft Magic Ease Factors for creating vessels of different sizes:
+
+| Ease Fac<br>tor |
+|-----------------|
+| 15              |
+| 21              |
+| 27              |
+| 30              |
+|                 |"""
+    }
+
+    #ARM5SP038aB2cD4eF6gH8iJ ^"The Unseen Shipwright" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Requisite" STRING "Terram"
+            ^"Design" STRING "Base 5, +1 Touch, +2 Group, +1 size, +1 flexibility"
+        }
+        DESCRIPTION """The magus selects a pile of wood and formed iron fixtures, and the spell cuts, carves, and joins the wood into the hull of a target ship, repairing splits and holes under the magus' direction. The worst damage is repaired first so that the vessel is always left seaworthy and the repairs are practically seamless.
+
+A Perception + Finesse roll is required against an Ease Factor set by the storyguide. The table on Covenants, page 49, is a useful guide, but a rule of thumb is that repairing a small leak or a splintered rudder is a task of average difficulty taking no more than a day for an Ease Factor of 12, while refloating a wrecked ship is almost impossible, with an Ease Factor of at least 27 (plus any modifiers that the storyguide imposes based on how long it might take a mundane shipwright to refloat the vessel).
+
+The magus must have appropriate materials to hand in order to make repairs.
+
+Required Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)
+
+No shape or material bonuses apply
+
+but appropriate laboratory bonuses can be applied. Experiment side effects might include the repairs being obvious or weakened, or the Ease Factors for the Finesse rolls may be modified."""
+    }
+
+    #ARM5SP039aB2cD4eF6gH8iJ ^"Conjuration of the Seaworthy Cog" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Structure"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Terram"
+            ^"Design" STRING "Base 3, +1 Touch, +3 Structure, +2 for treated and processed Herbam, +3 intricacy, +1 Terram requisite"
+        }
+        DESCRIPTION """This ritual creates a fully-formed cog. The resulting ship is an exact copy of the cog used as a template during the design of this spell, even down to the knots in the hull and the adze marks on the keel. The only difference is that, assuming the magus makes the Intelligence + Finesse stress roll against an Ease Factor of 9, the conjured ship is in perfect condition, as though each part of its construction has only just been finished. Any flaws in the original template are rectified where they would have made the conjured ship weaker or less seaworthy.
+
+A Terram requisite is required to create the bolts, nails, and other fixtures.
+
+Given the nature of the spell, a different ritual is required for each different type of ship that the shipwright wishes to conjure. To achieve this, the Hermetic shipwright must create a new ritual using the existing laboratory text as a guide and apply the principles to a new design.
+
+Unless cast on a waterway, the ritual should be cast within a boat shed prepared to receive the conjured vessel so that it does not topple and damage itself or its surroundings. Making the preparations forms a significant part of the ritual. Botches in casting are likely to conjure the ship in a position the magus did not expect, which could cause significant damage to his laboratory or bystanders.
+
+Required Lab Total: 1 season (90), 2 seasons (68), 3 seasons (60), 4 seasons (57)
+
+If designed in the Hermetic Shipyard described earlier, the +10 bonus for ships applies to this laboratory total. Magi may want to experiment to raise their lab totals, in which case the type or size of ship created may be different, the quality of the ship may be worse than intended, or the completion of the ritual may destroy the template ship.
+
+Support for Mysteries
+
+There are magical mysteries used across the Order that make the preparation for enchantment of large devices easier. The Verditius Magic virtue allows the magus to reduce the pawns of vis required to open the shi..."""
+    }
+
+    #ARM5SP040aB2cD4eF6gH8iJ ^"Reparation of the Wounded Vessel" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Structure"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Terram"
+            ^"Design" STRING "Base 3, +1 Touch, +3 Structure, +2 for treated and processed Herbam, +3 intricacy, +1 Terram requisite"
+        }
+        DESCRIPTION """This ritual repairs all the damage to the target ship, restoring all it sdamage levels regardless of its condition. All components considered intrinsic to the ship are affected by the ritual, including the rudder, masts, castles, sails, oars, and so on. The spell works on any vessel and returns it to the peak of its seaworthiness.
+
+Unless the ship is completely wrecked (having lost all of its damage levels), any Hermetic effects enchanted into the vessel are still retained. Enchantments are only lost where all damage levels have been lost.
+
+A Terram requisite is required to mend or replace bolts, nails, and other fixtures.
+
+Required Lab Total: 1 season (90), 2 seasons (68), 3 seasons (60), 4 seasons (57)
+
+The +10 ships bonus afforded by the laboratory applies to this effect. Experimentation may reduce the effectiveness of the ritual, leaving the ship with at least one damage level lost, or in the worst cases put the enchantments at risk."""
+    }
+
+    #ARM5SP041aB2cD4eF6gH8iJ ^"Running Repairs" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Structure"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Terram"
+            ^"Design" STRING "Base 3, +1 Touch, +3 Structure, +2 for treated and processed Herbam, +1 Terram requisite"
+        }
+        DESCRIPTION """This ritual repairs a single damage level to a vessel, represented by the magus identifying and targeting the damaged area of the ship. This ritual may be cast on a ship that has lost multiple damage levels, but only one of those levels will be repaired. A Terram requisite is required to mend or replace bolts, nails, and other fixtures.
+
+If cast on a ship with at least one remaining damage level, any enchantments in the ship are preserved. If the ship has no damage levels remaining, then the enchantments are lost.
+
+Required Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)
+
+The Mechanics of Enchantment
+
+Shipwrights consider the various parts of the ship as being separate entities. The keel (where present) and the hull comprise one, the mast makes an-
+
+The Hermetic Architecture Virtue presents a method of enchanting very large objects through the use of mystically attuned proxy devices (The Mysteries Revised Edition, page 97). These devices are prepared and enchanted separately and then joined through a ritual with the ultimate target of the enchantment.
+
+This approach has a number of benefits. The proxy devices are small enough that they can be enchanted within a standard Hermetic laboratory under carefully controlled conditions. The devices can be applied to structures of any size. Finally, the Mystery permits Boundary effects to be enchanted into the devices, something ordinary Hermetic understanding does not support.
+
+But the process is both time-con-
+
+suming and vis-hungry. To enchant a wooden ship of size +7 (a large cog), the Hermetic Architect would at minimum need to open seven separate devices with 14 pawns of Vim vis each. Each of these devices would then need to have the target enchantment invested separately. This process is followed by a further ritual of level 40 (assuming an original enchantment of level 30). This is a total of 127 pawns of vis over potentially 14 seasons.
+
+For the Hermetic shipwright, it is preferable to build ..."""
+    }
+
+    #ARM5SP042aB2cD4eF6gH8iJ ^"Curse of the Blasted Heath" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 5, +1 Touch, +1 Part"
+        }
+        DESCRIPTION """This spell destroys all wooden items that the target is carrying. Note that many magical items and talismans are made of wood or have wooden components.
+
+Required Lab Total to invent spell: One Season (30), Two Seasons (23), Three Seasons (20), Four Seasons (19)."""
+    }
+
+    #ARM5SP043aB2cD4eF6gH8iJ ^"Dance of the Spidery Ink" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Requisite" STRING "Muto"
+            ^"Design" STRING "Base 5, +1 Touch, +1 Part, free requisite"
+        }
+        DESCRIPTION """This effect causes a small quantity of text (up to a page) to form into a spidery creature and walk from one piece of paper or vellum to another. The two pieces of paper or vellum are held in either hand of the caster. Casting the spell transfers the text to the second piece of paper or vellum.
+
+Note that this spell does not attempt to understand the moving text in any way.
+
+Story Seed: Vandals in the Library
+
+The librarians at Durenmar have spells that can test for the completeness of texts (see Covenants, page 100). A routine audit reveals that several books are apparently missing content.
+
+The player characters may either be responsible for this vandalism, or called upon to help find the vandals.
+
+In order to preserve the sense of the text, the caster must make a Dex + Finesse roll against an Ease Factor of 9 (if he understands the text) or 12 (if he does not understand the text).
+
+For this spell to work, the ink must be made of a plant product (which is common). A similar spell designed with an Animal, Corpus, or Terram Form will be needed if the ink is an animal, human, or mineral product.
+
+Similar spells with longer durations and a Group target could be invented to transfer the entire text from a large work. For a Lab Text, for every magnitude of effect (level divided by 5), it takes one hour to move the text. For a summa or tractatus, it takes one hour to move the text per point of Source Quality. Note that this only moves the text from one place to another; it does not create a copy of the text.
+
+The Muto requisite is required to make the ink stick to the new piece of parchment.
+
+Required Lab Total to invest effect: One Season (30), Two Seasons (23), Three Seasons (20), Four Seasons (19).
+
+Symbolic Representation
+
+A symbolic representation of a target can be used as a +2 Sympathetic Connection."""
+    }
+
+    #ARM5SP044aB2cD4eF6gH8iJ ^"Conjure the Mighty Barn" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["IndThis spell creates a large barn constructed entirely of wood, including paddocks, stalls, and a loft. The barn is 100 paces long and wide, and twenty feet high. The interior's design is determined by the caster"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +3 size, +2 elaborate design"
+        }
+        DESCRIPTION """Required Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)
+
+The Backers
+
+Constructing a menagerie takes considerable time and resources, and not every magus will have the wherewithal to accomplish the goal alone. Those with an entrepreneurial spirit may seek out backers, magi of means willing to finance the operation in return for future benefits. The initial investments vary: vis is always appropriate, money can pay the staff and provide supplies, land allows for building sites, or personal magical assistance can help with specific magical requirements. A maga could, for example, agree to donate one season of lab work a year, in return for annual payouts.
+
+The scale of the backers' investment depends on the final vision of the menagerie. A small-scale menagerie, holding only a dozen exotic animals, might be intended solely as a meeting place for Hermetic gatherings, and a backer who supplied a rook of vis for its start-up might be able to use the facility for one weekend a season. A menagerie that produces magical offspring might be required to give the backers one magical animal a year. A large-scale stud farm might be required to pay the backers back in vis, perhaps ten percent of their initial outlay in perpetuity. It all depends on what the backers are willing to give, and what the menagerie manager is willing to give back.
+
+There are no mechanical rules for backers, how many any player character needs or what type of resources each has to give. A backer exists primarily to drive stories, as his wants and demands have an impact on the functioning menagerie. Backers have a variety of motivations for
+
+Integrating Covenants
+
+A menagerie could be designed as a covenant, and a covenant could be designed to include aspects that lend themselves to a menagerie. If you are in the position of designing a covenant and wish to include features earmarked for a menagerie, the following suggestions might be useful. All page numbers refer to the Covenant..."""
+    }
+
+}

@@ -1,0 +1,723 @@
+EXTENSION "ARM5e_Myst_Spells_Vim" {
+    NAME "The Mysteries Revised - Vim Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: The Mysteries Revised
+
+    #ARM5SP024aB2cD4eF6gH8iJ ^"Sustain a Spell of (Form)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """Req: Form (or Forms) of the spell to be sustained
+
+Allows another spell to be bound to this and to a physical container. The base level of this container ritual must equal or exceed the spell to be sustained. The container spell duration must maintain the container until casting begins for the spell to be sustained, after which the spells are entwined.
+
+(General, special)
+
+command ghosts, too, but as these usually have names, it is frowned upon by some magi, and is classed under necromancy.
+
+To sustain a spell in this manner, the magus needs three things: the spell to be bound and sustained, a container, and a spirit to provide Might to sustain the spell. The spell to be sustained cannot be a Ritual spell, nor have a duration of Momentary.
+
+The container is an inanimate physical item  --  if that item should ever break, the magic is broken, the spells end, and the spirit is freed. The magus must transform the container with a general Ritual spell Sustain a Spell of (Form): the base level of the container ritual must equal or exceed the spell to be bound.
+
+Normally the bound spell is cast immediately after the container spell is complete, but extended container spells exist that remain passive until linked to a spell  --  the passive duration is determined as for a normal spell, adding magnitudes to increase from a Momentary passivity. Once casting of the spell to be contained begins, the two spells become entwined, and both spells last together for the duration of the bound spell  --  both spells end if either spell ends or fails. Now linked, the bound spell's magical effect and the physical container become Arcane Connections to each other.
+
+Example: Sustain A Spell of Fire, ReVi(Ig) Gen, R: Touch, D: Special (Momentary), T: Ind, Ritual  --  will contain a spell up to its level, cast immediately after the Sustain ritual is cast.
+
+Example: Delayed Sustenance of Fire, ReVi(Ig) Gen, R: Touch, D: Special (Sun), T: Ind, Ritual  --  will contain a spell up to (level - 10..."""
+    }
+
+    #ARM5SP025aB2cD4eF6gH8iJ ^"Divide the Gathered Essence ReVi 25" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group Transfers the raw vis from an item into one or more containers. The maga"]
+        }
+        DESCRIPTION """divided. (Base 10, +1 Touch, +2 Group)
+
+may freely choose how the vis is to be
+
+vis. (He would only have extracted four pawns without Hermetic Alchemy.)
+
+Later he decides he would really like some Ignem vis, but lacks a ready source, so decides to extract some from the aura. He posits a Ward Against Heat and Flames effect, and puts together a piece of fired clay (+4 contain or protect from fire) with a lead seal (+4 wards). The bonus from these is +8, which again exceeds his Magic Theory. His Ignem score is 19, which is greater than his Vim, so his Lab Total is again 44. Extracting Form-specific vis halves the yield to (44/20) rounded up, so he extracts three pawns of Ignem vis.
+
+Philosophic Alchemy  --  Minor and Major Mystery Virtue
+
+Philosophic Alchemy builds on Hermetic Alchemy and lets the magus settle the alchemical object into the process so that it digests and ferments on its own, and extract Vim or Form-specific vis from the aura (by Hermetic Alchemy) with little attention from the magus. (This Virtue requires Hermetic Alchemy as a prerequisite.)
+
+Alternatively, the magus may process the object to create ready-opened enchantment spaces instead of raw vis. The decision whether to extract vis or create ready-opened spaces is made at the start of the process.
+
+If a maga already has Minor Philosophic Alchemy when she seeks to Initiate the Major Virtue, the new Virtue replaces the old. The "loss" of the Minor Virtue counts as an Ordeal Flaw (loss of a Virtue) for the Initiation.
+
+Minor Philosophic Alchemy requires a year (four continuous seasons) of fermentation and digestion before the vis extraction is complete and the vis may be used. Major Philosophic Alchemy allows a more efficient digestion to be established, which is completed in a single season.
+
+Automatic Extraction of Vis
+
+The magus prepares an object just as he would to extract with Hermetic Alchemy, with the same bonuses, and the same amounts of vis extracted. However, he understands how the process ..."""
+    }
+
+    #ARM5SP026aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Always On"]
+            ^"Target" ENUM ["Ind, Mystery Effect"]
+        }
+        DESCRIPTION """If the Great Elixir works, the magus transforms into a being aligned to the Magic realm, making him a magical creature.
+
+Note that this is a Mystery Enchantment, outside Hermetic theory, and may not be replicated by those without the Greater Elixir Virtue. Hermetic theory does not in itself possess the ability to transform a human into a being of the Magic realm. It only functions as part of the Elixir ritual, and may not be cast as a spell.
+
+(Unique Mystery)
+
+Grant Might
+
+CrVi, Gen"""
+    }
+
+    #ARM5SP027aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Always On"]
+            ^"Target" ENUM ["Ind, Mystery Effect"]
+        }
+        DESCRIPTION """If the Great Elixir works, the magus gains Magic Might equal to half (effect level-20).
+
+Note that this is a Mystery Effect, outside of general Hermetic theory, and may not be replicated by those without the Greater Elixir Virtue. Hermetic theory does not in itself possess the ability to grant Magic Might to a human. It only functions as part of the Elixir ritual, and may not be cast as a spell.
+
+(Unique Mystery)
+
+Testing the Great Elixir
+
+When the potion is complete, the maga drinks it, and tests the Elixir with a roll of:
+
+Simple Die + Stamina + Lesser Elixir Level + Reroll Bonus vs. Ease Factor of (Age/10, round up)
+
+If the maga fails, then she knows that the particular Become a Being of Magic and Grant Might effects attempted did not work for her. However, all is not lost: She merely needs to create another dose of Lesser Elixir (possibly reinvented to include more Elixir Points), and use it to create an alternative Great Elixir potion.
+
+The Lab Texts for the previous Great Elixir enchantments give a similar spells bonus of (effect magnitude) to the new Great Elixir effects, but no other benefit. In addition, each attempt at the Great Elixir grants a cumulative +1 bonus to the roll, to a limit of the maga's Magic Theory.
+
+Example: Desperata has studied alchemy for many years, She is 157 years old. She has Stamina +2, Magic Theory 10, and 53 Lesser Elixir Points  --  an Elixir Level of 9. Her player rolls 4 + Stamina 2 + Lesser Elixir Level 9 = 15 vs. Ease Factor 16  --  failure. Desperata curses her bad luck, and plans several seasons more to enchant different effects into her Great Elixir, and then to test the new formula.
+
+Success! Effects of the Elixir
+
+The magus who succeeds in creating the Greater Elixir ceases to be human, and becomes an immortal, alchemical being of the Magic realm, with a Might score determined by the Great Elixir potion. He may be slain, but he will not die of lesser wounds, nor age or Warping.
+
+The transformation is complete and irrevo..."""
+    }
+
+    #ARM5SP028aB2cD4eF6gH8iJ ^"Sense the Hour" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch"
+        }
+        DESCRIPTION """Measures the astrological time in the area around the magus. Knowing the hour exactly subtracts 3 from the Ease Factor of the Astronomy roll for an Astrological Duration spell.
+
+Measuring the conditions at a single point is sufficient, as identical conditions (suitable for Astrological Durations) extend for some 500 paces away from the point (standard Boundary area x 100). Increasing the size of the spell Target serves no purpose, as the measurement area is limited by changes in the astrological conditions, rather than by the magus's spell."""
+    }
+
+    #ARM5SP029aB2cD4eF6gH8iJ ^"Sight of the Astrological Hour" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +3 Sight"
+        }
+        DESCRIPTION "Measures the astrological time in the area around a point the caster can see."
+    }
+
+    #ARM5SP030aB2cD4eF6gH8iJ ^"Divine Heaven's Aspect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 10, +4 Arcane"
+        }
+        DESCRIPTION """Reports all aspects of the astrological conditions (minute, hour, day, sign, planets) at a point that the caster can see, or to which he has an Arcane Connection. Identical conditions extend for some 500 paces away from this point (100 standard Boundaries).
+
+New Enchanted Device: Magical Armillary Sphere
+
+An armillary sphere is a complex mechanical device that indicates time and the movements of the planets and stars. By making an accurate armillary sphere and marking it accurately with astrological signs, the maga can set the wheels to any configuration of the heavens, and read off from the wheels and dials the configuration of the heavens at an earlier or later time. The prediction of astrological conjunctions at times in the future is possible because the wheels of the heavens continue to cycle indefinitely and precisely. (The armillary sphere does not predict or break the Hermetic Limit of Time, it just mechanizes the calculations of the astrologer.)
+
+By linking an enchantment moving the circles with a Know the Heavens effect, the magus obtains a device that both reports the current astrological conditions and translates between those and some other time. This is of some limited use in Horoscopes, which are mostly a matter of interpretation, but greatly assists in calculating and working with Astrological Durations.
+
+Making an Armillary Sphere
+
+A magical armillary sphere requires an actual functioning armillary sphere of considerable accuracy that is then animated by the invested effects. Making such an armillary sphere requires a precision physical mechanism: its markings must be
+
+The Armillary Sphere
+
+An armillary sphere, or spherical astrolabe, is a model of the celestial sphere, centered on the Earth. Its name come from armilla, a bracelet or circle, which is to say that its form is that of metal circles (graduated to mark signs and degrees) linking the celestial poles, equator, meridians, and parallels, and the circle of the Zodiac (also known as the eclipt..."""
+    }
+
+    #ARM5SP031aB2cD4eF6gH8iJ ^"Pen +0, unlimited uses" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Pers"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 30, + magnitudes to increase area from Individual"
+        }
+        DESCRIPTION """The armillary sphere keeps adjusting itself back to the current local astrological time.
+
+The two effects combined consume seven spaces and seven pawns of vis, leaving spaces for other enchantments should the magus wish.
+
+Consulting the Armillary Sphere
+
+Consulting the armillary sphere before casting an Astrological Duration spell mechanizes the difficult calculations needed, providing instant access to current and predicted conditions as the magus juggles the conjunctions in his head and works the spell. This halves the Ease Factor of Astrological Duration calculations.
+
+The magus can use the armillary sphere without adjustment if the target location shares the magus's astrological time (all of the intended spell target is within 500 paces of the instrument). To use the magical armillary sphere for calculations based on a more distant location, he must know the conditions there (for example, through casting Divine
+
+Heaven's Aspect), and make an Intelligence + Astronomy roll against an Ease Factor of 9 to adjust the armillary sphere settings.
+
+To Adjust the Armillary Sphere:Stress Die + Intelligence + Astronomy vs. an Ease Factor of 9
+
+This takes but a single round; if the roll is failed, the magus may try again (if it's botched, the spell botches too). When the magus finishes his readings and releases the armillary sphere adjustment wheels, the enchantments adjust the settings back to local time. Further readings require another spell and more adjustment.
+
+The Magoi of the Star
+
+Wise astrologers who see in their arts a means of defeating the destiny of the stars and practicing God-given free will.
+
+The History of the Magoi of the Star
+
+Since ancient Rome, scholars have argued about whether the influence of the planets is compatible with human free will. If the stars dictate our every action, and the astrologer can tell the course of a man's life just by looking at his Nativity Horoscope, are we not bound by their influence? Can one punish a criminal when his action..."""
+    }
+
+    #ARM5SP032aB2cD4eF6gH8iJ ^"Transformation of the Living Ghost (Te)(Fo) Gen" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Ind, Mystery"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """This is a unique transformation, specific to the individual magus. The spell uses his best Arts, and defines his power as a ghost. There is a transformation limit to the Might Score he may achieve, equal to his best Technique and Form combination, including Puissant Arts, and any applicable Magical Focus; e.g., self-transformation, death, or ghosts and corpses.
+
+Transformation Limit = Best Technique and Form Combination
+
+The magus must also include levels in the spell design for the size of Haunt in his Bind the Living Ghost Ritual
+
+Size Levels = Levels Added to Increase Target of Bind the Living Ghost
+
+Example: Graculus' best combination is Rego (28) Mentem (26). He has a Major Magical Focus in Necromancy (ghosts and corpses), so his maximum transformation limit is 28+(2 x 26) or 80.
+
+He chose a 1,000-pace area (Boundary +2 magnitudes) as his Haunt, which increases Bind the Living Ghost by 30 levels. He must dedicate 30 levels of his transformation limit to match the size of Haunt.
+
+The base level of the Ritual (before additions for Size) determines the Living Ghost's Might Score after transformation, but Might Score cannot exceed his transformation limit. In addition, the final level of the Ritual must be at least equal to the transformation limit.
+
+Might Score = Ritual Spell Level - Size Levels
+
+The Might Score is limited by the transformation limit. The Ritual spell level must equal or exceed the transformation limit.
+
+Example: Graculus' transformation limit is 80 so the final spell level must be at least 80: he plans a spell of exactly that level. (His ultimate limit is whatever he can devise with his Lab Total.) His Haunt requires 30 levels, so his Might Score will be (80 - 30) = 50.
+
+His ritual is thus The Living Ghost, Rego Mentem 80, Pers, Mom, Boundary +2, and provides him with a Might of 50. He can expect an immortal existence as an extremely powerful spirit. Without the Magical Focus, he would have been much more limited and forced to trade Might for the..."""
+    }
+
+    #ARM5SP033aB2cD4eF6gH8iJ ^"Name of Power (X)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Special (Per)"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Special (Individual)"]
+        }
+        DESCRIPTION """Learning this spell embodies the maga's special understanding of a single aspect of the magic of one of the great powers.
+
+This knowledge provides a bonus to other magical activities, with a scope and bonus similar to those found in the Shape and Material Bonus table. A specific name spell provides one bonus only (even if the example in the Shape and Material Bonus table has several factors). A maga may invent multiple spells for a given name, to allow different scopes or multiple bonuses.
+
+The scope and bonus values possible for a power should be agreed with the troupe, and should be consistent with the mythological nature of the power whose name is invoked.
+
+The level of spell is five times the desired bonus. Range, Duration, and Target are fixed.
+
+(General level)
+
+power, they allowed the Daimons to be conjured, and gave influence and the power to command them in this life.
+
+This Mystery School differs from that of Hermetic spirit magic, for spirit magic deals with relatively minor unnamed (to the knowledge of men) spirits, which it uses simply as a power to allow the sustenance and empowering of the magi's magic. Name magic instead deals with the making of deals and bargains with potent magical entities.
+
+Names of Power  --  Minor Hermetic Mystery Virtue
+
+The maga may invoke names of the great powers (angels, planets, pagan gods, faerie lords, and such) in her magic, even if she cannot summon and bind them directly. Hermetic magi can learn to use
+
+Synthemata
+
+The ancients described synthemata as "divine names," which cannot, in fact, be true, as the pagan spirits are not part of the Divine realm; being pagan spirits they are Faerie or Magical beings. However, synthemata do exist, and Hermetic magi understand them as signs, symbols, or passwords that link the magician to the spirit. Many theurgic spells include these magical words in the formula of incantation, they are required as part of the formula, but do not bring special benefit to most magi.
+
+Some magi have..."""
+    }
+
+    #ARM5SP034aB2cD4eF6gH8iJ ^"Invoke the Spirit of (*spell*) (Te)(Fo) Gen" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind, Mystery spell"]
+        }
+        DESCRIPTION """The base level is the Might of the spirit summoned. The magus can add levels to increase Penetration, and can extend Duration to have the spirit wait to be instructed.
+
+This generic spell represents a pact with a single named spirit that can perform the equivalent of a single Hermetic Formulaic (non-Ritual) spell as a spell-like spirit power. The spirit can vary the spell when cast, as if it had Flexible Formulaic Magic, but must be instructed to cast the spell (which takes time). The spirit creates the spell effect as a power (no die roll), so it cannot botch.
+
+A magus do not need to know the name of the spirit before he starts  --  his laboratory research guides him through the spirits to find one that answers his call. Once the research is complete, the name is fixed, and only this spirit will answer this Invocation spell. If a Lab Text is used, the Lab Text determines the named spirit. The name of the spell spirit serves as an indefinite duration Arcane Connection allowing the magus to summon the spirit and to use sympathetic magic on it (ArM5, page 84).
+
+Invoke spells are Mystery magic and use the Arts of the spell the magus wishes the spirit to cast, unlike other normal summoning magics. If the spell-like power the magus desires has requisites, the Invoke spell has the same requisites. The magus does not need to know the normal Hermetic spell to invent a spell to summon a spirit that will invoke the spell for him (nor is a Lab Text for the other spell of any assistance, although a Lab Text for an Invoke spell can be used).
+
+The Might of the spirit must equal or exceed the level of the spell-like power, and spirit Might determines the base level of the Invoke spell. The magus may extend the Duration of the Invoke spell, and this determines how long the spirit will wait for instruction  --  Momentary Duration requires that the caster immediately instruct the spirit.
+
+Penetration for the spirit is determined like an enchanted device effect: it has a base of zero ..."""
+    }
+
+    #ARM5SP035aB2cD4eF6gH8iJ ^"(Te)(Fo) Gen" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind, Mystery spell"]
+        }
+        DESCRIPTION """The base level is the Might of the spirit summoned, and the inventor can extend Duration to have the spirit wait to be instructed.
+
+This generic spell represents a pact with a single named spirit, that can perform effects as if casting Spontaneous Magic. The Invoke spell itself is a Formulaic spell, which the magus may be able to cast without fatigue; the spirit then creates the spell effect as a power (no die roll), so cannot botch.
+
+The Invoke spell is a Mystery secret and uses the Arts of the magic the magus wishes the spirit to cast, unlike other summoning spells. A magus may create an Invoke spell with specific requisites to summon a spirit for an Art combination with requisites, however, he requires a specific spirit and Invoke spell for each combination he desires; e.g., a Muto Corpus (Animal) spirit can only produce MuCo(An) effects, and not MuCo or MuAn effects  --  he needs separate spirits for each.
+
+The magus does not need to know the name of the spirit before he starts  --  his laboratory research guides him through the spirits to find one that answers his call. Once the research is complete, the name is fixed, and only this spirit will answer this Invocation spell. If a Lab Text is used, the Lab Text determines the named spirit. The name of the spell spirit serves as an indefinite duration Arcane Connection allowing a magus to summon the spirit and to use sympathetic magic on it (ArM5, page 84).
+
+The first time the spirit is called, it will resist and the caster must overcome its Magic Resistance. Once successfully summoned, the magus seals the pact and the spirit will answer his call in future without resistance, and cooperate willingly with his instructions.
+
+When a magus casts an Invoke spell, the invisible spirit appears next to him. He may then instruct it to perform its spell-like power: this takes an extra round (or two if he has the Slow Caster Flaw). The spirit will cast one spell, then depart until next summoned. The spirit uses its own (Migh..."""
+    }
+
+    #ARM5SP036aB2cD4eF6gH8iJ ^"Invoke the Pact of (Daimon)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind, Mystery"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """The base level is the Might of the Daimon, but should be increased in order to summon the Daimon.
+
+This spell represents the formation of a pact with a powerful named Daimon. The Ritual nature of the spell conveys part of the vis spent as a gift to the Daimon. Daimons are difficult to summon, but with this spell a maga can call the Daimon repeatedly until it hears her call and sends an Aspect of itself to answer her. This does not command the Daimon, but most will perform a specific service when summoned. (See Appendix E: Mysterious Beings for examples of Daimon spirits and typical services.) Many Daimons will perform unusual services, beyond simple spellcasting, and often beyond the limits of
+
+The part of the Daimon that a maga sees before her when she creates such a pact is not the whole of such a powerful spirit, but just a part, or Aspect, sent to answer her call. A maga cannot bind an Aspect  --  it will just fade away, discarded by the parent spirit; she can only bind the Daimon itself if she can find the core spirit in the realm where it resides.
+
+A maga may (should!) invent the Ritual at a level greater than the Daimon's Might. When she casts the ritual, she must overcome the Daimon's Magic Resistance for it to hear her call. If she succeeds, she accumulates points equal to (spell level - Daimon Might).
+
+Daimon Summoning Points = Spell Level - Daimon's Might
+
+When the maga has accumulated points equal to its Might, the spirit sends an Aspect to answer her call. A maga can re-invent a spell to summon the same Daimon, with a higher spell level (and a similar spell bonus to invent the new spell). A spell of twice the Daimon's Might can summon the Daimon in one casting, if the maga can overcome Magic Resistance.
+
+Summoning Success: Accumulated Summoning Points = Daimon's Might
+
+It is possible to cast Invoke the Pact of (Daimon) without the Virtue Hermetic Theurgy, but the magus is limited as follows:
+
+- He cannot create his own Invoke spell from scratch, but mus..."""
+    }
+
+    #ARM5SP037aB2cD4eF6gH8iJ ^"(Te)(Fo) Gen" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun (Special)"]
+            ^"Target" ENUM ["Ind, Mystery"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """This is specified and researched as a Ritual spell, but is really a rite of the Mystery.
+
+The hierarch constructs a prototype ascendant form for himself, embodying
+
+The Hall of Heroes
+
+Little is known by mortals of the Hall of Heroes. In Christian times, most people, including magi, would deny that any such thing remained at all. (Many Hermetic magi prefer to stress the secular nature of their learning, and describe Daimonic spirits as "just part of the spirit bestiary.") Nevertheless, Daimonic spirits appear to exist, and there are significant numbers of them, even just counting those known to Hermetic magi. Pagan magi claim that the pantheon of gods still exists, if mostly cut off, with access to and by worshippers today confined to the sacred groves, which often exist in magical regios.
+
+The new spiritual magus may encounter other Daimonic spirits; some may prove to be allies if approached favorably, others may be hostile (or part of enemy groupings in the Hall of Heroes). Spiritual allies may guide the new magus, or even assist him. They may perhaps be bargained with for assistance, as all the remnants of the old pantheons desire the "worship," observance, prayers, and offerings of mortals.
+
+all that is best in his magic. The hierarch temporarily takes on an aura of power and perfection. While the ritual effect lasts, the hierarch's followers cast Transformation of the Ascendant Hierarch, in the hope that their hierarch will make progress to perfection. During the ritual's effect, all of the hierarch's abilities (except his future Magic Might) are manifest in their strongest form, although the hierarch is carried away by his own immanent glory and cannot usefully act other than to accept ritual offerings.
+
+The Mystery rite requires the intendant hierarch prove himself and his celebrants' worth: the celebrants must prove their worth by overcoming the intendant hierarch's Magic Resistance with their own Ritual spell. No short-cuts are permitted, so the magus must ..."""
+    }
+
+    #ARM5SP038aB2cD4eF6gH8iJ ^"Transformation of the Ascendant Hierarch" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Ind, Mystery Ordeal"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """Transformation of the Ascendant Hierarch  is cast on a magus who has already cast Ascendant Form of the Intendant Hierarch upon himself. The level of this ritual must exceed that of the Ascendant Form ritual, and the caster must overcome the target's Magic Resistance (which cannot be suppressed  --  see that spell description). (It is normal for a group of celebrants to use Wizard's Communion to aid their Penetration).
+
+The Mysteries Revised Edition
+
+The target (the hierarch) is tested by the ritual, and appears wreathed in lambent flame and golden nimbus for the duration of the spell. He is also subject to intense agony as the spell courses through his body, but he must endure this in order to ascend. The hierarch makes a Stamina roll against an Ease Factor of 9, or passes out (although he still benefits from the ritual unless he botches the Stamina roll). When the Transformation spell ends, the Ascendant Form ends too.
+
+(Special Mystery)
+
+Given the constraints of the rituals, it is likely that the hierarch will work with a group of magi in the laboratory so that a celebrant invents (and learns) the Transformation Ritual and can cast it on the hierarch. The hierarch invents his own Ascendant Form Ritual (but may accept the celebrants' assistance in the laboratory).
+
+The cultists can then cast the Transformation as a group, relying on spells such as Wizard's Communion to boost their Penetration and overcome the Magic Resistance of their ascendant hierarch.
+
+The Cumulative Transformation Process
+
+If the Transformation Ritual overcomes the hierarch's Magic Resistance, accumulate transformation points equal to Transformation spell level - Ascendant Form level. The base total of points needed is the level of the Ascendant Form spell. In addition, points are needed to perfect any failings the hierarch suffers from:
+
+- Count the pyramid point cost of any negative characteristics the hierarch has and multiply by three (ignore positive characteristics). •
+- Add five times D..."""
+    }
+
+    #ARM5SP039aB2cD4eF6gH8iJ ^"Synthemata of (X)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind, Mystery"]
+            ^"Design" STRING "Base named being's Might"
+        }
+        DESCRIPTION """The spell is unique to one named being, and the spell level must equal or exceed its Might. The synthemata spell affects the caster so that the caster adds the synthemata level to the Penetration Total of any spell cast (or begun) immediately after the synthemata spell.
+
+Momentary Duration works for a spell cast immediately after the synthemata spell, but magi often research a spell with extended Duration, allowing a delayed or multiple casting."""
+    }
+
+    #ARM5SP040aB2cD4eF6gH8iJ ^"The Lasting Synthemata of (X)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Ind, Mystery The spell is unique to one named being, and the (spell level – 5) must equal or exceed its Might. The synthemata spell affects the caster so that the caster adds the synthemata (level – 5) to the Penetration Total of any spell cast (or begun) after the synthemata, until the end of the synthemata spell"]
+            ^"Design" STRING "Base named being's Magic Resistance, +1 Diameter"
+        }
+        DESCRIPTION """Diameter duration synthemata are especially popular, as the synthemata can be used several times without concentration. In addition, while the synthemata spell is in effect, the being is aware of
+
+the spell and its threat, and usually very much inclined to negotiate if the caster allows it to.
+
+Researching Synthemata
+
+Synthemata are very difficult to research, and most easily learned from Lab Texts.
+
+The base level of the spell must equal or exceed the Might of the target being; if a magus does not know its Might, then he must guess. In addition, the magus uses (Realm) Lore instead of Magic Theory in his Lab Total for this research.
+
+Lab Total = Muto + Vim + Intelligence + (Realm) Lore + Aura + Bonuses
+
+A magus may use sympathetic magic factors to add to the Lab Total. Calculate the "multiplier" (as on ArM5, page 84) that would be given by the Arcane Connection, secret name, Horoscope, etc. and add this value as a bonus to the Lab Total.
+
+Unfortunately, many powerful beings have means to hide their synthemata from magi (known as name hiding) that are reflected in an adjustment to the spell design difficulty (although
+
+not the level of the actual spell produced). The magus devises the spell as normal, subtracting spell level and accumulating points to reach the spell level when the spell is complete. However, name hiding is subtracted from the normal points per season:
+
+Spell Points Accumulated = (Lab Total - Spell Level - Name Hiding)
+
+The value of name hiding varies, but if a spirit hides its name, the name hiding is usually around (Might/2) points.
+
+Typical Name Hiding = (Might / 2)
+
+The Mysteries Revised Edition
+
+Curiously, some beings have a negative name hiding. Middle- and low-rank demons are rumored to make their names especially easy to discover, as commanding them into unspeakable acts is exactly what they desire.
+
+Each season, the magus accumulates the adjusted points total. When he believes he has enough points to have
+
+completed the spell, he may try it...."""
+    }
+
+    #ARM5SP041aB2cD4eF6gH8iJ ^"The Hedge Lord's Synthemata of (X)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The spell adds its (level-5) to the caster's Casting Score against the named being for two minutes.
+
+(Unique guideline, +1 Diam)
+
+Researching Synthemata
+
+A magus may also try to research the synthemata of a being he has previously encountered in person. He can do so even if he failed to intuit its synthemata.
+
+By fasting and invocation, over the course of an entire season, the magus attempt to research the synthemata. He learns the synthemata on a success in a roll of Perception + (Realm) Lore + aura modifier against an Ease Factor of the being's Might + name hiding (no aura modifier):
+
+Stress Die + Perception + (Realm) Lore + Aura Modifier + Bonuses vs. Might + Name Hiding
+
+If the magus has a sympathetic or Arcane Connection to the being, he may use this in a similar manner to those with Hermetic synthemata: calculate the "multiplier" as in ArM5, page 84, and add the score as a bonus to the synthemata research roll.
+
+Failing this roll does not prevent future attempts. Botching the roll may still attract the attention of the being, but hopefully the covenant's Aegis of the Hearth can ward out the offended spirit.
+
+Chapter Ten
+
+The Great Talisman
+
+Many cults teach magi how to improve their talismans. This lore is not tied to any specific Mystery School. A talisman is an intensely personal item, and the Knights of the Holy Stone (see Chapter 14) often choose a heraldically charged shield as their personal talismans. Other traditions may also have a uniform style of talisman.
+
+13th-century magic is filled with enchanted devices, amulets and, in possibly the most famous case of all, the Brass Head, which was built by the learned divine Albertus Magnus, and later rumored to be smashed by his pupil Thomas Aquinas, who went on to become the greatest theologian of the medieval Church.
+
+The term "talisman" is often used to refer to a small image or amulet that is carried and believed to invoke magical powers, but the Order uses the term in the sense of the Arabic magicians w..."""
+    }
+
+    #ARM5SP042aB2cD4eF6gH8iJ ^"Bind the Mystical Structure" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Group, Mystery"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """The base level of the ritual must equal or exceed 5 + level of the highest component device effect levels. Arcane Connection Range is required for the spell effect, even if the magus can touch all of the devices to be combined: in casting the ritual, he touches one of the emplaced devices and establish a connection between them.
+
+The base effect provides for a Group Target  --  the minimum that can include multiple components. However, extra levels of Bind ritual spell are needed to match the size of the architectural structure that is to be enchanted if it exceeds Group size.
+
+(Create a conduit for spells up to (level + 5 magnitudes), +4 Arcane, +2 Group)
+
+Example: To bind a level 50 enchantment into a tower (Structure-sized), the seven component invested devices must be bound together with a Bind the Mystical Structure ritual of at least level 60 (ReVi 60, R: Arcane, D: Special, T: Group: GL (50+5), +1 magnitude for increased Size from Group to Structure).
+
+Breaking the Device
+
+Each component device must have a special place, such as a niche, made for it.
+
+Sample Enchanted Structures"""
+    }
+
+    #ARM5SP043aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["always on"]
+            ^"Target" ENUM ["Structure, Mystery enchantment"]
+        }
+        DESCRIPTION """This enchantment effect combines the Mystery of Hermetic Geometry applied to perfect the regularity of a stone tower (or other building), with Hermetic Architecture so that the structure can be enchanted without fitting into the magus's laboratory.
+
+A basic structure has a Size of 7, so seven component devices are needed, with 28 spaces in each (Size 7 x 4 for hard stone). The magus fashions seven small wooden yokes (Size 2 x 2 for wood) and seven silver staves (Size 4 x 6 for silver), attaches the yokes to the staves and opens them for enchantment.
+
+The investment process benefits from shape bonuses of: yoke +5 enhance strength of wearer (in this case: the tower), staff +4 control things at a distance, and room +6 affect everything within at once. Although the staves are not rooms, they are part of a Hermetic Architecture project to enchant a structure, so the shape of the final project is allowed too. The Shape Bonuses amount to +15, limited by the magus's Magic Theory (which must be at least 14 to open the devices for investment with 28 pawns of vis).
+
+When the devices are finished, their correct placement is determined by a roll of Intelligence + Geometry against an Ease Factor of 13 (6 + Size 7), and the enchantment sealed by casting a Bind the Mystical Structure ritual of at least level 44 (base level 34 + 5, +1 magnitude for size increased from Group to Structure).
+
+The perfection of the tower is maintained continuously, and the natural decay and imperfections of wood and stone are prevented. The tower counts as a perfected entity for Hermetic Geometry, gains extra strength, and is more pleasant to live and work in."""
+    }
+
+    #ARM5SP044aB2cD4eF6gH8iJ ^"Pen +0, unlimited uses, device maintains concentration" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Ind, Mystery enchantment"]
+            ^"Design" STRING "Base 4, +1 Touch, +1 Conc, +5 levels maintain concentration, +10 levels unlimited uses"
+        }
+        DESCRIPTION """Trajan of Tytalus wishes, for his amusement, to construct an arena that makes any combatants within it fight in a berserk rage:
+
+The arena effect is triggered (once per round) on anyone who starts to fight, and continues on each while they continue to fight. If someone manages to stop fighting, the effect ends for him.
+
+An arena is roughly a standard Boundary, 100 paces across. This is enchantment Size 8, and soft earth (x2), so has 16 spaces. The whole can be enchanted by preparing eight stone pillars.
+
+When the eight pillars are ready, placing the components correctly with the proper carved symbols and such requires a roll of Intelligence + Geometry vs. an Ease Factor of 14 (6 + Size 8). The stone pillars can then be bound together with a Bind the Mystical Structure Ritual of at least level 40 (base spell level 25 + 5, +2 magnitudes for increased size from Group to Boundary).
+
+The binding ritual permits the devices to be safely removed from the places provided for them, although the architectural effect ceases while any are missing. So long as the devices and their holding places are all intact, they may be returned to their places, reactivating the architec-
+
+tural effect.
+
+If the Bind the Mystical Structure ritual is designed with a Muto requisite, then the binding places briefly soften and meld with the enchanting devices, so that they form a united whole and cannot later be separated without breakage. For this to be work, the invested effects must not rely on any Shape Bonuses in the component devices.
+
+Investigating the Structure
+
+It is possible to investigate the component devices in a normal Hermetic laboratory. However, since full investigation would need the whole structure and only components are present, the magus's investigative Lab Total is halved.
+
+Further, many such enchantments rely on the Mysteries of Hermetic Architecture or Hermetic Geometry, and these are opaque to those who do not comprehend the Mystery  --  they may understand that it is part..."""
+    }
+
+    #ARM5SP045aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["always on"]
+            ^"Target" ENUM ["Room, Mystery enchantment"]
+            ^"Design" STRING "Base 55, +1 Touch, +2 Room, +14 levels always on"
+        }
+        DESCRIPTION """Increases the Magical aura in a room by +1, to a maximum aura level of 5.
+
+A standard Room is Size 6, and a tower
+
+New Aura Magic Guidelines
+
+The following guidelines can only be used in structural enchantments (not spells) of the Mystery Hermetic Architecture."""
+    }
+
+    #ARM5SP046aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["always on"]
+            ^"Target" ENUM ["Boundary, Mystery enchantment"]
+            ^"Design" STRING "Base 60, +1 Touch, +4 Boundary, +14 levels always on"
+        }
+        DESCRIPTION """Increases the Magical aura in a standard Boundary by +1, to a maximum aura level of 6.
+
+A standard Boundary is Size 8, multiplied by earth (x2), requiring 16 spaces, and as an architectural enchantment needs eight components, such as staff-sized stone pillars (Size 4 x hard stone 4).
+
+Example: Julia of Jerbiton wishes to increase her covenant's aura, so she prepares and enchants her stone columns. To place the eight pillars correctly requires an Intelligence + Geometry roll against an Ease Factor of 14 (6 + Size 8). To finalize the enchantment, she needs to cast a Bind the Mystical Structure ritual of at least level 114 (base level 99 + 5, +2 for increased size from Group to Boundary)."""
+    }
+
+    #ARM5SP047aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["always on"]
+            ^"Target" ENUM ["Boundary, Mystery enchantment"]
+            ^"Design" STRING "Base 4, +1 Touch, +4 Boundary, +14 levels always on"
+        }
+        DESCRIPTION """Increases the size of a Magical regio, doubling its size to a maximum of 200 paces across.
+
+Example: Alyssa has discovered a small magical regio, in which she plans to perform some mystery rites in privacy. The problem is, it is only 30 paces across  --  too small to work comfortably on her rites, which require more space. She therefore decides to expand the size of the regio magically.
+
+A standard Boundary is enchantment Size 8, multiplied by earth (x2) = 16 spaces, and requires eight component devices such as staff-sized stone pillars (4x4). To place the pillars correctly requires an Intelligence + Geometry roll vs. an Ease Factor of 14 (6 + Size 8). To finalize the enchantment, she needs to cast a Bind the Mystical Boundary ritual of at least level 54 (base level 39 + 5, +2 for increased size from Group to Boundary).
+
+Alyssa therefore carves and sets up four of the stone pillars placed around the perimeter of the original boundary of the Regio, and four more placed just next to them. She casts her Bind the Mystical Structure rite, then carries the second set of pillars to the new larger perimeter where they are set in place, doubling the size of her regio to a comfortable 60 paces across.
+
+Closed Privacy of the Enchanted Regio"""
+    }
+
+    #ARM5SP048aB2cD4eF6gH8iJ ^"Mu(Pe)Vi(Te) 79 Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["always on"]
+            ^"Target" ENUM ["Boundary, Mystery enchantment"]
+            ^"Design" STRING "Base 35, +1 Touch, +4 Boundary, +1 to affect the interface only, +14 levels always on"
+        }
+        DESCRIPTION """If a regio has an open boundary, so that any who see through may step into the regio, but the inhabitants desire to close this off, they may do so.
+
+This enchantment shrinks the interface of a regio (rather than the whole regio) until it falls below one pace across, when it pinches off and detaches from the adjacent regio level. (To shrink only the interface between levels adds 1 magnitude (equivalent to a Part Target) on top of the
+
+normal Size of the Target.) Any pre-existing gates remain active. There is no longer a path that can be walked between the two levels, nor can anyone see between regiones by any of the normal means  --  to cross from an adjacent regio level now requires an Arcane Connection and a transportation spell.
+
+The base level enchantment to halve the size of a regio is 4, but for extra shrinking, the magus also needs a Perdo requisite and increased magnitude. To shrink a 100-pace diameter to below one pace, requires seven steps (halving seven times, divides by 128), so the base effect is level 35.
+
+Example: Julia of Jerbiton and her sodales wish to make their covenant's regio into a secret  place, so she prepares and enchants the required eight stone columns (the regio is Size 8, soft earth). To place the pillars correctly requires an Intelligence + Geometry roll vs. an Ease Factor of 14 (6 + Size 8). To finalize the enchantment, she needs to cast a Bind the Mystical Structure ritual of at least level 94 (base level 79 + 5, +2 for increased size from Group to Boundary)."""
+    }
+
+    #ARM5SP049aB2cD4eF6gH8iJ ^"Pen +0, unlimited uses" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind, Mystery enchantment"]
+            ^"Design" STRING "Base 15, +4 Arcane, +10 levels unlimited uses"
+        }
+        DESCRIPTION """This enchantment creates a magical connection between two levels of a single magical regio, which opens when a password is spoken, allowing one to step through a doorway and emerge in the other level.
+
+This effect relies on the Mystery of Hermetic Architecture, and cannot be
+
+enchanted as a single device: it requires four devices, usually combined in pairs to make two tall pillars (so one may walk between the two).
+
+A single gateway allows travel in one direction only; to make a gate bidirectional, the caster needs two gates (eight component devices).
+
+If created as a single set, one Bind the Mystical Structure ritual will serve for all the component devices of a bidirectional pair of gates.
+
+Placing the pillars correctly, with the correct carved symbols and such, requires an Intelligence + Artes Liberales (geometry) roll against an Ease Factor of 11 (6 + Size 5). A Bind the Mystical Structure ritual finalizes the enchantment, to make the gate(s) function.
+
+Chapter Twelve
+
+The Mysteries of Dreams
+
+This Mystery School deals with dreams and their substance, giving the magus the power to control or even enter dreams, and to become part of the stuff of dreams. While the nature of dreams remains mysterious, even to Hermetic magi, this mystery is surprisingly powerful and the nightmares of those who cross its adherents are memorable indeed.
+
+In the 13th century, a fierce academic debate rages within the Church about the true nature of dreams, building upon centuries of learned inquiry. While dream interpretation is still popular, attempts to enter and control dreams are far less common. In medieval Novgorod, however, there was a peasant tradition of visiting others in dreams, and of attempting to control one's dreaming.
+
+Dreams have long been seen as omens, and the interpretation and understanding of them, and the role of dreams in prognostication and divination, are dealt with in Chapter 7: Divination and Augury. Hermetic understanding now states that dreams result from ..."""
+    }
+
+}

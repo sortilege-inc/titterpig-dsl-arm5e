@@ -1,0 +1,241 @@
+EXTENSION "ARM5e_Myst_Spells_Terram" {
+    NAME "The Mysteries Revised - Terram Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: The Mysteries Revised
+
+    #ARM5SP015aB2cD4eF6gH8iJ ^"Duplicate the Mechanism" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["GroupThis spell creates an exact duplicate of an existing mechanism. An armillary sphere itself is complex and fiddly, but nonmagical. The precision of the mechanism is limited by the precision of the duplicated source"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Intellego"
+        }
+        DESCRIPTION """Status-conscious magi may prefer the alternative Level 45 ritual Duplicate the Noble Mechanism, which creates a precious metal (silver or gold, or both) mechanism.
+
+(Base 5 create metal, +1 Touch, +2 Group, +2 for finesse, +1 for Intellego requisite).
+
+A similar spell without an Intellego requisite, Craft the Mechanism, can create a new mechanism, but is limited by the magus's understanding of what he is creating and requires Finesse to match design to instant magic."""
+    }
+
+    #ARM5SP016aB2cD4eF6gH8iJ ^"Craft the Mechanism" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["GroupTo make an armillary sphere with Craft the Mechanism, the magus must design the device with an Intelligence + Astronomy or appropriate Craft Ability roll:"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Intellego"
+            ^"Design" STRING "Base 10, +1 Touch, +2 and 4 levels for \"always on\""
+        }
+        DESCRIPTION """Stress Die + Intelligence + Astronomy or Craft (Mechanisms or Clocks) vs. an Ease Factor of 18
+
+and then must guide the magic to the correct crafted form: Stress Die + Perception + Finesse vs. an Ease Factor of 18
+
+If either roll fails, then mechanism is flawed and imprecise; if either roll botch-
+
+es, then the flaw is subtle and overlooked until used in a non-test situation, when it introduces a botch into an important calculation made with the device.
+
+Enchanting the Armillary Sphere
+
+Once the mechanism is crafted, it is ready to be enchanted. The mechanism must be opened as an invested device, needing 15 pawns (base metal, x3 for skull sized), or 18 if constructed of silver, 30 for gold.
+
+Two effects are now needed:
+
+Know the Heavens
+
+InVi 29 Pen +0, constant effect R: Touch, D: Always on, T: Ind
+
+The armillary sphere continually senses the astrological time and the influence of the planets around itself."""
+    }
+
+    #ARM5SP017aB2cD4eF6gH8iJ ^"Scribe the Perfect Circle" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Creo"
+        }
+        DESCRIPTION """A magus wishing to scribe a perfect circle for a circle spell may trace the circle drawn by this spell.
+
+(Base: 2, +1 stone, +1 Touch)"""
+    }
+
+    #ARM5SP018aB2cD4eF6gH8iJ ^"Perfection of the Well-Designed Chamber" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Structure"]
+            ^"Requisite" STRING "Creo"
+            ^"Design" STRING "Base 2, +1 stone, +1 Touch, +3 Structure, +1 Herbam req."
+        }
+        DESCRIPTION """An irregular building is reshaped so that a single room in a building becomes perfectly regular. The spell fails unless this can be accommodated by small adjustments to the rest of the building.
+
+A room so perfected counts for the Ceremonial bonus options of Hermetic Geometry. The magical perfection is momentary, and then slowly fades as the building structure decays naturally over time; for Ceremonial purposes most buildings remain perfected for a day or so before they settle slightly and lapse.
+
+The specified room becomes regular: right-angled with straight sides, or perfectly circular (most real buildings are not particularly straight). If this is not possible because the room is highly irregular, then the spell fails. If there is any doubt, a Perception + Artes Liberales (geometry) roll against an Ease Factor of 12 or higher resolves the issue. (Difficulty depends upon the irregularities that need perfecting, however, if the Ease Factor would be less than 12 (Hard) the spell will perfect the target without guidance.)
+
+The Structure Target is needed to effect small adjustments to neighboring parts of the building to fit around the new room. (If they were not included in the spell, the structure would fall apart as the room pulled away from the rest.) The remainder of the building need not be regular  --  indeed may be decidedly imperfect given medieval building practices."""
+    }
+
+    #ARM5SP019aB2cD4eF6gH8iJ ^"Substance Over Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind, Mystery"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Muto"
+            ^"Design" STRING "Base 15, +1 Touch"
+        }
+        DESCRIPTION """This spell can only be cast in a dream by a physical traveler and the caster must use real-world vis for the ritual. The target object may appear unchanged for now, but it has a reality that extends beyond dream, so that if a physical traveler leaves a
+
+> dream bearing the object, it travels with him and appears in the real world. If the spell
+
+is cast without real-world vis, the object vanishes as it is brought into the real world."""
+    }
+
+    #ARM5SP020aB2cD4eF6gH8iJ ^"Gift of the Oneiropomp" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Dream, Mystery"]
+            ^"Requisite" STRING "Muto"
+        }
+        DESCRIPTION """Sends a non-magical stone or metal object through a portal into a dream. The caster must be touching both object and dreamer. The caster can designate where in the dream the object appears, if
+
+such a place has been prepared magically  --  otherwise the object must be searched for in dream.
+
+The caster may use cast this spell while awake to send objects into his own dream, provided he lies down to sleep directly after casting the spell.
+
+The Dream Landscape
+
+There are natural portals from dreams to the imagination and memory of the dreamer. These portals are rare and hidden, but some magi claim to know spells to help find them. Memory and imagination both have portals to each other, and back to dream, and the return portals are usually much easier to find than the dream portals.
+
+Physical travelers entering dreams also leave portals that lead back to the places they entered from.
+
+Any travelers in dreams  --  spiritual traveler, physical traveler, demon, or faerie  --  may pass through dream portals if they can find them.
+
+The Mysteries Revised Edition
+
+The Mind's Imagination
+
+In the imagination, one finds past dreams and strange combinations of memories and dreams. Imagination is a land very similar to dream, and the rules given for dream (time, travel, etc.) may be applied here too. However, the imagination persists beyond sleep, into waking time, so a traveler who finds a portal into imagination may remain inside the mind of a waking person, rather than being expelled when the dreamer wakes.
+
+Possessing spirits, such as ghosts, demons, and even faeries, may take up residence in the imagination, from where they may affect the dreams and memories, and even the waking behavior of the possessed person. A traveler in a dream entering the imagination may encounter these spirits (Imaginem beings for spiritual travelers, Corpus, Animal or other forms for physical travelers)  --  they may be bargained with, or defeated here, and if defeated, the possession ends. A possess..."""
+    }
+
+    #ARM5SP021aB2cD4eF6gH8iJ ^"Hiding the Mystic Key" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Requisite" STRING "Herbam"
+            ^"Design" STRING "Base 3, +1 Conc, +1 Part, +1 stone, +1 for requisite to change wood as well as stone"
+        }
+        DESCRIPTION """This spell lets the caster soften a rock, pillar, menhir, tree, or other stone or wooden object so that he can mold a cavity, hide a small item, and then close it over as if it had never been changed. This enables him to embed an item under, but near the surface of, a natural feature of a grove  --  favored for disguising the location of a Key to the Mystic Veil item. (The cultist touches the pillar or tree just above the hiding place.)
+
+Mercurian magicians excel in Formulaic and Ritual Magic, and have developed an extensive range of Mastery Abilities. These Mastery Abilities were originally described in Houses of Hermes: True Lineages, but for convenience they are repeated here.
+
+These Mastery Abilities can be learned by any magus who studies with another who knows the ability  --  if a magus has studied with a maga who knows a particular special Mastery Ability, then any time the magus earns a level in Spell Mastery, he may opt to choose that special ability instead of those in ArM5.
+
+Most magi in the True Lineages prefer to share this specialized knowledge only with their apprentices, although their methods may be written down in books that anyone can read, and it is not impossible for a master to decide to teach a student with very similar goals and loyalties. However, most remain cult secrets, with the exception of Ceremonial Casting (detailed in Chapter 4: Curious Common Magics).
+
+Characters who take Mastered Spells during character creation and who have access to these abilities during apprenticeship may spend their mastery points on them if they wish. They are known by both worshipers of the Cult of Mercury and members of the Neo-Mercurians.
+
+Adaptive Casting
+
+This special ability may only be taken for General spells. The magus may use his mastery score and all the special abilities associated with this spell whenever he casts the same spell at a different level.
+
+Ceremonial Casting
+
+The maga may use ceremonial methods when casting this spell, increasing the..."""
+    }
+
+    #ARM5SP022aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Constant"]
+            ^"Target" ENUM ["Ind, Mystery enchantment"]
+        }
+        DESCRIPTION """This enchantment binds a learned study period into the magus's talisman, so that the magus retains the benefits of
+
+Becoming Immortal with a Familiar
+
+A mortal magus's familiar will not die of old age as long as the magus is alive, and only suffers ill effects from aging when the magus does; the familiar ages along with the magus, generally dying a few days before or some weeks after the magus (ArM5, page 105).
+
+As the paths to immortality variously involve dying, removing from the world, or transforming into an alchemical being, these changes would normally sever the link to the familiar, and leave it to die. However, the existing bond to the familiar allows the magus to draw it along his chosen path to join the magus in his immortal state: ghostly, Daimonic, or as an alchemical magical beast.
+
+In game terms, the magus must add extra raw vis to his transformation rite, equal to their Familiar Bond Score/5 (round up). If this is done, the familiar transforms along with her magus, otherwise she remains as a mortal beast, severed from the new immortal, and will die soon.
+
+A magus with a spirit familiar benefits, as his familiar is already an immortal disembodied spirit: no extra vis is needed to transform a spirit familiar.
+
+study. If the talisman is destroyed, any study bound into it is lost. The Effect level needed is 10 x XP to be retained. The effect must be completed in one season or all new experience points will be lost to the repair effect. If the full effect cannot be invested in a single season, a lesser enchantment can be used to retain some XP, losing the remainder.
+
+(Mystery Guideline level)
+
+Example: A maga studies a tractatus with Quality 10 for a season. The next season, she instills another Binding the Immortal Memory effect into her talisman. She has a Creo Mentem lab total of 90, and can invest a level 45 effect in one season. This is enough to permanently bind 4 XP (a level 40 effect), but she will lose the remaining 6 XP.
+
+Learning Spells
+
+When an..."""
+    }
+
+    #ARM5SP023aB2cD4eF6gH8iJ ^"Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Constant"]
+            ^"Target" ENUM ["Ind, Mystery enchantment"]
+        }
+        DESCRIPTION """This invested enchantment enables the magus's talisman to hold the knowledge to cast a spell. The effect cannot be triggered as a normal device effect, but is always on, as a "memory."
+
+Once complete, the magus may cast the spell as normal.
+
+The invested effect level must equal the level of spell to be retained. The effect must be completed in one season or the spell knowledge is lost. The magus gets a similar spell bonus for this enchantment, regardless of the spell's Technique and Form  --  he is in effect enchanting the spell.
+
+(Mystery Guideline level)
+
+The advantage of instilling The Immortal's Grimoire is that by casting the spell normally the magus uses his full Casting Total, gets full Penetration (Casting Total - Spell level + Penetration Bonus), and has unlimited uses per day. A device effect has zero Penetration and one use per day, unless extra levels are invested. A magus who can instill The Immortal's Grimoire in one season can expect to cast the spell far more effectively than an equivalent effect instilled in a single season.
+
+Binding High-Level Spells
+
+If the magus cannot invest The Immortal's Grimoire effect into his talisman in one season, then he may undertake a particularly laborious process instead. The magus may invest the spell, even a Ritual spell, as a normal effect into his talisman. A Ritual cannot be cast from the talisman, but that is not the point; the point is a to provide a foundation for The Immortal's Grimoire. The magus may create the invested effect over multiple seasons, but must accept that he loses the incompletely fixed spell each time he does so. After each season of enchantment, he must return to the source of the spell and relearn it, alternating a season of spell-learning and a season of investment, until the bound spell effect is completed. (Creating an ordinary invested effect without knowing an equivalent spell is still possible, but does not provide a key to create The Immortal's Grimoire and let the magus cast the sp..."""
+    }
+
+}

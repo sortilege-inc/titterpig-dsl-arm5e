@@ -1,0 +1,2304 @@
+EXTENSION "ARM5e_RoP_Mag_Spells_Vim" {
+    NAME "Realms of Power: Magic - Vim Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Realms of Power: Magic
+
+    #ARM5SP004aB2cD4eF6gH8iJ ^"Feeding the Font of the Covenant CrVi General" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["BoundaryCauses an immediate roll on the Aura Strengthening Table for the Magic aura in which it is cast, with a modifier equal to the spell's magnitude minus five, adding one to the number of botch dice for this roll and for subsequent yearly rolls. The modifier must be 0 or greater, thus the minimum possible spell level is 25. The yearly aura modifier (including the +1 bonus from the casting of this spell) does not add to the roll. If the casting of this spell is botched, a suitable outcome might be either to roll as above, but on the Aura Weakening Table instead, or to make the roll an automatic botch, resulting in the regio outcome"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base effect, +1 Touch, +4 Boundary"
+        }
+    }
+
+    #ARM5SP005aB2cD4eF6gH8iJ ^"Stratifying the Subtle Realities CrVi General" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Muto"
+            ^"Design" STRING "Base effect, +1 Touch, +4 Boundary, +1 Muto requisite"
+        }
+        DESCRIPTION """A variant of Feeding the Font of the Covenant, this spell likewise causes an immediate roll on the Aura Strengthening Table for the Magic aura in which it is cast, with a modifier equal to the spell's magnitude minus 6, but treating a roll of 2 as a 0 and adding five to the number of botch dice for this roll and for subsequent yearly rolls, meaning that a regio (or new regio levels) is somewhat more likely to result. The modifier must be 0 or greater, thus the minimum possible spell level is 30.
+
+New Intellego Vim Guideline
+
+Level 4: Discern the alignment of an aura.
+
+New Perdo Vim Guideline
+
+General: Potentially weaken a Magic aura; roll on the Aura Weakening Table with a modifier equal to magnitude; the modifier must be 0 or greater, thus the minimum possible base level is 4 (Ritual).
+
+New Perdo Vim Spell"""
+    }
+
+    #ARM5SP006aB2cD4eF6gH8iJ ^"Stripping the Superfluous Realities PeVi 30" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Muto"
+            ^"Design" STRING "Base 4, +1 Touch, +4 Boundary, +1 Muto requisite"
+        }
+        DESCRIPTION """An inverse variant of Stratifying the Subtle Realities, this spell causes an immediate roll on the Aura Weakening Table for the Magic regio in which it is cast, with a modifier equal to 0, but treating a roll of 2 as a 0 and adding five to the number of botch dice for this roll and for subsequent yearly rolls. If a botch results then the desired effect occurs, which is that the regio level in which it is cast is destroyed. Even if this spell does not immediately remove the targeted regio level, the extra botch dice for subsequent rolls in following years might cause it to later vanish. Depending on the outcome of the roll, this spell might have the (probably) unwanted side effect of weakening the aura instead. If the casting of this spell is botched, suitable outcomes might be to roll as above, but on the Aura Strengthening Table instead, to inadvertently destroy the wrong regio level, or to otherwise corrupt the structure of the regio.
+
+Aligned Auras
+
+Most Magic auras are not aligned in any special way, and few magi are aware of the existence of such unusual auras. No aura has more than one special aspect, of which the following are a few examples. If it happens that more than one of the following is applicable  --  for example, if an aura is sustained by a natural feature tether of level 5 aligned with Auram and is the home of a Magic creature aligned with Greed that is powerful enough to generate a tether of level 2  --  the level of the aura benefits from both but only the Auram alignment is discernible since it is the stronger. An Intellego Vim spell similar to Sense of Magical Power (ArM5, page 157) can be used to determine whether the aura is one of the following special types, but a different spell is required from the one used to establish that the aura is Magic, and the spell must be modified to test for each variant. For example, an Intellego Vim spell might be cast to ask the question "Is this aura aligned with hunger?"; a slightly different spell is nee..."""
+    }
+
+    #ARM5SP007aB2cD4eF6gH8iJ ^"See the Paths through the Void InAu 20" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Design" STRING "Base 3, +1 Conc, +4 Vision"
+        }
+        DESCRIPTION "This spell allows the caster to recognize the level of all boundaries or vestiges he can see that are associated with Auram, and to pass through any of them into the Twilight Void if he should desire to do so."
+    }
+
+    #ARM5SP008aB2cD4eF6gH8iJ ^"Comprehending the Mystic Doorway InHe 30" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Str"]
+            ^"Design" STRING "Base 10, +1 Touch, +3 Str"
+        }
+        DESCRIPTION """The caster can see into the Twilight Void through the vestige of a wooden structure in the Magic Realm, and lead others through it with a +9 bonus to his Vestige Travel Total.
+
+New Muto Guidelines
+
+Magi use the Art of Muto to change the way that things interact with the basic nature of the Magic Realm.
+
+Level 5: Change the Form of a boundary or vestige. (Requisite)
+
+Level 10:Associate a target with the Magic Realm, as if it had Magic Might of the same Form as this effect. This means it can affect things of that Form with other Magic Realm effects.
+
+Level 15:Cause a target in the Magic Realm to become perceptible as a vestige to travelers in the Twilight Void. Many features of the Magic Realm, but not all, have this property naturally.
+
+OR Cause a target in the Twilight Void to become visible as a vestige in the Magic Realm.
+
+New Muto Spells"""
+    }
+
+    #ARM5SP009aB2cD4eF6gH8iJ ^"Torch of the Realm-bound Reveler MuIg 25" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 10, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "For the duration of the spell, the target may affect fiery objects with Magic Realm Magic in the mundane world, as if it had Magic Might associated with Ignem. For example, he could use an Intellego Ignem effect to see through a flame into the Magic Realm, and pass through it to a microcosm of that flame."
+    }
+
+    #ARM5SP010aB2cD4eF6gH8iJ ^"When Fortuna Blinks PeCo 10" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 10"
+        }
+        DESCRIPTION """The magus disappears from the Magic Realm for a moment, long enough to avoid a killing blow or a blast of flame, or any threat that immediately endangers him. If the danger is something physical, such as a large rock falling on the magus, he reappears either beside or on top of the intervening material, never underneath or inside it.
+
+While good for desperate situations, this effect is somewhat inconvenient for magi, since the disappearance cancels their Parma Magica ritual. It is useful for characters with inherent Magic Resistance, though"""
+    }
+
+    #ARM5SP011aB2cD4eF6gH8iJ ^"Repose of the Eternal Moment PeCo 35" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 10, +1 Touch, +4 Year"
+        }
+        DESCRIPTION """This ritual, which must be cast within the Magic Realm or by a character with Corpus Might, causes the target to disappear into the Twilight Void. As long as it lasts, it is as if he doesn't exist; he will have no memory of the intervening time when, and if, he returns. Note that when the effect is cast in the Magic Realm, it is effectively permanent. A magus determined to ensure he no longer ages might use this effect on himself, first creating a vestige of himself that can be used as a link to draw him back.
+
+New Rego Guidelines
+
+As in the mundane world, Rego gives increased control over one's surroundings in the Magic Realm, and allows magi to increase the rate of travel through vestiges or boundaries. It can allow passage from one province to another in the Twilight Void.
+
+When traveling through vestiges or boundaries, the traveler experiences the journey as if he were passing through the boundary or vestige as normal, though the effect may be too swift for him to recognize any of the intervening details.
+
+Level 5: Transport a target from one province into another. (Requisite)
+
+Level 10:Reduce the length of a target's journey through the Twilight Void by one step. Each additional magnitude reduces the journey by another step.
+
+Level 35:Transport a target instantly through a vestige or boundary, so long as the target is either in the Magic Realm or the caster has Magic Might associated with this spell's Form.
+
+New Rego Spells"""
+    }
+
+    #ARM5SP012aB2cD4eF6gH8iJ ^"The Night-Badgers' Burrow ReAn(Te) 20" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 5, +1 Touch, +2 Group"
+        }
+        DESCRIPTION "Moves the targets from the Animal province to the Terram province in the Twilight Void. This can allow them to leave the Void through a Terram vestige or boundary."
+    }
+
+    #ARM5SP013aB2cD4eF6gH8iJ ^"Swift Wings of Timeless Days ReVi 20" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 20"
+        }
+        DESCRIPTION """The length of the caster's journey through the Twilight Void is reduced by three steps from his initial Speed Level. With a Speed Level of 6 the caster would return to the Magic Realm after a year, and this spell would increase his Speed Level to 18, meaning that he emerges after only a day.
+
+Chapter Four
+
+Magic Characters
+
+For the purposes of this chapter, "magic characters" are characters that have a Magic Might Score, either because they have been created using the rules for Magic Character Creation below, or because they have somehow gained a Virtue that gives this to them, such as the Transformed (Being) Virtue described below  --  these characters are different from characters that are merely aligned with the realm of Magic, like magi or hedge wizards. They have many innate advantages beyond those accorded to all supernatural beings in the Ars Magica Fifth Edition core rules (page 191), and these are described here.
+
+the course of 24 hours, so that a character with Magic Might 12 would recover one Might Point every two hours. Resting in a Magic aura can also increase this recovery rate (as described in the Auras and Might Recovery sidebar, below).
+
+Certain spells and powers (such as Perdo Vim spells) can directly attack the Might Score of a character. A magic character is destroyed if his Might Score is reduced to 0 or less. Magic characters usually have a Might Score of at least 1, but it is possible for a very weak character to be designed with a Might Score of 0. Such characters are destroyed by deprivation or exposure, magic characters do not recover Might Points or Fatigue levels, and their wounds have an immediate chance of worsening, just as if they have overexerted themselves while injured. (Some magic characters struggle against this fact, especially if they were not born magical  --  it may be difficult for a magic human to remember that it does not need to sleep at night, or should not inhale when underwater.)
+
+Magic characters can consume vis, acti..."""
+    }
+
+    #ARM5SP014aB2cD4eF6gH8iJ ^"*The Inexorable Hunter*, 5 points, Init –1, Animal or Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Once the hound is set on the scent of a creature or person, it can follow flawlessly for as long as is needed to locate it. The hound is not fooled by the various ruses of his prey, such as heading through water or doubling back. If the prey has Magic Resistance, this effect has to Penetrate in the usual fashion. Level 25 effect (Base InCo 3, +4 Arc, +1 Conc, +1 An requisite), Lesser Power (25 levels)
+
+This is a sample character guide for a magic hound, such as one that belongs to a character with the Magical Animal Companion Flaw. It has everything a storyguide needs to run the creature for a game session, and if it were to join the saga as a permanent character the other details (Flaws, Inferiorities, Season and the rest of its Abilities) could be fleshed out quickly using the Magic Character Creation rules.
+
+mundane animals. To generate a magic animal character, you can use the stats of the mundane animal as a character guide (see the Character Guides sidebar). These might be taken directly from the Book of Mundane Beasts appendix, or generated using the rules in the Bjornaer chapter of Houses of Hermes: Mystery Cults (pages 38-43), but note that animals created using those rules have free Qualities that are used to determine their base Characteristics and other natural features, and that these are different from the Magic Qualities described below.
+
+All magic animals have innate equivalents of the No Hands and Mute Flaws. In addition, mundane animals usually have several minimum Ability scores and required Virtues and Flaws, and these are required for magic animal characters based on those animals as well, except that any Personality Flaws are optional  --  the player can take them as Personality Traits instead. Many magic animals also take the Unaffected by The Gift Virtue (see New and Modified Virtues, below).
+
+During the Magic Might phase of character creation, you must subtract the character's Size from its Might Score, or add to it if Size is negative. (Thi..."""
+    }
+
+    #ARM5SP015aB2cD4eF6gH8iJ ^"Variable points, Init equal to (Qik – 5), appropriate Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["varies"]
+            ^"Duration" ENUM ["varies"]
+            ^"Target" ENUM ["varies"]
+        }
+        DESCRIPTION """Duplicates any of a range of non-Ritual Creo or Rego spells pertaining to the specified Hermetic Form, at a cost of 1 Might point per magnitude of the effect. The level of the effect cannot be greater than the creature's Might, or 25, whichever is lowest. This power affects only one Form, but some creatures have this power more than once, for different Forms.
+
+Cr(Form) or Re(Form) 25: Focus Power
+
+Enliven the Gross (Elemental Form)"""
+    }
+
+    #ARM5SP016aB2cD4eF6gH8iJ ^"4 points, Init equal to (Qik – 10), appropriate elemental Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """This ritual-like power rarefies (creates) an elemental of the appropriate type (see Chapter 8: Magic Things, Elementals) from a sufficient amount of raw elemental matter. The elemental can have any Might less than that of the creature using this power. The elemental is automatically under the control of the creature; this power can also be used to control elementals which are not of the creature's own making, but in this case must Penetrate the elemental's Might. When the creature has no further use for the elemental, its control lapses but the elemental remains.
+
+CrFo 30 (base 25, +1 Touch): Ritual Power x2 (20 levels, -2 Might Cost, +2 Init)
+
+Equine Shape
+
+2 points, Init equal to (Qik - 2), Animal R: Per, D: Sun, T: Ind
+
+The character can transform into a horse until the sun rises or sets.
+
+MuFo 25 (base 10, +2 Sun, +1 size): Personal Power (25 levels)
+
+Flight of the Hummingbird"""
+    }
+
+    #ARM5SP017aB2cD4eF6gH8iJ ^"0 points, Init equal to (Qik – 2), appropriate Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The character can fly through the air in any direction, simply by concentrating. If distracted, this control is lost but the power still holds the character aloft indefinitely.
+
+ReFo 15 (base 4, +2 Sun, constant): Personal Power (15 levels, -2 Might cost)
+
+Grant (Major Flaw)
+
+10 points, Init equal to (Qik - 20), Vim R: Touch, D: Mom, T: Ind, Ritual
+
+Imposes the named Major Flaw upon a victim. Each creature may have more than one power of this type, each bestowing a different Flaw. The creature can decide to bestow the Flaw permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature's Might score as well as Might pool (see Ritual Power, below). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn.
+
+No Hermetic equivalent: Ritual Power x 2
+
+Grant (Minor Flaw)
+
+5 points, Init equal to (Qik - 10), Vim R: Touch, D: Mom, T: Ind, Ritual Imposes the named Flaw upon a victim. Each creature may have more than one power of this type, each bestowing a different Flaw. The creature can decide to bestow the Flaw permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature's Might score as well as Might pool (see Ritual Power, below). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn.
+
+No Hermetic equivalent: Ritual Power
+
+Grant Puissance in (Ability)
+
+4 points, Init equal to (Qik - 3) Corpus R: Voice, D: Sun, T: Group
+
+Bestows prowess in a given activity. For every Might point invested, ten men can be given a +1 to all rolls in a general situation (such as combat, or woodcraft); or 1 man can be given a +3 to a specific Total or Ability (such as Soak or Hunt). Might points spent on this power are only recovered when its effects are withdrawn.
+
+MuCo 20 (base 2, +2 Voice, +2 Sun, +2 Group): Lesser Power (20 levels, +1 Init)
+
+Grant (Major Virtue)
+
+10 points, Init equal to (Qik - 20), Vim R:..."""
+    }
+
+    #ARM5SP018aB2cD4eF6gH8iJ ^"3 points, Init equal to (Qik – 9), Animal or Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """Heals a human or animal  --  the worst of the target's wounds improves by one level. The healing is achieved when the recipient performs a specific action, such as drinking from a sacred spring, or swearing a vow. This is a Ritual Power that subtracts from the creature's Might Score as well as from its Might Pool (see Ritual Power, below). If possessed by a genius loci and the target creature is indigenous to the spirit's locus, then all wounds are healed, not just the most serious one.
+
+CrCo 30 (base 25, +1 Touch): Ritual Power x 2 (30 levels, -3 Might cost, +1 Init)
+
+Human Shape
+
+1 point, Init equal to (Qik - 2), Corpus R: Per, D: Sun, T: Ind
+
+The character transforms itself into the shape of a normal human being, allowing it to move through mundane society relatively unnoticed.
+
+MuFo 20 (base 10, +2 Sun): Personal Power (20 levels, -1 Might cost)
+
+Master of (Form)"""
+    }
+
+    #ARM5SP019aB2cD4eF6gH8iJ ^"Variable points, Init equal to (Qik – Might cost), appropriate Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["varies"]
+            ^"Duration" ENUM ["varies"]
+            ^"Target" ENUM ["varies"]
+        }
+        DESCRIPTION """Duplicates any of a range of non-Ritual Muto or Perdo spells pertaining to the specified Hermetic Form, at a cost of 1 Might point per magnitude of the effect. The level of the effect cannot be greater than the creature's Might, or 25, whichever is lowest. This power affects only one Form, but some creatures have this power more than once, for different Forms.
+
+Mu(Form) or Pe(Form) 25: Focus Power
+
+Oath-Swearing
+
+10 points, Init equal to (Qik - 10), Vim R: Touch, D: Mom, T: Group, Ritual
+
+Enforces the power of a solemnly-sworn oath between two or more parties. All parties must agree to the oath of their own free will, and it must Penetrate the Magic Resistance of all parties to take effect. If a participant in the oath tries to act in direct contravention of it, he immediately becomes aware of this. If he carries on regardless, then he is struck with a Minor Flaw. This Flaw can be removed by re-swearing the oath in front of the original participants. This power persists until there is no further record of the oath, either in the memories of the participants or in written form. New participants may be added to the oath by swearing to it in the presence of the creature, and if it pays the original Might cost again. Unlike the Grant (Flaw) power, the Might points spent on Oath-swearing regenerate normally.
+
+No Hermetic equivalent: Ritual Power.
+
+Sight Beyond Sight
+
+1 point, Init equal to Qik, approp. Form R: Per, D: Conc, T: Vision
+
+All five senses of the creature operate at a distance, as far as the creature can see. This gives the creature supernaturally aware of everything which occurs, and it is exceptionally difficult to catch it by surprise
+
+InIm 30 (base 5, +1 Conc, +4 Vision): Personal Power x 2 (20 levels, -2 Might cost, +2 Init)
+
+a magus, this allows Magic Humans to hide their inherently monstrous appearance, and Magic Things in the shape of humans or animals to seem to be living flesh and blood, rather than animated matter.
+
+No Fatigue: The character is tire..."""
+    }
+
+    #ARM5SP020aB2cD4eF6gH8iJ ^"*Protect the Herd*, 4 points, Init –4, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """When this power is used, the Boar and all of his animal allies receive a bonus of +5 to their Soak totals for Sun Duration.
+
+MuAn 45 (Base 25, +2 Sun, +2 Group): Greater Power (45 levels, -1 Might cost)"""
+    }
+
+    #ARM5SP021aB2cD4eF6gH8iJ ^"*Terror of the Charging Boar*, 3 points, Init –2, Animal or Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Anyone or anything the Boar charges be-
+
+comes overwhelmed with a mortal fear of the Boar for Sun Duration. The target must flee immediately from the Boar and is reluctant to ever face him again.
+
+ReMe(An) 25 (Base 4, +2 Voice, +2 Sun, +1 special effect: lingering effect): Greater Power (25 levels, +25 xp in Penetration)
+
+Natural Weapons: The Boar's tusks are Init +0, Atk +4, Dfn +2, Dam +5.
+
+Vis: 2 pawns of Animal vis in each tusk. Appearance: A very large, black boar with crimson-stained tusks and yellow eyes.
+
+The Black Boar guards a swampy portion of a larger wood that is filled with gnarled trees. The dense canopy of the wood gives it a foreboding feeling, but it is filled with wildlife. This section of the wood is a haven for herbivores because the Black Boar guards it jealously. He attacks all large predators and men who enter the area, regardless of their intentions toward the inhabitants. The Black Boar is a solitary creature, but quickly lends his protection to any inhabitants of his area that come under attack.
+
+The Boar's tusks may be Enriched by soaking them in the blood of the Boar for one month and then using the tusks to strike the killing blow on a predator that hunted the area where the Boar lived. If this is done, any character carrying the tusks in battle is granted the Berserk Virtue.
+
+Black Dog of the Moor
+
+Magic Might: 25 (Animal)
+
+Characteristics: Int 0, Per +1, Pre 0, Com -1, Str +4, Sta +3, Dex +1, Qik +1
+
+Size: +2 Season: Autumn Confidence Score: 2 (5)
+
+Virtues and Flaws: Magic Animal; Magical Champion; Ways of the Moor; Self-Confident, Sharp Ears; Fury; Greedy, Nocturnal, Proud
+
+Magic Qualities and Inferiorities: Gigantic, Greater Power (x5); Animal Resistance, Improved Attack, Improved Abilities, Improved Damage (x2), Improved Fatigue, Improved Soak, Minor Virtue: Improved Characteristics (x2), Minor Virtue: Tough; Susceptible to Deprivation
+
+Personality Traits: Territorial +6, Dog +3, Brave +3, Gluttonous +3, Overconfident* +3
+
+Reputati..."""
+    }
+
+    #ARM5SP022aB2cD4eF6gH8iJ ^"*Nose of the Bloodhound*, 1 point, Init –2, Corpus or Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Once the Black Dog picks up the scent of a creature, he may track it to the ends of the earth. If the Black Dog frequents the same location as the quarry or examines one of its personal effects and makes a Perception roll against an Ease Factor of 6, the Black Dog picks up the creature's scent. As long as the Black Dog is tracking the quarry, he always knows the direction of the shortest path to the quarry.
+
+InCo(An) 25 (Base 3, +4 Arc, +1 Conc, +1 special effect: scent serves as Arcane Connection): Greater Power x2 (25 levels,"""
+    }
+
+    #ARM5SP023aB2cD4eF6gH8iJ ^"–2 Might cost, +65 xp in Penetration) *Dominate Canine*, 1 point, Init –3, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """Any canine that hears the voice of the Black Dog is strongly inclined to obey his orders. This is similar to the spell Aura of Rightful Authority.
+
+ReAn 35 (Base 5, +2 Voice, +2 Sun, +2 Group): Greater Power (35 levels, -3 Might cost)
+
+Leader of the Pack, 2 points, Init -3, Animal R: Voice, D: Sun, T: Group
+
+When the Black Dog is present in any group of canines, they fight as a trained group and all of their attack rolls are at +2. ReAn 40 (Base 10, +2 Voice, +2 Sun, +2 Group): Greater Power (40 levels, -2 Might cost)
+
+Shadow Form, 1 point, Init -3, Animal R: Per, D: Conc, T: Ind
+
+When the Black Dog enters a shadow that is big enough to cover his Size +1, he may take the form of shadow. While in shadow form, the Black Dog adds +4 to all Stealth rolls and is unaffected by physical attacks.
+
+MuAn 35 (Base 30, +1 Conc): Greater Power (35 levels, -3 Might cost)
+
+Natural Weapons: The Black Dog's bite is Init 0, Atk +4, Def +1, Dam +3.
+
+Vis: 5 pawns of Animal vis in his hide.
+
+Appearance: A gigantic, black hound that is similar in appearance to a monstrous rottweiler.
+
+Beasts of Virtue Story Seeds
+
+A Noble's Folly
+
+The son of a local noble becomes obsessed with the stories of a monstrous black boar that cannot be killed. The heir is killed hunting the Black Boar of the Bog and the noble swears revenge on it. The noble's advisor comes to beg the characters for their assistance in defeating the boar. The magi realize that the advisor is withholding something from them. In truth, the advisor thought the heir unfit to rule and persuaded him to hunt the beast, knowing that it would likely kill him. Now the advisor fears the same fate will befall his lord, or, worse, that his role in the heir's death will be uncovered.
+
+Hunt for the Black Dog
+
+A local noble beats his hounds when the hunt is unsuccessful. After a Black Dog of the Moor witnesses this, he attacks the noble and frees the hounds. While the noble hunts the Black Dog, he interferes with the covenant's vis collection, ..."""
+    }
+
+    #ARM5SP024aB2cD4eF6gH8iJ ^"*Perceive the Afflictions of Mortal Flesh*, 0 points, Init +1, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Sight"]
+        }
+        DESCRIPTION """By sight, the caladrius can identify any diseases a person has and how serious they are.
+
+InCo 25 (Base 5, +4 Sight): Personal Power (25 levels), Improved Powers (-3 Might cost)
+
+Vis: 3 Corpus (1 in each eye, 1 in the wings) Appearance: The caladrius is a magnificent, all-white bird somewhat resembling a heron (but with shorter legs and beak). It has a long, gracefully curving neck and a short, slightly downward-curving beak.
+
+A caladrius is a mystical bird much sought by royal households. It can determine whether a sick person will live or die. If the patient is to die, the caladrius sadly turns away from him, but if he is to live, it gazes deeply into his eyes, drawing the sickness into itself. It then flies away toward the sun, going so high that the sun's rays burn away the disease (but they do not harm the caladrius itself).
+
+A caladrius will not absorb a terminal illness (its Lesser Immunity would not protect it), but it will gladly heal any lesser ailment. It can heal either spontaneous diseases, which result from aging crises (see ArM5, page 168) or diseases due to an external cause (ArM5, page 180). As long as the crisis is not terminal or the disease does not cause a Lethal Wound, a caladrius can cure it. It can only heal wounds caused by disease, not those resulting from poison, combat, or other causes. It cannot remove Decrepitude.
+
+The eyes of a caladrius are Enriched by grinding them to a paste, which is then used to fill a hollow wing bone taken from the same bird. This must be soaked in the urine of a virgin girl for a season, after which time it grants the wielder the Puissant Medicine Virtue.
+
+Cockerel of Virtue
+
+Magic Might: 9 (Animal)
+
+Characteristics: Cun -2, Per +2, Pre +2, Com 0, Str -6, Sta 0, Dex +2, Qik +4
+
+Size: -3 Season: Spring
+
+Confidence Score: 1 (3)
+
+Virtues and Flaws: Magic Animal; Magical Champion; Essential Virtue (proud, minor), Ferocity (battles for dominance); Compulsion (fight for dominance), Overconfident (minor), Restricted P..."""
+    }
+
+    #ARM5SP025aB2cD4eF6gH8iJ ^"*Scourge the Spirits of the Night*, 0 points, Init +4, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Hearing"]
+        }
+        DESCRIPTION """When the Cockerel of Virtue crows, any nocturnal spirits who hear the sound (and whose Magic Resistance fails to protect them) are stricken with panic and flee the area, remaining away until the next sunrise or sunset. This power is effective against spirits of any Realm, as long as they are only active at night (including most ghosts and some demons and dark fae, at the storyguide's discretion).
+
+CrMe 20 (Base 4, +2 Sun, +3 Sound): Greater Power (20 levels, +1 Initiative, -2 Might cost, 15 xp Penetration)
+
+Vis: 2 Vim in comb
+
+The Cockerel of Virtue benefits farmers through its crowing, which drives away evil spirits. A mundane cockerel normally crows to herald the coming of dawn, so the Cockerel of Virtue's cry terrifies spirits of darkness through the Law of Sympathy. A variant effect for the Cockerel's crow may be found on page 29 of Houses of Hermes: Mystery Cults.
+
+Cocks fight one another for dominance. The winner is the proudest of all creatures and struts regally around the barnyard, but the loser becomes dejected (temporarily gaining the Personality Flaw, Depressed) and does not crow.
+
+The comb of a Cockerel of Virtue can be Enriched by stretching the skin over an amber bead which must then rest on consecrated ground for a period not less than 12 Sundays. When worn around the neck, the wearer gains Second Sight with an Ability of 3.
+
+Magic Might: 15 (Animal)
+
+Characteristics: Int 0, Per +1, Pre +1, Com -3, Str +5, Sta +3, Dex +1, Qik +4
+
+Size: +2 Season: Summer Confidence Score: 1 (3)
+
+Virtues and Flaws: Magical Animal; Magical Champion; Great Characteristic (Quickness), Improved Characteristics, Long-Winded, Strong-Willed; Overconfident; Close Family Ties, Higher Purpose (protect the herd)
+
+Magic Qualities and Inferiorities: Greater Power, Improved Quickness, Major Virtue: Ways of the Marsh; Animal Resistance, Improved Abilities (x2), Improved Defense, Improved Fatigue (x2), Personal Power (x3); Susceptible to Deprivation
+
+Personality Traits: Brash +6, Stal..."""
+    }
+
+    #ARM5SP026aB2cD4eF6gH8iJ ^"*Sense the Feet that Tread the Earth*, 2 points, Constant, Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+        }
+        DESCRIPTION """The Stallion feels what is moving on the ground within one mile of his location. He can tell the direction, distance, weight, number, and manner of locomotion of the moving things. (See ArM5, page 154).
+
+InTe 40 (Base 4, +1 Touch, +2 Sun, +1 Part, +3 Size, +1 Constant): Greater Power (40 levels, -2 Might cost)
+
+Sprint of the Zephyr, 1 point, Init +2, Animal R: Per, D: Diam, T: Ind
+
+The horse may gallop at amazing speeds for relatively short distances. Unencumbered, it can travel one league in one Diameter. Add one Diameter to the travel time for each Burden level of the horse. ReAn 20 (Base 15, +1 Diam): Personal Power (20 levels, -1 Might cost)"""
+    }
+
+    #ARM5SP027aB2cD4eF6gH8iJ ^"*The Unimpeded Traveler*, 3 points, Constant, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This steed is not impeded by poor terrain and may move at maximum speed along even the poorest of terrain, achieving 30 miles a day. It may even cross open water and chasms, unsupported by ground, but can do this only at a trotting pace.
+
+ReAn 25 (Base 10, Sun +2, +1 Constant): Personal Power (25 levels)"""
+    }
+
+    #ARM5SP028aB2cD4eF6gH8iJ ^"*Great Leap*, 0 points, Init +2, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The Stallion is able to leap instantly up to 30 paces vertically or 50 paces horizontally. The Stallion must make a Dexterity - Encumbrance stress roll of 0+ to land without injury.
+
+ReAn 15 (Base 15): Personal Power (15 levels, -2 Might cost)
+
+Natural Weapons: The Stallion's hooves are Init +2, Atk +2, Dfn +2, Dam +1.
+
+Vis: 3 pawns of Animal vis in his hooves. Appearance: A beautiful white stallion.
+
+The Camargue is a large, flat, and marshy delta region of the Rhône River. Within the marsh live the magical, wild horses of the Camargue. They are a herd that can run faster and leap higher than any mundane horse.
+
+They are nearly impossible to capture because they are led by the Great Stallion of the Camargue. The Stallion has an extensive knowledge of the Camargue and a magical ability to sense any potential trap. The Stallion leads the herd away from trouble whenever possible. The Great Stallion of the Camargue cannot be broken without magic, but may grant a particularly brave or noble warrior the honor of riding it for a short time.
+
+The Stallion leads a herd of Horses of Virtue. The horses are largely similar to the Great Stallion, except they are Magic Might 10 and do not possess the Stallion's ability to Sense the Feet that Tread the Earth, the Ways of the Marsh Virtue, or the Improved Abilities Quality, which reduces their (Area) Lore (Camargue) to only 3.
+
+The Stallion's hooves may be Enriched by carving them into various accoutrements for a bit, bridle, and saddle to outfit a single horse. The leather used to construct the tack must be of the finest quality and anointed with oil infused with one dozen leaves of coltsfoot harvested under a full moon. The rider who uses the resulting tack is granted the Puissant Ride Virtue.
+
+Pentele, a Lion of Virtue
+
+So I first speak and begin with the lion because he is the king of all beasts.
+
+ --  Pierre de Beauvais
+
+Magic Might: 31 (Animal)
+
+Characteristics: Int +1, Per 0, Pre +3, Com -2, Str +6, Sta +2, Dex +2, Qik +1
+
+..."""
+    }
+
+    #ARM5SP029aB2cD4eF6gH8iJ ^"*Terrifying Roar*, 3 points, Init +2, Animal or Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Hearing"]
+        }
+        DESCRIPTION """A Lion of Virtue can unleash a roar causing all who hear it to freeze in terror. This power affects both humans and animals.
+
+ReAn(Me) 30 (Base 5, +1 Diameter, +3 Sound, +1 Mentem requisite): Greater Power (30 levels, +2 Initiative, 10 xp Penetration)
+
+Trackless Step, 1 point, Init 0, Terram R: Touch, D: Conc, T: Ind
+
+By sweeping the ground behind him with his tail, a Lion of Virtue can wipe out his tracks as he walks. The requirement to use his tail makes this a Restricted Power.
+
+ReTe 10 (Base 4, +1 Touch, +1 Conc): Lesser Power (10 levels, -1 Might cost, 15 xp Concentration; Might cost equal to magnitude to meet criteria for a Lesser Power)"""
+    }
+
+    #ARM5SP030aB2cD4eF6gH8iJ ^"*Circle of Beast Warding*, 1 point, Init +2, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+        }
+        DESCRIPTION """A Lion of Virtue can trace a circle on the ground that no mundane beast can cross. It sometimes uses this to capture prey.
+
+ReAn 5 (Base 2, +1 Touch, +2 Ring): Lesser Power (5 levels, +2 Initiative, 10 xp Penetration; Might cost equal to magnitude to meet criteria for a Lesser Power)
+
+Sleep with Eyes Open, 0 points, Init n/a, Animal R: Per, D: Sun, T: Ind
+
+A Lion of Virtue sleeps with its eyes open, so enemies have a hard time taking it by surprise.
+
+ReAn 10 (Base 4, +2 Sun, +1 continuous effect): Personal Power (10 levels, -1 Might cost, 10 xp Penetration)
+
+Vis: 6 Rego in mane
+
+Pentele is literally the King of Beasts. All other animals yield to his majesty  --  except the cockerel, which struts so proudly that even Pentele is cowed. Pentele rules an animal kingdom in some remote part of Mythic Europe (deep in the wilderness, or perhaps in a strong Magic aura or regio). Just as there are many nations and many rulers in the lands of men, so there are many different Lions of Virtue, each ruling over a different animal kingdom. Like any ruler, Pentele is attended by nobles, courtiers, guards, and lackeys  --  a retinue of Beasts of Virtue of many different species.
+
+If, during his travels, a Lion of Virtue catches scent of humans, it covers its tracks by sweeping the earth behind itself with its tail. Ever watchful for hunters and enemies, it sleeps with its eyes open so as not to be taken unaware.
+
+Though mighty and very wild, a Lion of Virtue is merciful by nature. Pierre be Beauvais writes that the lion spares small, defenseless animals; it refrains from attacking women, children, and unarmed men. A person who throws herself on the ground in submission to
+
+a Lion of Virtue will receive mercy.
+
+A Lion of Virtue is afraid of the sound of turning wheels and, like most beasts, it has a healthy respect for fire. It is a natural enemy of dragons.
+
+To Enrich a Lion of Virtue's mane, each individual hair must be plucked and spun into thread, then woven with gold thread into..."""
+    }
+
+    #ARM5SP031aB2cD4eF6gH8iJ ^"*Pleasing Breath*, 2 points, Init +1, Animal or Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Smell"]
+        }
+        DESCRIPTION """The breath of the panther has an irresistible, savory smell as of all the spices in the world. Any human or beast who smells it becomes entranced unless it succeeds on a Stamina roll against an Ease Factor of 9. Entranced victims follow the scent to where the panther lies in ambush. The panther's breath travels on the wind and is effective at up to 100 paces in ideal conditions. Dragons are immune to its effects.
+
+ReAn 35 (Base 15, +1 Conc, +2 Scent, +1 Mentem requisite): Greater Power (35 levels, -2 Might cost, 5 xp Concentration)
+
+Vis: 3 Rego in tongue
+
+Appearance: The Panther of Virtue is about the size of a large dog. Its fur is white and covered with small spots of many colors. The face of a Panther of Virtue is hideous to behold, with bulging eyes and a twisted, evil expression. It has a pronounced muzzle and a gaping maw filled with sharp teeth.
+
+The Panther of Virtue is a dangerous predator whose fragrant breath lures animals to their doom. The animals walk, mesmerized, toward where the panther lies in hiding. The spell is broken when they see its hideous face, but by then it is too late.
+
+The Panther of Virtue preys mainly on weak animals  --  it is not a brave beast and flees if it encounters serious resistance. When it attacks from hiding, it automatically wins Initiative in the first round of combat, and gains a +3 to its attack total for the first round only.
+
+Pliny the Elder writes that panthers were brought from Africa to Italy for use in the Roman circus. Some might have escaped to
+
+survive in Mythic Europe, either in the remote wilderness or in regiones.
+
+The tongue of a Panther of Virtue can grant the Entrancement Ability at a score of 3. It must first be Enriched by coating it with a thin layer of silver every week for a season, and then be inscribed with the words SAPHAT ELONAI METHIAX written in blue enamel. The tongue must be placed in the character's mouth to work (a Necessary Condition).
+
+Raven of Virtue
+
+The ravens of all other birds, seem t..."""
+    }
+
+    #ARM5SP032aB2cD4eF6gH8iJ ^"Ignem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The Salamander of Virtue can instantly extinguish any fire it touches, even the hottest furnace. If the fire is very large, only a three-pace radius around the Salamander is extinguished. Even if it does not use this power, the Salamander of Virtue is completely unharmed by heat and flames.
+
+PeIg 15 (Base 4, +1 Touch, +1 Part, +2 Size): Greater Power (15 levels, +5 Initiative, -2 Might cost)
+
+Sense of the Bright Flame, 0 points, Init n/a, Ignem R: Per, D: Sun, T: Hearing
+
+The Salamander of Virtue can locate fires as if by sense of hearing. This power is continuously active.
+
+InIg 15 (Base 2, +2 Sun, +3 Hearing, +1 continuous effect): Personal Power (15 levels, -2 Might cost)
+
+Poisoning the Well, 1 point, Init +9, Aquam R: Touch, D: Moon, T: Ind
+
+The Salamander of Virtue can poison water (or other liquid) by touch. The amount affected is ten times the base Individual target. The material remains poisonous for Moon Duration; if ingested, it inflicts an Incapacitating wound to any who fail a Stamina roll against an Ease Factor of 12. Since the poison is magical, Magic Resistance can protect against its effects. The Salamander of Virtue automatically invokes this power when it dies.
+
+MuAq 45 (Base 10, +1 Touch, +3 Moon, +1 Size): Greater Power (45 levels, -3 Might cost)"""
+    }
+
+    #ARM5SP033aB2cD4eF6gH8iJ ^"*Poisoning the Fruit of the Vine*, 4 points, Init +9, Herbam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Similarly, by touching a fruit tree or edible plant, the Salamander of Virtue can make that plant poisonous to eat. The effects of the poison are identical to those from the Poisoning the Well power, above.
+
+MuHe 50 (Base 20 (new guideline), +1 Touch, +3 Moon, +2 Size): Greater Power (50 levels), Improved Powers (1 mastery point, -1 Might cost)"""
+    }
+
+    #ARM5SP034aB2cD4eF6gH8iJ ^"*Poisonous Skin*, 0 points, Init n/a, Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Finally, the Salamander of Virtue's skin is continuously coated with a contact poison that causes an Incapacitating Wound to any who touch it and fail a Stamina roll against an Ease Factor of 12. Magic Resistance protects against this effect normally. CrAq 40 (Base 20, +1 Touch, +2 Sun, +1
+
+continuous effect): Greater Power (40 levels, -2 Might cost), Improved Powers (2 mastery points, -2 Might cost)
+
+Vis: 5 pawns of dedicated Vis in the Art combination of Perdo Ignem (see Chapter 8: Magic Things, Dedicated Vis)
+
+Appearance: The salamander is a tiny lizard only two or three inches long. Its smooth, moist skin is covered with dark spots.
+
+The word "salamander" comes from Greek. Magi use it as a kind of blanket term for various beings associated with the Form of Ignem. The term "Salamander of Virtue" specifically refers to a small lizard with remarkable powers over fire.
+
+A Salamander of Virtue is very cold by nature and seeks out any source of heat: fires, or even warm-blooded creatures. When it finds a fire, a Salamander of Virtue eagerly crawls into it and extinguishes it.
+
+The body of a Salamander of Virtue, if dried by smoking it over embers of alder wood, is Enriched into a Thing of Virtue. When touched to the hands, heart, and forehead (a Necessary Condition), it grants Immunity to Fire for as long as its possessor touches it.
+
+Stag of Virtue
+
+...[W]hen the stag knows where the serpent is, he goes and fills his mouth with water and spits it down where the serpent is and draws him out ... and stamps him underfoot and thus kills him.
+
+ --  Pierre de Beauvais
+
+Magic Might: 17 (Animal)
+
+Characteristics: Cun -2, Per +2, Pre +2, Com -3, Str +4, Sta +3, Dex +1, Qik +2
+
+Size: +2 Season: Summer Confidence Score: 1 (3)
+
+Virtues and Flaws: Magic Animal; Magical Monster; Ways of the Forest; Essential Virtue (healthy, minor), Ferocity (when at bay), Great Quickness, Lesser Immunity (fevers), Long-Winded, Puissant Athletics; Hatred (of serpents, major); Higher Purpose (prote..."""
+    }
+
+    #ARM5SP035aB2cD4eF6gH8iJ ^"*Delay the Serpent's Venom*, 0 points, Init n/a, Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The Stag of Virtue is magically warded against poison. Any poison introduced into the Stag's body takes no effect until the next sunrise or sunset (whichever comes first). This power activates whenever such a poison is introduced, and thus has an Intellego requisite.
+
+Re(In)Aq 20 (Base 5, +2 Sun, +1 Intellego requisite): Personal Power (20 levels, -1 Might cost), Improved Powers (1 mastery point, -1 Might cost)"""
+    }
+
+    #ARM5SP036aB2cD4eF6gH8iJ ^"*Alleviate the Serpent's Bite*, 1 point, Init +1, Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A Stag of Virtue can permanently neutralize any poison already inside its body. This is a Restricted Power, which the Stag must drink water to activate.
+
+PeAq 15 (Base 15): Personal Power (15 levels, +1 Initiative, -1 Might cost)
+
+Vis: 3 Creo in right antler. This is spell-like (see Chapter 8: Magic Things, Spell-Like Vis) with an effect similar to Restoration of the Defiled Body (ArM5, page 129).
+
+A Stag of Virtue is a great enemy of serpents and kills them whenever it can. It does this by filling its mouth with water and spitting it down the serpent's hole; when the serpent emerges to escape drowning, the Stag of Virtue tramples it to death.
+
+A Stag of Virtue enjoys vigorous health and can live a very long time (in fact, like other Beasts of Virtue, it can live forever). To keep itself youthful and healthy, this stag swallows a live, venomous serpent. Then it drinks a large quantity of water to neutralize the venom. After this process, its antlers fall off and its vigor is restored. Hermetic experts concur that the Stag of Virtue actually consumes Magical serpents for this process and that it becomes weak and looks aged when it cannot find snakes to eat (such as during the winter). The Stag of Virtue lives only in places where Magical snakes can be found.
+
+The right antler of a Stag of Virtue has healing powers and is greatly sought by hedge wizards and magi alike. The stag always buries its antlers after shedding them. Anyone who consumes the flesh of a Stag of Virtue gains a Lesser Immunity to fevers for Moon duration. The stag itself is immune to fevers and the venison transfers this immunity through the Law of Contagion.
+
+The right antler of a Stag of Virtue may be Enriched by carving it into a cup, which every day for a season is filled with the blood and powdered skull of a viper. If filled with clear spring water with a leaf of dittany (a Necessary Condition), the cup neutralizes any poison (Greater Purifying Touch (Poison))
+
+White Stag of the Wood
+
+Magic M..."""
+    }
+
+    #ARM5SP037aB2cD4eF6gH8iJ ^"*Confuse Predator*, 0 points, Init +2, Animal or Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This power allows the Stag to confuse his enemies, both man and beast, in a manner similar to Confusion of the Numbed Will (ArM5, page 151). The victim of the power must be able to see the Stag to be affected.
+
+ReMe(An) 20 (Base 4, +2 Voice, +2 Sun): Greater Power (20 levels, -2 Might cost, 15xp in Penetration +1 Init)
+
+Great Leap, 0 points, Init +1, Animal R: Per, D: Mom, T: Ind
+
+> The Stag is able to leap instantly up to 30 paces vertically or 50 paces horizontally. The Stag must make a Dexterity - Encumbrance stress roll of 0+ to land without injury.
+
+> ReAn 15 (Base 15): Personal Power (15 levels, -2 Might cost)"""
+    }
+
+    #ARM5SP038aB2cD4eF6gH8iJ ^"*Shriek of the Impending Shafts*, 1 point, Constant, Herbam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Hearing"]
+        }
+        DESCRIPTION """Works as the spell of the same name. Adds +9 to Defense scores against wooden weapons, if the Stag has room to dodge and allows him to automatically avoid wooden missiles fired from more than 10 paces away. (See ArM5, page 136).
+
+InHe 20 (Base 2, +2 Sun, +3 Hearing, +1 Constant): Personal Power (20 levels, -1 Might cost)
+
+Trackless Step, 0 point, Constant, Terram R: Per, D: Sun, T: Ind
+
+The Stag leaves no tracks in the earth except when he stops, such as to eat, sleep, or fight.
+
+ReTe 15 (Base 4, +2 Sun, +1 Constant): Personal Power (15 levels, -2 Might cost)
+
+Natural Weapons: The Stag's antlers are Init +2, Atk +3, Dfn +2, Dam +3 and his hooves are Init +2, Atk +2, Dfn +2, Dam +1.
+
+Vis: 4 pawns of Rego vis in his antlers.
+
+Appearance: A large elk with a pure white coat and an impressive rack of antlers. The White Stag does not ever shed its antlers as mundane deer do.
+
+The White Stag of the Wood is a powerful magical elk that rules a large forest. The Stag prevents predators from over-hunting the forest and keeps other animal populations from outgrowing their food supply. The Stag selects the weakest animals when it must thin a herd, but attacks the pack leader when predators over-hunt their prey.
+
+Although the local peasants tell stories of the Stag, and sighting it is seen as a sign of good luck, the White Stag only becomes concerned with humans when they hunt his woods. In most areas of Mythic Europe, only nobility are allowed to hunt deer. When the Stag encounters a noble who hunts too aggressively, the Stag presents himself to the noble and taunts him into chasing him. While the noble is futilely hunting the White Stag, the other deer remain safe. If this does not protect the herd, the Stag will treat the noble as it would any other predator.
+
+The White Stag's antlers may be Enriched by wrapping them in the hide of the Stag under the light of a full moon. For one week, the bundle must be exposed to the light of the moon and may not touch the earth. At the end ..."""
+    }
+
+    #ARM5SP039aB2cD4eF6gH8iJ ^"*Immobilize Prey*, 0 points, Init +6, Mentem or Animal." DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Any creature that makes eye contact with the Owl is unable to move and may only make small whining or moaning sounds. The target may move only if he successfully makes a Strength roll against an Ease Factor of 9.
+
+ReMe(An) 15 (Base 5, +1 Eye, +1 Conc): Greater Power (15 levels, -2 Might cost, 15xp in Penetration, +2 Init)
+
+*Gift of Tongues: Minor, Heroic Virtue, Allows the character to understand and speak any language as long as she communicates directly with someone else who is fluent in that language. Others who hear the character's words and who understand that language can understand what the character is saying. The character cannot carry on a conversation in multiple languages, but can act as a translator for two or more people who do not have this virtue. (See Houses of Hermes: True Lineages, page 105.)
+
+Natural Weapons: The Owl's claws are Init -1, Atk +2, Dfn +3, Dam +2.
+
+Vis: 4 pawns of dedicated Intellego Mentem vis in his skull.
+
+Appearance: A grey owl with very large iceblue eyes.
+
+Bestiary Story Seeds
+
+- • An avaricious magus has imported Ethiopian ants to mine gold for him, but now he cannot get the gold away from its guardians. He asks the covenant for help, but there are too many giant Ants of Virtue to simply defeat in battle.
+- • Something has been cutting down trees in a faerie forest. The faeries blame neighboring humans (perhaps the covenant), but an Antelope of Virtue is actually responsible.
+- • A magus who is over-fond of casting spells in public gets an unwanted admirer: an Ape of Virtue who begins mimicking his magical gestures. This is a minor annoyance until the ape begins stealing the magus's hat, robes, books, and Talisman in order to look more wizardly.
+- • Magi want the balm from the Asp of Virtue's tree (or the gem from its forehead) and they learn of its vulnerability to music. How can they overcome its defense?
+- • A Beaver of Virtue has constructed a giant dam downriver from the covenant, causing the the covenant to flood as the..."""
+    }
+
+    #ARM5SP040aB2cD4eF6gH8iJ ^"2 Points, Init: Qik–4, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Special"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The character sings this song at a target individual, and the next time the target sleeps an Aging Roll is made for him, adding 5 to the roll  --  even if he is too young to make Aging Rolls normally. This power must penetrate the target's Magic Resistance to be effective.
+
+PeCo 40 (Base 15, +2 Voice, +3 Special Duration): Greater Power (40 levels, -2 cost)
+
+Air for Flying"""
+    }
+
+    #ARM5SP041aB2cD4eF6gH8iJ ^"1 Point, Init: Qik–4, Auram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """While the character sings this tune, the weather in the locale remains calm and temperate. This will also negate any magically created inclement weather where the magnitude of the effect that caused the inclement weather is less than the character's Might / 5 (round up). This power has a duration of concentration.
+
+ReAu 35 (Base 5, +3 Sight, +1 Concen-
+
+tration, +2 Group): Greater Power (35 levels, -3 cost)
+
+Call the Flock"""
+    }
+
+    #ARM5SP042aB2cD4eF6gH8iJ ^"1 Point, Init: Qik–4, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Special"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """If the character is in the open air, she may sing a song that summons a cloud of mundane birds about herself. From the next round, 10 birds arrive each round, every round over the next Diameter. The type of birds that arrive depends on the locale; at sea the birds will be mostly seagulls, shags, and shearwaters, for example. When they arrive, the birds attempt to gather about the character, attacking any other characters in the way. If they are not commanded to perform some task, the birds will slowly disperse over the next few hours. This power itself does not grant the character an intrinsic ability to command the flock.
+
+ReAn 35 (Base 2, +4 special range, +1 diameter, + 2 Group +2 Size of Group): Greater Power (35 levels, -3 cost)
+
+Flight
+
+Birds of Nephelococcygia can fly. This is neither a Supernatural Ability nor a Power: the character's bones are hollow and light, he has powerful feathered wings, and he has a tail. He's a bird. Maneuvering is represented as a specialty of the Athletics Ability (ArM5, page 64). The character can normally take to the air without requiring a roll, and he has an initiative of Qik + Athletics (flying) for this maneuver. In extreme circumstances (during a storm, for example) a roll (Dexterity + Athletics(flying) + stress die) may be required to take to the air.
+
+The Magical Lineages of Cats
+
+Three families of cats can trace their ancestry  --  through generations of familiars and Warped, intelligent ancestors  --  to the familiars of the Founders or their earliest apprentices. Each of these families, called lineages, has an oral history and a unique culture. They have many magical features that breed almost true, a feature unusual in magical animals.
+
+Black Lineage
+
+The Black Lineage of cats is descended from the Founder Jerbiton's familiar, a prince of the Egyptian cats, descended from the great queens of ancient Bubastis. The center of the Black Lineage is the domus magna of Jerbiton, Valnastium in the Tribunal of the Greater Alps..."""
+    }
+
+    #ARM5SP043aB2cD4eF6gH8iJ ^"4 points, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This effect is used to overcome the shock caused by talking cats. It also inclines humans to obey orders. (ArM5, page 151)
+
+(20 spell levels: Base 5, +1 Eye, +2 Sun)
+
+Blackberry Cat
+
+or Feigned Innocence, 5 points, Mentem R: Eye, D: Mom, T: Group
+
+This causes a Group of people to forget
+
+something the cat did, much as the spell Loss of But A Moment's Memory does (ArM5, page 151). The name comes from the belief that cats born in blackberry season have mischief in them.
+
+(25 spell levels: Base 10, +1 Eye, +2 Group)
+
+Curse of Rheumatism"""
+    }
+
+    #ARM5SP044aB2cD4eF6gH8iJ ^"2 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """If a person touches the cat, he develops rheumatism in that limb. This power is traditionally used on those who kick cats.
+
+(10 spell levels: Base 5, as per laming in table on ArM5, page 133, + 1 Touch)
+
+Drain Energy"""
+    }
+
+    #ARM5SP045aB2cD4eF6gH8iJ ^"3 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch or Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This power, similar to Invocation of Weariness (ArM5, page 133), has either a Touch or Eye Range; it varies by cat.
+
+(15 spell levels: Base 10, +1 Touch or Eye)
+
+Fear of the Mouse"""
+    }
+
+    #ARM5SP046aB2cD4eF6gH8iJ ^"3 points, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This power, similar to Panic of the Trembling Heart (ArM5, page 148) is often used to make people afraid of the cat. Many cats have alternative emotional effects.
+
+(15 spell levels: Base 4, +1 Eye, +2 Sun)
+
+Feline Lullaby"""
+    }
+
+    #ARM5SP047aB2cD4eF6gH8iJ ^"or *Keeping the Humans Safely Tucked Away*, 2 points, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This is a version of The Call to Slumber (ArM5, page 151).
+
+(10 spell levels: Base 4, +2 Voice)
+
+Humans are Easily Misplaced"""
+    }
+
+    #ARM5SP048aB2cD4eF6gH8iJ ^"4 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A version of Inexorable Search (ArM5, page 131). The maps cats use are a mixture of scents and textures, and make little sense to humans. This requires an Arcane Connection, so cats often scent-mark humans they wish to find again by rubbing on them.
+
+(20 spell levels: Base 3, +4 Arc, +1 Conc)
+
+Incredibly Cute"""
+    }
+
+    #ARM5SP049aB2cD4eF6gH8iJ ^"2 points, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch or Eye"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This ability, similar to Trust of Childlike Faith (ArM5, page 150) allows the cat to become so endearing that it impairs the rationality of others. Some cats have an Eye contact version of this ability, while others have a Touch Ranged power, triggered by stroking the cat.
+
+(10 spell levels: Base 4, +1 Eye or Touch, +1 Diam)
+
+Mackerel Sky"""
+    }
+
+    #ARM5SP050aB2cD4eF6gH8iJ ^"4 points, Auram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """A version of Sailor's Foretaste of the Morrow  (ArM5, page 127).
+
+(20 spell levels: Base 4, + 1 Touch, +2 Group, +1 size)
+
+Master of the Undergrowth"""
+    }
+
+    #ARM5SP051aB2cD4eF6gH8iJ ^"2 points, Herbam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """A version of Intuition of the Forest (ArM5, page 136).
+
+(10 spell levels: Base 1, +1 Touch, +2 Sun, +2 Group)
+
+Minor Allergy"""
+    }
+
+    #ARM5SP052aB2cD4eF6gH8iJ ^"2 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A Sight Ranged version of Touch of the Goose Feather (ArM5, page 132).
+
+(10 Spell levels: Base 3, +3 Sight)
+
+Moving Objects with the Mind"""
+    }
+
+    #ARM5SP053aB2cD4eF6gH8iJ ^"6 points, Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A Sight Ranged version of Unseen Arm (ArM5, page 155), used by cats to manipulate objects  --  when humans are not available.
+
+(30 spell levels: Base 2, +3 Sight, +1 Conc)
+
+Pass the Unyielding Portal"""
+    }
+
+    #ARM5SP054aB2cD4eF6gH8iJ ^"1 point; Herbam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A version of the spell of the same name, used when no humans are available to open doors. (ArM5, page 137)
+
+(5 spell levels: Base 3, +1 Touch +1 Diam.)
+
+Prison for Mice and Birds"""
+    }
+
+    #ARM5SP055aB2cD4eF6gH8iJ ^"1 point, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+        }
+        DESCRIPTION """This is a version of Circle of Beast Warding (ArM5, page 120). It is sometimes used in conjunction with the Greater Magical Powers, described below.
+
+(5 spell levels: Base 2, +1 Touch, +2 Ring)
+
+Prying Eyes"""
+    }
+
+    #ARM5SP056aB2cD4eF6gH8iJ ^"1 point, Imaginem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Room"]
+        }
+        DESCRIPTION """This effect is used to look inside buildings and rooms while patrolling a house or town. Note that a cat touching the roof of a room can see inside it. (ArM5, page 144).
+
+(5 spell levels: Base 1, +1 Touch, +1 Conc +2 Room)
+
+Suck the Breath"""
+    }
+
+    #ARM5SP057aB2cD4eF6gH8iJ ^"3 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Eye or Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The cat causes an asthma attack with the same effects as Grip of the Choking Hand (ArM5, page 133) but with either Eye or Touch range (choose when the cat is created.)
+
+(15 spell levels: Base 10, +1 Eye or Touch)
+
+Suckle Cows Dry"""
+    }
+
+    #ARM5SP058aB2cD4eF6gH8iJ ^"3 points, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This power is used to make a cow lactate while a cat suckles from its udders. Cats filling themselves with milk often find it difficult to maintain concentration, so it is common to find cats working in groups, to restrain a cow in turns.
+
+(15 spell levels: Base 5, + 1 Touch, +1 Conc)
+
+Suffocate the Dead
+
+Cost equals (Magnitude / 5), Mentem R: Voice, D: Mom, T: Ind
+
+Some cats can create an effect similar to Lay to Rest the Haunting Spirit (ArM5, page 150) by sitting or sleeping on the ghost's grave. If several cats sleep on the same grave their Penetration scores are added together, and the highest level effect applies, so even powerful ghosts can be destroyed this way, with sufficient co-operation and persistence. This does not require Warder's Walk, although no one is sure why.
+
+(Spell levels vary. Base Effect)
+
+Viper's Gaze"""
+    }
+
+    #ARM5SP059aB2cD4eF6gH8iJ ^"3 points, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A variant of the spell of the same name (ArM5, page 120), used to immobilize prey.
+
+(15 spell levels: Base 5, +1 Eye, +1 Concentration)
+
+Wake the Dead"""
+    }
+
+    #ARM5SP060aB2cD4eF6gH8iJ ^"4 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Some cats are able to animate corpses by leaping over them, a power similar to a Touch Ranged version of Awaken the Slumbering Corpse  (ArM5, page 134). Reports of this power are most common in Eastern Europe, and may refer to Infernally tainted cats. Some cats claim to be able to wake the dead with their nightly singing, but this may be a metaphor.
+
+Warder's Walk"""
+    }
+
+    #ARM5SP061aB2cD4eF6gH8iJ ^"Magnitude points, Vim." DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """Cats in the Black Lineage use this power to combine their other powers. This allows their rituals to penetrate the Magic Resistance of creatures they wish to ward. It is a variant of Wizard's Communion. Use of the Warder's Walk is dangerous, as the addition of too many cats makes a fatal botch very likely, so the cats use this power sparingly.
+
+(Spell levels vary by base effect.)
+
+Whispers Through the Black Gate"""
+    }
+
+    #ARM5SP062aB2cD4eF6gH8iJ ^"3 points, Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The ability to talk to corpses is found most often in tortoiseshells (ArM5, page 130).
+
+(15 spell levels: Base 5, +1 Touch, +1 Conc, no cost for requisite)
+
+Black Cat Wards
+
+The Black Cats that serve House Jerbiton have a group of powers that they use to defend a home, or even a small settlement, from minor faeries and demons. Each cat is likely to have only one of these abilities, so groups of cats, each with a separate ability, will often walk the bounds of their settlement to lay multiple protective barriers. Some of these powers are also found in the other lineages, but the Black habit of marching in procession around the border of a protected space is not found in the other lineages. The Black Lineage is also most likely to use Warder's Walk, a Power that allows for wards of greater Magnitude.
+
+The protective powers often available to cats of the Black Lineage include simulations of the following spells. Various cats have differing Magnitudes in these powers.
+
+Circular Ward Against Demons
+
+Magnitude points, Vim
+
+R: Touch, T: Ring, D: Circle
+
+See ArM5, page 162 for a fuller description of this effect.
+
+(Spell levels vary by base spell)
+
+Ward Against Beasts of Legend
+
+Magnitude points, Animal
+
+R: Touch, T: Ring, D: Circle
+
+See ArM5, page 120 for a fuller description of this effect.
+
+(Spell levels vary by base spell)
+
+See ArM5, page 138 for a fuller description of this effect.
+
+(Spell levels vary by base spell)
+
+Ring of Warding Against Spirits Magnitude points, Mentem R: Touch, T: Ring, D: Circle See ArM5, page 151 for a fuller description of this effect.
+
+(Spell levels vary by base spell)
+
+Cats with other wards that contain fire, protect from poor weather, and exclude crop rusts have also been frequently reported.
+
+Personal Magical Powers for Cats
+
+All Personal Powers for the magical lineages of cats have:
+
+- An Initiative bonus equal to the cat's Quickness - (Magnitude /2).
+- A cost in spell levels for character creation, given just before the detail the explain..."""
+    }
+
+    #ARM5SP063aB2cD4eF6gH8iJ ^"2 points, Init: Qik –1, Imaginem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A personal version of Veil of Invisibility, as per ArM5, page 146.
+
+(15 spell levels: Base 4, +2 Sun, +1 changing image)
+
+Felianthrope
+
+2 points, Init: Qik-1, Animal R: Per, D: Sun, T: Ind
+
+The cat takes human shape. This is a Personal version of The Beast Remade (ArM5, page 119).
+
+(20 spell levels: Base 10, +2 Sun, no addition for requisite)
+
+Inconspicuousness"""
+    }
+
+    #ARM5SP064aB2cD4eF6gH8iJ ^"1 point, Init: Qik–1, Imaginem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A Personal version of Invisibility of the
+
+Standing Wizard (ArM5, page 146) (20 spell levels: Base 4, +2 Sun)
+
+Puffed Up and Hissing
+
+1 point, Init: Qik-1, Animal R: Per, D: Sun, T: Ind
+
+The cat puffs itself up to fight, and magic grants it extra mass. A Personal version of Beast of Outlandish Size (ArM5, page 118).
+
+(10 spell levels: Base 4, +2 Sun)
+
+Resistance to Claws"""
+    }
+
+    #ARM5SP065aB2cD4eF6gH8iJ ^"1 point, Init: Qik–1, Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The cat's coat becomes resistant to damage. A Personal version of Doublet of Impenetrable Silk (ArM5, page 118.)
+
+(10 spell levels: Base 4, +2 Sun)
+
+True Sight of the Air"""
+    }
+
+    #ARM5SP066aB2cD4eF6gH8iJ ^"2 points, Init: Qik–1, Auram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Vision"]
+        }
+        DESCRIPTION """A version of the spell of the same name (ArM5, page 127).
+
+(15 spell levels: Base 1, +2 Sun, +4 Vision)
+
+Unmarked Passage"""
+    }
+
+    #ARM5SP067aB2cD4eF6gH8iJ ^"2 points, Init: Qik–1, Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """A version of the spell Trackless Step (ArM5, page 155).
+
+(20 spell levels: Base 4, +1 Touch, +2 Sun, +1 for constant effect)
+
+Dragons and Dragon-kind
+
+Dragons are the largest and most fearsome of mortal creatures. They are renowned for their cunning, wickedness, and lust for treasure. Related to dragons, but less powerful, are a variety of reptilian creatures: the serpents, drakes, and worms.
+
+Serpents are the least of the dragons' kin, little more than glorified snakes. They almost always have a venomous bite or sting. In addition, many have the power to entrance their victims. Basilisks (see Guardians of the Forest, page 61) are the mightiest of serpents. Mundanes use the term "serpent" interchangeably to refer to both dragons and snakes; when magi use the term strictly, they are referring to a snake-like supernatural creature that has no exact mundane counterpart.
+
+Drakes are caricatures of dragons, usually misshapen in some way. They tend to be less intelligent than true dragons, but may possess a certain predatory cunning. All drakes have legs (either two or four) and many have wings, though frequently their wings are too stunted for actual flight. A few drakes have multiple heads. Drakes usually have dangerous breath, which may be fiery, poisonous, or cause disease. Magi in the far north of Mythic Europe have reported colddwelling drakes that breathe a deadly frost instead of fire. The smallest drakes are no bigger than a chicken, while the largest can outweigh an elephant.
+
+Worms are like huge serpents; indeed, some magi believe serpents and worms are two names for the same class of creatures. Worms sometimes have stunted legs or wings, but their primary means of locomotion is slithering like a snake. Worms are typically venomous and some can exhale a cloud of poisonous or pestilential fumes. Others breathe fire. In addition to biting, most of them are able to crush or suffocate victims in their deadly coils.
+
+True dragons are mighty and wily opponents. They ..."""
+    }
+
+    #ARM5SP068aB2cD4eF6gH8iJ ^"*Dazzling Appearance*, 0 points, Init –3, Mentem or Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+        }
+        DESCRIPTION "The scitalis can use its wondrous colors and appearance to stupefy those who look at it. Victims stand in slack-jawed amazement, unable to move, speak, or act, for as long as the scitalis concentrates. It uses this power to capture its prey, for it is a slow-moving creature. ReMe(An) 45 (Base 15, +1 Conc, +4 Spectacle, +1 Animal requisite): Greater Power (45 levels, -1 Might cost), Improved Powers (-3 Might cost), Greater Power (partial, -1 Might cost)"
+    }
+
+    #ARM5SP069aB2cD4eF6gH8iJ ^"*Venom*, 0 points, Init n/a, Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The scitalis' fangs drip a venom that causes a Medium Wound (if it penetrates Magic Resistance) unless its victim can make a Stamina roll against an Ease Factor of 9.
+
+CrAq 30 (Base 10, +2 Sun, +1 continuous effect): Greater Power (partial, 30 levels, -3 Might cost)
+
+Vis: 1 Imaginem in skin
+
+Appearance: The scitalis is a large snake, about six feet long and as thick as a man's arm. Its scales are patterned in a variety of spectacular colors.
+
+The scitalis is a slow-moving serpent that relies on its marvelous appearance to stun its prey. The scitalis usually hunts by hiding near a water source or game trail. It usually preys on small animals, but has been known to attack humans if it feels threatened. Unlike mundane snakes, the blood of the scitalis is hot, enabling the serpent to remain active throughout the winter months.
+
+This character guide may be used "as is" for a brief encounter, or developed into a finished character by adding 4 points of Virtues to balance its current Flaws (plus additional Virtues and Flaws, if desired) and 50 Experience Points in Abilities.
+
+Serpent
+
+Dragons should choose Qualities for any special attacks they possess; the Improved Powers Quality is also a good choice to help
+
+reduce the cost (and boost the Penetration)
+
+of their breath or gaze.
+
+A dragon's combat statistics may be improved through liberal use of the Improved Attack, Improved Defense, Improved Damage, and Improved Soak Qualities. It is especially important to enhance the Defense scores of very large dragons, because otherwise their poor Quickness scores (due to the effects of their Size) will make them vulnerable.
+
+Varkos, the Fire Drake
+
+Magic Might: 15 (Animal)
+
+Characteristics: Int -2, Per +1, Pre -2, Com -2, Str +4, Sta +2, Dex +2, Qik +2
+
+Size: +1 Season: Summer Confidence Score: 1 (3)
+
+Virtues and Flaws: Magic Animal; Magical Monster; Great Strength, Large, Piercing Gaze, Tough; Obsessed (with reputation)
+
+Magic Qualities and Inferiorities: Greater Power; Gift of Sp..."""
+    }
+
+    #ARM5SP070aB2cD4eF6gH8iJ ^"Magic" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """With some effort, Varkos can belch forth an impressive torrent of flame about 30 paces long and five paces wide. All within that area take +15 fire damage.
+
+CrIg 35 (Base 15, +2 Voice, +2 Group): Greater Power (35 levels, -1 Might cost)
+
+Vis: 3 Ignem in heart
+
+Appearance: Varkos is a misshapen dragon with a a build like a bulldog's: massive shoulders and smaller hindquarters. His head is crocodile-like and has a pronounced underbite. His bat-like wings are ridiculously small, but he sometimes flaps them furiously in a vain attempt to fly. He has a spiny ridge running from his forehead all along his body, but the spines poke out drunkenly in different directions.
+
+Varkos is a fire drake who desperately wants to be thought of as a fearsome dragon. He knows quite a bit about dragon stories, and tries his best to act like the dragons of legend. (His treasure hoard is coming along nicely; it's almost big enough to fill two hand baskets.) Varkos lives in a cave overlooking a mountain pass, from which he ventures forth to prey upon livestock and set the occasional haystack on fire. He usually tries to scare away humans rather than hurt them; dead men tell no tales, and Varkos is working hard to build up a reputation. Lately he has worked up enough nerve to start robbing travelers of their treasure, and is looking forward to the time when terrified villagers will bring him his first virgin sacrifice. (He has no idea what exactly a virgin is or what real dragons are supposed to do with them.)
+
+One of the reasons Varkos tries so hard to be terrifying is that he wants to attract a
+
+Claw and Fang
+
+The weapon statistics for a dragon's claws and teeth as are follows. Dragons larger than Size +2 usually have large claws and/or large teeth.
+
+| Init | Atk | Dfn | Dam |
+|------|-----|-----|-----|
+| -1   | +2  | +3  | +2  |
+| 0    | +5  | +3  | +4  |
+| 0    | +3  | +1  | +1  |
+| 0    | +4  | +1  | +3  |
+|      |     |     |     |
+
+mate. Living in a cave in the mountains can be lonely ..."""
+    }
+
+    #ARM5SP071aB2cD4eF6gH8iJ ^"*Fiery Breath*, 2 points, Init +3, Ignem." DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Ind Polymathes can belch forth a torrent of fire 50 paces long and 10 paces wide. Anyone caught in its path takes a stress die +45 damage from the flames; a character may attempt to dodge with a Qik + Athletics roll; if the roll succeeds against an Ease Factor of 12, the character is only singed for a stress die +15 damage. CrIg 50 (Base 40, +2 Voice): Greater Power (50 levels), Improved Powers"]
+        }
+    }
+
+    #ARM5SP072aB2cD4eF6gH8iJ ^"*Peering Into the Mortal Mind*, 2 points, Init +3, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """(partial, -3 Might cost)
+
+As the spell on page 149 of ArM5, but Polymathes can read the mind of anyone he can see; the target does not need to make eye contact with him.
+
+InMe 40 (Base 25, +3 Sight): Greater Power (40 levels, -2 Might cost)
+
+Poisonous Blood, 0 points, Init n/a, Aquam
+
+Polymathes's blood is a deadly poison that keeps its potency for nine days after it is spilled. If anyone should manage to inflict a wound on Polymathes, and later in the battle rolls a botch, then a drop of blood has hit the unfortunate character's skin, and the player must make a Stamina roll of 12+ or the character dies instantly. CrAq 45 (Base 25, +3 Duration equivalent to Moon, +1 continuous effect): Greater Power (45 levels, -1 Might cost), Improved Powers (partial, -3 Might cost), Improved Powers (partial, -1 Might cost)
+
+Improved Powers (partial, 15xp in Penetration) Vis: 9 Intellego in heart
+
+Appearance: Polymathes resembles a squat lizard about 25 feet from shoulder to rump, with a thin, sinuous neck about 15 feet long and a whip-like tail of similar length. He is covered in shimmering golden scales that are has hard as iron. His large wings are graceful and flexible, and he has the habit of gesticulating with them when he gets excited, to the detriment of bystanders.
+
+Polymathes is something of a runt among dragons, but he is very ancient and magically potent. He lairs in a complex of tunnels in a remote mountain range, emerging every decade or two in search of new treasures. His lair is a place of wondrous illusions where nothing is what it seems. One of his favorite tricks is to make a pile of rubble
+
+resemble a gleaming mound of gold; when would-be thieves discover the illusion, they usually decide the rumored dragon treasure was some kind of hoax, and give up. When he decides it would be amusing to deal with intruders in person, he disguises himself as a huge boulder and positions himself so intruders literally have to climb over him to get the "treasure."
+
+Polymathes is..."""
+    }
+
+    #ARM5SP073aB2cD4eF6gH8iJ ^"*Gathering of the Stormy Might,* 2 points, Init –3, Auram." DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """As the spell on page 129 of ArM5. ReAu 40 (Base 5, +3 Sight, +2 Group,
+
++2 Size): Greater Power (40 levels, -2 Might cost)
+
+True Sight of the Air, 0 points, Init n/a, Auram. R: Per, D: Sun, T: Vision
+
+As the spell on page 127 of ArM5. This ability is continuously active.
+
+InAu 20 (Base 1, +2 Sun, +4 Vision, +1 continuous effect): Personal Power (20 levels, -1 Might cost), Improved Powers (-1 Might cost, 10 xp Concentration)
+
+Equipment: Axe, round shield, partial chain mail armor.
+
+Encumbrance: 0
+
+Vis: 6 Auram in hands
+
+Appearance: Rok is a fierce-looking giant with long, flowing hair and a beard tousled by the small winds that constantly
+
+whirl about him. He stands about 15 feet tall. He dresses in the manner of the Northmen of bygone days, including  --  when prepared for battle  --  an iron helmet and mail byrnie.
+
+Rok is something of a weakling among the storm giants, being one of the smaller members of that mighty and fearsome race. In battle, he uses his power over winds to create a Charge of the Angry Winds effect, to let him break up groups of opponents and hold enemies at bay until he can single out one victim to engage with his axe.
+
+Non-Human Giants
+
+To design a oversized elemental, a spirit with a gigantic material form, or even a giant animal, use the rules for designing a creature of that type (from Chapter 8: Magic Things in the Elementals section, Chapter 7: Magic Spirits, or Houses of Hermes: Mystery Cults, respectively) and simply choose Gigantic as one of the creature's Qualities.
+
+Spirit Votaries
+
+A spirit votary is a devoted worshiper of a magical spirit. In pre-Christian days, these individuals would be high priests and priestesses, and form a cult to venerate their spirits; similar powers could be found among a number of different cultures. Today, a spirit votary tends to be a solitary figure railing against the overt superiority of the Dominion of God.
+
+New Virtue: Spirit Votary
+
+Free, Supernatural
+
+Taking this Virtue at character creation mak..."""
+    }
+
+    #ARM5SP074aB2cD4eF6gH8iJ ^"2-5, Init: Qik–5, Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The character receives a mental image of a fragment of the past of a volume of water that he touches. The fragment of the past has a length of Concentration, and it might include the locales that the water flowed through, if the volume is a river, or the people who entered a room, if the volume is contained in an amphora in the room. The point cost depends upon the chronological distance of the water's memories retrieved. A memory up to Diameter old has a cost of 2 Might Points, up to Sun old costs 3 Might Points, up to Moon old costs 4 Might Points, and a memory up to Year old costs 5 Might Points. Older memories are not accessible.
+
+InAq 25 (Base: 3, +1 Touch, +1 Conc, +4 Special Effect): Focus Power: (25 levels)
+
+Orphan Born
+
+The Orphan Born are a strange phenomenon in Mythic Europe, and in fact many would say that they are impossible. They are engendered by parents of whom one or both are long dead, and born beyond the veil that separates the corporeal world from the spirit world. Thus the term "Orphan Born"  --  they are essentially orphans from the moment of conception. They are real humans, however, and are typically returned to the world of the living and taken to live where they will be cared for. Most are raised in monasteries or nunneries until they come of age, or other charitable institutions willing to take in children without living parents.
+
+Orphan Born children typically manifest strange powers early on, such as the ability to see spirits and interact with them, or the power to vanish and reappear wherever they wish. As they get older they become almost transparent, so that they do not cast a shadow and they easily spook animals. In addition, the parents of Orphan Born children are rarely content to leave them be, and often interfere in their lives, though they may not remember why or what their relationship to the child is. Ghostly parents are very self-absorbed and often have difficulty even remembering that they have children. Like a Ghostly Ward..."""
+    }
+
+    #ARM5SP075aB2cD4eF6gH8iJ ^"1 point, Init (Qik – 4), Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The character becomes incorporeal, like a ghost, and is able to pass through solid objects and ignore physical damage.
+
+MuCo(Me) 35 (base 30, +1 Conc): Greater Power (35 levels, -3 Might cost)
+
+Ghostly Form/Physical Form"""
+    }
+
+    #ARM5SP076aB2cD4eF6gH8iJ ^"0 points, constant, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The character can interact with ghostly beings as if he were also ghostly, or corporeal beings as if he were corporeal.
+
+ReMe(Co) 15 (base 3, +2 Sun, +1 constant, +1 requisite): Personal Power (15 levels, -2 Might cost)
+
+People of the Clouds
+
+High above the clouds is a great sky-sea, a magic regio that connects the whole of the mundane world to the Magic Realm, where it is said that ships can float on air and sail between all the great cities of the world, unimpeded by the features of the land far below. These ships are navigated by sailors who have spent their entire lives on these flying ships. The magic of the air is in the blood, or so it is believed, and so the children of these magical sailors usually inherit their powers over the wind and sky, and also their insatiable wanderlust  --  a passion so strong that they cannot bear to stay in the same place longer than about a season.
+
+The People of the Clouds are human, or at least human-like, though there might be other creatures with similar powers to theirs. According to their oral tradition, their ancestors were sailors caught in a great tempest at sea, which was such a powerful storm that it picked up their ship and hurled it through the air. They found themselves within a great black cloud, in which they could see nothing but each other, not even the ship, though the ship did not seem to have suffered any damage from the fall. For almost a year they sailed through that cloud, until one
+
+Story Seed: Sail Like the Wind
+
+At a time when the characters are in a hurry to get somewhere fast, they might encounter a ship's captain who offers to ferry them there in a quarter of the usual time for a very high price. If he has an inkling that the party includes a magus, he might ask for a magical device, for example. He is vague about the details, but promises that his ship can easily make the journey at this speed. He advises the characters to remain in their cabins for the duration of the trip, but any of them who pee..."""
+    }
+
+    #ARM5SP077aB2cD4eF6gH8iJ ^"0 points, Init equal to Qik – 1, appropriate Form (Greater Power)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Produces and animates a body of flesh, wood, or elemental matter. A spirit with this power has a single corporeal form that it can adopt; although some spirits have this power more than once, and can therefore form more than one physical shape, such spirits can still only use one body at a time. The body created with this power has the same physical statistics as the spirit, but can have a maximum Size of +1. Creating a larger body requires an additional magnitude for every additional 3 points of Size, and thus requires that another Greater or Lesser Power Magical Quality is bought to account for the additional levels.
+
+A spirit may maintain the body indefinitely, recreating it every time the duration expires, but it is subject to aging, disease, and deprivation (but not fatigue) just like a living being. The body lasts until slain or dissolved by the spirit. If slain in material form, the spirit (or Aspect) is also destroyed, and the body will contain pawns of vis equal to that within the spirit's spiritual form. A spirit whose body is sorely injured usually dissolves it to prevent its own death. The body formed with this power may have intrinsic powers; a body formed of fire, for example, has the same features as the Body of Fire power of fire elementals.
+
+Cr(Re) Form 25 (base 5, +1 Touch, +2 Sun, +1 requisite): Lesser Power (25 levels) OR
+
+Cr(Re) Form 25 (base 5, +1 Touch, +2 Sun, +1 requisite): Greater Power (25 levels, -3 Might cost, +2 Init)
+
+Eidolon
+
+0 points, Init equal to Qik, Imaginem R: Touch, D: Conc, T: Ind
+
+Creates an illusionary form that is visible and audible to material beings. The spirit can create a single form with each version of this power it possesses. The image can move and speak as directed by the spirit, and lasts until the spirit has no further use for it.
+
+CrIm 15 (base 2, +1 Touch, +1 Conc, +2 move at command, +1 intricacy): Greater Power (15 levels, +2 Init, -2 Might cost; 15 levels surplus)
+
+Ghost Touch"""
+    }
+
+    #ARM5SP078aB2cD4eF6gH8iJ ^"Variable cost, Init equal to (Qik – Might points spent), Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["varies"]
+            ^"Duration" ENUM ["varies"]
+            ^"Target" ENUM ["varies"]
+        }
+        DESCRIPTION """Moves objects that are not held by another or fastened down. For 1 Might point, a maximum of 5 pounds can be moved; every additional Might point doubles this weight limit. If the item is hurled with force, the spirit requires the Thrown Weapons Ability, and it inflicts +5 damage per Might point spent. If the spirit has a Martial Ability, it can enter combat with an object when using this power (most weapons weigh less than 10 pounds), and uses its Characteristics to calculate combat totals as normal. All physical attacks with this power need to penetrate Magic Resistance. The power lasts until the object is released by the spirit.
+
+ReTe 25: Focus Power
+
+Manifestation
+
+4 or more points, Init equal to (Qik - Might points spent), Animal or Herbam R: Touch, D: Conc, T: Ind or Group
+
+Manifests the spirit's consciousness among animals or plant life it touches, temporarily granting them a Might score equal to the Might points spent, and controlling their actions. It is a Rego Herbam effect of Level 20 to control a plant that is a pace in diameter (costing 4 Might points), and a Rego Animal of Level 25 to control a single creature of Size +1 (costing 5 Might points). For an extra 2 Might points, a group of ten standard creatures or plants (or the equivalent mass) can be controlled. For each additional 2 Might points spent, the mass of creatures or plants controlled is multiplied by 10. The spirit cannot spend more Might points on this power than the magnitude of its Magic Might. Plants can be animated (see Chapter 8: Magic Things, Magic Plants) or made to grow with unnatural speed. For instance, a patch of weeds can spring up overnight, whereas a tree can grow from a seeding in a month. Humans and other sentient
+
+Daimons
+
+The Daimons, or Named Spirits, embody the elements of creation, from the mighty Protogoni and the Intelligences of the Planetary Bodies, right down to the spirits of sacred groves. Ascended Magi and Heroes of Old (see The Mysteries Revised Edition, pages 1..."""
+    }
+
+    #ARM5SP079aB2cD4eF6gH8iJ ^"1, 2, 3, or 4 points, Init equal to (Qik – 2x Might cost), Vim" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """This ritual-like power either forms an Arcane Connection to a particular person or place, or makes an object into an Arcane Connection to the spirit itself. If the connection is to last for hours or days, then it costs just 1 point; a connection that lasts for weeks or months costs 2 points; years or decades costs 3 points; and indefinite Arcane Connections cost 4 points. The spirit must be in the physical location of the object it is making into an Arcane Connection, and must penetrate Magic Resistance as usual.
+
+No Hermetic equivalent: Ritual Power
+
+Presence
+
+0 points, constant, Imaginem R: Arc, D: Sun, T: Ind
+
+Grants awareness of everything that happens within the bounds of a specific domain chosen by the spirit. In essence, the spirit is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. Double the Might of a spirit with this power for the purposes of calculating Tether Strength (see Formation of Magic Auras). The spirit's Might score determines the size of area possible: a Room (5-10 Might), a Structure (15-25 Might), or a standard Boundary (30+ Might). For Daimons, every 5 Might above 30 adds 1 size modifier to the base Boundary; an Airy Spirit or animus can only ever control a base Boundary, regardless of Might. The area controlled by the spirit can produce a yearly harvest of (Might/10) pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Harvesting this vis does not erode the spirit's Might. This power is possessed by all genii loci, and many ghosts.
+
+InIm 35 (base 2, +4 Arc, +2 Sun, +1 constant effect, +1 non-Hermetic effects): Greater Power (35 levels, -3 Might cost)
+
+Regio
+
+15 points, Init equal to (Qik - 30), Vim R: Touch, D: Mom, T: Boundary, Ritual This power is only suitable for spirits with the Presence power. Upon using the power, a Magic regio forms at a part of the landscape inhabited by the spirit. The regio has a single layer, whi..."""
+    }
+
+    #ARM5SP080aB2cD4eF6gH8iJ ^"*Invisibility,* 1 point, Init 0, Imaginem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """Even in material form, Sir Giles and his horse can become invisible when he wishes (though they can still be seen by Second Sight).
+
+PeIm 20 (Base 4, +1 Touch, +1 Conc, +2 Group): Greater Power (partial: 20 levels, -1 Might cost, 5 xp Concentration)"""
+    }
+
+    #ARM5SP081aB2cD4eF6gH8iJ ^"*Ride in Dreams,* 1 point, Init 0, Mentem" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Ind When in spirit form, Sir Giles can enter the dreams of a sleeping person whose name he knows, tormenting him with nightmares of a furious, dark knight. The victim must make a Stamina roll against an Ease Factor of Sir Giles' Presence + Leadership or lose a Long-Term"]
+        }
+        DESCRIPTION """CrMe 15 (Base 4, +1 Touch, +2 Sun): Greater Power (partial: 15 levels, -1 Might cost)
+
+Equipment: Full chain mail, lance, heater, long sword, black destrier
+
+Encumbrance: 2 (4) Vis: 4 Mentem in lance
+
+Fatigue Level.
+
+Appearance: Sir Giles is a Magical apparition  --  a ghostly knight in black mail, riding a fearsome black destrier. His shield and surcoat are solid black without any heraldic device, and atop his helm is a crest shaped like a cockerel. If he removes his helm, he appears to be a rather handsome, well-groomed knight whose face shows an expression of fierce pride.
+
+Chapter Eight
+
+Magic THings
+
+The power of magic touches inanimate objects as often as it touches the living. Sometimes that power becomes concentrated as raw vis. While all raw vis is valuable to magi, rare forms have additional powers that make them even more desirable. Some items are not vis, but are still imbued with power by the realm of Magic; these are the Herbs and Objects of Virtue. Items and plants can also be awakened, giving them a certain amount of consciousness, but generally no Might score.
+
+Finally, the power of Magic can fully animate pure substances, creating the elementals.
+
+Extraordinary vis may emulate a magical device or replicate a spell. The magical effects of extraordinary vis and any ritual required to activate them are not always obvious. The existence of the special powers of extraordinary vis may be uncovered through the spell Sense the Nature of Vis. When the spell is cast, rather than only seeing the appropriate aura to identify the vis, the magus sees something else. The additional visual clues are always associated with the specific type of powers the extraordinary vis embodies. These visual clues might include flashes of light, sparks, or a smoky cloud. To fully investigate the extraordinary vis, the character must investigate lesser enchantment vis as he would a magical device with the same power level. Spell-like vis may also be investigated in the laboratory..."""
+    }
+
+    #ARM5SP082aB2cD4eF6gH8iJ ^"Pen 0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Room"]
+        }
+        DESCRIPTION """This Intellego vis is in the form of a small piece of glass. If the glass is held against a wall, the character can see through as if the glass were a window into the room. The glass does not provide illumination or allow the character to see things obscured by any objects in the room.
+
+(Effect: Base 1, +1 Touch, +2 Sun, +2 Room; Modifications +1 2 uses per day, +3 environmental trigger)
+
+Icicle of Perdo Vis PeIg Level 25"""
+    }
+
+    #ARM5SP083aB2cD4eF6gH8iJ ^"Pen +12, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This icicle of Perdo vis never melts. Anyone who touches it loses a Fatigue level. If multiple pawns of the vis are stored in the same area, they chill a room to the point of being uncomfortably cold. If a rook or more is stored in the same room, anyone who enters loses a Fatigue level for each Diameter in the room unless protected by heavy winter clothing.
+
+(Effect: Base 4, +1 Touch, +2 Sun; Modifications +1 2 uses per day, +3 environmental trigger, +6 Penetration)
+
+Dust Devil of Auram Vis
+
+CrAu Level 9"""
+    }
+
+    #ARM5SP084aB2cD4eF6gH8iJ ^"Pen 0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This small whirlwind of Auram vis provides a constant breeze of fresh air that keeps the air breathable even in an airtight room. The Auram vis may only be transported with magic or in a hermetically sealed container.
+
+Story Seeds for Lesser Enchantment Vis
+
+Guilty Secrets
+
+The covenant busybody learns of the properties of the extraordinary Looking Glass of Intellego vis and "borrows" it to watch the business of the other covenant members. The busybody witnesses someone commit a crime and is torn between exposing the wrongdoer (and so also exposing his own thievery) and letting the crime go unpunished. Should the busybody come forward and identify the criminal, but not his own misdeeds, his story rings untrue; he fails the test of the Frosty Breath of the Spoken Lie, and becomes a suspect in the crime.
+
+A Frozen Find
+
+A local noble has discovered the source of the extraordinary Icicle of Perdo vis and has several pawns in his cellar, which keeps one small room at freezing temperatures. He enjoys showing off to his visitors by serving them chilled drinks on the hottest days of the summer. Do the magi attempt to barter for the vis, which the noble does not part with cheaply, or do they just take the vis?
+
+Ill-conceived Illumination
+
+An unscrupulous local priest has discovered the extraordinary Ball of Light Ignem vis and is using it to stage "miracles" to improve the sales of his fake artifacts. A friend of the covenant learns of the priest's activities and asks the characters to investigate.
+
+Spring Breezes
+
+The first spring breeze in a magical valley produces several pawns of extraordinary Dust Devil of Auram vis. Should someone harvest all of the vis, spring does not come to the valley. Plants do not bloom, animals do not give birth, and summer does not come until at least 1 pawn of the vis is returned to the valley.
+
+Un-natural Instincts
+
+A highwayman discovers a source of extraordinary Mistletoe Sprig of Herbam vis and its powers. He uses it to outfit his band of..."""
+    }
+
+    #ARM5SP085aB2cD4eF6gH8iJ ^"Pen +10, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This Vim vis is in the shape of a piece of brimstone that exudes a strong smell of sulfur. Anyone who comes into contact with the vis receives a burst of magic that results in the target gaining one Warping Point.
+
+(Effect: Base 5, + 1 Touch; Modifications +10 Unlimited, +5 Penetration)
+
+Spell-like Vis
+
+Some extraordinary vis produces a magical effect that mimics a high-level spell, usually of level 60 or lower. Unlike lesser enchantment vis, spell-like vis cannot produce a continuous magical effect and is completely consumed at the end of the effect. The activation of the vis may require that it be consumed by the recipient of the effect, or it may wither and degrade in some other obvious way at the expiration of the magic. In any case, the operation of the magical effect completely depletes the vis. The magical effect generally requires some specific triggering event or special circumstances to initiate the spell-like effect.
+
+Seed of Creo Vis"""
+    }
+
+    #ARM5SP086aB2cD4eF6gH8iJ ^"CrHe Level 40" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 40"
+        }
+        DESCRIPTION "This Creo vis takes the form of a seed from a fruit tree. When planted the seed grows instantly into a mature non-magical tree laden with the appropriate fruit. The seed need not be planted deep in the earth; it grows to maturity if covered by just a handful of dirt. But the tree survives only if planted in an appropriate location and climate."
+    }
+
+    #ARM5SP087aB2cD4eF6gH8iJ ^"Ash Branch of Muto Vis MuCo Combined Level 35" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base effect 15, +2 Moon, +3 Structure"
+        }
+        DESCRIPTION """This Muto vis is contained in a branch from an ash tree. The ash tree is known as the Tree of Odin and some believe that it grants success in battle. If the bearer of this Muto vis makes an Attack roll in battle, he gains the Virtues Reserves of Strength and Toughness for Sun Duration.
+
+Rosemary Sprig of Rego Vis
+
+ReHe Level 55 R: Touch, D: Moon, T: Str, Ritual
+
+This Rego vis takes the form of a sprig of rosemary. If the vis is hung above the main entrance of a home, it protects all within the dwelling from faerie creatures of the wood with Might 15 or less. Hanging the rosemary above a door completely depletes the vis. The effect has a Penetration total of 15.
+
+Egg of Animal Vis"""
+    }
+
+    #ARM5SP088aB2cD4eF6gH8iJ ^"CrAn Level 30" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 10, +1 Touch, +2 Group, +1 Size"
+        }
+        DESCRIPTION """This Animal vis takes the form of a leathery snake egg. If the egg is warmed to the temperature equivalent to a warm spring day
+
+Story Seeds for Spell-like Vis
+
+Enigmatic Apples
+
+A very old apple tree sits in the heart of an ancient forest. The first apple that naturally falls from the tree each autumn contains spell-like Seed of Creo vis. An apple taken from the tree contains no vis. If the characters arrive too late in the fall, the ground will be covered with apples from the magical tree. The apples are delicious and local animals may eat them before the characters arrive.
+
+The Bully and the Branch
+
+A headstrong apprentice is tasked with collecting spell-like Ash Branch of Muto vis, but the master does not explain the special powers of the vis and only instructs the apprentice to avoid combat at all costs. The apprentice does not and is asked to explain why the vis is depleted when he returns to the covenant.
+
+Changeling
+
+A Faerie Lady sends her minions out each Vernal Equinox to collect an infant child and replace it with a changeling. The villagers are aware of this custom and use spell-like Rosemary Sprig of Rego vis to protect their children. The characters cannot harvest the vis without dealing with the villagers. Should the Faerie Lady discover that the characters are thwarting her attempt to collect an infant child, she is very displeased with them.
+
+Venomous Vis
+
+An Animal magus collects several pawns of spell-like Egg of Animal vis, but never investigates their special properties. On a particularly warm day, the magus's lab becomes filled with the venomous snakes. If any of the snakes escape, the covenant may be overrun by them the following spring.
+
+for one hour, fully-grown poisonous snakes emerge from the egg. A simple die + 14 determines the number of snakes that emerge."""
+    }
+
+    #ARM5SP089aB2cD4eF6gH8iJ ^"Drop of Spring Water of Aquam Vis CrAq Level 20" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch"
+        }
+        DESCRIPTION "This Aquam vis takes the form of a drop of water from a magical spring. If the vis ever comes into contact with the bare earth, a fast-flowing spring forms on the spot. The spring does not form if it touches the floor of a structure, but a spring is created upon any patch of ground, even if it is solid rock."
+    }
+
+    #ARM5SP090aB2cD4eF6gH8iJ ^"Yarrow of Corpus Vis CrCo Level 40" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 35, +1 Touch"
+        }
+        DESCRIPTION "This Corpus vis takes the form of yarrow, which is also known as soldier's wort. When the leaves of the plant are crushed and applied to a character's wounds, they heal completely. The plant only heals physical injuries and has no effect on Wound levels caused by disease or poison, nor does it restore missing limbs."
+    }
+
+    #ARM5SP091aB2cD4eF6gH8iJ ^"Crystal of Imaginem Vis PeIm Level 20" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This Imaginem vis is in the form of a rock crystal. If a character holds the crystal to his eye in the light of the sun, the character becomes invisible as per Veil of Invisibility. The character remains invisible until the magic expires.
+
+(As per Veil of Invisibility, ArM5, page 146)"""
+    }
+
+    #ARM5SP092aB2cD4eF6gH8iJ ^"Silver Coin of Terram Vis MuCo(Te) Level 45" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 25, +3 Moon, +1 for special effect"
+        }
+        DESCRIPTION """This Terram vis takes the shape of a silver coin in the possession of a minor faerie. If a character takes the coin without the permission of the faerie, the next time the character stands under the noonday sun he turns into stone for Moon Duration. The effects of being a statute are detailed in the spell description for The Silent Vigil. (See ArM5, page 132). The character may not choose to end the effect before it expires.
+
+Dedicated Vis
+
+Dedicated vis is a form of vis that may be used in Hermetic magic to greater effect than normal vis. Dedicated vis is rare and highly sought by magi. Dedicated vis provides an enhancement in each of the three categories below: spell use, study, and enchantment creation. Each pawn of dedicated vis has a specific Technique and Form combination; the enhanced effects of the vis only apply when the vis is used for that specific combination.
+
+When a magus casts Sense the Nature of Vis on dedicated vis, the colors he sees are a mottled combination of the appropriate Technique and Form of the dedicated vis. Although in most ways dedicated vis is treated identically to 2 pawns of vis  --  one Technique and one Form  --  the vis may not be disaggregated into separate pawns of vis. Likewise, transferring dedicated vis from its native form to another shape eliminates the special powers of the vis.
+
+Spell Use
+
+When dedicated vis is used to power a spell with the proper combination of Arts, the vis is treated as if it were twice as effective. In other words, a magus using dedicated vis enjoys a vis boost of +4 per pawn used. Dedicated vis may also be used to aid a spell that utilizes only one of the Technique and Form combination, but the dedicated vis does not provide any benefit in addition to that provided by normal vis. Likewise, when dedicated vis is used in an application that shares the same Technique and Form combination, whether it be casting a Ritual spell or creating a magic item, the vis is twice as effective. A single pawn of dedi..."""
+    }
+
+    #ARM5SP093aB2cD4eF6gH8iJ ^"*Deadly Scream*, 0 points, Init +6, Corpus or Animal" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Hearing"]
+        }
+        DESCRIPTION """The mandrake root's scream is deadly to all who hear it (deafness is an effective defense). It can only use this power at the moment it is pulled out of the soil.
+
+PeCo(An) 50 (Base 30, +3 Sound, +1 Animal Requisite): Greater Power (50 levels), Improved Powers x2 (+1 Initiative, -5 Might cost)
+
+Vis: 5 Corpus; this is spell-like vis that cures a Medium or lesser wound due to poison or disease (but not injury).
+
+Appearance: The above-ground part of a mandrake plant looks like a cluster of oblong, tapered leaves growing close to the earth. It somewhat resembles a tobacco plant, though tobacco does not exist in Mythic Europe. The root is about six inches long, fleshy, and has five lobes. It vaguely resembles a human figure with head, arms, and legs. Wrinkles and lumps on the uppermost lobe suggest a human face.
+
+Mandrake of Virtue can be found beneath hangman's trees (provided the tree is within a Magic aura or, at least, outside the Dominion). When a man is hanged, his semen is released and spills onto the earth. Mandrake of Virtue sometimes springs from this seed.
+
+Mandrake root can be Enriched by a hedge wizard into a Thing of Virtue. This involves burying it under a mound of horse manure for a season, digging it up frequently to feed the root with blood, milk, and honey. After this process, the root becomes semi-animate, able to creep slowly about (one foot per minute). Its twitching and writhing can be interpreted to foretell the future, as well. Treat this as the Premonitions Virtue (the Enriched root grants the Ability Premonitions 3). The Enriched mandrake root must be fed blood in order to use this power (a Necessary Condition), but the blood need not be human.
+
+Mandrake has many other uses. It can be used to make a potent aphrodisiac and is a cure for many physical ailments. Some hedge wizards know the secret of converting a mandrake root into a kind of homunculus, which they use as Hermetic magi use familiars. This knowledge is obscure, but not totally unknow..."""
+    }
+
+    #ARM5SP094aB2cD4eF6gH8iJ ^"*Whiten the Wear of Travel*, 0 points, Init –1, Animal and Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """When activated, all dirt and travel stains are removed from the cloak, and any small rips and tears (anything smaller than a Light Wound) are instantly mended.
+
+Cr(Pe)An(Te) 20 (base 15, +1 requisite): Lesser Power (20 levels, -1 Might cost), mastery point from Cloak of the Duck's Feathers (-1 Might cost)"""
+    }
+
+    #ARM5SP095aB2cD4eF6gH8iJ ^"*The Woolen Cloud*, 0 points, Init –1, Animal and Corpus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """For the duration, Amiculum can float upon the air and move slowly in any direction. While floating, it can support the weight of up to two human beings.
+
+ReAn(Co) 20 (base 5, +1 Conc, +1 size, +1 requisite): Lesser Power (20 levels, -1 Might cost), mastery point from Cloak of the Duck's Feathers (-1 Might cost)
+
+Vis: 1 Animal
+
+Appearance: Amiculum is a white woolen cloak with two sides; an intricate circle of red, green, and black is woven on the inside, which is large enough to surround a man who stands upon it.
+
+Amiculum was enchanted as a talisman for its master, a Hermetic magus known for his interest in chivalry and courtly love. When he went into Twilight, his talisman went with him and returned from the experience as an independent magical being. Because of this connection, it can affect its master with its powers as itself and does not need to penetrate his Parma Magica. As a cloak, it is mostly concerned about remaining clean and pure, and protecting its master against harm. While it understands a great deal of its master's Latin and could converse with him, it chooses instead to remain silent so not to embarrass itself. Likewise, it is very conscious of keeping its place, and does not like to exercise its ability to move and to carry things.
+
+Kelpie
+
+Kelpies are carnivorous magical creatures that live at the bottom of deep fresh-water pools. Their natural form is a writhing mass of oily black tentacles and sharp beaks that are capable of piercing the thickest amor, but kelpies also have the curious ability to transform into sleek, black horses. In this form, the kelpie-stallion exudes a musky charisma, allowing it to befriend other horses; it leads them to the edge of the pool where they are rapaciously devoured. Another favorite hunting technique of those kelpies that live near a road is to seek out weary travelers,
+
+Story Seed: The Mandrake's Scream
+
+A hangman's tree stands in a weak Magic aura at a crossroads near the covenant. One can occasionally find..."""
+    }
+
+    #ARM5SP096aB2cD4eF6gH8iJ ^"Aquam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The kelpie ejects itself from its pool and in mid-flight the mass of slimy tentacles transforms into a glistening black stallion. The kelpie may at will return to its native form without an additional expenditure of Might, but if the kelpie is completely saturated with water while in its stallion form, a Stamina Roll against an Ease Factor of 9 must be made, otherwise it reverts to its native form.
+
+MuAq(An) 25 (Base 10, +2 Sun, + 1 Complex effect): Lesser Power (25 levels)
+
+Equine charisma, 2 points, Init -7, Imaginem R: Sight, D: Sun, T: Ind
+
+The kelpie makes itself alluring to its victim. This is automatically successful if the victim has a Cunning characteristic, but if the victim has an Intelligence characteristic then an Intelligence Roll against an Ease Factor of 9 will resist the effect (penalties for Fatigue apply, which makes weary travelers particularly susceptible). A victim with Cunning will follow the lead of a kelpie that it finds alluring, while an Intelligent victim will usually attempt to ride or capture the kelpie. This power may only be used while the kelpie is in stallion form.
+
+CrIm 40 (Base 5, +3 Sight, +2 Sun, +2 Complex effect): Greater Power (40 levels, -2 cost)"""
+    }
+
+    #ARM5SP097aB2cD4eF6gH8iJ ^"*Fleet of Foot*, 0 points, Constant, Animal:" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Constant"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """When in its stallion form, the kelpie can travel at about three times the speed of a normal horse (it can carry a rider about 100 miles in a day).
+
+MuAn 15 (Base 4, +2 Sun, +1 Constant effect): Lesser Power (15 levels, -2 cost)
+
+Equipment: None.
+
+Encumbrance: 0
+
+Vis: 4 pawns of Aquam in the blood of the kelpie.
+
+Appearance: In native form the kelpie is a black, amorphous, and distended mass covered with an array of muscular tentacles, mouths, beaks, and sensory organs. It usually dwells at the bottom of a deep, shaded pool. In stallion form the kelpie appears to be a large, powerful, black horse as might be ridden into battle by a wealthy knight.
+
+A clan chief in the Scottish Highlands approaches the covenant wanting to commission the manufacture of a magical bridle that will allow him to capture and break a local kelpie (this could be achieved with a ReAn effect). The chieftain intends to use the kelpie to drag heavy stones to the site of a new fortress. The rapid construction of the fortress, aided by the labor of the kelpie, will tip the balance of power among the Highland clans  --  so, assisting the chieftain could be construed as interference in the mundane and hence a possible breach of the Peripheral Code.
+
+Elementals
+
+Elementals are magical creatures composed of very pure elemental matter. They are not truly alive, and are capable of neither growth nor reproduction. Instead, they form from pure physical matter under some magical impetus, such as a Magic aura. Nothing that is or has been alive can generate an elemental, nor can matter that is no longer in a raw state, but which has been moved, cut, or otherwise interfered with by a living being.
+
+The process of forming an elemental is called rarefication. This process causes atoms of matter to take on a pseudo-life of their own, freeing themselves from the atoms of other elements and self-organizing into an elemental. Usually only one elemental forms, of a maximum size determined by the amount of matter pres..."""
+    }
+
+    #ARM5SP098aB2cD4eF6gH8iJ ^"Rego Ignem 20" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This spell allows the caster to control the actions of a fire elemental up to Size 0, if the Penetration Total exceeds the elemental's Magic Might. For larger elementals, versions of the spell with a Size modifier to the Target are required. If an elemental is already under supernatural control, the most recent spell or power used is the one that commands it.
+
+(base 5, +2 Voice, +1 Conc)
+
+A Digression into Physics
+
+The universe is made up of building blocks called atoms (from atomas, meaning "uncuttable"). There are four varieties of atoms, and each atom possesses two qualities that govern its nature: earth is cold and dry; water is cold and moist; air is hot and moist; and fire is hot and dry. The corpuscles of atoms are the basic building blocks of all matter, and have size, shape, and color. Corpuscles of earth are cubes, those of water are icosahedrons (shaped like a 20-sided die), air corpuscles are octahedrons (an eight-sided die), and fire corpuscles are tetrahedrons (a four-sided die or pyramid). The size of the corpuscles determine the type of matter that it forms. Small tetrahedral corpuscles make up the
+
+fine blue fire that gives the sky its color; whereas large smoky flames are made from the largest corpuscles of fire. Air that is thin and pure is formed from small octahedra; whereas mist is made from large, dense octahedra. Oil receives its thickness from its large corpuscles of water; but very fine atoms make up volatile liquids like spirit of wine. Rock is made of large and heavy corpuscles; whereas sand is made of much finer cubes.
+
+The moist quality causes a thing to adapt to its external conditions, whereas dryness causes a thing to define its own shape and bounds. As a consequence, moist things tend to be volatile and expansive, since they can fill spaces in their surroundings, whereas dry things are fixed and structured. Hotness causes matter to separate and seek those of its own kind, but coldness promotes mixing of matter and coagulation. The w..."""
+    }
+
+    #ARM5SP099aB2cD4eF6gH8iJ ^"3 points, Init equal to Qik, Animal, Corpus or Terram" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """The cohesiveness of a base Individual of Terram is lost, making it melt as if heated strongly, although the power imparts no heat to the object. Armor drips off its wearer, swords collapse like melting butter, and so forth. At the end of the round, the matter re-solidifies into its new shape. If the item is enchanted, the elemental's Penetration must exceed five times the total pawns of vis invested. The moisture of living bodies prevents them from such a devastating effect; nevertheless, hair, toenails, teeth, claws, and bone are all affected, inflicting +15 damage and ignoring protection from armor.
+
+MuTe(Aq, Co, An) 25 (base 3, +2 Voice, +2 affect metal, +2 affect humans and animals): Greater Power (25 levels, -2 Might cost, +3 Init).
+
+Jupiter's Touch
+
+5 points, Init equal to (Qik - 2), Auram R: Touch, D: Mom, T: Ind
+
+The touch of the elemental causes a flash of coruscating lightning, inflicting +30 damage. This power is suitable for a lightning or storm elemental.
+
+CrAu 30 (base 5, +1 Touch, +4 unnatural): Greater Power (30 levels, -2 Might cost, +2 Init).
+
+Character Guide: An Air Elemental
+
+Magic Might: 15 (Auram)
+
+Season: Spring
+
+Characteristics: Cun +1, Per +2, Pre 0, Com 0, Str +3, Sta -4, Dex -2, Qik +4
+
+Size: 0
+
+Virtues and Flaws: Magic Thing; Ways of the Storm; Poor Memory, Short Attention Span, Simple Minded.
+
+Magical Qualities and Inferiorities:  Greater Power (Suffocate), Greater Power (Jupiter's Touch), Greater Power (Charge of the Angry Winds), Major Virtue (Shapeshifter); Improved Abilities, Improved Powers (+3 Init to Jupiter's Touch Power), Minor Virtue (Keen Vision)
+
+Personality Traits: Storm +3*
+
+Combat:
+
+Jupiter's Touch Power:* Init +5, Attack +5, Defense n/a, Damage +30
+
+* Includes Way of the Storms
+
+Soak: N/A
+
+Wound Penalties: -1 & 1 Might point (1- 5), -3 & 3 Might points (6-10), -5 & 5 Might points (11-15), Incapacitated & 5 Might points (16-20), Dead & all Might points (21+)
+
+Abilities: Area Lore 3 (high points), Athletics 3 (storm force w..."""
+    }
+
+}

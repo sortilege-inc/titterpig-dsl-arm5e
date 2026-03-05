@@ -1,0 +1,48 @@
+EXTENSION "ARM5e_Hib_Spells_Corpus" {
+    NAME "The Contested Isle: The Hibernian Tribunal - Corpus Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: The Contested Isle: The Hibernian Tribunal
+
+    #ARM5SP001aB2cD4eF6gH8iJ ^"Put on the whole armor of God, that you may be able to stand against the schemes of the Devil" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sabbath"]
+            ^"Target" ENUM ["Individual Makes the body more resistant to damage, granting +5 to Soak. No visible effect occurs on the Holy Magus, for this is the armor of righteousness. The spell lasts until the next Sunday, but has no effect at all if cast on the Sabbath"]
+            ^"Design" STRING "Base 10; General Transcendence/ Purity; +2 Sabbath"
+        }
+    }
+
+    #ARM5SP002aB2cD4eF6gH8iJ ^"It will be health to your flesh, and strength to your bones" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION "The target's body acts as if unwounded and unfatigued. Wound and fatigue penalties do not apply until the spell expires, and wounds may worsen but this will not be apparent until the spell ends, when accumulated Fatigue takes effect (and may leave the target unconscious). Consecutive castings delay the end of the spell, putting off the time until the accumulated wounds take effect  --  but the body can only take a number of consecutive castings equal to its Size + 2. Further castings have no effect. (Base 10 Transcendence/Purity; +2 Sun)"
+    }
+
+    #ARM5SP003aB2cD4eF6gH8iJ ^"That I may come unto you with joy by the will of God, and may with you be refreshed" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 25 Transcendence/Purity"
+        }
+        DESCRIPTION "Your faith in God immediately restores a single lost Fatigue level, something impossible for Hermetic magic."
+    }
+
+}

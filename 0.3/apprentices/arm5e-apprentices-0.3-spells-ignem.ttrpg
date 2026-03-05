@@ -1,0 +1,36 @@
+EXTENSION "ARM5e_App_Spells_Ignem" {
+    NAME "Apprentices - Ignem Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Apprentices
+
+    #ARM5SP018aB2cD4eF6gH8iJ ^"Closing the Campfire" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Ignem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, + 1 Touch"
+        }
+        DESCRIPTION "This spell extinguishes a fire. The caster must touch the flames. This spell is more popular with Flambeau apprentices, who often have enough Ignem Form Resistance to avoid being burned."
+    }
+
+    #ARM5SP019aB2cD4eF6gH8iJ ^"The Smokeless Campfire" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Ignem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 1, + 2 Voice, + 2 Sun"
+        }
+        DESCRIPTION "This spell changes the nature of a fire so it does not produce smoke."
+    }
+
+}

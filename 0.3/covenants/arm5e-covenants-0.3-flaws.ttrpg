@@ -1,0 +1,645 @@
+EXTENSION "ARM5e_Cov_Flaws" {
+    NAME "Covenants - Flaws"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Character"
+    # Source: Covenants
+
+    #ARM5FS001aB2cD4eF6gH8iJ ^"Abyss" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab contains some kind of magical void, such as a bottomless well. This may be made into a Void Feature (purchased as usual). -2 Safety; +2 Pe."
+    }
+
+    #ARM5FS002aB2cD4eF6gH8iJ ^"Afire" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab, or large portions thereof, are engulfed in flames which never die out. This naturally requires some kind of protection or immunity to work in, and it means that whole categories of lab work (for example, research with Corpus, Animal, or Aquam) may be impossible. +1 Upkeep, -3 Safety, +2 Warping, +2 Aesthetics; +1 Experimentation, +3 Ig."
+    }
+
+    #ARM5FS003aB2cD4eF6gH8iJ ^"Chaotic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab or its outfittings are in a constant state of flux or motion. -2 Safety, +1 Warping; +1 Experimentation, +2 Mu or Re."
+    }
+
+    #ARM5FS004aB2cD4eF6gH8iJ ^"Cursed" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The lab suffers from a supernatural curse. Any penalties to Characteristics (often Safety) as may be appropriate.
+Moving a Laboratory
+
+Relocating a lab to a new room (possibly in a different covenant altogether) is unfortunately a rather tiresome procedure. Firstly, the contents of the lab must be disassembled and carefully and laboriously packed into sturdy crates. This takes a season of work, although it may delegated to an apprentice, for example. Secondly, the crates must be transported to the new site. Unless aided or performed by magic, there will inevitably be some breakage in transit  --  the transport counts (and costs) as two entire years of maintenance. Finally, the crates must be unpacked and the lab reassembled. This takes two seasons, since it is basically the same as building a lab from scratch (except that the end result is the same as the previous lab, not a standard lab). Due to this time and expense, labs are rarely transported (at least not by mundane means). When moving between covenants (or even between rooms in the same covenant), some magi employ magic (such as The Ambulatory Laboratory, above) to move their labs, but most simply abandon their old labs or donate them to other magi. Building a new lab from scratch is an opportunity for a fresh start and a new design concept, perhaps taking advantage of a larger or otherwise superior chamber."""
+    }
+
+    #ARM5FS005aB2cD4eF6gH8iJ ^"Degenerative" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The equipment and ingredients of the lab decay and wear unnaturally quickly. +2 Upkeep, -1 Safety, +1 Warping, -2 Health, -1 Aesthetics; +2 Pe."
+    }
+
+    #ARM5FS006aB2cD4eF6gH8iJ ^"Gremlins" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab is home to deliberately disruptive creatures, spirits, or demons. -3 Safety, +1 Warping, -1 Aesthetics; +1 Experimentation, 1 point on an appropriate Art Specialization."
+    }
+
+    #ARM5FS007aB2cD4eF6gH8iJ ^"Haunted" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab is home to a haunting spirit, who occasionally disturbs the current owner. +1 Warping, -1 Aesthetics; +2 Me."
+    }
+
+    #ARM5FS008aB2cD4eF6gH8iJ ^"Impregnable" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab is completely inaccessible, except through reasonably powerful magic. For example, it is blocked off by a stone wall and requires a Muto Terram spell to access. While the owner is much less likely to be disturbed, fewer people will ever get to see the lab, or they may assume that the owner is rather paranoid. -2 Aesthetics."
+    }
+
+    #ARM5FS009aB2cD4eF6gH8iJ ^"Inhabitants" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "Residency in the lab is shared with other creatures who consider the place their home, not a lab. They may be a nuisance to the owner, and vice versa. -1 Safety, -1 Aesthetics; 1 point on an appropriate Art Specialization."
+    }
+
+    #ARM5FS010aB2cD4eF6gH8iJ ^"Labyrinth" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab, or at least its exterior portions, consists of some kind of maze or other structural puzzle. Most magi would find this tiresome and unnecessary, but some Criamon magi like to make their labs into labyrinths. -1 Safety, -1 Health, -2 Aesthetics; +2 Me or Vi."
+    }
+
+    #ARM5FS011aB2cD4eF6gH8iJ ^"Lair" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A creature hides or hibernates in the lab, either known or unknown. -1 Safety, +1 Warping; 1 point on an appropriate Art Specialization."
+    }
+
+    #ARM5FS012aB2cD4eF6gH8iJ ^"Precarious" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION ": The lab is located in a supernaturally dangerous place, such as inside a volcano. This Virtue may be taken more than once, for greater degrees of danger. -1 Safety; 1 point on an appropriate Art Specialization.*"
+    }
+
+    #ARM5FS013aB2cD4eF6gH8iJ ^"Predecessor" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab retains some foibles due to its (notable) previous owner. -1 Safety, +1 Warping; +1 Experimentation."
+    }
+
+    #ARM5FS014aB2cD4eF6gH8iJ ^"Restriction" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab either forbids certain activities (one category of lab activity cannot be performed), or otherwise tiresome or expensive rituals or practices are required in order to perform lab work. -1 General Quality or +2 Upkeep as appropriate."
+    }
+
+    #ARM5FS015aB2cD4eF6gH8iJ ^"Sacrifices" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "Animal sacrifices are needed in order for the lab to function. +2 Upkeep, -1 Safety, +1 Warping, -1 Health, -3 Aesthetics; 2 points on any Technique or Animal Specialization as appropriate."
+    }
+
+    #ARM5FS016aB2cD4eF6gH8iJ ^"Thoroughfare" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "Supernatural creatures, such as gnomes, pass through the lab occasionally and cause a minor nuisance. -1 Safety."
+    }
+
+    #ARM5FS017aB2cD4eF6gH8iJ ^"Underwater" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab is filled with water, instead of air, presenting certain logistical difficulties with breathing and moving promptly and precisely from one point to another. Some categories of lab work (for example, working with texts, Auram, or Ignem) may be impossible. +2 Safety, +1 Warping, -2 Aesthetics; +1 Experimentation, +4 Aq."
+    }
+
+    #ARM5FS018aB2cD4eF6gH8iJ ^"Lesser Illusion" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """*: One of the apparent merits of the lab is but an illusion. Take one Minor Virtue immediately (there is no time cost) to balance this Flaw, but note that it is illusory and its effects are negated completely. For example, the lab may appear to be hung with fine tapestries which do not really exist. In this case, take the Superior Decoration Virtue, but
+do not apply its modifications to the lab's statistics. +1 Warping, +1 Aesthetics; +1 Im."""
+    }
+
+    #ARM5FS019aB2cD4eF6gH8iJ ^"Lightless" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab is totally dark and its contents cannot be seen. The owner must devise some other means of spatial perception in order to work normally. -1 Upkeep, +1 Warping, the Aesthetics score cannot exceed -1; +1 Pe or Im."
+    }
+
+    #ARM5FS020aB2cD4eF6gH8iJ ^"Living" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Minor"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The lab's structure is in some way alive. For example, it is inside a faerie tree, or in the belly of a slumbering beast. -2 Safety, +2 Warping; 3 points on appropriate Art Specialization(s)."
+    }
+
+    #ARM5FS021aB2cD4eF6gH8iJ ^"Greater Illusion" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION ": One of the major parts or aspects of the lab is but an illusion. Take one Major Virtue immediately (there is no time cost) to balance this Flaw, but note that it is illusory and its effects are negated completely. For example, the lab may appear to be twice as large as it really is. In this case, take the Greater Expansion Virtue, but do not apply its modifications to the lab's statistics. +2 Warping, +2 Aesthetics; +2 Im.*"
+    }
+
+    #ARM5FS022aB2cD4eF6gH8iJ ^"Mental Construct" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """The entire lab (or a significant portion thereof) is all in the mind of the magus, created by a powerful Creo Mentem Ritual spell, perhaps. The Size of the lab (or its imaginary part) cannot be higher than the Intelligence score of the magus. The imaginary parts of the lab may be improved as usual (that is, Virtues and Flaws may be gained, the Refinement may be increased, and so on) with the usual time cost, but disregard any changes to Upkeep, Health, or Aesthetics. Without sophisticated magic, the magus cannot use the lab to bond with a familiar, enchant items or Longevity Rituals, or teach. He probably also cannot extract vis in it. However he can invent spells, work with Laboratory Texts, and study Arts "normally." -5 Upkeep, +2 Warping, -2 Aesthetics; +3 Me.
+Laboratory Features
+
+Specialized labs often have certain noteworthy or unique structural features (arising from one or more Greater Feature or Lesser Feature Virtues), which aid or inspire certain types of magic. Features may be added to a lab with relatively little disruption, if space permits. Alternatively, the lab may be rearranged such that one Feature becomes the lab's central focus (in which case, take the Greater Focus or Lesser Focus Flaw, as appropriate). A lab may only have one Focus. In this case, lab activities that are unrelated to the Feature are disadvantaged, but the specialized benefits of the Feature are increased. It takes one season to build or assemble the structure of a Lesser Feature, and two ..."""
+    }
+
+    #ARM5FS023aB2cD4eF6gH8iJ ^"Altar" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An ornamental place of ritual worship, such as a raised dais. Specializations: any Technique, Vi."
+    }
+
+    #ARM5FS024aB2cD4eF6gH8iJ ^"Animal Pen" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An enclosure for one or more animals, often a familiar, to dwell. Specializations: Familiar, An."
+    }
+
+    #ARM5FS025aB2cD4eF6gH8iJ ^"Antechamber" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A separate enclosure or compartment. Spells may be cast here in a more secure environment. Specializations: Experimentation, Spells, Re."
+    }
+
+    #ARM5FS026aB2cD4eF6gH8iJ ^"Astronomical Device" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A sophisticated tool for measuring the movements of the heavens, often placed near a window or skylight. The most common type is the astrolabe; an example of a more advanced device is the armillary sphere. Specializations: In, Vi."
+    }
+
+    #ARM5FS027aB2cD4eF6gH8iJ ^"Balance" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An exact weighing device, such as a pair of scales. Specializations: Vis Extraction, In, Re."
+    }
+
+    #ARM5FS028aB2cD4eF6gH8iJ ^"Balcony" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An outdoors balcony, where the magus may cast spells into the open air. Specializations: Spells, Au."
+    }
+
+    #ARM5FS029aB2cD4eF6gH8iJ ^"Cage" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A large cage, usually built of sturdy metal bars, for imprisoning or immobilizing a subject. Specializations: Pe, Re, Co, An."
+    }
+
+    #ARM5FS030aB2cD4eF6gH8iJ ^"Cauldron" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A heavy copper or brass cauldron, for heating and mixing large quantities of ingredients. Specializations: Experimentation, Longevity Rituals, Vis Extraction, Mu, Aq, He, Ig."
+    }
+
+    #ARM5FS031aB2cD4eF6gH8iJ ^"Desk" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A comfortable and stout table, designed for reading and scribing. Specializations: Texts, In."
+    }
+
+    #ARM5FS032aB2cD4eF6gH8iJ ^"Fireplace" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A stone enclosure where fuel is burnt for heating, but where substances may also be heated or immolated. Specializations: Pe, Ig, Im."
+    }
+
+    #ARM5FS033aB2cD4eF6gH8iJ ^"Forge" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A furnace  --  a more tightly enclosed and robust fireplace often operated by bellows, which yields heat sufficient for the smelting of metals accompanied by an anvil and smithy. Specializations: Items, Ig, Te."
+    }
+
+    #ARM5FS034aB2cD4eF6gH8iJ ^"Grave" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "The burial place of one or more corpses. This may be either a simple earthen grave or something more elaborate, such as a stone sarcophagus. Specializations: Pe, Co."
+    }
+
+    #ARM5FS035aB2cD4eF6gH8iJ ^"Lofty Ceiling" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A light, airy space overhead, for which a tall chamber, perhaps with a vaulted ceiling, is required. Specializations: Au."
+    }
+
+    #ARM5FS036aB2cD4eF6gH8iJ ^"Loom" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A large wooden apparatus for weaving threads into a fabric. Specializations: Re, He."
+    }
+
+    #ARM5FS037aB2cD4eF6gH8iJ ^"Map" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An elaborate and detailed plan or model, accurately illustrating surrounding lands or buildings, perhaps. Specializations: In, Te."
+    }
+
+    #ARM5FS038aB2cD4eF6gH8iJ ^"Mechanism" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "Any kind of large mechanical device, consisting of many moving parts such as cogs and wheels, used for the basic automation of one or more tasks. Specializations: Vis Extraction, Re."
+    }
+
+    #ARM5FS039aB2cD4eF6gH8iJ ^"Mirror" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A grand and ornamental silvered mirror or other reflective surface. Specializations: In, Im, Me."
+    }
+
+    #ARM5FS040aB2cD4eF6gH8iJ ^"Monolith" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A huge slab of primal rock, possibly carved with mystical symbols. Specializations: Te, Vi."
+    }
+
+    #ARM5FS041aB2cD4eF6gH8iJ ^"Orb" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A smooth sphere of precious stone, possibly opaque or semi-opaque, used in conjunction with divinatory effects. Specializations: In, Im, Me, Vi."
+    }
+
+    #ARM5FS042aB2cD4eF6gH8iJ ^"Pallet" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A bed upon which a patient may be treated or examined, perhaps equipped with some surgeon's tools. Specializations: Longevity Rituals, Cr, Co."
+    }
+
+    #ARM5FS043aB2cD4eF6gH8iJ ^"Pit" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A deep hole dug in the floor. Things placed inside it cannot easily get out. Specializations: Pe, Te."
+    }
+
+    #ARM5FS044aB2cD4eF6gH8iJ ^"Pool" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A still body of water, or a well. It may be used when scrying. Specializations: In, Aq."
+    }
+
+    #ARM5FS045aB2cD4eF6gH8iJ ^"Portal" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A gateway through which things may be summoned or sent away. Specializations: Cr, Re."
+    }
+
+    #ARM5FS046aB2cD4eF6gH8iJ ^"Rack" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """A large, rather unpleasant mechanical construct, used to torture per-
+sons placed inside it. Specializations: Pe, Co, Me."""
+    }
+
+    #ARM5FS047aB2cD4eF6gH8iJ ^"Running Water" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "Any kind of water that runs through or around the lab, such as a stream or fountain. Specializations: Items, Aq."
+    }
+
+    #ARM5FS048aB2cD4eF6gH8iJ ^"Summoning Circle" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An elaborate pentagram marked on the floor, into which things are summoned. Specializations: Experimentation, Spells, Cr, Re, An, Vi."
+    }
+
+    #ARM5FS049aB2cD4eF6gH8iJ ^"Statue" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A carved semblance of some person, creature, or thing, usually made of stone, metal, or porcelain. Specializations: Re, An, Co, Te."
+    }
+
+    #ARM5FS050aB2cD4eF6gH8iJ ^"Still" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A network of glass or metal tubing connecting delicate containers, such as retorts, designed for the distillation and refinement of compounds. Specializations: Vis Extraction, Mu, Re, Aq."
+    }
+
+    #ARM5FS051aB2cD4eF6gH8iJ ^"Tablet" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A large framed slab of wax, for temporary scribing with a stylus. Specializations: Texts, In, Im."
+    }
+
+    #ARM5FS052aB2cD4eF6gH8iJ ^"Tank" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A bulky container for storing fluids. Specializations: Vis Extraction, Re, Aq."
+    }
+
+    #ARM5FS053aB2cD4eF6gH8iJ ^"Throne" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "An opulent and raised seat for a ruler (or at least, the self-important) to sit in. Specializations: Teaching, Re, Me."
+    }
+
+    #ARM5FS054aB2cD4eF6gH8iJ ^"Tree" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A live tree or a large plant, such as a vine. Specializations: Cr, He."
+    }
+
+    #ARM5FS055aB2cD4eF6gH8iJ ^"Void" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A shaft, hole, or opening. Specializations: In, Pe, Au."
+    }
+
+    #ARM5FS056aB2cD4eF6gH8iJ ^"Wall" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A large blank wall onto which images may be summoned. Specializations: In, Im."
+    }
+
+    #ARM5FS057aB2cD4eF6gH8iJ ^"Wheel" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION "A wheel powered by water, wind, horse, slaves, or magic. Specializations: Items, Re."
+    }
+
+    #ARM5FS058aB2cD4eF6gH8iJ ^"Window" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """A portal to the outside world, which lets in the sun, moon, and stars. Specializations: In, Au, Im.
+Magic Items for Laboratories
+
+A magic item designed for lab use (or an enchantment on the whole lab itself) can grant one or more Virtues or Flaws, or add to the Characteristics or Specializations of the lab. A magic item may be made into a Feature, in which case that Virtue should be paid for as usual. Equally, an existing Feature may be enchanted as a magic item. In this case, if the Shape and Material bonuses of the Feature are not listed elsewhere (such as in ArM5, page 110), you may assume it to have Shape and Material Bonuses equal to the points of Arts Specializations it provides.
+
+Specific effects for each item should be created normally according to the Laboratory chapter of ArM5. If an effect
+
+Example Laboratory Items"""
+    }
+
+    #ARM5FS059aB2cD4eF6gH8iJ ^"The Bookstand of Hespera" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """This item is a wooden lectern with enough space on its top for a Lab Text, as well as an inkhorn, a small knife, and several quills. The stand moves around to follow the magus so that he is never far from his Lab Text. He only need turn to consult his text or make further notes. The Bookstand adds two points to a Specialization in Texts. ReHe 15 (Base 10, +1 Conc), item maintains concentration (final level 20)
+
+The Crown of Hermes
+
+The powerful creator of this artifact, an elaborate, jewel-encrusted golden crown, has been lost to living memory. Although invested with other effects, such as Aura of Rightful Authority, the crown's most powerful property is that it enables its wearer to enter a kind of trance and thus create an imaginary laboratory in his mind. With seasons of meditation whilst wearing the crown, the wearer can undertake some kinds of lab work (or even lab improvement). When the crown is removed and later put back on, the wearer recalls his imaginary lab in the last state that he left it. Wearing the crown for the first time will inflict one Warping point, since it is a powerful mystical effect. Every year of use will also inflict a Warping point, due to being continuously under the influence of the effect. The imaginary lab may be treated as a standard one, except that it has the Mental Construct Flaw (see above). Cr(In, Mu, Re)Me 50 (Base 35, +1 Touch, +2 Sun)
+
+The Prodigious Plant Pot
+
+This object is a large and sturdy clay pot. If filled with loam, a seed or..."""
+    }
+
+    #ARM5FS060aB2cD4eF6gH8iJ ^"The Resolute Mind of the Tireless Researcher" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Supernatural"]
+        }
+        DESCRIPTION """> Rego Mentam Level 20 R: Per, D:Sun, T: Ind
+
+This spell is designed for a magus to cast upon himself at the start of a day's work in the laboratory. Andreas of House Bonisagus, frustrated at his constant lapses of concentration, and finding it difficult to maintain focus on his research, came up with this effect in an effort to make his work days more productive. The target of the spell finds his mind resolutely fixed on the task in hand, and does not waver from it. Opinion is sharply divided on the merits of this spell, with the majority of magi considering it little more than a dangerous self-delusion, which warps the mind of the magus, making him dependent and weak-willed. If this spell is used on a daily basis, a magus should select the Addled laboratory routine (see above).
+
+(Base 10, +2 Sun)
+
+The Laboratory of Bonisagus
+
+Creo Terram 45
+
+R: Touch, D: Mom, T: Group, Ritual
+
+Req: Vim
+
+This rather well-known spell furnishes an empty chamber of the appropriate dimensions with a fully-equipped, standard Hermetic laboratory. It is generally employed by magi who find themselves with plenty of vis, but who otherwise have difficulties in securing the necessary funds and sources to procure the materials by mundane means. This laboratory is actually rather better than the standard, since the magically created outfittings are perfect. Unless this lab is rigorously maintained at the higher level of Upkeep, however, these Virtues will quickly be lost, and it will degrade to a more mu..."""
+    }
+
+}

@@ -1,0 +1,562 @@
+EXTENSION "ARM5e_HP_Spells_Corpus" {
+    NAME "Hermetic Projects - Corpus Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Hermetic Projects
+
+    #ARM5SP010aB2cD4eF6gH8iJ ^"Sense of the Lodestone" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual The caster senses the distance and direction to the target. The caster must have an Arcane Connection to the target"]
+        }
+        DESCRIPTION """A Momentary duration version of this spell would actually be sufficient to determine the distance and direction of the target. However, by concentrating for several rounds, the caster can also use this spell to estimate the speed and direction of the target (if the target is in motion).
+
+(Base 3, +1 Touch, +1 Concentration) Required Lab Total to invent spell: One Season (10), Two Seasons (8), Three Seasons (7)."""
+    }
+
+    #ARM5SP011aB2cD4eF6gH8iJ ^"Befuddled Speaker" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION """The target stutters and slurs. Communication rolls made for the target are at -3, and he has a -6 penalty to spoken spellcasting (and an additional botch die).
+
+Required Lab Total to invent spell: One Season (10), Two Seasons (8), Three Seasons (7)."""
+    }
+
+    #ARM5SP012aB2cD4eF6gH8iJ ^"Claw of the Gladiator" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual This spell opens a bloody wound on the target, which serves as a Light Wound. (Base 5, +1 Touch)"]
+        }
+        DESCRIPTION "Required Lab Total to invent spell: One Season (20), Two Seasons (15), Three Seasons (14), Four Seasons (13)."
+    }
+
+    #ARM5SP013aB2cD4eF6gH8iJ ^"Close the Black Gate" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual This spell destroys a corpse, turning it into a black pool of sticky, viscous liquid. This effect can be used to stop the sodales of a Wizard's War victim from using a *Whispers Through the Black Gate* to ask his ghost how he was attacked"]
+            ^"Design" STRING "Base 5, +1 Touch"
+        }
+        DESCRIPTION """Obviously, there are other techniques for communicating with a ghost. However, Whispers Through the Black Gate is the most common such spell in use in the Order.
+
+Required Lab Total to invent spell: One Season (20), Two Seasons (15), Three Seasons (14), Four Seasons (13)."""
+    }
+
+    #ARM5SP014aB2cD4eF6gH8iJ ^"Trap of Amber" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch, +1 Diameter"
+        }
+        DESCRIPTION """The caster freezes the target in place for the duration of the spell. As well as being unable to move, the target can neither speak nor use gestures in spell casting, and he takes the appropriate penalties if he does try to cast spells regardless.
+
+Required Lab Total to invent spell: One Season (30), Two Seasons (23), Three Seasons (20), Four Seasons (19)."""
+    }
+
+    #ARM5SP015aB2cD4eF6gH8iJ ^"Face of Molded Clay" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Requisite" STRING "Perdo"
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun, +1 Part, +1 Perdo requisite"
+        }
+        DESCRIPTION """The caster molds the target's face into a horrific and ugly visage. The destruction of the character's features cripples his senses and makes others unable to understand his speech. It is obvious to all who see the character that he has been cursed by some magical effect.
+
+The target has a -3 penalty to all speech (including spellcasting) due to his malformed mouth, and a -3 penalty to sight, smell, and hearing based rolls.
+
+Required Lab Total to invent spell: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25)."""
+    }
+
+    #ARM5SP016aB2cD4eF6gH8iJ ^"Fist of Crippling" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual This spell inflicts a Heavy Wound on the target"]
+            ^"Design" STRING "Base 15, +1 Touch"
+        }
+        DESCRIPTION "Required Lab Total to invent spell: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25)."
+    }
+
+    #ARM5SP017aB2cD4eF6gH8iJ ^"Kiss of Aging" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual The target instantly ages five years. If the target is age 35 or older for any of these accelerated years, immediately make an aging roll for each such year as normal"]
+        }
+        DESCRIPTION "Required Lab Total to invent spell: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25)."
+    }
+
+    #ARM5SP018aB2cD4eF6gH8iJ ^"Eyes of the Hawk" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Animal"
+            ^"Design" STRING "Base 2, +2 Sun, free requisite"
+        }
+        DESCRIPTION """The caster gains the eyes of a hawk, which allows him to clearly see for vast distances.
+
+Required Lab Total to invent spell: One Season (8), Two Seasons (6), Three Seasons (6), Four Seasons (5)."""
+    }
+
+    #ARM5SP019aB2cD4eF6gH8iJ ^"Licking the Blade" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 25, +3 Sight"
+        }
+        DESCRIPTION """Story Seed: Foot-Soldiers of the Master
+
+If the magi of a saga invent the Intangible Assassin effects, then many good stories can be told about the adventures of the trusted grogs and companions who are sent out to recover Arcane Connections for their masters:
+
+"We always get the good jobs"
+
+A team of grogs are sent to sneak into the middle of an enemy covenant to recover Arcane Connections to the enemy magi. Can the grogs avoid the mundane and magical protections of the covenant?
+
+The Sleeper Awakes
+
+A grog character has his memory altered and is then put into a situation whereby an enemy covenant recruits him. Sometime later, the grog regains his memory. Having remembered it, he can now begin to complete his mission: to collect some Arcane Connections and escape back to his original covenant. A good way for this story to begin is with the grog slowly regaining his original memories while he is working inside the enemy covenant.
+
+The Wandering Scribe
+
+A magus and his grog scribe spend a season in Durenmar copying spell texts. The scribe is nominally making copies of books for his magus, but has instead been secretly tasked with sneaking around Durenmar, collecting Arcane Connections to the other magi visiting the covenant.
+
+The Hunters in the Woods
+
+A band of grogs is sent to lurk in the forests near an enemy covenant. Their task is to trail magi approaching and leaving the covenant, and attempt to recover Arcane Connections from their campsites and trails.
+
+Seduction
+
+The grogs are sent to a town near the enemy covenant. Their mission is to befriend or seduce the enemy grogs when they visit the town. The plan is to then take advantage of this friendship to recover Arcane Connections to the enemy magi.
+
+When casting this spell, the caster holds a glass phial in one hand. When cast, the spell instantly transports a quantity of spilled blood that the caster can see and is within one league (3 miles) into the phial. The blood can be used as a +3 Arcane Connection to t..."""
+    }
+
+    #ARM5SP020aB2cD4eF6gH8iJ ^"Division According to Blood" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Requisite" STRING "Intellego"
+        }
+        DESCRIPTION """To cast this spell, the caster holds a glass phial in each hand. One phial contains blood which may come from a mixture of sources. The other phial is empty. Upon casting the spell, all the blood from one individual only (in the first phial) is instantly transported into the second phial. By repeatedly casting this spell (and having a sufficient quantity of empty phials available), the caster may separate out the blood from a number of individuals. If the first phial contains only blood from one individual, then all of it will instantly transport into the second phial.
+
+The Intellego requisite is required to distinguish between the different sorts of blood in the phial. The target is Part because only a fraction of the blood (that belonging to one individual) is instantly transported into the second phial.
+
+(Base 10, +1 Touch, +1 Part, +1 requisite) Required Lab Total to invent spell: One Season (50), Two Seasons (38), Three Seasons (34), Four Seasons (32)."""
+    }
+
+    #ARM5SP021aB2cD4eF6gH8iJ ^"Blood of My Enemy" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 3, +2 Sun, +1 Part"
+        }
+        DESCRIPTION """The caster of this spell eats a small piece of bread dipped in the blood of another character, although any Arcane Connection to the other character will work. The spell changes the blood of the character so that he becomes a blood relative of the character from whom the consumed blood came. This effect only lasts for the duration of this spell. This does not stop the character from also being a blood relative to his natural relations. Being a blood relative is worth a +1 Sympathetic Connection (ArM5, page 84).
+
+This spell is possible because, although being a blood relative is a part of a character's essential nature, Muto spells can violate a character's essential nature (turn a man into a wolf, for example); the character's true essential nature merely returns when the Muto spell ends.
+
+Required Lab Total to invent spell: One Season (20), Two Seasons (15), Three Seasons (14), Four Seasons (13).
+
+Certamen
+
+Certamen can be used to gain an Arcane Connection in two ways. First, a character can challenge another character for some item that can be used as an Arcane Connection. Examples of this could include:
+
+- • A claim that the book a character is writing is plagiarized. Certamen is fought for possession of the manuscript. The manuscript is a short-lived Arcane Connection to the writer.
+- • A claim that a character's favored eating knife is stolen. Certamen is fought for possession of the knife, which is an Arcane Connection to the true owner.
+
+Of course, such Certamen challenges are likely to be considered vexatious by the Tribunal. However, Tribunals only occur once every seven years, by which time the Wizard's War may well have been fought. In this case, paying a small vis fine to the estate of the victim to compensate for injudicious use of Certamen is not too troubling  --  assuming the case is ever brought to the Tribunal at all.
+
+The other, less controversial use of Certamen to gain an Arcane Connection is the "free" spell a victor may cast on the unconscious..."""
+    }
+
+    #ARM5SP022aB2cD4eF6gH8iJ ^"Convergence of Birth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual This spell, which can use an astrolabe, determines the birth place and time of the target. This is sufficient information to calculate the nativity horoscope of the target, for a +2 Sympathetic Connection, Int + Artes Liberales (astronomy) roll against an Ease Factor of 9 (see ArM5, page 84). Calculating the horoscope itself takes a day"]
+            ^"Design" STRING "Base 5, +1 Touch"
+        }
+        DESCRIPTION """This spell must Penetrate the Magic Resistance of the target to be effective. This spell is intended to be cast through an Intangible Tunnel.
+
+Required Lab Total to invent spell: One Season (20), Two Seasons (15), Three Seasons (14), Four Seasons (13)."""
+    }
+
+    #ARM5SP023aB2cD4eF6gH8iJ ^"Convergence of Place" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual This spell, which can use an astrolabe, determines the current celestial location of the target. This is sufficient information to calculate a daily horoscope for the target, for a +1 Sympathetic Connection, Int + Artes Liberales (astronomy) roll against an Ease Factor of 9 (see ArM5, page 84). Calculating the horoscope itself takes an hour"]
+            ^"Design" STRING "Base 3, +1 Touch"
+        }
+        DESCRIPTION """This spell must Penetrate the Magic Resistance of the target to be effective. This spell is intended to be cast through an Intangible Tunnel.
+
+Required Lab Total to invent spell: One Season (8), Two Seasons (6), Four Seasons (5).
+
+Simulacrum of the Spheres
+
+This invested item is a rock crystal, set in a complex mesh of metal wheels that are inscribed with astronomical signs. The device senses the motions of the planets and other celestial bodies, and moves the wheels to indicate the state of the heavens. The device can be used as an astrolabe, and it is so accurate it gives a +3 bonus to the calculation of horoscopes (ArM5, page 84) and astrological inceptions (Art and Academe, page 73). In order to use the astrolabe, a character must have an Artes Liberales of at least 1.
+
+The invested device (the rock crystal) is a tiny semi-precious gem and so requires 12 pawns of vis to prepare for enchantment. This requires a Magic Theory Score of 6 and one season of work. The two effects, Sense the Heavens and Move the Wheels, require 3 and 4 pawns of vis to invest respectively."""
+    }
+
+    #ARM5SP024aB2cD4eF6gH8iJ ^"Animate the Slumbering Corpse" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Mentem"
+            ^"Design" STRING "Base 10, +2 Voice, +2 Day, +1 Mentem requisite"
+        }
+        DESCRIPTION """A variant of Awaken the Slumbering Corpse (ArM5, page 134), this spell allows a caster to control a corpse through mental, rather than verbal, commands.
+
+Required Lab Total: 1 season (70), 2 seasons (53), 3 seasons (47), 4 seasons (44)"""
+    }
+
+    #ARM5SP025aB2cD4eF6gH8iJ ^"Bequeathing Salome's Request" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch, +1 Part: however the lowest level a ritual can be is 20"
+        }
+        DESCRIPTION """This spell creates a human head, complete with skin, eyes, teeth, and hair. The particulars of the head's appearance are up to the spell's inventor. Castor of Sicily's version of the spell makes created heads look like his own. The spell is named after Salome, the stepdaughter of King Herod, who asked for and received the head of John the Baptist, according to Biblical history.
+
+Base Level Interpretation: According to Magi of Hermes, page 84, the base level to create part of a corpse is the same as the base level to create the whole corpse, adjusted by the increased Target: Part.
+
+Required Lab Total: 1 season (40), 2 seasons (30), 3 seasons (27), 4 seasons (25)"""
+    }
+
+    #ARM5SP026aB2cD4eF6gH8iJ ^"Forging the Bone Cover" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +1 Conc"
+        }
+        DESCRIPTION """This spell changes the inelastic nature of bone, making it elastic and able to be reshaped under pressure. The skull becomes as pliable as clay for the duration of the spell. Once this spell is cast, a human skull can be pressed into a book-shaped wooden frame. When the spell ends, the skull reverts to its inelastic property, but retains its new shape. If later used in an enchanted item, the reshaped skull still gives the magus the same Shape & Material bonus (ArM5, page 110).
+
+Base Level Interpretation: A base level 1 Muto Terram spell will change one property of dirt. The base level to create dirt is Creo Terram 1, and the base level to create stone is base level 3. A base level 3 Muto Terram would change one property of stone. Bone is harder than dirt but softer than stone, so a base level 1 would not be enough, but base level 3 would. Thus: Muto Corpus base level 3, change one property of bone.
+
+Required Lab Total: 1 season (10), 2 seasons (8), 3 seasons (7), 4 seasons (7)
+
+no longer protected by the ghost's Magic Resistance. Note that once the living corpse is created, the book does not have to touch the revenant to allow the ghost to control it.
+
+Invested Device: The Lesser Necromantic Manuals
+
+These books are similar to the Necromancer's Grimoire in appearance and function. Each is also a compound item, but with only two elements: a lead cover and a turquoise stone for adornment. The stone costs 12 pawns to prepare for enchantment (semi-precious stone [12] x tiny size [1]) and the lead cover costs 15 pawns (base metal [5] x medium size [3]). Most magi will prepare the item for enchantment by only paying the most expensive cost (15), which requires a Magic Theory of 8.
+
+Two books are necessary. The first is instilled with The Turquoise Stone-Soul and Detect the Presence of the Specter. Together these powers cost 13 pawns of vis. The second volume is instilled with Rousing the Receiving Fleshy Host, Grant Control to the Ghost, and Perceive the Presence of Magic..."""
+    }
+
+    #ARM5SP027aB2cD4eF6gH8iJ ^"Create a Human Corpse" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["IndThiscreates a human corpse. The lowest level aspell can be is 20"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch"
+        }
+        DESCRIPTION "Required Lab Total: 1 season (40), 2 seasons (30), 3 seasons (27), 4 seasons (25)"
+    }
+
+    #ARM5SP028aB2cD4eF6gH8iJ ^"Create a Dead Turb" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["GroupThiscreates ten human corpses. (Base 5, +1 Touch, +2 Group)"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """Required Lab Total: 1 season (40), 2 seasons (30), 3 seasons (27), 4 seasons (25)
+
+A Walking Colossus
+
+A colossus is simply a giant corpse, which uses the same stats as a regular animated corpse, adjusted for its increased size.
+
+Characteristics: Int n/a, Per n/a, Pre n/a, Com n/a, Str +11, Sta +3, Dex +1, Qik -4
+
+Size: +4 Combat:
+
+Fist: Init -10, Attack +5, Defense +4, Damage +11
+
+Soak: +3
+
+Fatigue Levels: OK, 0, -1, -3, -5,
+
+Unconscious
+
+Wound Penalties: -1 (1-9), -3 (10-18), -5 (19-27), Incapacitated (28-36), Dead (37+)
+
+Abilities: Brawl 3 (fist)
+
+The colossus is not a subtle creation. Standing over 15 feet tall and weighing around two tons, it will be difficult not to notice it. A magus who wishes to keep his necromantic proclivities secret should opt for another type of corpse minion. An egotistical necromancer need not worry about such things."""
+    }
+
+    #ARM5SP029aB2cD4eF6gH8iJ ^"Control the Dead Turb" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 10, +2 Voice, +2 Sun, +2 Group) Required Lab Total: 1 season (80), 2 seasons (60), 3 seasons (54), 4 seasons (50"
+        }
+        DESCRIPTION """A group of ten corpses animate and follow the caster's verbal commands.
+
+Individual commands cannot be issued to a particular member of the group; every corpse follows the caster's command. While they each perform the same task, they are not considered a trained group for combat purposes.
+
+Created Revenant
+
+A created revenant has the same stats as a revenant found in the field. Add the following information to the stats for the Created Corpse.
+
+Magic Might: 9 (Corpus)
+
+Characteristics: Int -2, Per -2, Pre 0, Com -2, Str +3, Sta +31, Dex +1, Qik 0
+
+Confidence Score: 1 (3)
+
+Virtues and Flaws: Magic Human
+
+Magic Qualities & Inferiorities: Greater Power; No Fatigue; Improved Soak (x4); Baneful Circumstances (in daylight)
+
+Personality Traits: Vengeful +6
+
+Combat:
+
+Fist: Init 0, Attack +7, Defense +4, Damage +5
+
+Soak: +11
+
+Fatigue Levels: None
+
+Powers:
+
+Breath of Corruption, 1 point, Init +2, Auram. The revenant's foul breathe can infect a person within 2 paces with a disease (Ease Factor 9 effect as Medium Wound).
+
+Rise from the Grave, 1 point, Init -, Terram. The revenant can cause the earth over its grave to open for one Diameter so it may enter or leave. The ground then seals, leaving no trace of the revenant's passing.
+
+Vis: 2 Corpus in eyes."""
+    }
+
+    #ARM5SP030aB2cD4eF6gH8iJ ^"Conjure a Dead Army" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["GroupThiscreates 100 corpses"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch, +2 Group, +1 for larger group"
+        }
+        DESCRIPTION "Required Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)"
+    }
+
+    #ARM5SP031aB2cD4eF6gH8iJ ^"Control the Dead Army" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 10, +2 Voice, +2 Sun, +2 Group, +1 for larger group"
+        }
+        DESCRIPTION """This spell causes 100 corpses to animate and follow the caster's verbal commands.
+
+Individual commands cannot be issued to a particular member of the group; every corpse follows the caster's command. While
+
+they each perform the same task, they are not considered a trained group for combat purposes.
+
+Required Lab Total: 1 season (90), 2 seasons (68), 3 seasons (60), 4 seasons (57)"""
+    }
+
+    #ARM5SP032aB2cD4eF6gH8iJ ^"Conjure the Horde of the Dead" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["IndThiscreates 1,000 corpses"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch, +2 Group, +2 for larger group"
+        }
+        DESCRIPTION "Required Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)"
+    }
+
+    #ARM5SP033aB2cD4eF6gH8iJ ^"Control the Dead Army" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 50
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 10, +2 Voice, +2 Sun, +2 Group, +2 for larger group"
+        }
+        DESCRIPTION """This spell causes 1,000 corpses to animate and follow the caster's verbal commands.
+
+Individual commands cannot be issued to a particular member of the group; every corpse follows the caster's command. While they each perform the same task, they are not considered a trained group for combat purposes.
+
+Required Lab Total: 1 season (100), 2 seasons (75), 3 seasons (67), 4 seasons (63)"""
+    }
+
+    #ARM5SP034aB2cD4eF6gH8iJ ^"Conjure the Walking Dead" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 50
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Auram, Terram, Vim"
+            ^"Design" STRING "Base 45, +1 Touch"
+        }
+        DESCRIPTION """This ritual creates a revenant  --  one of the magical walking dead. Different from an animated corpse, a revenant is a malefic creature with a Magic Might of 9. While it is lacking intelligence, a revenant possesses a violent personality and, if not immediately magically controlled, it attacks
+
+Hermetic Projects
+
+the nearest living creature. The Auram and Terram requisites are necessary for instilling the revenant's magic powers.
+
+Base Level Interpretation: A level 10 Creo Animal spell creates the corpse of a mundane animal, while a base level 5 Creo Corpus spell creates a mundane human corpse. A level 50 Creo Animal spell will create a magical beast, meaning that a level 45 Creo Corpus spell will create a magical human.
+
+Required Lab Total: 1 season (100), 2 seasons (75), 3 seasons (67), 4 seasons (63)"""
+    }
+
+    #ARM5SP035aB2cD4eF6gH8iJ ^"Conjure the Colossus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch, +1 Size increase, min level 20 for a Ritual"
+        }
+        DESCRIPTION """This ritual creates a huge human corpse of Size +4. It is similar to a regular conjured corpse in every way except size. Spells designed to control a colossus must also take into account its larger Size.
+
+Required Lab Total: 1 season (40), 2 seasons (30), 3 seasons (27), 4 seasons (25)"""
+    }
+
+    #ARM5SP036aB2cD4eF6gH8iJ ^"Awaken the Colossus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Corpus"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 10, +2 Voice, +2 Sun, +1 Size increase"
+        }
+        DESCRIPTION """This spells causes the Size +4 colossus corpse to animate and follow the caster's verbal commands.
+
+Required Lab Total: 1 season (70), 2 seasons (53), 3 seasons (47), 4 seasons (44)
+
+Grave Hounds
+
+Dogs are popular companions and guardians. But living dogs must be fed and maintained, and shy from a Gifted magus. Dead dogs provide similar services without daily upkeep, or balking at a magus' Gift.
+
+Hermetic Projects"""
+    }
+
+}

@@ -1,0 +1,247 @@
+EXTENSION "ARM5e_Cov_Spells_Animal" {
+    NAME "Covenants - Animal Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Covenants
+
+    #ARM5SP001aB2cD4eF6gH8iJ ^"A Spell to Milk Cattle" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3, +1 Touch, +1 Conc, +2 Group"
+        }
+        DESCRIPTION """While you wait, the cows are magically milked without further handling, transferring their milk into nearby milkpails. The magus's Perception + Finesse roll substitutes for an Animal Handling roll by a competent farmer; the spell gathers the milk, but if the roll is failed, the cattle may be spooked.
+
+Milking cattle is normally Simple (3) if the cattle are accustomed to the process and the milking hand, so the basic Finesse Ease Factor is at least 6, higher if anything disturbs the cows. Cows are initially be disconcerted at being milked by invisible hands, and need soothing (The Gentle Herd is ideal for this task). Unless magically calmed, the Finesse roll is Very Hard (15+) the first time cows are milked by magic, but this Ease Factor reducing over time and successful milking to 12, then 9, until the cows become accustomed to the process (6)."""
+    }
+
+    #ARM5SP002aB2cD4eF6gH8iJ ^"The Gentle Herd" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 4, +1 Touch, +1 Conc, +2 Group"
+        }
+        DESCRIPTION "A group of animals are rendered calm and placid, even while unusual events occur, such as invisible hands milking them."
+    }
+
+    #ARM5SP003aB2cD4eF6gH8iJ ^"Hide to Parchment" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3,. +1 Touch, +2 Group"
+        }
+        DESCRIPTION """This spell stretches, shaves, and dries a stack of animal hides, as if a percamenarius had worked on them. Stretching makes hide flexible instead of leathery, while shaving makes it smooth enough for writing and thin enough for binding. Drying prevents mold from forming on the vellum, but if excessive makes it brittle.
+
+A Perception + Finesse roll is treated as a Craft: Percamenarius roll to determine the quality of the vellum created."""
+    }
+
+    #ARM5SP004aB2cD4eF6gH8iJ ^"The Plunder of Twenty Geese" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 1, +1 Touch, +2 Sun, +2 Group, +1 size, +1 optional requisite"
+        }
+        DESCRIPTION """Req: Rego (optional, raises level to 20)
+
+This spell transforms up to 100 feathers, usually gained by plucking a chicken, into the wing feathers of geese, which are the preferred source of pens. A version of this spell, with a Rego requisite and level of 20, strips and tempers the pens."""
+    }
+
+    #ARM5SP005aB2cD4eF6gH8iJ ^"Swift Knives, Invisible" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Eye"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 30, +1 Eye, +1 destruction of alimentary contents, +0 cosmetic requisite"
+        }
+        DESCRIPTION """Req: Rego
+
+This spell reduces an animal to its components. A dead sheep, for example, becomes a pile of unwashed wool, a hide, a collection of boned joins of meat, a stack of organs, and a skeleton. The contents of the alimentary tract vanish.
+
+To Aid or Replace Scribes"""
+    }
+
+    #ARM5SP006aB2cD4eF6gH8iJ ^"The Scribe's Touch" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 3
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +1 Touch"
+        }
+        DESCRIPTION "This spell trims the magus's quill with the flick of a finger."
+    }
+
+    #ARM5SP007aB2cD4eF6gH8iJ ^"Creating an Empty Book From a Filled One" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 3
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +1 Touch"
+        }
+        DESCRIPTION """This spell creates a palimpsest (a book that has had its writing scraped away so that it can be reused) from an existing book. It does this by flaking away a thin layer from both sides of each page.
+
+An Intelligence + Finesse roll determines the skill with which the previous writing has been removed."""
+    }
+
+    #ARM5SP008aB2cD4eF6gH8iJ ^"Binding the Mundane Codex" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 1, +1 Touch, +2 Group, +1 size"
+        }
+        DESCRIPTION """Req: Optional, Vary
+
+This spell binds up to 1,000 prepared bifolds into books. Usually these bifolds have already been written upon, but magi may use this spell to create blank books if they wish. The spell fails if any of the necessary pieces of a codex are missing. Codicies created with this spell are usually flap-books, since they lack wooden boards within their covers. Binding mundane materials into the book which are not derived from animals, like cover boards or registers, requires a spell with the appropriate requisite and an Intelligence + Finesse roll against an Ease Factor of 12. Some magi mold animal bones into plates, to serve instead of wood. This spell allows readers of the book to claim the +1 quality bonus for sound binding."""
+    }
+
+    #ARM5SP009aB2cD4eF6gH8iJ ^"Binding the Hermetic Codex" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 1, +1 Touch, +2 Group, +1 size"
+        }
+        DESCRIPTION """Req: Vary
+
+A variant of Binding the Mundane Codex, this ritual allows magi to incorporate resonant materials into their bindings. Binding a book with resonant materials is extremely difficult and requires an Intelligence + Finesse roll against an Ease Factor of 12 + 3 per resonant material, to a maximum of three materials. This spell allows readers of the book to claim the +1 quality bonus for sound binding.
+
+staff, reducing the possibility of casual mind control. These measures have probably been unnecessary since the invention of the Aegis of the Hearth centuries ago, but the tradition remains. As a counterexample, the reading rooms for the covenant of Valnastium lie on a lawn in a section of the gardens. These are intermittently protected by weather magic. All reading rooms contain some measure to reduce the possibility of theft.
+
+A scriptoriolum is a scribal carrel  --  a tiny room in which a scribe may work undisturbed. Carrels were a monastic invention, developed in response to the problems caused by autodictation. Mundane copyists have only used silent reading for around the last century; before that time the usual method of making copies was for the scribe to read the book aloud, to himself, then copy what had been said. When many scribes were working together in a room, this made the scriptorium so noisy that many monasteries developed languages of hand-signals to allow communication in the scriptorium to continue. Autodictation continues in many institutions, and separating the scribes in tiny rooms, so that they work without disturbing each other, is popular in some monasteries.
+
+A suite of scriptoriola is more expensive to build, and to run, than a scriptorium. Each carrel requires a supply of stationery and illumination fuel. These are usually kept centrally, in a room near the suite, or in armarii along the hallway formed by the carrels. Some covenants refuse to allow their own staff to use carrels, because it prevents them from being observed, to ensu..."""
+    }
+
+    #ARM5SP010aB2cD4eF6gH8iJ ^"Repair Cracks and Tears" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5 [one hide], +2 treated animal product [parchment] +1 Touch"
+        }
+        DESCRIPTION "This spell allows a magus to heal cracks and tears in the parchment and leather of a book. It is a comparatively expensive way to repair books, so it is only used when the covenant lacks skilled craftsmen, or on books of such historical significance that their owners prefer they are not repaired by human hands. For example, if one of the holographic diaries of Bonisagus is damaged, it is repaired in this way, rather than by having a scribe create a replacement page, because it preserves the handwriting of the Founder."
+    }
+
+    #ARM5SP011aB2cD4eF6gH8iJ ^"A Simple Test for the Completeness of Books" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch, +1 requisite"
+        }
+        DESCRIPTION """Req: Herbam
+
+This spell allows the magus to check the physical condition and history of a book. It also, through the Herbam requisite, allows the magus to test the quality of the plant-based inks used in its creation."""
+    }
+
+    #ARM5SP012aB2cD4eF6gH8iJ ^"Books that Scream in Pain" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch, +1 requisite, +2 room"
+        }
+        DESCRIPTION """Req: Herbam
+
+This spell allows the magus to check every book in a room for a physical or historical property. The name of the spell comes from the habit of an early librarian at Durenmar of making the books in the collection cry out if they were damaged, but the sigil of the caster determines the appearance of the spell's signal. The spell's Herbam requisite allows it to detect words in the books, provided they have a plant-based ink or binding agent, like gum arabic."""
+    }
+
+    #ARM5SP013aB2cD4eF6gH8iJ ^"The Avariciousness of the Ptolemies" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Design" STRING "Base 1, +1 Touch, + 2 Ring"
+        }
+        DESCRIPTION "This ward makes it impossible for those lacking Magic Resistance to remove a book from the library, because the book cannot cross a circle inscribed on the floor, or around the single doorway. It is traditional for librarians to defend these wards by placing destructive magical items near the entrances with the triggering condition \"tampering with the book ward.\""
+    }
+
+    #ARM5SP014aB2cD4eF6gH8iJ ^"A Simple Charm for the Recovery of Misfiled Books" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 1, +4 Arc, +1 Conc"
+        }
+        DESCRIPTION """This spell makes a misplaced book fly swiftly to rest on its lectern, in an open bookcase, or to the hand of the caster. The spell requires an Arcane Connection to the book, which is usually the library catalog, although the book's voucher can serve equally well. The book moves about as quickly as a running man, and falls to the ground if the caster's concentration lapses before it arrives. This spell cannot cause books to pass through solid objects, so the book must have a clear path to the magus for the spell to work. Stolen books are usually kept in a chest, or behind a closed door, to prevent this spell's use.
+
+The Demand of the Frustrated Scholar Soothed"""
+    }
+
+    #ARM5SP015aB2cD4eF6gH8iJ ^"The Weightless Transportation of Books" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Animal"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +2 Group"
+        }
+        DESCRIPTION "This spell makes the books within a chest almost weightless. This allows library staff or Redcaps to easily carry a collection of books to a new loca- tion. This spell does not make the book chest itself weightless; that requires an Herbam requisite, and adds five levels to the spell's difficulty. This spell is also used, enchanted into book cases, to make a library weigh less, which is important if the covenant has a growing library and no desire to replace the timber floors on the upper levels of its towers."
+    }
+
+}

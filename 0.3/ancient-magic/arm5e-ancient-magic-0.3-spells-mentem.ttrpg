@@ -1,0 +1,110 @@
+EXTENSION "ARM5e_AM_Spells_Mentem" {
+    NAME "Ancient Magic - Mentem Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Ancient Magic
+
+    #ARM5SP007aB2cD4eF6gH8iJ ^"Anat's Search in the Miry Abyss" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Veil"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +3 Veil, +1 Diam"
+        }
+        DESCRIPTION """This spell senses a specific person in the world of the dead. If a person cannot be sensed, then she is either alive or beyond the reach of the spell. The only reason that a dead person
+
+New Range: Veil of Death
+
+Spells cast with this range may affect any dead mortal human. The distance between the caster and any physical remains of the target is irrelevant, but the caster must still be connected to the target in some way  --  which can be achieved by appropriate Intellego magic with this Range, or by possessing an Arcane Connection to the target. Physical remains are suitable Arcane Connections and the Minor Hermetic Virtue Canaanite Magic (which the caster would normally possess) also provides enough information for targeting spells. For the purposes of spell magnitudes, this range is equivalent to Sight.
+
+would normally be beyond the reach of the spell is that she is in Heaven. Once sensed, the magus may cast other spells on the target, as long as this spell is active."""
+    }
+
+    #ARM5SP008aB2cD4eF6gH8iJ ^"The Ob of Mot" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Veil"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3, +3 Veil, +1 Conc, +1 Group"
+        }
+        DESCRIPTION """This spell allows those about the caster to speak with a specific person in the world of the dead  --  to them it appears that the caster is speaking with the voice of the dead person. The caster is effectively acting as a temporary container or vessel for the dead spirit, and botches of this spell might cause the caster to become possessed by a malevolent spirit.
+
+The caster must either have an Arcane Connection to, or otherwise be able to sense, the target, and the target must be in the world of the dead; that is, neither alive nor in Heaven. The dead person is compelled neither to speak nor be truthful. The
+
+The Problem of Samuel
+
+Zephaniah was able to summon the spirit of Samuel who, being a prophet of God, should have been in Heaven and thus unreachable by Canaanite necromancy, which at first appears to be an indication that Zephaniah broke the Limit of the Divine. In fact, Samuel was not in Heaven. His spirit, along with those of all the Old Testament saints, initially dwelt beneath the earth in paradise. It was not until after the crucifixion of Jesus Christ that Heaven became accessible to man, allowing Samuel, and the other prophets, to enter.
+
+caster is aware of the conversation, but cannot participate without making an Intelligence + Concentration roll against an Ease Factor of 12."""
+    }
+
+    #ARM5SP009aB2cD4eF6gH8iJ ^"The Visage of Mot" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Veil"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 15, +3 Veil, +1 Conc"
+        }
+        DESCRIPTION """This spell summons the ghost of a specific person in the world of the dead. The caster must either have an Arcane Connection to, or otherwise be able to sense, the target, and the target must be in the world of the dead; that is, neither alive nor in Heaven.
+
+New Items
+
+Some items that exploit the Range Veil of Death are listed below. The items are also appropriate effects for a magus to invent, with the approval of the storyguide, during the process of integrating Canaanite magic with Hermetic theory."""
+    }
+
+    #ARM5SP010aB2cD4eF6gH8iJ ^"Call to Arms" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Event"]
+            ^"Target" ENUM ["Room"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Intellego"
+            ^"Design" STRING "Base 4, +4 Arc, +1 Event [Mom], +2 Room"
+        }
+        DESCRIPTION """This Ritual wakes all of the grogs (or any other predefined group) in one room of the covenant if the condition described at the time of casting occurs within the walls of the covenant.
+
+Darius wants to set a trap for anyone who might try to assassinate him in his sleep. He decides to cast a Perdo Corpus Ritual that wounds anyone who enters his sanctum and was not present at the casting of the spell. Because the triggering condition and the Form of the spell are both Corpus, no requisite is required. If Darius had created a spell that was triggered by the target's intentions, it would have needed a Mentem requisite."""
+    }
+
+    #ARM5SP011aB2cD4eF6gH8iJ ^"See the Spirits of the Night" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+        }
+        DESCRIPTION """The caster is able to see Mentembased spirits (ghosts) that are normally invisible to the living. For spirits that are not in close proximity to the caster, a successful Perception roll may be required to locate them. For example, ghosts hidden behind intervening walls are not visible, and a ghost amid a large crowd may not be immediately obvious. This spell does not allow the caster to communicate with the dead, only to see a ghost. This spell must penetrate the Magic Resistance of the invisible ghost to be successful.
+
+(New Base 5 [Sense any Mentem spirit], +1 Conc, +4 Vision)
+
+Ghosts of Ancient Rome
+
+The residents of rural Rome might direct the investigator to the general location of a ghost because it is relatively well known. One such example is the ghost of Libitina. Libitina was a priestess of the cult of Hecate in Rome. She was a powerful sorceress who was driven to achieve power at any cost. In pursuit of this quest, she murdered her own children and used their restless spirits to punish her enemies and guard her defixiones.
+
+This foul act still binds Libitina to the world of the living. She haunts the countryside of Rome terrorizing parents. She believes that she remains in this world to protect children and punish anyone who abuses them. The characters may hear children playing while repeating a rhyme that calls for Libitina to punish cruel mothers and fathers.
+
+If the magi communicate with Libitina, they may be able to lay her ghost to rest. Once she admits that her deeds in life were despicable and cannot be undone by punishing others, she passes to the other side. As a reward, she provides the magus with a powerful defixio that she created to protect her grave. The statistics for Libitina are left to the discretion of the storyguide, but she should have a Might that presents a challenge to the group. Because she feels overwhelming guilt over her mistreatment of her children, a magus using Coerce Spirits of the Night on Libitina receives a +4 to his Pre..."""
+    }
+
+}

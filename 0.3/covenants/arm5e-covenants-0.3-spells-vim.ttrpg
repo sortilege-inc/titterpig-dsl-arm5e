@@ -1,0 +1,316 @@
+EXTENSION "ARM5e_Cov_Spells_Vim" {
+    NAME "Covenants - Vim Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Covenants
+
+    #ARM5SP035aB2cD4eF6gH8iJ ^"Pen +0, 24/day" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+        }
+        DESCRIPTION """Placing a selection of food (vegetables, meat, liquids) inside this pot and closing it, the user describes the recipe they wish applied to the food, which is instantly processed and transformed as if by a cook. The edibility and quality of the food is not changed in any way, other than to discard small spoiled parts (as any cook would).
+
+The resulting dish is as described by the user, and limited by his knowledge (or imagination) and quality of description. A Communication + Finesse roll by the user replaces the Craft: Cook roll (at +3 Ease Factor). The food will be at least technically edible (if edible materials were placed within), though a poor Finesse roll may result in a less appetizing dish than hoped for. The user may substitute Communication + Craft: Cook for Communication + Finesse if he possesses that skill.
+
+Covenants lacking grogs with the desired skills may write out instructions for the device, provided the grogs are literate enough to read a recipe. Use the writer's quality (as if he were writing a tractatus) in place of die rolls. Failing all else, the user can request "Traveler's Hot-Pot." This is a very basic stew, with peeled vegetables and chopped meat, boiled until over-done, which has an Ease Factor of only 3.
+
+(GL 5, +1 Touch, +2 Group, +3 for requisites, +1 flexibility, +5 levels for 24 uses)
+
+(* Because of its high level, many covenants must create this device as an Invested Device.)
+
+Stone-Cutting Knife
+
+Rego Terram 15 Pen +0, unlimited uses R: Touch, D: Mom, T: Part
+
+This enchanted chisel shapes and forms stone as if a well-equipped stonemason were carving it. The device may be used to carve blocks from a quarry (hence the Part Target). The wielder's Dexterity + Finesse roll substitutes for a mason's Craft roll (with +3 to the comparable Ease Factor).
+
+It is a Simple task for a Mason to cut a plain block, so the basic Finesse Ease Factor to use this device to cut blocks for building is 6. Grogs deputed to the task can usually be trusted t..."""
+    }
+
+    #ARM5SP036aB2cD4eF6gH8iJ ^"Rego Terram 15 Pen +0, 24/day" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Ind, device maintains concentration"]
+        }
+        DESCRIPTION """This enchanted glove, when placed against an inanimate object, lifts and pushes the object as the user holds on and moves. When the user removes his gloved hand from the object, it settles to the ground.
+
+(GL 3, +1 Touch, +1 Conc, +5 levels to maintain, +5 levels for 24 uses; based on The Unseen Porter)
+
+The Motivated Plow
+
+Rego Terram 15 Pen +0, 24/day
+
+T: Touch, D: Conc, T: Part, device maintains concentration
+
+This lightweight, plow-shaped device can easily be pushed along even by a single grog, not needing any harnessed beasts. If settled on the ground, it transforms even hard-packed earth into loose, well-plowed soil in a circle 15 paces across.
+
+(GL 2, +1 Touch, +1 Conc, +1 Part, +5 levels to maintain, +5 for 24 uses; based on The Forgiving Earth)
+
+The Vitalizer of Provisions
+
+Creo Animal (Herbam) 19 Pen +0, constant effect R: Touch, D: Conc, T: Group This chest preserves food placed within it, preventing decay while the door remains closed. When removed from the box, the effect ceases to affect the food, and it may be cooked and eaten  --  as fresh as when it was placed within.
+
+(GL 2, +1 Touch, +2 Sun, +2 Group, +3 levels environmental trigger, +1 level for twice daily)
+
+The Death of Vermin
+
+Rego Animal 20 Pen +0, 1/day
+
+This box is enchanted to fill specific vermin with a desire to approach and enter the box. The box is placed where vermin are found, triggered, and left to gather any that approach the box. The effect lasts until sunset or sunrise: most vermin are either active by day, or active by night, so one use gathers all vermin in that area.
+
+Once in the box, the vermin may be destroyed by a suitably equipped grog.
+
+(GL 2, +2 Voice, +2 Sun, +2 Group) A spell exists to kill pests instantly, but is level 50 Perdo Animal, and a device to perform this task would require 5 or 6 pawns of vis; as such, it is cheaper to have a grog sit by and stomp on the vermin necessary.
+
+Abluere Magica
+
+Rego Herbam (Animal) 15 Pen +0, unlimited uses T: Touch, D: Mom, T: In..."""
+    }
+
+    #ARM5SP037aB2cD4eF6gH8iJ ^"Muto Animal (Corpus, Mentem) 34 Pen +0, constant effect" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Constant Effect"]
+            ^"Target" ENUM ["Ind This collar transforms a normal hound into an ideal servant, who walks erect and has hands; has the intellect of a grog; but retains the devotion, willingness to please. and loyalty of a hound. The creature's overall appearance remains hound-like, but its limbs and intellect are transformed by the device"]
+            ^"Design" STRING "Base 15, +1 Touch, +14 levels always on, requisites free"
+        }
+        DESCRIPTION """One defect is that the hounds suffer Warping from the constant effect, but over the lifetime of a dog, this is generally not too much of a problem.
+
+Fantastical Device: The Remote Entrance Portal"""
+    }
+
+    #ARM5SP038aB2cD4eF6gH8iJ ^"Rego Corpus 50 Pen +0, 24/day" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 20, +3 Sight, +2 Group, +5 levels for 24 uses"
+        }
+        DESCRIPTION """For the security-minded covenant, this is a magical transporter activated only from within the covenant, with no use of Arcane Connections. If the covenant is otherwise physically inaccessible  --  for example, a flying castle  --  then hostile ingress may be almost impossible.
+
+In typical use, grogs keep a mundane eye on the portal area, watching for visitors, and there is a loud (mundane) bell and flag visitors can use to indicate their request for transport. Finally, there is the circle-of-transport, activated from within the covenant, which transports those seen by the grogs into the covenant. (Visiting magi may resist the effect and remain outside. In such cases, servants are typically sent out to welcome them into external accommodations, outside the Aegis.)
+
+The enchantment is a Rego Corpus 45 effect, and transports targets seen up to 500 paces into the covenant, or deposits them outside upon departure.
+
+use Allows complex thoughts to be shared.
+
+Shared Senses (Sight): InMe 30, Touch, Concentration, Individual, bond maintains concentration. The magus can share the cat's sight.
+
+Shared Senses (Sight): InMe 30, Touch, Concentration, Individual, bond maintains concentration; the cat can share the magus' sight.
+
+Equipment: None Encumbrance: 0 (0) Vis: 2 Imaginem, in eyes
+
+Customization Notes: The Familiar Cat's species Virtues and Flaws are Perfect Balance, Puissant Awareness, Sharp Ears, and Nocturnal. Since being awakened Intelligence has replaced Cunning, and her Presence and Communication have improved since she gained the power of speech. She has gained 4 years experience since joining her master as a young (1 year old) cat. Changing this familiar's type is straightforward using The Book of Mundane Beasts.
+
+Bond effects are the choice of the magus; these are but a sample of a familiar that grogs may encounter. (Bond scores are not included here.)
+
+The (Over) Familiar Cat
+
+Magic Might: 10 (Imaginem)
+
+Characteristics: Int -3, Per +1, Pre -1, Com 0, Str -7, Sta..."""
+    }
+
+    #ARM5SP039aB2cD4eF6gH8iJ ^"Test of Fastness and Fading InAq 5" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 3, +1 Touch, +1 Part"
+        }
+        DESCRIPTION "This spell confirms the quality of a container of ink, dye, or paint, verifying for the magus that it will not fade quickly, flake off rapidly, or eat through parchment."
+    }
+
+    #ARM5SP040aB2cD4eF6gH8iJ ^"ReAq10" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 1, +2 Voice, +2 Ring, +1 to allow many colors of ink"
+        }
+        DESCRIPTION """This spell controls ink so that it makes patterns on the pages that correspond to the magus's words. This spell does not allow a magus to write faster than the core rules permit, but does allow impaired magi to write when they would otherwise require a notary. A Finesse roll makes the writing particularly precise and neat, which is usually unimportant.
+
+To Aid or Replace Illuminators"""
+    }
+
+    #ARM5SP041aB2cD4eF6gH8iJ ^"A Useful Inculcator of Comments ReHe 4" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch"
+        }
+        DESCRIPTION """This spell allows librarians to add new descriptions to their catalogs, by sliding the letters on a page aside to create the space for the new entry. The spell was originally created by a magusscribe to assist in glossing books, but is
+
+not effective for this purpose in newer works. That's because the oak-gall "ink" in newer books is really a dye, and to move aside such characters, which are made of dyed parchment, would require an Animal requisite. This limitation can be ignored if magi use true inks, which are suspensions of colored material in fluid, to write their catalogs. This spell assumes an ink made of soot, gum, and vinegar, all of which lie within a single Form. A Dexterity + Finesse roll determines the quality of the text after the magus has relocated it. A result less than 6 indicates that the text has interpolated into and corrupted some other passage."""
+    }
+
+    #ARM5SP042aB2cD4eF6gH8iJ ^"Requisite: Rego, Intellego" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Dia"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Dia, +2 requisites"
+        }
+        DESCRIPTION "This spell changes the book's register, its bookmark ribbon, into a venomous serpent. Cobras are traditional. It is typically vested in a single-use charged object, activated when the book is stolen from a library. Most librarians prefer this Animal form, but many others exist, due to the various specializations of magi. The exploding bookplate is perennially popular, as are bookplates that drive the thief into a penitent mania."
+    }
+
+    #ARM5SP043aB2cD4eF6gH8iJ ^"Req: Intellego, Mentem (the latter optional, raises level to 15" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Room"]
+            ^"Design" STRING "Base 1, +1 Touch, +2 Room, +1 requisite, +1 versatility"
+        }
+        DESCRIPTION "This spell places books in a book chest or closet into a sequence. Sample sequences include the Art or Ability the books concern, the authors' names, size through any dimension, the color of the covers, the binding material, the newness of the books, and their opening sentences. If the books are marked with acquisition or shelf location numbers, then those may also guide the sequence. With a Mentem requisite the magus can shelve books based on whether he has read them or not, how much he liked the books while reading them, how he feels about the authors, or his emotional attachment to the people who gave him the books. Books in chained libraries need to be taken off their rails for this spell to be used."
+    }
+
+    #ARM5SP044aB2cD4eF6gH8iJ ^"ReAn Level 40" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 20 [movement up to 500 feet, using ReCo guidelines], +4 Arc"
+        }
+        DESCRIPTION "This spell makes a book that is within 500 paces materialize by the hand of the caster. The spell requires an Arcane Connection to the book, which is usually the library catalog. There are higher-level versions of this spell that draw a book from up to seven leagues away."
+    }
+
+    #ARM5SP045aB2cD4eF6gH8iJ ^"Req: Imaginem, Creo (the latter optional)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """This spell allows the caster to determine the location of a missing book by having the magus's sigil appear on a map. Library floor plans on tablets are often used in conjunction with this spell. With a Creo requisite, the magus can project an image of the book's location on a mirror, and hand-held magic items using this variant are often employed in libraries that encourage visitors.
+
+(Based on The Inexorable Search, +1 requisite)"""
+    }
+
+    #ARM5SP046aB2cD4eF6gH8iJ ^"Req: Corpus, Animal, Aquam, Herbam" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Design" STRING "Base 10, +2 Sun"
+        }
+        DESCRIPTION """This spell conglomerates other wards into a single working. It holds at bay many of the things likely to damage Hermetic sancta: flame, excessive light, thieves, pests, moisture, and mildew.
+
+(As Ward Against Flame, +4 requisites)
+
+dependent on mundane tools would not be able to cross even the simplest of wards, so the door is an alternative to the sort of ward that many apprentices could create. The door does, however, have a legal use: it defines where in a passageway the sanctum begins.
+
+Some members of the Order use mundane traps to secure their sanctums. There are two advantages offered by nonmagical devices: they cannot be resisted using the Parma Magica, and they are invisible to spells that detect enchantments. Spells that repel mundane weapons make mundane traps of little use against an experienced, prepared magus.
+
+Ring and Circle Wards
+
+The most popular type of sanctum defense is the ring and circle ward. Wards against mundane things, like people, pests and fire, are easy to create and cost no vis. Circle wards at entrances, unlike spells cast on the Room Targets, do not warp the residents of the warded space. Defacing the circle can destroy ring and circle wards, so durable circles are carved into stone, or made of metal fastened to other surfaces.
+
+Magic Items
+
+Sanctum items are highly individual, since they derive from the array of Arts and magical foci that Hermetic magi possess. Many magi, who assume their sancta will be intruded into only rarely, purchase charged items from discreet Verditius magi to use as traps. This has the advantage that an intruder who has taken special precautions against the Forms in
+
+Security Problem
+
+The pass methods for magical traps are less secure if known by an apprentice, so many magi find ways for the apprentice to avoid triggering the wards without any conscious effort. Some magi, for example, key their effects to a distinguishing physical feature that both share. A few have their apprentices carry an object at all t..."""
+    }
+
+    #ARM5SP047aB2cD4eF6gH8iJ ^"Creo Terram 45" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +1 Touch, +2 Group, +5 complexity"
+        }
+        DESCRIPTION """Req: Vim
+
+This rather well-known spell furnishes an empty chamber of the appropriate dimensions with a fully-equipped, standard Hermetic laboratory. It is generally employed by magi who find themselves with plenty of vis, but who otherwise have difficulties in securing the necessary funds and sources to procure the materials by mundane means. This laboratory is actually rather better than the standard, since the magically created outfittings are perfect. Unless this lab is rigorously maintained at the higher level of Upkeep, however, these Virtues will quickly be lost, and it will degrade to a more mundane standard laboratory. It starts with the following statistics:
+
+Virtues and Flaws: Flawless Equipment, Flawless Tools, Spotless
+
+Characteristics: Size 0, Refinement 0, General Quality +2, Upkeep +3, Safety 0, Warping 0, Health +1, Aesthetics +1
+
+Specializations: Items 2, Vis Extraction 2, Creo 1
+
+Gleam of the Freshly-Polished Glass"""
+    }
+
+    #ARM5SP048aB2cD4eF6gH8iJ ^"Perdo Terram 25" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Room"]
+            ^"Design" STRING "Base 5, +1 Touch, +2 Room, +2 complexity"
+        }
+        DESCRIPTION """This spell maintains the equipment and tools of a lab in a constant state of immaculate cleanliness. Dirt, dust, and grime are all removed, leaving the outfittings positively gleaming, as if they had been freshly dusted and polished. This grants the Spotless Virtue to the lab, provided that the spell is cast every lunar month. If the spell ceases, the magus must maintain this pristine condition through more mundane means, otherwise the Virtue is lost. There is just one small drawback to this spell  --  the lab's Warping score increases by one point (giving a Personality Trait Spotless +1) due to the unnatural nature of this cleaning, for as long as it is active.
+
+The Ambulatory Laboratory
+
+Rego Terram 30 R: Touch, D: Mom, T: Room
+
+This spell precisely transports all the movable contents of a chamber into another room to which the caster has an Arcane Connection, leaving their configuration and relative positions intact. Some casting requisites are usually required, depending on the composition of the lab's outfittings; a Herbam requisite is required to move wooden furniture, an Aquam requisite is required to move liquids, and so on. The destination room must be at least as large as the occupied part of the current room, although it can be a different shape. Magi quite often utilize this effect in order to avoid the tiresome (and expensive) practicalities of moving their sanctum by more mundane means. When this spell is cast on a lab, make a Perception + Finesse roll to determine the precision with which the contents are rearranged in the new chamber. The base Ease Factor is 9 + (3 x Refinement). Add three if the lab is Highly Organized; subtract three if it is Disorganized. Also add three if the shapes of the old and new chambers do not match, or six if they are radically different. If this roll fails, the Disorganized Flaw is gained, or the Highly Organized Virtue is lost. If the roll botches, the Hidden Defect Flaw is gained instead.
+
+A version of this spell with ..."""
+    }
+
+}

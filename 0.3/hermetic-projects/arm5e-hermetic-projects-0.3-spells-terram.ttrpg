@@ -1,0 +1,571 @@
+EXTENSION "ARM5e_HP_Spells_Terram" {
+    NAME "Hermetic Projects - Terram Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Hermetic Projects
+
+    #ARM5SP056aB2cD4eF6gH8iJ ^"Trail of Ember" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual The caster of this spell throws a piece of volcanic rock onto a map. The rock lands on the location of the volcano it was expelled from. If the volcano's location is not bounded by the map, then the rock rolls off in the direction that the volcano lies"]
+            ^"Design" STRING "Base 4, +4 Arcane"
+        }
+        DESCRIPTION """If the rock thrown onto the map is not volcanic, then it just lands somewhere at random. The caster can confirm this by casting the spell several times: a volcanic rock will always land on the same spot on the map.
+
+Note that a volcanic rock created via Creo Terram magic will not reveal what volcano it came from when thrown onto the map with the Trail of Ember spell. This is because such a magically created volcanic rock did not in fact come from a volcano.
+
+Required Lab Total to invent spell: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25)."""
+    }
+
+    #ARM5SP057aB2cD4eF6gH8iJ ^"Tear the Earth Asunder" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 65
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +13 Size"
+        }
+        DESCRIPTION """The caster of this ritual stabs a dagger into the ground: from the wound a volcano rises, and lava and scalding gases erupt. Over a period of a day, the volcano erupts, darkening the sky with plumes of ash, and forming a large volcanic crater.
+
+Obviously, the eruption of the volcano devastates villages, towns, monasteries, covenants, or other settlements built in its shadow. Once the spell has been cast, there is no active magical effect; the eruption is natural and does not need to Penetrate Magic Resistance, and consequent rivers of lava and falling ash can also pass unhindered through an Aegis of the Hearth. The caster of the ritual also needs some form of protection to avoid being killed in the eruption.
+
+The volcano region can be up to 20 miles in diameter (though the crater will be a fraction of this size), and the peak can be up to 15,000 feet high (which would make it one of the taller mountains in Mythic Europe).
+
+Required Lab Total to invent spell: One Season (130), Two Seasons (98), Three Seasons (87), Four Seasons (82)."""
+    }
+
+    #ARM5SP058aB2cD4eF6gH8iJ ^"Awaken Sleeping Giant!" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["PartThis spell is cast in the crater of a dormant volcano, and causes the volcano to erupt into life again. The volcanic crater can be up to two miles across, and the spell has no effect if cast in a location other than a volcanic crater. Obviously, the caster will be caught in the eruption, which may be a problem if he is not protected by appropriate wards"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Ignem"
+            ^"Design" STRING "Base 2, +1 Touch, +1 Part, +8 Size, +1 affect Volcano (same as stone"
+        }
+        DESCRIPTION """Once the spell has been cast there is no active magical effect; the eruption is natural and does not need to Penetrate Magic Resistance. The effect is considered "slightly unnatural," as it is natural for a volcano to erupt, but the spell artificially triggered the eruption.
+
+Required Lab Total to invent spell: One Season (90), Two Seasons (68), Three Seasons (60), Four Seasons (57).
+
+Hazards of Volcanoes
+
+The hazards of the volcano include lava, heat, noxious sulfurous fumes, and, of course, eruption.
+
+Lava
+
+Molten lava has a base damage of +15. This is the level of damage sustained if a character walks on lava or is splashed by lava. If a character has a limb or more of their body covered by lava, it causes +30 damage. If half or more of his body is covered by lava, then the character suffers +45 damage. Finally, if his entire body is immersed in lava, he suffers +60 damage. The character continues to suffer this damage each round, until he has been removed from the lava. As lava may stick to the character, it may be difficult to naturally remove the lava from a character who has been immersed in a pool of lava. Note that, apart from defining the base damage for molten lava, these rules are not new; they follow the standard rules for heat and corrosion damage on ArM5, page 181.
+
+Bonuses to the character's Soak score from any armor he is wearing only apply if the character has less than half of his body covered by the lava. This is because, although the armor provides some protection from splash damage, the lava can flow through and behind the character's armor once he is substantially covered. Bonuses to Soak from Virtues such as Tough, and the natural hide of some characters (such as Bjornaer magi in Heartbeast form), cannot be bypassed in this way. Most magi will also have a bonus to their Soak from their Ignem Form Score (see ArM5, page 78), which cannot be bypassed either.
+
+Boiling Mud and Water
+
+Sometimes volcanic activity heats water and mud to scalding temp..."""
+    }
+
+    #ARM5SP059aB2cD4eF6gH8iJ ^"Creeping Earth" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 2, +1 Touch, +3 Moon, +1 Part, +2 Size"
+        }
+        DESCRIPTION """The caster of this spell stamps his foot on the ground and a patch of earth, centered on his position and 35 paces across, slowly but inexorably rises up for the duration of the spell. The earth rises at a rate of about one inch per day (up to three feet over the spell duration).
+
+This is fast enough for people to observe if they watch the earth for more than a Diameter, and the movement can destroy buildings and other structures  --  even the strongest castle walls run the risk of collapse.
+
+This spell only works when cast within a league of a volcano (three miles). This is because this movement is only a slightly unnatural property of the earth in such regions, whereas it is a grossly unnatural property of earth elsewhere.
+
+Required Lab Total to invent spell: One Season (50), Two Seasons (38), Three Seasons (34), Four Seasons (32)."""
+    }
+
+    #ARM5SP060aB2cD4eF6gH8iJ ^"Scorn of Aphrodite's Tears" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 70
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Ignem"
+            ^"Design" STRING "Base 3, +1 Touch, +13 Size, +1 affect a volcano (equivalent to affecting stone"
+        }
+        DESCRIPTION """This ritual is cast when the eruption of a volcano is imminent, and it climaxes with a vial of pure water being poured into the crater mouth. The ritual prevents the volcano from erupting.
+
+The volcano region can be up to 20 miles in diameter (although the crater will be only a fraction of this size), and the peak can be up to 15,000 feet high.
+
+Required Lab Total to invent spell: One Season (140), Two Seasons (105), Three Seasons (94), Four Seasons (88).
+
+Vulcan's Warning Bell
+
+This enchanted bell is suspended in the vapors escaping from a volcanic crater. It detects when the volcano is preparing to erupt. Normally, the bell gives a
+
+number of days warning equal to 1 stress die. If a 0 is rolled on the stress die, then the number on the botch die represents the number of hours warning. If the botch die is itself a 0 (i.e., a botch), then there is no warning. The variable warning is a feature of the eruption, not the bell; Hermetic magic cannot predict the future directly, so the item must rely on advance signs of the eruption, and they appear at varying times.
+
+Note that if the volcano unexpectedly erupts due to a supernatural effect, there may be considerably less warning.
+
+There are two effects involved  --  one to detect the imminent eruption and one to ring the bell. Note that it might be possible for a magus to design a single effect that both detects an eruption and rings a bell to convey this information, as a cosmetic effect. That is not the approach taken here."""
+    }
+
+    #ARM5SP061aB2cD4eF6gH8iJ ^"The Heart That Could Move Stone" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Structure"]
+        }
+        DESCRIPTION """The caster can move stone buildings with incredible force. This usually causes the stone building to collapse, as it is torn from its foundations. Anyone inside takes +10 damage from the falling structure.
+
+However, if the building is floating (through the Repulsion of Earth effect, for example), then the character can push the building to a new location. Characters inside the building when it is being moved must make Dexterity rolls against an Ease Factor of 6, each round, or lose their footing. Unless special precautions are taken, laboratories inside the building are disrupted by the movement, which ruins any laboratory activities being conducted that season. It takes a season to reorganize a laboratory disrupted in this way.
+
+Required Lab Total to invent spell: One Season (50), Two Seasons (38), Three Seasons (34), Four Seasons (32)."""
+    }
+
+    #ARM5SP062aB2cD4eF6gH8iJ ^"Solidity of Stone" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 45
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +3 Moon, +4 size, +1 affect stone"
+        }
+        DESCRIPTION """This spell changes a mass of stone so that it has the unnatural property that it does not melt, even when heated to tremendous temperatures. The purpose of this spell is to prevent a building created out of molten lava (like that created by Tower of Lava) from dissolving back into the bulk lava.
+
+Obviously, this spell must be cast every month otherwise the tower will melt and collapse.
+
+The stone will still be hot, even if it is solid. So, a building protected like this will need to be cooled (or inhabited by characters immune to heat).
+
+New Virtue: Volcanic Minerals
+
+Free Laboratory Outfitting Virtue
+
+The laboratory is supplied with exotic minerals from a volcano. The laboratory needs to be regularly resupplied, otherwise this Virtue is lost. There is no benefit in taking this Virtue multiple times  --  once the laboratory's demands for exotic minerals have been met, additional minerals are of little value. -1 Upkeep, +1 Terram.
+
+Required Lab Total to invent spell: One Season (90), Two Seasons (68), Three Seasons (60), Four Seasons (57).
+
+Effects to Live in the Volcanic Crater
+
+These effects can provide health and wealth to the inhabitants of a covenant occupying the mineral-rich environment of a volcano."""
+    }
+
+    #ARM5SP063aB2cD4eF6gH8iJ ^"Sculpt the Stone Machine" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +3 elaborate design, +1 minimum ritual effect magnitude"
+        }
+        DESCRIPTION """This ritual creates a machine made of stone that is suitable for use as the invested item Stone Harvester. The machine appears to be a large stone beetle about one pace in length. Until it is invested with the Stone Harvester suite of effects, the machine is merely a very elaborate statue.
+
+Required Lab Total to invent ritual: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25).
+
+Stone Harvester
+
+This invested item is a beetle-shaped machine that crawls along the rim of the volcanic crater. It collects and sorts the volcanic debris for valuable and exotic materials, which can be used to reduce the Upkeep of Hermetic Laboratories (see Covenants, page 110). Each Stone Harvester can provide the Free Outfittings Virtue Volcanic Minerals (see Insert) for up to 5 Hermetic Laboratories. Note that the laboratories do not have to be located in the volcano  --  the minerals can be transported to a remote laboratory.
+
+The Stone Harvester is a huge stone device. It requires 20 pawns to open for enchantment (taking one season and a Magic Theory Score of 10). The effects later require 13 pawns of vis to invest into the Stone Harvester.
+
+As the Stone Harvester is made of stone and only traverses the volcanic crater rim, it does not need any particular protection from either heat or fumes. A version of the Stone Harvester that actually enters the lava would obviously require some protection."""
+    }
+
+    #ARM5SP064aB2cD4eF6gH8iJ ^"Basalt Cage" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +1 Size, +1 complex structure, +2 minimum level of a ritual"
+        }
+        DESCRIPTION """This ritual creates a large cage made out of basalt stone with a single gate (also made of basalt) that can be opened and shut. The cage is large enough to hold ten man-sized creatures. Individuals in the cage may find it difficult to escape, if the gate is somehow locked or barred. However, the main purpose of the ritual is to create a cage which is subsequently enchanted as an item with the effect The Entrapped Flame.
+
+Note that, if your character is talented at Rego magics, he may find it easier to use a Rego Terram craft effect to sculpt such a cage from a hunk of basalt. However, remember to consider that the magus must make a Finesse roll against an Ease Factor of 24 to succeed in casting such a Rego craft effect, as it would be hard for a mundane craftsman to sculpt such an item and it would take him a long time to do so (see Covenants page 49).
+
+Required Lab Total to invent spell:
+
+Story Seed: Eternal Spirit of Flame
+
+The volcano (or a regio within it) may be inhabited by a powerful magical nature spirit, or possibly a spirit associated with another realm. Once the characters have established themselves in or near the volcano, they can try to contact and commune with this spirit. Alternatively, the spirit may contact the magi itself. Bjornaer and Merinita characters are particularly likely to be contacted, as they are generally the magi most connected with nature, but any character apparently interested in the welfare of the volcano could be contacted.
+
+Communing with the spirit at the heart of the volcano allows the characters to access the Volcano Lore Supernatural Ability (this is a type of Nature Lore; see Houses of Hermes: Mystery Cults, pages 102-106, or Guardians of the Forests: The Rhine Tribunal, page 37).
+
+The volcano spirit can grant Virtues to characters who are loyal to it. The basic procedure is that the character performs a quest for the spirit and makes a sacrifice (gains a Flaw) and in return the spirit grants the character a portion of his ..."""
+    }
+
+    #ARM5SP065aB2cD4eF6gH8iJ ^"Seasons (27), Four Seasons (25)." DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual The caster plunges his hands into lava (which will cause damage if he is not protected) and communes with the spirit of the volcano. If the volcano's spirit is a creature with Might, then this spell needs to penetrate its Magic Resistance"]
+        }
+        DESCRIPTION """The length of time a conversation with a volcano spirit takes is highly variable, and depends on the activity of the volcano. The spell allows the caster to perceive and participate in the conversation at either great speed or very slowly, as appropriate. A conversation of a few simple sentences with a dormant volcano could take many days, and would therefore require either a spell with a different duration or magical effects similar
+
+Hermetic Projects
+
+to Maintaining the Demanding Spell (ArM5, page 162) in order to maintain the Concentration duration. On the other hand, a long multi-faceted discourse with an active volcano can be conducted in a fraction of a round.
+
+(Base 20, +1 Touch, +1 Concentration) Required Lab Total to invent spell: One Season (60), Two Seasons (45), Three Seasons (40), Four Seasons (38)."""
+    }
+
+    #ARM5SP066aB2cD4eF6gH8iJ ^"Conjuring the Great Tower" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 55
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +7 size, +4 elaborate design"
+        }
+        DESCRIPTION """This ritual creates the foundations and first two levels of the tower. As the ritual concludes, the walls of a vast tower rise from the ground, surrounding those taking part in the ritual. The walls are vast, but the real power of the spell is shown below ground. The foundations extend deep into the earth, forming cellars, crypts, and cisterns between the immense stone pillars driven into the ground.
+
+The time taken to develop this ritual is spent not only in learning how to draw the complex magical forces together, but also in designing the foundations and the lowest levels of the tower, which are filled with rooms, cloisters, courtyards, and arcades.
+
+Creo magic that creates artificial things, such as this huge tower, requires an Int + Finesse stress roll against an Ease Factor, in this case, of 12. If the roll fails, the tower is still successfully conjured but may require additional work to improve its appearance or to repair defects introduced by the casting. A failed Finesse roll creates a section of tower of shoddy quality, while a successful roll creates a standard quality section. If the Finesse roll botches, the foundations are not strong enough to support the tower and a stress check against damage is required each year.
+
+The +7 magnitudes for size creates a circular tower of two levels, 2,000 feet in diameter, standing 40 feet above ground level. The high modifier for the elaborate design is required for the precise placement of the foundations, a hugely important factor in a tower this large.
+
+Casting this ritual causes a +1 preternatural tether, as per Realms of Power: Magic, page 10. If the site has no supernatural aura, this creates a level one Magic aura.
+
+Required Lab Total: 1 season (110), 2 seasons (83), 3 seasons (74), 4 seasons (69)
+
+The high Lab Total required to invent this ritual may persuade a magus to invest time in designing a laboratory to help with this and later effects. And even after such bonuses as that provides, experimentation may..."""
+    }
+
+    #ARM5SP067aB2cD4eF6gH8iJ ^"Heights of the Great Tower" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 50
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +7 size, +3 elaborate design"
+        }
+        DESCRIPTION """This ritual conjures four fully-formed levels of the Great Tower, each 20 feet in height and building directly onto the level below, adding 80 feet to the tower in an instant. As with conjuring the foundations, this ritual requires an Int + Finesse stress roll against an Ease Factor of 12. A failed Finesse roll creates a section of tower of shoddy quality, while a successful roll creates a standard quality section. Botch dice on this Finesse roll are equal to 1 + 1 for each other level where the magus failed to meet the Finesse roll (failures should be recorded for future reference). This represents the inherent complexities and dangers of the project.
+
+Botches on this roll should be handled as story events, but clearly a botch in creating and assembling several thousand tons of stone is going to be significant. As the tower grows, the complexity of controlling the magic also grows, as does the risk of disaster, which may act as a limiting factor on the number of levels a magus would feel safe in conjuring.
+
+Note that by increasing the level of this spell by one magnitude, 40 levels of the tower could be produced, and 400 levels could be produced by increasing the spell by two magnitudes. But doing so should have a direct impact on the number of botch dice for the required Finesse roll. For each additional magnitude of size, add +3 to both the botch dice and the Finesse roll Ease Factor.
+
+Casting this spell creates a preternatural tether of 1 and adds +1 to the aura variation modifier.
+
+Required Lab Total: 1 season (100), 2 seasons (75), 3 seasons (67), 4 seasons (63)"""
+    }
+
+    #ARM5SP068aB2cD4eF6gH8iJ ^"The Quarryman's Gift of (Stone)" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +7 size"
+        }
+        DESCRIPTION """Safer than conjuring thousands of tons of stone atop an already growing tower, this spell creates enough stone for quarrymen and stone cutters to keep mundane craftsmen supplied for as long as it takes to build one new level. The amount of stone created is vast, something like ten million tons, or a block of stone 215 paces on each side.
+
+The type of stone created is particular to the ritual's design, so variants must be designed for each of granite, limestone, and marble, for instance.
+
+Required Lab Total: 1 season (70), 2 seasons (53), 3 seasons (47), 4 seasons (44)"""
+    }
+
+    #ARM5SP069aB2cD4eF6gH8iJ ^"A Season's Inning" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Boundary"]
+            ^"Ritual" BOOLEAN true
+            ^"Requisite" STRING "Aquam"
+            ^"Design" STRING "Base 2, +1 Touch, +4 Boundary, +1 Size, +1 Aquam requisite"
+        }
+        DESCRIPTION """Some waterways, especially those near estuaries, are surrounded by marshland. However, there are techniques for building up and draining the land. This can take many seasons of work, with a large team of laborers working in very difficult conditions. The draining of marshland through the digging of drainage channels and the building of dykes is known as inning. This ritual allows the magus to drain an area 300 by 300 paces to the point that it is dry and stable, as though a season had been spent inning the land. The Aquam requisite is used to move the standing water outside the spell boundary, which makes the inning work easier than normal.
+
+This spell uses the rules for Rego Craft Magic (Covenants, page 49) and as such the
+
+river barge, or a larger waterway to take a
+
+(Base 3, +1 Touch, +1 Part; +3 size, +1
+
+Required Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)
+
+magus must make a Perception + Finesse roll to determine the success and quality of his work. In this case, the Ease Factor is 15 (base 9 + 6 for a season's work). Failure means that, while the drainage ditches may have been dug, they are either too shallow or too few to drain the land. If left, the land is likely to remain waterlogged and building on it is impossible.
+
+Required Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)
+
+Remote Shipyards
+
+buss or cog.
+
+to affect stone)
+
+Some magi or covenants may choose to build or enchant a ship, either without a shipyard or with a shipyard built some way distant from a waterway. While this makes things more complicated, Hermetic magic can overcome most difficulties.
+
+There are many reasons for building ships away from rivers and the sea. For one, it allows the construction work to be carried out unseen by curious eyes, and for another, the magus is less restricted with regards to Magical auras.
+
+A secluded lake allows the Hermetic shipwright to test the boats he makes, and there are almost certainly streams and ri..."""
+    }
+
+    #ARM5SP070aB2cD4eF6gH8iJ ^"Follow the Route I Command" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 3, +1 Touch, +1 Part, +3 size, +1 to affect stone"
+        }
+        DESCRIPTION """This spell carves a new channel in the ground with both ends connected to an existing waterway. As the spell completes, the water flushes into this new section and the spoil from the work starts to fill the old channel. The magus must be touching the ground that he wants the new channel to pass through.
+
+The movement of a large amount of earth, while time-consuming, requires little skill. A Perception + Finesse roll against Ease Factor 12 is needed. Failure means that the channel is incomplete, or the old route is still flooded. If the Finesse roll botches, the work appears complete but the land is now liable to flooding, causing damage to crops and homes alike.
+
+Required Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)"""
+    }
+
+    #ARM5SP071aB2cD4eF6gH8iJ ^"A Mightier Channel" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+        }
+        DESCRIPTION """On casting this spell while touching the river bank, the river is dredged, deepening and widening it as required by the casting magus. A single casting is enough to prepare a small waterway to take a large
+
+Story Seeds for Finding a Shipyard Location
+
+The following story seeds may be useful when looking to secure a location for a shipyard.
+
+Mundane Title
+
+Having found the ideal location, the Hermetic shipwright and his agents must secure title to the land. But the monastery that owns the land has discovered the magical truth behind the approach and are now reluctant to sell. The shipwright must find a way to convince the monks of his good character.
+
+Hermetic Negotiation
+
+The shipyard's future site comes with only one small problem: a vis source contested by two rival covenants. How can the shipwright secure the land without making powerful enemies? Does he petition to join one or other of the covenants, challenge for rights over the site, or look for political leverage to use at Tribunal?
+
+A Supernatural Presence
+
+The Magic aura is home to a small water dragon, no larger than a hound, that lives and hunts in this stretch of water. It poses little threat to the magus or his shipyard. It could perhaps make an interesting subject for a magical menagerie, or a familiar for an ambitious Flambeau. It could be bound to some device by a skilled Verditius, or even put to death with little effort and its vis taken. But then its mother awakens from her centuries-long sleep. What is her reaction to how the magus has treated her child?
+
+The Lovers Parted
+
+The magus re-routes the river in a mastery of magic over nature. But in the following weeks, the covenfolk report hearing the sounds of a ghostly weeping coming from beyond the river's new course. What is it that weeps so mournfully, and why? As the sadness spreads across the land, can the magus be persuaded to mend a broken heart at the cost of changing his own plans?
+
+The Heir, Apparently
+
+As the spell to dredge the river co..."""
+    }
+
+    #ARM5SP072aB2cD4eF6gH8iJ ^"Listen to the Bells" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual The caster of spell holds a bell and he can sense whatever the bell can sense with its magical senses. Usually a bell has"]
+            ^"Design" STRING "Base 20, +1 Touch, +1 Diameter"
+        }
+        DESCRIPTION """no magical senses, but this spell is useful if the bell has been enchanted with some, as is the Assassin's Bell.
+
+In the case of the Assassin's Bell, using the bell's senses provides enough information to use or target tunnels that the bell can hear.
+
+Required Lab Total to invent spell: One Season (60), Two Seasons (45), Three Seasons (40), Four Seasons (38)."""
+    }
+
+    #ARM5SP073aB2cD4eF6gH8iJ ^"Breath of the Glassworker" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun, +1 elaborate shape"
+        }
+        DESCRIPTION """The caster of this spell makes an "O" shape with his thumb and index finger, into which he then blows. This forms and inflates a small glass phial. The phial only lasts for a day, but this is often long enough to hold a sample of some substance until it is either used or taken to the magi's laboratory and repackaged.
+
+Required Lab Total to invent spell: One Season (30), Two Seasons (23), Three Seasons (20), Four Seasons (19)."""
+    }
+
+    #ARM5SP074aB2cD4eF6gH8iJ ^"The Shattered Goblet" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """At the conclusion of this ritual, the caster throws a glass goblet onto the ground which splits into thousands of sharp glass shards, with many times the volume of the original goblet (about 1,000 cubic paces).
+
+If spread about on the ground, the glass shards cause +5 damage to anyone who walks over the ground, but this damage can be totally avoided by wearing hard-soled boots or shoes. The glass can cover an area about 60 paces across in glass 1 foot deep.
+
+The glass shards are intended to be used with the Crystal Rain spell. The glass shards can be reduced in size to be more easily carried, using the Miniaturist of Venice spell.
+
+(Base 3, +1 Touch, +2 Group, +2 Size) Required Lab Total to invent spell: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25)."""
+    }
+
+    #ARM5SP075aB2cD4eF6gH8iJ ^"The Thirsty Dagger" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+        }
+        DESCRIPTION """This ritual creates a metal dagger. The blade contains cleverly designed gutters that feed into a reservoir in the hilt. This means that if anyone is injured by the dagger (takes a Wound), then a sample of their blood is collected in the dagger's hilt. A version of this ritual could be created with as a spell with a duration (such as Sun) for use in emergency circumstances. However, the dagger created with the ritual is not magical, so it does not need to Penetrate Magic Resistance to harm a target (which a spell with a non-Momentary duration would need to do).
+
+The dagger can be used as either a thrown or melee weapon. It is less useful in Defense than a normal dagger, and less aerodynamic than a throwing knife. In both cases, this is because The Thirsty Dagger is oddly weighted due to the blood reservoir. The dagger's weapon characteristics are:
+
+Ability: Brawl, Init: +0, Atk: +2, Dfn: -1, Dam: +3, Str: -1, Load: 0 Ability: Thrown, Init: -1, Atk: 0, Dfn: -1, Dam: +2, Str: -1, Load: 0
+
+Story Seed: School of Assassins
+
+What if a group of magi cooperate to develop this project?
+
+School Master
+
+House Flambeau contains a number of schools dedicated to using magic in combat. However, none of the schools concentrate on the use of Intangible Tunnel-style effects. So, the characters are approached by senior magi of House Flambeau who invite them to join House Flambeau as the masters of a new fighting school. Do the characters accept? How do the characters go about teaching these techniques without compromising their own safety from the attacks of ambitious students? What do the characters' current House(s) and political allies think?
+
+An Army of Wizards
+
+A cadre of characters (perhaps within House Tytalus or House Tremere) develop the Intangible Assassin effects. This cadre and their powers could be a powerful weapon in the event of a new war within the Order of Hermes.
+
+War of the Assassins
+
+The magi cooperate together to develop these Intangible Tunnel-style effects, but..."""
+    }
+
+    #ARM5SP076aB2cD4eF6gH8iJ ^"Crystal Rain" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3, +3 Sight, +2 Group, +1 Size, +1 affect glass"
+        }
+        DESCRIPTION """This spell causes a vast cloud of sharp shards of glass fly to a point in the sky, and then fall to the earth. From a distance, as the light refracts through the plunging glass, it looks like a curious sort of localized rain. The area covered by the falling glass is about 10 paces across, and anyone in (or passing through) the area takes +10 damage. If a wound is caused, blood from the victim falls onto the earth.
+
+This is an Aimed spell that consequently bypasses Magic Resistance, and there is a +12 bonus to the Aiming roll to hit due to the number of glass shards (see ArM5, page 86). This Aiming bonus is for a cloud of shards that contains 100 cubic paces of glass. If the cloud of shards contains only 10 cubic paces of glass, the Aiming bonus is reduced to only +6. Remember to count Defense bonuses because of shields.
+
+This spell requires that the caster has large collection of sharp glass shards, which need to be mundane in order to bypass Magic Resistance in this way. The shards could be created using a momentary Creo Terram ritual (such as The Shattered Goblet), or they could be acquired from a mundane craftsman, although this is probably more expensive and inconvenient for most magi. As long as the fallen glass shards remain within Sight range of the caster, the same shards can be used to cast the effect again in a subsequent round.
+
+Required Lab Total to invent spell: One Season (60), Two Seasons (45), Three Seasons (40), Four Seasons (38)."""
+    }
+
+    #ARM5SP077aB2cD4eF6gH8iJ ^"Glass Broom" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3, +3 Sight, +1 Concentration, +2 Group, +1 affect glass"
+        }
+        DESCRIPTION """This spell moves a lot of glass objects around. The spell can be used to move around glass created by The Shattered Goblet. It can also be used to move other glass around.
+
+If a Finesse Roll against an Ease Factor of 9 is failed, then the glass is broken during transit (which is not a problem if the glass is just glass shards).
+
+Required Lab Total to invent spell: One Season (60), Two Seasons (45), Three Seasons (40), Four Seasons (38)."""
+    }
+
+    #ARM5SP078aB2cD4eF6gH8iJ ^"The Prodigal Returns" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual This spell causes a metal weapon (such as a sword or dagger) to fly through the air, safely returning to the outstretched hand of the caster"]
+            ^"Design" STRING "Base 3, +3 Sight, +1 Concentration +2 affect metal"
+        }
+        DESCRIPTION """Required Lab Total to invent spell:
+
+One Season (50), Two Seasons (38), Three Seasons (34), Four Seasons (32).
+
+Books and Laboratory Texts
+
+A book or Lab Text is an Arcane Connection (worth a Penetration Bonus of +2) to the scribe who wrote it. The Arcane Connection only lasts for weeks after it is written (see ArM5, page 84), so most magi keep their texts for a month or so before lending it or submitting it to a library, such that at Durenmar. Alternatively, they can destroy the Arcane Connection with a Perdo Vim spell.
+
+Nonetheless, acquiring a newly written book or Lab Text, or even one that is still being written, is a good strategy to gathering an Arcane Connection to a character. One strategy is to gather a sample of the quarry's writing (by finding a Lab Text or book at Durenmar or a similar library). The magus can then use a spell, such as Pages of the Unfinished Story, to gather more recently written material from the covenant of the author. This recently-written material can then be used as an Arcane Connection.
+
+Story Seed: House of the Assassin
+
+It becomes well known within the Order that the character has considerable expertise in prosecuting Wizard's War. Some stories that might arise from this include:
+
+Assassin for Hire
+
+The character is approached by another magus who will pay him handsomely to fight Wizard's War on his behalf. Accepting this commission could embroil the character in the political intrigues of the Tribunal.
+
+Officer of the Tribunal
+
+The character is charged by the Tribunal with eliminating magi who have been Marched, and the character may be invited to join the ranks of the Quaesitors as a recognition of his role. There is considerable potential power in this role, as by choosing how enthusiastically he prosecutes a March, the magus can allow a Marched magus time to flee. The assassin magus could even conspire with a Marched magus to fake the death of the Hermetic outlaw. Of course, the assassin magus will need to be very careful an..."""
+    }
+
+}

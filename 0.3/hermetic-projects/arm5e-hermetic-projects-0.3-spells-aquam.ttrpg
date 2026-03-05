@@ -1,0 +1,89 @@
+EXTENSION "ARM5e_HP_Spells_Aquam" {
+    NAME "Hermetic Projects - Aquam Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Hermetic Projects
+
+    #ARM5SP003aB2cD4eF6gH8iJ ^"Flame Tongue" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Requisite" STRING "Ignem"
+            ^"Design" STRING "Base 10, +2 Voice, +1 Size"
+        }
+        DESCRIPTION """This spell causes a glutinous glob of lava (from a lake or river of magma) to leap out and hit something. The volume of lava moved is about 2 cubic feet, and it can be moved to hit any location within Voice range. Whatever the lava hits takes between +15 and +60 damage, depend-
+
+The heat of the lava is also sufficient to ignite anything flammable that it hits.
+
+Flame Tongue is an Aimed spell, with a +6 bonus to hit due to the size of the volume of lava.
+
+If the caster tries to totally immerse a person with the lava projectile, there is a -6 penalty to the Aiming Roll (effectively canceling the +6 size bonus). There is no penalty to the Aiming Roll if the objective is to merely splash someone. In some circumstances, the storyguide may decide that a missed attack to immerse a character results in a splash.
+
+Required Lab Total to invent spell: One Season (50), Two Seasons (38), Three Seasons (34), Four Seasons (32)."""
+    }
+
+    #ARM5SP004aB2cD4eF6gH8iJ ^"Tower of Lava" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 50
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["PartThis spell sculpts a tower out of hot bubbling lava. The resulting tower is solid and rigid, but if its foundations remain in lava, then the tower will dissolve back into the bulk within a day. The Part target is required, because the spell does not use all the available lava"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 3, +1 Touch, +1 Part, +6 size, +3 elaborate design"
+        }
+        DESCRIPTION """The tower is about the same size and dimensions as the one created by the spell Conjuring the Mystic Tower (see ArM5, page 153). A Finesse roll against an Ease Factor of 15 is required to ensure that the tower is well made; failure means that the lava takes a solid but malformed shape.
+
+Required Lab Total to invent ritual: One Season (100), Two Seasons (75), Three Seasons (67), Four Seasons (63)."""
+    }
+
+    #ARM5SP005aB2cD4eF6gH8iJ ^"Sail With the Tide" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 4, +2 Voice, +1 Concentration, +1 Part, +3 size"
+        }
+        DESCRIPTION """Ships must usually wait for the tide before they leave port. Waters dangerous at low tide become navigable at high tide, allowing laden ships to leave port safely. This means that there are limited times in the day that ships can enter and leave port.
+
+This spell draws a magical high tide to an area chosen by the caster, which is maintained for as long as the caster concentrates. The swell is enough to float a large ship and the caster is able to move the tide in relation to the ship.
+
+The effect Duration is Concentration, which means the caster may need to maintain concentration for some time, likely an hour or two.
+
+If designed in the Hermetic Shipyard, this spell benefits from a +1 bonus to the laboratory total for each of Rego and Aquam."""
+    }
+
+    #ARM5SP006aB2cD4eF6gH8iJ ^"Lungs of Drowning" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Part"]
+            ^"Requisite" STRING "Corpus"
+            ^"Design" STRING "Base 4, +1 Touch, +1 Diameter, +1 Part, +1 Corpus requisite"
+        }
+        DESCRIPTION """This spell fills the target's lungs with water, causing him to experience the sensation of drowning. The character begins to suffer deprivation due to lack of air (see ArM5, page 180), but as the spell only lasts for Diameter duration (two minutes), the character is unlikely
+
+Hermetic Projects
+
+to die unless the spell is repeatedly cast on him.
+
+Required Lab Total to invent spell: One Season (40), Two Seasons (30), Three Seasons (27), Four Seasons (25)."""
+    }
+
+}

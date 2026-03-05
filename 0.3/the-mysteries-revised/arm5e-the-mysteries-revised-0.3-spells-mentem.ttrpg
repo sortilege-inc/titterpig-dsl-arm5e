@@ -1,0 +1,148 @@
+EXTENSION "ARM5e_Myst_Spells_Mentem" {
+    NAME "The Mysteries Revised - Mentem Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: The Mysteries Revised
+
+    #ARM5SP009aB2cD4eF6gH8iJ ^"Enhance the Memory Palace" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION "This spell magically constructs an extremely detailed locus in the caster's memory palace. The subject of the locus must be observed while the spell is being cast. The subject can be a single object, all the objects in a particular location, a discrete scene or event, or any written material less than a complete text. While the spell lasts, the caster can recall even"
+    }
+
+    #ARM5SP010aB2cD4eF6gH8iJ ^"Memory Palace of the Sage" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 5, +4 magnitude for complexity"
+        }
+        DESCRIPTION """Creates a locus for the contents of an entire text in the target's memory palace. Once the locus is in place, the magus can recite the entire text and replicate any illustrations. Perdo Mentem magic can destroy this locus. As with Constructing the Memory Palace, a magical locus may exceed the normal locus-count limit.
+
+As the spell is cast, the magus magically reads through the book, reading the entire text (no matter the length) in the exact time it takes to cast the spell. The pages seem to rustle by as if caught in the wind. Once memorized, the magus does not require an actual copy of the text to study or transcribe it.
+
+The Library of Durenmar is permanently enchanted to prevent this Ritual from being performed within its walls, although only the Primus of the House knows how this was achieved. Additionally, rumors exist of texts that contain traps against such memorization, even fatal ones, and of the dangers of memorizing a text written by an incomprehensible Criamon or an author close to Final Twilight."""
+    }
+
+    #ARM5SP011aB2cD4eF6gH8iJ ^"Fortification of the Memory Palace" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Moon"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Reinforces the target's memory palace against magical attacks or attempts to modify his memories. To affect the protected target's memories, a spell's level must exceed twice the (level of this spell - 15), as well as penetrating any Magic Resistance.
+
+This spell protects the caster's memories for a single Moon; longer durations are possible, but continuous protection brings magical Warping.
+
+(General, +3 Moon)
+
+New Virtues
+
+Knowledge of the following new Virtues is widespread throughout the Order of Hermes and any of these Virtues may be taken by Initiates of some Mystery Cults or during character creation by magi without Mystery ties. Some, such as Vulgar Alchemy and Planetary Magic, were once Mystery secrets, taught only by certain Mystery Cults. The secrets were betrayed and, despite efforts to suppress the knowledge, the mystae were eventually forced to accept the reality.
+
+It is not necessary to be a member of a Mystery Cult to know these Virtues, and it is possible to select them at character generation as part of your usual allotment of ten Virtues. Characters who are Initiated into an esoteric Mystery Cult in the course of play may well come to gain these Virtues through Initiation, as explained in Chapter 2, in which case they are in addition to the usual allotment of Virtues.
+
+Spell Binding  --  Minor Hermetic Virtue
+
+Spell Binding teaches the secret of binding spells into containers, within which a spirit may be confined and compelled to sustain the spell indefinitely. The spirits so commanded are the lesser spirits: elementals and airy spirits. It is possible to"""
+    }
+
+    #ARM5SP012aB2cD4eF6gH8iJ ^"The Lucid Dreamer" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Dream"]
+            ^"Target" ENUM ["Dream, Mystery"]
+            ^"Requisite" STRING "Intellego"
+        }
+        DESCRIPTION """The magus lies down to sleep and casts this spell, slipping easily into dreaming sleep  --  except that his conscious spirit appears in the dream and may move and interact freely. He may wake any time he wishes (and may settle again for normal sleep, if he so desires).
+
+The spiritual traveler appears in the dream with his clothes, a dream copy of his talisman (if any), and dream vis equivalent to any vis left on his body. Using this dream vis has no effect on the real-world vis left behind; however, the
+
+New Spell Guidelines
+
+Muto Mentem (Dream, Mystery)
+
+The Range of these spells is the greater of the range to the dreamer or the bodies of those whose spirits are to enter dream.
+
+Level 15: Change the dream of the caster to include the caster's own spirit (Intellego requisite).
+
+Level 20: Change the dream of another to include the caster's spirit (Intellego requisite).
+
+Level 25: Change a person's dream to include another's spirit (Intellego requisite).
+
+Level 30: Change a person's dream to include a group (up to ten) of spirits (Intellego requisite). The number of spirits included is multiplied by 10 for each magnitude added to the guideline.
+
+traveler may use that real-world vis via the Arcane Connection to his body.
+
+(Base: 15, +1 Dream duration)"""
+    }
+
+    #ARM5SP013aB2cD4eF6gH8iJ ^"The Path To Lemnos" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Dream"]
+            ^"Target" ENUM ["Dream, Mystery"]
+            ^"Requisite" STRING "Intellego"
+        }
+        DESCRIPTION """The magus touches a dreaming sleeper, and the target dream changes to include the caster's spirit; the caster slips into a trance while in the dream.
+
+The spiritual traveler appears in the dream with his clothes, a dream copy of his talisman (if any), and dream vis equivalent to any vis left on his body. The magus has an Arcane Connection to his own body, and may use this to leave dream before the spell ends.
+
+(Base: 20, +1 Touch, +1 Dream duration)"""
+    }
+
+    #ARM5SP014aB2cD4eF6gH8iJ ^"The Road To Lemnos" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Mentem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Dream"]
+            ^"Target" ENUM ["Dream, Mystery"]
+            ^"Requisite" STRING "Intellego"
+        }
+        DESCRIPTION """The magus touches a dreaming sleeper (or the magus, as in The Lucid Dreamer), and the target dream changes to include the spirits of a touched group of travelers (possibly including the caster). The travelers' bodies lie in a trance while in the dream.
+
+The spiritual travelers appear in the dream with their clothes, a dream copy of their talisman (if any) and dream vis equivalent to any vis left on their bodies. The travelers have Arcane Connections to their own bodies, and may use these to leave the dream before the spell ends.
+
+(Base: 30, +1 Touch, +1 Dream duration)
+
+Example: Metrodorus, an elderly dream magus, seeks answers to recent puzzles. He wishes to search within his dreams, and to bring his raven familiar with him, so casts The Road To Lemnos, so that both may enter the dream. He appears at the beginning of his dream, with his staff and raven, on an empty plain
+
+Time and Travel
+
+Navigation in a dream is associative rather than geographical. Dreamers find places by entering similar places: an entire peasant village, for example, can be found by walking through a single hut. A similar process can lead to objects: a key may lead to a door, through which in turn the dreamer may enter a completely different region (and the door may disappear behind him as it closes). Magically created items (even illusions) are quite real within dream, and can be used to aid navigation by association.
+
+Example: Metrodorus seeks to brew a better longevity potion. Deciding that his youth before apprenticeship, over a century before, holds the key to his new design, he decides to seek his long-forgotten childhood innocence in a dream. Unfortunately, the dream devolves into a twisted series of visions of past Tribunals and past sodales. Suddenly he remembers the sound of a stream outside his parents' hut where he used to fish, and he resolves to cast a spell to create a stream, then follow it back until he arrives at the hut in the dream.
+
+Time, too, is no longer linear and fixed ..."""
+    }
+
+}

@@ -1,0 +1,452 @@
+EXTENSION "ARM5e_Spells_Imaginem" {
+    NAME "Ars Magica Definitive Edition - Imaginem Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+
+    #ARM5SP198aB2cD4eF6gH8iJ ^"PHANTASM OF THE TALKING HEAD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Voice, +1 Diam, +1 intelligible speech"
+        }
+        DESCRIPTION "Creates an illusory face on a wall or other flat object. The visage can speak during the spell's duration. Individual wizards' sigils can produce very interesting differences in how the voice sounds, how the face looks, and so on."
+    }
+
+    #ARM5SP199aB2cD4eF6gH8iJ ^"PHANTASMAL ANIMAL" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Diam, +2 move under your command"
+        }
+        DESCRIPTION """Creates an image of any animal or beast up to the size of a pony (Size +1). Under your direct mental command, it moves about (within range) and makes
+appropriate noises. You need to be able to concentrate, and be within range, whenever you wish to direct the illusion to move in some manner. If you move out of range or stop concentrating, the illusion just freezes in place. The image does smell like an animal, but it has absolutely no effect on the sense of touch. Of course, a magus may not use this spell to create the image of an animal he or she does not know exists.
+PHANTASMAL FIRE"""
+    }
+
+    #ARM5SP200aB2cD4eF6gH8iJ ^"PHANTASMAL FIRE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +2 Sun, +1 for light from Ignem requisite"
+        }
+        DESCRIPTION """Req: Ignem
+Makes an image of a fire (up to the size of a large campfire) that dances, illuminates, crackles, and (apparently) warms. It does not spread, burn, or protect against cold. Makes a great joke at gatherings of House Flambeau, although creating a real fire is even more popular."""
+    }
+
+    #ARM5SP201aB2cD4eF6gH8iJ ^"PHANTASM OF THE HUMAN FORM" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Voice, +2 Sun, +2 move at your command, +1 intricacy"
+        }
+        DESCRIPTION "Makes an image of a clothed and equipped person that can make noise. Under your direct, unspoken command, the person can move about, speak, and behave as a human does."
+    }
+
+    #ARM5SP202aB2cD4eF6gH8iJ ^"Haunt of the Living Ghost" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION """Req: Intellego
+With this spell, you can instantly project your own image and voice to any designated spot that you have an Arcane Connection to (though troupes may wish to limit this range to some absolute distance like 300 miles). You can see and hear through the image. The image must appear in some medium, such as a fire, mirror, or pool."""
+    }
+
+    #ARM5SP203aB2cD4eF6gH8iJ ^"THE SHADOW OF HUMAN LIFE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 40
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Mentem"
+            ^"Design" STRING "Base 2, +1 Touch, +2 Sun, +1 intricacy, +6 Mentem requisite, for a very elaborate effect"
+        }
+        DESCRIPTION "The human image created (as in Phantasm of the Human Form) has limited freedom and simulated intellect. It functions as an independent human, albeit a stupid one, capable of interpreting general orders in new situations."
+    }
+
+    #ARM5SP204aB2cD4eF6gH8iJ ^"DISCERN THE IMAGES OF Truth and Falsehood" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Design" STRING "Base effect, +1 Conc"
+        }
+        DESCRIPTION "You can tell whether an image has been created or altered through a spell, seeing both the original and false images in the case of alterations. This spell must be at least 1 magnitude higher than an illusion in order to discern it. If you botch the spell, you mistake illusions for the real thing and reality for illusion. Your discernment is not limited to visual illusions, although you can only tell that a sound is illusory if you are looking at the apparent source."
+    }
+
+    #ARM5SP205aB2cD4eF6gH8iJ ^"PRYING EYES" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Room"]
+            ^"Design" STRING "Base 1, +1 Touch, +1 Conc, +2 Room"
+        }
+        DESCRIPTION "You can see inside a room, as long as you can touch one of its walls. If the room is unlit or poorly lit, you can only see as much as you could if you were inside, but magical enhancements of your senses do apply. You may change your viewpoint within the room throughout the duration of the spell."
+    }
+
+    #ARM5SP206aB2cD4eF6gH8iJ ^"DISCERN OWN ILLUSIONS" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Vision"]
+            ^"Design" STRING "Base 1, +2 Sun, +4 Vision"
+        }
+        DESCRIPTION "This spell makes your own illusions appear largely transparent to you, but still discernible."
+    }
+
+    #ARM5SP207aB2cD4eF6gH8iJ ^"THE EAR FOR DISTANT VOICES" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Room"]
+            ^"Design" STRING "Base 1, +4 Arc, +1 Conc, +2 Room"
+        }
+        DESCRIPTION "You can hear what is happening in the place you designate. You must have an Arcane Connection with the place or with a person there."
+    }
+
+    #ARM5SP208aB2cD4eF6gH8iJ ^"EYES OF THE EAGLE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Vision"]
+            ^"Design" STRING "Base 3, +2 Sun, +4 Vision"
+        }
+        DESCRIPTION """You see distant things clearly. No matter how far away something is, you can make out details as if it were only a foot or so from you. Things do not all appear to be a foot away; you can simply make out details as well as if they were. You can still judge distance accurately; in fact, more accurately than normal, to within an inch or so at a distance of several miles, since you can see as clearly as if you were judging distance a foot away.
+SUMMONING THE DISTANT IMAGE"""
+    }
+
+    #ARM5SP209aB2cD4eF6gH8iJ ^"SUMMONING THE DISTANT IMAGE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Arcane Connection"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Room"]
+            ^"Design" STRING "Base 2, +4 Arc, +1 Conc, +2 Room"
+        }
+        DESCRIPTION "You can see and hear what is happening in a distant place if you have some sort of Arcane Connection to either the location or a person there."
+    }
+
+    #ARM5SP210aB2cD4eF6gH8iJ ^"TASTE OF THE SPICES AND HERBS" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "A setting's worth of food or drink tastes and smells exactly as you designate."
+    }
+
+    #ARM5SP211aB2cD4eF6gH8iJ ^"AURA OF ENNOBLED PRESENCE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION """The target appears more forceful, authoritative, and believable. Numerous subtle changes in appearance bring about this change, including a slight supernatural illumination of the face, a more erect posture, and a louder and smoother voice. The character gets a +3 on rolls to influence, lead, or convince others.
+Notes of a Delightful Sound"""
+    }
+
+    #ARM5SP212aB2cD4eF6gH8iJ ^"Notes of a Delightful Sound" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Room"]
+            ^"Design" STRING "Base 1, +1 Touch, +2 Sun, +2 Room"
+        }
+        DESCRIPTION "Causes all sounds in a room, particularly music, to be especially clear and sonorous. The notes are clearer, sharper, and more distinct"
+    }
+
+    #ARM5SP213aB2cD4eF6gH8iJ ^"Disguise of the T_{\scriptsize ransformed} Image" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "Makes someone look, sound, feel, and smell different, though at least passably human."
+    }
+
+    #ARM5SP214aB2cD4eF6gH8iJ ^"IMAGE PHANTOM" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "Any one thing, including a living thing, can be made to appear as if it were something else of approximately the same shape and size. The illusion cannot be cast on things that have a shape or size improper to the final appearance. If the target moves or is moved in such a way that the illusion is inappropriate, it looks very strange indeed."
+    }
+
+    #ARM5SP215aB2cD4eF6gH8iJ ^"DISPEL THE PHANTOM IMAGE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base effect"
+        }
+        DESCRIPTION "Destroys the image from any one Crlm spell whose level you match or exceed on a stress die + the level of your spell."
+    }
+
+    #ARM5SP216aB2cD4eF6gH8iJ ^"Taste of the Dulled Tongue" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "Hides the taste of any substance, liquid or solid."
+    }
+
+    #ARM5SP217aB2cD4eF6gH8iJ ^"ILLUSION OF COOL FLAMES" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Voice, +2 Sun"
+        }
+        DESCRIPTION "A source of heat, such as a fire, seems to lose its heat and drop to the surrounding temperature. It still, however, has its normal beneficial and harmful effects (that is, glowing coals still cook meat or burn a person's hand, though they do not feel hot)."
+    }
+
+    #ARM5SP218aB2cD4eF6gH8iJ ^"Invisibility of the Standing Wizard" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "The target becomes invisible, but the spell is broken if the target moves (aside from breathing and shifting slightly in place). He still casts a shadow."
+    }
+
+    #ARM5SP219aB2cD4eF6gH8iJ ^"VEIL OF INVISIBILITY" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +1 changing image"
+        }
+        DESCRIPTION "The target becomes completely undetectable to normal sight, regardless of what it does, but still casts a shadow."
+    }
+
+    #ARM5SP220aB2cD4eF6gH8iJ ^"REMOVAL OF THE CONSPICUOUS SIGIL" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +1 Part"
+        }
+        DESCRIPTION """Grooves, runes, writings, and similar markings are obscured so that they are not visible, but the overall shape of the medium remains constant. For example, runes carved into a sword blade can be made invisible, making the sword appear normal.
+SILENCE OF THE SMOTHERED SOUND"""
+    }
+
+    #ARM5SP221aB2cD4eF6gH8iJ ^"SILENCE OF THE SMOTHERED SOUND" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +2 Sun, +1 changing image"
+        }
+        DESCRIPTION "Makes one being or object incapable of producing sound. Magi who cannot utter their magic words suffer the normal penalties to their spellcasting rolls."
+    }
+
+    #ARM5SP222aB2cD4eF6gH8iJ ^"CHAMBER OF INVISIBILITY" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +2 Group"
+        }
+        DESCRIPTION "Causes a Group of creatures to become invisible. Any affected character who moves or is touched makes everyone visible. All members of the Group still cast shadows."
+    }
+
+    #ARM5SP223aB2cD4eF6gH8iJ ^"RESTORE THE MOVED IMAGE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+        }
+        DESCRIPTION "Cancels a Relm spell that moves an image, putting the image back where it belongs, as long as you can match the spell's level on a stress die + the level of your spell. This spell targets the image."
+    }
+
+    #ARM5SP224aB2cD4eF6gH8iJ ^"Illusion of the Shifted Image" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Voice, +2 Sun"
+        }
+        DESCRIPTION """Makes any person or object appear to be a pace away from its actual position. The image cannot be placed in a solid object. As soon as the original or image moves, the spell ends.
+WIZARD'S SIDESTEP"""
+    }
+
+    #ARM5SP225aB2cD4eF6gH8iJ ^"WIZARD'S SIDESTEP" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Sun, +1 changing image, +1 moved image matches changes"
+        }
+        DESCRIPTION """Your image appears up to 1 pace from where you actually are, so attacks aimed there are likely to miss you. Whenever the image is successfully struck, it disappears and reappears in another spot.
+In combat, early attacks are aimed at the image, and so automatically miss you. Once the image has been hit once, you have a +9 bonus to Defense, as attackers must try to find you in a fairly large area."""
+    }
+
+    #ARM5SP226aB2cD4eF6gH8iJ ^"THE CAPTIVE VOICE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 4, +2 Voice, +2 Sun, +1 Part, +1 changing image"
+        }
+        DESCRIPTION """Captures a person's voice and places it in a bag. The person may not speak unless the bag is open, in which case the voice comes from the bag, not the victim's mouth. If the victim screams while the bag is shut, the bag vibrates visibly.
+Confusion of the Insane Vibrations"""
+    }
+
+    #ARM5SP227aB2cD4eF6gH8iJ ^"Confusion of the Insane Vibrations" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Design" STRING "Base 3, +1 Touch, +1 Conc, +4 Vision, +1 additional senses"
+        }
+        DESCRIPTION "The target of the spell sees everything vibrate back and forth at varying high speeds. In addition, sounds are displaced and seem to come from the wrong areas. Anyone trying to fight in these circumstances suffers -3 on Attack and Defense scores, and must roll two extra botch dice. The target is likely to become desperate and terribly confused. Navigation is exceedingly difficult. The visual effects of this spell are negated if the target is in complete darkness or if they close their eyes."
+    }
+
+    #ARM5SP228aB2cD4eF6gH8iJ ^"IMAGE FROM THE WIZARD TORN" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 15, +1 Conc, +1 additional sense, +1 moving image, +1 Intellego requisite"
+        }
+        DESCRIPTION """Req: Intellego
+Your image separates from your body. It can speak whatever you say and do so in your voice, and you can see through its eyes. You must make an Int + Concentration stress roll for each solid object the image passes through and for each mile it travels. If you wish the image to be able to leave your sight, you must use an Arcane Connection to yourself (for example, a fingernail or a lock of hair) when you cast the spell. That connection becomes an integral part of the image, and when the spell ends, it falls to the ground wherever the image was located.
+As your image is away from your body, you are invisible and silent at your actual location. The image is your image, so while you may move it in space you may not have it sit down if you are standing. Further, it appears as if illuminated by whatever light is falling on you, no matter what the level of illumination is at the image."""
+    }
+
+}

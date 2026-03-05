@@ -1,0 +1,37 @@
+EXTENSION "ARM5e_HoH_Soc_Spells_Herbam" {
+    NAME "Houses of Hermes: Societates - Herbam Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Houses of Hermes: Societates
+
+    #ARM5SP013aB2cD4eF6gH8iJ ^"Aegis of Unbreakable Wood" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "Makes a wooden shield (or object of comparable dimensions) as strong as iron, increasing its Defense bonus by +1. This is the best benefit magic can provide without increasing the size of the shield. The weight (and Load) of the shield are unchanged. It remains susceptible to fire, but is otherwise nearly indestructible."
+    }
+
+    #ARM5SP014aB2cD4eF6gH8iJ ^"Tree Falling in the Forest" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Rego"
+            ^"Design" STRING "Base 5, +3 Sight, +2 size, +1 Rego requisite"
+        }
+        DESCRIPTION "Instantly cuts down a tree, making it fall in the direction the caster designates. With a successful aiming roll, you can make it fall on a living creature. Damage is up to +18 for a mature tree, and the victim or victims may also be pinned by the tree's weight. When used as a form of attack, this spell bypasses Magic Resistance."
+    }
+
+}

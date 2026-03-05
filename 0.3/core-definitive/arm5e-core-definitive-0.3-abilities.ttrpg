@@ -1,0 +1,787 @@
+EXTENSION "ARM5e_Abilities" {
+    NAME "Ars Magica Definitive Edition - Abilities"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Base"
+
+    #ARM5AB001aB2cD4eF6gH8iJ ^"Animal Handling" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["falconry", "specific animals"]
+        }
+        DESCRIPTION "Care and use of animals, including raising, tending, grooming, and healing them."
+    }
+
+    #ARM5AB002aB2cD4eF6gH8iJ ^"Animal Ken" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION """You can communicate with animals as if they were human beings. Treat your score in Animal Ken as your score in a language that the animal speaks fluently in order to determine how well you can communicate, and you can use Animal Handling as a substitute for any social abilities affecting humans. Beyond this, this Ability has no effect on the attitude of animals to you, or you to animals. Other people cannot understand your communication with the animals.
+Specialties: a particular type of animal, a particular type of communication. (Supernatural)"""
+    }
+
+    #ARM5AB003aB2cD4eF6gH8iJ ^"(Area) Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["geography", "history", "legends", "politics", "personalities"]
+        }
+        DESCRIPTION "Knowledge of one particular region, covenant, or even a village. It includes knowing where things are in the immediate area, local history and legends, and the centers of power in the region. The smaller the region, the more detailed your knowledge."
+    }
+
+    #ARM5AB004aB2cD4eF6gH8iJ ^"Art of Memory" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["an area of knowledge"]
+        }
+        DESCRIPTION """The Art of Memory deals with the creation of memory palaces, a form of mnemonic, in which one visualizes a number of loci (singular
+locus), where the scholar commits to memory a symbolic representation of a fact to be remembered. The character has a number of loci equal to five times their score in Art of Memory.
+To memorize a complex scene, image, or piece of writing (such as a long letter, but not as long as an entire text), the character must succeed in a roll of:
+Complex Memorization Roll
+Stress Die + Intelligence
++ Art of Memory vs. Ease Factor of 9 (or higher)
+The Ease Factor may be higher depending on the length or complexity of the item to be memorized. If the character succeeds, they remember the item in exact detail, and may recall it at will although it may take time to explore a locus.
+Characters without the Art of Memory may memorize similar items with a Stress Die + Intelligence roll (with 3 extra botch dice) against the same Ease Factors, but must also repeat the roll to..."""
+    }
+
+    #ARM5AB005aB2cD4eF6gH8iJ ^"Artes Liberales" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["grammar", "logic", "rhetoric", "arithmetic", "geometry", "astronomy", "music", "Ritual magic", "Ceremonial magic"]
+        }
+        DESCRIPTION """The seven artes liberales, or liberal arts, are the basis of medieval higher education. Everyone learns them at the universities before passing on to study other subjects. It would be very rare for a character to have a score in any other Academic Knowledge without a score of at least one in this one.
+The artes liberales are divided into two groups: the Trivium (grammar, logic, and rhetoric) and the Quadrivium (arithmetic, geometry, astronomy, and music). The emphasis at this period is on the Trivium, but both are taught. (Note that Artes Liberales as a whole is one Skill, not seven separate ones.)
+Grammar concerns theoretical questions of the structure of languages, rather than the ability to use a specific language (that is covered by Speak skills). The auctores are Priscian and Donatus. Logic is the study of the syllogism, and other forms of reasoning discussed by Aristotle. It is the most important of the arts at this period. Aristotle is the auctor, in his logica vetus and logica ..."""
+    }
+
+    #ARM5AB006aB2cD4eF6gH8iJ ^"Athletics" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["* acrobatics", "contortions", "grace", "jumping", "running"]
+        }
+        DESCRIPTION """General physical prowess. It includes moving smoothly, confidently, and with grace. Use of Athletics improves most largemuscle coordination.
+*"""
+    }
+
+    #ARM5AB007aB2cD4eF6gH8iJ ^"Awareness" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["* bodyguarding", "keeping watch", "alertness", "searching"]
+        }
+        DESCRIPTION """Noticing things, be they things you are looking for or things that you are not expecting. It is also used to see how alert you are in circumstances that require watchfulness.
+*"""
+    }
+
+    #ARM5AB008aB2cD4eF6gH8iJ ^"Bargain" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["specific types of products", "hard sell"]
+        }
+        DESCRIPTION "The know-how to get the greatest return for a service or product, while paying the least. It involves reading the person with whom you haggle, a general knowledge of the value of goods, and presenting yourself in certain ways. A good haggler can easily overcome resistance in an inexperienced customer and see through attempts to over-value most merchandise."
+    }
+
+    #ARM5AB009aB2cD4eF6gH8iJ ^"Bows" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Martial"]
+            ^"Specialties" LIST OF STRING ["any one weapon"]
+        }
+        DESCRIPTION "Using bows and arrows."
+    }
+
+    #ARM5AB010aB2cD4eF6gH8iJ ^"Brawl" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["punches", "grapples", "knives", "dodging"]
+        }
+        DESCRIPTION "Fighting hand-to-hand without weapons, or with the sorts of improvised weapons you just pick up, including knives. Brawl is also the Ability used to dodge attacks if you have no Martial Abilities."
+    }
+
+    #ARM5AB011aB2cD4eF6gH8iJ ^"Carouse" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+        }
+        DESCRIPTION """The ability to enjoy oneself without suffering adverse effects. A person with this skill can, for example, consume prodigious amounts of alcohol without passing out. The skill also covers a familiarity with acceptable behavior, balancing enjoyment and moderation. With this Ability, a person is able to have fun and gain friends among the lower classes nearly anywhere, even among those of a different culture.
+Specialties: power drinking, drinking songs, games of chance, staying sober. (General)"""
+    }
+
+    #ARM5AB012aB2cD4eF6gH8iJ ^"Charm" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+        }
+        DESCRIPTION "Enticing, fascinating, and endearing others to you, but only on a personal basis. It can be used to win someone over emotionally, especially romantically. Specialties: courtly love, first impressions, being witty. (General)"
+    }
+
+    #ARM5AB013aB2cD4eF6gH8iJ ^"Chirurgy (kie-RUHR-gee)" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["cauterization", "diagnosis", "binding wounds", "setting bones"]
+        }
+        DESCRIPTION "This is Middle Ages-style surgery, used to help others recover from physical damage. It encompasses tending and binding wounds of all varieties, and the necessary but brutal skill of cauterization. See page 405 for rules."
+    }
+
+    #ARM5AB014aB2cD4eF6gH8iJ ^"Civil and Canon Law" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["laws and customs of a specific area", "papal laws"]
+        }
+        DESCRIPTION "Civil Law is the law of the Roman Empire. Most local legal systems are based upon it (England being the notable exception), and when a law is needed to govern international relations, Civil Law is appealed to. The authority is Justinian's Digest. Canon Law is the law of the Church. It is important to Mythic Europe as it applies in all nations, governing the working of the church and some other areas, such as marriage. It is important to note that members of the clergy are only subject to Canon Law, not customary or Civil Law. Most high churchmen are skilled canonists, not theologians. Canon Law is made by Papal bulls (pronouncements), but the auctor is Gratian, in his Decretum. This skill covers the knowledge of both types of law. Other religions, particularly Judaism and Islam, have their own versions of this Ability, which must be learned separately."
+    }
+
+    #ARM5AB015aB2cD4eF6gH8iJ ^"Code of Hermes" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["Wizards' Marches", "apprentices", "mundane relations", "Tribunal procedures", "political intrigue"]
+        }
+        DESCRIPTION """Judging events according to the Code of Hermes and the Peripheral Code. In addition to memorizing important precedents, this knowledge
+includes the practical side of enforcing Hermetic law  --  for example, knowing when to push for a vote or how to present an argument."""
+    }
+
+    #ARM5AB016aB2cD4eF6gH8iJ ^"Common Law" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["local laws", "exchequer laws"]
+        }
+        DESCRIPTION "Knowledge of the laws of England. There is no authority for this Ability, and it is only taught in England."
+    }
+
+    #ARM5AB017aB2cD4eF6gH8iJ ^"Concentration" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["spell concentration", "reading", "lab work"]
+        }
+        DESCRIPTION "Focusing your mental faculties on one task, particularly for extended periods of time. If you are attempting a feat that demands your extra attention, or if you have just failed an action and are trying again, the storyguide can call for a Concentration roll before you can make the attempt. This Ability is especially important for magi because it helps them maintain concentration on spells despite distractions."
+    }
+
+    #ARM5AB018aB2cD4eF6gH8iJ ^"Corpse Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION """The character can use Corpse Magic to temporarily revive a corpse. The target of this Supernatural Ability cannot have received any burial rites from a Divinely-sanctioned religion, and the corpse must be relatively intact, having as a minimum a spine, a skull, and more than half of its long bones. There need not be any flesh remaining. It takes fifteen minutes to chant the spells sufficiently to awaken the dead.
+Casting Total:
+Communication + Corpse Magic + Aura
+modifier + stress die
+Communication + Leadership + stress die; Leadership may be limited by Language Ability
+Compare the result to the Ease Factors at right to determine success."""
+    }
+
+    #ARM5AB019aB2cD4eF6gH8iJ ^"Craft (Type)" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["as appropriate to the craft"]
+        }
+        DESCRIPTION "A general term for countless Abilities, all dealing with handiwork of some type. In general, Craft Abilities are distinguished by the material they work with, although you may also take a Craft Ability that allows the character to work with several materials in one specific way. You may purchase Craft more than once, choosing a different one each time. Skill in one Craft does not imply skill in any others. City and Guild contains more detailed information about Craft Abilities and their use, in Chapter 4."
+    }
+
+    #ARM5AB020aB2cD4eF6gH8iJ ^"Crafter's Healing" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["particular kinds of wounds"]
+        }
+        DESCRIPTION """When using this Ability, each wound can only be treated once, regardless of its severity. Make a Presence + Crafter's Healing + stress die roll against an Ease Factor equal to the Improvement Ease Factor determined by the
+Corpse Magic Ease Factor Outcome
+- 9 Speak to the dead. The corpse is not compelled to answer truthfully or directly, although it may do so anyway.
+- Protect a corpse from being affected by further Corpse Magic. Any attempt to do so has the Ease Factor increased by the Corpse Magic score of the character.
+- 15 Animate a corpse. Orders are followed to the best of the corpse's abilities, but the character must remain in sight of the corpse else it will cease all movement until he returns
+Take control of an animated corpse. The Commanding roll must be greater than the original animator's (if any), else the corpse continues to follow its previous orders
+Animate a corpse and place it under the direct mental control of the character; if he can see the corpse he can issue it..."""
+    }
+
+    #ARM5AB021aB2cD4eF6gH8iJ ^"Curse-Throwing" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["diseases", "faerie curses", "livestock"]
+        }
+        DESCRIPTION "This Supernatural Ability is usually aligned to the Faerie Realm, but could be aligned to any supernatural realm. It enables the character to heal diseases, remove curses, and dispel detrimental magical effects, but only by transferring (or 'throwing') their effects to another person. Curse-Throwing cannot affect Flaws; specifically, someone with the Lesser or Greater Malediction Flaw is beyond the power of Curse-Throwing, unless it is a Flaw imposed by a faerie or magician with a limited duration. However, any other curse laid by a supernatural power is potentially within the remit of this Ability; note that curses laid directly by God (such as leprosy) are normally represented by permanent Flaws, and thus exempt. Only harmful effects can be transferred with this Ability, and the storyguide is the arbiter in cases where spells are not directly detrimental. Barrenness is a common affliction treated by this power, if transferred to a man or male animal then impotence is inflicted instea..."
+    }
+
+    #ARM5AB022aB2cD4eF6gH8iJ ^"(Dead Language)" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["academic usage", "Church ceremonies", "Hermetic usage"]
+        }
+        DESCRIPTION "This skill is similar to all other (Language) Abilities, but it is only available to educated characters. It grants the ability to speak a language which is no longer used as a native language in the areas the character has lived in. The most important example is Latin, the language of formal education in the West. It is also the common language of the Church and Order of Hermes. In other areas of the world, Arabic, Greek and Hebrew fill similar functions, although of these only Hebrew is a dead language."
+    }
+
+    #ARM5AB023aB2cD4eF6gH8iJ ^"Dominion Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["angels", "saints", "Divine creatures"]
+        }
+        DESCRIPTION "Knowledge of the manifestations of the power of the Divine. Different from Church Lore (a kind of (Organization) Lore)) because it covers miracles rather than politics, and different from Theology because it is concerned with power rather than doctrine."
+    }
+
+    #ARM5AB024aB2cD4eF6gH8iJ ^"Dowsing" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["searching for a particular kind of thing (water", "gold", "etc"]
+        }
+        DESCRIPTION """You have the ability to find things nearby through the use of a dowsing rod (usually a forked stick) and your own intuitive sense. You concentrate on the thing to be found, hold your dowsing rod out in front of you, and follow its subtle motions to the target. If you're looking for something specific, you must have an appropriate sympathetic connection to the thing sought (such as bottled water from a stream when searching for
+running water). Before you roll, designate the area in which you are searching  --  if the item sought is not present in that area, you automatically fail. The time required to search depends on the size of the area, and must be invested whether you succeed or not. It takes about one Diameter (two minutes, or twenty combat rounds) to search for something within 25 paces, and doubling the distance quadruples the time. To find something common, like water, within 25 paces requires a Perception + Dowsing of 9+. Increased distances or dowsing for less common things i..."""
+    }
+
+    #ARM5AB025aB2cD4eF6gH8iJ ^"Embitterment" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION "You can cause one person to hate another. This Ability is described in the Hermetic Magic chapter, page 245."
+    }
+
+    #ARM5AB026aB2cD4eF6gH8iJ ^"Enchanting (Ability)" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular emotion", "a particular sort of person"]
+        }
+        DESCRIPTION """When you set your mind to it, you can influence others with a particular performance ability. For a specific effect, you must use words that people can understand. You can calm the grieving with tunes alone, but you need lyrics to convince peasants to rise up against the local lord. General effects work on animals, but specific effects only work on creatures that can understand words. When you use Enchanting Ability, roll a die (stress or simple, depending on the situation) and add Communication and Enchanting Ability. An Ease Factor of 9 will calm the upset, 12 will win someone's love, 15 will incite a riot, and a 24 might win back a soul from the Prince of Darkness. If you botch, you inspire an unwanted emotion.
+If the target has Magic Resistance, you must penetrate their resistance; see page 412 for rules.
+You should also roll for the quality of the performance, but the magical effect is independent of this, unless you botch. If you do botch the Ability roll, you have failed to prod..."""
+    }
+
+    #ARM5AB027aB2cD4eF6gH8iJ ^"Enigmatic Wisdom" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION "The understanding that Criamon magi have of the Enigma. It is described in the Hermetic Magic chapter, on page 236. (Arcane)"
+    }
+
+    #ARM5AB028aB2cD4eF6gH8iJ ^"Entrancement" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["A specific sort of command", "a specific sort of person"]
+        }
+        DESCRIPTION """You have the power to control another's will. By staring deeply into someone's eyes for several seconds  --  generally impossible in combat  --  you can verbally command the person to perform a certain task. Roll Presence + Entrancement against the target's Stamina roll. The person being controlled may get a bonus to resist at the option of the storyguide, according to the table below. Hermetic magi get their normal Mentem Magic Resistance, and get the normal Stamina roll if the effect penetrates Calculate Penetration using an Ease Factor of 6 + the
+victim's bonus. The blind, and people with their eyes closed, are immune; see page 303 for more guidelines on making eye contact. However, it is not possible to look away while being Entranced unless you win the opposed roll.
+| COMMAND      | Example                | Victim's<br>Bonus |
+| -------------- | ------------------------ | ------------------- |
+| Innocuous    | Talk to me             | +3                |
+| Questionable | Meet me a..."""
+    }
+
+    #ARM5AB029aB2cD4eF6gH8iJ ^"Etiquette" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["nobility", "court", "peasants", "faeries", "the Church"]
+        }
+        DESCRIPTION "You know the social graces and how to behave in different situations. Etiquette differs from Charm in that Etiquette covers proper behavior, rather than charming behavior. You cannot seduce someone with Etiquette, but neither can you get through an audience with the bishop on Charm alone."
+    }
+
+    #ARM5AB030aB2cD4eF6gH8iJ ^"Faerie Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["faerie forests", "faerie mounds", "specific types of faeries"]
+        }
+        DESCRIPTION "Familiarity with faerie powers, weaknesses, motivations, and areas."
+    }
+
+    #ARM5AB031aB2cD4eF6gH8iJ ^"Faerie Magic" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION "The connection to the power of the Faerie realm possessed by Merinita magi. It cannot be learned by other characters, even if they have access to Arcane Abilities. It is described in the Hermetic Magic chapter, on page 236. (Arcane)"
+    }
+
+    #ARM5AB032aB2cD4eF6gH8iJ ^"Finesse" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Specialties" LIST OF STRING ["grace", "precision", "any one Form"]
+        }
+        DESCRIPTION "Manipulating your spells and performing special feats with them. You would use this Ability to position objects delicately or to target spells."
+    }
+
+    #ARM5AB033aB2cD4eF6gH8iJ ^"Folk Ken" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["peasants", "townsfolk", "nobles", "clergy", "magi", "the opposite sex"]
+        }
+        DESCRIPTION "Understanding the background, personality, and motives of another person. Often the storyguide secretly rolls a die when this Ability is used. Thus, you do not know if your character guessed correctly, or even botched."
+    }
+
+    #ARM5AB034aB2cD4eF6gH8iJ ^"Font of Knowledge" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular topic"]
+        }
+        DESCRIPTION "By succeeding in an Ability check (Intelligence + Font of Knowledge + stress die) against an Ease Factor of (6 plus (3 times number of uses of Font of Knowledge that day)) a creature with this Ability may attempt a task with any untrained ability as if they possessed a score of 2. Failed attempts count towards the number of uses in a given day."
+    }
+
+    #ARM5AB035aB2cD4eF6gH8iJ ^"Great Weapon" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Martial"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["any one weapon"]
+        }
+        DESCRIPTION "Fighting with a weapon which requires two hands to use."
+    }
+
+    #ARM5AB036aB2cD4eF6gH8iJ ^"Guile" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["particular sorts of deception", "lying to authority", "fast talk", "elaborate lies"]
+        }
+        DESCRIPTION "Telling convincing lies, as well as feigning emotion, belief, or frame of mind. If you understand the person you are attempting to deceive (roll 9+ on Perception + Folk Ken), you gain a bonus of +1 to your Guile roll. This Ability also covers disguising yourself, and pretending to be something you are not. It is often an opposed roll, against the victim's Perception + Folk Ken or, for disguise, Perception + Awareness."
+    }
+
+    #ARM5AB037aB2cD4eF6gH8iJ ^"Heartbeast" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION "The ability shared by all Bjornaer magi to take the form of their heartbeast. It is described in the Hermetic Magic chapter, on page 233. This Ability cannot be learned by non-Bjornaer characters, even if they have access to Arcane Abilities. (Arcane)"
+    }
+
+    #ARM5AB038aB2cD4eF6gH8iJ ^"Hex" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["A specific duration", "one method of hexing", "a particular effect"]
+        }
+        DESCRIPTION """The character has the power to bring about injury or ruin upon her enemies. There are three ways for her to activate this power: by making eye contact with her victim and proclaiming her purpose loud enough for him to hear, by tracing temporary occult signs and symbols on her target that indicate the dark fate she intends, or by acquiring an Arcane Connection to her target and fashioning a recognizable representation that can channel the effect through sympathetic magic.
+To hex a target, the character must make clear her will for it: she must declare her wishes to the victim aloud, or indicate the specifics of the hex in writing on or very near the target, or do something to the representation that is similar to what she intends to happen to the target. There is always a physical component to the hex (common practices include tying knots in a line, spitting, or giving the target the "evil eye").
+You must also state a time frame for the hex, anywhere from an effect that occurs immediate..."""
+    }
+
+    #ARM5AB039aB2cD4eF6gH8iJ ^"Hunt" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["tracking", "covering tracks", "hunting a specific animal"]
+        }
+        DESCRIPTION "Setting snares, choosing appropriate hunting spots, and following and identifying the spoor of creatures of all varieties. This Ability also lets you cover your tracks or not leave any in the first place."
+    }
+
+    #ARM5AB040aB2cD4eF6gH8iJ ^"Induction" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["particular kinds of illusion"]
+        }
+        DESCRIPTION """This is the supernatural ability to create illusions in a person's mind. Only the target can see those illusions. Each attempt at induction requires the inducer to talk with the victim for at least one minute. Characters who cannot hear the inducer are immune to his powers.
+Attempts at induction require a die roll of Communication + Induction. Induction is not made more difficult by the complexity of the illusion: it is made more difficult as the risk the victim takes by believing the illusion increases. On some level the victim is aware of the real world, and can snap out of the induced state if threatened.
+The Ease Factors for Induction are:
+| Innocuous                       | 3  |
+| --------------------------------- | ---- |
+| Potentially Shaming             | 6  |
+| Potentially Dangerous to Others | 9  |
+| Potentially Dangerous to Self   | 12 |
+| Potentially Suicidal            | 15 |
+Pick only one of the Roll Modifiers for Induction given below:
+Victim is drunk, drugged, exhausted..."""
+    }
+
+    #ARM5AB041aB2cD4eF6gH8iJ ^"Infernal Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["demons", "undead", "curses"]
+        }
+        DESCRIPTION "An understanding and familiarity with the Infernal and its agents. Includes knowledge of demons and their habits and weaknesses, undead and their habits and weaknesses, and the power of curses."
+    }
+
+    #ARM5AB042aB2cD4eF6gH8iJ ^"Intrigue" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["gossip", "plotting", "rumormongering", "alliances"]
+        }
+        DESCRIPTION "Dealing and plotting, including subtle use of power in non-confrontational ways to achieve your own ends. Intrigue need not be underhanded or manipulative  --  it also covers negotiations and knowledge of formal and informal rules of conduct and politeness. In addition, Intrigue also allows a character to pick up important information about those in power, separating fact from useless gossip. Intrigue is a vital talent for those who frequent court or a Hermetic Tribunal."
+    }
+
+    #ARM5AB043aB2cD4eF6gH8iJ ^"Islamic Law" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["any one of the sources of Islamic Law", "particular topics", "customs of a particular area"]
+        }
+        DESCRIPTION "This is the Muslim version of Civil & Canon Law. The major sources of Islamic Law are the Qur'an and the Sunna."
+    }
+
+    #ARM5AB044aB2cD4eF6gH8iJ ^"Judaic Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["folklore", "music", "poetry", "songs"]
+        }
+        DESCRIPTION "Judaic Lore is the knowledge of Jewish cultural practice as opposed to strictly religious details. This includes poetry, folklore, songs, and so on. All Jewish characters are versed in Judaic Lore to some degree and experience points in this Ability at character creation can be part of their childhood abilities."
+    }
+
+    #ARM5AB045aB2cD4eF6gH8iJ ^"Leadership" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["intimidation", "in combat", "inspiration"]
+        }
+        DESCRIPTION "Getting people to obey your orders and to follow you. Can also be used to inspire fear in others, cowing them into submission."
+    }
+
+    #ARM5AB046aB2cD4eF6gH8iJ ^"Legerdemain" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["filching", "picking pockets", ""magic" tricks"]
+        }
+        DESCRIPTION "Sleight of hand and knowledge of confidence games requiring sleight of hand. It requires a delicate touch and great hand-eye coordination. Legerdemain includes filching things from market stalls, cutting purses, and picking such locks as there are, as well as the \"magical\" trickery often used to raise money from credulous folk. The target of an attempt rolls Perception + Awareness to detect your actions. If the perceiver has Legerdemain skill, he may substitute that for Awareness if he wishes. On particularly delicate moves such as picking pockets, someone trying to spot the character using Legerdemain receives a +3 bonus."
+    }
+
+    #ARM5AB047aB2cD4eF6gH8iJ ^"(Living Language)" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["poetry", "prose", "specific dialects", "expansive vocabulary", "specific technical vocabulary", "slang", "storytelling"]
+        }
+        DESCRIPTION """Fluency in a particular living language. Rather than a die roll modifier, your score in this Knowledge measures your ability to communicate.
+When two people speak to each other, the lower Ability score determines how well they communicate. Characters who speak related languages can communicate at a penalty to their scores (assigned by
+Entrancement and Induction Entrancement and Induction appear similar, because they have a similar scale of Ease Factors, but they differ in practice. Entrancement takes control of a character's will, and dictates their actions, but does not affect what they believe or experience. Induction causes a character to sense things which are not real, and may convince them of things which are not true, but does not force them to act. It is possible for characters to have both Entrancement and Induction, and to use each to bolster the other. For example, "Speak to me" is an innocuous Entrancement, which allows Induction to begin. Inductions that convince a charact..."""
+    }
+
+    #ARM5AB048aB2cD4eF6gH8iJ ^"Magic Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["creatures", "magical traditions", "regiones"]
+        }
+        DESCRIPTION "Knowledge of magical creatures, areas, and traditions."
+    }
+
+    #ARM5AB049aB2cD4eF6gH8iJ ^"Magic Sensitivity" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["auras", "magical creatures", "enchanted items", "active spells"]
+        }
+        DESCRIPTION """You are often able to identify a place or object as magical. However, your sensitivity makes you more susceptible to magical effects: subtract your Magic Sensitivity score from your Magic Resistance. When attempting to sense the magic nature of a place or object, the storyguide will assign an Ease Factor -- simply roll a simple die + Perception + Magic Sensitivity.
+Detecting a Magic aura would normally have an Ease Factor equal to 12 - aura level, so 9 for a level 3 aura and 6 for a level 6 aura.
+For spells and enchanted items, an Ease Factor equal to 21 - magnitude of effect is a good guide. For enchanted items, use the magnitude of the most powerful effect in the item.
+For magical creatures, 15 - one fifth of the creature's Magic Might is appropriate, so for a creature with a Magic Might of 25, the Ease Factor would be 10."""
+    }
+
+    #ARM5AB050aB2cD4eF6gH8iJ ^"Magic Theory" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["inventing spells", "enchanting items", "a single Art"]
+        }
+        DESCRIPTION "Knowledge of what magic is and how it works, used primarily in the laboratory. Magic Theory deals with the technical details of Hermetic magic, Magic Lore covers knowledge of magical things in general. Anyone can learn Magic Theory, if they have access to a teacher or book (normally represented by a Virtue), but it is little use to those without The Gift."
+    }
+
+    #ARM5AB051aB2cD4eF6gH8iJ ^"Medicine" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION """Medicine is the formal study of the body and its diseases. Medical practice is based on the theory of the four humors: blood, phlegm, yellow bile, and black bile. Diseases are often caused by imbalances among them, hence such practices as bloodletting, to restore the balance. Medicine also deals with treating poisons and the results of starvation and the like, but not with treating wounds (see Chirurgy, above). The auctores are Galen and Hippocrates, in many works. It is important to note that medieval medical theory is basically true in Mythic Europe.
+Specialties: anatomy, apothecary, physician. (Academic)"""
+    }
+
+    #ARM5AB052aB2cD4eF6gH8iJ ^"Music" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["sing", "compose", "any one instrument"]
+        }
+        DESCRIPTION "The ability to sing, play musical instruments, and compose new music."
+    }
+
+    #ARM5AB053aB2cD4eF6gH8iJ ^"(Mystery Cult) Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION """This is the (Organization) Lore of a particular cult. It provides knowledge of the legends, history, structure, operation and goals of the Mystery Cult in question.
+It includes knowledge of the magics, rites and secret passwords and symbolism of the cult, how to covertly signal membership, and how to assess another magus's membership or non-membership in your cult. Two magi with a score in this ability for the same Mystery Cult may well be able to hold a seemingly innocuous conversation without outsiders understanding the true significance or meaning of their words. Many Mystery Cult specialty books also require a score in this ability to decode their heavy symbolism, this method is used to prevent un-Initiated outsiders learning secrets of the Mystery.
+Mystery Cult Lore also covers the ceremonies of the cult, frequently enacted whenever the cult gathers formally. It is also a key knowledge for a Mystagogue's performance of the Initiation Rites, to guide the Initiate through the path o..."""
+    }
+
+    #ARM5AB054aB2cD4eF6gH8iJ ^"(Organization) Lore" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["personalities", "history", "politics"]
+        }
+        DESCRIPTION "Knowledge of the legends, history, structure, operation, and goals of the specified organization. Organizations can be as large as the Church, or as small as a local craft guild. The smaller the organization, the more detailed your knowledge. Order of Hermes Lore is particularly important to most magi."
+    }
+
+    #ARM5AB055aB2cD4eF6gH8iJ ^"Parma Magica" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["protection from any specific Form"]
+        }
+        DESCRIPTION """Protection from magic. This is a special ritual (not a Ritual spell) that takes about two minutes to perform. It lets you add 5 times your Parma Magica score to your Magic Resistance until the next sunrise or sunset, whichever comes first. You may suppress your Parma Magica temporarily by concentrating, this is equivalent to sustaining a Concentration duration spell. (See page 215). Parma Magica does not require concentration while it is active.
+You may also protect one other person for each point in Parma Magica, with their consent. You must touch each person to start the protection, and it lasts as long as at least one character can see the other. The magus may cancel the protection at will, at any distance. While a magus is protecting others, his effective Parma Magica score is reduced by 3 points, both for himself and for the other people he is protecting. If the magus has a Parma Magica score of 3 or lower, his Parma Magica provides each character, including himself, with a Magic ..."""
+    }
+
+    #ARM5AB056aB2cD4eF6gH8iJ ^"Penetration" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Arcane"]
+            ^"Specialties" LIST OF STRING ["any one Art"]
+        }
+        DESCRIPTION "Getting your spell through the target's Magic Resistance. See page 215 for full Penetration rules."
+    }
+
+    #ARM5AB057aB2cD4eF6gH8iJ ^"Persona" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["priests", "peasants", "magi"]
+        }
+        DESCRIPTION """The character with this Ability can alter his appearance to adopt a different identity. He can alter any aspect of his appearance: hair and eve color, complexion, shape of nose, build and height (within the limits of his Size), apparent age, and even gender. These changes are total, proof even to the most intimate mundane scrutiny, but do not change the character's essential nature. Consequently, all Characteristic scores remain unchanged, Virtues and Flaws are transferred to all new forms, and a character who does not normally have a womb cannot become pregnant when adopting the persona of someone
+Adopting a different identity requires one round of concentration and a roll of Stamina + Persona against an Ease Factor of 9. Changing back to the character's natural form requires the same concentration and the same roll. Each identity has its own Personality Traits and behavioral quirks, and no Disguise roll is necessary to convince others of the role; this is not a disguise but a whole d..."""
+    }
+
+    #ARM5AB058aB2cD4eF6gH8iJ ^"Philosophiae" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["natural philosophy", "moral philosophy", "metaphysics", "Ritual magic", "Ceremonial magic"]
+        }
+        DESCRIPTION "There are three philosophies natural philosophy, moral philosophy, and metaphysics. Aristotle is the auctor for all of them, in different books. Most scholars study the philosophies after the Arts but before going on to Law, Theology or Medicine. Natural philosophy is the study of the sub-lunar world. It roughly corresponds to today's science. The main texts are the Physica, De Meteorologia, and De historia animalium. Moral philosophy is the study of the proper way of human life. It covers ethics, politics, and economics - the texts are the Ethica, Politica, and Economica. Metaphysics is the philosophy of the fundamental nature of the world. The main text is Aristotle's Metaphysica. The theories of the Philosophiae are all basically correct in Mythic Europe."
+    }
+
+    #ARM5AB059aB2cD4eF6gH8iJ ^"Premonitions" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["* threats to a particular person or group of people", "particular kinds of threats"]
+        }
+        DESCRIPTION """You intuitively sense whenever something is wrong, or is likely to go wrong soon. This Ability can be called upon by you or the storyguide, as appropriate, whenever there is a chance to avoid danger. Roll Perception + Premonitions against an Ease Factor depending on the situation. The Ease Factor starts at 3 for imminent, mortal peril, and increases as the distance in time increases and the level of danger decreases. Mortal peril a week in the future would have an Ease Factor of 9, while an imminent minor inconvenience would have an Ease Factor of about 15. If you beat the Ease Factor by 3 or more, you also get some sense of the nature of the danger, with more detail if you roll more highly.
+*"""
+    }
+
+    #ARM5AB060aB2cD4eF6gH8iJ ^"Rabbinic Law" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["any one of the sources of Rabbinic Law", "dietary laws", "particular topics", "precedents of a given area"]
+        }
+        DESCRIPTION "This is the Jewish version of Civil & Canon Law. The major sources of Rabbinic Law are the Talmud, the Oral Torah, and the Responsa of the Geonim."
+    }
+
+    #ARM5AB061aB2cD4eF6gH8iJ ^"Ride" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["battle", "speed", "tricks"]
+        }
+        DESCRIPTION "Riding and controlling a riding animal, especially under stress."
+    }
+
+    #ARM5AB062aB2cD4eF6gH8iJ ^"Second Sight" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["* regiones", "invisible things", "illusory disguises", "faeries", "ghosts"]
+        }
+        DESCRIPTION """You are able to see through illusionary concealment and disguise, including invisibility, and can also see naturally invisible things such as spirits and the boundaries between regio levels (see page 420). The Ease Factor to see through illusionary concealment is normally equal to 6 + the magnitude of the might of the creature responsible for the effect, or 6 + the magnitude of a Hermetic spell. In general, this Virtue allows you to see through Hermetic concealment effected with Imaginem, but not other Forms. The Magic Resistance, if any, of the concealed creature does not interfere with your Second Sight. If something is actually transformed, for example by a MuCo spell, you cannot determine the genuine form. The Ease Factor to see a naturally invisible thing is normally 9, and the Ease Factor for seeing regio levels is specified on page 421. All Second Sight rolls are Perception + Second Sight, and they are almost always simple rolls.
+*"""
+    }
+
+    #ARM5AB063aB2cD4eF6gH8iJ ^"Sense Holiness and Unholiness" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["good or evil"]
+        }
+        DESCRIPTION """You are able to feel the presence of good and evil. A Perception + Sense Holiness and Unholiness roll against an Ease Factor of 9 lets you sense holiness or
+unholiness in a general area; against an Ease Factor of 15, in a person or object. The Ease Factor to detect a demon is 0, but the character must still Penetrate its Magic Resistance. If an angel is hiding its divine nature, which is unusual, the Ease Factor is 15, and the character must Penetrate. If the angel is not hiding its divine nature, the roll automatically succeeds. In auras of particularly strong divine or infernal influence, your sensitivity may overwhelm you. This Ability is granted by the Divine realm, not the Magic or Faerie realms, and thus uses the Divine column of the realm interaction chart (page 410)."""
+    }
+
+    #ARM5AB064aB2cD4eF6gH8iJ ^"Sense Passions" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION """The character can sense the personality and desires of an intelligent being by recognizing and identifying the different shades of tarnish on its soul. A Perception + Sense Passions roll against an Ease Factor of 9 lets her sense the most powerful emotion currently being
+experienced by the person, and a roll against an Ease Factor of 15 allows her to identify the character's most dominant Personality Trait. The effect must penetrate the target's Magic Resistance if it has any kind of supernatural protection, and since this is a Supernatural Ability, it is affected by auras.
+Sense Passions:
+Stress Die + Perception
++ Sense Passions + Aura
+Through careful examination, the character can also recognize passions in people within the general area, allowing her to hone in on the most powerful source of emotion within sight, usually the character with the highest (or lowest) Personality Trait. This requires a 12 or better on the Sense Passions roll.
+The character can also tell when an aura has ..."""
+    }
+
+    #ARM5AB065aB2cD4eF6gH8iJ ^"Shapeshifter" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["One of your shapes", "particular conditions for the change"]
+        }
+        DESCRIPTION """You may change your shape into that of a mundane animal from the size of a robin (-10) to that of a bear (+2). This requires a few seconds' (one round's) concentration, and a roll of Stamina + Shapeshifter against an Ease Factor of 9. Changing back to human form requires the same concentration, and the same roll.
+You have a limited repertoire of shapes, one for every point you have in the Shapeshift ability. Every time you raise the Ability by one point, you may choose a new shape."""
+    }
+
+    #ARM5AB066aB2cD4eF6gH8iJ ^"Single Weapon" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Martial"]
+            ^"Specialties" LIST OF STRING ["any one weapon or shield", "which covers using that weapon with any shield or none", "and that shield with any weapon"]
+        }
+        DESCRIPTION "Fighting with a weapon used in one hand, possibly using a shield with the other. This includes lances used as intended from horseback."
+    }
+
+    #ARM5AB067aB2cD4eF6gH8iJ ^"Stealth" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["hide", "sneak", "shadowing", "urban areas", "natural areas"]
+        }
+        DESCRIPTION "Sneaking about without being seen or heard, also hiding in one place. This includes following people without their noticing, which is rolled against the other person's Perception."
+    }
+
+    #ARM5AB068aB2cD4eF6gH8iJ ^"Summon Animals" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION "You can summon animals. This Ability is described in the Hermetic Magic chapter, on page 243."
+    }
+
+    #ARM5AB069aB2cD4eF6gH8iJ ^"Survival" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["specific locales"]
+        }
+        DESCRIPTION "Finding food, water, shelter, a direct route, and relative safety in the wilderness (a very dangerous place in Mythic Europe). This Ability covers such mundane tasks as building a fire and cooking food without implements."
+    }
+
+    #ARM5AB070aB2cD4eF6gH8iJ ^"Swim" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Specialties" LIST OF STRING ["long distances", "diving", "underwater maneuvering"]
+        }
+        DESCRIPTION "The ability to propel yourself through water quickly and efficiently."
+    }
+
+    #ARM5AB071aB2cD4eF6gH8iJ ^"Teaching" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular Ability", "particular kinds of student"]
+        }
+        DESCRIPTION "The ability to teach an Ability to someone else."
+    }
+
+    #ARM5AB072aB2cD4eF6gH8iJ ^"Theology" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Academic"]
+            ^"Specialties" LIST OF STRING ["biblical knowledge", "heresy", "history"]
+        }
+        DESCRIPTION """Christian: Theology is the study of God and his work in the world. The auctores are the Bible and Peter the Lombard's Sententiae*, the Bible having theoretical primacy, being infallible, and the Sentences being most studied. The speculations of theology are very abstruse, and many theologians are accused of heresy. Sometimes
+those accused recant, and sometimes they convince the Church that they were right after all.
+
+Judaism*: This is the Jewish equivalent of Theology: Christian. The major sources for Jewish theology are the Torah, the Nevi'im, and the Kutuvim."""
+    }
+
+    #ARM5AB073aB2cD4eF6gH8iJ ^"Thrown Weapon" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Martial"]
+            ^"Specialties" LIST OF STRING ["any one weapon"]
+        }
+        DESCRIPTION "Fighting at range using weapons which are thrown."
+    }
+
+    #ARM5AB074aB2cD4eF6gH8iJ ^"Whistle Up The Wind" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General"]
+            ^"Requires Gift" BOOLEAN true
+        }
+        DESCRIPTION "You can create wind by whistling. This Ability is described in the Hermetic Magic chapter, on page 246."
+    }
+
+    #ARM5AB075aB2cD4eF6gH8iJ ^"Wilderness Sense" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Ability Type" ENUM ["Supernatural"]
+            ^"Requires Gift" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["direction", "weather", "hazards", "resources"]
+        }
+        DESCRIPTION "You are mystically attuned to the ways of the wilderness. A Perception + Wilderness Sense roll against an Ease Factor of 9 lets you determine the direction of north, the upcoming weather, or the presence of natural hazards or resources. One roll will only reveal one piece of information."
+    }
+
+}

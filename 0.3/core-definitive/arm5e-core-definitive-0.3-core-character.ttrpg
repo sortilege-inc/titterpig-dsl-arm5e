@@ -1,0 +1,512 @@
+BASE "ARM5e_Core_Character" {
+    NAME "Ars Magica 5th Edition Definitive - Character Creation and Advancement"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-02"
+
+    # Character creation, Houses of Hermes, virtue/flaw rules,
+    # experience advancement, aging, decrepitude, warping.
+
+    # ===========================
+    # CHARACTER CREATION
+    # ===========================
+
+    #ARM5C001aB2cD4eF6gH8iJ0k ^"Character Creation" DEF {
+
+        # Character creation follows a structured process.
+        # Magi, Companions, and Grogs each have slightly different
+        # steps and budgets.
+
+        DESCRIPTION """Character creation in Ars Magica follows a structured process:
+1. Concept — Choose character type (Magus, Companion, Grog, Mythic Companion)
+2. House — Magi only: choose one of the twelve Houses of Hermes
+3. Virtues and Flaws — Select balanced set per character type rules
+4. Characteristics — Buy using 7 points
+5. Early Childhood — 45 XP in childhood abilities + native language 5
+6. Later Life — 15 XP per year from age 5 to current age
+7. Apprenticeship — Magi only: 240 XP + 120 spell levels over 15 years
+8. Post-Apprenticeship — Magi only: 30 XP per year after Gauntlet
+9. Personality Traits — Choose 2-3 descriptive traits with scores
+10. Reputations — If applicable from Virtues/Flaws
+11. Confidence — Score 1, Points 3 (not Grogs)
+12. Equipment — Basic possessions appropriate to status"""
+
+        RULES {
+            #ARM5C002mN3oP5qR7sT9uV1w: magi_start_at_age_25_minimum
+            #ARM5C003yZ4aB6cD8eF0gH2i: companions_start_at_any_age_above_childhood
+            #ARM5C004kL5mN7oP9qR1sT3u: grogs_have_simplified_creation
+        }
+    }
+
+    #ARM5C005wX6yZ8aB0cD2eF4g ^"Characteristic Buying" DEF {
+
+        # 7 points to distribute among 8 Characteristics.
+        # Cost increases with higher scores; negative scores refund points.
+
+        DESCRIPTION """Each character has 7 points to buy Characteristics.
+Positive scores cost points; negative scores refund points.
+All 8 Characteristics must sum to 7 or fewer points spent."""
+
+        ADVANCEMENT_COSTS {
+            -3 "Refunds 6 points"
+            -2 "Refunds 3 points"
+            -1 "Refunds 1 point"
+            0 "Costs 0 points"
+            1 "Costs 1 point"
+            2 "Costs 3 points"
+            3 "Costs 6 points"
+        }
+
+        RULES {
+            #ARM5C006iJ7kL9mN1oP3qR5s: total_points_spent_must_not_exceed_7
+            #ARM5C007uV8wX0yZ2aB4cD6e: each_characteristic_ranges_from_minus3_to_plus3_at_creation
+        }
+    }
+
+    #ARM5C008gH9iJ1kL3mN5oP7q ^"Early Childhood" DEF {
+
+        # All characters receive experience from early childhood.
+        # Native Language at 5, plus 45 XP in appropriate skills.
+
+        DESCRIPTION """Every character receives their native language at score 5 (free)
+and 45 experience points to spend on childhood abilities. These XP
+represent learning from birth to approximately age 5."""
+
+        RULES {
+            #ARM5C009sT0uV2wX4yZ6aB8c: native_language_free_at_score_5
+            #ARM5C010eF1gH3iJ5kL7mN9o: 45_xp_for_childhood_abilities
+        }
+    }
+
+    #ARM5C011qR2sT4uV6wX8yZ0a ^"Later Life Experience" DEF {
+
+        # Characters gain experience for years of life after early childhood.
+        # Default: 15 XP per year. Modified by wealth.
+
+        DESCRIPTION """From age 5 onward, characters gain experience points for each
+year of life. The default rate is 15 XP per year. Characters with
+the Wealthy virtue gain 20 XP per year. Characters with the Poor
+flaw gain only 10 XP per year."""
+
+        RULES {
+            #ARM5C012bC3dE5fG7hI9jK1l: default_15_xp_per_year
+            #ARM5C013mN4oP6qR8sT0uV2w: wealthy_20_xp_per_year
+            #ARM5C014xY5zA7bC9dE1fG3h: poor_10_xp_per_year
+        }
+    }
+
+    #ARM5C015iJ6kL8mN0oP2qR4s ^"Apprenticeship" DEF {
+
+        # Magi undergo 15 years of training with their parens.
+        # Provides 240 XP in Arts and Abilities, plus 120 spell levels.
+
+        DESCRIPTION """Hermetic apprenticeship lasts 15 years. The apprentice's Arts are
+Opened by the parens, granting access to all 15 Hermetic Arts.
+The apprentice receives 240 experience points to distribute among
+Arts and Abilities, plus 120 levels of spells. The apprentice also
+gains scores in Magic Theory 1, Latin 1, and Parma Magica 1 for free."""
+
+        RULES {
+            #ARM5C016uV7wX9yZ1aB3cD5e: apprenticeship_lasts_15_years
+            #ARM5C017gH8iJ0kL2mN4oP6q: 240_xp_for_arts_and_abilities
+            #ARM5C018sT9uV1wX3yZ5aB7c: 120_levels_of_spells
+            #ARM5C019eF0gH2iJ4kL6mN8o: free_scores_magic_theory_latin_parma_magica
+        }
+    }
+
+    #ARM5C020pQ1rS3tU5vW7xY9z ^"Post-Apprenticeship" DEF {
+
+        # Magi who start older than 25 receive additional experience.
+        # 30 XP per year after completing the Gauntlet.
+
+        DESCRIPTION """Magi who begin play older than 25 (the minimum starting age)
+receive 30 experience points per additional year. These points
+may be spent on Arts, Abilities, and spells."""
+
+        RULES {
+            #ARM5C021aB2cD4eF6gH8iJ0k: 30_xp_per_year_post_gauntlet
+        }
+    }
+
+    # ===========================
+    # VIRTUE AND FLAW RULES
+    # ===========================
+
+    #ARM5C022mN3oP5qR7sT9uV1w ^"Virtue and Flaw Rules" DEF {
+
+        DESCRIPTION """Virtues and Flaws must be balanced. Each character type has
+different rules for how many and what types may be taken.
+Major Virtues cost 3 points; Minor Virtues cost 1 point.
+Major Flaws grant 3 points; Minor Flaws grant 1 point.
+Total Virtue points must equal total Flaw points."""
+
+        RULES {
+            #ARM5C023yZ4aB6cD8eF0gH2i: virtue_points_must_equal_flaw_points
+            #ARM5C024kL5mN7oP9qR1sT3u: major_virtue_costs_3_points
+            #ARM5C025wX6yZ8aB0cD2eF4g: minor_virtue_costs_1_point
+            #ARM5C026iJ7kL9mN1oP3qR5s: major_flaw_grants_3_points
+            #ARM5C027uV8wX0yZ2aB4cD6e: minor_flaw_grants_1_point
+        }
+    }
+
+    #ARM5C028gH9iJ1kL3mN5oP7q ^"Magus Virtue Flaw Rules" DEF {
+        APPLIES TO [^"Magus"]
+
+        DESCRIPTION """Magi may take up to 10 points of Flaws (and matching Virtues).
+One Major Hermetic Virtue is free if granted by House.
+Magi must have The Gift (free Social Status Virtue)."""
+
+        RULES {
+            #ARM5C029sT0uV2wX4yZ6aB8c: max_10_points_of_flaws
+            #ARM5C030eF1gH3iJ5kL7mN9o: max_one_major_hermetic_virtue_unless_house_grants
+            #ARM5C031qR2sT4uV6wX8yZ0a: must_have_the_gift
+        }
+    }
+
+    #ARM5C032bC3dE5fG7hI9jK1l ^"Companion Virtue Flaw Rules" DEF {
+        APPLIES TO [^"Companion"]
+
+        DESCRIPTION """Companions may take up to 10 points of Flaws (and matching Virtues).
+Companions may take one Social Status Virtue or Flaw for free.
+Companions generally do not have The Gift."""
+
+        RULES {
+            #ARM5C033mN4oP6qR8sT0uV2w: max_10_points_of_flaws
+            #ARM5C034xY5zA7bC9dE1fG3h: one_free_social_status
+        }
+    }
+
+    #ARM5C035iJ6kL8mN0oP2qR4s ^"Grog Virtue Flaw Rules" DEF {
+        APPLIES TO [^"Grog"]
+
+        DESCRIPTION """Grogs may take up to 3 points of Flaws (3 Minor Flaws maximum).
+No Major Virtues or Flaws. No Story Flaws. No The Gift."""
+
+        RULES {
+            #ARM5C036uV7wX9yZ1aB3cD5e: max_3_minor_flaws
+            #ARM5C037gH8iJ0kL2mN4oP6q: no_major_virtues_or_flaws
+            #ARM5C038sT9uV1wX3yZ5aB7c: no_story_flaws
+        }
+    }
+
+    # ===========================
+    # THE GIFT
+    # ===========================
+
+    #ARM5C039eF0gH2iJ4kL6mN8o ^"The Gift" DEF {
+        APPLIES TO [^"Entity"]
+
+        DESCRIPTION """The Gift is a supernatural quality that allows a character to learn
+Hermetic magic. It is a free Social Status Virtue for Magi. The Gift
+causes a -3 penalty on all social interactions with mundane people
+and animals, who instinctively distrust and dislike the Gifted character."""
+
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Free"]
+            ^"Category" ENUM ["Social Status"]
+            ^"Social Penalty" INTEGER -3
+        }
+
+        RULES {
+            #ARM5C040pQ1rS3tU5vW7xY9z: gift_causes_minus3_social_penalty
+            #ARM5C041aB2cD4eF6gH8iJ0k: required_for_hermetic_magic
+            #ARM5C042mN3oP5qR7sT9uV1w: animals_also_react_negatively
+        }
+    }
+
+    #ARM5C043yZ4aB6cD8eF0gH2i ^"Gentle Gift" DEF {
+        APPLIES TO [^"Entity"]
+
+        DESCRIPTION """A rare variant of The Gift that does not cause the usual social
+penalty. Characters with the Gentle Gift can interact normally with
+mundane people and animals."""
+
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+        }
+
+        RULES {
+            #ARM5C044kL5mN7oP9qR1sT3u: no_social_penalty_from_gift
+        }
+    }
+
+    #ARM5C045wX6yZ8aB0cD2eF4g ^"Blatant Gift" DEF {
+        APPLIES TO [^"Entity"]
+
+        DESCRIPTION """An extreme version of The Gift that causes a -6 penalty on all
+social interactions with mundane people, rather than the normal -3."""
+
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major"]
+            ^"Category" ENUM ["Hermetic"]
+            ^"Social Penalty" INTEGER -6
+        }
+
+        RULES {
+            #ARM5C046iJ7kL9mN1oP3qR5s: double_social_penalty_minus6
+        }
+    }
+
+    # ===========================
+    # HOUSES OF HERMES
+    # ===========================
+
+    #ARM5C047uV8wX0yZ2aB4cD6e ^"House Bjornaer" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Birna"
+            ^"Domus Magna" STRING "Crintera (Rhine)"
+            ^"Focus" STRING "Heartbeast shapeshifting"
+            ^"Free House Virtue" STRING "Heartbeast"
+        }
+        DESCRIPTION """House Bjornaer magi possess an inner beast form (their Heartbeast)
+into which they can transform at will. They have a deep connection
+to nature and animals. They do not use familiars."""
+    }
+
+    #ARM5C048gH9iJ1kL3mN5oP7q ^"House Bonisagus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Bonisagus and Trianoma"
+            ^"Domus Magna" STRING "Durenmar (Rhine)"
+            ^"Focus" STRING "Magical theory and political unity"
+            ^"Free House Virtue" STRING "Puissant Magic Theory or Puissant Intrigue"
+        }
+        DESCRIPTION """The founders of the Order of Hermes. Bonisagus invented Hermetic
+magic theory; Trianoma united the Founders politically. The House
+has two traditions: researchers (Bonisagus lineage) and diplomats
+(Trianoma lineage)."""
+    }
+
+    #ARM5C049sT0uV2wX4yZ6aB8c ^"House Criamon" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Criamon"
+            ^"Domus Magna" STRING "Cave of Twisting Shadows (Transylvania)"
+            ^"Focus" STRING "Enigmatic Wisdom, understanding time and the cosmos"
+            ^"Free House Virtue" STRING "The Enigma"
+        }
+        DESCRIPTION """Mystical seekers of understanding. Criamon magi study the Enigma,
+a philosophical path toward transcendence. They bear ritual tattoos
+and often speak in riddles."""
+    }
+
+    #ARM5C050eF1gH3iJ5kL7mN9o ^"House Ex Miscellanea" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Pralix"
+            ^"Domus Magna" STRING "Cad Gadu (Stonehenge)"
+            ^"Focus" STRING "Diverse magical traditions"
+            ^"Free House Virtue" STRING "Varies by tradition (one free Minor Virtue)"
+        }
+        DESCRIPTION """The largest and most diverse House. Ex Miscellanea accepts
+hedge wizards and practitioners of non-Hermetic traditions.
+Each member receives a free Minor Hermetic Virtue, a free
+Major non-Hermetic Virtue, and a compulsory Major Hermetic Flaw."""
+    }
+
+    #ARM5C051qR2sT4uV6wX8yZ0a ^"House Flambeau" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Flambeau"
+            ^"Domus Magna" STRING "Castra Solis (Provencal)"
+            ^"Focus" STRING "Combat magic, warfare"
+            ^"Free House Virtue" STRING "Puissant Perdo or Puissant Ignem"
+        }
+        DESCRIPTION """Warriors and destroyers. Flambeau magi specialize in combat
+magic and see themselves as the defenders of the Order. Some
+focus on Ignem (fire) and others on Perdo (destruction)."""
+    }
+
+    #ARM5C052bC3dE5fG7hI9jK1l ^"House Guernicus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Guernicus"
+            ^"Domus Magna" STRING "Magvillus (Rome)"
+            ^"Focus" STRING "Law and investigation, Code of Hermes"
+            ^"Free House Virtue" STRING "Hermetic Prestige"
+        }
+        DESCRIPTION """The judges and investigators of the Order. Guernicus magi
+serve as Quaesitores, enforcing the Code of Hermes and
+investigating crimes against the Order."""
+    }
+
+    #ARM5C053mN4oP6qR8sT0uV2w ^"House Jerbiton" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Jerbiton"
+            ^"Domus Magna" STRING "Valnastium (Greater Alps)"
+            ^"Focus" STRING "Art, mundane society, the Gentle Gift"
+            ^"Free House Virtue" STRING "Gentle Gift (recommended) or other"
+        }
+        DESCRIPTION """The most socially adept House. Jerbiton magi value art,
+culture, and integration with mundane society. Many have
+the Gentle Gift."""
+    }
+
+    #ARM5C054xY5zA7bC9dE1fG3h ^"House Mercere" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Mercere"
+            ^"Domus Magna" STRING "Harco (Rome)"
+            ^"Focus" STRING "Communication, travel, Redcap messengers"
+            ^"Free House Virtue" STRING "Puissant Creo or Puissant Muto"
+        }
+        DESCRIPTION """The messenger House. Most Mercere magi are Redcaps —
+unGifted members who serve as the Order's communication
+network. The few Gifted Mercere tend toward Creo and Muto."""
+    }
+
+    #ARM5C055iJ6kL8mN0oP2qR4s ^"House Merinita" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Merinita"
+            ^"Domus Magna" STRING "Irencillia (Rhine)"
+            ^"Focus" STRING "Faerie magic and the faerie realm"
+            ^"Free House Virtue" STRING "Faerie Magic"
+        }
+        DESCRIPTION """Faerie specialists. Merinita magi study the faerie realm and
+faerie magic. They often have close ties to faerie beings and
+use Nature-oriented or Story-based magic."""
+    }
+
+    #ARM5C056uV7wX9yZ1aB3cD5e ^"House Tremere" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Tremere"
+            ^"Domus Magna" STRING "Coeris (Transylvania)"
+            ^"Focus" STRING "Certamen, political power, military organization"
+            ^"Free House Virtue" STRING "Minor Magical Focus (Certamen)"
+        }
+        DESCRIPTION """The most hierarchical and politically organized House. Tremere
+magi value loyalty, discipline, and collective strength. They
+are masters of Certamen (wizards' duel). Tremere magi do not
+keep their own voting sigils."""
+    }
+
+    #ARM5C057gH8iJ0kL2mN4oP6q ^"House Tytalus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Tytalus"
+            ^"Domus Magna" STRING "Fudarus (Normandy)"
+            ^"Focus" STRING "Conflict, challenge, self-improvement through adversity"
+            ^"Free House Virtue" STRING "Self-Confident"
+        }
+        DESCRIPTION """Seekers of conflict and challenge. Tytalus magi believe that
+strength comes through adversity. They constantly test themselves
+and others, and thrive on political and personal conflict."""
+    }
+
+    #ARM5C058sT9uV1wX3yZ5aB7c ^"House Verditius" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Founder" STRING "Verditius"
+            ^"Domus Magna" STRING "Verdi (Rome)"
+            ^"Focus" STRING "Enchanted items, crafting"
+            ^"Free House Virtue" STRING "Verditius Magic"
+        }
+        DESCRIPTION """Master crafters and enchanters. Verditius magi excel at creating
+enchanted items but have difficulty casting spells without their
+tools (casting tools Flaw). They hold competitive item contests."""
+    }
+
+    # ===========================
+    # EXPERIENCE AND ADVANCEMENT
+    # ===========================
+
+    #ARM5C059eF0gH2iJ4kL6mN8o ^"Advancement" DEF {
+
+        DESCRIPTION """Characters advance by gaining experience points (XP) and
+spending them on Abilities and Arts. XP are gained from
+study, practice, teaching, adventure, and exposure.
+The cost to advance follows a pyramid formula."""
+
+        ADVANCEMENT_COSTS {
+            # New Score × (New Score + 1) / 2 = total XP needed
+            # Score 1 = 5 XP (Abilities) or 1 XP (Arts)
+            # Score 2 = 15 XP (Abilities) or 3 XP (Arts)
+        }
+
+        RULES {
+            #ARM5C060pQ1rS3tU5vW7xY9z: ABILITY_XP_COST = new_score * (new_score + 1) / 2 * 5
+            #ARM5C061aB2cD4eF6gH8iJ0k: ART_XP_COST = new_score * (new_score + 1) / 2
+            #ARM5C062mN3oP5qR7sT9uV1w: abilities_capped_at_score_based_on_access
+        }
+    }
+
+    #ARM5C063yZ4aB6cD8eF0gH2i ^"Study Sources" DEF {
+
+        DESCRIPTION """Characters gain XP from various study sources during seasonal
+activities. Each source has a Source Quality (SQ) determining
+how many XP are gained."""
+
+        RULES {
+            #ARM5C064kL5mN7oP9qR1sT3u: summa_study_gives_quality_xp_up_to_book_level
+            #ARM5C065wX6yZ8aB0cD2eF4g: tractatus_gives_quality_xp_once
+            #ARM5C066iJ7kL9mN1oP3qR5s: practice_gives_4_to_8_xp
+            #ARM5C067uV8wX0yZ2aB4cD6e: exposure_gives_2_xp
+            #ARM5C068gH9iJ1kL3mN5oP7q: adventure_gives_5_to_10_xp
+            #ARM5C069sT0uV2wX4yZ6aB8c: training_gives_trainer_score_plus_3_xp
+            #ARM5C070eF1gH3iJ5kL7mN9o: teaching_gives_teacher_com_plus_teaching_plus_3_plus_bonus
+        }
+    }
+
+    # ===========================
+    # AGING AND DECREPITUDE
+    # ===========================
+
+    #ARM5C071qR2sT4uV6wX8yZ0a ^"Aging" DEF {
+
+        DESCRIPTION """Characters age naturally. Starting at age 35, a character must
+make an Aging Roll once per year. The roll uses a stress die
+(no botch) against an Ease Factor based on living conditions.
+Failed rolls accumulate Aging Points in Characteristics.
+Longevity Rituals can delay aging."""
+
+        FORMULA "Aging Roll = stress die (no botch) + age/10 (round up) - Living Conditions modifier - Longevity Ritual modifier"
+
+        RULES {
+            #ARM5C072bC3dE5fG7hI9jK1l: aging_starts_at_35
+            #ARM5C073mN4oP6qR8sT0uV2w: one_aging_roll_per_year
+            #ARM5C074xY5zA7bC9dE1fG3h: aging_points_reduce_characteristics
+            #ARM5C075iJ6kL8mN0oP2qR4s: longevity_ritual_adds_lab_total_modifier
+            #ARM5C076uV7wX9yZ1aB3cD5e: apparent_age_may_differ_from_actual
+        }
+    }
+
+    #ARM5C077gH8iJ0kL2mN4oP6q ^"Decrepitude" DEF {
+
+        DESCRIPTION """When Aging Points in any Characteristic reach a threshold,
+the character gains a Decrepitude Point. At Decrepitude 5,
+the character dies of old age. Each Decrepitude Point may also
+inflict a permanent Aging Crisis."""
+
+        RULES {
+            #ARM5C078sT9uV1wX3yZ5aB7c: decrepitude_5_means_death
+            #ARM5C079eF0gH2iJ4kL6mN8o: aging_crisis_may_inflict_permanent_effects
+        }
+    }
+
+    # ===========================
+    # WARPING
+    # ===========================
+
+    #ARM5C080pQ1rS3tU5vW7xY9z ^"Warping" DEF {
+
+        DESCRIPTION """Long-term exposure to supernatural effects causes Warping.
+Characters gain Warping Points from powerful sustained magic,
+living in strong supernatural auras, and botched magical effects.
+At Warping Score 5+, mundane characters gain a Minor Flaw
+for each additional point. Magi risk Twilight episodes."""
+
+        RULES {
+            #ARM5C081aB2cD4eF6gH8iJ0k: warping_from_powerful_sustained_effects
+            #ARM5C082mN3oP5qR7sT9uV1w: warping_from_strong_auras_over_time
+            #ARM5C083yZ4aB6cD8eF0gH2i: magi_risk_twilight_at_warping_5_plus
+            #ARM5C084kL5mN7oP9qR1sT3u: mundanes_gain_minor_flaw_at_warping_5_plus
+        }
+    }
+}

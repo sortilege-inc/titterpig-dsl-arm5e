@@ -1,0 +1,230 @@
+EXTENSION "ARM5e_HoH_Soc_Spells_Imaginem" {
+    NAME "Houses of Hermes: Societates - Imaginem Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Houses of Hermes: Societates
+
+    #ARM5SP019aB2cD4eF6gH8iJ ^"AMBUSH ON THE DESERTED ROAD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Design" STRING "Base 5, +1 Touch, +2 Ring"
+        }
+        DESCRIPTION """This spell destroys all of the species that the group of things within the Circle emit in a single direction. It can  --  for example  --  make a magus's traveling party invisible from the direction of another group they wish to ambush. The base level of this spell includes an adjustment that accounts for the magus's ability to gently move the direction of effect, so that as the enemy group passes by, they cannot spot the hidden party. Other people, for example the members of the magus's company, can still see each other, because the species reaching their eyes are unobstructed. The transparency requires a Perception + Finesse roll against an Ease Factor of 9 to be convincing.
+
+This spell makes the caster selectively invisible. It destroys a thin cone of the species the magus emits, so that a single person cannot see the caster. People around the magus, who are outside the cone, continue to see the caster. This is particularly useful in city crowds, because it stops the magus being buffeted by oblivious passersby. Note that this spell only works if the magus knows the location of the single viewer to be excluded, and if the viewer moves predictably. If the viewer moves rapidly out of the cone, the magus becomes visible to him."""
+    }
+
+    #ARM5SP020aB2cD4eF6gH8iJ ^"Glowing Footprints of the Thief" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 2, +3 Sight, +1 Conc, +2 Group"
+        }
+        DESCRIPTION "This spell makes the traces of sweat left by a person visible, by transforming the stream of olfactory species of the person's scent into a stream of iconic species. The way this light appears is dependent on the sigil and Finesse of the magus. This spell is mimetic, so all nearby people can see the scent traces. Note that to cast this spell, the magus must be distinctly aware of the scent of the thief, so that there is a valid target for the spell."
+    }
+
+    #ARM5SP021aB2cD4eF6gH8iJ ^"Sight of the Warm Surface" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Vision"]
+            ^"Design" STRING "Base 2, +1 Touch, +1 Concentration, +4 Vision"
+        }
+        DESCRIPTION "Although Imaginem magic cannot create heat, warm surfaces emit species, which humans can sense through touch. This spell transforms those into species that the eye responds to. How the warmth is seen varies by magus."
+    }
+
+    #ARM5SP022aB2cD4eF6gH8iJ ^"A Visible Demand for Repair" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circ"]
+            ^"Design" STRING "Base 2, +1 Touch, +2 Ring"
+        }
+        DESCRIPTION """This spell transforms the groans and squeaks of damaged pieces of equipment into iconic species reminiscent of the magus's sigil. This makes it easier for magi to find the flaws in damaged parts, granting a +3 bonus to Craft or Profession rolls.
+
+external senses, like sight, if changed into those for internal senses, like pain, have no effect because they cannot reach the internal organs that detect them.
+
+Tricks of Interpretation
+
+There are two different styles of attack on a mind's capacity to interpret what its senses perceive. The magus can attack the mind directly, reducing its ability to think clearly. The magus can, alternatively, use the mind's techniques of constructing meaning to force it to infer false conclusions.
+
+Anamorphs
+
+People classify the objects in their environments, and often mistake confusing objects for familiar things. Anamorphic ("shapeless") illusions lack detail, and hijack this tendency. These illusions depend on the viewer failing a Perception + Awareness roll, so that they misperceive the illusion, which tricks the viewer's mind into filling in the details that the illusion is missing. Characters who are tired, emotionally roused, or inebriated are more likely to be tricked.
+
+The Ease Factor of the victim's Perception roll is the sum of a die roll, the victim's dominant active Personality Trait, the caster's Perception, and the caster's Finesse.
+
+Victim's Perception Ease Factor: die + value of dominant, active Personality Trait + caster's Perception + caster's Finesse"""
+    }
+
+    #ARM5SP023aB2cD4eF6gH8iJ ^"The Brushstrokes Revealed" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Ring"
+        }
+        DESCRIPTION """This spell makes the species cast by an object within the circle more vivid, so that the magus can see tiny details that are otherwise invisible. This spell has traditionally been used to investigate the physical construction of artworks, but nature-oriented Jerbiton magi have recently begun using it to investigate the handiwork of God, by examining the tiny structures of creation.
+
+- If the victim's total exceeds the Ease Factor by 6, he sees the anamorph as it truly is: a shapeless, supernatural thing. •
+- If the victim's total exceeds the Ease Factor by 3, he sees the anamorph as a false thing, with a mundane explanation. •
+- If the victim's total exceeds the Ease Factor by less than 3, he barely registers the anamorph's existence. He knows that something is there, but it's not important enough for his mind to classify without prompting. If forced to consider the anamorph by his situation, he investigates it further. •
+- If the Ease Factor exceeds the target's total, he sees the anamorph as a thing that suits his current emotional state, but is not sufficiently important to investigate. •
+- If the Ease Factor exceeds the victim's total by 3, the target sees the anamorph as characteristic of his mental state. For example, a frightened person may see a menacing figure, or a happy person might see a carnival performer. •
+- If the Ease Factor exceeds the victim's total by 6, the anamorph appears to do what the character assumes it should do. A menacing figure may seem to slink toward the target, while a performer may seem to juggle. •
+- If the Ease Factor exceeds the victim's total by 9, the character constructs a very detailed memory of his interaction with the anamorph. In threatening situations, this may include minor scuffles, and in a happy situations it may include brief, uninformative conversation. •
+
+Anamorphs usually fool only a single sense, by sending out vague visual clues that the target misconstrues. As images that affect a single sense, they have a bas..."""
+    }
+
+    #ARM5SP024aB2cD4eF6gH8iJ ^"An Enemy Awash in the Pure Sigil of the Magus" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 2, +3 Sight, +1 Concentration, +1 Part"
+        }
+        DESCRIPTION """This spell washes the target with concentrated visible species, overloading the eyes. It requires no Finesse roll, because the species do not construct an image. In this case, the sheer number of species is being used to overload the capacity of the eye, so that the target is unable to see anything else. The spell's name comes from its appearance, which is always based strongly on the sigil of the caster. The victim's eyes recover two minutes after the spell is complete, or in only a round if the victim thinks to close his overburdened eyes when first struck by the spell.
+
+Spells similar to this one can create detailed images, but that requires Finesse rolls."""
+    }
+
+    #ARM5SP025aB2cD4eF6gH8iJ ^"False Window" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun (some versions use Ring)"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Sun or Ring, +1 Individual"
+        }
+        DESCRIPTION """This spell allows the magus to trace the frame of a door or window and create a miniature that seems to show something that lies beyond the frame. A Perception + Finesse roll is required to craft a convincing illusion. The Ease Factor is 9 if the image seems to show a room, 12 if it seems to show a structure, or 15 if it seems to run to the horizon. These numbers already include the reduction for limiting the viewer's line of sight, but could be reduced or increased by familiarity with the depicted scene.
+
+Many casters of False Window add an additional magnitude, so that figures within the image appear to move, and the pattern of light changes to suit the time of day, but this simpler version creates only a static image. This spell also models similar spells for the other senses: a mirror that plays a tune, provided its face is not turned toward a wall, is an example. Directly created species like these are resisted by the Parma Magica."""
+    }
+
+    #ARM5SP026aB2cD4eF6gH8iJ ^"Silent Shout" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 2, +3 Sight, +1 Part"
+        }
+        DESCRIPTION "This spell creates a burst of species, matching the caster's voice, which strike the target in the head. This spell requires a Perception + Finesse roll against an Ease Factor of 6 to make the voice sound convincingly like that of the magus (the base Ease Factor is 9, with a -3 modifier for deep familiarity), but even if the roll fails, the target still hears the message. This spell is used on battlefields, or to instruct apprentices in the Tribunal chamber. It takes advantage of the directional nature of miniatures to prevent others from overhearing its contents."
+    }
+
+    #ARM5SP027aB2cD4eF6gH8iJ ^"Fooling the Eye" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Sight"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 2, +3 Sight, +1 Part"
+        }
+        DESCRIPTION """A magus using this spell creates the correct species for the swift movement of a small bright object, and casts them at the head of the target. Virtually all humans have in involuntary reflex that makes their eyes track the paths of moving objects, particularly those that might strike them. The magus uses this reflex against the victim, because when she looks where the object should be, she makes eye contact with the magus. This allows the magus to cast spells with Eye Range on the victim.
+
+This spell does not require a Finesse roll, because it does not simulate a particular object.
+
+Altering Thoughts
+
+Mentem magic can target thoughts. A thought is the expression of an idea, currently active in a mind. Skilled magi may target either individual thoughts or a mind's capacity to think. Mentem magic can also influence the way the mind turns sensations into thoughts. Magi may do this by altering the way characters categorize sensations, or by impairing the mind so that the victim loses a particular cognitive capability.
+
+The core rulebook contains base spell levels for creating, understanding, and controlling thoughts. It is also possible to change and destroy thoughts, using the same base levels as for memories. Examples of spells that impair thought are found in the core rulebook. Tip of the Tongue (ArM5, page 150), for example, affects the capacity to think a word, rather than the memory of the word, because the capacity returns when the spell expires.
+
+Memory
+
+There are many types of memory. The three classes of greatest interest to Hermetic magi are the following:
+
+- Inscribed memories, which are etched into the mind by study and experience. •
+- Procedural memories, which are sequences in which actions are performed to complete a greater task. •
+- Episodic memories, which recollect particular events. Autobiographical memories are episodic memories. •
+
+Hermetic magic should, in theory, be able to duplicate procedural and inscribed memories from a donor to a target, a..."""
+    }
+
+    #ARM5SP028aB2cD4eF6gH8iJ ^"Aura of Beguiling Appearance" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION "This spell is a variant of Aura of Ennobled Presence, except that it causes the target to appear more friendly, conciliatory, and credible. The character gets a +3 on rolls to win trust and make friends. In a debate, the target receives a +3 to Defense Totals based on Charm. The social penalties caused by The Gift are not negated by this spell; the caster merely seems to be suspiciously over-friendly."
+    }
+
+    #ARM5SP029aB2cD4eF6gH8iJ ^"Aura of Childlike Innocence" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION """This spell is a variant of Aura of Ennobled Presence, except that it causes the target to appear more guileless, gullible, and naïve. The character gets a +3 to rolls to deflect suspicion or convince others of his innocence. In a debate, the target receives a +3 to defenses based on Guile. To those affected by the caster's Gift, his apparent innocence and unblemished honor appears sanctimonious and self-righteous.
+
+The Magic of Impersonation
+
+Those magi who have spent time and effort developing personae often learn or invent spells that assist them in maintaining these separate identities. Most Tytalan magi do not rely upon a magical disguise when using a persona because of the need to renew it on a regular basis, and the fact that some individuals are gifted with Second Sight or Magic Sensitivity, and can destroy their cover easily. Nevertheless, a magical enchantment can overcome these limitations with a constant effect in an enchantment, particularly if coupled with Mask the Odor of Magic. Despite the problems associated with a magically maintained persona, some magi do employ such tricks. Occasionally it is necessary to create a persona of the opposite sex, with a specific characteristic such as red hair or dwarf stature, or even with all the particular features of a certain real person. In such cases, spells such as Disguise of the Transformed Image and Disguise of the New Visage can prove very useful. Members of House Tytalus even trade Lab Texts of such spells that cause the caster to become a specific individual; those versions can only be used to adopt the guise of the person determined when the spell was invented, but that disguise is flawless, and does not rely on the caster knowing the individual whom he is copying.
+
+The Tytalan spell Donning the Mask of Another allows a magus to acquire a deep cover disguise by stealing one from another. This spell is most commonly used to pass a cover on to another magus once it is no longer useful to the magus who ini..."""
+    }
+
+    #ARM5SP030aB2cD4eF6gH8iJ ^"The Clandestine Mask" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Imaginem"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 2, +2 Sun"
+        }
+        DESCRIPTION "This spell blurs the face and distorts the voice of the caster, so that she may not be recognized by anyone who knows her. The caster's sigil determines what form this disguise takes; Carolus of Tytalus, whose sigil is darkness, has his face cast perpetually in shadow and his voice echoing and deep. Harpax, whose sigil is multiplicity, acquires a new face every few seconds, and his voice changes randomly between accents and pitches. A magus with a particularly obvious sigil must create a more powerful version (+1 magnitude for higher complexity) to blur this distinction further."
+    }
+
+}

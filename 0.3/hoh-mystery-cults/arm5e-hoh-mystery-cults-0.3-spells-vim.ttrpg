@@ -1,0 +1,70 @@
+EXTENSION "ARM5e_HoH_MC_Spells_Vim" {
+    NAME "Houses of Hermes: Mystery Cults - Vim Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Houses of Hermes: Mystery Cults
+
+    #ARM5SP011aB2cD4eF6gH8iJ ^"tHe rooster's croW" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Hearing"]
+            ^"Design" STRING "Base effect, +3 Sound"
+        }
+        DESCRIPTION "Any demons who hear the caster's shout lose Might equal to the spell's (level - 5) if the spell penetrates their Magic Resistance."
+    }
+
+    #ARM5SP012aB2cD4eF6gH8iJ ^"facilitate tHe stifled (forM) sPell" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base effect, +1 Touch"
+        }
+        DESCRIPTION """This spell is cast at the same time as another formulaic spell (see ArM5, page 159) whose level must be less than twice the level of this spell. If successfully cast, the targeted spell may be cast with no penalty to the casting total due to reduced or absent gestures and/or voice. While this Muto Vim spell requires gestures and voice as normal, the casting total of the follow-up spell is not penalized, and thus diffi cult spells at the limit of a magus's ability have a greater chance of success when in restricted circumstances, without incurring fatigue loss. If the targeted spell has Range Voice, the volume used to cast this spell determines the actual range. There are ten versions of this spell, each affecting spells of one of the Hermetic Forms. This spell is particularly useful to Bjornaer magi who wish to maintain the appearance of mundane animals yet still cast spells.
+
+Characters of House Bjornaer
+
+The fi rst step in character creation when designing a magus of House Bjornaer is to decide upon the heartbeast. You should then decide on which clan you want to belong to, based on the philosophical stance of your character. Your storyguide decides upon the location and composition of your sept (if you have one), although he may be willing to take suggestions from you.
+
+Virtues & Flaws
+
+You should consider what Virtues are particularly appropriate for your character's heartbeast  --  one might expect a Bjornaer-bear to be Large, a Bjornaer-wolf to have a Piercing Gaze, or a Bjornaereagle to have Keen Vision. Similarly, you should consider what Flaws are suitable for the heartbeast. For example, a boar-Bjornaer might have Poor Eyesight, a bull-Bjornaer might be Clumsy, and a weasel-Bjornaer might have a Small Frame. In particular, Personality Flaws should be chosen while keeping the heartbeast in mind. You may wish to invent some new Personality Flaws for Bjornaer characters, such as Brooding, Hibernation, Migratory, Territorial, Loner, Dandy, Savage, or Carnivoro..."""
+    }
+
+    #ARM5SP013aB2cD4eF6gH8iJ ^"tie tHe tHreads tHat Bind" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Vim"]
+            ^"Level" INTEGER 0
+            ^"General" BOOLEAN true
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["GroupThis spell is uniquely used for the construction of automata. The base effect level of the spell level must equal or exceed the construct's Magic Might to be successful, meaning the fi nal spell level must equal or exceed the automaton's Magic Might + 15"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base Effect, +1 Touch, +2 Group"
+        }
+        DESCRIPTION """autoMata in Play
+
+Once completed, the automaton functions like an unthinking NPC, performing commanded tasks and services. If it is ever required to make an Ability check, the storyguide rolls this as normal: Characteristic + Ability + a die roll against a determined Ease Factor. Because automata are constructed to perform regular, routine tasks, they always use a simple die and never a stress die. Great successes and horrible blunders fall outside an automaton's capacities. Mental
+
+Characteristics are ignored for Abilities that require them, and the storyguide just rolls a die + the automaton's Ability. Automata can only use Abilities that they have been designed for.
+
+Automata are complicated machines and require constant maintenance. At the end of every year, roll a stress die and compare it to the automaton's Magic Might score. If it matches or exceeds the score, the automaton is fi ne. If it fails, some minor part of the automaton has broken. Lower the automata's Magic Might score by 1 point. The automaton suffers a -1 penalty on all Ability rolls for every 2 points of lost Magic Might. If it botches, the automata breaks, losing 5 points of Magic Might for every actual botch rolled. Once the automata's Magic Might score reaches 0, it is broken and no longer functions. It is a good idea to make this annual roll when other characters are making their Aging rolls.
+
+Damaged automata can be repaired. A magus can make spot repairs on an automaton by rolling his Intelligence + Craft Automata score + a stress die against of Ease Factor of (6 + the magnitude of the automaton's Magic Might score). If you succeed, the automaton's Magic Might is increased 1 point back to its original score. If you fail, his attempt was unsuccessful. If you botch, the automata loses 1 point of Might per actual botch. Spot repairs take a number of days equal to the magnitude of the automaton's original Magic Might, rounded up. The magus may also spend an entire season and repair all the dama..."""
+    }
+
+}

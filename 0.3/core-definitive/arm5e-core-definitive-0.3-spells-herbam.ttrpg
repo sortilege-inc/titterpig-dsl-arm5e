@@ -1,0 +1,487 @@
+EXTENSION "ARM5e_Spells_Herbam" {
+    NAME "Ars Magica Definitive Edition - Herbam Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+
+    #ARM5SP131aB2cD4eF6gH8iJ ^"Conjure the Sturdy Vine" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 1, +2 Voice, +2 Sun"
+        }
+        DESCRIPTION "Grows 10 paces of vine from a moderate quantity of wood, or from fertile soil. The vine is extremely strong and pliable, suitable for use as rope."
+    }
+
+    #ARM5SP132aB2cD4eF6gH8iJ ^"Trap of the Entwining Vines" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 1, +2 Voice, +2 Sun, +2 Group"
+        }
+        DESCRIPTION """Causes strong, woody vines to grow rapidly from fertile earth. The vines cover a circle 2 paces across and reach 6 feet high. Anything caught within them is immobilized. To avoid the vines, the target must make a Quickness  --  Encumbrance stress roll against an Ease Factor of 9. To break out requires a Strength stress roll against an Ease Factor of 12 (allowed once a round). Someone not trapped can cut a trapped person free in two rounds, assuming proper tools. The vines weaken and wither to dust at sunrise or sunset.
+BRIDGE OF WOOD"""
+    }
+
+    #ARM5SP133aB2cD4eF6gH8iJ ^"BRIDGE OF WOOD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun, +2 size"
+        }
+        DESCRIPTION """Creates a bridge made from living leaves, vines, and wood. The bridge can reach up to 20 paces, and is five paces wide. It is sturdy enough to support creatures of up to Size +4.
+WALL OF THORNS"""
+    }
+
+    #ARM5SP134aB2cD4eF6gH8iJ ^"WALL OF THORNS" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 1, +2 Voice, +2 Sun, +2 Group, +1 size"
+        }
+        DESCRIPTION "Within seconds, this spell creates a straight wall of woody, thorny bushes up to 20 paces long, 1 pace thick, and 4 paces high. The thorns, which are unnaturally resilient, have a +15 Soak, are cut by edged weapons only, and cutting through requires inflicting a Heavy Wound. Bodily forcing one's way through the wall requires a Strength stress roll against an Ease Factor of 9 and does +15 damage whether the attempt succeeds or fails. If the roll botches, an additional 5 points of damage are suffered. The wall grows out of existing bushes or fertile soil. A Dexterity + Athletics stress roll against an Ease Factor of 9 allows a character to scale the wall, but the character takes +10 damage in the process."
+    }
+
+    #ARM5SP135aB2cD4eF6gH8iJ ^"Wall of Living Wood" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +2 Sun, +2 size"
+        }
+        DESCRIPTION "A straight wall of living oak is created, growing quickly from nearby trees, other plant growth, or fertile earth. The wall is 20 paces long, 1 pace thick, and 5 paces high. It can be scaled with a Dexterity + Athletics stress roll against an Ease Factor of 9."
+    }
+
+    #ARM5SP136aB2cD4eF6gH8iJ ^"THE BOUNTIFUL FEAST" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 35
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Year"]
+            ^"Target" ENUM ["Special"]
+            ^"Ritual" BOOLEAN true
+            ^"Design" STRING "Base 1, +1 Touch, +4 Year, +4 Special (equivalent to Boundary), +1 Size (for a total of +4 Size, including the +3 from the guideline, so that the area affected is up to about 6 miles across"
+        }
+        DESCRIPTION """This ritual, which must be cast at noon on the day after the winter solstice, attempts to ensure that all crops that grow within its target will be healthy and fruitful. The spell protects against non-magical blight and other diseases. It can't control the weather or prevent others from harming crops, but it does cause crops to be healthier, larger, and tastier than they otherwise would be. The target of this spell is the fields owned by those present at the ritual. The spell must be
+cast within the region affected by the spell, although that region need not be contiguous. Although food plants are affected most by this ritual, all plants are made healthier to some degree."""
+    }
+
+    #ARM5SP137aB2cD4eF6gH8iJ ^"PROBE NATURE'S HIDDEN LORE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 4
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch"
+        }
+        DESCRIPTION "Tells you what kind of plant you are touching. You also get an image of it in its natural habitat. Works with plant products as well as with plants themselves."
+    }
+
+    #ARM5SP138aB2cD4eF6gH8iJ ^"HUNT FOR THE WILD HERB" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Smell"]
+            ^"Design" STRING "Base 2, +1 Conc, +2 Smell"
+        }
+        DESCRIPTION "When you cast this spell, you can smell one sort of plant, and follow the scent, as long as you continue to concentrate. You must have a sample of the type of plant you are looking for. A Perception stress roll against an Ease Factor of 6 is needed to follow the scent. If there is no plant of the relevant type fairly close by (close enough to smell), you smell nothing, although the spell still works."
+    }
+
+    #ARM5SP139aB2cD4eF6gH8iJ ^"Intuition of the Forest" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 1, +1 Touch, +2 Sun, +2 Group"
+        }
+        DESCRIPTION "You engage in a type of communion with the woods that you are in, giving you an intuitive sense of how to get along in the forest, and how to get the most out of the forest without causing it harm. You get a +3 to all nature-oriented rolls (not including spells) when in a forest or similar area. Causing significant harm to the forest cancels this spell."
+    }
+
+    #ARM5SP140aB2cD4eF6gH8iJ ^"SHRIEK OF THE IMPENDING SHAFTS" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Hearing"]
+            ^"Design" STRING "Base 2, +2 Sun, +3 Hearing"
+        }
+        DESCRIPTION """Lets you know where anything wooden will be in the immediate future by a shriek that sounds in the air in advance of the wood's coming. A piece of wood that is controlled may change course, so the spell is sometimes wrong. You get a +9 bonus on Defense scores against wooden weapons (provided that you have the freedom to dodge), and you can automatically dodge wooden missiles fired from more than ten paces away.
+The shriek is only audible to you, and it cannot be simulated by people making noises."""
+    }
+
+    #ARM5SP141aB2cD4eF6gH8iJ ^"Converse with Plant and Tree" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Intellego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 15, +1 Touch, +1 Conc"
+        }
+        DESCRIPTION "You can speak with a plant for one conversation. The level of conversation depends on the type of plants; longer-lived and more noble plants have more to say. A single question and response takes ten to thirty minutes, with slower-growing plants speaking more slowly. Typically, plants can talk about the soil and about other plants around them, but have limited awareness of more momentary events, such as the passing of animals or people, unless that passing has a direct bearing on the plant (for example, a person cut its trunk). News can spread quickly through a forest when it has to, called from tree to tree on the wind. Bystanders cannot understand your conversation."
+    }
+
+    #ARM5SP142aB2cD4eF6gH8iJ ^"PASS THE UNYIELDING PORTAL" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +1 Diameter"
+        }
+        DESCRIPTION "Makes the wood of a door pliable, allowing the magus to bend it open regardless of most locks or bars."
+    }
+
+    #ARM5SP143aB2cD4eF6gH8iJ ^"Transformation of the Thorny Staff" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Sun"
+        }
+        DESCRIPTION """Causes a length of wood (up to 6 feet in length) to grow thick, sharp thorns at whatever spots you touch. If the spell is cast on a staff, the thorns add +4 to the damage done by the staff.
+PIERCING SHAFT OF WOOD"""
+    }
+
+    #ARM5SP144aB2cD4eF6gH8iJ ^"PIERCING SHAFT OF WOOD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Rego effect"
+        }
+        DESCRIPTION """Req: Rego
+Turns a piece of wood into a sleek, barbed, strong shaft that flies through the air at a target. Damage depends on the size of the item from which the shaft is formed: staff (upper size limit) +10, 2-foot branch +8, wand +5. This spell cannot miss, but it is resisted."""
+    }
+
+    #ARM5SP145aB2cD4eF6gH8iJ ^"ROPE OF BRONZE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, no cost for requisite"
+        }
+        DESCRIPTION """Req: Terram
+Turns a piece of rope (made from plant material) into refined, superior bronze, which does not break under normal circumstances."""
+    }
+
+    #ARM5SP146aB2cD4eF6gH8iJ ^"THAUMATURGICAL TRANSFORMATION OF PLANTS TO IRON" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Ind Reg: Terram"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +1 size, no cost for requisite"
+        }
+        DESCRIPTION "Makes any plant, dead or alive, as hard as iron. Affects any amount of continuous plant material up to the size of a small tree. Sharp-edged plants can become deadly when they are made this hard."
+    }
+
+    #ARM5SP147aB2cD4eF6gH8iJ ^"STIR THE SLUMBERING TREE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +2 size"
+        }
+        DESCRIPTION """Req: Mentem
+Raises any tree into a state of consciousness resembling that of a human. Such a tree can see and hear what is going on around it, and at a normal human level of perception. Such a tree may share some mental attributes or personality traits with the caster. The tree can rearrange its branches over the course of several hours, though too slowly for people to observe the movement from second to second. Most trees in magical areas are already awake."""
+    }
+
+    #ARM5SP148aB2cD4eF6gH8iJ ^"Curse of the Rotted Wood" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch"
+        }
+        DESCRIPTION """Causes a non-living wooden object to rot and fall apart. Objects up to the size of a single door can be affected, but things that size take up to two rounds to decay. Usually, large chunks of wood start falling off the target, and slowly crumble to smaller and smaller pieces, until only dust is left.
+Ferramentum of Verditius's version of this spell is very orderly as per his wizard's sigil. The decay of the object starts from the top and continues to the bottom, leaving only dust as it goes."""
+    }
+
+    #ARM5SP149aB2cD4eF6gH8iJ ^"Wizard's Autumn" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 2, +1 Touch, +2 Group, +2 size"
+        }
+        DESCRIPTION "All the deciduous leaves (that is, those that normally fall in autumn) on the target plants turn brown and then fall to the ground. The full process takes a minute. This spell can affect a small grove of trees. The trees do not bud again until the next spring."
+    }
+
+    #ARM5SP150aB2cD4eF6gH8iJ ^"PLANT'S WITHERING BANE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +2 Voice, +1 size"
+        }
+        DESCRIPTION "Withers and destroys one living plant, up to and including a plant the size of a small tree."
+    }
+
+    #ARM5SP151aB2cD4eF6gH8iJ ^"THE GREAT ROT" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 4, +2 Voice, +2 Group, +1 size"
+        }
+        DESCRIPTION "Rots and destroys a large amount of dead wood, up to the amount found in a wooden house or small inn. Wooden structures creak and groan mightily for about a minute before collapsing."
+    }
+
+    #ARM5SP152aB2cD4eF6gH8iJ ^"TREADING THE ASHEN PATH" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3, +1 Touch, +2 Group, +3 size, +1 fancy effect (the spell effectively keeps being cast while the caster walks seven miles"
+        }
+        DESCRIPTION """As you walk through a forest after casting this spell, all the plant material 10 paces in front of you and 5 paces to either side withers and dies. Trees are reduced to bare trunks, while their leaves and all smaller plants turn to ash. You can walk for 7 miles with each casting of this spell. Use of this spell in faerie woods is not recommended. This spell was originally invented by a magus of House Flambeau, and he was awarded a prize for it by his primus.
+GENERAL
+WARD AGAINST FAERIES OF THE WOOD"""
+    }
+
+    #ARM5SP153aB2cD4eF6gH8iJ ^"WARD AGAINST FAERIES OF THE WOOD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Ring"]
+            ^"Target" ENUM ["Circle"]
+            ^"Design" STRING "Base effect"
+        }
+        DESCRIPTION "Like Ward Against Faeries of the Waters (ReAq Gen), but for faeries of the wood. At some angles, at night, the ring appears to be a green-hued dome."
+    }
+
+    #ARM5SP154aB2cD4eF6gH8iJ ^"Dance of the Staves" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 5
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice"
+        }
+        DESCRIPTION "Causes a pole, staff, haft, or any other long, thin, non-living wooden object to bend and lash about wildly for a few seconds and then stop suddenly. A whirling staff strikes its holder and does +4 Damage, with a possible bonus if the weapon at the head of the pole hits the person."
+    }
+
+    #ARM5SP155aB2cD4eF6gH8iJ ^"REPEL THE WOODEN SHAFTS" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +2 Voice"
+        }
+        DESCRIPTION "Deflects a single blow of any weapon made of wood, up to the size of a twohanded club. The attack automatically misses, but the attacker still rolls to see if he or she botches (with two extra botch rolls for melee weapons). If you ordinarily carry a wooden staff, it must be tossed aside for the casting."
+    }
+
+    #ARM5SP156aB2cD4eF6gH8iJ ^"Strike of the Angered Branch" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Conc, +1 Part"
+        }
+        DESCRIPTION """Causes a large tree branch to swing at a target. The branch's Attack score is equal to your Perception + Finesse. Damage is +10. You may strike repeatedly with the branch, striking once per round for as long as the spell lasts.
+TANGLE OF WOOD AND THORNS"""
+    }
+
+    #ARM5SP157aB2cD4eF6gH8iJ ^"TANGLE OF WOOD AND THORNS" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Conc, +1 Muto requisite"
+        }
+        DESCRIPTION "Takes a length of wood that you designate and hurls it at a target (a Targeting roll is required). The wood wraps around and immobilizes the target (assuming that there is enough wood), who must make a Strength stress roll against an Ease Factor of 9 to break free (one attempt per round). If the victim ever botches, he cannot escape without outside help. If the length of wood has thorns, it does +6 damage when it hits, and again each time the target tries to break free, whether successful or not. When the caster stops concentrating, the target can escape on a Strength roll against an Ease Factor of 6."
+    }
+
+    #ARM5SP158aB2cD4eF6gH8iJ ^"Coils of the Entangling Plants" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 20
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Conc, +2 Group"
+        }
+        DESCRIPTION "Animates all the grass and small plants within a field delineated from side to side by your outstretched arms and in front by no more than 15 paces of distance. The plants grab and wrap themselves around the people nearest to them (Strength stress roll of 9+ to break free, rolled once per minute). If a roll to break free ever botches, the victim cannot escape on his or her own. With a Concentration roll of 6+, you can release one individual a round."
+    }
+
+    #ARM5SP159aB2cD4eF6gH8iJ ^"LORD OF THE TREES" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +2 Voice, +1 Conc, +2 size"
+        }
+        DESCRIPTION """Causes a tree to move its branches and bend its trunk in any way you mentally direct. A large tree striking with branches has Initiative +5, Attack +7, and Damage +10. Normal weapons are practically useless against large trees.
+THE TREACHEROUS SPEAR"""
+    }
+
+    #ARM5SP160aB2cD4eF6gH8iJ ^"THE TREACHEROUS SPEAR" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 10, +2 Voice, +1 Diam"
+        }
+        DESCRIPTION """This spell animates a wooden or wooden-hafted melee weapon in someone else's hand, and makes that weapon attack its holder until the wielder is dead or the weapon is destroyed. When the spell is cast, the weapon tries to break its wielder's hold (Quickness - Encumbrance stress roll against an Ease Factor of 9 to hang on). On subsequent rounds, the wielder hangs on by making Strength stress rolls against an Ease Factor of 6, allowed once per round. If a roll to hold on ever botches, the wielder loses control of the weapon and is hit by it automatically (see below). While still in its wielder's grip, the weapon does not strike him or her, but does not strike on the wielder's behalf either. Once the weapon breaks free or is released, it attacks its wielder, using his Attack and Damage scores.
+The former wielder may fight the rebellious weapon. The weapon uses its defense rating as its Defense total. It has no Soak, and is 'killed' after it takes a wound depending on its size. One-handed weapons must take a Medium Wound, while two-handed weapons must take a Heavy Wound. The damage of thrusting and missile weapons is halved when attacking the renegade weapon.
+TWIST THE LIVING TREE"""
+    }
+
+    #ARM5SP161aB2cD4eF6gH8iJ ^"TWIST THE LIVING TREE" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +2 size"
+        }
+        DESCRIPTION """You make a living tree bend into unusual positions. Depending on your needs, you can make a cage, a shelter, or a wall. Even the leaves can be commanded, maybe to form
+a solid roof that sheds rain. Takes one to ten minutes to complete (depending on the complexity of the new shape), during which time you must maintain concentration.
+WARD AGAINST WOOD"""
+    }
+
+    #ARM5SP162aB2cD4eF6gH8iJ ^"WARD AGAINST WOOD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 15, +2 Sun"
+        }
+        DESCRIPTION "The caster is protected from nonenchanted wood, so that none of it can contact his body. If he is walking on a wooden surface, he is actually suspended very slightly above it."
+    }
+
+    #ARM5SP163aB2cD4eF6gH8iJ ^"Freeing the Striding Tree" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Herbam"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +2 Voice, +1 Conc, +2 size"
+        }
+        DESCRIPTION "Like Lord of the Trees, above, but the tree can walk half as fast as a human can. If you botch a Concentration roll to maintain control, the tree attacks you, having been awakened and disturbed by this spell."
+    }
+
+}

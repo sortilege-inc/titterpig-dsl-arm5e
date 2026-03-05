@@ -1,0 +1,195 @@
+BASE "ARM5e_Core_Covenant" {
+    NAME "Ars Magica 5th Edition Definitive - Covenant"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-02"
+
+    # Covenant lifecycle, build points, library, vis sources,
+    # aura, covenfolk, specialists, income.
+
+    # ===========================
+    # COVENANT SEASONS
+    # ===========================
+
+    #ARM5V001aB2cD4eF6gH8iJ0k ^"Covenant Seasons" DEF {
+
+        DESCRIPTION """Covenants have a lifecycle described as seasons:
+Spring: newly founded, full of potential but few resources.
+Summer: established and powerful, at the height of its strength.
+Autumn: mature and wealthy but stagnating, internal politics dominate.
+Winter: declining, resources failing, members aging or departing."""
+
+        PROPERTIES {
+            ^"Spring Build Points" INTEGER 300
+            ^"Summer Build Points" INTEGER 800
+            ^"Autumn Build Points" INTEGER 1200
+            ^"Winter Build Points" INTEGER 500
+        }
+
+        RULES {
+            #ARM5V002mN3oP5qR7sT9uV1w: spring_covenant_has_fewest_resources
+            #ARM5V003yZ4aB6cD8eF0gH2i: summer_covenant_is_at_peak_power
+            #ARM5V004kL5mN7oP9qR1sT3u: autumn_covenant_has_most_resources_but_declining
+            #ARM5V005wX6yZ8aB0cD2eF4g: winter_covenant_is_in_decline
+        }
+    }
+
+    # ===========================
+    # BUILD POINTS
+    # ===========================
+
+    #ARM5V006iJ7kL9mN1oP3qR5s ^"Build Points" DEF {
+
+        DESCRIPTION """Build Points (BP) represent a covenant's total resources at creation.
+They are spent on library, vis sources, specialists, enchanted items,
+laboratory equipment, fortifications, and other assets."""
+
+        RULES {
+            #ARM5V007uV8wX0yZ2aB4cD6e: bp_spent_across_all_covenant_resources
+            #ARM5V008gH9iJ1kL3mN5oP7q: unused_bp_may_be_converted_to_silver
+        }
+    }
+
+    # ===========================
+    # LIBRARY
+    # ===========================
+
+    #ARM5V009sT0uV2wX4yZ6aB8c ^"Library" DEF {
+
+        DESCRIPTION """A covenant's library is one of its most valuable assets.
+It contains Summae, Tractatus, and Lab Texts.
+Summae teach a subject up to their Level at their Quality.
+Tractatus provide a fixed Quality of XP, usable once per reader.
+Lab Texts record how to reproduce a specific magical working."""
+
+        RULES {
+            #ARM5V010eF1gH3iJ5kL7mN9o: summa_cost_equals_level_plus_quality_BP
+            #ARM5V011qR2sT4uV6wX8yZ0a: tractatus_costs_quality_BP
+            #ARM5V012bC3dE5fG7hI9jK1l: lab_text_costs_level_divided_by_5_BP
+        }
+    }
+
+    #ARM5V013mN4oP6qR8sT0uV2w ^"Summa" DEF {
+        EXTENDS ^"Book"
+        DESCRIPTION """A comprehensive treatise on a subject. Allows study up to its Level.
+Quality determines XP gained per season of study. Once a reader's
+score equals or exceeds the book's Level, it provides no further benefit."""
+        PROPERTIES {
+            ^"Book Type" ENUM ["Summa"]
+            ^"Subject" STRING REQUIRED
+            ^"Level" INTEGER REQUIRED
+            ^"Quality" INTEGER REQUIRED
+        }
+    }
+
+    #ARM5V014xY5zA7bC9dE1fG3h ^"Tractatus" DEF {
+        EXTENDS ^"Book"
+        DESCRIPTION """A focused work on a single topic. Provides Quality XP when read,
+but can only be read once by each reader (diminishing returns)."""
+        PROPERTIES {
+            ^"Book Type" ENUM ["Tractatus"]
+            ^"Subject" STRING REQUIRED
+            ^"Quality" INTEGER REQUIRED
+        }
+    }
+
+    #ARM5V015iJ6kL8mN0oP2qR4s ^"Lab Text" DEF {
+        EXTENDS ^"Book"
+        DESCRIPTION """A record of a specific magical working (spell, enchantment, etc.).
+Allows another magus to reproduce the working more quickly."""
+        PROPERTIES {
+            ^"Book Type" ENUM ["Lab Text"]
+            ^"Subject" STRING REQUIRED
+            ^"Level" INTEGER REQUIRED
+        }
+    }
+
+    # ===========================
+    # VIS SOURCES
+    # ===========================
+
+    #ARM5V016uV7wX9yZ1aB3cD5e ^"Vis Sources" DEF {
+
+        DESCRIPTION """Raw vis is crystallized magical energy, essential for rituals,
+enchantments, longevity rituals, and other powerful magical workings.
+Each source produces a fixed number of pawns per year of a specific Art."""
+
+        RULES {
+            #ARM5V017gH8iJ0kL2mN4oP6q: vis_source_costs_5_BP_per_pawn_per_year
+            #ARM5V018sT9uV1wX3yZ5aB7c: vis_stockpile_costs_1_BP_per_pawn
+        }
+    }
+
+    # ===========================
+    # AURA
+    # ===========================
+
+    #ARM5V019eF0gH2iJ4kL6mN8o ^"Aura" DEF {
+
+        DESCRIPTION """Supernatural auras pervade areas aligned with one of the four
+realms: Magic, Faerie, Infernal, or Divine. Most covenants are
+located in Magic auras. The aura modifier adds to or subtracts
+from magical activities depending on the realm alignment."""
+
+        PROPERTIES {
+            ^"Aura Strength" INTEGER MIN 0 MAX 10
+            ^"Aura Type" ENUM ["Magic", "Faerie", "Infernal", "Divine"]
+        }
+
+        RULES {
+            #ARM5V020pQ1rS3tU5vW7xY9z: magic_aura_adds_to_hermetic_casting_and_lab_totals
+            #ARM5V021aB2cD4eF6gH8iJ0k: divine_aura_subtracts_from_hermetic_magic
+            #ARM5V022mN3oP5qR7sT9uV1w: infernal_aura_subtracts_from_hermetic_magic
+            #ARM5V023yZ4aB6cD8eF0gH2i: faerie_aura_adds_half_to_hermetic_magic
+        }
+    }
+
+    # ===========================
+    # COVENFOLK AND SPECIALISTS
+    # ===========================
+
+    #ARM5V024kL5mN7oP9qR1sT3u ^"Covenfolk" DEF {
+
+        DESCRIPTION """The mundane inhabitants of a covenant: servants, craftsmen,
+guards, and laborers. They provide essential services that allow
+magi to focus on their magical pursuits."""
+
+        RULES {
+            #ARM5V025wX6yZ8aB0cD2eF4g: covenfolk_provide_essential_services
+            #ARM5V026iJ7kL9mN1oP3qR5s: specialist_covenfolk_cost_BP
+        }
+    }
+
+    #ARM5V027uV8wX0yZ2aB4cD6e ^"Specialist" DEF {
+
+        DESCRIPTION """A covenfolk with particular expertise: scribes, bookbinders,
+teachers, autocrats, stewards, percamentarii. Specialists
+provide mechanical bonuses to covenant activities."""
+
+        PROPERTIES {
+            ^"Specialty" STRING REQUIRED
+            ^"Ability Score" INTEGER MIN 1
+        }
+
+        RULES {
+            #ARM5V028gH9iJ1kL3mN5oP7q: specialist_costs_points_based_on_ability_score
+        }
+    }
+
+    # ===========================
+    # INCOME AND EXPENSES
+    # ===========================
+
+    #ARM5V029sT0uV2wX4yZ6aB8c ^"Covenant Finances" DEF {
+
+        DESCRIPTION """Covenants require income to maintain their operations.
+Income comes from mundane sources (land, trade, tithes) and
+magical sources (selling enchanted items, vis trade).
+Expenses include covenfolk wages, fortification maintenance,
+and magical supplies."""
+
+        RULES {
+            #ARM5V030eF1gH3iJ5kL7mN9o: income_must_cover_expenses_or_decline
+            #ARM5V031qR2sT4uV6wX8yZ0a: surplus_can_fund_improvements
+        }
+    }
+}

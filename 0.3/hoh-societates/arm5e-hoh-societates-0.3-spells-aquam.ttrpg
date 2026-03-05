@@ -1,0 +1,67 @@
+EXTENSION "ARM5e_HoH_Soc_Spells_Aquam" {
+    NAME "Houses of Hermes: Societates - Aquam Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Houses of Hermes: Societates
+
+    #ARM5SP003aB2cD4eF6gH8iJ ^"Dagger of Ice" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Rego"
+            ^"Design" STRING "Base 3, +2 Voice, +1 Rego requisite"
+        }
+        DESCRIPTION "Creates a foot-long, sharp icicle and hurls it at a target. The icicle always hits, provided it penetrates Magic Resistance. It inflicts +5 damage (partly because of its sharp point). After impact, the icicle shatters to tiny fragments, which promptly disappear."
+    }
+
+    #ARM5SP004aB2cD4eF6gH8iJ ^"Alchemist's Revenge" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 15, +2 Voice"
+        }
+        DESCRIPTION "Splashes a target with acid, inflicting +15 damage if it penetrates Magic Resistance. At the storyguide's option, the acid may damage the target's equipment."
+    }
+
+    #ARM5SP005aB2cD4eF6gH8iJ ^"Shackles of the Frozen Ice" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Aquam"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 3, +2 Sun, +1 Part"
+        }
+        DESCRIPTION """Freeze a circular portion of a body of water into solid ice. Anyone wading or swimming in the water is trapped in the ice. Magic Resistance does not prevent the ice from surrounding a character and holding her fast. The area affected by the spell is the same size as a base Individual: a roughly bowl-shaped volume about five paces across and two paces deep at the center.
+
+Since the ice is magical, it only inflicts cold damage if it penetrates Magic Resistance. Rules for cold damage are given in ArM5, page 181; the ice created by this spell inflicts a base damage of +1. Characters who are completely encased in ice begin to suffocate (see ArM5, page 180).
+
+A trapped character may break free of the ice by making a Strength roll. Characters may also chop their way out of the ice using tools or weapons, but this
+
+takes time. Magic, including Perdo Aquam or Creo Ignem spells, may be able to free a character instantly.
+
+| Extent<br>of Ice<br>Coverage | Strength<br>Ease<br>Factor | Time to<br>Cut Free |
+|------------------------------|----------------------------|---------------------|
+| One foot                     | 6                          | 30 seconds          |
+| Both feet                    | 9                          | 1 minute            |
+| To knees                     | 12                         | 3 minutes           |
+| To waist                     | 15                         | 10 minutes          |
+| To chest                     | 18                         | 15 minutes          |
+| To neck                      | 21                         | 20 minutes          |
+| Completely<br>enclosed       | 21                         | depends on<br>depth |"""
+    }
+
+}

@@ -1,0 +1,654 @@
+BASE "ARM5e_Core_Base" {
+    NAME "Ars Magica 5th Edition Definitive - Foundation"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-02"
+
+    # Ars Magica 5th Edition Definitive (Atlas Games, 2024)
+    # Troupe-style play in Mythic Europe, centered on Hermetic wizards
+    # Resolution: Characteristic + Ability + Die Roll vs Ease Factor
+
+    # ===========================
+    # ACTOR HIERARCHY
+    # ===========================
+
+    #ARM5B001aB2cD4eF6gH8iJ0k ACTOR "Entity" DEF {
+        # The root of all actor types in Ars Magica.
+        # All ACTORs ultimately extend from Entity.
+
+        PROPERTIES {
+            ^"Name" STRING REQUIRED
+            ^"Description" STRING
+        }
+
+        RULES {
+            #ARM5B002mN3oP5qR7sT9uV1w: WHEN [^"Entity" CREATED] THEN REQUIRE ^"Name"
+        }
+    }
+
+    #ARM5B003xY4zA6bC8dE0fG2hI ACTOR "Magus" DEF {
+        EXTENDS #ARM5B001aB2cD4eF6gH8iJ0k ^"Entity"
+
+        # Hermetic wizards, members of the Order of Hermes.
+        # The most powerful player character type. Each magus belongs
+        # to one of the twelve Houses. Magi have The Gift, which
+        # allows them to learn Hermetic magic but causes social
+        # difficulties with mundane people.
+
+        PROPERTIES {
+            ^"House" STRING REQUIRED
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Perception" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Strength" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Stamina" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Presence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Communication" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Dexterity" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Quickness" INTEGER MIN -5 MAX 5 DEFAULT 0
+            }
+            ^"Size" INTEGER DEFAULT 0
+            ^"Age" INTEGER MIN 0
+            ^"Apparent Age" INTEGER MIN 0
+            ^"Decrepitude" INTEGER MIN 0 DEFAULT 0
+            ^"Warping Score" INTEGER MIN 0 DEFAULT 0
+            ^"Confidence Score" INTEGER MIN 0 DEFAULT 1
+            ^"Confidence Points" INTEGER MIN 0 DEFAULT 3
+            ^"Hermetic Arts" DEF {
+                # Techniques
+                ^"Creo" INTEGER MIN 0 DEFAULT 0
+                ^"Intellego" INTEGER MIN 0 DEFAULT 0
+                ^"Muto" INTEGER MIN 0 DEFAULT 0
+                ^"Perdo" INTEGER MIN 0 DEFAULT 0
+                ^"Rego" INTEGER MIN 0 DEFAULT 0
+                # Forms
+                ^"Animal" INTEGER MIN 0 DEFAULT 0
+                ^"Aquam" INTEGER MIN 0 DEFAULT 0
+                ^"Auram" INTEGER MIN 0 DEFAULT 0
+                ^"Corpus" INTEGER MIN 0 DEFAULT 0
+                ^"Herbam" INTEGER MIN 0 DEFAULT 0
+                ^"Ignem" INTEGER MIN 0 DEFAULT 0
+                ^"Imaginem" INTEGER MIN 0 DEFAULT 0
+                ^"Mentem" INTEGER MIN 0 DEFAULT 0
+                ^"Terram" INTEGER MIN 0 DEFAULT 0
+                ^"Vim" INTEGER MIN 0 DEFAULT 0
+            }
+            ^"Abilities" LIST OF ^"Ability"
+            ^"Virtues" LIST OF ^"Virtue"
+            ^"Flaws" LIST OF ^"Flaw"
+            ^"Spells" LIST OF ^"Spell"
+            ^"Personality Traits" LIST OF ^"Personality Trait"
+            ^"Reputations" LIST OF ^"Reputation"
+            ^"Equipment" LIST OF STRING
+            ^"Sigil" STRING
+            ^"Voting Sigil" STRING
+            ^"Parma Magica Score" INTEGER MIN 0 DEFAULT 0
+        }
+
+        RULES {
+            #ARM5B004jK5lM7nO9pQ1rS3t: WHEN [^"Magus" CREATED] THEN REQUIRE ^"House"
+            #ARM5B005uV6wX8yZ0aB2cD4e: ^"Magus" HAS ^"The Gift"
+            #ARM5B006fG7hI9jK1lM3nO5p: WHEN [^"Magus" CREATED] THEN REQUIRE at least 1 ^"Ability" with name "Magic Theory"
+            #ARM5B007qR8sT0uV2wX4yZ6a: WHEN [^"Magus" CREATED] THEN REQUIRE at least 1 ^"Ability" with name "Latin"
+            #ARM5B008bC9dE1fG3hI5jK7l: WHEN [^"Magus" CREATED] THEN REQUIRE at least 1 ^"Ability" with name "Parma Magica"
+        }
+    }
+
+    #ARM5B009mN0oP2qR4sT6uV8w ACTOR "Companion" DEF {
+        EXTENDS #ARM5B001aB2cD4eF6gH8iJ0k ^"Entity"
+
+        # Important non-magus characters. Each player has one companion
+        # in addition to their magus. Companions can be knights, friars,
+        # nobles, hedge wizards, or other significant individuals.
+        # Companions generally do not have The Gift.
+
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Perception" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Strength" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Stamina" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Presence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Communication" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Dexterity" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Quickness" INTEGER MIN -5 MAX 5 DEFAULT 0
+            }
+            ^"Size" INTEGER DEFAULT 0
+            ^"Age" INTEGER MIN 0
+            ^"Decrepitude" INTEGER MIN 0 DEFAULT 0
+            ^"Warping Score" INTEGER MIN 0 DEFAULT 0
+            ^"Confidence Score" INTEGER MIN 0 DEFAULT 1
+            ^"Confidence Points" INTEGER MIN 0 DEFAULT 3
+            ^"Abilities" LIST OF ^"Ability"
+            ^"Virtues" LIST OF ^"Virtue"
+            ^"Flaws" LIST OF ^"Flaw"
+            ^"Personality Traits" LIST OF ^"Personality Trait"
+            ^"Reputations" LIST OF ^"Reputation"
+            ^"Equipment" LIST OF STRING
+        }
+
+        RULES {
+            #ARM5B010xY1zA3bC5dE7fG9h: WHEN [^"Companion" CREATED] THEN MAY NOT HAVE ^"The Gift" unless explicitly granted
+        }
+    }
+
+    #ARM5B011iJ2kL4mN6oP8qR0s ACTOR "Grog" DEF {
+        EXTENDS #ARM5B001aB2cD4eF6gH8iJ0k ^"Entity"
+
+        # Minor characters: warriors, servants, specialists.
+        # Grogs are often shared between players. Simplified creation:
+        # no Major Virtues or Flaws, no more than 3 Minor Flaws,
+        # no Story Flaws, cannot have The Gift.
+
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Perception" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Strength" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Stamina" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Presence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Communication" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Dexterity" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Quickness" INTEGER MIN -5 MAX 5 DEFAULT 0
+            }
+            ^"Size" INTEGER DEFAULT 0
+            ^"Age" INTEGER MIN 0
+            ^"Decrepitude" INTEGER MIN 0 DEFAULT 0
+            ^"Abilities" LIST OF ^"Ability"
+            ^"Virtues" LIST OF ^"Virtue"
+            ^"Flaws" LIST OF ^"Flaw"
+            ^"Personality Traits" LIST OF ^"Personality Trait"
+            ^"Equipment" LIST OF STRING
+        }
+
+        RULES {
+            #ARM5B012tU3vW5xY7zA9bC1d: WHEN [^"Grog" CREATED] THEN LIMIT ^"Flaws" to 3 Minor
+            #ARM5B013eF4gH6iJ8kL0mN2o: ^"Grog" MAY NOT HAVE Major ^"Virtue" OR Major ^"Flaw"
+            #ARM5B014pQ5rS7tU9vW1xY3z: ^"Grog" MAY NOT HAVE Story ^"Flaw"
+            #ARM5B015aB6cD8eF0gH2iJ4k: ^"Grog" MAY NOT HAVE ^"The Gift"
+        }
+    }
+
+    #ARM5B016lM7nO9pQ1rS3tU5v ACTOR "Mythic Companion" DEF {
+        EXTENDS #ARM5B001aB2cD4eF6gH8iJ0k ^"Entity"
+
+        # Extra-powerful non-magus characters comparable to magi in
+        # power level. Includes non-Hermetic wizards, holy hermits,
+        # supernaturally strong warriors. Played as an alternative
+        # to a magus character, not in addition to one.
+
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Perception" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Strength" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Stamina" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Presence" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Communication" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Dexterity" INTEGER MIN -5 MAX 5 DEFAULT 0
+                ^"Quickness" INTEGER MIN -5 MAX 5 DEFAULT 0
+            }
+            ^"Size" INTEGER DEFAULT 0
+            ^"Age" INTEGER MIN 0
+            ^"Decrepitude" INTEGER MIN 0 DEFAULT 0
+            ^"Warping Score" INTEGER MIN 0 DEFAULT 0
+            ^"Confidence Score" INTEGER MIN 0 DEFAULT 1
+            ^"Confidence Points" INTEGER MIN 0 DEFAULT 3
+            ^"Abilities" LIST OF ^"Ability"
+            ^"Virtues" LIST OF ^"Virtue"
+            ^"Flaws" LIST OF ^"Flaw"
+            ^"Personality Traits" LIST OF ^"Personality Trait"
+            ^"Reputations" LIST OF ^"Reputation"
+            ^"Equipment" LIST OF STRING
+        }
+
+        RULES {
+            #ARM5B017xY8zA0bC2dE4fG6h: ^"Mythic Companion" IS alternative to ^"Magus", not additional
+        }
+    }
+
+    #ARM5B018iJ9kL1mN3oP5qR7s ACTOR "Creature" DEF {
+        EXTENDS #ARM5B001aB2cD4eF6gH8iJ0k ^"Entity"
+
+        # Supernatural beings with Might scores: magical beasts,
+        # faeries, demons, angels. Realm alignment determines which
+        # realm powers the creature and its Might type.
+
+        PROPERTIES {
+            ^"Might" INTEGER MIN 0
+            ^"Might Type" ENUM ["Magic", "Faerie", "Infernal", "Divine"]
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Perception" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Strength" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Stamina" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Presence" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Communication" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Dexterity" INTEGER MIN -10 MAX 10 DEFAULT 0
+                ^"Quickness" INTEGER MIN -10 MAX 10 DEFAULT 0
+            }
+            ^"Size" INTEGER
+            ^"Abilities" LIST OF ^"Ability"
+            ^"Powers" LIST OF ^"Power"
+            ^"Vis" STRING
+            ^"Virtues" LIST OF ^"Virtue"
+            ^"Flaws" LIST OF ^"Flaw"
+            ^"Personality Traits" LIST OF ^"Personality Trait"
+            ^"Combat" DEF {
+                ^"Weapons" LIST OF ^"Weapon Attack"
+            }
+        }
+
+        RULES {
+            #ARM5B019uV0wX2yZ4aB6cD8e: WHEN [^"Creature" CREATED] THEN REQUIRE ^"Might" AND ^"Might Type"
+            #ARM5B020gH1iJ3kL5mN7oP9q: ^"Creature" USES ^"Might" to fuel ^"Powers"
+            #ARM5B021sT2uV4wX6yZ8aB0c: ^"Creature" HAS magic resistance equal to ^"Might"
+        }
+    }
+
+    #ARM5B022eF3gH5iJ7kL9mN1o ACTOR "Covenant" DEF {
+        EXTENDS #ARM5B001aB2cD4eF6gH8iJ0k ^"Entity"
+
+        # The shared home of a group of magi. Covenants are
+        # quasi-characters with their own resources, seasons, and
+        # development. A covenant has an aura, a library, laboratories,
+        # grogs, and covenfolk.
+
+        PROPERTIES {
+            ^"Season" ENUM ["Spring", "Summer", "Autumn", "Winter"]
+            ^"Aura" INTEGER MIN 0 MAX 10
+            ^"Aura Type" ENUM ["Magic", "Faerie", "Infernal", "Divine"]
+            ^"Members" LIST OF ^"Magus" REQUIRED
+            ^"Companions" LIST OF ^"Companion"
+            ^"Grogs" LIST OF ^"Grog"
+            ^"Library" LIST OF ^"Book"
+            ^"Laboratories" LIST OF ^"Laboratory"
+            ^"Vis Sources" LIST OF ^"Vis Source"
+            ^"Income" INTEGER
+            ^"Build Points" INTEGER MIN 0
+        }
+
+        RULES {
+            #ARM5B023qR4sT6uV8wX0yZ2a: WHEN [^"Covenant" CREATED] THEN REQUIRE at least 1 ^"Magus" in ^"Members"
+            #ARM5B024bC5dE7fG9hI1jK3l: ^"Covenant" ^"Season" reflects its lifecycle stage
+        }
+    }
+
+    # ===========================
+    # METATYPE ANCHORS
+    # ===========================
+
+    ^"Virtue" DEF {
+        # Metatype anchor for all virtues (traits that benefit the character)
+        PROPERTIES {
+            ^"Type" ENUM ["Virtue"]
+            ^"Size" ENUM ["Major", "Minor", "Free"]
+            ^"Category" ENUM ["General", "Hermetic", "Supernatural", "Social Status", "Story", "Personality", "Tainted"]
+            ^"Repeatable" BOOLEAN false
+        }
+    }
+
+    ^"Flaw" DEF {
+        # Metatype anchor for all flaws (traits that hinder the character)
+        PROPERTIES {
+            ^"Type" ENUM ["Flaw"]
+            ^"Size" ENUM ["Major", "Minor", "Free"]
+            ^"Category" ENUM ["General", "Hermetic", "Supernatural", "Social Status", "Story", "Personality", "Tainted"]
+            ^"Repeatable" BOOLEAN false
+        }
+    }
+
+    ^"Ability" DEF {
+        # Metatype anchor for abilities (skills)
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General", "Academic", "Arcane", "Martial", "Supernatural"]
+            ^"Requires Gift" BOOLEAN false
+            ^"Specialties" LIST OF STRING
+        }
+    }
+
+    ^"Spell" DEF {
+        # Metatype anchor for Hermetic spells
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"]
+            ^"Form" ENUM ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"]
+            ^"Level" INTEGER
+            ^"Range" ENUM ["Personal", "Touch", "Eye", "Voice", "Sight", "Arcane Connection"]
+            ^"Duration" ENUM ["Momentary", "Concentration", "Diameter", "Sun", "Ring", "Moon", "Year"]
+            ^"Target" ENUM ["Individual", "Part", "Group", "Room", "Structure", "Boundary", "Circle", "Bloodline", "Taste", "Hearing", "Smell", "Touch", "Vision"]
+            ^"Ritual" BOOLEAN false
+            ^"Requisite" STRING ""
+            ^"Design" STRING ""
+        }
+    }
+
+    ^"Power" DEF {
+        # Metatype anchor for creature supernatural powers
+        PROPERTIES {
+            ^"Cost" INTEGER DEFAULT 0
+            ^"Initiative" INTEGER DEFAULT 0
+            ^"Art" STRING ""
+        }
+    }
+
+    ^"House" DEF {
+        # Metatype anchor for Houses of Hermes
+        PROPERTIES {
+            ^"Founder" STRING
+            ^"Domus Magna" STRING
+            ^"Primus" STRING
+            ^"Focus" STRING
+            ^"Free House Virtue" STRING ""
+        }
+    }
+
+    ^"Book" DEF {
+        # Metatype anchor for library books
+        PROPERTIES {
+            ^"Book Type" ENUM ["Summa", "Tractatus", "Lab Text"]
+            ^"Subject" STRING
+            ^"Level" INTEGER
+            ^"Quality" INTEGER
+            ^"Author" STRING ""
+        }
+    }
+
+    ^"Laboratory" DEF {
+        # Metatype anchor for magi laboratories
+        PROPERTIES {
+            ^"Owner" STRING
+            ^"Size" INTEGER DEFAULT 0
+            ^"General Quality" INTEGER DEFAULT 0
+            ^"Specializations" LIST OF STRING
+        }
+    }
+
+    ^"Vis Source" DEF {
+        # Metatype anchor for vis sources
+        PROPERTIES {
+            ^"Art" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego", "Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"]
+            ^"Pawns Per Year" INTEGER
+        }
+    }
+
+    ^"Weapon Attack" DEF {
+        # Metatype anchor for combat weapon statistics
+        PROPERTIES {
+            ^"Weapon" STRING REQUIRED
+            ^"Initiative" INTEGER
+            ^"Attack" INTEGER
+            ^"Defense" INTEGER
+            ^"Damage" INTEGER
+        }
+    }
+
+    ^"Personality Trait" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+        PROPERTIES {
+            ^"Trait Name" STRING REQUIRED
+            ^"Score" INTEGER MIN -6 MAX 6
+        }
+        RULES {
+            #ARM5B025nO5pQ7rS9tU1vW3x: personality_trait_roll_equals_score_plus_stress_die
+        }
+    }
+
+    ^"Reputation" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion"]
+        PROPERTIES {
+            ^"Content" STRING REQUIRED
+            ^"Score" INTEGER MIN 0
+            ^"Type" ENUM ["Local", "Ecclesiastical", "Hermetic"]
+        }
+        REPUTATION_EASE_FACTORS {
+            ^"Local" DEF {
+                0 "Same village"
+                6 "Same town"
+                9 "Same county"
+                12 "Same country"
+            }
+            ^"Ecclesiastical" DEF {
+                0 "Same parish/monastery"
+                6 "Same diocese"
+                9 "Same province"
+                12 "Whole Church"
+            }
+            ^"Hermetic" DEF {
+                0 "Same covenant"
+                6 "Same Tribunal"
+                9 "Entire Order"
+            }
+        }
+    }
+
+    ^"Game Rules" DEF {
+        # Metatype anchor for game rules and errata references
+    }
+
+    ^"System" DEF {
+        # Metatype anchor for game system and subsystem definitions
+    }
+
+    ^"Table" DEF {
+        # Metatype anchor for reference table definitions
+    }
+
+    ^"Item" DEF {
+        # Metatype anchor for equipment and item definitions
+    }
+
+    # ===========================
+    # DICE SYSTEM
+    # ===========================
+
+    ^"Simple Die" DEF {
+
+        # A ten-sided die where each number counts for its value
+        # and 0 counts as 10. Used in non-stressful situations.
+
+        PROPERTIES {
+            ^"Die Type" STRING "1d10"
+            ^"Zero Result" STRING "Counts as 10"
+        }
+
+        RULES {
+            #ARM5B026yZ6aB8cD0eF2gH4i: simple_die_no_botch_possible
+            #ARM5B027kL7mN9oP1qR3sT5u: simple_die_zero_equals_ten
+        }
+    }
+
+    ^"Stress Die" DEF {
+
+        # A ten-sided die used under stress. Has special behavior
+        # on rolls of 0 and 1.
+        # Roll of 1: Exploding — re-roll and double the result.
+        #   Additional 1s continue doubling (x4, x8, x16...).
+        #   On re-rolls, 0 counts as 10.
+        # Roll of 0: Check for botch. Roll botch dice.
+        #   Any 0 on botch dice = botch (total is 0 or less).
+        #   No 0s on botch dice = die result is simply 0.
+        # Rolls of 2-9: Face value, as normal.
+
+        PROPERTIES {
+            ^"Die Type" STRING "1d10"
+            ^"Exploding On" INTEGER 1
+            ^"Botch Check On" INTEGER 0
+        }
+
+        RULES {
+            #ARM5B028wX8yZ0aB2cD4eF6g: WHEN [stress die shows 1] THEN re-roll and double
+            #ARM5B029iJ9kL1mN3oP5qR7s: WHEN [stress die re-roll shows 1] THEN re-roll and multiply by next power of 2
+            #ARM5B030uV0wX2yZ4aB6cD8e: WHEN [stress die shows 0] THEN roll botch dice
+            #ARM5B031gH1iJ3kL5mN7oP9q: WHEN [stress die shows 0 AND no botch] THEN die result is 0
+            #ARM5B032sT2uV4wX6yZ8aB0c: WHEN [botch] THEN total is no higher than 0
+        }
+    }
+
+    ^"Botch Dice" DEF {
+
+        # Rolled when a stress die shows 0. The number of botch dice
+        # reflects how risky the situation is.
+
+        PROPERTIES {
+            ^"Die Type" STRING "d10"
+            ^"Base Count" INTEGER 1
+            ^"Botch Trigger" STRING "Any die showing 0"
+        }
+
+        BOTCH_SEVERITY {
+            1 "Single botch — minor disaster"
+            2 "Double botch — significant disaster"
+            3 "Triple botch — catastrophic disaster"
+        }
+
+        RULES {
+            #ARM5B033eF3gH5iJ7kL9mN1o: botch_dice_count_reflects_risk
+            #ARM5B034pQ4rS6tU8vW0xY2z: multiple_zeros_indicate_worse_botch
+            #ARM5B035aB5cD7eF9gH1iJ3k: zero_botch_dice_means_no_botch_possible
+        }
+    }
+
+    # ===========================
+    # CORE RESOLUTION
+    # ===========================
+
+    ^"Ability Roll" DEF {
+
+        # The fundamental resolution mechanic for non-magical actions.
+        # Total = Characteristic + Ability + Die Roll
+        # Compare total to Ease Factor: meet or exceed = success.
+
+        FORMULA "Characteristic + Ability + Die Roll >= Ease Factor"
+
+        RULES {
+            #ARM5B036mN6oP8qR0sT2uV4w: WHEN [non-combat, non-magic action] THEN ROLL ^"Ability Roll"
+            #ARM5B037xY7zA9bC1dE3fG5h: excess_over_ease_factor_indicates_quality
+            #ARM5B038iJ8kL0mN2oP4qR6s: WHEN [relaxed conditions] THEN USE ^"Simple Die"
+            #ARM5B039uV9wX1yZ3aB5cD7e: WHEN [stressful conditions] THEN USE ^"Stress Die"
+        }
+    }
+
+    ^"Ease Factor" DEF {
+
+        INTEGER MIN 0
+
+        DIFFICULTY_SCALE {
+            0 "Trivial — Almost never worth rolling"
+            3 "Simple — Untrained average person succeeds ~70%"
+            6 "Easy — Trained average person succeeds ~70%"
+            9 "Average — Skilled characters succeed ~70%"
+            12 "Hard — Only skilled characters have a chance"
+            15 "Very Hard — Even skilled characters fail half the time"
+            18 "Impressive — Top experts succeed ~50%"
+            21 "Remarkable — Even the best only occasionally succeed"
+            24 "Almost Impossible — Greatest masters need luck"
+        }
+    }
+
+    # ===========================
+    # SIZE
+    # ===========================
+
+    ^"Size" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Grog", ^"Mythic Companion", ^"Creature"]
+
+        INTEGER DEFAULT 0
+
+        # Size 0 = average adult human. Every 3 points of Size
+        # represents a tenfold change in mass.
+
+        RULES {
+            #ARM5B040gH0iJ2kL4mN6oP8q: size_zero_is_average_adult_human
+            #ARM5B041sT1uV3wX5yZ7aB9c: three_size_points_equals_tenfold_mass
+            #ARM5B042eF2gH4iJ6kL8mN0o: size_affects_wound_ranges
+        }
+    }
+
+    # ===========================
+    # CONFIDENCE
+    # ===========================
+
+    ^"Confidence" DEF {
+        APPLIES TO [^"Magus", ^"Companion", ^"Mythic Companion"]
+
+        # Important characters have a Confidence Score (usually 1)
+        # and Confidence Points (start at 3). Spending a Confidence
+        # Point adds +3 to a roll.
+
+        PROPERTIES {
+            ^"Confidence Score" INTEGER MIN 0 DEFAULT 1
+            ^"Confidence Points" INTEGER MIN 0 DEFAULT 3
+        }
+
+        RULES {
+            #ARM5B043pQ3rS5tU7vW9xY1z: WHEN [spending ^"Confidence Points"] THEN ADD +3 per point to roll
+            #ARM5B044bC4dE6fG8hI0jK2l: MAY spend up to ^"Confidence Score" points per roll
+            #ARM5B045mN5oP7qR9sT1uV3w: MAY NOT spend ^"Confidence Points" on botched roll
+            #ARM5B046xY6zA8bC0dE2fG4h: MAY NOT spend ^"Confidence Points" on seasonal activity roll
+            #ARM5B047iJ7kL9mN1oP3qR5s: storyguide awards 1-5 ^"Confidence Points" per session
+        }
+    }
+
+    # ===========================
+    # SCENE AND TIME STRUCTURE
+    # ===========================
+
+    ^"Story" DEF {
+        # A story is the Ars Magica equivalent of an adventure or
+        # session arc. Stories award experience points.
+
+        RULES {
+            #ARM5B048uV8wX0yZ2aB4cD6e: stories_award_experience
+        }
+    }
+
+    ^"Season" DEF {
+        ENUM ["Spring", "Summer", "Autumn", "Winter"]
+
+        # The fundamental unit of long-term time in Ars Magica.
+        # Characters perform one major activity per season.
+
+        RULES {
+            #ARM5B049gH9iJ1kL3mN5oP7q: one_major_activity_per_season
+            #ARM5B050sT0uV2wX4yZ6aB8c: four_seasons_per_year
+        }
+    }
+
+    ^"Year" DEF {
+        # A full year of game time. Contains four seasons.
+        # Used for aging rolls (one per year after age 35).
+
+        RULES {
+            #ARM5B051eF1gH3iJ5kL7mN9o: aging_roll_once_per_year_after_35
+        }
+    }
+
+    # ===========================
+    # TROUPE-STYLE PLAY
+    # ===========================
+
+    ^"Troupe Style" DEF {
+
+        # Ars Magica's distinctive play structure. Each player has
+        # a magus and a companion (and access to grogs). Different
+        # sessions feature different combinations of characters.
+        # The storyguide role can rotate between players.
+
+        RULES {
+            #ARM5B052qR2sT4uV6wX8yZ0a: each_player_has_magus_and_companion
+            #ARM5B053bC3dE5fG7hI9jK1l: magus_and_companion_rarely_played_together
+            #ARM5B054mN4oP6qR8sT0uV2w: storyguide_role_may_rotate
+            #ARM5B055xY5zA7bC9dE1fG3h: grogs_shared_between_players
+        }
+    }
+
+    ^"Storyguide" DEF {
+
+        # The Game Master in Ars Magica.
+
+        RULES {
+            #ARM5B056iJ6kL8mN0oP2qR4s: storyguide_sets_ease_factors
+            #ARM5B057uV7wX9yZ1aB3cD5e: storyguide_controls_npcs
+            #ARM5B058gH8iJ0kL2mN4oP6q: storyguide_role_can_rotate
+        }
+    }
+}

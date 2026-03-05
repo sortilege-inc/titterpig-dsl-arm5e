@@ -1,0 +1,205 @@
+EXTENSION "ARM5e_HoH_Soc_Spells_Terram" {
+    NAME "Houses of Hermes: Societates - Terram Spells"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-05"
+    DEPENDS_ON "ARM5e_Core_Magic"
+    # Source: Houses of Hermes: Societates
+
+    #ARM5SP044aB2cD4eF6gH8iJ ^"Sword from the Unseen Scabbard" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch, +1 Diameter"
+        }
+        DESCRIPTION "Conjure a steel longsword. The sword only lasts for two minutes  --  about 20 combat rounds  --  but that is usually long enough to defend oneself in a single skirmish. The magically created sword must penetrate in order to harm opponents who have Magic Resistance. Note that creating artificial things with magic requires an Intelligence + Finesse roll, as noted on page 77 of ArM5. An Ease Factor of 6 is sufficient to make a sword of mediocre, but serviceable, workmanship."
+    }
+
+    #ARM5SP045aB2cD4eF6gH8iJ ^"Silvery Scales of the Knight" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Requisite" STRING "Animal"
+            ^"Design" STRING "Base 5, +1 Touch, +2 Sun, +2 very elaborate shape"
+        }
+        DESCRIPTION "Conjure a suit of full chain mail armor. The Animal requisite is required to create the armor's leather straps, woolen padding, and gambeson  --  without these elements, the armor would not be effective. The styling of the armor, including any crest that appears on the helmet, depends on your Wizard's Sigil. The armor is magical, so its wearer cannot punch or grapple a magic-resistant creature while wearing the gauntlets. The armor has the same Load as non-magical armor, and it takes just as long to put on (several minutes at least). An Intelligence + Finesse roll against an Ease Factor of 9 is required to make armor of average quality; a failed roll may result in reduced Protection and/or increased Load, at the storyguide's discretion."
+    }
+
+    #ARM5SP046aB2cD4eF6gH8iJ ^"Hardness of Adamantine" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Muto"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 25
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +1 Touch, +2 Sun, +2 affect metal"
+        }
+        DESCRIPTION """This spell instills a metal object with supernatural strength and hardness. Even weak metals like gold or lead can be affected. The object becomes nearly unbreakable by mundane means.
+
+If used on chain mail or metal scale armor, the Protection value of the armor is increased by +2. If used on an edged or pointed weapon, the weapon gains +1 to damage. This bonus can be combined with that from Edge of the Razor or other spells.
+
+Perdo Terram Guidelines
+
+Level 5: Destroy one aspect of dirt, such as its weight or its cohesiveness"""
+    }
+
+    #ARM5SP047aB2cD4eF6gH8iJ ^"Undoing the Stonemason's Handiwork" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Part"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Part, +1 destroy stone"
+        }
+        DESCRIPTION """This spell smashes a piece of masonry or pavement into its component bricks or stones. It has no effect on solid stone. The affected volume is one pace wide, one pace high, and up to one pace deep (depending on the thickness of the masonry), and can be a part of a larger piece of stonework.
+
+Followers of the School of Vilano sometimes use this spell to produce a large number of loose stones, which they can then use as ammunition. Magi with a knowledge of stonemasonry can use it to weaken or collapse stone structures by damaging load-bearing walls and arches, though solid pillars and the like are immune to its effects."""
+    }
+
+    #ARM5SP048aB2cD4eF6gH8iJ ^"Hauberk of Sublime Lightness" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Perdo"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 30
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch, +2 Sun, +2 affect metal"
+        }
+        DESCRIPTION """Render a suit of metal armor nearly weightless. Armor made from metal-reinforced leather, metal scale, or chain mail has its Load reduced to 1 for a partial suit or 2 for a full suit. The spell eliminates the weight of the armor, but not its bulk.
+
+Rego Terram Guidelines
+
+When Rego Terram spells are used to throw stones, the damage inflicted is limited by the level of the spell. Low-level spells may be able to move heavy stones, but they cannot throw them violently enough to do a lot of damage.
+
+Level 5: Hurl a stone projectile with enough force to do +5 damage (range increment of 20 paces)
+
+Level 10: Hurl a stone projectile with enough force to do +10 damage (range increment of 20 paces)
+
+Level 15: Hurl a stone projectile with enough force to do +15 damage (range increment of 20 paces)"""
+    }
+
+    #ARM5SP049aB2cD4eF6gH8iJ ^"Ominous Levitation of the Weighty Stone" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 15
+            ^"Range" ENUM ["Voice"]
+            ^"Duration" ENUM ["Concentration"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 3, +2 Voice, +1 Concentration, +1 affect stone"
+        }
+        DESCRIPTION """Move a stone through the air as fast as a bird flies. When the caster stops concentrating, the stone immediately falls to the ground.
+
+The spell's name suggests one of its common applications: dropping a heavy rock onto someone. Because the stone falls naturally, such an attack is not subject to Magic Resistance. Instead, an aiming roll is required to hit the intended target (see ArM5, page 86). Attacking with this spell normally takes two rounds: one to move the stone over the target, and another to aim and release it.
+
+Damage inflicted depends mainly on the size of the stone: +5 for a stone the size of a man's fist, +10 for a typical building-stone, up to +21 for a large boulder (see also the Impact Table on page 181 of ArM5). Particularly large stones can damage structures as well as creatures.
+
+The main limitation on this spell's combat effectiveness is the availability of large stones. Vilano himself once lamented that there was never a good rock around when he needed one!"""
+    }
+
+    #ARM5SP050aB2cD4eF6gH8iJ ^"Invisible Sling of Vilano" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 10
+            ^"Range" ENUM ["Touch"]
+            ^"Duration" ENUM ["Momentary"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 5, +1 Touch"
+        }
+        DESCRIPTION """Hurl a stone (of a size that could be thrown with a mundane sling) at a target within range. Unlike the standard version of Wielding the Invisible Sling (ArM5, page 155), this spell hurls the stone as a projectile. An aiming roll is required to hit the intended target, but if it succeeds, Magic Resistance offers no protection. The stone inflicts +5 damage on impact and has a range increment of 20 paces.
+
+Chapter Two
+
+House Jerbiton
+
+The Founder of House Jerbiton, and many of his successors, believed that a great artist designed and constructed the world. The world is beautiful, and contains obvious marks of his process of creation. Those suffi ciently skilled in the creation of beauty can collaborate in this great work. Everyone else has the joy of being a member of his audience.
+
+House Jerbiton's founding members came from the cities of the Eastern Roman Empire. Its current members see their way of life as an echo of what would have been, had magicians not fl ed the Dominion. They are the custodians of a magical culture that, they hope, will blossom into a civilization.
+
+Each member of House Jerbiton is free to seek or create beauty however she wishes. The role of Primus grants little political power, although the incumbent is skilled at ensuring his wishes are considered. Members of the House often form groups, called leagues, to collaborate.
+
+The History of House Jerbiton
+
+Jerbiton was born in a remote village in the Alps, but taken as an apprentice by a maga from the Imperial East. His tradition's ancestors are the cosmopolitan magi from the cities of Greece. Jerbiton was sent as an emissary to the forming Order, but for many years the other members of his tradition did not join it. House Jerbiton still feels that the Eastern Empire is its heartland, and has been stunned and angered by
+
+Key Facts
+
+PoPulation:.Currently 102 magi, 26 of whom live in the Tribunal of the Greater Alps. A wave of apprentices will become magi in the next couple of years. This will incr..."""
+    }
+
+    #ARM5SP051aB2cD4eF6gH8iJ ^"HIDING IN THE CROWD" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Sun"]
+            ^"Target" ENUM ["Individual"]
+            ^"Design" STRING "Base 4, +2 Sun"
+        }
+        DESCRIPTION """Pelm 10
+
+The transparency requires a Perception + Finesse roll against an Ease Factor of 6 to be convincing, if the target remains stationary. If the target is moving slowly and predictably, as, for example, a sentry on a route or a pedestrian strolling to a gate, this increases to 9. It increases to 15 for a character moving very swiftly but predictably, for example, a horseman following a road.
+
+against an Ease Factor of 6. The Ease Factor is modified as follows:
+
+MOD. TARGET
+
+- +3 Objects of Room or Group size
+- +6 Structures
+- +9 Spaces described by the Boundary Target
+
+Striking the Organs of Perception
+
+Unusual effects can be achieved by modifying species slightly before they strike the senses of the target.
+
+MACROTURES: ILLUSIONS OF PROXIMITY TO THE ORGAN OF PERCEPTION
+
+A macroture is an image magnified beyond the possibility of the human eye,
+
+created by forcing the species of an object to strike the eye in a less concentrated way. These are already discussed in the Intellego Imaginem guidelines in ArM5 (base level 3). Jerbiton magi use macrotures to determine the method and technique of artifacts through the tiny marks left by the tools of the artisan. They also use macrotures to see artworks from angles inaccessible to mundane people, to see objects from great distances, and to determine the quality of precious materials they intend to purchase. Macrotures can also be used to correct vision impairments.
+
+SYNAESTHESIA: SWITCHING ORGANS OF PERCEPTION
+
+Using synaesthetic illusions, the species of a weak sense are altered so that a stronger sense perceives them instead. In humans, sight is the most powerful sense, so most synaesthetic spells make species of less-detectable types visible. Species for
+
+Synaesthesia Examples
+
+Spells that transform the species that trigger one sense into those that trigger another have a base level of 2."""
+    }
+
+    #ARM5SP052aB2cD4eF6gH8iJ ^"Pen +0, 1/day, Charged Item" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Rego"]
+            ^"Form" ENUM ["Terram"]
+            ^"Level" INTEGER 0
+            ^"Range" ENUM ["Personal"]
+            ^"Duration" ENUM ["Diameter"]
+            ^"Target" ENUM ["Group"]
+            ^"Design" STRING "Base 2, +1 Diam, +2 Group"
+        }
+        DESCRIPTION "Any group of words written in the enchanted, colorless liquid becomes visible upon activating its magic, as the ink turns black for Diameter Duration."
+    }
+
+}

@@ -1,0 +1,253 @@
+BASE "ARM5e_Core_Systems" {
+    NAME "Ars Magica 5th Edition Definitive - Game Systems"
+    VERSION "0.3"
+    RELEASE_DATE "2026-03-02"
+
+    # Combat, fatigue, wounds, recovery, encumbrance, movement,
+    # weapons, armor, seasonal activities.
+
+    # ===========================
+    # COMBAT SYSTEM
+    # ===========================
+
+    #ARM5S001aB2cD4eF6gH8iJ0k ^"Combat System" DEF {
+
+        DESCRIPTION """Combat uses a single initiative roll per combat. Each round,
+characters act in initiative order. Attackers roll Attack Total
+vs defender's Defense Total. If attack hits, damage is calculated
+and compared to Soak to determine wound severity."""
+
+        RULES {
+            #ARM5S002mN3oP5qR7sT9uV1w: initiative_rolled_once_at_start_of_combat
+            #ARM5S003yZ4aB6cD8eF0gH2i: WHEN [Attack Total > Defense Total] THEN hit_and_calculate_damage
+        }
+    }
+
+    #ARM5S004kL5mN7oP9qR1sT3u ^"Initiative" DEF {
+        FORMULA "Initiative Total = Quickness + Weapon Initiative + stress die"
+        RULES {
+            #ARM5S005wX6yZ8aB0cD2eF4g: rolled_once_determines_order_for_entire_combat
+            #ARM5S006iJ7kL9mN1oP3qR5s: encumbrance_subtracts_from_initiative
+        }
+    }
+
+    #ARM5S007uV8wX0yZ2aB4cD6e ^"Attack Total" DEF {
+        FORMULA "Attack Total = Dexterity + Ability + Weapon Attack + stress die"
+        RULES {
+            #ARM5S008gH9iJ1kL3mN5oP7q: ability_is_relevant_combat_skill
+        }
+    }
+
+    #ARM5S009sT0uV2wX4yZ6aB8c ^"Defense Total" DEF {
+        FORMULA "Defense Total = Quickness + Ability + Weapon Defense + stress die"
+        RULES {
+            #ARM5S010eF1gH3iJ5kL7mN9o: defense_uses_same_ability_as_weapon
+        }
+    }
+
+    #ARM5S011qR2sT4uV6wX8yZ0a ^"Damage" DEF {
+        FORMULA "Damage Total = Attack Advantage + Strength + Weapon Damage"
+        DESCRIPTION """Attack Advantage = Attack Total - Defense Total.
+Damage Total is compared to Soak to determine wound severity."""
+        RULES {
+            #ARM5S012bC3dE5fG7hI9jK1l: attack_advantage_equals_attack_minus_defense
+        }
+    }
+
+    #ARM5S013mN4oP6qR8sT0uV2w ^"Soak" DEF {
+        FORMULA "Soak Total = Stamina + Armor Protection"
+        DESCRIPTION """Reduces incoming damage. If Damage Total - Soak <= 0, no wound."""
+    }
+
+    #ARM5S014xY5zA7bC9dE1fG3h ^"Spell Damage" DEF {
+        FORMULA "Spell Damage = stress die + Spell Damage Bonus"
+        DESCRIPTION """Many spells have damage in the form +X. This means stress die + X.
+Target resists with Soak Total + stress die."""
+    }
+
+    # ===========================
+    # WOUND SYSTEM
+    # ===========================
+
+    #ARM5S015iJ6kL8mN0oP2qR4s ^"Wound System" DEF {
+
+        DESCRIPTION """Damage that exceeds Soak inflicts a wound. Wound severity
+depends on how much damage exceeds soak, modified by Size.
+Each wound level carries a penalty to all actions."""
+
+        PROPERTIES {
+            ^"Wound Ranges" DEF {
+                ^"Light" STRING "1 to (Size + 5)"
+                ^"Medium" STRING "(Size + 6) to (Size + 10)"
+                ^"Heavy" STRING "(Size + 11) to (Size + 15)"
+                ^"Incapacitating" STRING "(Size + 16) to (Size + 20)"
+                ^"Dead" STRING "(Size + 21)+"
+            }
+        }
+
+        RULES {
+            #ARM5S016uV7wX9yZ1aB3cD5e: light_wound_penalty_minus1
+            #ARM5S017gH8iJ0kL2mN4oP6q: medium_wound_penalty_minus3
+            #ARM5S018sT9uV1wX3yZ5aB7c: heavy_wound_penalty_minus5
+            #ARM5S019eF0gH2iJ4kL6mN8o: incapacitated_no_actions
+            #ARM5S020pQ1rS3tU5vW7xY9z: wound_penalties_are_cumulative
+            #ARM5S021aB2cD4eF6gH8iJ0k: characters_can_take_multiple_wounds_of_same_level
+        }
+    }
+
+    #ARM5S022mN3oP5qR7sT9uV1w ^"Wound Recovery" DEF {
+
+        DESCRIPTION """Wounds heal over time. Each wound level has a recovery interval
+and ease factor. At the end of each interval, make a Recovery Roll.
+Success improves the wound by one level."""
+
+        FORMULA "Recovery Roll = Stamina + stress die + Medical Modifier >= Ease Factor"
+
+        RULES {
+            #ARM5S023yZ4aB6cD8eF0gH2i: light_wound_recovery_interval_1_week_EF_4
+            #ARM5S024kL5mN7oP9qR1sT3u: medium_wound_recovery_interval_1_month_EF_7
+            #ARM5S025wX6yZ8aB0cD2eF4g: heavy_wound_recovery_interval_1_season_EF_9
+            #ARM5S026iJ7kL9mN1oP3qR5s: failure_extends_recovery_by_one_interval
+        }
+    }
+
+    #ARM5S027uV8wX0yZ2aB4cD6e ^"Medical Attention" DEF {
+
+        DESCRIPTION """Chirurgy (for wounds) and Medicine (for disease/poison) can
+assist recovery. A successful Chirurgy roll soon after wounding
+provides a bonus to subsequent recovery rolls."""
+
+        RULES {
+            #ARM5S028gH9iJ1kL3mN5oP7q: chirurgy_for_combat_wounds
+            #ARM5S029sT0uV2wX4yZ6aB8c: medicine_for_disease_and_poison
+        }
+    }
+
+    # ===========================
+    # FATIGUE SYSTEM
+    # ===========================
+
+    #ARM5S030eF1gH3iJ5kL7mN9o ^"Fatigue System" DEF {
+
+        DESCRIPTION """Characters have Fatigue Levels that track exhaustion:
+Fresh → Winded (0) → Weary (-1) → Tired (-3) → Dazed (-5) → Unconscious.
+Fatigue is lost through exertion, spell casting, and environmental stress.
+Recovery: 2 minutes per short-term level, or longer for long-term fatigue."""
+
+        RULES {
+            #ARM5S031qR2sT4uV6wX8yZ0a: fresh_no_penalty
+            #ARM5S032bC3dE5fG7hI9jK1l: winded_no_penalty
+            #ARM5S033mN4oP6qR8sT0uV2w: weary_minus1_penalty
+            #ARM5S034xY5zA7bC9dE1fG3h: tired_minus3_penalty
+            #ARM5S035iJ6kL8mN0oP2qR4s: dazed_minus5_penalty
+            #ARM5S036uV7wX9yZ1aB3cD5e: unconscious_no_actions
+        }
+    }
+
+    #ARM5S037gH8iJ0kL2mN4oP6q ^"Short-Term Fatigue" DEF {
+
+        DESCRIPTION """Lost from brief strenuous actions (running, fighting, casting
+fatiguing spontaneous spells). Recovered by resting 2 minutes
+per level lost."""
+
+        RULES {
+            #ARM5S038sT9uV1wX3yZ5aB7c: fatiguing_spontaneous_casting_costs_1_fatigue
+            #ARM5S039eF0gH2iJ4kL6mN8o: strenuous_physical_activity_may_cost_fatigue
+            #ARM5S040pQ1rS3tU5vW7xY9z: recover_one_level_per_2_minutes_rest
+        }
+    }
+
+    #ARM5S041aB2cD4eF6gH8iJ0k ^"Long-Term Fatigue" DEF {
+
+        DESCRIPTION """Lost from extended activities (marching, privation, supernatural effects).
+Recovered by sleeping or extended rest. Each long-term level takes
+significantly longer to recover."""
+
+        RULES {
+            #ARM5S042mN3oP5qR7sT9uV1w: long_term_fatigue_recovers_with_full_nights_sleep
+            #ARM5S043yZ4aB6cD8eF0gH2i: privation_fatigue_from_hunger_cold_etc
+        }
+    }
+
+    # ===========================
+    # ENCUMBRANCE
+    # ===========================
+
+    #ARM5S044kL5mN7oP9qR1sT3u ^"Encumbrance" DEF {
+
+        FORMULA "Encumbrance = max(Burden - Strength, 0)"
+
+        DESCRIPTION """Load is the total weight of equipment carried.
+Burden is derived from Load. Encumbrance penalizes
+movement, combat, and physical activities."""
+
+        RULES {
+            #ARM5S045wX6yZ8aB0cD2eF4g: encumbrance_subtracts_from_combat_totals
+            #ARM5S046iJ7kL9mN1oP3qR5s: encumbrance_subtracts_from_initiative
+        }
+    }
+
+    # ===========================
+    # MOVEMENT
+    # ===========================
+
+    #ARM5S047uV8wX0yZ2aB4cD6e ^"Movement" DEF {
+
+        DESCRIPTION """Characters have three movement rates:
+Walk: leisurely pace, no fatigue.
+Hurry: brisk pace, may cause fatigue over time.
+Run: maximum speed, causes fatigue."""
+
+        RULES {
+            #ARM5S048gH9iJ1kL3mN5oP7q: walk_pace_no_fatigue_risk
+            #ARM5S049sT0uV2wX4yZ6aB8c: run_pace_causes_fatigue
+        }
+    }
+
+    # ===========================
+    # WEAPONS AND ARMOR
+    # ===========================
+
+    ^"Weapon" DEF {
+        PROPERTIES {
+            ^"Weapon Name" STRING REQUIRED
+            ^"Initiative Modifier" INTEGER DEFAULT 0
+            ^"Attack Modifier" INTEGER DEFAULT 0
+            ^"Defense Modifier" INTEGER DEFAULT 0
+            ^"Damage Modifier" INTEGER DEFAULT 0
+            ^"Strength Requirement" INTEGER DEFAULT 0
+            ^"Load" INTEGER DEFAULT 0
+            ^"Range" INTEGER DEFAULT 0
+            ^"Cost" STRING ""
+        }
+    }
+
+    ^"Armor" DEF {
+        PROPERTIES {
+            ^"Armor Name" STRING REQUIRED
+            ^"Protection" INTEGER DEFAULT 0
+            ^"Load" INTEGER DEFAULT 0
+            ^"Cost" STRING ""
+        }
+    }
+
+    # ===========================
+    # SEASONAL ACTIVITIES
+    # ===========================
+
+    #ARM5S050eF1gH3iJ5kL7mN9o ^"Seasonal Activities" DEF {
+
+        DESCRIPTION """Characters perform one major activity per season. Activities include:
+- Laboratory work (magi only): invent spells, enchant items, study vis
+- Study: read books, practice abilities, receive training
+- Adventure: participate in stories (storyguide determines XP)
+- Service: work for covenant or patron
+- Teaching: instruct others"""
+
+        RULES {
+            #ARM5S051qR2sT4uV6wX8yZ0a: one_major_activity_per_season
+            #ARM5S052bC3dE5fG7hI9jK1l: adventures_interrupt_seasonal_activities
+            #ARM5S053mN4oP6qR8sT0uV2w: two_free_seasons_per_year_default
+        }
+    }
+}

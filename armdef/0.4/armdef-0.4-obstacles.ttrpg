@@ -242,7 +242,7 @@ EXTENSION "ARMDef_Obstacles" {
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
-            DESCRIPTION "Armor is important — it helps prevent characters from sustaining grievous wounds in battle. Two factors describe the armor a given character wears: what it is made of and how much of it the character is wearing. The Armor Table at the end of this section lists the statistics for each type of armor available in **Ars Magica**."
+            DESCRIPTION "Armor is important — it helps prevent characters from sustaining grievous wounds in battle. Two factors describe the armor a given character wears: what it is made of and how much of it the character is wearing. The Armor Table at the end of this section lists the statistics for each type of armor available in Ars Magica."
         }
         #tnXpbIHydFNtu3BbQXdH1A2W ^"Materials (Armor)" DEF {
             APPLIES TO [^"Character"]
@@ -258,14 +258,14 @@ EXTENSION "ARMDef_Obstacles" {
                 ^"Source" STRING "Core Rules"
             }
             TABLE {
-                "Quilted/Fur" "1" "2" "n/a" "" "Inexp."
-                "Heavy Leather" "2" "3" "n/a" "" "Inexp."
-                "Metal Reinf Leather" "2" "" "4" "" "Std."
-                "Leather Scale" "3" "" "5" "" "Std."
-                "Metal Scale" "4" "" "7" "" "Std"
+                "Quilted/Fur" "1" "2" "n/a" "n/a" "Inexp."
+                "Heavy Leather" "2" "3" "n/a" "n/a" "Inexp."
+                "Metal Reinf Leather" "2" "2" "4" "4" "Std."
+                "Leather Scale" "3" "3" "5" "5" "Std."
+                "Metal Scale" "4" "4" "7" "7" "Std"
                 "Chain Mail" "6" "4" "9" "6" "Exp."
             }
-            DESCRIPTION "Partial armor covers the vital areas only, and generally consists of a hauberk (a short-sleeved armored coat that extends down to the knee), perhaps a coif to protect the head and neck, and often an open-faced helmet. Full armor adds gauntlets to protect the hands, vambraces for the forearms, chausses for the legs, a closed helm that protects the face, and perhaps additional pieces for the throat, elbows, and knees. Full armor also often includes a gambeson, a heavily padded surcoat worn over the armor. The small auxiliary pieces may be made of a different material than the main cuirass - for instance, a suit of full chain mail might have chain mail to protect the torso and leather scale on the arms and legs (or it might be entirely made of chain mail). For simplicity, only the predominant material of the suit has any effect on game statistics (Protection and Load).\n\n**Prot:** The bonus the armor grants to the character's Soak score. **Load:** The amount the armor adds to the character's Burden. **Cost:** A general indication of the expense of the armor. More expensive armor is better."
+            DESCRIPTION "Partial armor covers the vital areas only, and generally consists of a hauberk (a short-sleeved armored coat that extends down to the knee), perhaps a coif to protect the head and neck, and often an open-faced helmet. Full armor adds gauntlets to protect the hands, vambraces for the forearms, chausses for the legs, a closed helm that protects the face, and perhaps additional pieces for the throat, elbows, and knees. Full armor also often includes a gambeson, a heavily padded surcoat worn over the armor. The small auxiliary pieces may be made of a different material than the main cuirass - for instance, a suit of full chain mail might have chain mail to protect the torso and leather scale on the arms and legs (or it might be entirely made of chain mail). For simplicity, only the predominant material of the suit has any effect on game statistics (Protection and Load).\n\nProt: The bonus the armor grants to the character's Soak score. Load: The amount the armor adds to the character's Burden. Cost: A general indication of the expense of the armor. More expensive armor is better."
         }
         #tIxXcmEVK1KNmr84s6SxasBE ^"Melee Weapon Statistics" DEF {
             APPLIES TO [^"Character"]
@@ -274,10 +274,10 @@ EXTENSION "ARMDef_Obstacles" {
                 ^"Source" STRING "Core Rules"
             }
             TABLE {
-                "Dodge" "Brawl" "0" "n/a" "0" "n/a" "" "0" "n/a"
-                "Fist" "Brawl" "0" "" "" "" "n/a" "0" "n/a"
+                "Dodge" "Brawl" "0" "n/a" "0" "n/a" "n/a" "0" "n/a"
+                "Fist" "Brawl" "0" "0" "0" "0" "n/a" "0" "n/a"
                 "Kick" "Brawl" "–1" "0" "–1" "+3" "n/a" "0" "n/a"
-                "Gauntlet" "Brawl" "0" "" "+1" "+2" "–3" "0" "Inexp."
+                "Gauntlet" "Brawl" "0" "0" "+1" "+2" "–3" "0" "Inexp."
                 "Bludgeon*" "Brawl" "0" "+2" "0" "+2" "–2" "1" "Inexp."
                 "Dagger" "Brawl" "0" "+2" "0" "+3" "–3" "0" "Inexp."
                 "Knife" "Brawl" "0" "+1" "0" "+2" "–6" "0" "Inexp."
@@ -287,44 +287,44 @@ EXTENSION "ARMDef_Obstacles" {
                 "Lance" "Single" "+2" "+4" "0" "+5" "0" "2" "Std."
                 "Mace**" "Single" "+1" "+3" "0" "+8" "0" "2" "Std."
                 "Mace and Chain" "Single" "+2" "+3" "0" "+7" "0" "2" "Std."
-                "Spear, Short" "Single" "+2" "" "0" "+5" "–1" "1" "Inexp."
+                "Spear, Short" "Single" "+2" "+2" "0" "+5" "–1" "1" "Inexp."
                 "Sword, Short" "Single" "+1" "+3" "+1" "+5" "–1" "1" "Std."
                 "Sword, Long" "Single" "+2" "+4" "+1" "+6" "0" "1" "Exp."
-                "Shield, Buckler" "Single" "0" "" "+1" "0" "–2" "1" "Std."
-                "Shield, Round" "Single" "0" "" "+2" "0" "–1" "2" "Inexp."
-                "Shield, Heater" "Single" "0" "" "+3" "0" "" "2" "Std."
+                "Shield, Buckler" "Single" "0" "0" "+1" "0" "–2" "1" "Std."
+                "Shield, Round" "Single" "0" "0" "+2" "0" "–1" "2" "Inexp."
+                "Shield, Heater" "Single" "0" "0" "+3" "0" "0" "2" "Std."
                 "Cudgel" "Great" "+1" "+4" "+1" "+7" "+1" "2" "Inexp."
                 "Farm Implement" "Great" "+1" "+3" "+1" "+5" "0" "2" "Inexp."
                 "Flail" "Great" "+1" "+3" "+1" "+8" "0" "2" "Inexp."
                 "Pole Arm" "Great" "+3" "+4" "+1" "+8" "0" "2" "Std."
                 "Pole Axe" "Great" "+1" "+5" "0" "+11" "+1" "2" "Std."
-                "Spear, Long*" "Great" "+3" "" "+1" "+7" "0" "3" "Inexp."
+                "Spear, Long*" "Great" "+3" "+3" "+1" "+7" "0" "3" "Inexp."
                 "Sword, Great" "Great" "+2" "+5" "+2" "+9" "+1" "2" "Exp."
-                "Staff" "Great" "+2" "+3" "" "+2" "–1" "2" "Inexp."
+                "Staff" "Great" "+2" "+3" "+3" "+2" "–1" "2" "Inexp."
                 "Warhammer" "Great" "0" "+6" "0" "+12" "+2" "3" "Std."
             }
-            DESCRIPTION "* Any improvised bashing weapon such as a rock or hand tool ** Includes spiked clubs, military hammers, and other bashing weapons *** Includes the lance, if used dismounted.\n\n**Ability:** The Weapon Ability needed to use this weapon. **Init:** The Weapon Initiative Modifier. **Atk:** The Weapon Attack Modifier. **Dfn:** The Weapon Defense Modifier. **Dam:** The Weapon Damage Modifier. **Str:** The minimum strength score needed to use the weapon. The minimum strength requirements for a weapon and a shield must be met separately. **Load:** The contribution that the weapon makes to Encumbrance (page 403). **Cost:** A general indication of the cost of the weapon. More expensive weapons are better."
+            DESCRIPTION "Ability: The Weapon Ability needed to use this weapon. Init: The Weapon Initiative Modifier. Atk: The Weapon Attack Modifier. Dfn: The Weapon Defense Modifier. Dam: The Weapon Damage Modifier. Str: The minimum strength score needed to use the weapon. The minimum strength requirements for a weapon and a shield must be met separately. Load: The contribution that the weapon makes to Encumbrance (page 403). Cost: A general indication of the cost of the weapon. More expensive weapons are better.\n\n* Any improvised bashing weapon such as a rock or hand tool ** Includes spiked clubs, military hammers, and other bashing weapons *** Includes the lance, if used dismounted."
         }
         #tb9VJi3ynWqoDxfQ9Xomr8IJ ^"Weapon Descriptions" DEF {
             APPLIES TO [^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
-            DESCRIPTION ""
+            DESCRIPTION "Descriptions of the individual weapons follow, organized by weapon type."
         }
         #tz7XMbLOsrpthriyEjONBgCk ^"Brawling Weapons" DEF {
             APPLIES TO [^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
-            DESCRIPTION "**Dodge:** Simply getting out of the way of opponents, without trying to do damage. **Fist:** This is includes any unarmed attacks made with the hands **Kick:** Unarmed attacks made with the feet are more powerful, but less accurate. Characters may kick standing opponents but most often this attack is used against prone enemies. **Gauntlet:** This is a heavy glove of hardened leather or chain mail. It does more damage than a bare fist, and is more effective at blocking attacks. Full armor always includes gauntlets and partial armor sometimes does (troupe's option). **Bludgeon:** This could be a sap (a leather bag filled with lead shot) or any heavy object like a stone or a small hammer. **Dagger:** For the purposes of this table, a dagger is any knife-like weapon of length between about 6 inches and 14 inches. Daggers are commonly carried as tools, as well as for self-defense. **Knife:** Any sharp knife of 6 inches or lesser length. Knives are even more common than daggers; they are everyday tools."
+            DESCRIPTION "Dodge: Simply getting out of the way of opponents, without trying to do damage. Fist: This is includes any unarmed attacks made with the hands Kick: Unarmed attacks made with the feet are more powerful, but less accurate. Characters may kick standing opponents but most often this attack is used against prone enemies. Gauntlet: This is a heavy glove of hardened leather or chain mail. It does more damage than a bare fist, and is more effective at blocking attacks. Full armor always includes gauntlets and partial armor sometimes does (troupe's option). Bludgeon: This could be a sap (a leather bag filled with lead shot) or any heavy object like a stone or a small hammer. Dagger: For the purposes of this table, a dagger is any knife-like weapon of length between about 6 inches and 14 inches. Daggers are commonly carried as tools, as well as for self-defense. Knife: Any sharp knife of 6 inches or lesser length. Knives are even more common than daggers; they are everyday tools."
         }
         #tMpKxsYDYkCs09bKFFTliFKL ^"Single Weapons" DEF {
             APPLIES TO [^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
-            DESCRIPTION "**Axe:** This could be a common woodcutter's axe or a heavier battle weapon. It is small enough to wield in one hand, albeit sometimes awkwardly. **Club:** A club could be simply a heavy stick, or an iron-shod weapon. **Hatchet:** Any axe with a haft shorter than about 18 inches. It does less damage than a longer axe because of poor leverage. Some hatchets are suitable for throwing. **Lance:** The lance may only be used from horseback, where it is a Single weapon. If the rider is dismounted, he may wield the lance two-handed as a Long Spear. **Mace:** The mace is any heavy, bludgeoning weapon with a weighted head, usually made of iron. The head is usually spiked or flanged. Other weighted, onehanded bludgeoning weapons, like hammers, are treated identically to maces. **Mace and Chain:** One or more weighted, spiked or flanged heads connected to a haft by a length of stout chain. Sometimes called a \"morning star.\" **Spear, Short:** A spear short enough to wield in one hand, from 4–7 feet in length. This is a very common battlefield weapon, often used by warriors who cannot afford a sword. **Sword, Short:** Any bladed weapon from 14 inches to about 28 inches long. Short swords in the Middle Ages were not uncommon and could be single- or double-edged, usually with a sharp point for thrusting. Large woodsman's knives are big enough to count as short swords. **Sword, Long:** Any sword over 28 inches long. These swords are typically used by horsemen because they are long enough to reach opponents on foot. Long swords are typically straight, even in Arabia: the curved sword was introduced later than the 13th century. **Shield, Buckler:** A small shield that buckles to the forearm; usually made of metal. It is light enough that other objects can be held in the shield hand. **Shield, Round:** A wooden shield that is cheap and easy to make. **Shield, Heater:** Often made of a combination of wood and metal, this shield tapers to a point at the bottom. The outer surface is not flat, but convex to better deflect blows."
+            DESCRIPTION "Axe: This could be a common woodcutter's axe or a heavier battle weapon. It is small enough to wield in one hand, albeit sometimes awkwardly. Club: A club could be simply a heavy stick, or an iron-shod weapon. Hatchet: Any axe with a haft shorter than about 18 inches. It does less damage than a longer axe because of poor leverage. Some hatchets are suitable for throwing. Lance: The lance may only be used from horseback, where it is a Single weapon. If the rider is dismounted, he may wield the lance two-handed as a Long Spear. Mace: The mace is any heavy, bludgeoning weapon with a weighted head, usually made of iron. The head is usually spiked or flanged. Other weighted, onehanded bludgeoning weapons, like hammers, are treated identically to maces. Mace and Chain: One or more weighted, spiked or flanged heads connected to a haft by a length of stout chain. Sometimes called a \"morning star.\" Spear, Short: A spear short enough to wield in one hand, from 4–7 feet in length. This is a very common battlefield weapon, often used by warriors who cannot afford a sword. Sword, Short: Any bladed weapon from 14 inches to about 28 inches long. Short swords in the Middle Ages were not uncommon and could be single- or double-edged, usually with a sharp point for thrusting. Large woodsman's knives are big enough to count as short swords. Sword, Long: Any sword over 28 inches long. These swords are typically used by horsemen because they are long enough to reach opponents on foot. Long swords are typically straight, even in Arabia: the curved sword was introduced later than the 13th century. Shield, Buckler: A small shield that buckles to the forearm; usually made of metal. It is light enough that other objects can be held in the shield hand. Shield, Round: A wooden shield that is cheap and easy to make. Shield, Heater: Often made of a combination of wood and metal, this shield tapers to a point at the bottom. The outer surface is not flat, but convex to better deflect blows."
         }
         #t6ExirwY70Mqi2hlElEtHDHF ^"Missile Weapons" DEF {
             APPLIES TO [^"Character"]
@@ -341,14 +341,14 @@ EXTENSION "ARMDef_Obstacles" {
                 "Bow, Long*" "Bow" "–2" "+4" "0" "+8" "30" "+2" "2" "Exp."
                 "Bow, Short*" "Bow" "–1" "+3" "0" "+6" "15" "–1" "2" "Std."
             }
-            DESCRIPTION "** Requires two free hands to load and fire.*\n\n**Ability:** The Weapon Ability needed to use this weapon. **Init:** The Weapon Initiative Modifier. **Atk:** The Weapon Attack Modifier. **Dfn:** The Weapon Defense Modifier. **Dam:** The Weapon Damage Modifier. **Range:** The range increment for the weapon, in paces. **Str:** The minimum strength score needed to use the weapon. The minimum strength requirements for a weapon and a shield must be met separately **Load:** The contribution that the weapon makes to Encumbrance (page 403). For bows and the sling, this includes the load of appropriate ammunition. **Cost:** A general indication of the cost of the weapon. More expensive weapons are better.\n\n**Axe, Throwing:** Can be wielded in melee as a hatchet. **Javelin:** Can be wielded in melee as a short spear. **Sling:** Although the sling uses the Thrown Weapon skill, it has much greater range than a hand-hurled weapon. **Stone:** A stone heavy enough to hurt someone, about the size of a fist. **Bow, Long:** The famous English longbow, which equally famously required years of training and physical conditioning to use. **Bow, Short:** The name makes it sound weak compared to the long bow, but the short bow is still powerful enough to use on the battlefield or to hunt large game."
+            DESCRIPTION "Ability: The Weapon Ability needed to use this weapon. Init: The Weapon Initiative Modifier. Atk: The Weapon Attack Modifier. Dfn: The Weapon Defense Modifier. Dam: The Weapon Damage Modifier. Range: The range increment for the weapon, in paces. Str: The minimum strength score needed to use the weapon. The minimum strength requirements for a weapon and a shield must be met separately Load: The contribution that the weapon makes to Encumbrance (page 403). For bows and the sling, this includes the load of appropriate ammunition. Cost: A general indication of the cost of the weapon. More expensive weapons are better.\n\n** Requires two free hands to load and fire.\n\nAxe, Throwing: Can be wielded in melee as a hatchet. Javelin: Can be wielded in melee as a short spear. Sling: Although the sling uses the Thrown Weapon skill, it has much greater range than a hand-hurled weapon. Stone: A stone heavy enough to hurt someone, about the size of a fist. Bow, Long: The famous English longbow, which equally famously required years of training and physical conditioning to use. Bow, Short: The name makes it sound weak compared to the long bow, but the short bow is still powerful enough to use on the battlefield or to hunt large game."
         }
         #ts4xeijYN7KRyd1XSZMrNujS ^"Great Weapons" DEF {
             APPLIES TO [^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
-            DESCRIPTION "**Cudgel:** A heavy, two-handed club. **Farm Implement:** Many farm implements such as rakes, scythes, and mattocks can be used as improvised weapons. They are characterized by awkardness and a tendency to break under the rigors of combat. As improvised weapons, farm implements are less effective even than other Inexpensive weapons. **Flail:** A two-handed, heavier version of the common threshing flail, this weapon is effective and easy to make. Treat a smaller, one-handed flail as a \"mace and chain.\" **Pole Arm:** A number of bladed, longhandled weapons were in use during the Middle Ages, from the continental guisarme to the English \"brown bill.\" They vary in details but are characterized by a long cutting blade. For simplicity, they all have the same statistics. **Pole Axe:** Any axe that is too large to wield one-handed. Length typically varies from four to six feet. **Spear, Long:** Any spear too long to use one-handed, from about 8' to 15' or longer. **Sword, Great:** A heavy, two-handed sword, designed to penetrate heavy armor **Staff:** A common, inexpensive weapon often carried about the countryside for self-defense. **Warhammer:** Includes other weighted, bludgeoning weapons such as a twohanded mace."
+            DESCRIPTION "Cudgel: A heavy, two-handed club. Farm Implement: Many farm implements such as rakes, scythes, and mattocks can be used as improvised weapons. They are characterized by awkardness and a tendency to break under the rigors of combat. As improvised weapons, farm implements are less effective even than other Inexpensive weapons. Flail: A two-handed, heavier version of the common threshing flail, this weapon is effective and easy to make. Treat a smaller, one-handed flail as a \"mace and chain.\" Pole Arm: A number of bladed, longhandled weapons were in use during the Middle Ages, from the continental guisarme to the English \"brown bill.\" They vary in details but are characterized by a long cutting blade. For simplicity, they all have the same statistics. Pole Axe: Any axe that is too large to wield one-handed. Length typically varies from four to six feet. Spear, Long: Any spear too long to use one-handed, from about 8' to 15' or longer. Sword, Great: A heavy, two-handed sword, designed to penetrate heavy armor Staff: A common, inexpensive weapon often carried about the countryside for self-defense. Warhammer: Includes other weighted, bludgeoning weapons such as a twohanded mace."
         }
         #tclc5kw6hINcas01tY0qLuKK ^"Encumbrance" DEF {
             APPLIES TO [^"Character"]

@@ -8,6 +8,14 @@ BASE "ARMDef_Core_Magic_Spell" {
     # buckets (e.g. armdef-0.4-spells-ignem.ttrpg) have a shared type to
     # EXTEND. Individual spells set concrete inline values and do not
     # restate these constraints (Definitions vs. Instances, spec S5).
+    #
+    # General-level spells (ruling 2026-07-14): the Level INTEGER MIN 1
+    # constraint holds for ALL spells — a general-level ("Gen") spell is
+    # still invented/learned at some level >= 1. Book entries with no fixed
+    # level omit ^"Level", set ^"General Level" BOOLEAN true, and their
+    # rule text MUST detail how the level is chosen/modified and under what
+    # conditions (directly, in magnitudes, or by explicit cross-reference
+    # to a spell whose text does). Verified for all 33 such entries.
 
     #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell" DEF {
         APPLIES TO [^"Magus"]

@@ -1,0 +1,27 @@
+BASE "ARMDef_Core_Magic_Spell" {
+    NAME "Ars Magica Definitive Edition - Formulaic Spell (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+
+    # Minimal base type for Hermetic formulaic spells, so per-Form spell
+    # buckets (e.g. armdef-0.4-spells-ignem.ttrpg) have a shared type to
+    # EXTEND. Individual spells set concrete inline values and do not
+    # restate these constraints (Definitions vs. Instances, spec S5).
+
+    #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell" DEF {
+        APPLIES TO [^"Magus"]
+
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"] REQUIRED
+            ^"Form" ENUM ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"] REQUIRED
+            ^"Level" INTEGER MIN 1 REQUIRED
+            ^"Range" STRING REQUIRED
+            ^"Duration" STRING REQUIRED
+            ^"Target" STRING REQUIRED
+            ^"Requisite" STRING
+            ^"Ritual" BOOLEAN DEFAULT false
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

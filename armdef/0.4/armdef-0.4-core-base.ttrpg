@@ -61,11 +61,18 @@ BASE "ARMDef_Core_Base" {
             ^"Apparent Age" INTEGER MIN 0
             ^"Decrepitude" INTEGER MIN 0 DEFAULT 0
             ^"Warping Score" INTEGER MIN 0 DEFAULT 0
+            # standard derived progressions, kept as-authored strings (the
+            # same declared shape the Creature type uses)
+            ^"Fatigue Levels" STRING
+            ^"Wound Penalties" STRING
             ^"Personality Traits" LIST OF ^"Personality Trait"
             ^"Reputations" LIST OF ^"Reputation"
             ^"Abilities" LIST OF ^"Ability"
-            ^"Virtues" LIST OF ^"Virtue"
-            ^"Flaws" LIST OF ^"Flaw"
+            # entries are as-printed names (qualifiers, multipliers and the
+            # free-House-Virtue asterisk kept verbatim), resolvable by name
+            # against the Virtue/Flaw DEFs — same shape the Creature type uses
+            ^"Virtues" LIST OF STRING
+            ^"Flaws" LIST OF STRING
             ^"Equipment" LIST OF STRING
         }
     }

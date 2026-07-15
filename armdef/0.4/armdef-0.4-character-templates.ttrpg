@@ -25,7 +25,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Warping Score" INTEGER 0
             ^"Warping Points" INTEGER 0
             ^"Virtues" LIST [^"Covenfolk", ^"Berserk", ^"Large"]
-            ^"Flaws" LIST [^"Short Attention Span", "Wrathful (Minor)"]
+            ^"Flaws" LIST [^"Short Attention Span", ^"Wrathful"("Minor")]
             ^"Soak" INTEGER 9 NOTE "Stamina, full metal scale armor"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
@@ -301,7 +301,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Warping Score" INTEGER 0
             ^"Warping Points" INTEGER 0
             ^"Virtues" LIST [^"Covenfolk", ^"Large", ^"Tough", ^"Warrior"]
-            ^"Flaws" LIST [^"No Sense of Direction", "Overconfident (thinks he can't really be hurt)", ^"Weakness"("Drinking")]
+            ^"Flaws" LIST [^"No Sense of Direction", ^"Overconfident"(^"trait" = "Thinks he can't really be hurt"), ^"Weakness"("Drinking")]
             ^"Soak" INTEGER 13 NOTE "full metal scale armor + Tough"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
@@ -362,7 +362,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Confidence Score" INTEGER 1
             ^"Confidence Points" INTEGER 3
             ^"Virtues" LIST [^"Clerk", ^"Apt Student", ^"Book Learner", ^"Good Teacher", ^"Great"(^"Intelligence"), ^"Great"(^"Intelligence"), ^"Improved Characteristics"]
-            ^"Flaws" LIST [^"Black Sheep", "Driven (Major) (prove herself a greater scholar than any man)", ^"Social Handicap"("Outspoken advocate of the abilities of women")]
+            ^"Flaws" LIST [^"Black Sheep", ^"Driven"("Major", "Prove herself a greater scholar than any man"), ^"Social Handicap"("Outspoken advocate of the abilities of women")]
             ^"Soak" INTEGER -1 NOTE "Stamina"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -425,7 +425,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Confidence Score" INTEGER 1
             ^"Confidence Points" INTEGER 3
             ^"Virtues" LIST [^"Knight", ^"Wealthy", ^"Improved Characteristics", ^"Puissant Ability"(^"Single Weapon"), ^"Relic"]
-            ^"Flaws" LIST [^"Oath of Fealty", "Proud (Major)", "Overconfident (Minor)"]
+            ^"Flaws" LIST [^"Oath of Fealty", ^"Proud"("Major"), ^"Overconfident"("Minor")]
             ^"Soak" INTEGER 10 NOTE "chain mail, Stamina"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -490,7 +490,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Confidence Score" INTEGER 1
             ^"Confidence Points" INTEGER 3
             ^"Virtues" LIST [^"Priest", ^"Inspirational", ^"Lesser Immunity"("Lightning"), ^"Relic", ^"Sense Holiness and Unholiness", ^"Social Contacts"("Minor clergy"), ^"Student of"("The Divine"), ^"Well-Traveled", ^"Plagued by Supernatural Entity"("Angel")]
-            ^"Flaws" LIST ["Compassionate (Major)", ^"Clumsy", ^"Vow"("Celibacy")]
+            ^"Flaws" LIST [^"Compassionate"("Major"), ^"Clumsy", ^"Vow"("Celibacy")]
             ^"Soak" INTEGER 0 NOTE "Stamina"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -550,7 +550,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Confidence Score" INTEGER 1
             ^"Confidence Points" INTEGER 3
             ^"Virtues" LIST [^"Wanderer", ^"Great"(^"Dexterity"), ^"Great"(^"Quickness"), ^"Improved Characteristics", ^"Improved Characteristics", ^"Light Touch", ^"Perfect Balance", ^"Puissant Ability"(^"Legerdemain"), ^"Puissant Ability"(^"Stealth")]
-            ^"Flaws" LIST ["Avaricious (Major)", ^"Dark Secret", ^"Compulsion", ^"Night Terrors"]
+            ^"Flaws" LIST [^"Avaricious"("Major"), ^"Dark Secret", ^"Compulsion", ^"Night Terrors"]
             ^"Soak" INTEGER 0 NOTE "Stamina"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -605,7 +605,7 @@ EXTENSION "ARMDef_Character_Templates" {
             ^"Confidence Score" INTEGER 1
             ^"Confidence Points" INTEGER 3
             ^"Virtues" LIST [^"Wise One", ^"Educated", ^"Improved Characteristics", ^"Premonitions", ^"Second Sight", ^"Student of"("Magic"), ^"Wilderness Sense"]
-            ^"Flaws" LIST ["Compassionate (Major)", ^"Enemies", ^"Nocturnal"]
+            ^"Flaws" LIST [^"Compassionate"("Major"), ^"Enemies", ^"Nocturnal"]
             ^"Soak" INTEGER 0 NOTE "Stamina"
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -779,7 +779,7 @@ EXTENSION "ARMDef_Character_Templates" {
             }
             ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", ^"Affinity with Art"(^"Auram"), ^"Affinity with Art"(^"Creo"), ^"Book Learner", ^"Free Study", ^"Great"(^"Intelligence"), ^"Great"(^"Intelligence"), ^"Inventive Genius", ^"Puissant Ability"(^"Magic Theory"), ^"Secondary Insight"]
             ^"Free House Virtue" LIST [^"Puissant Ability"(^"Magic Theory")]
-            ^"Flaws" LIST [^"Favors", ^"Painful Magic", "Driven (Minor)", ^"Weak Enchanter"]
+            ^"Flaws" LIST [^"Favors", ^"Painful Magic", ^"Driven"("Minor"), ^"Weak Enchanter"]
             ^"Soak" INTEGER 0
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -947,7 +947,7 @@ EXTENSION "ARMDef_Character_Templates" {
             }
             ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", ^"Giant Blood", ^"Major Magical Focus"("Stone"), ^"Affinity with Art"(^"Terram"), ^"Enduring Magic", ^"Improved Characteristics", ^"Puissant Art"(^"Terram"), ^"Tough"]
             ^"Free House Virtue" LIST [^"Giant Blood", ^"Affinity with Art"(^"Terram"), ^"Necessary Condition"("Touching stone")]
-            ^"Flaws" LIST ["Generous (Major)", ^"Necessary Condition"("Touching stone"), ^"Plagued by Supernatural Entity", ^"Deficient Form"(^"Auram")]
+            ^"Flaws" LIST [^"Generous"("Major"), ^"Necessary Condition"("Touching stone"), ^"Plagued by Supernatural Entity", ^"Deficient Form"(^"Auram")]
             ^"Soak" INTEGER 7
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
@@ -1033,7 +1033,7 @@ EXTENSION "ARMDef_Character_Templates" {
             }
             ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", ^"Greater Immunity"("Fire"), ^"Major Magical Focus"("Flames"), ^"Affinity with Art"(^"Creo"), ^"Affinity with Art"(^"Ignem"), ^"Life Boost", ^"Puissant Art"(^"Ignem")]
             ^"Free House Virtue" LIST [^"Puissant Art"(^"Ignem")]
-            ^"Flaws" LIST [^"Enemies", ^"Necessary Condition"("Must clap his hands"), "Wrathful (Major)"]
+            ^"Flaws" LIST [^"Enemies", ^"Necessary Condition"("Must clap his hands"), ^"Wrathful"("Major")]
             ^"Soak" INTEGER 2
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -1296,7 +1296,7 @@ EXTENSION "ARMDef_Character_Templates" {
             }
             ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", ^"Major Magical Focus"("Weather"), ^"Affinity with Art"(^"Auram"), ^"Cyclic Magic (positive)"("Day"), ^"Puissant Art"(^"Auram"), ^"Puissant Art"(^"Creo"), ^"Special Circumstances"("During a storm")]
             ^"Free House Virtue" LIST [^"Puissant Art"(^"Creo")]
-            ^"Flaws" LIST ["Ambitious (Major)", ^"Difficult Longevity Ritual", ^"Cyclic Magic (negative)"("Night")]
+            ^"Flaws" LIST [^"Ambitious"("Major"), ^"Difficult Longevity Ritual", ^"Cyclic Magic (negative)"("Night")]
             ^"Soak" INTEGER 2
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -1463,7 +1463,7 @@ EXTENSION "ARMDef_Character_Templates" {
             }
             ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", ^"Elemental Magic", ^"Book Learner", ^"Cautious Sorcerer", ^"Latent Magical Ability", ^"Minor Magical Focus"("Certamen"), ^"Skilled Parens"]
             ^"Free House Virtue" LIST [^"Minor Magical Focus"("Certamen")]
-            ^"Flaws" LIST ["Ambitious (Major)", ^"Weak Magic Resistance", ^"Susceptibility to Divine Power"]
+            ^"Flaws" LIST [^"Ambitious"("Major"), ^"Weak Magic Resistance", ^"Susceptibility to Divine Power"]
             ^"Soak" INTEGER 2
             ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
             ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
@@ -1635,7 +1635,7 @@ EXTENSION "ARMDef_Character_Templates" {
                 ^"Terram" INTEGER 12
                 ^"Vim" INTEGER 0
             }
-            ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", "Affinity with Craft (metalsmith)", "Affinity with Craft (stonemason)", ^"Affinity with Art"(^"Terram"), ^"Faerie Blood"("Dwarf"), "Puissant Craft (metalsmith)", "Puissant Craft (stonemason)", ^"Puissant Art"(^"Terram"), ^"Verditius Magic"]
+            ^"Virtues" LIST [^"The Gift", ^"Hermetic Magus", ^"Affinity with Ability"(^"Craft"("Metalsmith")), ^"Affinity with Ability"(^"Craft"("Stonemason")), ^"Affinity with Art"(^"Terram"), ^"Faerie Blood"("Dwarf"), ^"Puissant Ability"(^"Craft"("Metalsmith")), ^"Puissant Ability"(^"Craft"("Stonemason")), ^"Puissant Art"(^"Terram"), ^"Verditius Magic"]
             ^"Free House Virtue" LIST [^"Verditius Magic"]
             ^"Flaws" LIST [^"Dwarf", ^"Weak Spontaneous Magic", ^"Difficult Spontaneous Magic"]
             ^"Soak" INTEGER 1

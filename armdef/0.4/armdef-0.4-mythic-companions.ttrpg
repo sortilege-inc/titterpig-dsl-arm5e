@@ -23,8 +23,8 @@ EXTENSION "ARMDef_Mythic_Companions" {
             EXTENDS ^"Mythic Companion Variety"
             PROPERTIES {
                 ^"Realm" STRING "Infernal" FIXED
-                ^"Required Virtues" LIST ["Devil Child (Free — Mythic Companion virtue)", "Demonic Blood (Major, Supernatural)", "Demonic Might or Demonic Powers (Minor, Supernatural — free with Devil Child)", "Puissant Guile (Minor, General)"]
-                ^"Required Flaws" LIST ["Tragic Life (Major, Supernatural)"]
+                ^"Required Virtues" LIST [^"Devil Child", ^"Demonic Blood", CHOICE [ ^"Demonic Might", ^"Demonic Powers" ], ^"Puissant Ability"(^"Guile")]
+                ^"Required Flaws" LIST [^"Tragic Life"]
                 ^"Required Flaws Note" STRING "or a suitable substitute agreed with the troupe"
                 ^"Point Rules" STRING "Devil Children may take three more points of Virtues at no cost (to balance the compulsory Major Flaw with six Virtue points), and may take an additional seven points of Flaws, each point granting two Virtue points."
                 ^"Note" STRING "Devil Children are very powerful and are recommended for high-powered sagas or sagas with elder magi."
@@ -37,8 +37,8 @@ EXTENSION "ARMDef_Mythic_Companions" {
             EXTENDS ^"Mythic Companion Variety"
             PROPERTIES {
                 ^"Realm" STRING "Faerie" FIXED
-                ^"Required Virtues" LIST ["Faerie Doctor (Free, Mythic Companion)", "Dowsing (Minor, Supernatural — Free with Faerie Doctor)", "Wise One (Minor, Social Status)", "Curse-Throwing (Major, Supernatural)"]
-                ^"Required Flaws" LIST ["Faerie Friend (Minor, Story)", "Dutybound –– obey the oaths of a faerie doctor (Minor, Personality)"]
+                ^"Required Virtues" LIST [^"Faerie Doctor", ^"Dowsing", ^"Wise One", ^"Curse-Throwing"]
+                ^"Required Flaws" LIST [^"Faerie Friend", "Dutybound –– obey the oaths of a faerie doctor"]
                 ^"Required Flaws Note" STRING "or suitable substitutes agreed with the troupe"
                 ^"Abilities Note" STRING "The Student of Faerie Virtue and the Faerie Upbringing Flaw are very common amongst Faerie Doctors, and a high number are Gender NonConforming. Many of them possess enhanced abilities to resist many curses and diseases (such as a Greater or Lesser Immunity, or Rapid Convalescence Virtues). Other useful Virtues include Free Expression, Purifying Touch, and Second Sight.\n\nA character can be a faerie doctor without being a Mythic Companion, but they are understandably less powerful. They still take the compulsory Virtues and Flaws listed above, but must balance Virtues and Flaws in the normal manner."
                 ^"Source" STRING "Core Rules"
@@ -63,7 +63,7 @@ EXTENSION "ARMDef_Mythic_Companions" {
             EXTENDS ^"Mythic Companion Variety"
             PROPERTIES {
                 ^"Realm" STRING "Divine" FIXED
-                ^"Required Virtues" LIST ["Nephilim (Free - Mythic Companion Virtue)", "Blood of the Nephilim (Major, Supernatural)", "Greater Immunity: Disease (Major, Supernatural)", "Great Stamina (Minor, General)", "Great Strength (Minor, General)", "Improved Characteristics (Minor, General)", "Sense Holiness and Unholiness (Minor, Supernatural)", "Strong Angelic Heritage (Minor, Supernatural — free with Nephilim)"]
+                ^"Required Virtues" LIST [^"Nephilim", ^"Blood Of The Nephilim", ^"Greater Immunity"("Disease"), ^"Great"(^"Stamina"), ^"Great"(^"Strength"), ^"Improved Characteristics", ^"Sense Holiness and Unholiness", ^"Strong Angelic Heritage"]
                 ^"Point Rules" STRING "Nephilim must take five points of Flaws to pay for these virtues and may take an additional five points of Flaws, which grants a further ten points of Virtues."
                 ^"Note" STRING "Nephilim are very powerful and are recommended for high-powered sagas, or sagas with elder magi. If your troupe is worried about game balance, ensure that age levels for characters are roughly parallel."
                 ^"Source" STRING "Core Rules"
@@ -80,8 +80,8 @@ EXTENSION "ARMDef_Mythic_Companions" {
             EXTENDS ^"Mythic Companion Variety"
             PROPERTIES {
                 ^"Realm" STRING "Magic" FIXED
-                ^"Required Virtues" LIST ["Spirit Votary (Free — Mythic Companion Virtue)", "Second Sight (Minor, Supernatural — free with Spirit Votary)", "Spiritual Pact (Major, Supernatural)", "Either one more Major Supernatural Virtue or three Minor Supernatural Virtues"]
-                ^"Required Flaws" LIST ["Pagan (Major, Personality)"]
+                ^"Required Virtues" LIST [^"Spirit Votary", ^"Second Sight", ^"Spiritual Pact", CHOICE [ 1 OF ^"Virtue" WHERE { ^"Size" "Major", ^"Category" "Supernatural" }, 3 OF ^"Virtue" WHERE { ^"Size" "Minor", ^"Category" "Supernatural" } ]]
+                ^"Required Flaws" LIST [^"Pagan"]
                 ^"Required Flaws Note" STRING "or a suitable substitute agreed by the troupe"
                 ^"Source" STRING "Core Rules"
             }

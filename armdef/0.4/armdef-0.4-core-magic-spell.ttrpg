@@ -38,7 +38,16 @@ BASE "ARMDef_Core_Magic_Spell" {
     # (armdef-0.4-hermetic-magic.ttrpg): the fifteen Arts, the Limits of
     # Magic, and the mastered-spell special abilities.
 
+    #tqFpQUNqm9O5z6MRPStCS5lz ^"Art" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Abbreviation" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
     #tRgVo1ja4K0oM5BwXFMt8dFK ^"Hermetic Technique" DEF {
+        EXTENDS ^"Art"
         APPLIES TO [^"Magus"]
         PROPERTIES {
             ^"Abbreviation" STRING REQUIRED
@@ -48,6 +57,7 @@ BASE "ARMDef_Core_Magic_Spell" {
     }
 
     #tUEdmiz0IADMNt9MPAbcgRyn ^"Hermetic Form" DEF {
+        EXTENDS ^"Art"
         APPLIES TO [^"Magus"]
         PROPERTIES {
             ^"Abbreviation" STRING REQUIRED

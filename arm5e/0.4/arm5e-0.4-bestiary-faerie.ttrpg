@@ -1,0 +1,241 @@
+EXTENSION "ArM5_Bestiary_Faerie" {
+    NAME "Ars Magica Fifth Edition - Bestiary: Faerie Creatures"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Creature"
+
+    #tsC96LnV8wuV3nPG4vPhHoD8 ^"Mateos, the Faerie Butler" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Herbam"
+            ^"Size" INTEGER -2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -3
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12)"
+            ^"Vis" STRING "1 pawn of Herbam in each hand."
+            ^"Appearance" STRING "Mateos is the size of a child, with a large pot belly, full beard sprinkled with gray, and a slightly grubby apron. He is always smiling, and offers just about everyone he meets a drink from his barrel."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Convivial" +3
+            "Generous" +2
+            "Careful" -2
+        }
+        COMBAT {
+            "Club" INIT -3 ATTACK 4 DEFENSE 0 DAMAGE 1
+        }
+        ABILITIES {
+            "Carouse" SCORE 9 SPECIALTY "drinking"
+            "Charm" SCORE 4 SPECIALTY "drunk people"
+            "Etiquette" SCORE 2 SPECIALTY "parties"
+            "Faerie Lore" SCORE 3 SPECIALTY "drinks"
+            "Folk Ken" SCORE 3 SPECIALTY "drunk people"
+            "Guile" SCORE 9 SPECIALTY "convincing people to drink more"
+            "Living Language" SCORE 5 SPECIALTY "metaphors for drinking and getting drunk"
+            "Music" SCORE 1 SPECIALTY "drinking songs"
+            "Single Weapon" SCORE 1 SPECIALTY "club"
+        }
+        POWERS {
+            ^"Heady Brew" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Any drink served by Mateos is three times as intoxicating as normal. Drinks that were non-alcoholic to start with become as alcoholic as ale. This does not change the taste of the drink. The extra intoxication is a magical effect, with Penetration 10, and can be resisted."
+            }
+            ^"Unending Drinks" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "For as long as he is serving a particular person, the drink in Mateos’s barrel does not run out, even if he serves other people as well. If the chosen person (who is not the target of the power, and thus cannot resist) leaves, passes out, or stops drinking for any other reason, the contents of the barrel start to run out."
+            }
+        }
+        DESCRIPTION "Mateos lives for parties, particularly parties with lots of drunkenness and stupid behavior. If he arrives somewhere where there isn’t a party, he tries to start one. With his faerie ale (or wine, or cider), it doesn’t usually take him very long. Once people start getting drunk, he tries to convince them to do ridiculous and embarrassing things. He does not usually encourage people to do things that could kill them, however. The parties normally finish with everyone but Mateos passed out on the floor.\n\nThe Gift makes Mateos feel that the Gifted individual is a killjoy opposed to parties, and someone to be hurried out of the way as soon as possible."
+    }
+
+    #t0IpzuoO4mHFPF4XqVsmSng1 ^"Tarlan the Wolf" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Soul-eating demon (local) 1"]
+            ^"Soak" INTEGER 7
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Vis" STRING "2 pawns of Intellego in his nose, 1 pawn of Intellego in each ear."
+            ^"Appearance" STRING "A large, deep black wolf with eyes that glint even when there seems to be no light around. He moves silently and can stay hidden unless he really wants his quarry to see him."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Relentless" +3
+            "Cheerful" -3
+        }
+        COMBAT {
+            "Bite" INIT 9 ATTACK 10 DEFENSE 10 DAMAGE 6
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 6 SPECIALTY "hunting tracks"
+            "Athletics" SCORE 5 SPECIALTY "running"
+            "Awareness" SCORE 8 SPECIALTY "spotting quarry"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 10 SPECIALTY "human beings"
+            "Living Language" SCORE 2 SPECIALTY "threats"
+            "Stealth" SCORE 9 SPECIALTY "hunting"
+            "Survival" SCORE 7 SPECIALTY "forests"
+        }
+        POWERS {
+            ^"Marked Quarry" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Tarlan can pick a single human being whom he can see and who can see him, and mark him as quarry for the hunt. This inspires the victim with a strong fear of Tarlan, requiring a Brave roll against an Ease Factor of 9 to overcome, and specifically makes him likely to run."
+            }
+            ^"Prey’s Vigor" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+8"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "By breathing on a tired person (anyone who has lost Fatigue levels), Tarlan can restore them to full vigor (i.e. all Fatigue levels are regained). However, the target also ages one year. This power can only be used if the target is close enough to actually feel the wolf’s breath on his skin, and only works on adults."
+            }
+            ^"Silent Running" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Tarlan makes no noise unless he deliberately decides to."
+            }
+        }
+        DESCRIPTION "Tarlan exists to hunt people. He picks individuals who are in the wilderness by themselves, marks them as quarry, and then harries them to exhaustion. Once they can run no further, he bursts out of cover, and, somehow, the victims regain their vigor at that moment, finding that they can run away once more. The wolf can keep the hunt up indefinitely, but normally he times a final attack, on an exhausted victim, to happen just before dawn. If the quarry is particularly resourceful, he might keep the hunt up longer.\n\nTarlan does not always kill his victims, leaving some alive to tell the tale of their ordeal. He likes the idea that people are scared of him even before he uses his power. Indeed, he has occasionally not needed to use Marked Quarry at all.\n\nThe wolf does have one weakness. He cannot enter holy ground, so a victim who can run into a church or graveyard is safe. Tarlan knows this, and tries to herd his victims away from such places. In addition, because Prey’s Vigor cannot affect children, Tarlan never hunts them. In fact, he’s come to feel somewhat protective of them, on the grounds that, if he can’t hunt them, no one else is going to. Finally, The Gift inspires respect in the faerie. He never hunts Gifted individuals, and might even be happy to work with one who let him hunt people."
+    }
+
+    #tKyecS20zDKUXOKaLpHgY9k2 ^"Lord Marsyne" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Aquam"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 4
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Grants eternal youth 2 (local)"]
+            ^"Soak" INTEGER 25
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "10 Aquam, in his blood."
+            ^"Appearance" STRING "Tall, well-built, and handsome, with white skin, pale blond hair, and eyes the clear gray of sea ice. He wears fine clothes in white and blue, and a crown of diamonds rests on his brow. He almost looks like a human being, but the authority in his voice belies that, as does the fact that literal ice water runs in his veins; when he bleeds, there are small crystals of ice in the water that flows out."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+            "Just" +1
+            "Forgiving" -3
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 5 SPECIALTY "nobility"
+            "Awareness" SCORE 3 SPECIALTY "in his castle"
+            "Charm" SCORE 8 SPECIALTY "human women"
+            "Etiquette" SCORE 10 SPECIALTY "courtly"
+            "Faerie Lore" SCORE 6 SPECIALTY "cold faeries"
+            "Folk Ken" SCORE 5 SPECIALTY "people making requests"
+            "Guile" SCORE 5 SPECIALTY "pretending to grant requests"
+            "Intrigue" SCORE 4 SPECIALTY "court politics"
+            "Leadership" SCORE 7 SPECIALTY "servants"
+            "Language (All)" SCORE 5 SPECIALTY "commands"
+            "Magic Lore" SCORE 2 SPECIALTY "Hermetic magic"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "Merinita"
+        }
+        POWERS {
+            ^"Commanding Presence" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Anyone who can see Marsyne becomes awed by him, and gains a Personality Trait of Respectful to Lord Marsyne +3. Even magi must roll this Trait, if they fail to resist the spell. Disagreeing with him is Ease Factor 6, outright contradiction is Ease Factor 9, and attacking is Ease Factor 15. This power does not force obedience to the faerie’s commands, but it does force you to be subtle about refusing."
+            }
+            ^"Entomb" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "A single human target is entombed in ice. The effect is Mentem because it also suspends the target’s awareness, so that he or she does not need to eat, drink, or breathe, and does not think, dream, or remember while in the ice. Marsyne can break the effect at will, or it can be dispelled. If it is broken, the person returns to awareness without, immediately, realizing that they were unconscious. People do, normally, age while entombed, and can die of old age."
+            }
+            ^"Gift of Youth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power targets a single woman, who stops aging. As long as she remains in Marsyne’s castle, she does not age at all. If she leaves, she has the benefit of the Unaging Minor Virtue, so she might not realize that she is aging again. Once aging has restarted, it does not stop if the woman returns to the castle. The power only works on human women, and Marsyne normally only uses it on his wives."
+            }
+            ^"Inner Warmth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The recipient of this gift is unaffected by mundane cold until she (or he) enters an aura aligned with a realm other than Faerie. (Simply leaving a Faerie aura for an area with no aura doesn’t end it, but entering a Magic, Infernal, or Divine aura does.) The gift provides no protection against magical cold."
+            }
+            ^"Lord of Ice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more points"
+                    ^"Initiative" STRING "+8"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Marsyne can create any effect he wants involving ice, including effects that would require a Hermetic ritual. For every point he spends, up to a maximum of 5, the effect has three Hermetic magnitudes of power. Thus, if he spends 5 points, he can create a 15th magnitude effect."
+            }
+            ^"Lord of the Castle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+15"
+                    ^"Form" STRING "Mentem or Corpus"
+                }
+                DESCRIPTION "Marsyne can command any one of his servants to do anything, and the command is irresistible. He can also take control of the servant’s body, and move it like a puppet, or even make it fly through the air. The only limits are that he can only target one servant at once, and can only target beings who have voluntarily agreed to serve him. Most are faeries, but his wives also qualify."
+            }
+        }
+        DESCRIPTION "Lord Marsyne is the ruler of a faerie domain in the far north or in a range of high mountains. His home is a castle of fantastic beauty, made entirely of ice, and he has an extensive faerie retinue. Marsyne and his faeries act out an elaborate charade of the routines and festivals of mundane noble life, hunting strange creatures, holding tournaments, and even passing judgment on criminals within the court.\n\nMost of the time, the court has little direct contact with humans. However, Lord Marsyne always has a human wife, and every so often he needs to find a new one. He always chooses a beautiful, young woman, and looks for some spark of creativity, independence, and spirit. He is quite taken by The Gift, and any beautiful, young Gifted woman in the area he is searching is very likely to be wooed. The wooing is utterly sincere, as the wife must return of her own free will.\n\nMarsyne’s wife plays an important role in the politics of the court, having her own set of faerie ladies-in-waiting and servants, and presiding over many of the tournaments. She also plays an important mystical role, as her presence and creativity allow the faeries to do new things. One thing she is not, is a physical wife to Lord Marsyne.\n\nAs long as the wife follows the rules of the court, everything is fine. Marsyne makes her unaging, and protects her from the cold. If she breaks the rules, however, Marsyne judges her, entombs her in ice, and seeks out a new wife. He has many entombed wives, as some of the rules are along the lines of the classic “Do not go into this room. Here is the key.”\n\nIt is also possible for a wife to win her freedom, either through a successful challenge by an external champion, or through her own wits. Lord Marsyne remains fond of any wife who wins her freedom fairly, because that is part of the rules, but any who simply flee are brought back and entombed in the ice."
+    }}

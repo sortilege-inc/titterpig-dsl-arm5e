@@ -1,0 +1,197 @@
+EXTENSION "ArM5_Sagas" {
+    NAME "Ars Magica Fifth Edition - Sagas"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    #tK6gwLskkGKSguw9A5aYqPyM ^"Rules Questions" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            FORMULAS {
+                "Optional Magic Resistance House Rule" "give all Christians, Jews, and Muslims a Magic Resistance equal to five times the level of the local Dominion aura"
+            }
+            DESCRIPTION "The source presents this as a sidebar addressing how a troupe decides to use the rules. The rules in the Laboratory and Long-Term Events chapters are only used when the saga stretches over a significant period of game time; you don't need to worry about them for your first couple of stories. The game as written can be played and enjoyed, but you might want to add House Rules to make things better fit your playing style. For example, the core rules pay very little attention to economics, so a saga about magical merchants would require House Rules for trade. If your group prefers not to have major events happen purely on the roll of the dice, you can simply ignore stress dice, and always use a simple die; because a number of Virtues and Flaws rely on the stress die, you need to make that clear up front. If worrying about game statistics interferes with the flow of your stories, you can use the spell guidelines as nothing more than inspiration. The rules and background for Ars Magica as written do favor a particular style of play, but if that doesn't match your style, you should change the rules and background so that it does."
+        }
+        #tjbCOiwtD0lVLgClopOyOerA ^"Resources" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Vis Level", "Amount and Effect"]
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            TABLE {
+                "Low Vis" "Up to 5 pawns per magus per year. Studying from vis is very rare, and vis-boosting the Penetration of spells is almost unheard of. Only necessary rituals are cast, and enchanted items are uncommon."
+                "Moderate Vis" "Around 10 pawns per magus per year. Studying from vis is common, although books are still preferred. Enchanted items can be made fairly easily; the main concern is getting the right kind of vis, not the amount. Rituals can be cast if they are helpful, and in extreme situations the magi might use vis to boost spell Penetration."
+                "High Vis" "Around 20 pawns per magus per year. Magi can do pretty much anything they want involving vis. This is probably too much vis for most sagas."
+            }
+            DESCRIPTION "The source presents this as a sidebar giving guidelines for the resources available to player characters, which influence the speed of advancement. Vis comes in two ways: vis finds, which don't renew, and vis sources, which do. Early in the saga it is better to hand out vis finds, rather than sources. Vis amounts are highly saga-dependent, and there is no \"right\" way to do it; the numbers below are merely a guideline. Books also come in two sorts, summae and tractatus; because a tractatus can only be studied once by a given character, you can be fairly sure of the effect that it will have. To keep the rate of power advancement down, restrict the number of summae the covenant has, and don't let the covenant build up a large reserve of unstudied tractatus. Magi in a covenant can also write books for each other."
+        }
+        #tNUME9oi4Nbm1TuiNmRbyc64 ^"Slow Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            FORMULAS {
+                "Rate" "on average, two or more game sessions per season"
+            }
+            DESCRIPTION "Characters do not improve much, and the different lifespans of magi and companions are largely irrelevant. The main advantage of this style of saga is that the style of play does not have to change much. The main disadvantage is that the laboratory rules, which are central to Ars Magica, will get little use, and players may become frustrated if their characters do not improve. This style is closest to the conventional style of most roleplaying games, and is a good way to start a saga. Virtues and Flaws affecting study, lifespan, and other seasonal activities in game are much less significant, while those that affect the character's starting scores are much more significant."
+        }
+        #t8jGLmlwaQNAHgSS8YziortI ^"Medium Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            FORMULAS {
+                "Rate" "on average, one to four seasons per game session"
+            }
+            DESCRIPTION "Characters do improve, but unless you play very frequently, or over a long period of real time, magi are unlikely to die of old age or pass into Final Twilight. A medium saga is a good compromise rate, and an excellent way to start, since it is fairly easy to slow down or speed up, as required. Flaws affecting study are of similar significance to those affecting character generation, so players need not pay attention to such subtleties. In a medium saga it is quite likely that companions and grogs will die of old age, although probably not until the saga is rather advanced."
+        }
+        #txEIah6SQV7NwLPHtKo5g8Ql ^"Fast Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            FORMULAS {
+                "Rate" "on average, more than one year passes per game session"
+            }
+            DESCRIPTION "In a fast saga, magi rapidly become powerful, and a magus who starts the saga fresh from his gauntlet can expect to die of natural causes before the end. Companions may be played only a handful of times before they die of old age. The emphasis is very much on the magi, particularly once they have become powerful. Virtues and Flaws that affect only a character's starting scores are much less important, and should probably be reclassified or made more effective if they are to be balanced. Fast sagas are good for players who want to play epic magi who create magical effects which influence the whole of Europe, but they are not a good way to start a saga."
+        }
+        #tdq0maApj0diHWxTJVyJmyxm ^"Pulsed Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            FORMULAS {
+                "Rate" "a dozen game sessions might cover a single season, then twelve game years might pass before the next session"
+            }
+            DESCRIPTION "A pulsed saga combines the fast and slow sagas. A dozen game sessions might cover a single season, but then twelve game years might pass before the next session. The intense bursts of activity give companions and grogs ample opportunities for play, while the long periods of downtime allow characters to study, and magi can advance to high levels of power. Most sagas are pulsed to some extent, and it only really becomes a separate style when the contrast between rates becomes extreme. If you do want to play a pulsed saga, it is important for the storyguide to work out how each story arc will finish, and why any loose ends will wait years before needing to be resolved."
+        }
+        #tX82MGF2SxvDdCv3K6jPL4Hb ^"Alternative Characters" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            DESCRIPTION "In this version of troupe-style play each player has two or more characters, but only plays one of them in a given session. At least one character should be a magus, and at least one should be a companion. There is nothing to stop a player having two magi and four companions, if he can cope with only playing each character once every six sessions or so. It is essential that a player's characters have good reasons not to go on adventures together. This style of play is quite close to conventional roleplaying, and makes it easy for players to introduce new characters, but it can still lead to rather more magi going on an adventure than is ideal."
+        }
+        #t3Er954Cjh4CrrXTJz4h7yO4 ^"Pooled Characters" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            DESCRIPTION "Playing with pooled characters means that, in addition to a player's magi and companions, there is also a \"pool\" of grogs and bit parts, who can be played by anyone. On a typical adventure, one player might play his magus, a second her companion, while the other two take grogs from the common pool. The number of magi in a group tends to be small, which makes them easier to challenge, and the covenant staff get to appear on stage. In games with pooled grogs, grogs are supposed to die; they are played enough for the players to care, but not so central that a grog death means a major change in the saga. It is very important for each pooled grog to be looked after by a single player for development between sessions. Because Ars Magica's advancement system means that characters do not fall behind in power when they are not played, players' primary characters do not lose out when the players are running grogs. This style can easily handle player absences."
+        }
+        #tzZ0lYuSmF425Mpx3W0NU7fZ ^"Guest Storyguiding" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            DESCRIPTION "The next level of troupe-style playing involves a player occasionally running a session. The normal storyguide can play some of the pooled grogs, and thus remains involved in the game. This gives the regular storyguide an occasional break, and allows someone to have a go at storyguiding without committing to running a whole saga. Since the regular storyguide is going to play, the guest storyguide cannot check all the details of the story in advance, so there is a risk of clashing with long-term plans. The best way to avoid such problems is to have the guest storyguides run stories that take place in isolated locations, such as a distant island, or a cave complex. Regiones are excellent for this, and it is even possible to run a story that takes place in a dream."
+        }
+        #tWov7X9RmgMHyJbL7I4f2Xzo ^"Alpha and Beta Storyguides" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            DESCRIPTION "The next step is to have more than one member of the troupe acting as storyguide on a regular basis. One storyguide, the alpha storyguide, is responsible for the overall shape of the saga, and has final veto power on story additions, but one or more beta storyguides take responsibility for specific aspects of the saga, such as a particular magical regio, a local faerie forest, or the covenant itself. As long as the action remains within that location, the beta storyguide has free rein. Some of the participants are still just players. The big advantage is that the alpha storyguide can have a magus and companion, and this style can handle the alpha storyguide's absence as easily as that of any other player. Events can sometimes surprise everyone, including all the storyguides, when the different plots interact in unexpected ways."
+        }
+        #tZzsO3aP1wIx7geEhlu49k6I ^"Pure Troupe Style" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Ars Magica Fifth Edition, Ch. 16: Sagas"
+            }
+            DESCRIPTION "In the purest form of troupe style, everyone runs games in roughly equal amounts, and there is no alpha storyguide. This requires quite a bit of coordination, and the troupe must decide on a method for resolving disputes in rule interpretation; one possibility is to have one person as the \"rules storyguide,\" and have her interpretation be final, but a more democratic method might also work. This style gives everyone an equal chance to run the game and play characters, and can handle any anticipated player absences without any trouble. Pure troupe style does, however, require a group of players all of whom are comfortable with rules and with running games."
+        }
+
+    #tU9TEekPPbGJAEZc9QYCIozN ^"The Pure Fantasy Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A research option for setting an Ars Magica saga. You can set your saga in a pure fantasy world. You might adapt a published one to include the Order of Hermes, or create your own. The advantage is that you don't have to worry about historical facts at all, and can have exactly the setting you want. The disadvantage is that the setting of Ars Magica has even influenced the mechanics, so you will find that you have to adapt or ignore a lot of the game material."
+        }
+        #tnqgqjXCVPk1ocbLfjIbXACB ^"The No-Research Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A research option for setting an Ars Magica saga. Pick a Tribunal for the covenant (see the map on pages 200 and 201). Pick names for the local nobility, towns, and parish church. Decide what sort of geography you want. Use elements from the Mythic Europe chapter to make your stories feel medieval. Have fun, and ignore people telling you that the king of England in 1220 wasn't William the Bastard."
+        }
+        #tq3rXL94fp5LGZVivqFB46ay ^"The Low-Research Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A research option for setting an Ars Magica saga. Get hold of a modern map of Europe, and pick an area with the sort of terrain you want. Look up twelfth and thirteenth century events in an encyclopedia or general world history, to give you a few names and trends. Most of the cities, towns, and villages in modern Europe were there in the Middle Ages, only smaller, so shrink places. (There are some exceptions, but at this level of research, you don't want to worry about that.) Add more forest. Roads, with the exceptions of freeways/motorways/autobahn, tend to follow historic routes that sometimes go back to the Romans, so you can use those as described. From that point, things proceed as for the No-Research Saga. Alternatively, buy one of the Tribunal Books from Atlas Games, and set your saga in that Tribunal. This gives you most of the benefits of the Extreme-Research Saga, with a level of effort more like the Low-Research version."
+        }
+        #tSCGTxykEtKiLUnwmuVrlrsy ^"The Medium-Research Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A research option for setting an Ars Magica saga. Pick your area from a modern map, as above. Then find a history of that area, and read the chapters on the twelfth and thirteenth centuries. This will give you quite a few names, a fair bit of social detail, and some idea of which towns were important back then. Work what you've learned into your saga in a way that will impress your players."
+        }
+        #tT87p5ckGQUoFzGsoBPq5kNH ^"The High-Research Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A research option for setting an Ars Magica saga. Once you have chosen your area, get hold of a history of that area that focuses on the twelfth or thirteenth centuries. Reading such a book will probably give you more information than you can possibly include in a saga. More recent histories are better for gaming purposes than older ones, because recent historians tend to pay more attention to what life was like, and to events other than battles and the deaths of kings. Give characters names that match the sorts of names you find in the book, so that they \"sound right.\" Have the repercussions of events you read about affect the covenant. Foreshadow future history, giving the players a chance to change it. And so on."
+        }
+        #tvRO2r3s0GaWooQduDoQrxw5 ^"The Extreme-Research Saga" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A research option for setting an Ars Magica saga. Read several single-volume histories of the area in question, to get a more balanced view. Find, and read, histories of specific aspects, such as the history of a single city, or of the law, or of the Church, or even a single monastery. Track down books written in or about your area during the twelfth and thirteenth centuries, and read them in translation. Learn Latin so that you can read the ones that haven't been translated yet. Learn paleography so that you can read the ones still in manuscript. Go back to university and get a Ph.D. in medieval studies while actually just researching your saga. Somewhere before the \"learn Latin\" stage is the amount of research that most authors do before writing a Tribunal book or similar piece of setting material for the line. For a personal saga, that's a lot of research."
+        }
+        #tJWg8jz94WoTkdnz2h3yVv6n ^"High Fantasy" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters spend much of their time dealing with demons, faeries, giants, dragons, and angels. Powerful, flashy mystical effects are extremely common, dealing with mundanes is not. This works particularly well with a Low-Research Saga, as high fantasy elements have to be made up anyway."
+        }
+        #tpThg755r5amnhT7HBQl5QlK ^"Mundane Interactions" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters spend a lot of time dealing with local nobles, churchmen, bandits, and traders. They might worry about whether the covenant has enough cattle to provide the vellum for its library, or be concerned with the trend towards violent antisemitism sweeping the country. Magic might be used a lot, but it tends to be low-key and subtle, even if it is powerful."
+        }
+        #trstjVaqu2Y8gdZuZL9vsBa7 ^"Hermetic Life" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters spend most of their time interacting with other Hermetic magi. They might be dedicated politicians in the local Tribunal, bibliophiles trying to gather the finest library in the Order, or Hoplites dedicated to hunting down any magus who turns to diabolism."
+        }
+        #tXU0RWLB3CgkO4v72hvBnAgJ ^"Action-Adventure" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters fight and defeat enemies, whether by force of arms or force of magic. They may or may not loot the bodies afterwards."
+        }
+        #toSCeHbAcICGLGRSok924j4h ^"Investigation" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters unravel mysteries, discover murderers, and trace the resting place of lost treasures."
+        }
+        #tCRzaSI7vDw4as21OAMzSH7i ^"Politics" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters negotiate with others to get what they want, or to help their allies get what they want."
+        }
+        #tpnBX1cI3skyB3PbUpLu1WXi ^"Creation" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A saga style. The characters are trying to build something, whether abstract or concrete. They might be trying to create the strongest, most vibrant covenant in the Order, or a giant flying ship, or bring justice and peace to a war-torn area of Europe."
+        }}

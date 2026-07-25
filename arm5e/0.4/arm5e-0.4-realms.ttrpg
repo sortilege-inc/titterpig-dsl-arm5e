@@ -1,0 +1,233 @@
+EXTENSION "ArM5_Realms" {
+    NAME "Ars Magica Fifth Edition - Realms"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    #tXJ1FO6CbKNlhLFooBQTjs2L ^"Realms (Belonging and Affiliation)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Four realms of power exist: Magic, Divine, Faerie, and Infernal. There also exists the mundane, that which is not supernatural. Creatures can be linked to a realm in one of two ways. The closer link is referred to as \"belonging to\" or \"being part of\" a realm. These creatures are drawn from the realm's nature, and embody some aspect of its power. The more distant link is referred to as \"alignment\" or \"affiliation.\" A creature that is affiliated to a realm can draw on the powers of that realm, but is not drawn from the realm's nature. A creature that belongs to a realm cannot be affiliated with any other realm. Most creatures belong to no realm, and can affiliate to more than one. No human being belongs to a realm. It is possible for a human affiliated to a realm to transform and become part of that realm, but the person apparently loses their humanity in the process."
+        }
+        #t8YLimOsNhYY6v7TJwfdjSVS ^"Realm Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Each realm has some parts of the world where its powers are strongest. Such areas are said to have an aura, which can be rated in power on a scale from 1 to 10. Most auras rate between 1 and 5, while very intense auras may have a strength of 6 to 9. An aura rating of 10 usually designates a gateway to the realm of its affiliation. The aura rating of a given area usually acts as a modifier on supernatural activities that take place there. Many areas of the world have no realm affiliation, and therefore no aura. These places are mundane. Within a supernatural area, the aura rating is usually uniform, but occasionally energy is unevenly concentrated, causing variable aura ratings. Two realms may have influence over the same place. When this is the case, only the stronger can hold sway at any one time."
+        }
+        #tNeTsAe7DCBOHII0BuTgKvWp ^"Realm Interaction" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The aura of a given place affects all supernatural activities that go on in that place. The Realm Interaction chart indicates the degree to which realms influence powers of other realms. The modifiers shown apply to the effect an aura has on any supernatural act performed within it. Auras also affect the number of botch rolls for an attempted supernatural act in a foreign realm. For each point of aura rating, roll an extra botch die. Use the original aura rating, not that obtained after multiplying by a factor in the Realm Interaction chart. The Divine is not hampered by auras of other kinds."
+        }
+        #tyZUhJLRl2DragSUCXoJVbB5 ^"Realm Interaction Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Aura", "Magic Power", "Divine Power", "Faerie Power", "Infernal Power"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Magic Aura" "+ aura" "no effect" "+ (1/2 aura)" "– aura"
+                "Divine Aura" "– (3 x aura)" "+ aura" "– (4 x aura)" "– (5 x aura)"
+                "Faerie Aura" "+ (1/2 aura)" "no effect" "+ aura" "– aura"
+                "Infernal Aura" "– aura" "no effect" "– (2 x aura)" "+ aura"
+            }
+            DESCRIPTION "The source presents this as a sidebar table. It indicates the degree to which realms influence powers of other realms; the modifiers apply to the effect an aura has on any supernatural act performed within it."
+        }
+        #toXxxtWTZfwfvrqNjgCrLYyc ^"Supernatural Activity Rolls Modified by Aura" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a sidebar. Spellcasting Rolls: The realm interaction modifier modifies the Casting Score. Lab Totals: The aura modifier in the Lab Total is calculated according on the interaction table. Ability Rolls: The aura rating affects supernatural Abilities such as Second Sight, or Wilderness Sense. Most such abilities are Magical in origin, although in particular cases they may be Faerie, Infernal, or even Divine. Magic Resistance: Magic Resistance is altered by the aura modifier. This includes Hermetic Magic Resistance due to the Parma Magica and Forms, as well as the resistance of creatures with mystic Might. Penetration: For magi and characters with mystical abilities, the aura modifies the roll to use the ability, which means that Penetration is modified. The aura modifier does not apply to Penetration twice. Thus, a magus in a Divine aura of 2 takes a –6 penalty to his Casting Score. This automatically reduces his Penetration, as that is calculated by subtracting the spell level from the Casting Score. The aura modifier is not subtracted again from the Penetration total. For mystical creatures, there is no roll to use the ability, so the aura modifies Penetration directly."
+        }
+        #tC66lh83mmbjOmMvNpnxA9F7 ^"Creature Magic Resistance and Penetration" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Creature Magic Resistance" "Might Score"
+                "Creature Penetration" "Might Score – (5 x Might Points spent on power) + Penetration Bonus"
+                "Character Penetration" "Effect Roll – Ease Factor + Penetration Bonus"
+            }
+            DESCRIPTION "Most creatures that belong to a realm have a Might Score, which represents their power. The creature's Might Score is the maximum level. Might points are also spent to invoke supernatural abilities, and Might Pool is the amount of Might that a creature has remaining. Magic Resistance and Penetration are both based on a creature's Might Score. Magic Resistance based on might functions like Hermetic resistance, resisting the powers of all realms, and all types of mystical power. Characters with supernatural abilities other than Hermetic magic also have Penetration. The Penetration bonus is calculated in the same way as for Hermetic magi. Thus, creatures and characters without the Penetration Ability have a Penetration bonus of zero."
+        }
+        #t4Pe6jPwKzfPdFqJmRCV3tzP ^"Magical Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Magical areas are places that are more real than those around them. Most magical areas have an aura from 1 to 5. Legendary places are rated around 6, while auras of strength 10 are virtually unknown. Magical creatures are particularly common within them. Immobile magical creatures, such as magical trees, are almost never found outside a magical aura. Almost all covenants are located in magical areas, usually with aura ratings of 1 to 5. Powerful Magic auras are even richer in vis than normal ones. Magical auras do not tend to have cyclical variations in strength with time, in the way that other auras do, nor do they depend on the surroundings, like Faerie auras."
+        }
+        #tLwEkh39BKbBT7BMJwRkN9Ix ^"Sources of Magical Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "There are two main ways in which Magical auras arise; from the arrangement of the world, and from magical activities. Weak Magical auras arise in places where the world has naturally become a particularly fine example of something. A perfect mountain, spectacular and ancient forest, and a vigorous active volcano might all acquire a weak Magical aura, normally one and certainly no higher than two. Stronger auras arise from combinations of a superb location and auspicious astrological alignments, or from a combination of excellent examples of the natural world. These alignments never produce an aura higher than five. Magical auras can also arise from magical activities. If a moderately powerful (Might thirty or more) magical creature takes up residence in an area, that place will, over the course of years, acquire a weak Magical aura. More powerful magical creatures and more powerful magical events create stronger auras, but generally no stronger than level five. Auras above level five always result from a combination of good location and magical activities. If a covenant were established in a location with a natural aura of five, the aura would rise over the course of decades, but not, in general, any higher than seven. The very highest Magical auras result from spectacular magical events. Such events can create an aura of two or three in a previously mundane area, and if they take place in a location that already has a strong Magical aura they can push it to the highest levels."
+        }
+        #tvnGYbVWPmZG3t7DjcKryYts ^"Infernal Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Infernal areas are among the most vile places in the world. Growth of natural plants is stunted and warped. Most earthbound demons, and many diabolists, prefer to remain in such areas. Old wounds, especially those received through malevolence, hurt anew. Infernal auras interfere with the use of magic. Infernal auras can be detected by magic, unless an infernal creature is actively hiding their existence. They also tend to reduce in strength during the day, and particularly on holy days, and to increase in power at night. Infernal auras are particularly strong on Easter Saturday, the day between the Crucifixion and the Resurrection."
+        }
+        #tuF3gv4uVRPuUvJa5lQi7yz1 ^"Sources of Infernal Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Infernal auras arise from sinful activities and from the activities of demons and diabolists. Minor sins, of the sort that people commit every day, do not create an Infernal aura. More serious sins, such as vicious murders, or elaborate schemes to corrupt someone, can leave a trace. A single sin only creates an aura if it is particularly vile. The calculated desecration of a church, including the ritual murder of the priest on the altar, might replace the church's Divine aura with a level one Infernal aura. In an area with no aura, a cruel and premeditated murder can create a level one aura. Repeated sins in one place create Infernal auras, even if the individual sins are less serious. If a pair of adulterers met every couple of days in the same room in order to indulge their sin, that room would slowly acquire a weak Infernal aura, which might reach level two if the affair continued for long enough. Repeated ritual sacrifices of human beings to demons, extending over many decades, could create an Infernal aura as high as five. Infernal auras also arise from the presence of infernal creatures or the use of infernal powers, in much the same way as for magical auras. Combining repeated sin with the use of infernal powers can create the highest Infernal auras of all."
+        }
+        #tixeBZxYAcsgE3gM5320Eh35 ^"Faerie Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Areas of faerie power may cover ancient pagan lands, spring up about faerie monarchs, or protect valued locations. Faerie areas with lower level auras tend to be inhabited by faeries that are merely annoying, or barely more than helpful; they are almost never capable of killing. In rural and wilderness areas, there are auras of immense power inhabited by faeries that can will themselves taller than a church spire or shake the Earth's foundation at a command. An aura may exceed the physical bounds of the locale, depending on how far the resident faeries journey or extend their power. They are places rich in vis. Faerie auras tend to vary in strength depending on how closely the surrounding world matches the nature of the faeries within. Thus, a Faerie aura inhabited by beautiful faeries of light would reduce in power during winter and at night, and reach its full power on bright summer days. An aura inhabited by faerie miners would lose strength if there were no miners nearby, but return to full power if a mine was opened."
+        }
+        #tROf9D1cTdybad2vyspNIioN ^"Sources of Faerie Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Faerie auras can arise from the presence of faeries or the use of faerie powers in a way similar to the ways that Magical and Infernal auras can arise. Faerie auras also arise when stories are told about a place. The strength of the aura depends on the popularity and number of the stories, but also on what is already in a place. Stories about the strange beings who live in the depths of a forest often create auras, as no one lives in the forest to say otherwise. The combination of these effects means that Faerie auras are often in remote wilderness areas. Faerie auras tend to be higher than other kinds of aura, as the two factors reinforce one another. Faeries in an area tend to inspire stories about the area, which in turn raise the aura and attract, or create, more and more powerful faeries, who in turn inspire more stories."
+        }
+        #tKhlgAZxHmdumVKuGuQOf6WH ^"Arcadia" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The most powerful Faerie sites are sometimes gateways to Arcadia — Faerieland itself. Such gateways may be small and unassuming, rarely used and little known, or massive entrances traversed by the greatest of faerie entities. Mortals do not naturally belong in the land of the fay, and those who enter often fail to return. Even if they do come back, they may find a day spent in Arcadia is one, ten, even a hundred years, or only a minute, in the mundane world. Arcadia is best described as stories made real. Arcadia is a physical place, but it is also a sphere of pure enchantment and imagination. Like a dream state, Faerieland is often incomprehensible to mortals who go there. There is not always a logical relationship between cause and effect, and it is easy to become totally disoriented, especially as faeries enjoy using their glamor to lead intruders astray."
+        }
+
+    #tQ4fleaivv74q52MWjpR7K5i ^"The Divine Realm" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The Divine realm is the manifestation of the supernatural power of God. The most obvious agent of the Divine in western Europe is the Church, and Divine auras, also called the “Dominion,” or “Dominion auras,” surround its buildings. The Church does not have a monopoly on Divine auras, as Jews and Muslims also live within a Dominion aura, which appears indistinguishable from that of the Church. A Divine aura limits the efficiency and effectiveness of Hermetic magic, and Divine miracles can accomplish feats that magi cannot. Some magi even have True Faith, which does not seem to hinder their magic."
+        }
+        #tVT9KVNLnSArCUAmZMCJu2qA ^"Divine Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The Dominion is nearly ubiquitous, and is the only supernatural power that the common folk generally have contact with. It affects magi and their fellows whenever they enter a village, town, or city where there is a place of worship, an ordained priest, and a body of believers. Though Divine auras are usually constant in areas inhabited by believers, their strength can vary. On Sundays and holy days the power of the Dominion increases; at night and on evil days it wanes. The Dominion is also focused more strongly in places and objects that are strongly associated with faith. People, places, and things that have been blessed by an ordained priest can carry Divine auras, but these are extremely fragile and vanish once exposed to the sinful world. Divine auras somehow transported to another realm are also swallowed by the alien aura. Magi and others with magical talents instantly sense a powerful presence, their Gift flickering as a flame exposed to wind."
+        }
+        #to4o22HFJiF0B3ldlPJY0gVu ^"Sources of Divine Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Location", "Divine Aura"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Fields around a village" "1"
+                "Village" "2"
+                "Town or city (most of the area, possibly lower where sin and vice are common)" "3"
+                "Most places of worship" "4"
+                "Places with wider significance, such as cathedrals, important mosques, and the churches of major monasteries" "5"
+                "Chapel holding the relics of a very important saint" "6"
+                "Relics of Christ or the Virgin Mary" "7"
+                "Site of a saint's martyrdom" "8"
+                "Martyrdom of an apostle" "9"
+                "Places where God Himself has intervened in a direct way (e.g. the Holy Sepulcher, the ka'aba in Mecca, the last remnants of the Jewish temple in Jerusalem, the Lady Chapel at Glastonbury Abbey)" "10"
+            }
+            DESCRIPTION "Divine auras can arise from the activities or presence of holy creatures, in a manner similar to the ways in which other auras arise. The overwhelming majority of Divine auras, however, arise from the presence of faithful worshipers of the Divine. Particular Divine auras may depart from these guidelines, as God makes them where and how He wants; however, the guidelines given here are the ones that He normally seems to follow."
+        }
+        #tiRtTCM4HMy4s3J8zZkEmROV ^"True Faith" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "True Faith Magic Resistance" "Faith Points x 10"
+            }
+            DESCRIPTION "Those who give up mundane pursuits entirely and selflessly dedicate themselves to leading holy lives benefit from True Faith. True Faith is measured in Faith Points, which represent a person's connection to God. Those with True Faith may be Jewish, Christian, or Muslim, and, it seems, need not be wholly orthodox. Characters with the True Faith Virtue begin the saga with one Faith Point. Others can gain one point by spending at least one year in selfless service to God, if their motivations are pure. Characters concerned only with recognition, esteem, and power do not get the Faith Point. A character can only gain more Faith Points through extreme devotion to God, and these are lost if he turns even slightly from the path. Faith Points offer protection from all manner of supernatural powers. A character with True Faith has Magic Resistance equal to ten times his number of Faith Points. Some holy relics carry Faith Points; the relic's score acts just like True Faith for those who bear it, using its rating as a number of Faith Points. Only one relic can be carried in this way; those attempting to gain protection from multiple relics lose the protection of all. True Faith can be used just like Confidence, as long as its use is consistent with God's will. The character's score in True Faith acts as his Confidence Score, and Faith Points can be spent like Confidence Points. A character regains all his Faith Points at the next dawn, and may regain them sooner if God so wishes. Spending Faith Points in this way does not reduce the character's Magic Resistance. A character with True Faith can still use his Confidence Points in the normal way."
+        }
+        #tXQRAc6ChZiudg5zsYrZkix1 ^"Miracles" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Miracles are the direct intervention of God in the world. As such, they can do anything, cannot fail, and cannot be resisted by any other power. More discussion of their role in the setting can be found in the Mythic Europe chapter, on page 202."
+        }
+        #tctwUxqnNdj1eXBZelaNZOMl ^"The Mundane" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The mundane is the embodiment of all that is normal and mortal. Generally speaking, areas not occupied by another realm are considered mundane and consist of ordinary people and places. The mundane has no aura rating — in fact, it is the absence of aura, so powers used there function without hindrance. There is a difference between “mundane society” and mundane areas. Mundane society comprises the everyday folk of Mythic Europe, including peasants, townsfolk, and nobility. These people, not being supernatural, would seem to belong to the mundane. However, widespread belief in God, and the fact that most settlements are within the Dominion, means that most “mundanes” actually share somewhat in the Divine. Only complete outsiders who lack faith are truly to be considered part of the mundane."
+        }
+        #t6E5JIezkZkYnbnVzjniIkqX ^"Regiones" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Occasionally, within very special supernatural areas, special types of auras arise. These may exist within larger domains or by themselves, and may be of any type of aura. They are called “regiones” (singular “regio,” “realm,” pronounced “REH-ghee-oh” and “reh-ghee-OH-nays,” with a hard “g” in both cases). Regiones consist of several levels of aura, layered one on top of another in order of increasing power; the lowest level is connected to the mundane world. Just as the various floors of a building occupy the same spot of ground, so do the various levels of a regio occupy the same bit of space. It is entirely possible to pass through the bottom level of a regio without realizing that there are more levels than meet the eye. Regiones have inhabitants, just like other areas of supernatural aura. These beings tend to cluster on specific levels, though they can cross level boundaries freely. The higher one travels in the regio, the stranger and more supernaturally aligned its inhabitants become."
+        }
+        #t99QyvybQUt0TmSlrTlV3NFd ^"Entering and Leaving Regiones" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Regio Sight Roll" "Perception + Appropriate Ability + Stress Die"
+                "Ease Factor" "5 + (2 x difference between current level's aura and sought level's aura)"
+            }
+            DESCRIPTION "Any character crossing the boundary of a regio disappears from the normal world and enters a supernatural realm. There are three ways to enter most regiones: being led, entering voluntarily, and getting lost. Any being native to a regio and part of or affiliated to the realm can lead any number of characters to any level of the regio. Magi are affiliated to the Magic realm, and if they live in a Magical regio they count as native to that regio. There are two ways to enter a regio voluntarily. The first involves seeing into the regio and then crossing the boundary; this requires some supernatural ability. Second Sight allows a character to see into any regio, as does Magic Sensitivity. Sense Holiness and Unholiness allows a character to see into Divine and Infernal regiones. If you are in an aura different from the aura of the regio, add the current aura and the aura of the regio level to determine the Ease Factor. Thus, the Ease Factor to see from a level 3 Divine aura into a level 5 Magic regio is 21: 5 + [2 x (3 + 5)]; the difference between these two auras is 8. Anyone who can see the next level of a regio can lead any number of people into it. The second way of entering involves following a particular path or ritual. Finally, if a character gets lost near a regio boundary, he may accidentally enter the regio. Roll as normal, except that if the character does not have a relevant Ability this merely counts as zero."
+        }
+        #tWlmozF2Tnq3kKGDMzm7mmlv ^"Tainted Vis" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Presented in the source as a sidebar. Vis found in non-Magic auras may be tainted by its aura of origin. Faerie vis is generally safe for magi to use, although sometimes it may have strange side effects. It does not, however, tend to distort spells or have bad effects on the magi using it. Divine vis makes most magi nervous. First, gathering it often has the potential to annoy the Church. Second, using it in magic seems somehow sacrilegious to many magi, who'd rather not invite Divine retribution. Infernal vis is avoided by all sensible magi. It tends to twist any project to evil ends, and slowly corrupt a magus's personality as he works with it. At the very least, using Infernally tainted vis adds twice as many botch dice as usual to spellcasting, and requires a roll on the experimental results chart for an enchanted item. Magi should be very wary of discoveries made while working with Infernal vis."
+        }
+        #tyu0e12Ft6i3skuwSTrFtXZY ^"Magic in Regiones" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Supernatural powers or spells used in a regio level are affected just as in any other aura, determined by the Realm Interaction table. Use the aura rating of the level occupied to modify spell and other supernatural rolls. However, any power used within a foreign regio attracts twice the normal number of botch dice."
+        }
+        #ttRlFWGb8IA9MYqwxt5CRYn8 ^"The Origins of Regiones" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Regiones arise in several ways, but two appear to be the most common. First, an inhabited aura might be surrounded by an aura of a different type, and slowly compressed. Sometimes, the aura simply disappears, but if the inhabitants are strong enough the besieged aura might move up into a regio, leaving a lower level aura in contact with the new aura. When this happens the old contents of the aura are normally found on the new regio level, while the base level contains ruined and decaying versions of any buildings. The other common route is through a spectacular and powerful event. Sometimes, instead of raising the prevailing aura, these events create a new regio level at a higher aura. This sort of event often duplicates all the mundane structures, and people may start scattered between the two new levels. Hermetic magi would love to be able to create regiones at will, but they have yet to learn how. Attempts to create regiones through spectacular magical events have not succeeded reliably, and have often had very bad consequences."
+        }
+        #tjDJKM7X0rc7V2fDVq4diCEJ ^"Vis Sources" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Raw vis can often be found in mystic auras. Sometimes it is found in the bodies of creatures with Might, sometimes it is found in plants, or rocks, or even in the breeze. Often, once the vis has been gathered, it does not get replaced naturally. Sometimes, however, it is possible to take a certain number of pawns of vis from a place every year. These places are known as “vis sources,” and they are among a covenant's most important assets. A vis source can produce vis associated with any Art, but a single vis source normally produces a single kind of vis. Vis sources can also produce any amount of vis, although sources providing more than six pawns per year are rare. Some vis sources produce a varying number of pawns each year, but normally somewhere between one and ten. The vis produced by a vis source needs to be gathered. Sometimes this is a simple matter. Sometimes it is easy provided that you can detect vis. Finally, spells might be needed to gather the vis at all."
+        }
+        #tZw6KC2xoMr6l9sjL0BouFSS ^"Sample Vis Sources" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Vis Source", "Associated Arts"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Golden acorns on a tree" "Creo, Herbam, Terram"
+                "The bones of people buried in an old pagan graveyard, as long as they were buried within the last year." "Perdo, Corpus, Mentem"
+                "The first ice to form on a pond in winter." "Rego, Aquam"
+                "The chrysalis cases of butterflies in a magical forest." "Muto, Animal, Imaginem"
+                "The echoes of a shout in a particular valley at a particular time." "Intellego, Imaginem"
+                "The wind fanning a fire in a magical forest." "Auram, Ignem"
+                "Stones in strange shapes, found in a deep labyrinth of caves." "Imaginem, Terram, Vim"
+                "Crystals that diffract the light in dazzling ways, growing on the peak of a mountain." "Ignem, Imaginem, Vim"
+            }
+            DESCRIPTION "A list of example vis sources with their associated Arts."
+        }}

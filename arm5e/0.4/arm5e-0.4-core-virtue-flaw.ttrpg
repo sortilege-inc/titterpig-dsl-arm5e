@@ -1,0 +1,36 @@
+BASE "ArM5_Core_Virtue_Flaw" {
+    NAME "Ars Magica Fifth Edition - Virtue and Flaw (core types)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+
+    # Base types for Chapter Four, so arm5e-0.4-virtues.ttrpg and
+    # arm5e-0.4-flaws.ttrpg have shared types to EXTEND.
+    #
+    # Size is an ENUM of the five values the book's own entry stat-lines use:
+    # Minor, Major, Free, "Major or Minor" (the player chooses, e.g. True Love),
+    # and "Special" (The Gift, which is neither bought nor balanced).
+    #
+    # Category is a STRING, not an ENUM: entries carry compound and qualified
+    # categories ("Social Status, animals only") that an enum would misrepresent.
+
+    #tdtcsFn2Qhvmm6rPadswict8 ^"Virtue" DEF {
+        APPLIES TO [^"Entity"]
+
+        PROPERTIES {
+            ^"Size" ENUM ["Minor", "Major", "Free", "Major or Minor", "Special"] REQUIRED
+            ^"Category" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #t2f8QXAkXHom00jIOzQvjyu0 ^"Flaw" DEF {
+        APPLIES TO [^"Entity"]
+
+        PROPERTIES {
+            ^"Size" ENUM ["Minor", "Major", "Free", "Major or Minor", "Special"] REQUIRED
+            ^"Category" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

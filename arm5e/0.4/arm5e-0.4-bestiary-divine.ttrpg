@@ -1,0 +1,132 @@
+EXTENSION "ArM5_Bestiary_Divine" {
+    NAME "Ars Magica Fifth Edition - Bestiary: Divine Creatures"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Creature"
+
+    #tOBZ3OJQxNNF8DpCYSqiMA89 ^"Lupersus" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0/0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Vis" STRING "4 pawns of Animal, in the whole body."
+            ^"Appearance" STRING "A silver-gray wolf, with a noble bearing. No matter what terrain he runs through, Lupersus never gets dirty."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Patient" +2
+            "Helpful" +2
+        }
+        COMBAT {
+            "Bite" INIT 8 ATTACK 11 DEFENSE 16 DAMAGE 8
+        }
+        ABILITIES {
+            "Area Lore" SCORE 5 SPECIALTY "food sources"
+            "Awareness" SCORE 5 SPECIALTY "threats to his charge"
+            "Brawl" SCORE 4 SPECIALTY "bite"
+            "Divine Lore" SCORE 5 SPECIALTY "saints"
+            "Hunt" SCORE 8 SPECIALTY "rabbits"
+            "Stealth" SCORE 8 SPECIALTY "hiding from humans"
+            "Survival" SCORE 8 SPECIALTY "hills"
+        }
+        POWERS {
+            ^"Perfect Defender" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+20"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "If Lupersus is acting as a defender to another character in combat, he can use this power to get a +10 bonus to Defense for the duration of the combat. For these purposes, the combat lasts until Lupersus is disengaged."
+            }
+        }
+        DESCRIPTION "Lupersus has been sent by God to guard a holy hermit, provide him with food, and, occasionally, lead those in need of advice to the hermit who can provide it. He cannot speak, and has no wish to do so. While his main focus is on the hermit, Lupersus is generally compassionate, and helps those in trouble whom he finds within his range. Sometimes he leads them to safety, but most people do not trust a wolf. In those cases, he chases them to safety."
+    }
+
+    #tBCK1ez55kE71IpXi3XGNtAO ^"Seferiel" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 5
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 5
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Soak" INTEGER 20
+            ^"Fatigue Levels" STRING "OK, 0/0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Vis" STRING "10 pawns of Ignem in the sword."
+            ^"Appearance" STRING "A large man, with golden-tinged skin and burning-bright hair, dressed in a white robe that shines like the stars. He carries a burning greatsword."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Just" +3
+            "Curious" +2
+            "Merciful" +2
+        }
+        COMBAT {
+            "Flaming Greatsword" INIT 18 ATTACK 21 DEFENSE 18 DAMAGE 25
+        }
+        ABILITIES {
+            "Awareness" SCORE 5 SPECIALTY "casting magic"
+            "Charm" SCORE 3 SPECIALTY "magi"
+            "Divine Lore" SCORE 10 SPECIALTY "angels"
+            "Great Weapon" SCORE 7 SPECIALTY "greatsword"
+            "Leadership" SCORE 7 SPECIALTY "magi"
+            "Magic Theory" SCORE 10 SPECIALTY "theological implications"
+            "Order of Hermes Lore" SCORE 10 SPECIALTY "interactions with the Church"
+            "Theology" SCORE 10 SPECIALTY "angelology"
+        }
+        POWERS {
+            ^"Magic" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more points"
+                    ^"Initiative" STRING "+18"
+                    ^"Form" STRING "by effect"
+                }
+                DESCRIPTION "Seferiel can duplicate any effect of Hermetic magic, at a cost of 1 Might Point for every two magnitudes of the Hermetic effect. There is no limit, other than his remaining Might Pool, on the number of points he can spend on a single effect. This includes ritual effects, for which he needs neither vis nor long periods of time."
+            }
+            ^"Spirit Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Seferiel can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically."
+            }
+            ^"Subtle Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Seferiel can change his appearance to look like any human being. His statistics do not change."
+            }
+        }
+        DESCRIPTION "Seferiel is an angel with special responsibility for Hermetic magi. Most of the time, he seeks to draw them closer to God, but sometimes he acts as the instrument of God’s vengeance against those who are particularly wicked. His attitude depends slightly on whether magic is inherently sinful in your saga; his suggested courses of action depend on this more strongly. However, either way he likes Hermetic magi, in general, and finds them fascinating people. He often pretends to be a magus in order to get to know people better, and find out what they are really like. Seferiel sometimes takes an interest in a particular magus, one whom he sees has great potential, and is a suitable antagonist for the Plagued by Angel Story Flaw. His divinely appointed mission is, however, to the Order as a whole, and he travels across Europe to bring God’s message to as many magi as possible."
+    }}

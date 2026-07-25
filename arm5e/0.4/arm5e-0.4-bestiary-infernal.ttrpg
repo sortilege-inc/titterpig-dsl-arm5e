@@ -1,0 +1,226 @@
+EXTENSION "ArM5_Bestiary_Infernal" {
+    NAME "Ars Magica Fifth Edition - Bestiary: Infernal Creatures"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Creature"
+
+    #tIsBDBUQIR0BzD1YwDSYbPVi ^"Michael" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20) (Michael always takes wounds as a Size 0 creature, even if his current Size is different.)"
+            ^"Vis" STRING "2 pawns of Muto in his heart (Infernally tainted)"
+            ^"Appearance" STRING "Michael appears as he needs to for his latest role. As a demon, he doesn’t need, nor does he have, a “natural” form."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +3
+            "Wrathful" +3
+            "Enjoys complex plans" +1
+        }
+        COMBAT {
+            "Michael does not normally fight, and if he does he uses whatever weapons are suitable for his current disguise."
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "running away"
+            "Awareness" SCORE 4 SPECIALTY "victims"
+            "Craft (practical jokes)" SCORE 8 SPECIALTY "painful and humiliating ones"
+            "Folk Ken" SCORE 5 SPECIALTY "figuring out what will make someone most angry"
+            "Guile" SCORE 10 SPECIALTY "pretending to be someone else"
+            "Intrigue" SCORE 3 SPECIALTY "maneuvering people into his plots"
+        }
+        POWERS {
+            ^"Change Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Michael can change his appearance to match that of any human being. The change includes clothes and other equipment, as necessary."
+            }
+            ^"Working Material" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Michael can create whatever he needs to set up a particular practical joke."
+            }
+        }
+        DESCRIPTION "Michael (he likes taking the name of a famous angel) is a minor demon who tempts people to wrath. He sets up elaborate, painful, and humiliating practical jokes, and makes sure that he is seen in the form of one of the victim’s friends while doing so. If possible, he ensures that the victim sees him, in the form of the friend, laughing at their misfortune before running away.\n\nHe normally stays around to watch the resulting confrontation, because if it isn’t heated enough he sets up another, even more hurtful, joke. He is especially happy if both friends become angry, and the friendship is ruined. Since both parties feel that the other was unreasonable, sometimes they can nurse their anger for years, which is exactly what Michael wants.\n\nWhile Michael’s jokes are normally painful and humiliating, they are almost never fatal. He wants people to sin so that they damn their souls, not die and possibly go to Heaven."
+    }
+
+    #te8dZ9JhRwgNvf5YhX1zCHUH ^"Polandrus" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1/–1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –x (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "1 pawn of Animal in each of four large canine teeth, all Infernally tainted."
+            ^"Appearance" STRING "An extremely large, jet black wolf, with red eyes."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Envious" +3
+            "Proud" +2
+            "Calculating" +2
+        }
+        COMBAT {
+            "Bite" INIT 18 ATTACK 11 DEFENSE 9 DAMAGE 8
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 3 SPECIALTY "livestock"
+            "Bargain" SCORE 7 SPECIALTY "for sins"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+            "Charm" SCORE 4 SPECIALTY "frightened people"
+            "Folk Ken" SCORE 3 SPECIALTY "peasants"
+            "Guile" SCORE 8 SPECIALTY "when making deals"
+            "Hunt" SCORE 6 SPECIALTY "livestock"
+            "Language" SCORE 6 SPECIALTY "making deals"
+            "Leadership" SCORE 4 SPECIALTY "wolves"
+            "Survival" SCORE 5 SPECIALTY "woods"
+        }
+        POWERS {
+            ^"Calm Person" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+18"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Makes the target person unnaturally calm about talking to a large wolf. It doesn’t lessen their fear, just the sense that it is something they should act on immediately."
+            }
+            ^"Dominate Wolves" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+18"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Polandrus can establish absolute control over any wolf. The wolf doesn’t like it, but Polandrus doesn’t care. This power applies to mundane wolves, wolves with Might scores, and to characters who can naturally take the form of a wolf, including shapechangers, lycanthropes, skinchangers, and Bjornaer with wolf heartbeasts, but not including magi who change using spells. Once established, the domination lasts until Polandrus decides to drop it, the dominated wolf enters a Dominion aura of level 3 or higher, or someone dispels the power."
+            }
+        }
+        DESCRIPTION "Polandrus targets livestock farmers. He dominates a few wolves, and then kills some livestock, making sure that someone sees the wolves do it. A little later, he confronts the peasant in question, offering to ensure that the wolves do not attack for a week if the farmer does something innocuous, such as not wear a particular tunic. Polandrus comes back every week, and the requirements gradually become sinful, and more and more heinous. By the end, the wolf relies more on the threat to expose the farmer’s deeds than on the threat to the livestock.\n\nPolandrus never attacks people unless he is attacked first."
+    }
+
+    #txe5rdIrHex7iVZR56tO9qqc ^"Bartholomew" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 5
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Excellent adviser on money matters 5 (local)"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "10 pawns of Mentem vis, one in each of his fingers. Infernally tainted."
+            ^"Appearance" STRING "Bartholomew appears as an older, but still vigorous, merchant. He is plump, but not fat, and while he never appears positively cheerful, he also never seems angry, or impatient, at least not with other merchants. His clothes are of excellent quality and taste."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Slothful" +3
+            "Gregarious" +2
+            "Retiring" -2
+        }
+        COMBAT {
+            "Fist" INIT -1 ATTACK -1 DEFENSE -1 DAMAGE -1
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 6 SPECIALTY "trade routes) (Three of these, for the area where he lives, the larger area including it, and the whole of Europe"
+            "Artes Liberales" SCORE 2 SPECIALTY "arithmetic"
+            "Bargain" SCORE 10 SPECIALTY "trade goods"
+            "Charm" SCORE 5 SPECIALTY "merchants"
+            "Etiquette" SCORE 4 SPECIALTY "merchants"
+            "Folk Ken" SCORE 8 SPECIALTY "merchants"
+            "Guile" SCORE 10 SPECIALTY "trading"
+            "Intrigue" SCORE 5 SPECIALTY "market politics"
+            "Language" SCORE 6 SPECIALTY "trade talk"
+            "Latin" SCORE 6 SPECIALTY "ecclesiastical"
+            "Profession (merchant)" SCORE 10 SPECIALTY "cloth"
+        }
+        POWERS {
+            ^"Merchant’s Blessing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The recipient of this blessing seems trustworthy to most people, and gets a +3 bonus on all social rolls to do with trading. People react to him as if he has an excellent reputation for honesty, fair dealing, and getting high quality goods cheaply. The blessing lasts for a week, unless Bartholomew chooses to renew it."
+            }
+            ^"Merchant’s Curse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The inverse of Merchant’s Blessing, this curse makes people treat the victim as if he had a strong reputation for dishonesty, cheating and reneging on deals, and selling shoddy goods at inflated prices. He also has a –3 penalty to all social rolls to do with trading. The curse lasts for a week, unless Bartholomew chooses to renew it."
+            }
+            ^"Merchant’s Knowledge" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "automatic"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Bartholomew knows what someone in receipt of his curses or blessings is doing with their business."
+            }
+            ^"Project Blessing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Bartholomew can bless a particular commercial venture, so that chance favors it whenever possible. This results in a very successful trading venture. The blessing only lasts for one day, which isn’t normally long enough to have an effect, but Bartholomew can renew the blessing every day, if he so chooses."
+            }
+            ^"Project Curse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The inverse of Project Blessing, this effect makes everything that could go wrong, go wrong. It takes at most a month to drive someone to bankruptcy through this power. Just as the blessing, the curse only lasts for one day at a time."
+            }
+        }
+        DESCRIPTION "Bartholomew is a well-established and moderately successful merchant in a trading city. He is known for being lazy, but still making an extremely comfortable living from his trade. He also willingly gives advice to other merchants, and they have noticed that following his advice makes them rich, while disregarding it makes them poor. Most people in the city also think that Bartholomew attends church regularly. In fact, being a demon, he has never set foot inside a consecrated building. He has, on the other hand, made substantial donations to the Church, and those donations are well known.\n\nThe advice he gives is good business advice in itself, but he normally backs it up with his blessings, at least for a while. If his advice is ignored, he uses his curses to make sure that people suffer. The demonic features of his advice are very, very subtle. Merchants following them often find that they need to work on Sundays, although Bartholomew does not explicitly suggest that, and that they are often away from home on religious holidays, and thus unable to attend their local church. Further, he gives advice about charity, suggesting that the merchant give money away to reinforce his social standing. He also gives extensive advice on how to calculate how much to give, so that it doesn’t cause the merchant financial problems.\n\nThis has the effect of making the merchant feel that he is doing a lot of good by giving alms, while removing any actual virtue it has. Anyone following Bartholomew’s advice gives only for their own glory, and thus earns no merit. They are sinners, but they don’t realize that they are, and thus they do not see the need to repent and reform. Bartholomew’s strategy is subtle, but it wins many souls for Hell."
+    }}

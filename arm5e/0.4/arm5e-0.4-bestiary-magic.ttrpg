@@ -1,0 +1,206 @@
+EXTENSION "ArM5_Bestiary_Magic" {
+    NAME "Ars Magica Fifth Edition - Bestiary: Magic Creatures"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Creature"
+
+    #tnaYy6uGcmjgsFVEqYK8ZcHb ^"Ghostly Warder" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Vis" STRING "None. Magi cannot render other characters’ Ghostly Warders down for vis."
+            ^"Appearance" STRING "An older peasant woman, rather gaunt, dressed in simple but well-repaired clothes and carrying the tools used in some part of daily life. This may be a distaff and spindle, or a pot, or a broom; it changes from time to time. Note that she is invisible to characters without an appropriate Virtue."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Protective" +3
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 5 SPECIALTY "places children get lost"
+            "Awareness" SCORE 5 SPECIALTY "where her children are"
+            "Church Lore" SCORE 1 SPECIALTY "funerals"
+            "Divine Lore" SCORE 1 SPECIALTY "after death"
+            "Folk Ken" SCORE 4 SPECIALTY "people lying to her children"
+            "Living Language" SCORE 5 SPECIALTY "scolding"
+            "Magic Lore" SCORE 2 SPECIALTY "ghosts"
+            "Profession (housewife)" SCORE 5 SPECIALTY "cleaning"
+        }
+        POWERS {
+            ^"Kinesis" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The ghost can move an object as if she were still physically present. One expenditure of Might allows her to move one object until she puts it down again. She has no combat Abilities, so she cannot fight wielding an object as a weapon."
+            }
+        }
+        DESCRIPTION "Virtues and Flaws: None (may take Virtues and Flaws as a grog, if desired by the troupe.) Personality Traits also include two others chosen by the player. Combat is n/a: The ghost is non-physical, and so cannot be harmed by combat or harm others in combat. This Ghostly Warder (see the Virtue, page 43) was the character’s mother, aunt, or possibly grandmother. She still gives him all the advice he received as a child, such as to wear warm clothes and stay away from the river, but she is also quite perceptive, both about people and about mundane events."
+    }
+
+    #tTpROaIYMKgtUefapmy7z9IZ ^"A Magical Wolf" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" STRING "None"
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "n/a"
+            ^"Wound Penalties" STRING "–1 (1–4), –x (5–8), –x (9–12), Incapacitated (13–16)"
+            ^"Vis" STRING "4 pawns of Animal, in head."
+            ^"Appearance" STRING "A gray male wolf, slightly larger than normal, but only slightly, and looking extremely healthy. His eyes, in particular, sparkle more brightly than should be possible."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Leader" +3
+            "Loyal" +2
+        }
+        COMBAT {
+            "Bite" INIT 12 ATTACK 10 DEFENSE 14 DAMAGE 9
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 6 SPECIALTY "game trails"
+            "Brawl" SCORE 6 SPECIALTY "biting"
+            "Hunt" SCORE 7 SPECIALTY "in a pack"
+            "Living Language" SCORE 5 SPECIALTY "hunting terminology"
+            "Survival" SCORE 6 SPECIALTY "forests"
+        }
+        POWERS {
+            ^"Pack of One" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The wolf can create five duplicates of himself, who can then fight as a trained group. For these purposes, treat the wolf as having a Leadership score of 5, so that he can get the full +15 group bonus to his attacks. The power lasts until the pack brings down its opponent, which may be a group, or disengages from the fight. As the pack is really all one creature, the nomination of a vanguard is arbitrary. Further, the group does not need to disengage and reform when the vanguard is killed; it can seamlessly transfer the role to another wolf. Finally, the wolf only dies if all the copies are killed. When the duplicates vanish, the least wounded wolf remains."
+            }
+            ^"Terrifying Howl" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Anyone who hears the wolf’s howl is struck with fear of the wolf and of wilderness places away from the haunts of men. Someone already in a house will merely not want to leave. Overcoming this fear completely requires a Brave roll against an Ease Factor of 12. Acting sensibly while responding to it, such as heading back to the village carefully, requires a Brave roll against an Ease Factor of 6. Those who fail the easier roll simply flee in panic."
+            }
+            ^"Wolf Lord" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Any wolf the magical wolf strikes in deadly combat dies instantly. In addition, the magical wolf can make mundane wolves follow his instructions even when he is not around, as long as the instructions are quite simple."
+            }
+        }
+        DESCRIPTION "The magical wolf does not care for such human niceties as names, and isn’t particularly interested in human beings. Instead, he watches over all the wolves in his range, doing what he can to ensure their safety, health, and food supply. Sometimes, this means hunting wolves down himself, to keep population down, and in that case he removes the weak from the packs. While he has no interest in human beings, he does see that they are important, and might be willing to negotiate with a village. On the other hand, he might decide to drive them out. This magical wolf has the same reactions to The Gift as a mundane animal, although other magical wolves may not."
+    }
+
+    #tHTTWw5G7g1dMzktqSorLCWU ^"Stellatus, the Dragon" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Ignem"
+            ^"Size" INTEGER 8
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER 7
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 8
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 0
+            }
+            ^"Reputations" LIST ["The Powerful Dragon who Lives in the Mountains (local) 5"]
+            ^"Soak" INTEGER 20
+            ^"Fatigue Levels" STRING "OK, 0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–13), –3 (14–26), –5 (27–39), Incapacitated (40–52)"
+            ^"Vis" STRING "5 pawns of Ignem vis in each eye."
+            ^"Appearance" STRING "An enormous lizard with great wings, covered in scales of red so dark as to be almost black. His eyes are lit from within by a smoldering orange glow. Although he is a little on the small side for a dragon, he is larger than most houses."
+            ^"Source" STRING "Core Rules"
+        }
+        VIRTUES {
+            ^"Second Sight"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 22 DEFENSE 18 DAMAGE 20
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 5 SPECIALTY "history"
+            "Awareness" SCORE 8 SPECIALTY "human beings"
+            "Brawl" SCORE 7 SPECIALTY "claws"
+            "Divine Lore" SCORE 1 SPECIALTY "saints"
+            "Faerie Lore" SCORE 2 SPECIALTY "knights"
+            "Folk Ken" SCORE 2 SPECIALTY "scholars"
+            "Guile" SCORE 4 SPECIALTY "keeping secrets"
+            "Infernal Lore" SCORE 0 SPECIALTY "undead"
+            "Magic Lore" SCORE 8 SPECIALTY "dragons"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "Tytalus"
+            "Second Sight" SCORE 8 SPECIALTY "magical invisibility"
+        }
+        POWERS {
+            ^"Human Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The dragon can assume the form of a human being. This is always the same form, a man with dark hair and eyes, in the prime of life. The transformation lasts until he eats or drinks, or until Stellatus uses the same power again to change back. The dragon has all his powers in human form, and the same Characteristics, but he is much weaker in combat and thus changes back if he needs to fight."
+            }
+            ^"Instill Loyalty" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Stellatus can make any individual whom he can see totally loyal. This does not remove free will, but the victim is completely loyal to the dragon, and this loyalty lasts as long as Stellatus is alive."
+            }
+            ^"Fiery Breath" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Stellatus can breathe fire. The fire extends in a cone from his mouth, out to a distance of 20 paces, where it is 20 paces across. The fire has an intensity of +15. Dodging it is a Qik + Athletics roll against an Ease Factor of 9. A failure means that the character is engulfed in the flames, taking +45 damage, a success by 3 points or less means that a limb is covered, for +30 damage, a success by 4 to 6 points (that is, success against Ease Factor 12) means that the character is only brushed by the flames, for +15 damage, while success by 7 points or more (that is, success against Ease Factor 15) means that the character dodges out of the fire entirely."
+            }
+            ^"Master of Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more Might Points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Stellatus can control fire. He can duplicate any Hermetic Rego Ignem spell of fourth magnitude or less at the cost of 1 Might point. For every additional Might point he spends, the level of the spell increases by one magnitude."
+            }
+        }
+        DESCRIPTION "Stellatus is an ancient dragon who has laired under the same mountain range for centuries. Most of the time he lies quietly in his lair, contemplating his treasure, or travels the area around in human form (he can go for weeks without eating or drinking). Every couple of centuries, he erupts in draconic form to carry out some plan or seize some item, and every decade or so some would-be hero disturbs him. The dragon is aware of The Gift, but it inspires him with curiosity, making him less likely to simply kill magi who enter his lair. A Tytalus maga did spend some time challenging the dragon in various ways, and although Stellatus eventually killed her by rigging an entirely mundane rock-fall trap, he quite enjoyed the experience. He regards himself as superior to all Hermetic magi, and is firmly convinced that he is immune to their magic. With a Magic Resistance of 50, this is almost, but not quite, true."
+    }}

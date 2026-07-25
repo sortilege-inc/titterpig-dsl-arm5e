@@ -1,0 +1,856 @@
+EXTENSION "ArM5_Laboratory" {
+    NAME "Ars Magica Fifth Edition - The Laboratory"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Lab Total" "Technique + Form + Intelligence + Magic Theory + Aura Modifier"
+            }
+            DESCRIPTION "You use one sum, called the \"Lab Total,\" frequently in calculating your ability to accomplish various laboratory tasks. This total varies from task to task because it uses the Technique and Form appropriate to the task at hand. The Lab Total for a particular Technique and Form is called the \"Technique Form Lab Total.\" If an activity is based on a Lab Total, the magus needs a laboratory to do it. If it is not, he does not."
+        }
+        #tzjlND5wD9PEiW2wIwKCMPSz ^"Creating a Laboratory" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A laboratory must be created in a space with at least 500 square feet of floor area, and a ceiling at least ten feet high. It must also be well protected from the elements; normal canvas is not sufficient, but a wooden wall is. A character must have a Magic Theory score of at least 3 to set up a laboratory, and overall it takes two seasons of work. The first season creates a basic laboratory, which makes laboratory activities possible but imposes a –3 penalty to all Lab Totals. The second season completes the process, making a standard laboratory and removing the penalty."
+        }
+        #te703HkOsSInXeLNQO1kWB7g ^"Fixing Arcane Connections" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A magus who has an active Arcane Connection (see page 84) may make it permanent by spending a season of laboratory work and one pawn of Vim vis. The connection must be active at the beginning of the season, but need not be such as to naturally last for the whole season."
+        }
+        #tJEDEMItI30qNVARKedl2QAF ^"Vis Extraction" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Vis Extraction" "One tenth (round up) of Creo Vim Lab Total pawns of Vim vis"
+            }
+            DESCRIPTION "You can extract raw vis from a magical environment (that is, any area with a magical aura) by focusing the magical energy into a physical form. For each season that you spend extracting vis from the environment, calculate your Creo Vim Lab Total. For every ten points or part thereof in the result, one pawn of Vim vis is produced."
+        }
+        #tcqzz7MYkVtJTfj60RIrx8jQ ^"Vis Transfer" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A magus can easily move raw vis from one physical form to another in his laboratory. This takes a day (from sunrise to sunrise), and can be done while the magus is engaged in another laboratory activity. The maximum amount of vis that an item can contain is determined from the Material and Size tables on page 97. When moving raw vis into an item, rather than preparing it for enchantment, a magus may move any number of pawns up to the capacity of the item. An item that has been opened for enchantment (see page 97) cannot contain raw vis as well. Note that this changes the physical thing that the vis is in, not the Hermetic Art to which the vis is attuned."
+        }
+        #txVHnda6amkDvuHHeARetJhE ^"Vis Use" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Vis Limit" "Magic Theory x 2 pawns per season"
+            }
+            DESCRIPTION "The amount of raw vis that a magus may use in a single season is limited to twice his Magic Theory score. The magus cannot successfully integrate any more vis into a single project. In many sagas, vis will be rare enough that this limit will not come into play."
+        }
+        #tFKxCyzWMpy0PXMbUWBv3c5s ^"Learning Spells from a Teacher" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Maximum Total Levels" "Teacher's highest applicable Lab Total"
+                "Maximum Levels in One Technique and Form" "Teacher's Lab Total in that Technique and Form"
+                "Highest Level of an Individual Spell" "Student's Lab Total in the Technique and Form of the Spell"
+            }
+            DESCRIPTION "You may learn spells from another magus who is willing to spend a season teaching you. These spells may be of different Techniques and Forms, so a magus could teach you a Creo Ignem spell and a Perdo Terram spell in the same season. The number of levels of spells you may learn in one season is equal to the teacher's highest applicable Lab Total. The number of levels of spells of a given Technique and Form combination that you may learn in a given season is equal to the teacher's Lab Total in that combination. The highest individual spell level you may learn is equal to your Lab Total in the Technique and Form of the spell. Even when you learn a spell from a teacher, it is your Wizard's Sigil that manifests in your version; you actually invent the spell yourself, but with constant guidance from the teacher."
+        }
+        #thk0vcg3bDx9E2EIVEMqLGvw ^"Inventing Spells" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Similar spell bonus" "+1 per five levels of the highest level similar spell"
+                "Points per season toward invention" "Lab Total − spell's level (per season)"
+            }
+            DESCRIPTION "Inventing a spell is more difficult than learning one, but of course you don't need a teacher to do it. First, decide the effects of the spell you wish to invent; you may pick a spell described in the Spells chapter to invent, invent a variant of a spell listed there, or you can make up something completely on your own. If you want to duplicate an existing spell, use the statistics given for it in the Spells chapter, but include your wizard's sigil. If you create a variant of a spell, determine whether you are changing the spell's range, duration, target, or a combination of those; the method for determining the new spell's level is described under \"Changing Ranges, Durations, and Targets\" on page 114. When you invent a completely new spell you must describe it fully, both in terms of its mechanics and how it fits into the medieval paradigm, and make sure that it takes into account the limits of magic. Once you have determined the specifics of the spell, you must determine if you can actually invent it, then figure out how long it will take. You can only invent a spell if your Lab Total exceeds the spell's level. You get a bonus for knowing a similar or variant spell (+1 per five levels of the highest level similar spell). Any requisites that the new spell has also count in figuring your Lab Total. For each point that your Lab Total exceeds the spell's level, you accumulate one point per season. When you accumulate points equal to the level of the spell, you invent it. It is also possible to invent a spell based on another magus's Laboratory Text (see page 101). This is much faster, and most spells that magi know are invented in this way."
+        }
+        #tBeyPuXgCPo3vUCQENf7IAVy ^"Example: Inventing Spells" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. Tillitus of House Bonisagus wants to invent some warding spells, as minor mystical creatures seem to give him a lot of trouble. General wards of this sort are Rego Vim (see page 161), and can be invented at any level. Semita Errabunda, Tillitus's covenant, has a Magic Aura of 5, and Tillitus himself has Intelligence +5, Magic Theory 3, +2 for Puissant Magic Theory, his free Bonisagus Virtue, Rego 5, and Vim 5. Thus, his Rego Vim Lab Total is 25. Consulting the Spells chapter, Matt, Tillitus's player, sees that a separate spell must be invented for each of the four Realms. He decides to start by inventing a good ward against magical creatures. He picks level 20, as this is less than his Lab Total. Tillitus's Lab Total of 25 exceeds the spell level, 20, by 5, so every season Tillitus gains 5 points towards the spell. Since the spell is level 20, that means it will take him four seasons, a whole year, to invent the spell. Matt isn't sure that he wants to spend that much time on it, so he looks at a lower level spell. If Tillitus tries to invent a level 12 spell, he gets 13 points towards it every season, and thus can invent it in a single season. If he tries to invent a level 13 spell, he gets 12 points per season, so it would take him two seasons. Matt thus decides that Tillitus will invent a level 12 ward against magical creatures."
+        }
+        #t2fdvMHP7ScuvdnWHfz2N7Mk ^"Magical Enchantments" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Magical enchantments are created through a type of ritual magic, and therefore require a great deal of time, effort, and magical resources. It often requires raw vis to create magical enchantments. The process of enchanting an item transforms the vis, linking the magic power inexorably to the item in which it is instilled. Vis used for enchantments is thus transformed so that it is no longer usable for any other purposes, and it can never be extracted from the enchantment it is used to create. Magi sometimes refer to the magic of enchantments as \"spun,\" rather than \"raw,\" vis. Effects matching those of Ritual spells may not be placed in any enchantment. The elaborate rituals needed to control that much magical power simply cannot be contained in an unthinking physical item. The exception is spells that are Rituals only because the spell level is over 50, not because of Duration, Target, or major effect, may be placed in items."
+        }
+        #tPpD0W0rw7nhnfR03ON5vwkU ^"Enchantment Summary" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a sidebar summarizing the enchantment process. 1. Choose type of item. Invested Items: Must be opened to enchantment, expensive. Can contain many effects, which can be powerful. Lesser Enchantments: Need not be opened, cheap. Can only contain one effect, and the creator must be able to make it in a single season. Charged Items: No vis cost, can always be created in a single season. Run out. 2. Open item for enchantment (Invested Items only). Uses a number of pawns of Vim vis equal to the product of the material base and the size multiplier, from the Size and Material bonuses. A magus cannot use more than 2 x Magic Theory pawns of vis in a single season. 3. Invest effect. Invested Items and Lesser Enchantments: For every point by which your Lab Total exceeds the level of the effect, you gain one point towards the effect per season. Once your points equal the level of the effect, it is invested. You must invest a Lesser Enchantment in one season. Uses a number of pawns of vis matching the Technique or Form of the effect equal to the level divided by ten (rounded up). Again, a magus cannot use more than 2 x Magic Theory pawns of vis in a single season. Charged Items: For every five points or fraction by which your Lab Total exceeds the level of the effect, you get one charge. 4. Invest further effects (Invested Items only): You can use a number of pawns of vis equal to the number of pawns spent opening the item to invest effects. Once the number of pawns used to invest effects equals the number of pawns used to open the item, the item is full, and no further effects can be added."
+        }
+        #tfSidXnWOSI4aeGXBMwDs5z4 ^"Invested Items" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Invested items must be prepared for enchantment before any powers are instilled, but multiple effects can be instilled in one item. A magus may spend several seasons instilling one effect, and need not instill all desired effects in the item at once. The total number of pawns of vis expended when instilling effects may not exceed the number of pawns of vis spent to prepare the item for enchantment. Once the two numbers match, the invested device is \"full.\" It is not possible to remove an effect from a device to make room for a better one."
+        }
+        #tvEsUdLLrh3ZK1NExvKHf5t1 ^"Lesser Enchantments" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Lesser Enchantment Lab Total requirement" "Lab Total must be at least twice the adjusted level of the effect"
+                "Vis cost" "one pawn of appropriate vis for every ten levels or fraction of the effect"
+            }
+            DESCRIPTION "Lesser enchantments do not need to be prepared before a power is instilled, but only one power may be instilled. In addition, the creating magus must be able to instill the power in a single season; his Lab Total must be at least twice the adjusted level of the effect. Investing an effect in a lesser enchantment costs one pawn of appropriate vis for every ten levels or fraction of the effect, just as for an invested item, but there is no need to spend any Vim vis to prepare the item. The total amount of vis needed is just the one pawn per ten levels or part required to instill the effect. The amount of vis that a magus can expend on a lesser enchantment is limited by the material and size of the object being enchanted (see page 97), just as for an invested device. A lesser enchantment can never receive any further magical powers; once the magus has spent a single season on it, the work is complete."
+        }
+        #tF1TUCQuG6lSZ3gPLBTg5ogD ^"Charged Items" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Charges" "one charge for every 5 points, or fraction thereof, by which Lab Total exceeds the level (one charge if exactly equal)"
+            }
+            DESCRIPTION "Charged items do not cost vis, but can only be use a limited number of times. It takes a single season to create charged items. Design the level of effect for the charged item using the normal rules for enchanted items, with the exception that you do not have to pick a number of uses per day. A charged item can be used as desired until the charges run out. Once you have chosen the effect, you spend a season and compare the your Lab Total to the level of the effect. For every 5 points, or fraction thereof, by which you exceed the level, you get one charge, but if your Lab Total is exactly equal to the level, you get one charge rather than none. If your Lab Total exceeds the level by 1 to 5 points, you still only get one charge. If your Lab Total is less than the level of the effect you cannot create charged items of this kind. You may split the charges produced between as many physical objects as you wish, although each object must be identical. The objects could be arrows, which cast the spell when they strike the target, or potions, which have their effect on the person drinking them, or anything else you can imagine. You may also make fewer charges than your Lab Total would permit, if you so desire. Charged items may be of any material or size, as they do not have to hold vis. Appropriate shapes and material do grant bonuses to the Lab Total, as normal."
+        }
+        #tA0If9lrFSwRHluEq7kzTLr6 ^"Charged Items Example" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. Mari Amwithig wants to make a wand that casts Agony of the Beast, but she doesn't have much vis, so she considers doing it as a charged item. Agony of the Beast is a level 15 effect, and for a charged item she decides to leave it unchanged. She isn't planning to use the item against creatures with magic resistance, and it doesn't really matter if other people can use it. Her Perdo Animal Lab Total is 15 (Perdo 12 + 3 from Puissant Art) + 7 (Animal) + 3 (Intelligence) + 4 (Magic Theory) + 5 (Magic aura at Semita Errabunda), a total of 34. As she knows the spell, she adds a similar spell bonus of +3, because the spell is third magnitude. In addition, a wand gives a +4 bonus to destroying things at a distance. This gives her a final total of 41. She could create the item even if she didn't know the spell, but she does get some benefit from her prior knowledge. 41 is 26 higher than the level of the effect, which means she gets six charges, four from the four fives by which she exceeds the level, and one from the one point that is the final fraction. Neil, Mari's player, decides to look at making a lesser enchanted item instead, because Mari's Lab Total is a lot higher than the level of the spell."
+        }
+        #trcHGYeX2KkSjgKm1s6dilXu ^"Shape and Material" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The first thing you must do for any magical device is choose the physical shape of the item you wish to enchant — both the shape of the item and the item's material. Look at the Shape and Material Bonuses table to see what sorts of items have bonuses relevant to the types of enchantments you wish to place. You should also pay attention to mundane criteria as well as magical. Before you begin the process of enchantment, you must acquire the item you will enchant, and note its size and composition."
+        }
+        #tqE5Q2XQ0anbVhUlRmKTXkJY ^"Material Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Material", "Base Points"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "cloth, glass" "1"
+                "wood, leather" "2"
+                "bone, soft stone" "3"
+                "hard stone" "4"
+                "base metal" "5"
+                "silver" "6"
+                "gold" "10"
+                "semi-precious gem" "12"
+                "precious gem" "15"
+                "priceless gem" "20"
+            }
+            DESCRIPTION "The source presents the Material and Size Tables together as a single sidebar containing two tables. This record holds the Material table, giving Base Points for each material."
+        }
+        #t2RDuX2cLAiZtujH6FzaDWlj ^"Size Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Size", "Example", "Multiplier"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "tiny" "ring, bracelet, pendant, any gem" "x1"
+                "small" "wand, dagger, belt, cap" "x2"
+                "medium" "sword, tunic, boots, skull" "x3"
+                "large" "staff, shield, cloak, skeleton" "x4"
+                "huge" "boat, wagon, human body, small room" "x5"
+            }
+            DESCRIPTION "The source presents the Material and Size Tables together as a single sidebar containing two tables. This record holds the Size table, giving an Example and a Multiplier for each size category."
+        }
+        #tWXb5QCAHdEjYAKuiJS6UExT ^"Enchanted Item Example (Shape and Material)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. Mari turns her attention to making her wand as a real enchanted item. A wand gives a +4 bonus to destroy things at a distance, which makes it a good choice. Animal bone also gives a +4 bonus. Unfortunately, Mari's Magic Theory is only 4, so she would get no additional bonus. She decides to stick with wood, which is less conspicuous."
+        }
+        #tjsQsF3HRBtzmMzWdvvuatg1 ^"Preparation for Enchantment" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Invested devices are powerful items that require special preparation before any effective enchantments can be performed on them. Once you have the physical item to enchant, you must spend a season preparing it. To do this, you must simply expend the time and a number of pawns of raw Vim vis equal to the number derived from the Material and Size table for the form you have selected. It is possible to enchant only part of an item. When you enchant a part of an item, you must use the number of pawns of vis that would be required to enchant that part if it were a separate item. It is also possible to prepare a compound item for enchantment, so that you get the shape and material bonuses from all the components for all effects. There are two ways to do this, but you must select one when the item is first prepared, and the choice cannot be changed later. Work out how many pawns of vis it would take to prepare each component for enchantment. You may then either prepare it with a number of pawns equal to the sum of the pawns for each component, or with a number of pawns equal to the highest required by a single component. The example staff (wooden staff shod in iron with a quartz crystal on top) would take eight pawns to prepare the staff alone (a large wooden item), five pawns for the iron shoeing (tiny base metal item), and twelve pawns for the quartz (tiny semi-precious gem). Thus, the whole complex can be prepared at a cost of twelve pawns or twenty five pawns. A compound item of this sort may not contain more components than your Magic Theory score. It is not possible to \"partially\" open a single item; a wooden staff must always be opened with eight pawns of vis. It is possible for an item to have a vis capacity that makes it impossible for a magus to open it for enchantment, as no magus can use more than twice his Magic Theory score in pawns of vis in a season. An item that has been prepared for enchantment is useless for any magical purpose until it is attuned as a talisman, or instilled with magical powers."
+        }
+        #tnZRXTIxtXhSOjuTtLQ1mH5P ^"Enchanted Item Example (Preparation)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. A wooden wand is a small wooden object, and thus can only contain four pawns of vis. As Mari is making a Lesser Enchantment she doesn't need to open the item, but she can still only invest four pawns-worth of effects. This isn't a problem; with a Lab Total of 41 the highest level effect she can invest is 20, which takes just two pawns."
+        }
+        #tIHCrZsXgnvTkkBV21o5yjQS ^"Talisman Attunement" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Talisman preparation capacity" "sum of the magus's highest Technique and highest Form (in pawns of Vim vis)"
+                "Lab Total bonus when instilling effects into talisman" "+5"
+            }
+            DESCRIPTION "Talismans help you concentrate and extend your magical powers. You can only attune an item as your talisman if you prepared it for enchantment yourself. Attuning an item takes one season, and can be done whatever your Lab Total. A magus can only have one talisman at once, and must completely destroy an older talisman before creating a new one. A magus cannot make a talisman for someone else. A magus may attune an item with instilled effects as his talisman, as long as he instilled all the effects personally. An item which has been worked on by more than one magus cannot be attuned as a talisman, though it is possible to attune an enchanted item if the primary creator was assisted in the lab by another Gifted individual. First, your talisman is considered to be a part of you as long as you are touching it; Personal range spells can affect your talisman, Personal range effects in the talisman can affect you, and you count as touching anything that your talisman is touching, and your Magic Resistance covers your talisman completely as long as you are touching it. Second, you always have an Arcane Connection to your talisman. Third, even when you're not touching your talisman, it receives the Magic Resistance offered by your Form scores. Finally, a talisman becomes very easy to enchant, and its capacity for enchantment is greatly increased. The maximum number of pawns of Vim vis that may be used to prepare a talisman is equal to the sum of the magus's highest Technique and highest Form. Unlike other items, the capacity of a talisman may be opened a bit at a time. When a magus instills effects into a talisman, he gets a +5 bonus to his Lab Total. However, it is impossible for any other magus to instill an effect in the device. In addition, you may open your talisman to one kind of magic attunement, based on the shape and material of the talisman, every time you prepare it for enchantment or instill an effect. Your talisman may be able to accept more than one kind of attunement, and can hold more than one attunement, but you can only invest one new attunement per season. Bonuses from attunements only apply when the magus is touching the talisman, and only the highest bonus applies. They apply to totals to cast Ritual, Formulaic and Spontaneous magic, but they do not apply to Magic Resistance or any laboratory activities. There is no limit to the number of attunements a talisman can have at one time, though you can only add one per season. There is no roll involved in giving your talisman an attunement bonus."
+        }
+
+    #t61akPUQ2vW9Emzn2G8fXHqD ^"Instilling Effects" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The effects instilled in enchanted items are designed like spells, but they are not spells. In particular, a magus may instill an effect in a device even if he does not know a spell with the same effect. Designing an effect takes no time above and beyond the time spent to instill the effect in the item."
+        }
+        #tn4NpUlvHOdc53664BPxd0A2 ^"Designing the Effect" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "First, choose an effect to be invested in your device and determine its level. An effect is like a spell, and must be fully defined, as a spell is. You may base the effect on a spell from the Spells chapter, or may invent your own effect. If inventing a new effect, you must design the effect carefully, as if inventing a new spell. The level of the effect is the equivalent of its spell level. You should confirm your effect level with the storyguide. Note the starting level of the effect, for future reference.\n\nAlthough the effect is based on the spell guidelines, it is not a spell, and the magus need not know the spell that would correspond to the effect. On the other hand, he gets a bonus if he does (see page 101).\n\nIn general, enchanted devices may not mimic the effects of ritual spells. There is, however, a single exception. Enchanted device effects may have a level over 50, as long as there is no other reason for the spell to be a ritual, such as long duration, large target, or major effect.\n\nAfter laying out the parameters of the effect, you must decide how frequently you use the effect. Consult the Effect Frequency table. The number you choose corresponds to a modifier, which is added to the level of the effect.\n\nNext you must specify the conditions under which the effect is triggered. A trigger can involve a command word or phrase, moving the item in a specific way (for example, waving or pointing a wand), a stance to be adopted, or anything physical that you can imagine. Most enchanted items cannot read thoughts, so the trigger action must be physical, not mental. By default, the trigger action must be performed by someone holding the item, although intention does not matter. Wands with offensive powers usually have very specific triggers, to make sure that they do not go off by accident; other items trigger whenever they are put on.\n\nIt is possible to modify an effect (see below) so that it is triggered by conditions in its immediate environment. This might include an item that triggers at sunrise and sunset.\n\nEffects can also be linked to a second effect (see below) so that they trigger depending on the result of the second effect. By linking an effect to an Intellego Mentem effect which works whenever the device is held it is possible to produce an effect triggered by thought or intention. Any number of effects can be linked to a single triggering, and may depend in different ways on the result of that effect. Thus, if two powers are linked to a mind-reading effect, one might trigger when the wielder thinks “Fire” with the intention of activating the item, and the other when the wielder thinks “Ice” with the same intention."
+        }
+        #tSIJw0ktraZZPS1QboFaGEWP ^"Effect Frequency Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Frequency", "Modifier"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1 use per day" "0"
+                "2 uses per day" "+1"
+                "3 uses per day" "+2"
+                "6 uses per day" "+3"
+                "12 uses per day" "+4"
+                "24 uses per day" "+5"
+                "50 uses per day" "+6"
+                "Unlimited" "+10"
+            }
+            DESCRIPTION "The source presents this as a sidebar. The number you choose corresponds to a modifier, which is added to the level of the effect."
+        }
+        #tBaaGTetGgT6McwKXpvDjy67 ^"Effect Modifications: Penetration" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "You may elect to give the effect non-zero Penetration. For every level you add to the effect’s level, that effect gets +2 Penetration. If there are multiple effects in a device, each must be given a Penetration score separately."
+        }
+        #tFRp50NUTh54i0Mg2llgcukl ^"Effect Modifications: Concentration" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "When investing an effect, you can arrange to have the device maintain concentration on the effect for the wielder. This option adds +5 to the effect’s level. Note that the wielder still needs to concentrate to change how the effect is used. For instance, a levitation belt that does not require concentration can hold someone in the air, but to move up or down the wielder must concentrate. Effects left to their own concentration start to wear off at sunset and sunrise. At these times the wielder must concentrate on the effect for a few moments to perpetuate it until the next sunrise or sunset, whichever comes first. This effect is useful for things like invisibility rings, which have their effect when put on, and then maintain concentration and invisibility until removed. This allows the wearer to end the effect at will, and start it again if the device still has uses left."
+        }
+        #tSjCkgrrHZDD8atkwpZ4FKbv ^"Effect Modifications: Effect Use" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "You can restrict the use of a device’s effect to a specific list of people (for example, to you and all your current apprentices) by adding +3 to the level of the effect. You work the identities of these people into the enchantment itself, so the list can never be changed, nor can the restriction be bypassed.\n\nYou may also restrict the use of the device to an undefined group, such as “only women,” or “only people in my direct magical lineage” by using a linked trigger (see below).\n\nOtherwise, invested devices can be activated by anyone who knows their trigger actions."
+        }
+        #t9GCAcwiLGVukSCPR7Cm6p8F ^"Effect Modifications: Effect Expiry" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Item Lasts", "Excess Modifier"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1 year" "x10"
+                "7 years" "x5"
+                "70 years" "x2"
+            }
+            DESCRIPTION "It is possible to instill an effect which will only work for a limited period. This period is counted from the first use of the effect, not from its creation. A single item may mix temporary and permanent effects. Limiting an effect in this way multiplies the amount by which the magus’s Lab Total exceeds the modified level of the effect, allowing him to instill effects more quickly. It does not allow him to instill effects he could not otherwise manage. Effect Expiry cannot be applied to Lesser Enchanted Items or Charged Items."
+        }
+        #tJzGIqeeMtNXd5RusRKwUnU5 ^"Effect Modifications: Environmental Trigger" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The effect is triggered by some feature of the item’s environment, rather than a specific action. The item is only sensitive to major magical features of the environment. Thus, it can respond to the events that end spell durations (sunrise, sunset, phases of the moon, etc.), and to changes in the modifier applied to magical activities by the local aura. This adds +3 to the level of the effect."
+        }
+        #tIGJy4tKgGEmf57limbtg62o ^"Effect Modifications: Linked Trigger" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The effect is triggered by the results of another effect in the same item. This is most commonly used to allow an item to activate on a mental command, or to limit the people who can use an item. An effect to allow mental activation needs to be able to read surface thoughts continually, with at least Touch Range. This is a base level of 15, +1 magnitude for Touch Range, +1 magnitude for Concentration Duration, +5 levels to have the device maintain concentration, for a final level of 30.\n\nIf a linked trigger effect is resisted, the item will not work, but the wielder can choose not to resist.\n\nA linked trigger adds +3 to the level of the triggered effect. The level of the triggering effect is not altered."
+        }
+        #tkn5BuQZjJyljBBKTYdewrws ^"Enchanted Item Example (Designing)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. Mari doesn’t want any Penetration, and just wants the basic Agony of the Beast effect. That sets the base level at 15. Neil notes that he can raise the level to 20 without the process costing any more vis or taking any longer, so he might as well. The only addition that seems worthwhile is additional uses per day, so he decides to have Mari make a wand that can be used 24 times per day, as that adds five levels to the base fifteen, for a final level of 20."
+        }
+        #tyut5MP6iuHDmJvbnWTvRhys ^"Constant Effect Devices" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a sidebar. An enchanted device can have a constant effect by giving the effect a duration of Sun, two uses per day, and an environmental trigger (sunrise or sunset). This adds two magnitudes (to raise the duration to Sun) and four levels (one for two uses per day and three for an environmental trigger) to the guideline given in the Spells chapter for the effect. Such a device has a truly constant effect; there are no “flickers” at sunrise or sunset."
+        }
+        #txXi186hQRJP24a7Hcw8yuSw ^"Instilling the Effect" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Once you have designed the effect that you want to invest in your device, you have to perform the ritual of joining. Your Lab Total (based on the Form and Technique scores appropriate to the effect) is compared to the total modified level of the effect. Several other modifiers apply to your Lab Total:\n\n• If the effect you are investing mimics a spell with casting requisites, those requisites apply to your Lab Total.\n• If any of the bonuses listed on the Shape and Material Bonuses table for the material or shape of the device you are using matches the effect being invested, that bonus is added to your Lab Total. For example, if you were enchanting a lamp to constantly produce magical light, you would add +7 to your Lab Total. Your total bonus from the shape and material of the device may not exceed your Magic Theory score. This represents the ability of the magus to tie all the correspondences into the enchantment.\n• For each effect already in the device that has a Technique and/or Form in common with the effect being invested, add +1 to your Lab Total. The bonus is +1 per preexisting effect, even if it matches both the Technique and Form.\n• If you know a spell that is similar to the effect you are instilling, add the magnitude of the spell to your Lab Total. You only get this bonus for the highest-level applicable spell.\n\nYou can only invest an effect if this modified Lab Total exceeds the modified level of the effect. For each point by which your total exceeds the level, you accumulate 1 point per season. When you accumulate points equal to the effect’s modified level, you invest the power. Thus, if your Lab Total is double the modified level of the effect, you can invest it in one season. For lesser enchantments, your Lab Total must be at least double the modified level of the effect.\n\nFor every 10 points, or fraction thereof, of the modified level of the effect, you must also expend one pawn of raw vis of an Art matching either the Technique or Form of the effect being invested. This vis is expended in the first season you begin investing the effect. But remember, a given item can only hold a limited number of effects. If the amount of raw vis required to instill an effect brings the total amount of raw vis used above the total used to prepare the item for enchantment in the first place, the effect cannot be invested. So if you are enchanting a silver dagger (which takes 12 pawns of vis to prepare for enchantment), you can only put 12 pawns worth of effects in it. If the dagger already has 10 pawns worth of effects, an effect that requires 3 pawns of vis (that is, an effect of level 21 to 30) does not fit; you cannot put it in the dagger."
+        }
+        #tdm3dFkD3l3kkRRiG5R9uu4k ^"Enchanted Item Example (Instilling)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. Mari has, as calculated before, a Perdo Animal Lab Total of 41, which allows her to invest a level 20 effect in a single season. She gets one pawn of Perdo vis and one pawn of Animal vis, and uses them to invest the wand. The process is automatically successful.\n\nWand of Bestial Agony: This plain wooden wand can cast Agony of the Beast 24 times per day, with 0 Penetration."
+        }
+        #tvRRRSjqKuXcp4XRLlWagL7L ^"Using Enchanted Devices" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Enchanted Device Initiative" "Qik + Stress Die"
+            }
+            DESCRIPTION "Several rules apply to all enchanted devices, unless an effect modification has been made, and specifically states otherwise.\n\n• Effects produced by enchanted devices have a Penetration of zero.\n• The range of effects is measured from the device, not the user. Thus, Touch Range means that the device must touch the target, and Personal Range means that the effect targets the device only.\n• Unless otherwise specified, an effect that duplicates a spell requiring concentration to maintain also must be concentrated on to be maintained.\n• All Targeting rolls demanded by a device’s effects are made by the wielder of the device, using the wielder’s Finesse score.\n• If a person gains possession of your magical device and knows the triggering actions of its effects, that person may utilize the device. Even if the possessor does not know the triggering action, he may investigate your item in the lab to learn its effects.\n• You can use one effect from one item each round, using the appropriate trigger action for each. You must make any Targeting rolls that are necessary, but do not roll for Fatigue. You use an enchanted device at an Initiative point equal to Qik + Stress Die.\n• If the enchanted device is broken, all its powers are lost.\n• You may use an enchanted item before it is “filled up” with effects and still add effects later."
+        }
+        #t8U6Pj2eNK2ZedZqn1372zIq ^"Investigating Enchantments" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Investigation Roll" "Intellego Vim Lab Total + stress die (compared to level of weakest undiscovered power)"
+            }
+            DESCRIPTION "If you wish to determine the powers of someone else’s enchantment, you must investigate it in your lab. You inspect the item’s physical construction, investigate the Form and Technique with Intellego magics, and test to see how the enchantment responds to other magics. All of this indicates how the item was created, what its powers are, and how to unleash them.\n\nYou discover the powers in an enchanted device in order from weakest to strongest, that is, from the power of the lowest effect level to that of the highest. (A device’s function as a talisman is treated as a level 20 power.) When you investigate an enchantment for the first time, you spend a season, add a stress die to your Intellego Vim Lab Total, and compare the result to the level of the weakest power in the enchantment. If you succeed in your roll to find the weakest power, you may roll again in that same season to identify the power immediately above it in strength. For example, if a device has three powers of level 10, 20, and 30 and you rolled a Lab Total of 25, you do not automatically find the first two powers. As your rolled Lab Total is over 10 (the level of the first power), you find the first power and may roll again in the season to find the second power (level 20), and the third power if you discover the second. Note that the level of a power in an enchanted device includes any effect modifications that apply to the power.\n\nAs long as you succeed in finding powers, you keep rolling to find more in that season. If you roll and find nothing, it either means that there are no more powers in the enchantment or that you did not roll high enough to find the next one. Only the storyguide knows for certain. In either case, you can keep trying as long as you want, but each failure to discover a power ends the rolls for that season, and you can do nothing else that season.\n\nIf you botch an investigation roll, many results can arise, and the storyguide makes the final decision based on the situation. You could misinterpret a power, thinking it does something different from its actual function. You could misread the triggering action of a power, making it useless to you. Or you could somehow disturb the enchanted item, setting off its powers. If you survive an investigation botch, your season ends there. However, you may approach the device again next season to properly identify the power that confounded you.\n\nMagi sometimes use the Waiting Spell variant of Watching Ward (see page 162) to guard their enchanted devices. The spell held in waiting is often released on anyone who magically examines the item. The Waiting Spell is not invested into the device, but cast on it for protection. You therefore cannot detect a Waiting Spell in your preliminary investigations of an item. If you do not cast a spell to detect a Waiting Spell, discovering it often means tripping it. Beware."
+        }
+        #t0CaeJoVONnPmVC4mbtQjx6t ^"Similar Spells" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Similar Spell Bonus" "Magnitude of highest-level similar spell known"
+            }
+            DESCRIPTION "A magus gets some benefit from knowing a spell similar to the effect he is creating. He gets a bonus to his Lab Total equal to the magnitude of the highest-level similar spell that he knows. Only a single spell grants a bonus; there is no laboratory advantage to knowing dozens of similar spells.\n\nA spell is similar if it meets one of the following requirements:\n\n• Same effect, at a different Range, Duration, or Target. All three may differ.\n• Closely related effect, at the same Range, Duration, and Target.\n\nTwo spells have the same effect if the rules description of the spell is the same, apart from the Range, Duration, or Target. Closely related effects include such things as doing damage with Creo Ignem, or turning a human being into a land animal. This is, ultimately, a judgment call on the part of the troupe. The similar spell bonus is not, generally, very large, so there is no problem with erring on the side of generosity."
+        }
+        #t5IGlnWI5qope95oJHqu4Ho4 ^"Longevity Rituals" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Longevity Ritual" "+1 bonus for every five points or fraction of Creo Corpus Lab Total"
+                "Longevity Ritual Vis Cost" "1 pawn for every five years of age (rounded up)"
+            }
+            DESCRIPTION "Your time to study and increase your power has an ultimate deadline: your inevitable demise. In their attempts to gain themselves more time in this world, the magi of Hermes have developed Longevity Rituals. Though death is still inevitable, these rituals can stave off death for a hundred years or more. Magi of two hundred years or older are rare, but not unheard of.\n\nThe Longevity Ritual creates a magical anchor, sustaining the vital life force of the magus, often by directly affecting the tissues of the magus’s body. This anchor, however, prevents the magus from expending his life force in normal human fashion, so the magus becomes permanently sterile. The ritual takes a season, and culminates in some sort of focus, which is appropriate to the magus in question. The most common form of the focus is a potion which the magus drinks, but it could be a bath, a ritual in which the magus inhales the smoke of special incense, or even a magical fire that the magus stands within to burn away the impurities that cause aging. The focus is always something that can be repeated, and does not require continuing actions or the possession of an object.\n\nThe Longevity Ritual takes one season to develop and perform, and the subject of the ritual must be present for the whole of that season. If appropriate, he may help the magus creating the ritual with his lab work (see page 103). Every magus has a unique Longevity Ritual, though it is possible for a magus to create a Longevity Ritual for another. Indeed, many young magi hire older magi to devise their Longevity Rituals, as the older magus’s higher Lab Total makes the ritual much more effective.\n\nNormally, only Creo, Corpus, and Vim vis may be used in a Longevity Ritual. However, a Longevity Ritual is a very personal creation, and as such, it is uniquely tied to your magical abilities. You may, with the approval of the troupe or storyguide, substitute any type of vis that your magical talents are strongly associated with.\n\nA Longevity Ritual’s effect lasts until you suffer an aging crisis (see “Aging” on page 168). After this, the ritual loses its effectiveness and the focus must be repeated. You can invent a new ritual (following the normal rules for doing so), or perform the ritual from the old ritual again. This involves simply making a new investment of vis (of an amount based on your current age) but no significant investment in time. You must have the Laboratory Text from the original ritual to do this, and this is the only benefit from a Longevity Ritual’s Laboratory Text. If your Longevity Ritual fails and you make aging rolls before you create a new one, you suffer the full effects of your age. You do not gain back any Aging Points or Decrepitude Points that you suffered when you were not under the effects of a ritual when you do finally perform a new ritual.\n\nWhen creating a Longevity Ritual for the first time, you can increase its potency by adding extra vis to the ceremony. This vis is above and beyond that which you must spend for your current age. For each additional pawn you add to the ritual, add 1 to your Lab Total. This vis is invested when you originally create a given version of a ritual, but you must use the same amount of vis every time you perform the focus again after the ritual fails. If you reinvent the ritual to take advantage of increased Art scores, you can choose not to use extra vis.\n\nYou can perform Longevity Rituals for others, even for non-magi. To do so, you need a Creo Corpus Lab Total of at least 30. A Longevity Ritual made for another magus or a character with a Supernatural Ability functions just as if made for you (–1 to aging rolls for every 5 points of Lab Total). Non-magical people, however, are not as resilient as magi. The ritual you create for a mundane therefore only subtracts one from the character’s aging rolls for every 10 points (round up) in your Lab Total."
+        }
+        #tzSR5Dj51xLU1ihd6ZSzEQyU ^"Laboratory Texts" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "When a magus creates something in the laboratory, he keeps a set of notes recording what he has done, what worked, and what didn’t. With the aid of these notes he, or another magus, can reproduce the effect much more quickly, as he knows exactly what he should be doing.\n\nOne Laboratory Text is created for every effect that the magus creates. Thus, a magus creates a single Laboratory Text when he invents a single spell, or invests a single power into an enchanted item.\n\nThe most common Laboratory Texts in the Order of Hermes are those detailing the creation of spells. Almost every covenant has a substantial collection of these, as they at least double the speed at which magi can add new formulaic spells to their repertoire."
+        }
+        #trMt8hQ4V07jvkxUBrVKSEMY ^"Using Laboratory Texts" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A magus who has a Laboratory Text for a particular effect may reproduce it in a single season if his Lab Total exceeds the level of the effect. If his Lab Total is less than the level of the effect, he may not use the Laboratory Text until his Lab Total increases to be at least equal to the level. A magus may reproduce multiple effects if they are all of the same Technique and Form, and their levels add up to less than his Lab Total. The Lab Total is calculated in exactly the same way when working from a Laboratory Text as when working without one.\n\nThis is an almost exact reproduction of the original effect. No features of a spell or enchanted item effect may be changed, and in the case of an enchanted item, the item itself must have the same shape and material as the one described in the text. However, it is possible to use a text derived from enchanting a power into an item with multiple powers to enchant that power alone. It is not possible to use the Laboratory Text from a lesser enchanted device to instill a power in a greater device, or vice versa, nor can any other magus make use of a Lab Text concerned with instilling an effect into a talisman. The main difference between the two effects is that your sigil, rather than the original magus’s, is incorporated.\n\nIf the Laboratory Text is for a charged item, the magus produces an item with a number of charges equal to one fifth of his Lab Total, rounded up.\n\nThe Laboratory Text for a Longevity Ritual only allows the magus to reproduce the final ritual without needing to spend a season on the process."
+        }
+        #tjYQGIb7A26JIGf3sCYMAiE0 ^"Laboratory Texts Example" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a worked example. Carolus decides that he needs at least one combat spell, or he risks being in serious trouble if he gets caught stealing. Given his magical strengths, he decides to look at Perdo Corpus. His Perdo Corpus Lab Total is 10 (Perdo) + 5 (Corpus) + 2 (Intelligence) + 4 (Magic Theory) + 1 (Magic Theory is specialized in inventing spells) + 5 (Aura of Semita Errabunda), for a total of 27. He could invent a level 13 spell by himself in a season, but that wouldn’t be much use.\n\nFortunately, the covenant library has a Lab Text for Grip of the Choking Hand. This spell is level 25, which would take him 13 seasons to invent by himself. His Lab Total is 2 higher than the level, so after thirteen seasons he would have accumulated 26 points, and thus invented the spell. Working from the Lab Text, however, he can invent the spell in a single season."
+        }
+        #tSLVqSYce4ZAabOYltx7R9Q9 ^"Writing Laboratory Texts" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Writing Laboratory Texts" "Latin x 20 levels per season"
+                "Copying Laboratory Texts" "Profession: Scribe x 60 levels per season"
+            }
+            DESCRIPTION "You produce a Laboratory Text as you create an effect, and this requires no extra time. These Laboratory Texts are not immediately useful to others, however, as they include all sorts of personal abbreviations and shortcuts that others cannot understand. (Remember that everything is written by hand in the Middle Ages.)\n\nIf you would like to copy a Laboratory Text of yours so others can easily use it, you can spend a season writing up to (Latin x 20) levels of Laboratory Texts to make them usable by others. Also, in one season, you can copy (Profession: Scribe x 60) levels of Laboratory Texts that are already written understandably. Note that copying is a different skill from writing from scratch. It is entirely possible for a skilled writer to be faster at writing than copying."
+        }
+        #tk0S7Z1NC97qI0nRnIYylGp2 ^"Translating Laboratory Texts" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "If you want to translate the Laboratory Texts of another magus whose secrets and abbreviations you do not know, you must work out his system of abbreviations. Every season you spend studying one of his texts, you accumulate a number of points equal to your Lab Total in the appropriate Technique and Form. Once you have accumulated points equal to or exceeding the level of the effect, you understand the text. This is a process of experimentation, and thus requires a laboratory.\n\nOnce you have understood a magus’s abbreviations for one Laboratory Text, you may write up any of his Laboratory Texts as if they were your own (that is, Latin x 20 levels per season), as long as none of them exceed the level of the text you decoded. This is a simple process of translation, and does not require a laboratory. If you come across a higher level text, you must decode that separately, but you start with a number of accumulated points equal to the level of the highest level text you have translated."
+        }
+        #tyXCsMGLmUzAzuFDjmXzFXZv ^"Multiple Laboratory Activities" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Sometimes you may wish to perform laboratory activities that, though rewarding, are well within your capabilities and do not each require an entire season of effort. In this case, you may choose to perform multiple activities within the same season, splitting your time among them all. All the activities you perform in a season must be of the same type (learning spells, instilling powers in an invested device, creating potions) and must use the same Technique and Form. To perform multiple activities, simply add up the levels of all activities performed and apply your Lab Total to the total of the levels.\n\nIf you perform arcane experimentation, you add a single simple die + risk modifier to your Lab Total, but any results rolled on the Extraordinary Results chart apply to all activities performed in the season."
+        }
+        #tvqy015cmVDXwC9gAjPO6JMB ^"Help in the Laboratory" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Lab Helper Bonus" "+ helper's Intelligence + Magic Theory to Lab Total for the season"
+                "Maximum Assistants" "Leadership score (at least one; familiar grants one additional)"
+            }
+            DESCRIPTION "Though the Code of Hermes provides protection for magi who meet on neutral grounds, the sanctum of a magus (laboratory and living quarters) is a special place in which magi hold their greatest treasures and deepest secrets. Thus, the Code of Hermes allows for magi to exact any toll on magi who trespass within their sancta. Because one magus foregoes protection of the Code when in the laboratory sanctum of another, very few magi ever cooperate in laboratory work.\n\nNevertheless, there are times when magi receive help in their laboratory work, either from trusting magi or from apprentices. Anyone who has The Gift and a score of at least one in Magic Theory may help you to perform any activity that uses your Magic Theory. If you are being helped to perform some activity that uses your Magic Theory, you add the helper’s Intelligence + Magic Theory to your Lab Total for the season. If this total is negative, the “assistant” imposes a penalty on your Lab Total. If the assistant has some appropriate Virtue, like Inventive Genius, that Virtue affects the primary researcher’s efforts, adding to his scores in the laboratory.\n\nThus, when two magi cooperate, one must always be the primary researcher and one must be the assistant. This research may take place outside the sanctum of either magus, in which case both parties are protected by the Code. However, the assistant is announcing to the Order that he considers the primary researcher to be his superior. This substantially limits the range of magi that most members of the Order are willing to assist. A magus is conventionally supposed to regard his parens as superior throughout his life, so helping your parens attracts no stigma, even for those magi who actually regard their parentes with contempt.\n\nYou may not normally have more than one helper in the lab, as it is difficult to coordinate several helpers with you and with each other. However, if people are exceptionally well-organized and cooperative, more can work together, each helper adding his Magic Theory and Intelligence scores to the primary researcher’s scores. The total number of assistants that the primary researcher can make use of in one season is limited to his Leadership score (though he can always have at least one). The exception is that a magus with a familiar may always have at least one assistant in addition to his familiar.\n\nLab assistants gain exposure experience, typically in Magic Theory, but do not gain anything else from the experience."
+        }
+        #tgo7Wue8YkkareZVFFYHg3qv ^"Distractions from Lab Work" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Lab Total Penalty (11+ days missed)" "-10 points, plus -2 points for every day over ten missed, up to a maximum penalty of -30 at twenty days missed"
+            }
+            DESCRIPTION "The rules for what a magus can do in a season assume that the season is uninterrupted. Sometimes, however, magi take time away from their labs to travel and explore, and this lost time makes itself felt in their lab performance.\n\nYou may miss up to ten days from any laboratory activity, and make up the time by working harder during the remainder of the season. There is no penalty for this. However, if you miss eleven days or more, your Lab Total is penalized by 10 points, plus two points for every day over ten that you miss, up to a maximum penalty of 30 when you miss twenty days. If you miss more than twenty days, you cannot perform a laboratory activity at all, as you lose your synchronization with the cycles of the heavens."
+        }
+
+    #tqMMCxO7m5nuyAlY0uS5qMeV ^"Finding and Befriending an Animal" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["The first step in getting a familiar is finding an animal with inherent magic. With inherent magic, the beast is likely to have a Magic Might score, which may be assigned based on comparable scores of other magical creatures. The means of finding such a creature are ultimately left to the storyguide to determine. Wandering at random in search of a magical creature is usually profitless — magi generally follow rumors to the locations of the familiars they want. Some receive visions of animals that are somehow \"meant\" for them.", "Once found, the animal must be befriended. You must genuinely admire or even love the animal in question, and it must trust you freely, under no coercion, magical or mundane. The animal can sense something of your nature when you are in close contact. If your natures clash, it rejects you. The need for mutual admiration between magus and familiar is why air magi, for example, often take birds as familiars, and why you can often tell something about magi by the familiars they have chosen and that have chosen them."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Rules for locating and befriending a magical beast before it can become a familiar."
+        }
+        #tZUQAisKi58LiZI5Z5ci2mVJ ^"Enchanting the Familiar" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["Once you and the familiar accept each other, you take the animal to your laboratory and begin a series of enchantments. Enchanting a familiar is different from other enchantments. The bond between you and your familiar causes changes to you both, and you do not have full control over how the enchantment affects you. Your troupe and storyguide determine how you are affected throughout the enchantment, though you do have control over the changes your familiar undergoes."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "How the familiar-binding enchantment differs from other enchantments."
+        }
+        #tpFUE8QJYNPELET73JlvxEtU ^"The Initial Bond" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["The laboratory total for binding the familiar is any appropriate Technique + any appropriate Form + Int + Magic Theory + Aura Modifier. Puissant Arts and foci may apply to this. A Technique or Form is appropriate if it corresponds in some way to the animal or its powers. Thus, Animal and Vim are always appropriate Forms for binding magical animals. Aquam is appropriate for aquatic or semiaquatic animals, and Auram for birds, or creatures with power over air or weather. Corpus applies to animals that can take human form, or with powers to heal or transform people. Herbam might be appropriate to arboreal creatures, or to beasts with powers over plants. Ignem is suitable for fire-breathing or shining creatures, and Imaginem for those that change their appearance. Mentem fits any animal that has a true mind, or which can affect the minds of people, while Terram is appropriate to burrowing animals or creatures with powers affecting earth, stone, or metal.", "The Techniques are more likely to correspond to abilities of the animal. Builders, like beavers, correspond to Creo, while destroyers, like serpents, link to Perdo. Creatures that change, such as butterflies, match Muto, and those that control others, like the leaders of packs, fit with Rego. Intellego is appropriate to animals with sharp senses, like eagles or bats.", "Any magus should be able to find an animal that he can bind with his best Technique and Form, and such an animal will automatically be in sympathy with the magus's magic.", "The level for the enchantment is equal to twenty five plus the familiar's Magic Might plus five times its Size. If the familiar has negative Size, this reduces the level for the enchantment. For example, a familiar with a Size of –2 and a Magic Might of 10 can be bound as a level 25 enchantment: 10 for the Magic Might, plus 25, minus 10 from the negative Size. A magus can only bind a familiar if his Lab Total equals or exceeds this level. If it does, he can bind the familiar in a single season. This costs one pawn of vis for every five points or fraction thereof of the Lab Total. The vis used must match either the Technique or the Form used in calculating the Lab Total, and the magus may use both kinds."]
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "FAMILIAR BONDING LAB TOTAL" "Any Technique + any Form + Intelligence + Magic Theory + Aura Modifier"
+                "FAMILIAR BONDING LEVEL" "Familiar's Magic Might + 25 + (5 x Size)"
+                "FAMILIAR BONDING COST" "1 pawn of vis per five levels or fraction of the binding Lab Total; Vis must match Technique or Form"
+            }
+            DESCRIPTION "The laboratory procedure, level, and vis cost for binding a familiar in a single season."
+        }
+        #tA4jALIG7m0YKRyKFBUdwB34 ^"The Three Cords" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Cord Strength", "Point Cost"]
+                ^"Table" LIST ["As part of the process of binding a familiar, the magus forges three mystical cords. A golden cord connects the magus and familiar's magical abilities, a silver cord connects their minds, and a bronze cord connects their bodies. These cords may be seen by someone with the Second Sight Virtue, but they are otherwise imperceptible.", "The strength of each of these cords is rated from 0 to +5. To determine all the cords' ratings, divide the points of the magus's Lab Total among them however you choose and then use the points allocated to each to buy cord scores. A cord strength of 0 costs nothing, a strength of +1 requires 5 points, a score of +2 requires 15 points, a score of +3 requires 30 points, a score of +4 requires 50 points, and a score of +5 (the maximum) requires 75 points. The total cost of the cords you buy cannot exceed the magus's Lab Total.", "Each cord has a varying effect (described below) depending on how well it is forged. These benefits also apply to the familiar.", "The Golden Cord: The familiar helps you avoid magical errors, letting you roll fewer botch rolls when using magic. Your golden cord score is the number subtracted from the number of botch rolls you would normally make (though you must always roll at least one).", "The Silver Cord: You can apply your silver cord score as a bonus to all rolls that involve Personality Traits, to natural resistance rolls against mental magic, and to rolls to protect you from a natural mental influence like intimidation or verbal trickery. In addition, if your mind is ever overcome by another force your familiar may be able to free you. To be successful, it must roll 9+ on a stress die with the silver cord score as its bonus (one attempt per day). If the roll botches, the animal's mind is overcome along with yours.", "The Bronze Cord: You can apply your bronze cord score as a bonus to Soak totals, to healing rolls, to rolls to withstand deprivation (such as to holding your breath or resisting sleepiness), and to rolls to resist aging. It does not help you withstand Fatigue.", "The magus binds a familiar by forging the cords, so both the initial bond and the forging of the cords take place in the same season.", "The magus may choose to strengthen the bonds after binding the familiar. He must use the same Lab Total as for the initial binding, and may buy bond strengths with the new value of the Lab Total. This strengthening also takes a single season, and costs a number of pawns of vis equal to one fifth of the magus's Lab Total, rounded up, minus the number of pawns of vis already spent on binding the familiar. This does not include pawns of vis spent on empowering the bond (see below). Thus, the number of pawns of vis that must be spent to get cords of a certain strength remains the same whether the magus does it all at once, or over several seasons."]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "0" "nothing"
+                "+1" "5 points"
+                "+2" "15 points"
+                "+3" "30 points"
+                "+4" "50 points"
+                "+5 (the maximum)" "75 points"
+            }
+            DESCRIPTION "The three mystical cords (golden, silver, bronze) forged during familiar binding, including the point cost table for cord strengths and each cord's effect."
+        }
+        #t0g5gwh4B13BrR5QcJMkFvW6 ^"The Bound Familiar" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["The familiar binding gives both the magus and the familiar the Minor Virtue True Friend, relating to the other half of the partnership. Thus, they also gain Personality Traits of Loyal (partner) +3.", "The familiar will not die of old age as long as the magus is alive, and it only suffers ill effects from aging when the magus does. If it did not previously have human intelligence, it gains it, with a score of –3. It gains a score equal to the magus in any languages that the magus speaks; any familiar can understand the languages understood by its master, and can speak them if it has the relevant vocal equipment. Familiars can learn Abilities in the same way as humans. They cannot, however, learn magic, although they can learn Magic Theory and serve as laboratory assistants.", "The magus and the familiar are magically linked. Each serves as an Arcane Connection to the other. Neither needs to overcome the other's magic resistance in order to affect them with a spell or magical ability.", "The familiar uses the better of its Magic Resistance or the magus's Form resistance to resist spells, but this resistance does not stack with a Parma Magica. The magus may choose to use the familiar's Magic Resistance, but this does not stack with a Parma Magica.", "Both the familiar and the magus retain any abilities that they had before the ritual was performed."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The benefits, virtues, and magical linkage gained by both magus and familiar once the bond is complete."
+        }
+        #t7hZlQlmQfnOFOXrXvJKqTKE ^"Empowering the Bond" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["A maga may, at any time, invest powers in the familiar bond. This is a laboratory activity, and the rules are the same as those for investing a power in an invested device, with five exceptions.", "First, there is no limit to the number of powers which may be invested in a familiar.", "Second, the maga gets no bonus to the Lab Total from other effects already invested in the familiar. Instead, she gets +5 if the effect matches either the Technique or Form used to bind the familiar, and +10 if it matches both.", "Third, the maga may invest any number of powers in a season, if they are all of the same Technique and Form and their levels add to less than or equal to half her Lab Total.", "Fourth, powers are limited to effects which target the maga, the familiar, or both.", "Finally, the benefits of Verditius Mysteries do not add to the Lab Total. The Mystery has nothing to do with familiars.", "If the enchantment affects only the maga, it is under the control of the familiar. If it affects only the familiar, it is under the control of the maga. For the use of effects enchanted into the familiar bond, the maga and familiar are always considered to be touching one another.", "Foci that cover the familiar apply to the investment of all powers, no matter what they do. Foci that cover the power apply as normal.", "Every time the magus invests a power in the bond both the magus and the familiar take on some minor characteristic of the other. This is a purely cosmetic effect, but should be stronger the more powerful the effect.", "While this process does produce a Laboratory Text, that text only applies to investing the power into the bond of this magus and familiar, and thus is rarely of any use to anyone, including the magus who creates it.", "Investing a power into the bond costs the same as investing a power into an enchanted device: one pawn of vis for every ten levels, or fraction, of the effect. This vis must match the Technique or Form of the effect."]
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Investing a power into the bond cost" "one pawn of vis for every ten levels, or fraction, of the effect (vis must match Technique or Form of the effect)"
+            }
+            DESCRIPTION "Rules for investing powers in the familiar bond, following the invested-device rules with five exceptions."
+        }
+        #tgN347NjoSepSJ1mQMTfEVOM ^"Sample Powers" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["Speech: Giving an animal the ability to form human speech is Muto Animal, with a base level of 5 (a minor change that makes the animal unnatural). The duration needs to be Concentration, with the bond maintaining concentration, and the range needs to be increased to Touch. This gives level 20. The maga needs to maintain the ability at sunrise and sunset, but can reactivate it once per day if she \"forgets.\"", "Mental Communication: Two effects, one allowing each partner to communicate with the other. The effect is Creo Mentem, as one partner is creating things in the mind of the other. If only words can be transmitted, the base level is 3, plus one magnitude for Touch range, plus ten levels for unlimited use, which is 14. If more complex thoughts, such as images and emotions, can be transmitted, then the base level is four, plus one magnitude for Touch range, plus ten for unlimited use, for a final level of 15.", "Shapechanging: The most efficient way to get controllable changes is to set the duration of the spell to Concentration, and then enhance the effect so that the bond maintains concentration. To change the familiar into a human, the effect is Muto Animal with a Corpus requisite, and the base level is 10. Add one magnitude each for Touch range and Concentration duration, and five levels for the item to maintain Concentration. The final level is 25, if the transformation can be done once per day. The level required to transform the maga into the form of her familiar varies. Both can also take on other forms, if the appropriate powers are invested.", "Shared Senses: Looking through the other's eyes or hearing through their ears is an Intellego Mentem effect. The base level to share a single sense is fifteen (by analogy from the guidelines), plus five for Touch range and five for Concentration duration. Another five levels lets the bond maintain the effect, for a total level of 30 if the sense can be shared once per day. Note that this sharing works only in one direction; a second power must be instilled for mutual sharing to be possible.", "Location: The base level to find the partner is 3, which needs to be increased by one magnitude, to 4, for Touch range. This is Intellego Corpus to find the maga, and Intellego Animal to find the familiar.", "Aura of Fire: Wreath the maga or familiar in flames, which do not burn her but do burn anything that comes within them. This is creating flame in an unnatural shape, so the fire does damage equal to its level. The Arts are Creo Ignem, with a Rego requisite. +5 levels to raise the duration to Diameter, +5 levels for range Touch, +5 for the Rego requisite, and +10 for unlimited uses. Final level is damage + 25.", "Razor-Sharp Steel Claws: The base level is 5, to create base metal. Add five levels for range Touch, and ten total for Concentration duration and concentration maintained by the bond. Because the claws are supposed to be magically sharp, the level is raised by five. Add ten levels so that the effect can be invoked at will, for a final level of 35."]
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Speech" "Muto Animal, base level 5, Concentration duration (bond maintaining concentration), Touch range = level 20"
+                "Mental Communication (words only)" "Creo Mentem, base level 3 + one magnitude for Touch range + ten levels for unlimited use = 14"
+                "Mental Communication (complex thoughts)" "Creo Mentem, base level four + one magnitude for Touch range + ten for unlimited use = 15"
+                "Shapechanging (familiar into human)" "Muto Animal with Corpus requisite, base level 10 + one magnitude each for Touch range and Concentration duration + five levels for the item to maintain Concentration = 25 (once per day)"
+                "Shared Senses" "Intellego Mentem, base level fifteen + five for Touch range + five for Concentration duration + five levels for the bond to maintain the effect = 30 (once per day)"
+                "Location" "base level 3 increased by one magnitude to 4 for Touch range (Intellego Corpus to find the maga, Intellego Animal to find the familiar)"
+                "Aura of Fire" "Creo Ignem with Rego requisite, +5 levels to raise duration to Diameter, +5 levels for range Touch, +5 for the Rego requisite, +10 for unlimited uses = damage + 25"
+                "Razor-Sharp Steel Claws" "base level 5 to create base metal + five levels for range Touch + ten total for Concentration duration and concentration maintained by the bond + five for magically sharp + ten levels to invoke at will = 35"
+            }
+            DESCRIPTION "Worked examples of powers that can be invested into a familiar bond, showing the Arts and level calculations for each."
+        }
+        #teD5fQSkl9M6vjD969XN0ATJ ^"The Familiar in Play" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["You and your familiar will undoubtedly grow closer as the saga progresses, learning from each other and strengthening your common bond. Over the years, your familiar learns what you know, provided that you keep the familiar with you when you study and that you share your knowledge with it.", "Your familiar ages along with you, generally dying a few days before or several weeks after you. The sudden death of your familiar is a warning of immediate danger. Should you ever die while your familiar remains alive, your familiar will experience a shock that may kill it, and even if it lives, it is reduced to a pathetic, devastated condition ever after. Likewise, if you survive your familiar, you may feel a profound emptiness in your life that may last for months, or even years. Having a familiar is a personal, private thing, so only those more concerned with status than true companionship use their familiars as status symbols. You should hold the same level of protectiveness for your familiar that you would for a spouse.", "You can only have one familiar at a time. Your familiar will be with you for a long time, so make it interesting."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "How a familiar develops, ages, and dies alongside its magus during a saga."
+        }
+        #tOHUN4iXvUxK4A1OtAqsicme ^"The Participation of Other Players" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["The storyguide plays an important role in the creation of your familiar. If your troupe has someone who acts as storyguide for laboratory activities, that person may act as storyguide while you are creating your familiar. However, you may wish to use the whole troupe as the acting storyguide during this process, both to get more creative input and to make the familiar more acceptable to your fellow players, who may find it a challenge to deal with such a strange addition to the company.", "Because you and your familiar are so close, you may roleplay your familiar as an extension of your character. After all, you may have similar abilities and personality quirks. However, you may also have the storyguide or another player act as your familiar. This alternative assures that your familiar is at least distinct from you, and is advised if you and your familiar don't get along very well."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Guidance on the storyguide's and troupe's roles in creating and roleplaying a familiar."
+        }
+        #tYxy7bT4WqhYo5063JwN7ZZv ^"Finding Your Apprentice" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["Among the common people there sometimes appear rare individuals with The Gift — those who have innate magical power. Only these individuals can become apprentices and eventually magi. Luckily for those magi who seek them, these people inevitably stand out from the crowd. They are almost invariably intelligent and curious, causing them to fit in poorly with the mass of ignorant, superstitious society. Also, most potential apprentices somehow attract supernatural attention to themselves. In many populations there is a youth who is prone to wandering alone at night, who is the subject of much town gossip, and who displays a precocious wit. Chances are that such a person is a potential apprentice.", "Searching for an apprentice can lead to good storytelling and roleplaying possibilities, especially if the search is complicated by enemy forces or uncooperative members of the child's family. However, if you do not wish to make a story out of finding an apprentice, you may determine the results of the search with a die roll. For every season you spend searching for a potential apprentice, make a stress die and add your Perception. If the result is 12+, you find one. If you botch, you may think you've found a child fit to be an apprentice but are somehow duped, either by the child or by some power that replaces your child with its servant.", "Your student should normally be at least seven years old, as younger children rarely have the ability to start Hermetic training. It is rare for Hermetic apprentices to be older than twenty when they are taken, but it does happen. Most Gifted people have learned other supernatural abilities by that age, making it difficult to train them (see below).", "Being taken away by a magus to parts unknown is normally disturbing and frightening to a new apprentice, even to one excited or relieved to be free of a miserable living situation. Some children chosen for apprenticeship are kidnapped by their masters, some are coaxed away with promises of knowledge and power, while others are actually offered (or sold) to magi by families who cannot handle the youngsters' strange ways. Though most children chosen to be apprentices come willingly and freely, the Code of Hermes does not require that they do. Strictly speaking, magi are allowed to obtain apprentices in whatever manner they wish."]
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Apprentice search (per season)" "stress die + Perception; result of 12+ finds a potential apprentice; botch may leave you duped"
+            }
+            DESCRIPTION "How to locate a Gifted individual suitable to become an apprentice, including the search die roll."
+        }
+        #tNnkl2iSZcCPW2eSZFrSuiIs ^"Training Your Apprentice" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["Once you have your apprentice, the training begins. The Peripheral Code contains a substantial number of rulings on the relationship between a magus and his apprentice. A magus claims an apprentice from the beginning of the season in which he opens the Arts. A magus must personally teach the apprentice for at least one season per year over the course of the apprenticeship, and the season spent opening the Arts counts as the first of these seasons.", "A member of House Bonisagus may claim another magus's apprentice at any time, but other members of the Order may not interfere between a master and his apprentice. The apprentice belongs to the master, and may not choose to go to another magus unless his current master fails to give him enough teaching. Harming the apprentice is regarded as a serious attack on the master, and can be punished. Masters who abuse their apprentices are not well-regarded, but it is not against the Code to do so.", "A magus may choose to pass an apprentice on to a second magus, provided that both magi agree to the transfer. The apprentice's consent is not required.", "Use the rules in the \"Experience and Advancement\" section of the Long-Term Events chapter to train your apprentice, remembering that you must spend at least one season a year directly teaching. Keep in mind that you should try to impart a broad base of skills — refer to the guidelines in the Characters chapter to give you an idea of what level of apprentice competence you should be shooting for.", "Since an apprentice without a Parma Magica would normally suffer a –3 penalty to all totals due to the effect of The Gift, the Order has ruled that failing to extend your Parma Magica to cover your apprentice during training is a violation of the requirement to train your apprentice properly. If your score in Parma Magica is three or less, it does not give you any bonus to Magic Resistance while shared, but it still deadens the effect of The Gift.", "One of your seasons of teaching must be spent training the apprentice in the basics of Hermetic magic, and you can teach nothing else in that season. Thus, in this season the apprentice gains a score of 0 in all fifteen Hermetic Arts, but learns nothing else. This is referred to as \"opening the Arts.\"", "If you have a score of less than five in any Art when you open them, your apprentice automatically has a Deficiency (see page 53) in that Art. Giving an apprentice Deficiencies in this way is normally treated as a Low Crime by the Tribunals of the Order, and attracts a great deal of social stigma. As a result, few magi train an apprentice until they have a score of five or higher in all Arts. (Note that this is far from the only way that an apprentice can gain a Deficiency, and most of the other ways are not under the master's control, and thus not Low Crimes.) You may teach Magic Theory before opening the Arts, but you may not teach Arts or spells.", "If your apprentice already has some nonHermetic Supernatural Ability, you can only open the Arts if your Intellego Vim Lab Total equals or exceeds five times the apprentice's score in the relevant Ability, and is at least 10 if the Ability normally derives from a Minor Virtue, or at least 30 if it normally derives from a Major Virtue. For supernatural powers without a linked Ability, you need a Lab Total of 10 for Minor Virtues and 30 for Major ones. If the apprentice has multiple Supernatural Abilities, add all the levels together to determine whether you can open the Arts.", "If your Intellego Vim Lab Total merely equals or exceeds the level, the Supernatural Abilities are lost. If your Lab Total is at least double the required level, you may either preserve the Ability, or convert it into a Hermetic Virtue. The Virtue should be a Major Virtue if the original Ability was, and Minor likewise. Again, this is not the only source of Virtues; some Gifted individuals have Gifts that are naturally apt for certain areas of Hermetic magic; in game terms, they take the Hermetic Virtue before training. If the apprentice has multiple Supernatural Abilities, you may save some and lose others, but you cannot open the Arts unless your Intellego Vim Lab Total exceeds the level of the Abilities.", "It is a good idea to have someone else teach the apprentice Latin, and possibly Magic Theory, before you start the apprenticeship, as this makes your apprentice more useful to you. However, until you open the character's Arts he is not your apprentice, and may choose to attach himself to another magus, or may be taken by another magus. Stealing potential apprentices who are obviously intended for magical training is frowned upon, and may be punished, but rescuing Gifted people who are simply being exploited as lab assistants is wellregarded. Indeed, a magus keeping a Gifted character as a simple lab assistant is normally required by a Tribunal to either start training him or to pass him on to a magus who is willing to do so.", "While the magus must personally provide the minimum one season per year, he may have others teach the apprentice in other seasons, or allow the apprentice to study from books. Most magi do allow their apprentices some extra study, as it is rare for a magus to spend fifteen years without studying the Arts from a book, and apprentices are no help with those activities."]
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Opening the Arts with a Supernatural Ability" "Intellego Vim Lab Total must equal or exceed five times the apprentice's score in the relevant Ability, and be at least 10 if the Ability derives from a Minor Virtue, or at least 30 if from a Major Virtue"
+                "Opening the Arts without a linked Ability" "Lab Total of 10 for Minor Virtues and 30 for Major ones"
+                "Preserving or converting an Ability" "If Intellego Vim Lab Total merely equals or exceeds the level, the Supernatural Abilities are lost; if Lab Total is at least double the required level, you may preserve the Ability or convert it into a Hermetic Virtue (Major if original was Major, Minor likewise)"
+            }
+            DESCRIPTION "Rules for teaching an apprentice, opening the Arts, Deficiencies, and handling non-Hermetic Supernatural Abilities."
+        }
+        #tuRviDd5sak7VpHqHTemjIf1 ^"Fleshing Out Your Apprentice" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["The basic benefit that an apprentice provides you is the addition of his Intelligence and Magic Theory scores to your Lab Totals (see page 103). If all you want is a lab assistant, you only need to keep track of your apprentice's Intelligence and Magic Theory scores, and after fifteen years, your apprentice becomes a full magus and leaves your service.", "However, if created as a full character, an apprentice can be developed as the saga progresses into both a very important companion to your magus and a valuable member of the covenant. To create your apprentice as a character, determine Characteristics, Virtues and Flaws, and Abilities for a character of young age. Make sure that the character has The Gift, otherwise he cannot be taught Hermetic magic, and consider carefully whether to take any other supernatural abilities. Make sure that your magus can open the apprentice's Arts. Choose Abilities that the character learned in his childhood. As the saga progresses, update the apprentice's Abilities, magical Arts, spells known, and other statistics as you train him, just as you would those of any other character."]
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Apprentice lab-assistant benefit" "adds the apprentice's Intelligence and Magic Theory scores to your Lab Totals"
+            }
+            DESCRIPTION "How to develop an apprentice as a full character or maintain them merely as a lab assistant."
+        }
+        #tpvC1enPwht2bjt6NQzKvzSw ^"The Apprentice in Play" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["A fully developed apprentice makes a playable character. If you want to play an apprentice, keep in mind that you have no natural niche in the story. Grogs fight, companions provide skilled assistance, and magi have powerful spells. As an apprentice you are outclassed in all areas. Nevertheless, some stories are made exciting by an apprentice character or characters, as apprentices are interesting individuals, especially if there's no magus around to overshadow the apprentice's magic with his own.", "When you are a magus and teacher, some of the best roleplaying opportunities for your apprentice arise when he is interacting with you. To encourage this, you may want to let another player roleplay your apprentice, or you may consider your apprentice a troupe character to be played by different members of the troupe at different times, much as a grog is (see \"Troupe-Style Play\" on page 219)."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Guidance on playing an apprentice as a character within the troupe."
+        }
+        #tKUp5Z10pb8teFVWkDk5IqzO ^"The End of Apprenticeship" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table" LIST ["Apprenticeship ends with the \"apprentice's gauntlet,\" which is normally administered after fifteen years. This is set by the parens, and is intended to demonstrate that the apprentice is worthy to become a full magus. If the apprentice fails the gauntlet, he remains an apprentice, traditionally for another year.", "If an apprentice fails three gauntlets, the Quaesitores set the fourth and subsequent gauntlets, to ensure that the parens is not setting impossible gauntlets simply to retain the apprentice's services. An apprentice who fails Quaesitorial gauntlets repeatedly will carry a reputation for incompetence with him if he ever does pass, but there is no other consequence. The Quaesitores do tend to set easier gauntlets than most parentes, testing basic competence only, so even those apprentices trained by Incomprehensible masters can normally pass."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Rules for the apprentice's gauntlet and the consequences of failing it."
+        }
+
+    #txOmLPPh6a12j40kJB27HVqU ^"Arcane Experiments" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The preceding rules assume that you are being careful with your laboratory work and staying safely within the bounds of what you know how to do. If you wish, however, you can test your limits and experiment with new and possibly dangerous techniques. You can experiment when inventing a spell, creating any magical enchantment (device or familiar), or investigating an enchantment. In any case, you have the chance to perform feats that are normally beyond your capabilities, but you also run the risk of failing utterly, perhaps dangerously."
+        }
+        #t3ac5C98aFuJiB4cE7b0KOqX ^"The Experimental Premise" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "At the beginning of each season, consider the project you're working on and decide whether you want to experiment on it. If you do experiment, add a simple die roll to your Lab Total. This bonus represents the fruits of the risks you take. However, you must also roll a stress die on the Extraordinary Results chart for each season that the project involves. If you experiment over multiple seasons, inventing the same spell or instilling the same power in a device, the chart results for each season accumulate and apply to the whole project. For example, if it takes two seasons to invest a power into your staff, you have to make a roll on the chart each season. Both results affect the staff or the power you're investing into it."
+        }
+        #tOZ0GEgLLKeQ64xcRnibqA9O ^"Exceptional Risk" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "You may choose to push your limits even further, adding from +1 to +3 (your choice) to the die roll; this bonus is called your \"risk modifier.\" When you do this, you must add the risk modifier to all your rolls on the Extraordinary Results chart, and you get a number of extra botch dice on your rolls equal to your bonus."
+        }
+        #tYQEvJPRqKH0YvLHBDZV9rTK ^"Extraordinary Results" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Some of the results listed on the Extraordinary Result chart require some interpretation. When interpreting these results, consider the magus's sigil, specialties, and weaknesses. Also take into account the type of spell or power being worked on, and the Laws of Magic. The more aspects of magic that you bring together, the more interesting the result is.\n\nWhen referring to the Extraordinary Results chart, roll a stress die, adding your risk modifier (if any). If you roll a 0, roll one botch die, plus a number of botch dice equal to your risk modifier. You also get one additional botch die for each point in your magic aura."
+        }
+        #tu12J3RFQvTXdAKLfB5iz2ZM ^"Inventing a Spell by Experimentation" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Points from the simple die, added to your Lab Total, might let you finish a spell sooner, or even invent a spell that is otherwise beyond your capacity. If your spell comes out flawed or difficult to cast because of your roll on the Extraordinary Results chart, you have two choices: live with the anomaly, or reinvent the spell. If you reinvent it, use the normal spell invention rules. However, you gain your Magic Theory score (your score at the time of your experiment) as a bonus to your roll to accomplish the invention, having learned something from your nearly successful experiment. Thus, your Magic Theory score is applied twice to your reinventing Lab Total. The reinvention process must occur in another season, and you need not experiment then.\n\nIf even with the added simple die your Lab Total is still lower than the spell's level, you cannot invent the spell, and must still make a roll on the Extraordinary Results chart. Even though your experiment fails, it can still blow up in your face. Having failed to invent the spell, you may try again next season, and may experiment again. You do not gain your Magic Theory score as a bonus, however, as you did not nearly succeed."
+        }
+        #tcnpReJGRti2gx44DBY2AFpt ^"Enchanted Items Created by Experimentation" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Even with the added bonus of a simple die, your Lab Total may not meet the level of the effect you're investing. In that case, you lose all the vis involved and must still roll on the Extraordinary Effects chart. You may try again next season, though, and may experiment again.\n\nIf your Lab Total is high enough to invest an effect, but the effect turns out to be flawed (as determined by a roll on the chart), it still \"takes up space\" in your device, just like a normal effect. Thus, if you risk experimentation and make a mistake, you can permanently limit the effectiveness of your magical item."
+        }
+        #tv21lhLI97SE5nHOy4nrfxrh ^"Enchanting a Familiar by Experimentation" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A magus would have to be insane to enchant his familiar by experimentation, as a mistake in any season of binding or instilling powers could taint the deepest bond he has. Still, some magi are insane. Experimenting on this activity adds to the Lab Total as normal."
+        }
+        #t5tkHgWq3JFqOcSZldbrIRIm ^"Experimenting on Longevity Rituals" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "You may experiment on Longevity Rituals, adding the simple die to your Lab Total. This bonus increases the potency of your ritual, giving you greater resilience against the affects of aging. If your ritual is flawed by a roll on the Extraordinary Results chart, you may create a second ritual, which over-rides the effects of the flawed ritual, but this takes an additional season."
+        }
+        #t4syFNhrAzV5zodwQ3Dau2xo ^"Investigating an Enchanted Item by Experimentation" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The simple die is added to every roll made to discover an item's invested powers. If you cannot bring your Lab Total high enough to discover an item's powers, you still have to roll on the Extraordinary Results chart, though.\n\nWhen investigating an enchanted item by experimenting on it, you take risks not normally taken, and may damage or destroy the magic item in the process. Any results from the chart indicating damage or changes to the project you are working on are applied to the magic item or one of its powers. It's possible, though, that a magic item's own protections can preserve it from the dangers of your experiments. If the level of an item's protecting power (like Magic Resistance or an appropriate spell) exceeds your Lab Total (including any bonus for experimentation), the item resists any damaging effects rolled on the chart."
+        }
+        #tIVd55mKZQJ7qyy0DqAQ5hsV ^"Extraordinary Results Chart" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Botch" "Disaster"
+                "0–4" "No extraordinary effects"
+                "5–6" "Side effect"
+                "7" "No benefit"
+                "8" "Complete failure"
+                "9" "Special or story event"
+                "10" "Discovery"
+                "11" "Modified effect"
+                "12+" "Roll twice more on this chart."
+            }
+            DESCRIPTION "Roll a stress die (adding risk modifier) and consult this chart for extraordinary results of experimentation. The narrative results referenced by rows are: No Extraordinary Effects — Your experiment works without producing any unintended effects. No Benefit — Your experimentation produces no results. You lose the benefit of the extra die and risk modifier — recalculate your Lab Total without those modifiers. If your new Lab Total is too low to succeed in the project, it must be abandoned. Complete Failure — You get nothing from your efforts, and your season is wasted. If you were working on a familiar or enchanted item, roll a simple die. On a 0, it is destroyed. Special or Story Event — Either some effect not covered elsewhere occurs, or, at the storyguide's option, an event unfolds as a result of your work which involves the entire covenant."
+        }
+        #t8NRebXhoPmBz17qfRCJ5ugZ ^"Disaster" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "0 or less" "You spot the disaster before it occurs. Your season is still wasted; see \"Complete Failure.\""
+                "1–2" "Your creation is destroyed."
+                "3–4" "Your creation is destroyed, and so is some other valuable item that you keep in your laboratory."
+                "5–6" "Explosion! Your lab equipment is ruined, and you must roll a simple die for each valuble possession you keep in your lab. On a 0, it is destroyed. You take an amount of damage equal to a simple die + the level of the spell or effect you were working on."
+                "7–8" "Your experiment backfires in such a way that the entire convenant is threatened, either through fire, the summoning of a major threat, or some other calamity the storyguide makes up."
+                "9–10" "You gain Warping Points equal to the number of zeroes on the botch roll. Roll for Twilight if you gain two or more."
+                "11+" "Roll twice more on this chart."
+            }
+            FORMULAS {
+                "Disaster roll" "simple die + risk modifier − Perception"
+            }
+            DESCRIPTION "You fail miserably. Roll a simple die + risk modifier – Perception, and compare to the following chart."
+        }
+        #tHVLQy8XJ16amfTkDzX3hJGC ^"Side Effect" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1" "Your sigil is exaggerated to many times its normal strength, becoming a significant portion of the effect."
+                "2–3" "The effect has a minor flaw. For example, a spell that allows you to communicate with animals causes you to retain some of the animal's speech patterns for a time after the spell ends."
+                "4–5" "The spell has a minor side effect. For example, a spell that controls an animal causes grass to grow under its feet."
+                "6" "The spell has a minor side benefit. For example, a wind spell has a pleasant smell and makes flying insects uncomfortable."
+                "7" "The spell has a major flaw. For example, a healing spell causes its targets great pain."
+                "8" "The spell has a major side effect. For example, a plant control spell attracts all birds in 100 paces."
+                "9" "The spell has a major side benefit. For example, a spell that transforms you into a wolf also lets you speak to all beasts while a wolf."
+                "10" "The spell has a fatal flaw. For example, an invisibility spell makes you glow."
+            }
+            DESCRIPTION "Your magical creation acquires a side effect. Roll a simple die, and work out the specifics with the storyguide."
+        }
+        #t387GVL1CHAr6v5cRZq8hS0I ^"Discovery" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1–4" "You gain 15 experience points in Magic Theory."
+                "5–6" "You gain 15 experience points in some Ability related to the experiment."
+                "7–8" "You gain three experience points in one of the Arts used in the experiment."
+                "9" "You gain enough experience points to bring one of the Arts used in the experiment to the next level (or three experience points, whichever is greater)."
+                "10+" "Roll twice, and reroll this result if it is generated again."
+            }
+            FORMULAS {
+                "Discovery roll" "simple die + risk modifier"
+            }
+            DESCRIPTION "Roll a simple die and add your risk modifier."
+        }
+        #tCwX58FkbRtpBeX6YEqnh49q ^"Modified Effect" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1–3" "The spell or effect is reduced in range, duration, target, or potency."
+                "4–6" "The spell or effect's range, duration, target, or potency is increased."
+                "7–8" "The use of the spell or effect is restricted. For example, it fails to work in certain circumstances, like when it is raining."
+                "9–10" "The actual effect of your experiment is modified. For example, a spell like Curse of Circe (page 131) turns the target into a goat instead of a pig."
+                "11+" "The actual effect of your experiment is changed completely, save that the relevant Technique and Form remain unchanged, and the level remains similiar."
+            }
+            FORMULAS {
+                "Modified Effect roll" "simple die + risk modifier"
+            }
+            DESCRIPTION "Roll a simple die and add your risk modifier. If you were investigating a magic item, you have changed one or more of its powers."
+        }
+        #t7UE47nvAdl4cXQ9MHLgG9UR ^"Shape and Material Bonuses" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Item", "Bonus"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Amber" "+3 Corpus"
+                "Agate" "+3 air" "+5 protection from storms" "+7 protection from venom"
+                "Amethyst" "+3 versus poison" "+7 versus drunkenness"
+                "Aquamarine" "+3 water"
+                "Animal Bone" "+4 harm or destroy animals"
+                "Animal Hide" "+7 turn into appropriate animal"
+                "Armor" "+7 protect wearer"
+                "Arrow" "+2 aiming" "+3 direction"
+                "Axe" "+4 destroy wood"
+                "Bag/Sack" "+3 moving things into or out of" "+5 trapping things within"
+                "Bandage" "+4 healing wounds"
+                "Basket" "+3 create things within" "+4 preserve contents" "+5 create food within"
+                "Bed" "+6 affect sleep and dreams"
+                "Bell" "+5 warning"
+                "Bellows" "+4 create wind" "+5 strengthen fire"
+                "Belt or Girdle" "+3 affect strength"
+                "Beryl" "+3 water"
+                "Bloodstone" "+4 blood and wounds"
+                "Bookshelf" "+3 hide things within" "+4 protect things within"
+                "Boots" "+5 affect walking"
+                "Bow" "+5 destroy things at a distance"
+                "Cat's Eye" "+3 versus malign Corpus"
+                "Chalice" "+4 detect poison within" "+5 transform or create liquid in"
+                "Clam Shell" "+2 protection"
+                "Clear Glass" "+4 invisibility" "+5 seeing through something"
+                "Cloak" "+3 flight" "+4 transform wearer" "+5 alter/suppress wearer's image"
+                "Coin" "+4 induce greed" "+4 wealth and mercantile"
+                "Collar" "+6 control wearer"
+                "Comb" "+5 beauty" "+7 affect hair"
+                "Container" "+5 create or transform within"
+                "Coral, Red" "+10 versus demons"
+                "Crown" "+2 wisdom" "+3 control people" "+5 gain respect, authority"
+                "Crystal" "+5 water-related effect"
+                "Dagger/ Knife" "+2 precise destruction" "+3 betrayal, assassination" "+3 poisoning"
+                "Diamond" "+5 versus demons"
+                "Door" "+5 warding"
+                "Doorway" "+5 magical transportation" "+7 affect movement through" "+7 magical gates and portals"
+                "Down" "+3 silence"
+                "Drum" "+2 cause fear" "+3 create storms and thunder" "+5 deafening"
+                "Earring" "+5 affect hearing"
+                "Emerald" "+4 incite love or passion" "+7 snakes and dragonkind"
+                "Fan" "+4 banish weather phenomena" "+4 create or control winds"
+                "Fired Clay" "+4 contain or protect from fire"
+                "Floor" "+7 affect movement across"
+                "Glove" "+4 affect things by touch" "+4 manipulation at a distance"
+                "Gold" "+4 affect wealth" "+4 induce greed"
+                "Green Turquoise" "+4 necromancy"
+                "Hall" "+3 magical transportation" "+6 affect movement through"
+                "Hat" "+4 affect image of self"
+                "Hazel" "+3 divination"
+                "Hearth" "+5 destroy things within" "+7 create fire and heat"
+                "Helmet" "+4 affect wearer's mind/emotions" "+6 affect wearer's sight"
+                "Horseshoe" "+2 warding" "+6 affect horse's movement"
+                "Hourglass" "+3 increasing speed" "+7 timing and alarms"
+                "Human Bone" "+3 destroy the human mind" "+4 destroy the human body"
+                "Human Skull" "+4 destroy human body" "+5 destroy human mind" "+5 destroy or control ghosts"
+                "Hyacinth" "+2 healing"
+                "Iron" "+7 harm or repel faeries"
+                "Iron Shackles" "+8 bind faeries"
+                "Jade" "+4 Aquam"
+                "Jasper" "+2 healing" "+2 versus demons"
+                "Jet" "+2 protection" "+3 darkness"
+                "Jewelry/Clothing" "+4 transform self" "+4 protect self" "+2 move self"
+                "Lamp" "+4 create fire" "+7 produce light"
+                "Lead" "+4 wards"
+                "Lion's Mane" "+5 strength, courage, pride"
+                "Lyre" "+3 create sounds" "+5 affect music"
+                "Magnetite" "+3 Animal"
+                "Mask" "+2 affect wearer's sight" "+3 hiding" "+7 disguise"
+                "Necklace" "+4 affect breathing and speaking"
+                "Net" "+5 immobilization"
+                "Oak" "+7 protection from storms"
+                "Oar" "+4 affect currents"
+                "Obsidian" "+5 darkness"
+                "Onyx" "+4 darkness" "+4 death"
+                "Opal" "+4 travel"
+                "Panpipes" "+3 affect emotions" "+5 control children" "+5 revelry" "+6 affect faerie emotions"
+                "Pearl" "+5 detect or eliminate poisons"
+                "Pick" "+4 destroy stone"
+                "Pin Feather" "+2 Auram" "+5 flight"
+                "Quartz" "+5 invisibility"
+                "Quill" "+7 scribing"
+                "Rat Skull" "+3 cause disease"
+                "Ring" "+2 constant effect"
+                "Rock Crystal" "+3 healing" "+5 clairvoyance"
+                "Room" "+4 create things within" "+6 affect everything within at once"
+                "Rope or Cord" "+2 strangulation" "+4 restraint or binding"
+                "Ruby" "+3 affect blood" "+4 leadership in war" "+6 fire-related effect"
+                "Rug" "+3 affect those upon it"
+                "Saddle" "+4 affect horse" "+7 affect riding"
+                "Sapphire" "+2 knowledge" "+2 versus malign Corpus" "+3 healing"
+                "Sardonyx" "+2 versus malign Corpus"
+                "Sea Shell" "+2 the sea" "+3 sea creatures"
+                "Serpentine" "+3 vs. infection and animal poison"
+                "Shackles" "+6 restraint or magical binding"
+                "Shield" "+5 protection"
+                "Ship Sail" "+4 affect winds" "+7 sailing"
+                "Silver" "+10 harm lycanthropes"
+                "Snake Tongue" "+6 lying" "+3 deception"
+                "Spade" "+4 move or destroy earth"
+                "Star Ruby" "+5 conjure/control occult entities"
+                "Sword" "+3 block single attack" "+4 harm human and animal bodies"
+                "Topaz" "+4 leadership" "+4 strength, courage, pride" "+5 controlling wild beasts"
+                "Toy" "+4 control children"
+                "Violet Amethyst" "+4 ascendancy over masses" "+7 versus drunkenness"
+                "Wand/Staff" "+2 repel things" "+3 project bolt or other missile" "+4 control things at a distance" "+4 destroy things at a distance"
+                "Waterskin" "+5 create liquid within"
+                "Whip" "+4 control human or animal body" "+5 induce fear in animals"
+                "Wood (dead)" "+3 affect living wood" "+4 affect dead wood"
+                "Yoke" "+4 control wearer" "+5 enhance strength of wearer"
+            }
+            DESCRIPTION "Table of Shape and Material Bonuses, listing the bonus each item shape or material provides to appropriate magical effects."
+        }}

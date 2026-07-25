@@ -1,0 +1,302 @@
+EXTENSION "ArM5_Core_Systems" {
+    NAME "Ars Magica Fifth Edition - Introduction and Core Systems"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    #trA0R8JEybsbgfNa4UmoXhSO ^"Die Rolls" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Non-magical action roll" "Characteristic + Ability + Die Roll against an Ease Factor"
+            }
+            DESCRIPTION "The success or failure of most actions in an Ars Magica story is determined by rolling dice. For non-magical actions, the roll is normally Characteristic + Ability + Die Roll against an Ease Factor. If the total equals or exceeds the Ease Factor, the action succeeds. The amount by which the result exceeds the Ease Factor gives some indication of how successful the action was. Magic uses the same basic rules, but there are special rules for determining what to add to the die roll, and the number that the total must beat."
+        }
+        #tFBGXSGrYRIIvfGSCXQyzZ62 ^"Simple Die" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Roll a ten-sided die. Each number counts for its value, except that a zero counts as ten."
+        }
+        #tihnZXkrkQh68fHkxgvlnr3M ^"Stress Die" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Stress dice are rolled when a character is under stress, and thus might succeed spectacularly, or fail with equal flair. Such a significant failure is called a “botch,” and always has serious effects.\n\nFor a stress roll, roll a ten-sided die. One and zero have special meanings, but the other numbers count for their value, as normal. On a roll of one, roll again and double the number rolled. If the re-roll is also a one, roll again and quadruple. On second and subsequent rolls, a zero counts as ten. If a player rolled ten consecutive ones, the number rolled on the eleventh throw would be multiplied by 1024. Stress die totals in the hundreds are likely to happen a handful of times in a long-running saga.\n\nOn the first roll, zero counts as zero, and you must normally roll for a botch. Roll a number of ten-sided dice determined by the situation, called the “botch dice,” and if any of them show a zero, you have botched. If you roll no zeroes on the botch dice, the die roll is simply a zero.\n\nSome stress rolls cannot botch. In that case, a zero on the initial roll is simply a roll of zero. Similarly, if a character has qualities that reduce the number of applicable botch dice to zero, the stress roll cannot botch.\n\nOn a botch, your total for the roll is always zero, in addition to any other consequences. If you roll a zero but do not botch, the total is calculated as normal, adding zero from the die roll.\n\nFor example, consider a character with a Characteristic + Ability total of 9 making a stress roll. If the roll comes up 6, he has a total of 15, 9 from the Characteristic + Ability total, plus 6 from the die roll. If the first roll comes up a 1, he re-rolls and doubles the result. If the second result is also a 1, he does so again. So, if he rolls two 1s and then a 5, he has a final total of 29: 9 from Characteristic + Ability, and 20, from multiplying the final 5 by 4. If the first roll comes up a 0, he needs to check for a botch. If none of the botch dice come up 0, his total is 9, the Characteristic + Ability total, plus 0 from the die roll. If any of the botch dice come up 0, his total is 0. The Characteristic + Ability total is also negated by the botch."
+        }
+        #tG3AH3D3GMqlNxk2SVK1aQBe ^"Stress Die (Summary Table)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Initial Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "0" "Check for a botch."
+                "" "No zeros on botch dice: No botch, die roll is 0."
+                "" "One or more zeros on botch dice: Botch. Total is 0, and something bad happens."
+                "1" "Re-roll, doubling the result. Zeros count as ten. If more ones are rolled, continue re-rolling and doubling."
+                "2–9" "Die roll result is the number showing on the die."
+            }
+            DESCRIPTION "The source presents this as a sidebar summary table for resolving a Stress Die roll based on the initial roll."
+        }
+        #thznAE8LscZGjNyxi6FMx8lN ^"Botch Chance" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Number of Botch Dice", "Chance of Botch", "Example Situation"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1" "1%" "Good conditions; the default number of botch dice."
+                "2" "1.9%" "Running through undergrowth."
+                "3" "2.7%" "Climbing a crumbling cliff in a high wind."
+                "4" "3.4%" "Fighting in driving rain while in running water up to your ankles."
+                "5" "4.1%" "Translating negotiations between the Pope, a Faerie Lord who speaks only ancient Egyptian, and a powerful elemental spirit who speaks no human languages."
+                "6" "4.7%" "Fighting exact faerie copies of yourself and your companions on a crumbling ice floe in a blizzard."
+                "7" "5.2%" "Climbing a sheer wall of ice in a blizzard. (The Ease Factor for this would be very high as well, probably about 21.)"
+                "8" "5.7%" "Fighting exact faerie copies of yourself and your companions in a faerie forest where the plants are actively interfering with you."
+                "9" "6.1%" "Juggling five full cups of wine while four dancing bears cavort around you."
+                "10" "6.5%" "Casting a spell in the church of the Holy Sepulchre in Jerusalem."
+            }
+            DESCRIPTION "The source presents this as a sidebar table giving the chance of a botch for a given number of botch dice, with an example situation for each."
+        }
+        #t0PAqERchG5FLBBh2eeqBcMW ^"Ease Factors" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Ease Factor", "Difficulty"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "0" "Trivial. A character needs to be severely hindered to have any chance of failure. Almost never worth rolling for."
+                "3" "Simple. An average character with no training succeeds about 70% of the time. Only roll if failure is very significant, otherwise assume success."
+                "6" "Easy. An average character with some skill succeeds about 70% of the time, and talented or skilled characters almost never fail."
+                "9" "Average. Talented or skilled characters succeed about 70% of the time, unskilled characters have little chance of success, and moderately skilled characters have about a 50% chance of success."
+                "12" "Hard. Unskilled characters always fail, and moderately skilled characters normally do, unless they are very talented. Skilled characters fail about half the time."
+                "15" "Very Hard. Even moderate skill gives almost no chance of success. Skilled and talented characters fail about half the time, but very skilled, highly talented characters succeed about 70% of the time."
+                "18" "Impressive. People at the top of a skill succeed about half the time. Those with lesser abilities have next to no chance."
+                "21" "Remarkable. Very skilled, highly talented characters only succeed occasionally."
+                "24+" "Almost impossible. The greatest masters of a skill succeed when they get lucky."
+            }
+            DESCRIPTION "The source presents this as a sidebar table giving sample Ease Factors for tasks of varying difficulty. Notes: An average character has a score of 0 in the relevant Characteristic, a highly talented character has a score of +3. Moderate skill is a score of 3 in an Ability, “Skilled” means a score of 6, and “Very Skilled” means 9."
+        }
+        #tFOBvKIDEPUuU9cLS6R4OkrS ^"Botch Dice" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Botch dice represent the chance that something will go seriously wrong in an activity. The number of botch dice should reflect how likely a problem is, and the number of botch dice that come up zero determine how badly something has gone wrong.\n\nThere are some situations where, although a character could do very well, he could not do very badly. This applies, for example, if the character is making something, but has time to do it again if the first attempt goes badly wrong. A disaster might happen, but would not be the final result, so a botch is not really possible. In such cases, no botch dice should be rolled.\n\nThe base for most situations is a single botch die. For example, a person climbing a cliff in fair weather would get a single botch die. Factors making a disaster more likely increase the number of botch dice. A strong wind might add a single botch die to the climber, while a weak and crumbling surface might also add a botch die.\n\nThe table above gives the chance of a botch for a given number of botch dice. Note that, as the character must first roll a zero on the stress die, the chance of a botch can never be higher than 10%.\n\nMultiple zeroes on the botch dice indicate that things have gone very wrong indeed. Three or more zeroes indicate that things have gone about as wrong as they could. The consequences of this depend on what the character is doing.\n\nFor example, consider the character climbing a crumbling cliff in a high wind. If he botches, he falls, as that is the obvious disaster. A single botch indicates that he falls fairly early in the climb, and takes only a little damage. A double botch indicates that he falls a bit over half way up, while a triple botch indicates that he gets almost to the top, and then falls. The damage in each case will depend on the height of the cliff and what is to be found at the base."
+        }
+        #tQ00tlkEeiSenemNksjjsoEg ^"Bonisagus" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The brilliant eighth-century magus who developed the Parma Magica and, with the help of the other Founders, the whole of Hermetic Magic. The founder of House Bonisagus."
+        }
+        #tk1b7ldmKS1oYiEYhWZvBYKr ^"The Church" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "All Christians, whether priests or not. Also used to refer specifically to the organizational structures of the Church in Western Europe."
+        }
+        #tl2OuSMCHsmyAzQfLLsqBPfr ^"companion" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A game term, not used by characters, referring to central characters who are not magi."
+        }
+        #tgNvCNtrGMqOx2ZI0BbxhL8w ^"Covenant" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Strictly, a group of magi bound together by an agreement going beyond the Code of Hermes. By extension, the place where those magi live, and all the other people who live there with them. Almost all Ars Magica sagas center on a single covenant."
+        }
+        #t3MYdWCQ7hygy7A794yDxTid ^"The Divine" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The greatest power in the universe, generally believed to be the creator and sustainer of all existence. It backs the Church, the Jews, and the Muslims."
+        }
+        #tjtYnADPVVs1OZj4xUj5AO3n ^"Faerie" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "One of the four mystic realms. Faeries always care about humans, sometimes in the way a torturer cares about his victims."
+        }
+        #tYMseCbH8yxmNTe1uWNOtOzn ^"filius/filia" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A magus trained by a given magus. Only used after apprenticeship. After the Gauntlet, the new magus becomes the filius of the magus who trained him."
+        }
+        #th9C2siRq2IxYr7DBNcjUEzm ^"Formulaic magic" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Spells that have been worked out in detail ahead of time. They have one effect each, but magi can only use their full power through Formulaic magic."
+        }
+        #tS8RDdYruwyDh3cVfEYKCfYM ^"The Founders" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The twelve magi who founded the Order of Hermes in the eighth century. Bonisagus, Bjornaer, Criamon, Diedne, Flambeau, Guernicus, Jerbiton, Mercere, Merinita, Tremere, Tytalus, and Verditius. In many modern accounts, Diedne’s name is replaced with Trianoma’s."
+        }
+        #tUQ3W03HrYH2UUQQfG3Nl1kf ^"Gauntlet" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "In full, the Apprentice’s Gauntlet. The final test administered to an apprentice to determine whether he is ready to become a magus; it differs significantly between Houses."
+        }
+        #tTewiGdZwmTboFEtrtBvqViC ^"The Gift" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The ability to use almost any form of magic, with proper training. All magi have The Gift. The Gift makes people around a character uneasy."
+        }
+        #tcEA9bnvS58dlpPa9u6nCTbB ^"grog" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A game term referring to supporting player characters. Characters also use it, but mainly to refer to warriors employed by a covenant."
+        }
+        #tBwGuKitQZ1KZePsgohvao4d ^"Hedge magic" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A contemptuous term used within the Order of Hermes for any magic other than Hermetic magic."
+        }
+        #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The extremely powerful and flexible magic practiced by the members of the Order of Hermes."
+        }
+        #tDdNoj74JYmyOqnwBbsVXaOm ^"The Infernal" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "One of the four mystic realms. Infernal creatures seek to corrupt and destroy people."
+        }
+        #tNZp5iD2kEHMSJfCNqstsyWr ^"Magic" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "One of the four mystic realms. Magical creatures often do not care one way or the other about humans."
+        }
+        #tcV1HKxaN2BqJTXk0ZSxd4rh ^"maga/magus/magi" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A member of the Order of Hermes who can use Hermetic magic. Used by both players and characters. “Maga” is the feminine form, “magus” the masculine, and “magi” the plural."
+        }
+        #tZ0jn2a7xSBf8hLtPuHomSzD ^"Mythic Europe" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The world of Ars Magica. Much like medieval Europe in 1220, except that the myths are true."
+        }
+        #t2tZNiB6YhCRxsiY8GALpPw5 ^"Order of Hermes" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "An order of wizards stretching across the whole of Mythic Europe, bound by an oath that keeps them from fighting each other or trying to rule the mundanes. One of the most central organizations in the game."
+        }
+        #t1MLQOvqpSXAD5zwy80DHbyR ^"parens" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The magus who trained another magus. This title is only used after apprenticeship; at Gauntlet, the master becomes the parens of the new magus."
+        }
+        #tmrCVsjbg83nFCpMvFvB1ltE ^"Parma Magica" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A ritual learned by all Hermetic magi at the conclusion of their apprenticeship, which allows them to resist magic. The first of Bonisagus’s great discoveries."
+        }
+        #tMyvutqSroJDVrXB24dgzpnI ^"Quaesitor" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The investigators of the Order of Hermes, they find Hermetic criminals and present evidence of their crimes at Tribunal."
+        }
+        #tL0Jye7pO8Shk62LB8IVwG96 ^"Redcap" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "One of the messengers of the Order of Hermes. Most do not have The Gift."
+        }
+        #tFZUsZoQe1NH6HKbojYHdDnr ^"The Schism War" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A war in the early eleventh century in which House Diedne was eliminated, and which nearly tore the Order apart."
+        }
+        #tF3LIdBC7rx78ep6cZjCrAkB ^"sodalis (pl. sodales)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The normal term used by magi to refer to other magi. It is a term used between equals, and emphasizes that all Hermetic magi are equal within the Order."
+        }
+        #tmefA1Donj7SFvaEMLzjDE3M ^"spell" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "An individual use of magic, generally Hermetic magic. There is no real limit on the number of spells a magus can cast in a day, although casting too many in quick succession is likely to exhaust him."
+        }
+        #t6Ypk51Gp3NpvYEaU7yDrvem ^"Spontaneous magic" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Magic created by a magus on the spur of the moment, to meet an immediate need. Generally much weaker than Formulaic magic, but much more flexible."
+        }
+        #tyJamJ67Ki8tpfhv7DAX0naJ ^"Trianoma" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The maga who met Bonisagus soon after he invented the Parma Magica, and took on the political mission of bringing Europe’s wizards together in a single Order."
+        }
+        #tG0cI1MTcmu1LIrExK3bz8KY ^"Tribunal" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "1) One of the thirteen areas into which the Order of Hermes divides Mythic Europe. 2) The meetings of the magi in one of those areas, held once every seven years."
+        }
+        #tMlb8fcjn7yw8uYKQczssmlV ^"Vis" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Raw magic. The most valuable thing to most magi."
+        }}

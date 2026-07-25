@@ -1,0 +1,43 @@
+EXTENSION "ArM5_Covenants_Core_Ext" {
+    NAME "Ars Magica Fifth Edition - Covenants: core type extensions"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Core_Covenant"
+
+    # Covenants widens types the core rulebook already declares, rather than
+    # forking parallel ones: a Boon is a Boon whether it came from the core
+    # book or from here, and these supplements are meant to be loaded
+    # alongside the core (spec S13 composition).
+    #
+    # The core rulebook's Chapter Six gives Boons and Hooks only a Minor/Major
+    # magnitude. This book's own Table of Boons and Hooks (pp.28-29) adds a
+    # third, Free, and files every entry under one of six categories with an
+    # optional prerequisite. Counts from that table, parsed deterministically
+    # into covenants/ground-truth.json: 215 entries, 129 Minor / 65 Major /
+    # 20 Free, categories Residents 51, Site 45, External 39, Surroundings 35,
+    # Buildings 23, Resources 20.
+    #
+    # Per spec S13, SET changes a property the target already declares and a
+    # PROPERTIES block introduces one it never had. Magnitude is the core
+    # rulebook's own field, widened here; Category, Requires and Fantasy Level
+    # are new, so they are declared rather than SET.
+
+    MODIFY ^"Covenant Boon" {
+        SET ^"Magnitude" ENUM ["Minor", "Major", "Free"]
+        PROPERTIES {
+            ^"Category" ENUM ["Site", "Buildings", "Resources", "Residents", "External", "Surroundings"]
+            ^"Requires" STRING
+            ^"Fantasy Level" ENUM ["low", "high"]
+        }
+    }
+
+    MODIFY ^"Covenant Hook" {
+        SET ^"Magnitude" ENUM ["Minor", "Major", "Free"]
+        PROPERTIES {
+            ^"Category" ENUM ["Site", "Buildings", "Resources", "Residents", "External", "Surroundings"]
+            ^"Requires" STRING
+            ^"Fantasy Level" ENUM ["low", "high"]
+        }
+    }
+}

@@ -1,0 +1,35 @@
+BASE "ArM5_Core_Laboratory" {
+    NAME "Ars Magica Fifth Edition - Laboratory (core types)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+
+    # Base types for Chapter Eight (arm5e-0.4-laboratory.ttrpg): the seasonal
+    # laboratory activities, item enchantment, and the Shape and Material
+    # bonus table.
+
+    #tPdO9HE5TsrEkohALazaxuJs ^"Laboratory Activity" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Lab Total Formula" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #txtmUKoFoiU1PbimLdUWzj19 ^"Shape and Material Bonus" DEF {
+        APPLIES TO [^"Enchantment"]
+        PROPERTIES {
+            ^"Bonus" INTEGER REQUIRED
+            ^"Applies To" STRING REQUIRED
+            ^"Kind" ENUM ["Shape", "Material"] REQUIRED
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

@@ -1,0 +1,424 @@
+EXTENSION "ArM5_Long_Term_Events" {
+    NAME "Ars Magica Fifth Edition - Long-Term Events"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    #tJdR6qtp1c2TRO4mFqr77AMi ^"Using Experience Points" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Increase an Ability by one" "(Ability + 1) x 5 experience points"
+                "Increase an Art by one" "Art + 1 experience points"
+            }
+            DESCRIPTION "Experience points are used to increase Arts and Abilities. A character gains experience points in an Art or Ability when she spends seasons studying it. Once she has spent enough experience points, the Art or Ability increases by one. A character may, in general, raise an Art or Ability by more than one level per season."
+        }
+        #tPQ5P2tHdaoBfaT3jVOFBl4B ^"Advancement" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Advancement Total" "Source Quality + Bonus from Virtues – Penalty from Flaws"
+            }
+            DESCRIPTION "Whenever a character spends a season in study, she gains a number of experience points equal to her Advancement Total in the subject studied. A character may only gain experience from one type of advancement in one season. In particular, a character may gain experience from exposure in all and only those seasons in which she does not gain experience points from any other form of advancement. The character may undertake other activities which do not result in experience point gain and still gain Exposure experience; this includes inventing spells in a Hermetic laboratory, or making tables for sale."
+        }
+        #tjSyBNwubTQd9JbXN4yaQVeS ^"Assigning Seasons" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The assignment of seasons to activities is, in some cases, an abstraction. A normal character must work for two seasons, and gets two seasons \"free.\" However, he cannot leave his job for two seasons, as the free time is spread over the year. Thus, he can only undertake study that he could do in and between his job. The two seasons spent working generate Exposure experience, as described below. Characters may have genuinely free seasons, but this is a matter of character background. Hermetic lab work always takes an entire, actual season, and Hermetic magi have four genuinely free seasons per year, which they may apply to study or other activities as they wish. If a magus does something other than study, he is entitled to Exposure experience, just like anyone else."
+        }
+        #tKCoT4AVOH9QpxzJgzQTd1jA ^"Limits (Gain Limit)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Some study sources, notably teachers and summae, have a level themselves. The student may not gain a score in the Ability or Art higher than the level of the source, and may not gain any experience points towards the next level from that source. This limit is called the Gain Limit."
+        }
+        #t2ZkzvMG25ZJz8dK7CdW1rLi ^"Exposure" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Activity", "Possible exposure"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Laboratory Work" "Magic Theory, Exceptional Abilities used, Arts used."
+                "Craft Work" "Craft Ability, Area Lore for the area where you live."
+            }
+            FORMULAS {
+                "Exposure Source Quality" "Two"
+            }
+            DESCRIPTION "A character can learn simply by being exposed to the thing to be studied. This is by far the least effective way to learn. These experience points may be split between any two Abilities or Arts which were being used consistently during the season. Exposure includes both doing something yourself (the normal way), or helping someone else to do it, without any feedback. In particular, Hermetic laboratory activities grant Exposure experience both to the lead magus and to any assistants."
+        }
+        #tU0Ei7Yf7jdvfwmEOJtTacLq ^"Adventure" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Adventure Source Quality" "5–10"
+            }
+            DESCRIPTION "A character may gain experience by going on adventures. This takes a whole season, even if the adventure itself does not; the character spends the rest of the season consolidating what she learned under pressure. A character may choose not to take experience from an adventure if the adventure was short enough to allow other study. The Source Quality of an adventure is set by the storyguide, depending on how important the adventure was and how many opportunities for learning there were. Adventure experience may be added to any Abilities or Arts involved in the adventure, and may be split between any number of Abilities. Any Ability actually used as part of the adventure qualifies, as do Abilities used \"off stage,\" for example during travel. Experience points can only be applied to Arts which were used \"on stage,\" however. You may apply a maximum of five Adventure experience points to a single Ability or Art."
+        }
+        #tV0Ccacyab7mMNWKyr8BxusN ^"Advancement Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Score", "Art To buy", "Art To raise", "Ability To buy", "Ability To raise"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1" "1" "1" "5" "5"
+                "2" "3" "2" "15" "10"
+                "3" "6" "3" "30" "15"
+                "4" "10" "4" "50" "20"
+                "5" "15" "5" "75" "25"
+                "6" "21" "6" "105" "30"
+                "7" "28" "7" "140" "35"
+                "8" "36" "8" "180" "40"
+                "9" "45" "9" "225" "45"
+                "10" "55" "10" "275" "50"
+                "11" "66" "11" "330" "55"
+                "12" "78" "12" "390" "60"
+                "13" "91" "13" "455" "65"
+                "14" "105" "14" "525" "70"
+                "15" "120" "15" "600" "75"
+                "16" "136" "16" "680" "80"
+                "17" "153" "17" "765" "85"
+                "18" "171" "18" "855" "90"
+                "19" "190" "19" "950" "95"
+                "20" "210" "20" "1050" "100"
+            }
+            DESCRIPTION "The source presents this as a sidebar. To Buy: The number of experience points required to raise a score from zero to that number. To Raise: The number of experience points required to raise a score by one point to that number."
+        }
+        #toBlxErOEIwdjCBBor9QeFoi ^"Practice" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Practice Source Quality" "3–8, usually 4"
+            }
+            DESCRIPTION "A character can try to deliberately find out more about a subject, by her own efforts. This is more effective than exposure, but it is a full-time activity. In almost all cases, the Source Quality for practice is four, depending on how useful you think the environment is. There are four cases which merit higher qualities. First, practicing a language in a community where it is the native tongue merits a Source Quality of eight, until your score in the language reaches 5. At this point, the Source Quality drops to four. Second, practicing Area Lore by traveling around or living in the area merits a Source Quality of five to seven, depending on how thoroughly the character can explore the area. A character living in a city while working in a trade could claim one of his nominal free seasons as a Source Quality five practice in Area Lore for the city, while a character with a genuinely free season in the city, or working as a messenger, could claim a Source Quality of seven. Third, being forced to practice a trade or craft in an environment with immediate feedback as to how well you are doing has a Source Quality of five. An example would be someone forced to help on a ship. Finally, practicing a spell for mastery by casting it repeatedly is worth a Source Quality of five. Otherwise the Source Quality is always four. Experience points from practice may be split between several Abilities. If the Source Quality would be different for the different Abilities, the total number of experience points gained is based on the lowest of the Source Qualities. Hermetic Arts cannot be increased by simple practice; see \"Vis\" on page 165 for the equivalent."
+        }
+        #t6UMai7trnoPvp12YU7QlOBb ^"Training" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Training Source Quality" "Master's score in Ability being taught + 3"
+                "Training Gain Limit" "Master's score in Ability being taught"
+            }
+            DESCRIPTION "Training is one-on-one training where the master shows the trainee what to do. A character must have a minimum score of two in an Ability before she can serve as a master, and at that level simply yelling at the apprentice when he does something wrong is equally helpful. The master must have a higher score than the apprentice. However, the master may work at earning a living while training an apprentice. The apprentice may only be taught an Ability which the master is using to earn a living over the whole season. The apprentice may not earn a living or produce anything useful. Master and apprentice do not need a common language in most cases. The master gains Exposure experience in the Ability being trained, just as for the normal use of an Ability to earn a living. However, the master only gains Exposure experience in the seasons spent training the apprentice. Hermetic Arts cannot be increased by training."
+        }
+        #todmFCvPfmqJI8dg50XqOZuZ ^"Teaching" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Teaching Source Quality" "Teacher's Communication + Teaching + 3 + bonus"
+                "Teaching Gain Limit" "The teacher's score in the Art or Ability"
+            }
+            DESCRIPTION "Characters can be taught by other characters. A character must have a score of at least two in an Ability, or at least five in an Art, before she can teach anyone. The teacher and the students must share a common language. The teacher must have a higher score in the Ability or Art than the student. A character may teach several students. The maximum number of students is equal to the teacher's Teaching Ability times five, or one student if the teacher has a score of zero in Teaching. If a teacher has a single student, whether for an Art or an Ability, the Source Quality gets a +6 bonus. If she has two students, the bonus is +3. If there are more students, there is no bonus. A teacher may gain exposure to Teaching or the language of instruction, but cannot do anything else in a season when she is teaching. Hermetic Arts can be taught, but only one-on-one. The normal +6 bonus for having only a single student applies."
+        }
+        #ttWLxfzKBrVRkZZQF9cJ3SdY ^"Books" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Summa Statistics" "Source Quality and Level"
+                "Summa Gain Limit" "Summa Level"
+                "Tractatus Statistics" "Source Quality"
+            }
+            DESCRIPTION "Characters can learn by studying from books, and practicing if the subject of study requires it. It is not possible to study from a book unless you are fluent (have a score of four or higher) in the language in which it is written, and can read and write the writing system used (which requires a score in Artes Liberales). There are two types of books, summae (singular summa) and tractatus (singular also tractatus). A summa contains an organized account of a topic, taking it from the basics up to a certain level. It can be studied as long as the student's level in the subject of the book is less than the level of the book. A tractatus contains an in-depth treatment of one aspect of the subject. A tractatus is useful to students at any level of ability, because you can never know everything about your subject. Books can be written about any Hermetic Art or any Ability, including Supernatural Abilities and Spell Mastery Abilities. A character can only study a Supernatural Ability from a book if he already has a score of at least one in that Ability. Reading Summae: A student may continue to study a summa as long as his score in the Art or Ability that it concerns is lower than the level of the text. Thus, a summa may be studied for several seasons with profit. Studying Tractatus: It takes one season to study a tractatus, and a given student may only study a given tractatus once, with benefit. A person gains nothing from studying a tractatus they wrote themselves."
+        }
+        #t98ot87uk2aqXlK0zTbGq25h ^"Vis (Studying the Arts from raw vis)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Vis Source Quality" "Stress Die + Aura Bonus"
+            }
+            DESCRIPTION "Magi can study the Hermetic Arts from raw vis. This requires one pawn of vis of the appropriate Art for every five levels or part thereof that the magus has in that Art, and a minimum of one pawn, all of which are consumed during the season's study. If the stress die double botches, the maga may enter Wizard's Twilight (see page 88). The number of botch dice equals the number of pawns of vis used in study. Studying from raw vis does not require a Hermetic laboratory; it can, in principle, be done anywhere. Most magi do study raw vis in their laboratory, though."
+        }
+        #tVFICYTOlqPXwfUV9zaRwNgg ^"Distractions" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Months Lost", "Total", "Example"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "None" "Full" "15"
+                "One" "2/3" "10"
+                "Two" "1/3" "5"
+                "Three" "None" "0"
+            }
+            DESCRIPTION "Sometimes characters are distracted from study by outside events, like a dragon attacking the covenant. In most cases, a distraction has no game impact, unless the distraction is an adventure and the character chooses to take Adventure experience. Long distractions, of more than a month, reduce Advancement or writing totals. For every full month lost, reduce the total by one third of its original amount. Round any fractions up."
+        }
+        #tikbj1bUxWIC00s2BJCU07ci ^"Writing Books" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Summa Source Quality" "Author's Communication + 6 + bonus"
+                "Summa Gain Limit" "Level of summa"
+                "Tractatus Source Quality" "Author's Communication + 6"
+            }
+            DESCRIPTION "A character must have a score of at least five in an Art, or at least two in an Ability, before she can write a useful book. She must also have a score of at least five in the language she wants to write the book in. Books may be written about any Ability, including the Mastery Ability of an individual spell. Learning from books about practical Abilities requires the reader to practice as well as read."
+        }
+        #tLc2YFDDpLor1ygfkTGb3167 ^"Summae" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Each summa is described by two factors: its level, which represents how much knowledge is contained in it, and its quality, representing how well it is written. When a summa is started, the level of the finished book is determined. The level may be chosen freely by the author, up to half of her score in the appropriate Art or Ability. The quality of the summa is equal to the author's Communication + 6. If the author chooses to set the level of the summa below half her score, there is a bonus to the quality. For an Art, the bonus is one point for every level by which the summa is dropped. For an Ability, the bonus is three points for every level. This bonus cannot exceed the base quality of the summa, so the final quality cannot be more than twice the author's Communication + bonuses from Virtues + 6. Once the level is determined, writing commences. For every season spent writing, the character accumulates a number of points equal to his Communication + Language. When the total of points equals or exceeds the level of the summa, for Arts, or five times the level of the summa, for Abilities, the summa is complete. The level of the book may not be changed midway through the writing (if the character improves the Art or Ability, for example). Once begun, the book must be finished at the initial level or not finished at all. For example, Quintus, who has a score of 24 in Ignem, a Communication of –1 and a Language of 5, wants to write an Ignem summa. He decides that the level of the summa will be twelve, the maximum that he can select. During the first season of writing he accumulates four points (his Communication + Language). He accumulates another four in the second season, taking him to eight, and four more in the third, for a total of twelve. This equals the level, so the book is completed at the end of the third season. The quality of the summa is 5. If he had chosen to write a summa at level six, it would have taken him two seasons, and the quality of the summa would have been 10, because the bonus from dropping the level by six points is capped at 5 by the base quality of the book."
+        }
+        #to74hzd7lydcyh9nigEO9MZu ^"Tractatus" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "It takes one season to write a tractatus. The quality of a tractatus is equal to the author's Communication + 6. A character may only write a total number of tractatus equal to half her score in an Ability or one fifth of her score in an Art, rounded up in both cases."
+        }
+        #tnJDVHBw6RVjvdszUf3NZOZK ^"Copying Books" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Copying Carefully" "1 tractatus per season, or 6 + Profession (Scribe) points towards a summa."
+                "Copying Quickly" "Three times as fast as careful copying, copy Source Quality is 1 lower than copied book."
+            }
+            DESCRIPTION "A character may copy books carefully or quickly. Copying a tractatus carefully takes one season. Every season that a character spends copying a summa carefully, she accumulates points equal to 6 + her Profession: Scribe score. When she has accumulated points equal to the level of the summa, it has been copied. A careful copy has the same quality as the original book. A character may copy books quickly at three times the rate. That is, she may make three copies of a tractatus (or one copy of each of three tractatus, and so on) in a season, or she gains 18 + 3 times her Profession: Scribe score points towards copying a summa. Books copied quickly have a quality one lower than the book copied."
+        }
+        #t6Jjj2cpCUkZV2GELOyfzapA ^"Corrupted Copies" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Books copied by people lacking particular skills become corrupted. In the simplest case, the scribe omits small marks that are a vital part of the meaning because he thinks they are merely ink blots. In more complex cases, he \"corrects\" parts of the text, creating gibberish. A corrupted text is useless. A character must be able to read and write the language in which the book is written to copy it without corrupting it. However, a score of 3 in the language is sufficient to allow accurate copying. A character must have a score of at least 1 in the relevant Realm Lore, or the appropriate Ability, to copy a text about a Supernatural Ability without corrupting it. A character must have a score of at least 1 in Magic Theory in order to copy a book about the Hermetic Arts or Parma Magica without corrupting it. Scores in the Ability in question are no substitute in this case."
+        }
+        #tUPJXmYRv6hMxpw2d51FxNMt ^"Learning Supernatural Abilities" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Supernatural Ability Source Quality" "Normal Source Quality – Total Score in Supernatural Abilities"
+            }
+            DESCRIPTION "Only characters with The Gift (see page 36) can learn supernatural abilities using these rules, but the teacher need not have The Gift (although, obviously, he must have the Supernatural Ability). Supernatural abilities can only be taught if they have an associated Ability, in game terms. Thus, Enchanting Music can be taught, but Unaging cannot. The initial teaching in a supernatural ability must be by Training or Teaching, as described above. Once the character knows the Ability, it may be advanced normally. In order to learn a supernatural ability, the student must reach a score of at least 1 in the first season. That is, he must gain at least 5 experience points. However, he must subtract the total of his scores in other supernatural abilities from the source quality. If the student has had the Hermetic Arts opened (see page 106), he must subtract 15 or the sum of all his Art scores, whichever is higher, from the Source Quality. For example, a character has Enchanting Music 3, Dowsing 4, and The Gift. He wants to learn Animal Ken. He must find a character who is willing to teach it to him, despite his Gift, and who can manage a Source Quality of at least 12. If the character has also been opened to the Hermetic Arts, but still has scores of 0 in all of them, he needs to find a teacher who can manage a Source Quality of 27 (15 for the Arts, +3 for Enchanting Music, +4 for Dowsing, +5 for the number of experience points he needs to gain). This is effectively impossible. Mystery Cults can often avoid the penalty due to prior mystical abilities through their initiation rituals."
+        }
+        #tWQaNntbnhq1UhNBXOEwVMCV ^"Changing Reputations" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A character gains a Reputation, with a score of 1, by doing something noteworthy in front of witnesses who will talk. A grog might fight a dragon and survive, or kill a demon with two blows of his dagger. A priest might preach a heretical sermon to a monastery. A magus might give the covenant's vis sources away at Tribunal. All of these generate a Reputation. Once a character has a Reputation, anything he does that draws attention to himself strengthens that Reputation, as long as it is not in direct contradiction. Treat the Reputation as an Ability, and give the character one \"experience point\" in it for every noteworthy action he performs. Thus, performing ten noteworthy actions raises a Reputation from one to two. A character may wish to get rid of a bad Reputation. This is not easy. First, he must do something spectacular enough to start a Reputation, and gain a score of 1 in the new Reputation. Then he may count noteworthy actions that specifically support the new Reputation towards increasing it, rather than the bad Reputation. General noteworthy actions still increase the original Reputation. Once the new Reputation exceeds the old, general actions grant experience to the new Reputation instead. At this point, the character may choose to reduce the old Reputation by one point instead of raising the new Reputation when he gains enough experience points to raise it. If a character has two Reputations, the storyguide should roll both to see whether a random person has heard of the character. A person may have heard both Reputations, in which case he may not know what to believe, or may amalgamate them. For simplicity's sake, most characters should have no more than two Reputations."
+        }
+        #tEGIGJrR582IwURCi1cw6nue ^"Warping" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Warping is the side effect of living in a strong mystical aura, or being subject to mystical effects over a long period of time. Every character has a Warping Score, which is increased like an Ability, but by Warping Points rather than experience points. To increase the Warping Score by one point, a character needs five times the new score extra Warping Points. Thus, to increase from a Warping Score of 2 to one of 3, a character must gain 15 Warping Points. Warping Points are gained from exposure to any of the supernatural realms, Divine, Faerie, Infernal, or Magic. The points are not distinguished based on their source."
+        }
+        #tYIMg5YLT623JxuGMo6wuEMA ^"Warping Points and Score" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Warping Score", "Warping Points to Reach", "Warping Points to Increase to"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "1" "5" "5"
+                "2" "15" "10"
+                "3" "30" "15"
+                "4" "50" "20"
+                "5 and so on." "75" "25"
+            }
+            DESCRIPTION "The source presents this as a sidebar giving the Warping Points needed to reach and increase each Warping Score."
+        }
+        #tmXbpLSeRJAAJujhhV2mWxTZ ^"Warping and Non-Humans" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The source presents this as a sidebar. Other mundane creatures and things are also warped by mystical effects. However, keeping track of the Warping Scores of every table in the covenant is unlikely to be fun. Instead, the storyguide should just describe interesting effects, as required. The rules for humans give an idea as to when the effects should be visible, and as to how serious they should be. Creatures with a Might score are absolutely immune to warping. They are already fully part of one of the mystical realms."
+        }
+        #tJN1Zqqhj2fvulg8B48h4VEa ^"Living in Strong Auras (table)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Aura Strength", "Always Within", "Half time Within", "Frequent Visits"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "6" "1/year" "None" "None"
+                "7" "1/year" "1/2 years" "None"
+                "8" "2/year" "1/year" "None"
+                "9" "1/season" "2/year" "1/year"
+                "10" "1/month" "1/season" "2/year"
+            }
+            DESCRIPTION "The source presents this as a sidebar giving Warping Points gained by aura strength and time spent within."
+        }
+        #t93jzqL5uJ1WeWqwEIzFL5kc ^"Gaining Warping Points" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "There are four main sources of Warping Points: 1. Living in a strong (6 or higher) mystical aura. 2. Being affected by a powerful mystical effect, unless you created the effect, or it was designed especially for you. 3. Being continuously under the influence of a mystical effect, whether powerful or not. 4. Botching a roll to use a mystical ability. Note that these are separate sources of Warping Points. Thus, if a magus designs a powerful mystical effect, such as a Longevity Ritual, for himself, he doesn't gain Warping Points for being under a powerful mystical effect, but he does gain them from being under a continuous mystical effect. All sources of Warping Points stack. A character continuously affected by a strong mystical effect that wasn't designed for him and that he didn't cast gains Warping Points both from being affected by a strong mystical effect, and for being continuously under the influence of a mystical effect."
+        }
+        #t5AxPUqxP4ZrDIOf7Jpz02o7 ^"Living in Strong Auras" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Auras of over five points have an effect on anyone living within them, reflected in gaining Warping Points. The number of points gained depends on the strength of the aura and the length of time spent there. A character is \"always within\" an aura if she lives, works, and sleeps there. Occasional visits outside the aura do not matter. \"Half time within\" applies to someone who sleeps in the aura but works elsewhere, or vice-versa. It also covers someone who spends two weeks constantly in an aura, and two weeks outside. \"Frequent visits\" means that the character spends about a quarter of her time in the aura. This time refers to the total length of time spent in an aura, even if there are several different auras involved. Time spent in higher auras may be treated as time in a lower aura if this increases the number of Warping Points gained. For example, a character who spends half her time in a level 6 aura, with frequent visits to level 7 and 8 auras, should gain one Warping Point per year, because she is always in an aura of at least level 6. Characters with mystical abilities arising from the same realm as the aura (for example, Hermetic magi in a magical aura) do not gain Warping Points from living in the aura. They may gain them from other sources."
+        }
+        #thkG7E51YaIyAzyzF00BRE6W ^"Warping Points and Constant Effects" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["", "Designed for/ Cast by Subject", "Not Designed for or Cast by Subject"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Brief Effect, Low Power" "0" "0"
+                "Brief Effect, High Power" "0" "1"
+                "Constant Effect, Low Power" "1/year" "1/year"
+                "Constant Effect, High Power" "1/year" "1 when cast, + 1/year + 1/season"
+            }
+            DESCRIPTION "The source presents this as a sidebar summarizing Warping Points gained from effects by power and duration."
+        }
+        #teN0sBGmNRJ6hFSqm0jpN9MB ^"Powerful Mystical Effects" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Anyone subjected to a powerful mystical effect gains a Warping Point, unless they themselves were responsible for the effect or it was specifically and carefully designed to work on them. \"Powerful effect\" is subjective, but any Hermetic spell of sixth magnitude or higher counts. Designing an effect for a particular target requires, in Hermetic terms, that a special version of a Formulaic spell be invented. The spell has its effect on anyone, but only the designated target, and the caster, do not suffer Warping unless the effect is also continuous. Hermetic Longevity Rituals are always designed for a specific target. If the effect is continuous, a Warping Point is gained when it begins and every season thereafter. Ritual effects with Momentary duration are not continuous, but do grant a Warping Point when first applied if they are neither cast by the target nor specifically designed for the target."
+        }
+        #t2x1c8fAXyhgQdH1djG8MYnO ^"Constant Mystical Effects" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A character who is constantly under the influence of one or more active mystical effects gains one Warping Point per year for each effect. The strength of the effect is irrelevant, as is the caster, and whether or not the effect was designed specifically for a certain person. A character is only under the influence of an effect if she is affected directly and personally. Thus, a character enchanted to fly at all times is under the influence of an effect, but a character living in a flying castle need not be; the castle is directly affected by the magic. Wards are active mystical effects as long as they are protecting someone. Two notable exceptions are Parma Magica and the Aegis of the Hearth, which are based on the same breakthrough by Bonisagus. Effects with Momentary duration are not continuing effects. A Hermetic Longevity Ritual is, and thus grants one Warping Point per year as a continuing mystical effect even though it does not grant any Warping Points as a powerful mystical effect. The binding between a Hermetic magus and his familiar does not grant Warping Points, nor do any powers enchanted into the bond. An effect which is active for half the time counts as constant for these purposes. Less than that, and it does not. Further, if a character is always under the influence of some mystical effect, but the particular mystical effect changes, that still counts for the purposes of gaining warping. A powerful, continuous effect that is not specifically designed for an individual grants one Warping Point when first applied, and five every year thereafter: one because it is a continuous mystical effect and one per season (four total) because it is a continuous powerful mystical effect."
+        }
+        #tWVnapMsQYnIXsZKYDygRYgo ^"Mystical Botches" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "When a character botches the roll to invoke a mystical effect (for example, a Hermetic spell or an exceptional ability), she gains one Warping Point for every zero on the botch dice."
+        }
+        #tolxgTtutY1g7k22uizmyHrK ^"Effects of Warping" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The effects of warping depend on a character's Warping Score, the nature of the character, and the source of the warping. Hermetic magi are made more prone to Wizard's Twilight by their Warping Score. This replaces the normal effects. Mundane characters gain a Minor Flaw when they reach a Warping Score of one. Note that most inhabitants of Mythic Europe have no Warping Points at all, because they live in a low aura and have never been the subject of a mystical effect. Even those who have been affected by a powerful mystical effect once only have one Warping Point, not enough for a Minor Flaw. This Minor Flaw should reflect the predominant source of the Warping Points. If they are mainly due to an aura, the Minor Flaw will reflect the aura, and most characters will get the same Minor Flaw. If they are mainly due to magical effects, they will reflect the effect. For example, a character who has been repeatedly healed with powerful magic might gain a stigmatic wound, which neither hurts nor causes damage, but looks and feels real. When the Warping Score reaches 3, the character gains a second Minor Flaw. At a Warping Score of 5, the character gains a mystical Minor Virtue attuned to the primary source of Warping Points. This stops any further gain of points from living in a strong aura of the same type as the Minor Virtue. At a Warping Score of 6, and every point thereafter, the character gains a Major Flaw appropriate to the main sources of the warping."
+        }
+
+    #t2JGs3X9SnwIkmLcbFY4HXUz ^"Aging" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Aging Total" "Stress die (no botch) + age/10 (round up) – Living Conditions modifier – Longevity Ritual modifier"
+            }
+            DESCRIPTION "Characters begin aging in the Winter after they turn 35. Every year, a character must roll on the Aging table. As a high roll generally indicates more serious effects of age, a high Longevity Ritual modifier and a high Living Conditions modifier both indicate longer life. A Longevity Ritual is effective until the character suffers a crisis. When the crisis occurs, the ritual assures that the character survives, but its power is spent, and the focal ritual must be performed again (see page 101). A character under the influence of a Longevity Ritual should roll on the table no matter what his age, but treats all rolls of 10 or more as rolls of 9 until he reaches the age of 35. His apparent age may be younger than his actual age, but he is at no risk of actually aging before any other characters. At the player's and storyguide's discretion, this may also apply to characters with modifiers to the aging roll from other sources."
+        }
+        #t1qYMTO75vbMlvCRGSKQ1AoI ^"Apparent Age Increases" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Particularly low rolls on the table mean that the character appears no older. Otherwise, the character's apparent age increases by one year. The modifier to rolls depends on the character's actual, not apparent, age."
+        }
+        #tyanuzsbS0SAiLpSm5TaTvzt ^"Aging Points" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Aging points are accumulated in each Characteristic. Once a character has a number of Aging Points greater than the absolute value of the Characteristic, the Characteristic drops by one point and all Aging Points are lost. Thus, a character with a Communication of +2 drops to +1 in the year when he gains his third Aging Point in that Characteristic. A character with a Stamina of –3 drops to –4 in the year when he gains his fourth Aging Point in that Characteristic. If an Aging Point \"in any Characteristic\" is gained, the player may choose the Characteristic."
+        }
+        #t2xVjL3gIWQYimh7d7yWJFTt ^"Aging Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Living Conditions", "Modifier"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Wealthy, or healthy location" "+2"
+                "Typical Summer or Autumn covenant (magus)" "+2"
+                "Typical Summer or Autumn covenant (mundane)" "+1"
+                "Typical Spring or Winter covenant (magus)" "+1"
+                "Average peasant" "0"
+                "Poor, or unhealthy location; typical town" "–2"
+            }
+            DESCRIPTION "The source presents this as a sidebar containing three tables: Living Conditions modifiers, Aging Rolls results, and Crisis results."
+        }
+        #t6d4SWNJLfybVZert1zKUkqW ^"Aging Rolls" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Aging Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "2 or less" "No apparent aging"
+                "3 or more" "Apparent age increases by one year"
+                "10–12" "1 Aging Point in any Characteristic"
+                "13" "Gain sufficient Aging Points (in any Characteristics) to reach the next level in Decrepitude, and Crisis"
+                "14" "1 Aging Point in Qik"
+                "15" "1 Aging Point in Sta"
+                "16" "1 Aging Point in Per"
+                "17" "1 Aging Point in Prs"
+                "18" "1 Aging Point in Str and Sta"
+                "19" "1 Aging Point in Dex and Qik"
+                "20" "1 Aging Point in Com and Prs"
+                "21" "1 Aging Point in Int and Per"
+                "22+" "Gain sufficient Aging Points (in any Characteristics) to reach the next level in Decrepitude, and Crisis"
+            }
+            DESCRIPTION "The source presents this as part of the Aging Table sidebar, giving the results of an aging roll."
+        }
+        #tJa6Wvg65yH0CZ9wt2E2g8lp ^"Crisis Table" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Crisis Roll", "Result"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "8 or less" "Bedridden for a week."
+                "9–14" "Bedridden for a month."
+                "15" "Minor illness. Stamina roll of 3+ or CrCo20 to survive."
+                "16" "Serious illness. Stamina roll of 6+ or CrCo25 to survive."
+                "17" "Major illness. Stamina roll of 9+ or CrCo30 to survive."
+                "18" "Critical illness. Stamina roll of 12+ or CrCo35 to survive."
+                "19+" "Terminal illness. CrCo40 required to survive."
+            }
+            DESCRIPTION "The source presents this as part of the Aging Table sidebar, giving the results of a crisis roll."
+        }
+        #tU8D79WJklbP6C083p5rdFhD ^"Decrepitude" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Every Aging Point also counts as an experience point towards Decrepitude, which increases as an Ability. Thus, a character who has gained seventeen Aging Points has a Decrepitude score of 2. Characters with a Decrepitude score of 4 are extremely frail, and must roll on the Crisis table if they undertake stressful activities, such as long journeys, or any combat. Characters with a Decrepitude score of 5 are bedridden and will die within a few months at most. They cannot be saved by mortal intervention."
+        }
+        #twZVtEGZzZM2XKIpbGjVP7Lz ^"Crisis" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Crisis Total" "Simple die + age/10 (round up) + Decrepitude Score"
+            }
+            DESCRIPTION "Increase the character's Decrepitude first, and then roll on the Crisis table. Medical attention may help someone through a crisis. An Int + Medicine roll of 6+ allows the character to add the attendant's Medicine score to the roll to survive the crisis. Only one doctor may usefully attend a patient, and if the doctor botches the character must subtract three from the survival roll. Virtues that affect aging rolls do not affect crisis recovery rolls. Creo Corpus magic can postpone a crisis, or resolve it if cast as a Momentary Ritual. The level of spell required depends on the severity of the crisis, as noted on the table. Note that the magic required to resolve a crisis that is major or worse is powerful enough to cause warping. A character who survives a crisis needs the rest of the season to recover fully, and thus cannot undertake any other activities."
+        }}

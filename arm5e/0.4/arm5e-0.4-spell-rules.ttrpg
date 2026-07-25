@@ -1,0 +1,227 @@
+EXTENSION "ArM5_Spell_Rules" {
+    NAME "Ars Magica Fifth Edition - Spell Design and Format"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-24"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    #tBiasBjxyYPGVvKvJClQKGqk ^"The Central Rule" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The storyguide or troupe may always intervene and declare that a certain combination of range, duration, target, and effect warrants a higher or lower level than that described by the guidelines and the system below. The range of effects possible in Ars Magica is so large that any system is bound to allow some effects that strike a given troupe as too hard or too easy (different effects for different troupes). The system gives sensible levels in the vast majority of cases, but storyguides should not let players use the system to force things past common sense."
+        }
+        #tyfPTccUG0rtWLsreATVPq0B ^"Level Guidelines" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Parameter", "Baseline"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Range" "Personal"
+                "Duration" "Momentary"
+                "Target" "Individual"
+            }
+            DESCRIPTION "This chapter contains a selection of example spells, and guidelines for what can be achieved with a formulaic or spontaneous spell of a given level. For the guidelines, the range of the spell is Personal, the duration is Momentary, and the target is Individual. These are the lowest members of their classes, so that the given level is the lowest level at which a formulaic or spontaneous spell can have that effect."
+        }
+        #tCrSiXCtUSDiWDEmiA99hGyt ^"Ranges, Durations, Targets" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The range, duration, and target of a spell determine what it can affect. The range governs how far the target can be from the magus, the duration determines how long the target will be affected, and the target describes what the spell can affect. Each parameter has a number of possible ratings, which can be arranged in order from least difficult to produce to most difficult to produce. This is done in the chart below. Parameters which are listed together below but are separated by a slash (like Touch/Eye) represent different actual ranges that share the same level of difficulty. They are not interchangeable, simply equivalent.\n\nA spell that has a continuing effect remains in effect even if the caster moves out of range. A spell that allows the caster to control the effect only permits that control as long as the caster is within range. However, it does not expire if the caster moves out of range, and he may control it again if he moves back into range."
+        }
+        #tNBJ4JMsXyUsbYF7X81xOucV ^"Ranges" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The range of a spell is the distance to the nearest part of the target of the spell. Thus, if the caster is touching the external wall of a room, he can cast a Target: Room Corpus spell on the people within at Touch Range, even though he is not touching any of those people, and indeed cannot see them. The target of the spell is the room, and thus the spell does not violate the Limit of Arcane Connections.\n\nPersonal: The spell only affects the casting magus or things that he is wearing or carrying. The target is thus never larger than Individual.\n\nTouch/Eye: Touch: The magus or anything he touches, whether a person or thing. Eye: The magus may target any person or creature that he has established eye contact with. A human being who knows of no reason to avoid eye contact makes it automatically if dealing with the magus in a social setting. The Gift does not make people avoid eye contact. It is impossible to make eye contact with an unwilling human without getting at least two people to hold the victim down. It is effectively impossible to make eye contact with an enemy in combat; they aren’t looking at your eyes. It typically takes a combat round to establish eye contact with a calm animal, before the magus can start casting the spell. (Touch and Eye are the same “level” of range.)\n\nVoice: Anything to which the magus’s voice carries. Typically, firm words carry about 15 paces, while a shout carries about 50. Magical enhancement of the voice does not increase this range, and a spell cast silently at this range can affect only the caster. The range is based on the distance that the caster’s voice carries, not on whether the target can hear it. Deaf targets, stones, targets in a noisy environment, and targets under the influence of PeIm spells that stop sounds from reaching them can all be affected at the normal range. However, if the caster is silenced or quieted by magic, the range is reduced. Such a spell must penetrate the caster’s Magic Resistance. Magic items use the wielder’s voice; independent items need to be given a voice (CrIm) to use this range. The range is established when the spell is cast, and remains the same even if the magus changes the loudness of his voice. Thus, a Voice range spell can allow silent control, but only as long as the target is within the distance that the magus’s voice carried when he cast the spell.\n\nSight: Anything that the magus can see. If the magus is standing on the highest point for miles, this range can be immense. A blind magus can only affect himself. A magic item uses the wielder’s sight; independent items need to be able to see (InIm) to use this range.\n\nArcane Connection: Anything that the magus has an Arcane Connection to. Distance is immaterial unless the storyguide chooses to impose some limit. Such limits are usually provided in the example spells. Note that while Arcane Connection is a range, it is different from a physical item that is an Arcane Connection. This distinction is important, because some spells require that the caster have an Arcane Connection, but the spell must be cast as some range other than Arcane Connection."
+        }
+        #tER7zuDebXE0JCqctOJ4h6sc ^"Durations" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "If a spell with a momentary effect, such as healing a wound, creating a fire, or opening a pit, is cast with a longer duration, it generally sustains that effect for the duration, rather than having its effect multiple times within the duration. Thus, a wound healed with duration Sun stays healed for that length of time, and reappears at the end. The target can still take other wounds. A fire created with duration Diameter burns for two minutes, and may inflict damage every round over that period. A pit opened for duration Moon with a Perdo Terram spell cannot be filled in with earth for that period; any more earth dumped in it is destroyed as well. Wood, animal products, or water could fill it, though, as they are not of the same Form as the spell. The destroyed earth still does not reappear at the expiration of the spell.\n\nMomentary: The spell lasts but a moment and then dissipates. In many cases the effects of the spell will endure long after the spell itself finishes. For example, a Rego spell that moves a rock from the bottom of the hill to the top might have Momentary duration, but the rock stays at the top of the hill. Similar considerations apply to most Perdo spells; the magic lasts but a moment, but the target stays destroyed.\n\nRitual Creo spells with Momentary duration create things that last as any other thing of that type. The magic is gone in a moment and so cannot be dispelled. This also applies to ritual healing spells.\n\nConcentration/Diameter: Concentration: The spell lasts as long as the magus concentrates. In the absence of distractions, assume that a magus can concentrate for fifteen minutes per point of Concentration ability. If there are distractions, see the rules in the Hermetic Magic chapter, page 82. Diameter: The spell lasts for the time that the sun takes to move its diameter in the sky — almost exactly two minutes (twenty combat rounds). (Diameter and Concentration are the same “level” of duration.)\n\nSun/Ring: Sun: The spell lasts until the sun next rises or sets. Ring: The spell lasts until the target of the spell moves outside a ring drawn at the time of casting, or until the ring is physically broken.\n\nA ring must actually be drawn while the spell is being cast. The magus may use magic to do so, but that magic must not have a range greater than Touch, and the magus must physically trace out the ring. The magus may not move more quickly than ten paces per round (five feet per second) while doing this. The casting of a non-Ritual spell may be extended out to allow the drawing of a large ring. However, the caster must make Int + Concentration rolls of 6+ every round to maintain concentration on the spell, and if someone breaks the ring at any point before it is completed, the spell automatically botches. Really large rings are unlikely to be worth the risk.\n\nThe ring may already exist, for example as a band laid into the ground. In this case, the magus must trace the full circumference of the ring, moving no more quickly than ten paces per round.\n\nMoon: The spell lasts until both the new and full moon have set.\n\nYear: The spell lasts until sunrise on the fourth equinox or solstice after its casting. A spell with this duration must be ritual."
+        }
+        #tFbhqHhTsVFy0BLSE7wVtk0u ^"Target" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Target", "Base size"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Intellego spells" "Not affected by Target size"
+                "Base Individual" "Determined by Form"
+                "Base Part" "Same as Individual"
+                "Base Group" "Mass of ten standard Individuals"
+                "Base Room" "Large enough for 100 standard Individuals"
+                "Base Structure" "Ten base Rooms"
+                "Base Boundary" "An area 100 paces in diameter"
+                "Increasing size" "Multiply size by ten for each magnitude added to the spell."
+            }
+            DESCRIPTION "Individual/Circle: Individual: The spell can affect a single discrete thing, such as one person or one object. A huge boulder is a discrete object, a mountain is not (because it is joined to the ground). Clothes on a person or moss on a boulder are part of the person or boulder for these purposes. Circle: The spell affects everything within a ring drawn by the magus at the time of casting, and ends if the circle is broken, even if that is before the duration of the spell expires. The spell also ends when its duration ends. See “Ring,” above, for restrictions on drawing the circle. One circle may serve to underwrite both Ring duration and Circle target. Individual and Circle are the same level of effect.\n\nPart: The spell can affect a part of a discrete thing, such as a person’s arm or a section of the ground. This target refers to spatial parts, parts that you could, at least in theory, cut off and put in a bag. A person’s mind is not a part of him in this sense, nor is his sense of humor. His heart, however, is. Something is only a Part target while it is actually a part of something else; things, like severed arms, that used to be part of something, or, like bricks, which could become part of something, are Individual targets as long as they are not currently part of something else. Part is harder than Individual because whole things are metaphysically important. It is easier to affect a thing as a whole than to affect a part of it.\n\nGroup/Room: Group: The spell can affect a group of people or things. The components of the group must be close together in space, and the group itself must be separated from any other things of the same type. Three grogs huddled together or a ring of standing stones are a group: six people out of a crowd are usually not. The things in the Group when the spell is cast are affected for the entire duration, even if they split up. Things that join the Group during the spell duration are not affected. It is possible to target a “Group” with a single member, although an Individual target will always be lower level. Room: The spell affects everything within a chamber. This room can be very large (the nave of a cathedral, for instance, or a natural cave), but it must be enclosed and have definite boundaries. A courtyard would often count, a valley would not. A spell with target Room is useless if there is no Room containing the targets; it cannot affect a “roughly room-sized volume” in open space. Group and Room are the same level of effect.\n\nStructure: The spell affects everything within a single structure. The structure itself counts as within the structure for these purposes, as the limit is the outer edge of any walls. The structure can range in size from a hut to a castle keep, but it must be a single, linked edifice. As a rule of thumb, if it is all covered by one roof, it is one structure, but storyguide discretion applies. As with Room, target Structure is no use if there is no pre-existing structure bounding the target.\n\nBoundary: The spell affects everything within a well-defined natural or man-made boundary. This could be the wall of a city, the edge of a village, the shores of a lake, the edge of a forest, or the bottom of a mountain. Since the ocean is not obviously bounded, it cannot be affected in this way. As with Room and Structure, there must actually be a boundary for this target to be useful. It cannot be used to simply affect a really big area. A spell with this target must be a ritual.\n\nThe source presents the following as a sidebar (Targets and Creo). The target of a Creo spell that actually creates something is the thing created. The target is thus always Individual or Group. A spell to create a part of something is either a healing spell or a Muto spell, depending on the part created. A Creo spell with target Room cannot be used to fill a room with something. Instead, use target Group with an appropriate size modifier. The Creo guidelines for each Form give the level required to create different kinds of thing. The size is determined using the standard rules for target sizes.\n\nThe source presents the following as a sidebar (Targets and Sizes). The Ars Magica spell targets depend on the kind of thing that the target is, not how big it is. A pebble and one of the stones at Stonehenge are both Individuals, and the inside of a tiny hut and the nave of a cathedral are both Rooms. However, the size of the target does make a difference to the level of the spell, with the sole exception of Intellego magic. Every Form has a base size for Individual targets, and targets of that size or less can be affected by a spell of the basic level. Adding one magnitude (five levels) to the spell multiplies the maximum size of its target by ten. This depends on the mass of the target, so a five level boost to a Corpus spell would allow the magus to affect a giant up to fifteen feet tall, not sixty feet tall. A spell designed to affect a certain size of target can affect any target up to that size. However, it is not possible to invent lower level spells that affect smaller targets; the level of the spell to affect the base target is an absolute lower limit. This rule should not be applied with absolute mathematical precision. A rough guess by the storyguide is fine, as long as the troupe agrees. In the event of disagreement, however, a precise calculation can be made to resolve the issue, although as this takes time it is probably best reserved for working out exactly what a formulaic spell can do. A Part targeted by a spell can be up to the size of the base Individual. Again, every five levels added increases the size that can be affected by a factor of ten. Note that a spell to affect an Individual is five levels lower than a spell to affect a Part of the same size. A base Group contains about as much mass as ten standard Individuals of the Form. This can be split up in any way desired, so it could be two Individuals, each of five times standard size, or ten Individuals of standard size, or ten thousand individuals, each one thousandth of standard size. Every five levels added multiplies the size affected by a factor of ten. Note that a spell to affect a large Individual is five levels lower than a spell to affect a Group of the same total mass. A base Room is large enough to fit a hundred standard Individuals with some squashing. For Corpus, this means that a base room is about four hundred square feet in area. Because the Room already exists to create a boundary, this is easier than affecting a Group, and a spell to affect a number of Individuals within a Room can be lower level than a spell to affect an Individual of similar mass. Note also that, because a Room cannot be internally divided without becoming two Rooms, the height of the ceiling does not normally matter. For every five levels added to the spell level, the area of the Room is multiplied by ten. A base Structure contains ten base Rooms, spread over one or more floors. For every five levels added the size of the Structure is increased by a factor of ten. A base Boundary is the same for all Forms, and is one hundred paces (three hundred feet) in diameter. As for Rooms, every five levels added multiplies the area by ten, or the diameter by a little over three."
+        }
+        #thstIXpgdf1uXfOegYdThaRx ^"Magical Senses" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Magical Sense Target", "Equivalent Target"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Taste" "Individual"
+                "Touch" "Part"
+                "Smell" "Group"
+                "Hearing" "Structure"
+                "Vision" "Boundary (but does not require Ritual magic)"
+            }
+            DESCRIPTION "Intellego spells can grant magical senses to a person. These spells allow the recipient to detect things that he could not normally sense, and they have different targets, corresponding to the kind of sense that the recipient gets. The range of the spell is the range to the recipient.\n\nIt is possible to grant magical senses to many people at once, but this requires Muto Mentem magic, with Intellego Form requisites.\n\nEach magical sense target grants the recipient information through one of his senses. This information is easily distinguished from mundane information coming through the same sense, but it is subject to the same limitations as the mundane sense. Thus, a magical sense that works with the sense of smell is very bad at giving direction, and can be avoided by staying upwind of the sensor, while a magical sense that works with vision is no good in the dark.\n\nMagical senses must penetrate the Magic Resistance of creatures sensed, as well as the Magic Resistance (if any) of the person granted the sense. Thus, the Penetration of a magical sense should be recorded for future reference. The mundane sense through which the magical sense grants information does not need to penetrate Magic Resistance.\n\nA single spell grants a single magical sense. To gain several magical senses, you must cast several spells.\n\nTaste: The information comes through the sense of taste. This target is equivalent to Individual.\nTouch: The information comes through the sense of touch. This target is equivalent to Part.\nSmell: The information comes through the sense of smell. This target is equivalent to Group.\nHearing: The information comes through the sense of hearing. This target is equivalent to Structure.\nVision: The information comes through the sense of sight. This target is equivalent to Boundary, but, unlike Boundary, it does not require Ritual magic."
+        }
+        #tnIpGzLVrdSXQ33gyOjRnjht ^"Magical Wards" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Rego spells can create wards which protect the target from things of the appropriate Form. These use the normal targets, but the target is the thing protected, rather than the things warded against, and the range is the range to the target, not to the things warded against.\n\nWards with a Circle target are of particular note. They prevent things warded against that are within the circle from leaving, and prevent things warded against that are outside from entering. Warded things cannot act across the circle, no matter which side they are on, nor can they damage the circle, directly or indirectly. It is quite common to create such spells with a duration of Ring, as then the ward can be made to last indefinitely, with care. However, this is not required, and the spell can be created with any duration.\n\nThe spell guidelines for wards against magical things are listed with a base range of Touch, base duration of Ring, and base target of Circle, because a ward with these parameters wards against creatures with a Might equal to or less than its level. The parameters of the spell can be changed in the normal way, so that a ward which only protected the magus (Range Personal, Target Individual) for a duration of Moon would have the same final level."
+        }
+        #tmk9Et3dxxiOWbMFCRCQE7ho ^"Changing Ranges, Durations, and Targets" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Raise a category one step" "+1 magnitude (+5 levels)"
+                "Lower a category one step" "–1 magnitude (–5 levels)"
+                "Below level 5" "adding a magnitude only adds one level, and subtracting a magnitude only subtracts one level"
+            }
+            DESCRIPTION "To calculate the level for a spell using those Arts but with different characteristics, refer to the lists above. For every step by which a category is raised, add one magnitude (five levels) to the level of the spell. For every step by which one is lowered, subtract one magnitude (five levels).\n\nBelow level 5, adding a magnitude only adds one level, and subtracting a magnitude only subtracts one level. Thus, one magnitude lower than level 5 is level 4, and one magnitude higher than level 2 is level 3.\n\nFor example, consider a level 15 spell with range Voice, duration Sun, and target Group. A variant with the same effect but with range Sight, duration Moon, and target Room would be level 25 (+1 magnitude to increase range Voice to Sight, +1 magnitude to increase duration Sun to Moon, and no change for changing the target Group to Room, because they are at the same level). A different variant with range Personal, duration Concentration, and target Individual would be level 2 (–2 magnitudes to decrease range Voice to Personal, –1 magnitude to decrease duration Sun to Concentration, and –2 magnitudes to decrease target Group to Individual). Note that since –2 magnitudes takes the level from 15 to 5, the additional –1 magnitudes only lower the level by –1 per magnitude.\n\nThe categories described here were built into the structure of Hermetic magic by Bonisagus. All spontaneous spells must conform to these requirements (the magus is making the spell up on the fly — he cannot also push the limits of magic theory). Formulaic spells, on the other hand, can be invented with ranges, durations or targets that are not listed here. This is usually slightly more difficult than if the closest category were used, but is largely left to storyguide interpretation."
+        }
+        #tbQZHoeXE1yuY1ZxoXIb6Xz4 ^"Ritual Spells" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Ritual spells take longer to cast than formulaic spells and require vis. However, they do have some advantages.\n\n• Formulaic and spontaneous spells may not have Year duration • Formulaic and spontaneous spells may not have Boundary target. They may have Vision target, if they are magical sense spells. • Formulaic and spontaneous spells may not have a level greater than 50.\n\nRitual spells are always at least level 20, even if the level calculation would make them lower."
+        }
+        #tB52BWAUUv8vtyl7EG3b8esI ^"Requisites" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Requisite type", "Level effect"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Requisite necessary for spell’s effect" "+0 magnitudes"
+                "Requisite enhances spell’s effect" "+1 magnitude or more"
+                "Added effect is purely cosmetic" "No requisite"
+            }
+            DESCRIPTION "Most spells involve a simple combination of two Arts, one Form and one Technique. Some spells, however, involve more than two. For instance, a spell that turns a human into a bird uses Muto because you are transforming something, Corpus because you are affecting a human body, and Animal because you are turning the human body into an animal body. In addition to involving the two primary Arts — Corpus and Muto in this case — casting the spell concerns your Animal score as well. This third Art is a requisite.\n\nThere are two kinds of requisite. The first simply allows the spell to have its effect. This includes the Animal requisite on a spell to turn a person into a bird. These requisites do not add to the spell level, as the difficulty of doing such a thing is already accounted for in the guidelines.\n\nThe second adds an effect to a spell. In this case, the base Arts and level for the spell are those for the highest-level effect it has. For example, a magic item that changes a picture to show what is happening at a distant location is an Intellego Imaginem spell with a Muto requisite, not a Muto Imaginem spell with an Intellego requisite, as the Intellego effect is of much higher level.\n\nAs a general rule of thumb, if the spell would still do something without the requisite, but it would do significantly less, then each requisite adds at least one magnitude to the level of the spell. Thus, the Herbam and Terram requisites that allow a spell to change a clothed man into a bird do not add any levels, because they do not significantly increase the power of the spell. However, a Rego requisite added to a Creo Ignem spell to prevent the fire from burning the caster would require additional levels. In addition, a single spell that could turn a human into a wolf, or a wolf into a human, would require an additional magnitude for the Animal requisite, as without it the spell could only effect the transformation in one direction. Most such requisites add only a single magnitude to the spell level, but if the additional effect is sixth magnitude or above, it is often appropriate to add two magnitudes.\n\nAdditional effects may not require a requisite if they are purely cosmetic. Thus, a spell that creates fire that looks like flaming skulls does not require an Imaginem requisite. A spell that allowed the caster to choose how the fire looked would, because that flexibility is more than a cosmetic effect.\n\nRequisites, if any, are listed for each formulaic spell. (See the spell Curse of Circe on page 131 as an example.) Requisites make it more difficult to cast spells, as they demand the caster have wider knowledge. You must use the lesser of your score in the requisite and your score in the spell’s main Technique or Form – Technique if the requisite is a Technique, Form if the requisite is a Form. For example, if you have the scores Animal 6 and Corpus 13, and you cast the Muto Corpus spell Curse of Circe, which has a requisite of Animal, you treat your Corpus score as if it were only 6. Note that if your requisite happened to be higher (for example, if your Animal were 15), you would use the lower basic form (your Corpus of 13 in this case).\n\nSometimes a spell has a requisite for both its Technique and Form. You must use the lowest in each case. And, if several requisites apply to the same primary Art (for example, if there are two Form requisites), your effective score is the lowest of the group. Furthermore, any Deficiencies you have with an Art apply when you use that Art as a requisite.\n\nRequisites listed with a spell’s statistics apply when you are learning, inventing, or casting that spell, but do not apply for determining the defender’s Magic Resistance. The defender’s Magic Resistance is determined by the spell’s primary Form, not that listed as a requisite, even if the caster’s requisite Form score is lower than that of his primary Form score, and thus determines the Casting Total."
+        }
+        #tqFuwKqHmAfZXmokNVIrgqBK ^"Casting Requisites" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Some requisites are not listed along with a spell’s statistics because they only apply when the spell is being used in a certain way, not when learning or inventing it. These are called “casting requisites.” You choose which Arts you use as casting requisites when casting the spell, so what you can affect is limited by your choice. The lowest Technique score and Form score among the primary Arts and all the chosen casting requisites are the ones you use when you cast the spell."
+        }
+        #tp8AUlv24Tkp0yDMRfx99LmR ^"Spontaneous Requisites" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Requisites work the same way for spontaneous spells. When the Arts to be used are determined, determine whether requisites are involved. If so, they limit your Arts just as they do for formulaic spells."
+        }
+
+    #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The Technique and Form are listed in the heading the spell is found under. Spells are arranged first by their Forms, then by their Techniques, in alphabetical order. Following each Technique/Form heading are guidelines that will help you create your own spells, as well as help you determine the necessary level to cast a spontaneous spell.\n\nThe base Range, Duration, and Target for almost all guidelines are the lowest categories: Personal, Momentary, Individual. Thus, a useful spell will often be of significantly higher level than the guideline for that effect, because it has a higher Range, Duration, and Target. There are some exceptions, primarily guidelines for wards, and these are noted explicitly in the guideline. If the guideline does not specify a Range, Duration, or Target, they are Personal, Momentary, and Individual.\n\nTechniques and Forms are often abbreviated by the first two letters of each word; thus a MuTe spell is of Muto Technique and Terram Form. The level is often added after the abbreviation — thus Flash of the Scarlet Flames becomes CrIg 15."
+        }
+        #tsjWPFNjtA7aLn79wNihpflu ^"Title" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The titles given are the actual names of spells as known by Hermetic magi. When inventing new spells, try to give them creative names that will add color to the game. “Fireball” is not interesting; “Ball of Abysmal Flame” is — you get the idea."
+        }
+        #t3gqa2t5fKyvUWRqCss3gkpg ^"Level" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Most spells are assigned a level, which is usually a multiple of five. It need not be, however, and magi may well invent spells of intermediate levels. Spontaneous spells often have other levels, as well.\n\nSome spells are General spells (abbreviated to Gen), which means that they may be learned at any level of difficulty — the higher the level, the more powerful the spell.\n\nThe level at which you know a General level formulaic or ritual spell depends on where you obtained it. If you learned a General level spell that was designed for effectiveness at level 15, then that is the level at which you know it. You cannot produce effects that exceed level 15 effects with that spell unless you invent a version with a higher level or learn such a version from another source. General level spells are open-ended only in the sense that they may be learned at any level. They may not be used at a level higher (or lower) than that which is known."
+        }
+        #tUadYRZe1WRX6fHgVy9HXcPM ^"Ritual" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Spells requiring rituals are those that fall outside the categories listed for formulaic and spontaneous spells described under “Ritual Spells” on page 114. Certain powerful spells and spells inherited from the Cult of Mercury are also Ritual spells. Storyguides should use their discretion in declaring other spells Ritual."
+        }
+        #tvP6xG5Bq6JEuV43ltEfuWwt ^"Requisites" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Requisites make it more difficult to cast spells, as they demand the caster have greater knowledge. See “Requisites” on page 114 for a full description of how they limit the casters of particular spells. Requisites that always apply are listed along with a spell’s statistics. Casting requisites are listed within the body of the spell description."
+        }
+        #tcWzlhClVll2FbJGU6jtYDcd ^"Creo Animal Guidelines" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Level", "Guideline"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "Level 1" "Give an animal a +1 bonus to Recovery rolls."
+                "Level 2" "Give an animal a +3 bonus to Recovery rolls."
+                "Level 3" "Give an animal a +6 bonus to Recovery rolls."
+                "Level 4" "Give an animal a +9 bonus to Recovery rolls."
+                "Level 5" "Create an animal product, such as spidersilk or wool. (Note that an Individual is a single hair, a single hide, or a single tusk.) Create an insect or similar bug. Give an animal a +12 bonus to Recovery rolls."
+                "Level 10" "Create the corpse of an animal. Create a bird, reptile, fish, or amphibian. Give an animal a +15 bonus to Recovery rolls."
+                "Level 15" "Heal a Light Wound. Give an animal a +18 bonus to Recovery rolls. Create a mammal. Cause an animal to reach full maturity over the course of a single day or night. This accelerated maturation only applies during the spell’s Duration, and thus full effect requires a Sun Duration spell cast early in the day or night."
+                "Level 20" "Heal a Medium Wound. Give an animal a +21 bonus to Recovery rolls. Cause an animal to reach full maturity over the course of about two hours."
+                "Level 25" "Stop the progress of a disease. Heal a Heavy Wound. Restore a lost sense. Restore a lost limb. Cure a disease, counteracting its effects. (Unless cast as a Momentary Ritual, this is the same as stopping the progress of a disease.) Cause an animal to reach full maturity over the course of ten Diameters (twenty minutes)."
+                "Level 30" "Heal an Incapacitating Wound. Increase one of an animal’s Characteristics by one point, to no more than the average score for that kind of animal. Cause an animal to reach full maturity over the course of a single Diameter."
+                "Level 35" "Heal all wounds. Increase one of an animal’s Characteristics by one point, to no more than one higher than the average score for that kind of animal."
+                "Level 40" "Increase one of an animal’s Characteristics by one point, to no more than two higher than the average score for that kind of animal. Cause an animal to reach full maturity in a moment."
+                "Level 45" "Increase one of an animal’s Characteristics by one point, to no more than three higher than the average score for that kind of animal."
+                "Level 50" "Create a magical beast. Such spells always have a Vim requisite, for the beast’s magic, and normally have other requisites, for its powers. Increase one of an animal’s Characteristics by one point, to no more than four higher than the average score for that kind of animal."
+                "Level 55" "Increase one of an animal’s Characteristics by one point, to no more than five higher than the average score for that kind of animal. A greater increase is not within the natural range for the animal, and thus cannot be effected by Creo magic."
+                "Level 75" "Raise an animal from the dead."
+            }
+            DESCRIPTION "Presented in the source as a sidebar. Most Animal spells cannot be used with Personal range, so the level of a spell must be higher than the guidelines given.\n\nWhen creating a magical creature, the Magical Might of the creature cannot exceed the level of the spell, and requisites must be included for any special powers (for example, Ignem if it can breathe fire, Rego and Mentem if it can control people’s minds). A Vim requisite, for the magical nature, is always required.\n\nTo create treated animal products (like leather, jointed meat, and cloth) add one magnitude to the level necessary to create the equivalent amount of dead animal. To create treated and processed animal products, such as a leather jacket or a woolen tunic, add two magnitudes to the level necessary to create the equivalent amount of dead animal.\n\nTo influence the behavior of created animals, a Rego requisite is required, and as this is an additional effect it adds at least one magnitude to the spell level. Otherwise they just do what comes naturally.\n\nCreo Animal botches often produce the wrong sort of animal, or produce an animal enraged with the caster."
+        }
+        #tpN14aaReI5ts1woZDF8D7sI ^"Description" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Describes the effects of the spell. Descriptions cover about 95% of the circumstances in which spells are used, but since magic is variable, unpredictable, and can be used in a number of ways, the responsibility for determining the effects in unusual situations lies with the storyguide.\n\nMany of the spell descriptions include visual descriptions, hand gestures, and wizard’s sigils. It should be noted that these are all examples and that you shouldn’t feel bound by them. In fact, you should customize all your spells in ways appropriate to your own magus. When you give special details to your own customized versions of these spells, you are rewarded with a more interesting game."
+        }
+        #tiCgpTZTDFH30TohDbGxZKvA ^"Spell Damage" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Spell damage" "stress die + X"
+            }
+            DESCRIPTION "Many spells have damage listed in the form +X. This is an abbreviation for stress die + X. The damage inflicted by such spells varies from one casting to another."
+        }
+        #tms5GOfwgTbtfoisMK4Kp15H ^"Design" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "A parenthetical line at the end of the description gives the calculations for the spell level. The base level is given in levels, and other modifications in magnitudes. Remember that adding a magnitude adds one level up to level five, and five levels thereafter."
+        }
+        #tvkwbRAaH0dJxS7WBx4EqKxM ^"The Wizard’s Sigil" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "When you invent a spell, some amount of your personal magical style is likely to manifest itself, giving the spell some small quirk or minor detail that identifies it as yours. This recurrent mark or quirk in a magus’s spell (which doesn’t usually change the effectiveness of the spell) is termed his “wizard’s sigil.” Once known, these quirks can identify certain magi as having cast certain spells. Throughout this chapter, various sample spell sigils are listed in the descriptions. Keep in mind that these are just guidelines. They’re meant to give you ideas to better personalize your spells, and perhaps to aid you in choosing your own sigil. See page 86 in the Hermetic Magic chapter for further details.\n\nNote that even when you learn a spell from another magus, or from a lab text, you are actually inventing it, with guidance, so it is always your sigil that manifests in your spells."
+        }}

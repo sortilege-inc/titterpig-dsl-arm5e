@@ -24,6 +24,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You can communicate with animals as if they were human beings. Treat your score in Animal Ken as your score in a language that the animal speaks fluently in order to determine how well you can communicate, and you can use Animal Handling as a substitute for any social abilities affecting humans. Beyond this, this Ability has no effect on the attitude of animals to you, or you to animals. Other people cannot understand your communication with the animals."
+        MENTIONS {
+            "Animal Handling" -> ^"Animal Handling"
+        }
     }
 
     #t6VtW3Q3FmkKunhdB6qnhB19 ^"(Area) Lore" DEF {
@@ -49,6 +52,10 @@ EXTENSION "ARMDef_Abilities" {
             "Complex Memorization Roll" "Stress Die + Intelligence + Art of Memory vs. Ease Factor of 9 (or higher)"
         }
         DESCRIPTION "The Art of Memory deals with the creation of memory palaces, a form of mnemonic, in which one visualizes a number of loci (singular locus), where the scholar commits to memory a symbolic representation of a fact to be remembered. The character has a number of loci equal to five times their score in Art of Memory. To memorize a complex scene, image, or piece of writing (such as a long letter, but not as long as an entire text), the character must succeed in a roll. The Ease Factor may be higher depending on the length or complexity of the item to be memorized. If the character succeeds, they remember the item in exact detail, and may recall it at will although it may take time to explore a locus. Characters without the Art of Memory may memorize similar items with a Stress Die + Intelligence roll (with 3 extra botch dice) against the same Ease Factors, but must also repeat the roll to recall the memory perfectly. Each roll failed introduces errors in the memory which are repeated each time it is recalled. Those without the Art of Memory also lack the well-defined location system of loci."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Stress Die" -> ^"Stress Die"
+        }
     }
 
     #trziwPnyEqQoiEWqQBqtGPCH ^"Artes Liberales" DEF {
@@ -220,6 +227,11 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "When using this Ability, each wound can only be treated once, regardless of its severity. Make a Presence + Crafter's Healing + stress die roll against an Ease Factor equal to the Improvement Ease Factor determined by the Wound Recovery Table (page 405). Healing a wound costs a Long-Term Fatigue level. If successful, the wound is healed one level: heavy wounds become medium, medium wounds light, and light wounds heal totally. If the roll fails, nothing happens besides fatigue loss. If the roll botches, the healer suffers a similar wound immediately. The wounded recipient gains a Warping Point each time this Ability is used on her, regardless of its success."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Long-Term Fatigue" -> ^"Long-Term Fatigue"
+        }
     }
 
     #tU0lBPT6MrHeuN2KfEYFpSHO ^"Curse-Throwing" DEF {
@@ -235,6 +247,13 @@ EXTENSION "ARMDef_Abilities" {
             "Penetration Total" "Casting Total – Ease Factor + Penetration Bonus"
         }
         DESCRIPTION "This Supernatural Ability is usually aligned to the Faerie Realm, but could be aligned to any supernatural realm. It enables the character to heal diseases, remove curses, and dispel detrimental magical effects, but only by transferring (or 'throwing') their effects to another person. Curse-Throwing cannot affect Flaws; specifically, someone with the Lesser or Greater Malediction Flaw is beyond the power of Curse-Throwing, unless it is a Flaw imposed by a faerie or magician with a limited duration. However, any other curse laid by a supernatural power is potentially within the remit of this Ability; note that curses laid directly by God (such as leprosy) are normally represented by permanent Flaws, and thus exempt. Only harmful effects can be transferred with this Ability, and the storyguide is the arbiter in cases where spells are not directly detrimental. Barrenness is a common affliction treated by this power; if transferred to a man or male animal then impotence is inflicted instead. Other curses transferred to inappropriate targets are changed in a similar manner. To throw a curse, the afflicted person must be physically present, and the recipient of the curse must be represented either in person or by an Arcane Connection. Afflictions can be passed from humans to animals or vice versa, but this is harder than transferring within the same species. Curse-Throwers sometimes transfer the curse to themselves, but such altruism is rare. To throw a curse, the character must perform an elaborate ritual which involves the crafting of a charm which transfers the curse. This charm is a combination of a physical object and a chant. The object is repeatedly touched to the target and the recipient (or the Arcane Connection), whilst the chant is repeated over and over. The ritual typically takes an hour for every 5 points (or fraction) of the Ease Factor. At the end of this time, the character generates a Casting Total, which must equal or exceed the Ease Factor listed below. If either the sufferer or the intended recipient of the curse has Magic Resistance, the Penetration Total must exceed it, else the curse stays where it is. A botched Curse-Throwing roll swaps the recipient of the curse to the caster."
+        MENTIONS {
+            "Greater Malediction" -> ^"Greater Malediction"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Penetration Total" -> ^"Penetration Total"
+        }
     }
 
     #tXEEKA3aEF5IyhIuBcKt91jY ^"(Dead Language)" DEF {
@@ -257,6 +276,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "Knowledge of the manifestations of the power of the Divine. Different from Church Lore (a kind of (Organization) Lore) because it covers miracles rather than politics, and different from Theology because it is concerned with power rather than doctrine."
+        MENTIONS {
+            "(Organization) Lore" -> ^"(Organization) Lore"
+        }
     }
 
     #tBuvmvFZrWpJGsw7eOr6QUTV ^"Dowsing" DEF {
@@ -268,6 +290,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You have the ability to find things nearby through the use of a dowsing rod (usually a forked stick) and your own intuitive sense. You concentrate on the thing to be found, hold your dowsing rod out in front of you, and follow its subtle motions to the target. If you're looking for something specific, you must have an appropriate sympathetic connection to the thing sought (such as bottled water from a stream when searching for running water). Before you roll, designate the area in which you are searching — if the item sought is not present in that area, you automatically fail. The time required to search depends on the size of the area, and must be invested whether you succeed or not. It takes about one Diameter (two minutes, or twenty combat rounds) to search for something within 25 paces, and doubling the distance quadruples the time. To find something common, like water, within 25 paces requires a Perception + Dowsing of 9+. Increased distances or dowsing for less common things increases the target number, so that, for example, finding gold within 100 paces would have an Ease Factor of 15."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #t3XfMUUFiCzAZuFkAlDPDsnF ^"Embitterment" DEF {
@@ -289,6 +314,10 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "When you set your mind to it, you can influence others with a particular performance ability. For a specific effect, you must use words that people can understand. You can calm the grieving with tunes alone, but you need lyrics to convince peasants to rise up against the local lord. General effects work on animals, but specific effects only work on creatures that can understand words. When you use Enchanting Ability, roll a die (stress or simple, depending on the situation) and add Communication and Enchanting Ability. An Ease Factor of 9 will calm the upset, 12 will win someone's love, 15 will incite a riot, and a 24 might win back a soul from the Prince of Darkness. If you botch, you inspire an unwanted emotion. If the target has Magic Resistance, you must penetrate their resistance; see page 412 for rules. You should also roll for the quality of the performance, but the magical effect is independent of this, unless you botch. If you do botch the Ability roll, you have failed to produce any performance for some reason, and so the Supernatural Ability automatically fails."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Magic Resistance" -> ^"Magic Resistance"
+        }
     }
 
     #tjg4ingNbtXq8anrhwSueubK ^"Enigmatic Wisdom" DEF {
@@ -310,6 +339,10 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You have the power to control another's will. By staring deeply into someone's eyes for several seconds — generally impossible in combat — you can verbally command the person to perform a certain task. Roll Presence + Entrancement against the target's Stamina roll. The person being controlled may get a bonus to resist at the option of the storyguide, according to the table below. Hermetic magi get their normal Mentem Magic Resistance, and get the normal Stamina roll if the effect penetrates Calculate Penetration using an Ease Factor of 6 + the victim's bonus. The blind, and people with their eyes closed, are immune; see page 303 for more guidelines on making eye contact. However, it is not possible to look away while being Entranced unless you win the opposed roll."
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #traopo5qoKcpwK87cvkaNUek ^"Etiquette" DEF {
@@ -372,6 +405,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "By succeeding in an Ability check (Intelligence + Font of Knowledge + stress die) against an Ease Factor of (6 plus (3 times number of uses of Font of Knowledge that day)) a creature with this Ability may attempt a task with any untrained ability as if they possessed a score of 2. Failed attempts count towards the number of uses in a given day."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #tEJFnp2ppuV0LkIzGNa8LPPz ^"Great Weapon" DEF {
@@ -392,6 +428,10 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "Telling convincing lies, as well as feigning emotion, belief, or frame of mind. If you understand the person you are attempting to deceive (roll 9+ on Perception + Folk Ken), you gain a bonus of +1 to your Guile roll. This Ability also covers disguising yourself, and pretending to be something you are not. It is often an opposed roll, against the victim's Perception + Folk Ken or, for disguise, Perception + Awareness."
+        MENTIONS {
+            "Folk Ken" -> ^"Folk Ken"
+            "Folk Ken" -> ^"Folk Ken"
+        }
     }
 
     #t8T7hJ8d8S192TawdLeidWDw ^"Heartbeast" DEF {
@@ -416,6 +456,9 @@ EXTENSION "ARMDef_Abilities" {
             "Hex" "Stress Die + Intelligence + Hex + Aura Bonus + Modifiers"
         }
         DESCRIPTION "The character has the power to bring about injury or ruin upon her enemies. There are three ways for her to activate this power: by making eye contact with her victim and proclaiming her purpose loud enough for him to hear, by tracing temporary occult signs and symbols on her target that indicate the dark fate she intends, or by acquiring an Arcane Connection to her target and fashioning a recognizable representation that can channel the effect through sympathetic magic. To hex a target, the character must make clear her will for it: she must declare her wishes to the victim aloud, or indicate the specifics of the hex in writing on or very near the target, or do something to the representation that is similar to what she intends to happen to the target. There is always a physical component to the hex (common practices include tying knots in a line, spitting, or giving the target the \"evil eye\"). You must also state a time frame for the hex, anywhere from an effect that occurs immediately to a hex that will affect the third generation of the victim's descendants. Generally speaking, the sooner the effect manifests, the less potent it will be; and the longer the hex delays, the more powerful it will eventually become. For this reason you must always apply the delay modifier (see the sidebar) to the Hex total. A potential victim can avoid the effects of a hex by seeking out supernatural protection of some sort, usually from the Divine. If a character receives absolution in a religious ceremony, all hexes that have targeted him are permanently undone. Characters can also remove hexes with other supernatural effects, such as a Perdo Vim spell, a faerie blessing, or a holy miracle. Treat the hex as having a spell level equal to the number of botch dice it approximates, multiplied by 10, so that a Serious hex is a level 20 effect, and a Critical hex is level 40. Hex is often a false power (as the False Power Flaw) associated with the Magical or Faerie realms. That is, it often uses the Magical or Faerie column of the realm interaction chart, but appears as an unholy power when subjected to divine or infernal powers of investigation. Purely Infernal versions of the power also exist, as do Magical or Faerie versions that are not touched by the Infernal. Such \"pure\" versions of Hex are rare, however, as demons love to taint this power."
+        MENTIONS {
+            "False Power" -> ^"False Power"
+        }
     }
 
     #twpVgiBoNrYbfoWuqrIuQj4w ^"Hunt" DEF {
@@ -437,6 +480,10 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "This is the supernatural ability to create illusions in a person's mind. Only the target can see those illusions. Each attempt at induction requires the inducer to talk with the victim for at least one minute. Characters who cannot hear the inducer are immune to his powers. Attempts at induction require a die roll of Communication + Induction. Induction is not made more difficult by the complexity of the illusion: it is made more difficult as the risk the victim takes by believing the illusion increases. On some level the victim is aware of the real world, and can snap out of the induced state if threatened. Pick only one of the Roll Modifiers for Induction: Victim is drunk, drugged, exhausted, or critically ill +3; Victim knows and trusts the inducer +3; Site of induction has been carefully prepared with expensive props, in advance +3. If an Inducer has successfully snared a victim, the Inducer may roll again to try and bump the effect up to the next level of risk. This requires at least fifteen minutes, and on the second roll, the Ease Factor is reduced by 3. An inducer can take a great deal of time, and several rolls, to work a victim up through the levels of danger to potentially suicidal. A victim of induction realizes afterwards that they have been affected by magic if the roll above does not exceed the Ease Factor by (6 – 1 per factor from the list below). This value can be reduced by 1 by each of the following factors: choose no more than 3. • Careful use of props (clothes stained, souvenirs provided) • Illusion includes brush off (character in illusion returns character home, character falls asleep inside illusion and wakes up in bed) • No lost time (character in illusion explains it is all happening in one night, no servants notice the character gone) • Real world effects (character's actions in illusion seem to have altered the real world in verifiable ways) • Follow up (the character has been convinced previous illusions were real, and this one is part of that larger story)."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #t1ucA17wcHOi7vQvkL5qC4px ^"Infernal Lore" DEF {
@@ -512,6 +559,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "Fluency in a particular living language. Rather than a die roll modifier, your score in this Knowledge measures your ability to communicate. When two people speak to each other, the lower Ability score determines how well they communicate. Characters who speak related languages can communicate at a penalty to their scores (assigned by the storyguide) depending on how closely related the two languages are. Two dialects of the same language generally have a –1 penalty. If your character is not specialized in a dialect, you should specify a dialect without specializing in it, and take the penalty when conversing with people who speak a different dialect. If you speak a \"standard\" version of the language, that is a dialect that differs from all other dialects. Note that Latin and Hebrew are not living languages in most of Mythic Europe. However, characters who live in places where they are (such as some covenants) may learn this Ability without any special Virtues. The same is true of all languages that are learned as dead languages in one area, but still living languages in another. Characters with this Ability are illiterate unless they also have a score in Artes Liberales (page 160). This Ability also covers artistic compositions in the language, and telling existing tales with verve and passion. Knowledge of stories is covered by the appropriate Lore Abilities."
+        MENTIONS {
+            "Artes Liberales" -> ^"Artes Liberales"
+        }
     }
 
     #tFQbQOWCWW5Dv32setj4ZUFy ^"Magic Lore" DEF {
@@ -534,6 +584,13 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You are often able to identify a place or object as magical. However, your sensitivity makes you more susceptible to magical effects: subtract your Magic Sensitivity score from your Magic Resistance. When attempting to sense the magic nature of a place or object, the storyguide will assign an Ease Factor—simply roll a simple die + Perception + Magic Sensitivity. Detecting a Magic aura would normally have an Ease Factor equal to 12 – aura level, so 9 for a level 3 aura and 6 for a level 6 aura. For spells and enchanted items, an Ease Factor equal to 21 – magnitude of effect is a good guide. For enchanted items, use the magnitude of the most powerful effect in the item. For magical creatures, 15 – one fifth of the creature's Magic Might is appropriate, so for a creature with a Magic Might of 25, the Ease Factor would be 10."
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #t7KPhjriPvQO5FqBFYxCbWYN ^"Magic Theory" DEF {
@@ -545,6 +602,10 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "Knowledge of what magic is and how it works, used primarily in the laboratory. Magic Theory deals with the technical details of Hermetic magic; Magic Lore covers knowledge of magical things in general. Anyone can learn Magic Theory, if they have access to a teacher or book (normally represented by a Virtue), but it is little use to those without The Gift."
+        MENTIONS {
+            "Magic Lore" -> ^"Magic Lore"
+            "The Gift" -> ^"The Gift"
+        }
     }
 
     #tPUZ7uwzhiYz6NSqESPpFlUN ^"Medicine" DEF {
@@ -577,6 +638,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "This is the (Organization) Lore of a particular cult. It provides knowledge of the legends, history, structure, operation and goals of the Mystery Cult in question. It includes knowledge of the magics, rites and secret passwords and symbolism of the cult, how to covertly signal membership, and how to assess another magus's membership or non-membership in your cult. Two magi with a score in this ability for the same Mystery Cult may well be able to hold a seemingly innocuous conversation without outsiders understanding the true significance or meaning of their words. Many Mystery Cult specialty books also require a score in this ability to decode their heavy symbolism; this method is used to prevent un-Initiated outsiders learning secrets of the Mystery. Mystery Cult Lore also covers the ceremonies of the cult, frequently enacted whenever the cult gathers formally. It is also a key knowledge for a Mystagogue's performance of the Initiation Rites, to guide the Initiate through the path of Ordeals, ceremony and meditation, to gain new Virtues. Cult Lore is passed from Mystagogue to Initiate, from Mystae to Mystae in a chain of living secrets. Some cults also write down their secret lores, as this codifies the Mystery and lets others share the same view of the cult — others prefer the secrecy of the Oral Tradition. Small cults may fade away from lack of members, especially if they are persecuted at some point — but if they committed some of their Lore to writing, the cult may be re-born by those who discover and understand the texts. Some cults risk the loss of secrecy for this very reason — that their secrets and magical rites may not be lost forever. Some magi search for lost texts, containing secret lores of the Ancients, hoping to re-enact the rites and rituals that led the Ancients to power. In game terms, Experience points in Cult Lore are acquired like any other knowledge — including Teaching, Books, Practice and Exposure. Learning Cult Lore from another ensures that master and pupil share the same rites; learning by yourself generally implies that you have devised your own variant (even \"deviant\") rites and rituals — from such disagreements schisms arise and cults may break up and fragment. A magus may build the knowledge from 0, even without instruction — but this means they have devised their own cult, and should treat their Lore as a new Lore."
+        MENTIONS {
+            "(Organization) Lore" -> ^"(Organization) Lore"
+        }
     }
 
     #tY6J2ry6PC1vENwu7hwtjo4u ^"(Organization) Lore" DEF {
@@ -599,6 +663,11 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "Protection from magic. This is a special ritual (not a Ritual spell) that takes about two minutes to perform. It lets you add 5 times your Parma Magica score to your Magic Resistance until the next sunrise or sunset, whichever comes first. You may suppress your Parma Magica temporarily by concentrating; this is equivalent to sustaining a Concentration duration spell. (See page 215). Parma Magica does not require concentration while it is active. You may also protect one other person for each point in Parma Magica, with their consent. You must touch each person to start the protection, and it lasts as long as at least one character can see the other. The magus may cancel the protection at will, at any distance. While a magus is protecting others, his effective Parma Magica score is reduced by 3 points, both for himself and for the other people he is protecting. If the magus has a Parma Magica score of 3 or lower, his Parma Magica provides each character, including himself, with a Magic Resistance of 0. In the magus's case, this is added to his Form resistance, and a magus protected by another magus's Parma Magica may also add his Form resistance. Any character protected by a Parma Magica, whether their own or someone else's, is unaffected by the social penalties of other people's Gifts. If a protected character is Gifted, their Gift still imposes social penalties on others, unless those others are also protected by a Parma Magica, or are unaffected by The Gift for some other reason. Parma Magica can only be learned by Gifted characters, although they learn it as a normal Arcane Ability, not a Supernatural Ability. It is only known by Hermetic magi, as the Order enforces the 'Join or Die' choice rigorously on anyone who knows it, as well as declaring a Wizard's March on the magus who taught it. Parma Magica is the last thing an apprentice learns, being taught the final key to the Ability after he swears the Oath."
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Magic Resistance" -> ^"Magic Resistance"
+            "The Gift" -> ^"The Gift"
+        }
     }
 
     #tMjhPbwzcBwZNUIPvZG94d6L ^"Penetration" DEF {
@@ -609,6 +678,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "Getting your spell through the target's Magic Resistance. See page 215 for full Penetration rules."
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+        }
     }
 
     #td7X2PFOOOiYAC4t2tcKxmWS ^"Persona" DEF {
@@ -620,6 +692,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "The character with this Ability can alter his appearance to adopt a different identity. He can alter any aspect of his appearance: hair and eye color, complexion, shape of nose, build and height (within the limits of his Size), apparent age, and even gender. These changes are total, proof even to the most intimate mundane scrutiny, but do not change the character's essential nature. Consequently, all Characteristic scores remain unchanged, Virtues and Flaws are transferred to all new forms, and a character who does not normally have a womb cannot become pregnant when adopting the persona of someone who does. Adopting a different identity requires one round of concentration and a roll of Stamina + Persona against an Ease Factor of 9. Changing back to the character's natural form requires the same concentration and the same roll. Each identity has its own Personality Traits and behavioral quirks, and no Disguise roll is necessary to convince others of the role; this is not a disguise but a whole different person. The character gains one identity for every point he has in the Persona Ability. Every time the Ability increases by one point, the character must design a new identity."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #tl7t4tnrSaB3n28mGxwz38jG ^"Philosophiae" DEF {
@@ -642,6 +717,13 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You intuitively sense whenever something is wrong, or is likely to go wrong soon. This Ability can be called upon by you or the storyguide, as appropriate, whenever there is a chance to avoid danger. Roll Perception + Premonitions against an Ease Factor depending on the situation. The Ease Factor starts at 3 for imminent, mortal peril, and increases as the distance in time increases and the level of danger decreases. Mortal peril a week in the future would have an Ease Factor of 9, while an imminent minor inconvenience would have an Ease Factor of about 15. If you beat the Ease Factor by 3 or more, you also get some sense of the nature of the danger, with more detail if you roll more highly."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #tlPzmRO3IzuCqp9XHPRLparG ^"Profession (Type)" DEF {
@@ -683,6 +765,12 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You are able to see through illusionary concealment and disguise, including invisibility, and can also see naturally invisible things such as spirits and the boundaries between regio levels (see page 420). The Ease Factor to see through illusionary concealment is normally equal to 6 + the magnitude of the might of the creature responsible for the effect, or 6 + the magnitude of a Hermetic spell. In general, this Virtue allows you to see through Hermetic concealment effected with Imaginem, but not other Forms. The Magic Resistance, if any, of the concealed creature does not interfere with your Second Sight. If something is actually transformed, for example by a MuCo spell, you cannot determine the genuine form. The Ease Factor to see a naturally invisible thing is normally 9, and the Ease Factor for seeing regio levels is specified on page 421. All Second Sight rolls are Perception + Second Sight, and they are almost always simple rolls."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #tlciW1ANh1HX7jWf1rXZSfv0 ^"Sense Holiness and Unholiness" DEF {
@@ -694,6 +782,13 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You are able to feel the presence of good and evil. A Perception + Sense Holiness and Unholiness roll against an Ease Factor of 9 lets you sense holiness or unholiness in a general area; against an Ease Factor of 15, in a person or object. The Ease Factor to detect a demon is 0, but the character must still Penetrate its Magic Resistance. If an angel is hiding its divine nature, which is unusual, the Ease Factor is 15, and the character must Penetrate. If the angel is not hiding its divine nature, the roll automatically succeeds. In auras of particularly strong divine or infernal influence, your sensitivity may overwhelm you. This Ability is granted by the Divine realm, not the Magic or Faerie realms, and thus uses the Divine column of the realm interaction chart (page 410)."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #tbH7dFPzH1QeYPYB4Ova2pFY ^"Sense Passions" DEF {
@@ -708,6 +803,21 @@ EXTENSION "ARMDef_Abilities" {
             "Sense Passions" "Stress Die + Perception + Sense Passions + Aura"
         }
         DESCRIPTION "The character can sense the personality and desires of an intelligent being by recognizing and identifying the different shades of tarnish on its soul. A Perception + Sense Passions roll against an Ease Factor of 9 lets her sense the most powerful emotion currently being experienced by the person, and a roll against an Ease Factor of 15 allows her to identify the character's most dominant Personality Trait. The effect must penetrate the target's Magic Resistance if it has any kind of supernatural protection, and since this is a Supernatural Ability, it is affected by auras. Through careful examination, the character can also recognize passions in people within the general area, allowing her to hone in on the most powerful source of emotion within sight, usually the character with the highest (or lowest) Personality Trait. This requires a 12 or better on the Sense Passions roll. The character can also tell when an aura has a tarnish (see Realms of Power: The Infernal, page 13) or temper (see Realms of Power: The Divine Revised Edition, page 38) and its type or types by overcoming an Ease Factor of 6. By sensing passions, the character can often recognize incorporeal spirits. You may treat Sense Passions as Second Sight when attempting to recognize the presence of invisible or bodiless beings. However, this does not allow her to see through illusions, even illusions of strong emotions, and she cannot actually see the spirits, merely sense their proximity. In addition, this Ability allows the character to Sense Holiness and Unholiness in a limited fashion, much like the Sense Holiness and Unholiness Ability. She can tell that something is either holy or unholy, but she cannot distinguish between the two. She feels the emotional presence associated with the Divine or the Infernal, but cannot pinpoint its supernatural origin. Thus, she might mistake a demon with a fair shape for an angel, or a fearsome-looking angel for a demon. By identifying the target's primary emotions or desires, however, you can usually get a good idea of which realm the target is associated with, assuming the character can penetrate its Magic Resistance. Sense Passions is either a false power (see the False Power Flaw), or is associated with the Infernal. This means that it always appears infernal to divine or infernal detection. The presence of Infernal taint allows the Sense Holiness and Unholiness aspect to work. If the troupe allows Divine powers to be false, this may be the false version of Sense Holiness and Unholiness."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+            "Ease Factor" -> ^"Ease Factor"
+            "Personality Trait" -> ^"Personality Trait"
+            "Magic Resistance" -> ^"Magic Resistance"
+            "Personality Trait" -> ^"Personality Trait"
+            "Ease Factor" -> ^"Ease Factor"
+            "Second Sight" -> ^"Second Sight"
+            "Sense Holiness and Unholiness" -> ^"Sense Holiness and Unholiness"
+            "Sense Holiness and Unholiness" -> ^"Sense Holiness and Unholiness"
+            "Magic Resistance" -> ^"Magic Resistance"
+            "False Power" -> ^"False Power"
+            "Sense Holiness and Unholiness" -> ^"Sense Holiness and Unholiness"
+            "Sense Holiness and Unholiness" -> ^"Sense Holiness and Unholiness"
+        }
     }
 
     #tT0Gui2Vr92F5K0LZppfrKUf ^"Shapeshifter" DEF {
@@ -719,6 +829,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You may change your shape into that of a mundane animal from the size of a robin (–10) to that of a bear (+2). This requires a few seconds' (one round's) concentration, and a roll of Stamina + Shapeshifter against an Ease Factor of 9. Changing back to human form requires the same concentration, and the same roll. You have a limited repertoire of shapes, one for every point you have in the Shapeshift ability. Every time you raise the Ability by one point, you may choose a new shape."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
 
     #teT2LcXE2F4TDMJ6PBCx2GZI ^"Single Weapon" DEF {
@@ -801,6 +914,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "This is the Islamic equivalent of Theology: Christian. The major sources for Islamic theology are the Qur'an and the Sunna."
+        MENTIONS {
+            "Theology: Christian" -> ^"Theology: Christian"
+        }
     }
 
     #tywoELkx1nx86iHu5TOk242I ^"Theology: Judaism" DEF {
@@ -812,6 +928,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "This is the Jewish equivalent of Theology: Christian. The major sources for Jewish theology are the Torah, the Nevi'im, and the Kutuvim."
+        MENTIONS {
+            "Theology: Christian" -> ^"Theology: Christian"
+        }
     }
 
     #tpmPLk2mRewnvENg2qT8c9uC ^"Thrown Weapon" DEF {
@@ -843,6 +962,9 @@ EXTENSION "ARMDef_Abilities" {
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You are mystically attuned to the ways of the wilderness. A Perception + Wilderness Sense roll against an Ease Factor of 9 lets you determine the direction of north, the upcoming weather, or the presence of natural hazards or resources. One roll will only reveal one piece of information."
+        MENTIONS {
+            "Ease Factor" -> ^"Ease Factor"
+        }
     }
     #tsIjsmSHV4YNtgJygHtghbEp ^"Craft" DEF {
         EXTENDS ^"Ability"
@@ -869,7 +991,7 @@ EXTENSION "ARMDef_Abilities" {
             ^"Ability Type" STRING "General" FIXED
             ^"Source" STRING "Core Rules"
         }
-        DESCRIPTION "Fluency in a particular living language. Rather than a die roll modifier, your score in this Knowledge measures your ability to communicate. When two people speak to each other, the lower Ability score determines how well they communicate. Characters who speak related languages can communicate at a penalty to their scores (assigned by SCORE FLUENCY 0 Point and grunt . With one or more experience points, you know 'please', 'thank you', and a few other words. Basic questions and answers: 'Where is the church?', 'Do you sell food?'. Constant mistakes, and an atrocious accent. People must speak slowly and often repeat themselves, and you cannot string a conversation together. 1 2 Basic conversation. You can sustain a short conversation on a common topic. You still make many mistakes, and often"
+        DESCRIPTION "Fluency in a particular living language. Rather than a die roll modifier, your score in this Knowledge measures your ability to communicate. When two people speak to each other, the lower Ability score determines how well they communicate. Characters who speak related languages can communicate at a penalty to their scores (assigned by SCORE FLUENCY 0 Point and grunt. With one or more experience points, you know 'please', 'thank you', and a few other words. Basic questions and answers: 'Where is the church?', 'Do you sell food?'. Constant mistakes, and an atrocious accent. People must speak slowly and often repeat themselves, and you cannot string a conversation together. 1 2 Basic conversation. You can sustain a short conversation on a common topic. You still make many mistakes, and often"
     }
     #tAEXILgaQw5Vk2GUp9iAjQo6 ^"Dead Language" DEF {
         EXTENDS ^"Ability"

@@ -1,0 +1,734 @@
+EXTENSION "ArM5_RoP_Magic_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: Magic - New and Modified Virtues and Flaws"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_RoP_Magic_Core_Ext"
+
+    #tDYAofy6B5HFq4bAfTr6MDGj ^"Atlantean Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The magus, or an ancestor in his lineage, has studied the magic of exiled Atlanteans and has developed several useful extensions to Hermetic magic. The magus has access to a special Range: Water-way, a special Duration: Storm, and a special Target: Body-ofwater, that he may utilize with Spontaneous magic and in Formulaic or Ritual spells. Water-way (Range): The magus can target anyone, or anything, on (or in) the same water-way as him. For example, a river, or canal, or lake, or sea is a water-way. Tributary streams of a river are the same water-way as the main river, but are not the same water-way as other tributaries to the main river. In some cases the troupe will need to decide precisely where one water-way begins, and another ends. The magus must touch the water-way, when casting the spell, and the target must be either also touching the water-way or floating on it (in a boat, for example). A person on the bank of a river cannot be targeted by this spell. The magus need not be able to see the target, but he must be able to sense it in some way, unless the spell is an Intellego effect intended to determine whether something is in the water-way. For determining the spell level, waterway is the same range of effect as Sight. Storm (Duration): A spell with this duration must be cast during a storm and lasts until the end of the storm. Normally, a storm lasts a number of minutes or hours, but some large storms may last for days. The form of the spell must be either Aquam or Auram, but the spell is not necessarily cast on the storm itself. The length of an entirely natural storm can be quickly estimated by rolling a stress die and dividing the result by 2 — this gives the number of hours that the storm will last. A botch has no consequence, excepting that the storm will dissipate in a number of minutes. The storyguide should secretly determine how long the storm will last — although an InAu spell, or Wilderness Sense Ability Roll could easily reveal this information. For determining the spell level, Storm is the same duration as Concentration. Body-of-water (Target): A spell with this target targets an entire body-of-water, whether this is a lake, a river, or a sea. Use the same guidelines as water-way to determine where a body-of-water begins and ends. For determining the spell level, body-ofwater is the same level of Target as Structure (remember to increase the spell magnitude to effect a very large body-of-water, like a sea or the ocean)."
+        MENTIONS {
+            "Hermetic magic" -> ^"Hermetic magic"
+            "Wilderness Sense" -> ^"Wilderness Sense"
+        }
+    }
+
+    #t2DKdC5Krp9mzmKOVlMMlEaI ^"Composer of Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is a recognized composer of magical music. This means that he can teach songs of power to other characters. Such a song allows the character that learns it to replicate the effect of a single Power that the composer character knows, by expending vis of the appropriate Form equal to (1 + the Might Point cost of the Power). For example, a bird that is taught to sing Call the Flock must expend 3 Animal vis each time that it sings the song. In a season, the character can teach a single song to a number of characers equal to his Leadership Ability score, and the students only retain the ability to sing the song for a year."
+    }
+
+    #traPh9scZluyNEzB2bduY0IO ^"Essential Virtue" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major or Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character receives one generally beneficial Essential Trait at either +3 for Minor or +6 for Major, which either positively affects rolls associated with a particular Characteristic in certain situations, like Intuitive +3 or Good Aim +6, or gives the character a beneficial Personality Trait that is part of its essential nature and cannot be influenced by magic (see Essential Traits, below). You can take this Virtue more than once, so long as you choose a different Essential Trait each time."
+        MENTIONS {
+            "Personality Trait" -> ^"Personality Trait"
+        }
+    }
+
+    #tjis2VfpRPNtFgLSW0kz89iW ^"Extractor of (Form) Vis" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"form" OF ^"Art" }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The magus can extract (Form) vis from a Magic aura, but only if the features of the aura exemplify the Form. For example, an aura on the shores of a lake might exemplify Aquam, an aura at a burial-site exemplifies Corpus, etc. Extracting vis in this way is a Laboratory activity; the magus extracts a number of pawns of Vis equal to a tenth of his Creo Vim (Form) Lab Total (round up). Obviously, he needs to have a Laboratory in the aura too, and of course, the magus can chose to extract Vim vis instead. This Virtue may be taken multiple times (once for each Form)."
+        MENTIONS {
+            "Lab Total" -> ^"Lab Total"
+        }
+    }
+
+    #tD6xtU3gkbQtWX40GjYyJuRq ^"Ferocity" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "This Virtue may only be taken by magic characters played as grogs, or who do not have Intelligence, or who have the Low SelfEsteem Flaw. The character has Confidence Points, like a magus or companion character, but you may only use these Confidence Points in certain situations where the character’s natural ferocity is triggered. Describe the circumstance that activates the character’s Confidence, and take three Points to use when those conditions are met."
+    }
+
+    #tfNzuTMC00o5qGV4J3b34g6p ^"Focus Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a magical power activated at will. This is designed like a Focus Power, as described under Major Magic Qualities, but since the character does not have a Might Score the calculation of maximum level of effect and Penetration is different. This Virtue grants a pool of 25 points. The maximum level of effect and Penetration both start at zero. It costs 2 points to raise the maximum level of effect by 1, and 1 point to raise the Penetration by 1. Thus, 25 points can allow a maximum level of 10 with a Penetration of 5, or a maximum level of 5 with a Penetration of 15, or combinations in between. It costs a number of Fatigue levels to activate this power equal to (the power’s Might Point cost divided by 5, rounded up). This means it is always at least one Fatigue level, and if the effect is greater than level 25, it costs two Fatigue levels. This Virtue may be taken more than once, and the points gained may be combined."
+    }
+
+    MODIFY ^"Giant Blood" {
+        PROPERTIES {
+            ^"RoP Magic Note" STRING "(See the Virtue on page 43 of ArM5.) This Virtue represents a character with both the blood of giants and the blood of humans in his lineage, not a true giant. Full-blooded giant characters use the rules for magic humans, taking the Major Magic Quality Gigantic during character creation."
+            ^"RoP Magic Source" STRING "Realms of Power: Magic"
+        }
+    }
+
+    #tPDbZeS5fNkYdj3mK5pebHKx ^"Greater Immunity (Deprivation)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "(See the Virtue on ArM5, page 43.) Much like magical beings, the character is immune to deprivation, suffering no loss of Fatigue or wounds from going without air, food or drink. However, like magic characters, she cannot regain long-term Fatigue without rest and sustenance, and if she is injured deprivation could cause her wounds to worsen."
+    }
+
+    #tRQQPQOq2wQuFw0wyp7CC5xd ^"Greater Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a magical power that he can activate at will. This is designed like a Greater Power as described under Major Qualities above, but since the character does not have a Might Score, it costs him a number of Fatigue levels to activate equal to (the power’s Might Point cost divided by 5, rounded up). This Virtue may be taken more than once. You may trade in levels for Mastery Points, as normal, and use them to reduce the Might Point cost, and thus Fatigue cost. You may also spend levels one-for-one to give the power Penetration; otherwise, it has a Penetration of zero, as the character has no Might Score."
+    }
+
+    #tP26uGZp420mqetQJF5YAbgW ^"Homing Instinct" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character always knows precisely how to get from where they are to a number of locations equal to her Intelligence Score (a minimum of 1). To add a location to the character’s repertoire she must be at that location, the location must be open to the air (so it cannot be inside, for example), and the player must make an Intelligence + Concentration Roll against an Ease Factor of 6. If this would increase the number of known locations beyond the character’s limit, then another location must be “forgotten.” For example, all Birds of Nephelococcygia (see Chapter 5: Magic Animals) know the location of Nephelococcygia, and this location cannot be “forgotten.” In addition, the character has a fixed Arcane Connection to locations that she knows, which may be exploited in the usual ways. This Arcane Connection is an artifact of the mind, and so may not be given to another character."
+        MENTIONS {
+            "Birds of Nephelococcygia" -> ^"Birds of Nephelococcygia"
+        }
+    }
+
+    #tv1mFIVplE0KijKrHr36kN2Z ^"Imbued with the Spirit of (Form)" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"form" OF ^"Art" }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The magus has absorbed some of the powers of an elemental or other magic object (perhaps by consuming it). This act taints the magus, so that any being with a Magic Might associated with the Form of this Virtue can sense his nature when nearby. Typically, weak creatures will be afraid of the magus and powerful ones will attempt to kill him. Whenever casting a spell or performing a Laboratory Activity that requires vis of the chosen Form, the magus may substitute Long-Term Fatigue Levels for the vis. Each Long-Term Fatigue Level lost reduces the vis requirement of the spell or effect by 1. When casting a spell the Fatigue Levels are lost after the spell is cast. For Laboratory Activities the Fatigue loss lasts for the duration of the Laboratory process (that is, at least a season), and Fatigue Levels substituted for vis do not count towards the magi’s limit of vis expenditure in a season. Note that studying vis is not a Laboratory activity, so the magus may not substitute Fatigue Levels for vis when studying. For example, a magus casting an Enchantment of the Scrying Pool ritual (InAq 30, ArM5, page 122), requires 6 pawns of some combination of Intellego and Aquam vis. If the magus is Imbued with the Spirit of Aquam, he may tire himself (losing three Long Term Fatigue Levels), and reduce the vis requirement by 3."
+        MENTIONS {
+            "Laboratory Activity" -> ^"Laboratory Activity"
+            "Long-Term Fatigue" -> ^"Long-Term Fatigue"
+            "Long-Term Fatigue" -> ^"Long-Term Fatigue"
+            "Enchantment of the Scrying Pool" -> ^"Enchantment of the Scrying Pool"
+        }
+    }
+
+    #tYOo9t6mYpPckt5NgTbRWrRs ^"Inoffensive to (Beings)" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"beings" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters with The Gift or an inherent Magical Air may take this Virtue. The character’s magical presence does not disturb a single type of being: animals, spirits, or those aligned with the Magic realm. This Virtue may not be taken more than once; to design a character that is not disturbing to more than one sort of being, instead take the Gentle Gift and the Offensive to (Beings) Flaw, below."
+        MENTIONS {
+            "The Gift" -> ^"The Gift"
+            "Magical Air" -> ^"Magical Air"
+            "Gentle Gift" -> ^"Gentle Gift"
+            "Offensive to (Beings)" -> ^"Offensive to (Beings)"
+        }
+    }
+
+    #tcrlIcUKoWDA8kjxLaTrRsLo ^"(Land) Regio Network" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"land" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has access to an extensive network of regiones, perhaps located in the depths of many lakes throughout Mythic Europe, or hidden above the clouds in the sky, or buried in subterranean caves under the ground. The character is associated with one particular type of regio network. Once the character is in such a regio he may travel to any other regio in the network; travel time is one Diameter regardless of geographic distance. To determine whether the character knows the location of a networked regio in a particular locale an Intelligence + (Area) Lore roll is made against an Ease Factor of 9. The character knows how to enter these regiones and can, if he chooses, guide other characters into the regiones — although other characters must be able to survive in the environment of the regio. Access to the network may be ultimately controlled by other characters or powers."
+        MENTIONS {
+            "Mythic Europe" -> ^"Mythic Europe"
+            "(Area) Lore" -> ^"(Area) Lore"
+        }
+    }
+
+    MODIFY ^"Large" {
+        PROPERTIES {
+            ^"RoP Magic Note" STRING "(See the Virtue on page 44 of ArM5.) This Virtue changes a magic character’s Size, but does not modify Strength or Quickness."
+            ^"RoP Magic Source" STRING "Realms of Power: Magic"
+        }
+    }
+
+    #tvnlnzN4hC1dsWW1YHxEq3fk ^"Lesser Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a power which is limited in some way, designed as a Lesser power described under Minor Magical Qualities, above. Activating it costs the character a number of Fatigue levels equal to (the power’s Might cost divided by 5, rounded up). This Virtue may be taken more than once. You may trade in levels for Mastery Points, as normal, and use them to reduce the Might Point cost, and thus Fatigue cost. You may also spend levels one-for-one to give the power Penetration; otherwise, it has a Penetration of zero, as the character has no Might Score."
+    }
+
+    #trvEXXiZaOw5zcUtIhIM27Ux ^"Magic Animal" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Special" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is a magical animal, either a perfect example of its species that is generally known as a Beast of Virtue, or else some other sort of magical being born in an animal shape. It is designed using the Magical Animal rules for Magic Character Creation, above, which gives it a Magic Might Score and other advantages over mundane creatures. It must also deal with the innate limitations of an animal form, such as having no hands. Subtract the character’s natural Size from its starting Might Score."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+        }
+    }
+
+    #tAAKbqSwPf6Kot6k9aSL2gsq ^"Magic Human" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Special" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is a magical human, maybe descended from an ancient race of magical beings or somehow blessed with magic in his blood, born with a Magic Might Score and the Monstrous Appearance Inferiority (though he is not necessarily ugly). He should be designed using the Magic Human rules for Magic Character Creation, above."
+        MENTIONS {
+            "Monstrous Appearance" -> ^"Monstrous Appearance"
+            "Magic Character" -> ^"Magic Character"
+        }
+    }
+
+    #t8oDAbX8ljX51XLRpy9TJkhv ^"Magic Spirit" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Special" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is a mind, memory, image or idea somehow brought to life by the power of Magic. It is designed with a Magic Might Score according to the Magical Spirit rules for Magic Character Creation, above. Such characters are insubstantial and always have the Magical Air Flaw, as if they possessed The Gift, and only a Gentle Magical Air can lessen this effect. If the character has the Gifted Quality, this gives the character a Blatant Magical Air instead."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+            "Magical Air" -> ^"Magical Air"
+            "The Gift" -> ^"The Gift"
+            "Magical Air" -> ^"Magical Air"
+            "Blatant Magical Air" -> ^"Blatant Magical Air"
+        }
+    }
+
+    #tFWTx8miDHKWGs33sRuKec3q ^"Magic Thing" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Special" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is a magical thing made up of elemental atoms or possessed by the raw power of nature, something that gives it a semblance of life and provides it with a Magic Might Score. Magical beings of this sort always have the Magic Inferiority of Temporary Might, which means that it takes them a very long time to recover their spent Might Points, and whenever they are injured, some of their Might is separated from their physical bodies as vis. They also receive the No Fatigue Quality at no cost. They should be designed according to the Magic Thing rules for Magic Character Creation."
+        MENTIONS {
+            "Magic Inferiority" -> ^"Magic Inferiority"
+            "Temporary Might" -> ^"Temporary Might"
+            "No Fatigue" -> ^"No Fatigue"
+            "Magic Character" -> ^"Magic Character"
+        }
+    }
+
+    #tccICshT1tbfPZtMkJvpFrDi ^"Magical Blood" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character’s essential nature has been improved through exposure to the Magic realm, often from a magic being, which gives her true form special supernatural properties. This typically changes the character’s appearance enough that others can recognize that there is something unusual about her, and people might say that she has magical blood — or “faerie blood” (since many people in Mythic Europe do not understand the differences between the Magic and Faerie realms). The character may learn Magic Lore during character creation, and is resistant to aging, receiving a –1 bonus to all of her Aging rolls. In addition, she receives a minor physical advantage appropriate to one of the four different types of magic beings (magic animals, magic humans, magic spirits, and magic things), the one that is associated with the character’s background. Some examples are below, or you can make up your own. Magic Animal: The character has a physical feature normally associated with animals, such as wings, scales, gills, teeth, or claws. These give as much as a +3 bonus to appropriate activities, or may allow the character to perform actions that a normal character could not manage (such as fly, or breathe underwater). This feature is very difficult to hide, making the character obviously different from other humans. Magic Human: The character may increase one of his Characteristics by 1, but not above +3. This is often Strength or Stamina (to represent the blood of giant ancestors), or Presence (to represent the blood of godlike beings). This often gives the character an otherworldly appearance. The character also has a positive Reputation at level 3 among others of his bloodline. Magic Spirit: The character gains an appropriate Supernatural Ability (one associated with a Minor Virtue), such as Magic Sensitivity, Premonitions, Second Sight, or Wilderness Sense, with an initial score of 1, though whenever the character uses this Ability, her appearance becomes obviously supernatural. For example, her eyes might turn black, she might rise a foot from the ground, or her hair might be blown about by a wind no one else can feel. Magic Thing: The character has a Lesser Power associated with an object or thing. Whenever she activates the effect, her appearance also changes in a way appropriate to the form of the power. For example, a power that protects against flames would cause her skin to become dark with soot and smell like smoke, and a power that lets her walk on water might cause her to become semi-transparent, like water."
+        MENTIONS {
+            "Mythic Europe" -> ^"Mythic Europe"
+            "Magic Lore" -> ^"Magic Lore"
+            "Magic Animal" -> ^"Magic Animal"
+            "Magic Human" -> ^"Magic Human"
+            "Magic Spirit" -> ^"Magic Spirit"
+            "Minor Virtue" -> ^"Minor Virtue"
+            "Magic Sensitivity" -> ^"Magic Sensitivity"
+            "Second Sight" -> ^"Second Sight"
+            "Wilderness Sense" -> ^"Wilderness Sense"
+            "Magic Thing" -> ^"Magic Thing"
+            "Lesser Power" -> ^"Lesser Power"
+        }
+    }
+
+    #tqoGRT6aW6BD84rQnAgFgfH6 ^"Magical Champion" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Social Status" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters designed using the rules for Magic Character Creation may take this Virtue. A small group of individuals considers the character to be their particular representative, by virtue of its magical nature. They might be the grogs at the covenant, or all the animals in a single pack, or all the magical trees in a particular forest. These beings give the character special respect, and so others typically recognize and deal with the character as the leader of the group. Outside of this group, the character does not command any special respect because of its magical nature; if it looks human it will be treated like a person, otherwise it will probably be perceived as either a dumb beast or a monster. This Virtue may be combined with other Social Status Virtues and Flaws that are appropriate to the character’s form."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+            "Virtues and Flaws" -> ^"Virtues and Flaws"
+        }
+    }
+
+    #t8jhnX0CE47Vzxxq1yvlk2Bq ^"Magical Covenfolk" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free" FIXED
+            ^"Category" STRING "Social Status" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters designed using the rules for Magic Character Creation may take this Virtue. The character is a magical being that is generally accepted by the other people at the covenant as an equal. The character does not command any special respect because of its magical nature, however, and how outsiders treat it depends upon its appearance; if it looks human it will be treated like a person, otherwise it will be seen as either a dumb beast or a monster. This Virtue may be combined with other Social Status Virtues and Flaws that are appropriate to the character’s form."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+            "Virtues and Flaws" -> ^"Virtues and Flaws"
+        }
+    }
+
+    #thjegJZT60Faxg6kXuY4Q6em ^"Magical Master" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Social Status" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters designed using the rules for Magic Character Creation may take this Virtue. The character is recognized as a higher power by a relatively large group, and this status depends on its magical nature. This group might be everyone in a particular village or covenant, or all the animals in a single forest, or all of the trees of a particular variety in Mythic Europe. There is something about the character’s powers or physical appearance that allows members of the group to easily recognize the character. Members of this special group generally defer to the character, and perhaps even worship or venerate it depending on their sophistication and beliefs. Outside of this community, the character does not command any special respect; if it looks human it will be treated like a person, otherwise it will probably be perceived as either a dumb beast or a monster. This Virtue may be combined with other Social Status Virtues and Flaws that are appropriate to the character’s form."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+            "Mythic Europe" -> ^"Mythic Europe"
+            "Virtues and Flaws" -> ^"Virtues and Flaws"
+        }
+    }
+
+    #tUab1PTC434z0ATXcQRC8YNO ^"Magical Mount" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a mount, beast-ofburden, or “guard dog,” a creature that has Cunning instead of Intelligence and a Magic Might Score of up to 25. It has an extra Personality Trait (Loyal 0) and will obey simple verbal commands. If it has a positive Cunning score, the creature is also able to perform limited acts on its own initiative. If the character is incapable of training the creature himself, it must have been a gift from another character (probably a powerful magus) and the character must take the Major Story Flaw: Favors, to represent his debt to his patron — in this case, only a companion or magus-level character can take this Virtue."
+        MENTIONS {
+            "Personality Trait" -> ^"Personality Trait"
+        }
+    }
+
+    #tec1SrrBng7I23PPPTNbLBhh ^"Magical Warder" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a magical being that accompanies him, watches over him, and sees that he comes to no harm. It does not require anything from the character in return for its service, but note that the more powerful the warder, the less willing or able it is to help the character, and the less often it is available to protect him. Design this being as a magic character — a Ghostly Warder is a good example of a companion character; less powerful and it is basically an extension of the character’s will, while a more powerful Warder’s assistance is rarer and even more circumstantial. (Besides enabling other sorts of warders, this version of the Virtue makes it possible to take a Ghostly Warder designed with a Might Score that is more appropriate to the power level of the saga and the character’s role within it.)"
+        MENTIONS {
+            "Ghostly Warder" -> ^"Ghostly Warder"
+            "Ghostly Warder" -> ^"Ghostly Warder"
+        }
+    }
+
+    #tG6mBUvvNcf2QegjbxOSpAx6 ^"Master of (Form) Creatures" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"form" OF ^"Art" }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character can tame animals and other unintelligent beings whose Magic Might is aligned with a particular Form. During character creation, the character may take Magic Lore, and this Virtue may be taken multiple times, once for each Form."
+        MENTIONS {
+            "Magic Lore" -> ^"Magic Lore"
+        }
+    }
+
+    #th6nawuhuJ8uOCXLm0IjYTtA ^"Personal Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a power which is limited in some way, designed as a Personal power described under Minor Magical Qualities, above. Activating it costs the character a number of Fatigue levels equal to (the power’s Might cost divided by 5, rounded up). This Virtue may be taken more than once. You may trade in levels for Mastery Points, as normal, and use them to reduce the Might Point cost, and thus Fatigue cost. You may also spend levels one-for-one to give the power Penetration; otherwise, it has a Penetration of zero, as the character has no Might Score. If the Power has a range of Personal, it does not need Penetration, as it can affect the character without needing to penetrate."
+    }
+
+    #t4az9JVteBOn5CDdLVPhMufg ^"Ritual Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a magical power that he can activate at will. This is designed like a Ritual Power as described under Major Qualities above, but since the character does not have a Might Score, activating it always costs him a number of Fatigue levels equal to (the effect’s Might Point cost divided by 5, rounded up). In addition, activating the power costs a number of Confidence Points equal to the Might Point cost of the power. This Virtue may be taken more than once. You may trade in levels for Mastery Points, as normal, and use them to reduce the Might Point cost, and thus Fatigue cost. You may also spend levels one-for-one to give the power Penetration; otherwise, it has a Penetration of zero, as the character has no Might Score."
+    }
+
+    #t3LQySrjZMPfNVK4jwdARAr6 ^"Transformed (Being)" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"being" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has been transformed by the power of Magic, losing his mundane nature and changing into a supernatural being — see the Special Virtues Magic Animal, Magic Human, Magic Spirit, or Magic Thing, above, for examples of how Magic changes a character. Initially the character has a Might Score of 0 and no Magic Qualities, though the player may take a number of Magic Inferiorities equal to his maximum allotment of Flaws during this transformation — three points for a grog character, and ten for a magus or companion — and gaining a corresponding number of Magic Qualities. The magic character also gains an Essential Trait at +3 that describes the character’s origin or true form, what the character is at a fundamental level. This should be related to the Form of the character’s Might in some way. Characters with a Might Score associated with any realm of power other than Magic cannot take this Virtue. If the character has Supernatural Virtues or Flaws associated with other realms, these are also affected by the transformation. Generally, divine powers are lost, faerie powers become magic ones, and infernal powers become magic but tainted with evil (see Realms of Power: The Infernal for more information about tainted powers). For example, a character’s Strong Faerie Blood might become a Greater Power, infernal Entrancement would become magical but would be infernally tainted, and True Faith would be gone forever."
+        MENTIONS {
+            "Magic Animal" -> ^"Magic Animal"
+            "Magic Human" -> ^"Magic Human"
+            "Magic Spirit" -> ^"Magic Spirit"
+            "Magic Thing" -> ^"Magic Thing"
+            "The Infernal" -> ^"The Infernal"
+            "Strong Faerie Blood" -> ^"Strong Faerie Blood"
+            "Greater Power" -> ^"Greater Power"
+            "True Faith" -> ^"True Faith"
+        }
+    }
+
+    #tkhdJ08BYBXWVx3aAjBQYmIJ ^"Unaffected by The Gift" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is not affected by the negative effects of The Gift or Magical Air in others. Even a Blatant Gift does not especially bother the character."
+        MENTIONS {
+            "The Gift" -> ^"The Gift"
+            "Magical Air" -> ^"Magical Air"
+            "Blatant Gift" -> ^"Blatant Gift"
+        }
+    }
+
+    #ty9Z3L8p3bniMNsuD3LHVEVJ ^"Variable Power" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "One of the character’s magic powers (Greater, Lesser, or Ritual) becomes more powerful over time, based on either (age / 10), (Might Score / 5), Warping Score, or his score in an appropriate Ability. (Age and Warping should not be allowed as variables if the character is immune to their effects.) For example, an effect that allows the character to change his shape into an animal might be associated with a special Ability, and his score in that Ability would determine how many different animals he could become. Generally speaking, a single power can have its effect level increased by five, or include another effect of the same level that is similar the original, for each level of variance. For a character with Variable Powers based on his age, for example, this would mean the effectiveness of one of his powers would be increased by a total of five magnitudes after he has lived for 50 years. This Virtue may be taken more than once, if the character has more than one power, but it only applies once to a single power."
+    }
+
+    #tX95CNb0F9ZCrvubmY0sXvEc ^"Voice of the (Land)" DEF {
+        EXTENDS ^"Virtue"
+        PARAMETERS { ^"land" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character can speak with any creature whose natural habitat is a particular environment associated with this Virtue (including animals and magic beings), and the character is not normally perceived as either a threat or a prey object by these creatures. New & Modified Flaws"
+    }
+
+    #twW7K77Ng9XHf4Uo371Kl35a ^"Anchored to the (Land)" DEF {
+        EXTENDS ^"Flaw"
+        PARAMETERS { ^"land" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character suffers from feelings of loneliness and depression when she cannot see or hear a particular type of environment. In game terms, the character has a –3 penalty to all rolls when traveling through any other sort of environment (it is assumed that once the character has time to recover from the journey, she will find some reminder of her natural environment to help her rest). For example, a character who is Anchored to the Sea would suffer the penalty when traveling overland, but once settled can easily comfort herself — with the sound of the sea heard in a sea shell, perhaps."
+    }
+
+    MODIFY ^"Age Quickly" {
+        PROPERTIES {
+            ^"RoP Magic Note" STRING "(See the Flaw on page 51 of ArM5.) If this Flaw is taken by a character with a Magic Might Score, or by a character who later gains a Magic Might Score, the character is not immune to aging like other magic characters, but only has to roll for aging once a year. For these characters, this aging cannot be halted with a longevity ritual as it is already slowed by their magical natures."
+            ^"RoP Magic Source" STRING "Realms of Power: Magic"
+        }
+    }
+
+    #toBxDzjTR0T3WcuyNplzmYvL ^"Baneful Circumstances" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Something about the character’s supernatural nature weakens him in relatively common circumstances, such as when touching the ground or when in the presence of women. At these times, the character cannot recover Fatigue, heal wounds, or recover Might, and if at the end of the year the character has spent more than half of his time subject to these conditions, he must make an additional Aging roll even if he is normally immune to aging because of a longevity ritual or Might Score."
+    }
+
+    #ty5ZVmHBIdiD1h3AV74X9XDA ^"Blatant Magical Air" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters with a Magical Air or The Gift may take this Flaw. The character is especially disturbing to others, so much that they can barely tolerate its presence. The character suffers a –6 penalty to social actions, and is immediately hated and feared by members of the mundane population. This effect is the same as the Blatant Gift, and a character may not have both Flaws."
+        MENTIONS {
+            "Magical Air" -> ^"Magical Air"
+            "The Gift" -> ^"The Gift"
+            "Blatant Gift" -> ^"Blatant Gift"
+        }
+    }
+
+    #tlYLmMqzoKfWWWILT78LSP3M ^"Bound to Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is no longer able to survive in the mundane world, and sickens if it is outside a Magic aura for an extended period of time. The character must live in a Magic aura of 5 or greater to remain healthy; if it spends most of a season outside such an aura, make a Stamina Roll against an Ease Factor of (9 – Size). If you fail the roll, the character sustains a Heavy wound, unless the previous season it also failed such a roll, in which case it sustains an Incapacitating wound instead. Other versions of this Flaw may exist for the other supernatural realms. (This Flaw is especially appropriate for animals that have been Warped by Magic; see Chapter 5: Magic Animals, Transformed Animals.)"
+        MENTIONS {
+            "Warped by Magic" -> ^"Warped by Magic"
+        }
+    }
+
+    #tlW9eLzMKgb6mrPfJBzt8G50 ^"Deteriorating Power" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Like the Variable Powers Virtue, this Flaw reduces the effectiveness of one of the character’s powers (Greater, Lesser, or Ritual) over time. This penalty is linked to either the character’s (age / 10), (Might Score – Might Pool / 5), or Warping Score. For example, a magic character with Deteriorating Powers linked to Might and a Might Score of 25 would have one of his powers reduced by 5 magnitudes when his Might Pool is empty. This Flaw may be taken more than once, if the character has more than one Power."
+    }
+
+    MODIFY ^"Dwarf" {
+        PROPERTIES {
+            ^"RoP Magic Note" STRING "(See the Flaw on page 53 of ArM5.) This Flaw represents a human being who is born much smaller than average, but who is still mundane. For a character of magically reduced Size, take the Miniature Inferiority instead."
+            ^"RoP Magic Source" STRING "Realms of Power: Magic"
+        }
+    }
+
+    #tomITl2agOyypspIy15ABoDV ^"Environmental Magic Condition" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "All of the character’s Casting and Lab Totals are halved in certain common conditions related to his environment. For example, whenever he is inside. Note that this should be significantly more restrictive than the Hermetic Flaw Deleterious Circumstances."
+        MENTIONS {
+            "Deleterious Circumstances" -> ^"Deleterious Circumstances"
+        }
+    }
+
+    #tcXbtfbUQajjd9gJ7iDh7dlD ^"Environmental Sensitivity" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is unusually sensitive to an uncommon environmental feature, such as bad air, salt water, or extreme temperatures. Whenever the character is exposed to these conditions, he has a –3 penalty to his Stamina for any debilitation checks."
+    }
+
+    #t34OYRxAOrSoQEgeWTOIRNrl ^"Essential Flaw" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major or Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "This Flaw gives the character an Essential Trait that negatively affects rolls associated with one of his Characteristics in a particular situation, such as Poor Runner, Face Curdles Milk, or Stutter, with a starting score of –3 if Minor, or –6 if Major. The effects of this Flaw are always detrimental to the character. Magical powers cannot help you overcome this limitation because it is part of your essential nature (see Essential Traits, later in this chapter). You can take this Flaw more than once, but only affecting a different Characteristic each time."
+    }
+
+    #td1TPThdo8ENMUV9a28jRj30 ^"Exiled Atlantean" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is an exiled Atlantean; she is tainted by her contact with the surface world, and cannot return to her magic regio. This exile is enforced by the very nature of the magic regio to which the Atlanteans are native, so there is no authority figure to which she may appeal, or any obvious method of returning to favor. The exile applies even if the Atlantean left her native magic regio involuntarily."
+    }
+
+    #txnqsnbgMoJUbxoaRlXmHQYu ^"(Form) Monstrosity" DEF {
+        EXTENDS ^"Flaw"
+        PARAMETERS { ^"form" OF ^"Art" }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is a monstrosity with a monstrous feature, or mutation, which corresponds to a magical Form. The feature may be beneficial in limited circumstances, but generally gives the character no advantage over its non-mutated peers. Animals are not usually bothered by monsters — the character still has the correct scent, and behavior — and a single monstrous bull might be found happily living among a herd of otherwise normal cattle, for example. People, on the other hand, are highly troubled by the appearance of monstrosities, which they invariably attribute to malign influence; obviously monstrous animals are usually killed by peasants. Often, 1 pawn of Muto vis may be extracted from the corpse of a monstrous character, found concentrated in the monstrous feature. Some examples of possible monstrosities are listed below, but the troupe may devise their own, as required: Form Monstrosity Animal an additional head Aquam gills, or webbing on land animals Auram wings on a land or sea animal Corpus human-like limbs or eyes Herbam a branch for a tail Ignem fiery breath, or an extremely elevated body temperature Imaginem unnatural hide (tiger fur on a horse, for example) Mentem sensitivity to spirits (animal can both sense and is afraid of spirits) Terram teeth or claws of stone Vim sensitive to magic (animal feels pain when in a magical aura) (This Flaw is especially appropriate for animals Warped by Magic; see Chapter 5: Magic Animals, Transformed Animals.)"
+        MENTIONS {
+            "Warped by Magic" -> ^"Warped by Magic"
+        }
+    }
+
+    #ttzqgOrtTAz20lJFVbcWKBpT ^"Hunger for (Form) Magic" DEF {
+        EXTENDS ^"Flaw"
+        PARAMETERS { ^"form" OF ^"Art" }
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has been repeatedly exposed to magic and has thus become dependent upon magic to survive. The character must consume 1 pawn of vis each season, corresponding to the Form that it has been mostly exposed to. If the character is unable to consume a pawn of vis in a season, it loses a Long-Term Fatigue Level that cannot be regained until a pawn of the appropriate vis is consumed. For example, a character that has Hunger for Ignem Magic and has not consumed a pawn of Ignem vis for a whole year will have lost 4 Long-Term Fatigue Levels, and so be Dazed with a –5 penalty to activities. If the character then consumes 1 pawn of Ignem vis, it will regain a Fatigue Level and become Tired after an hour has elapsed. (This Flaw is especially appropriate for animals that have been Warped by Magic; see Chapter 5: Magic Animals, Transformed Animals.)"
+        MENTIONS {
+            "Long-Term Fatigue" -> ^"Long-Term Fatigue"
+            "Long-Term Fatigue" -> ^"Long-Term Fatigue"
+            "Warped by Magic" -> ^"Warped by Magic"
+        }
+    }
+
+    #tnzMCIsaE51ud9CIM5JUZUyB ^"Magical (Being) Companion" DEF {
+        EXTENDS ^"Flaw"
+        PARAMETERS { ^"being" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character is accompanied by an intelligent magical being, one that is smart enough to follow orders or disobey them on its own initiative, which the character must regularly look after. This might be an animal, a spirit, a human-like creature, or even an animate object. Design this being as a magic character with the Magical Friend Social Status Flaw (see below), and note that the greater the character’s Might Score, the more independent it will be. A grog-level character might be essentially an extension of the character’s will, while a companion-level character might follow instructions but often do what it thinks is best, and a magus-level character might be condescending or wild, and rarely act except on its own initiative. (Besides enabling other sorts of magical companions, this version of the Flaw makes it possible to take a Magical Animal Companion designed with a Might Score that is more appropriate to the power level of the saga and the character’s role within it.)"
+        MENTIONS {
+            "Magical Friend" -> ^"Magical Friend"
+            "Magical Animal Companion" -> ^"Magical Animal Companion"
+        }
+    }
+
+    #tts5i5zbTBDtzWOX8HpKyIxt ^"Magical Friend" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Social Status" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters designed using the rules for Magic Character Creation may take this Flaw. Like a Magical Monster, the character is considered to be less than human, but favored by one or more human characters (or other characters that are generally accepted as human). Among people who know the character’s associate, the character is treated better than it would otherwise be, perhaps as that person’s pet or bodyguard. Others most likely treat the character as an outsider or a brute, or perhaps as a dumb beast or a monster. This Flaw is intended as the counterpart to another character’s Magical (Being) Companion, but it is also particularly appropriate for Hermetic familiars or any characters with nonhuman forms that are strongly associated with someone at a covenant. Characters created to be Magical Companions cannot themselves have Magical Companion characters."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+            "Magical Monster" -> ^"Magical Monster"
+        }
+    }
+
+    #tKEVK7NGJBOEEp0grcIpmva9 ^"Magical Monster" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Social Status" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters designed using the rules for Magic Character Creation may take this Flaw. The character is a magical being that has no strong connection to human society, such as a person who looks after it or a community that accords it special respect. Generally people treat it as an outsider if it appears human, or as a beast if it does not. The character might know how to interact with human beings, and might even be good at it, but even a well-spoken and social Magical Monster will never be treated as a person based on its own merits."
+        MENTIONS {
+            "Magic Character" -> ^"Magic Character"
+        }
+    }
+
+    #t6OJcoSaYtZhpucRmqQmaIQZ ^"Monstrous Blood" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character’s essential nature has been changed through exposure to the Magic realm, often because of a relationship to a magic being, which gives her true form unfortunate supernatural properties. This changes the character’s appearance enough that others can immediately recognize that there is something wrong about her, and people might say that she has tainted blood. The character is more resistant to age and receives a –1 bonus to all Aging rolls, and may learn Magic Lore during character creation. However, the character also gains a minor physical deformity appropriate to the magic being type that is associated with the character’s background. Some examples are below, or you can make up your own. Magic Animal: The character has a physical feature normally associated with animals, such as wings, scales, gills, sharp teeth, or claws. These are not usable by the character, and give a –3 penalty to appropriate activities (such as running or climbing) as these deformities get in the way. Magic Human: The character must decrease one of his Characteristics by 1, but not below –3. This might be Strength or Stamina to represent weakened blood, or Presence to indicate a dowdy appearance. The character also has a poor Reputation of level 3 among other magic beings. Magic Spirit: The character has a mental block against many activities that are not supernatural, possibly due to a noticeable difficulty with retaining memories. Subtract 3 from all of the character’s Intelligence and Perception rolls that do not involve a Supernatural Ability or Art. Magic Thing: The character has a constant Lesser Power that is mostly detrimental to it in some way, such as a ward that prevents it from picking up wooden objects, or that causes books it touches to burst into flame. The effect normally occurs involuntarily, but the character can spend a Confidence Point to prevent it from triggering."
+        MENTIONS {
+            "Magic Lore" -> ^"Magic Lore"
+            "Magic Animal" -> ^"Magic Animal"
+            "Magic Human" -> ^"Magic Human"
+            "Magic Spirit" -> ^"Magic Spirit"
+            "Magic Thing" -> ^"Magic Thing"
+            "Lesser Power" -> ^"Lesser Power"
+        }
+    }
+
+    #tj49v6DLTubjrmPJTVjJfJMs ^"Offensive to (Beings)" DEF {
+        EXTENDS ^"Flaw"
+        PARAMETERS { ^"beings" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has a magical presence very similar to The Gift that is especially disturbing to a particular type of creature: animals, spirits, or characters aligned with Magic. Only characters who are not Gifted (or whose Gift does not affect others) may take this Flaw."
+        MENTIONS {
+            "The Gift" -> ^"The Gift"
+        }
+    }
+
+    #t7wCSHrWfAv05Ebn26kXhj47 ^"Poor Concentration" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "While the character may have a mind that is quick to make decisions, he has a short attention span. The character has a –3 penalty to Concentration rolls."
+    }
+
+    #tQOMOrukShYQQ0XdOyrMXAcq ^"Restricted Power" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character must perform some special ceremony to activate one of its powers, such as drawing symbols on the ground or gesturing and chanting like a magus, or else the power only functions on a limited class of targets (such as men, wolves, sounds, or sand) or in specific circumstances (like at night, under water, when touching iron, or after singing a song). This Flaw may be taken once for each power the character possesses."
+    }
+
+    #tLUDGRJHEUYy9JTxuStX8TWa ^"Servant of the (Land)" DEF {
+        EXTENDS ^"Flaw"
+        PARAMETERS { ^"land" OF STRING }
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Some powerful magical creature has saved the character from death and in return the character has been set a task. Possible tasks include: preaching a message, operating a lighthouse, or preventing hunting in a certain area. Usually the task is either difficult or time-consuming, and while it remains incomplete the character has the Minor Personality Flaw: Prohibition, but this does not count toward the character’s total number of Virtues and Flaws. The Prohibition means that if the character does not spend at least one complete season every year working toward his assigned task, a curse afflicts him. Possible curses include: a magical compulsion to return to the land where the character must explain himself to his master, turning into an animal, or acquiring a Supernatural Flaw."
+        MENTIONS {
+            "Virtues and Flaws" -> ^"Virtues and Flaws"
+        }
+    }
+
+    #th7Q0RcjhbhMWibMnDUp7UOc ^"Slow Power" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "One of the character’s powers is very slow, so that it requires an additional round of preparation to activate. This Flaw may be taken more than once, if the character has multiple powers, but not more than once for a single power."
+    }
+
+    MODIFY ^"Small Frame" {
+        PROPERTIES {
+            ^"RoP Magic Note" STRING "(See the Flaw on page 59 of ArM5.) This Flaw changes a magic character’s Size, but does not modify its Strength or Quickness."
+            ^"RoP Magic Source" STRING "Realms of Power: Magic"
+        }
+    }
+
+    #trf09CkUsfzx7xATFYF31p7a ^"Wanderlust" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character feels compelled to travel with a passion that is so strong that he cannot spend more than a season in the same place. The character can only spend two (nonconsecutive) seasons each year in the same Magic aura, and must spend the intervening seasons traveling to different locales — places he has never been. If for some reason he cannot travel, he will become very uncomfortable; this could manifest in many appropriate ways, such as being unable to spend or gain Confidence Points or restore Might Points until he leaves."
+    }
+
+    #tVqj3D8ZoKa81UN74KDlBnHm ^"Warped Senses" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Personality" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "The character has become overly sensitive to environmental conditions, which affects his behavior in certain uncommon circumstances. Some examples include: Sensitive (Sense): One of your senses is so sensitive that it is overwhelmed under circumstances that others find normal. If it is sight, normal daylight dazzles you. If it is hearing, sounds above normal speaking volume hurt your ears. If it is taste, only bland food is tolerable. If it is smell, strong odors, good or bad, are nauseating. You suffer a –2 penalty on all activities under relevant circumstances. (It is inadvisable to combine Sensitive Sight with Keen Vision, and Sensitive Hearing with Sharp Ears, and these are incompatible with Blind and Deaf, respectively.) Weak (Sense): One of your senses is so weak that it is useless under circumstances that others find normal. If it is sight, you can only see well in good illumination (e.g. broad daylight). If it is hearing, you can only hear sounds above normal speaking volume. If taste, only highly flavored food is palatable. If smell, you can only detect strong odors. You suffer a –2 penalty on all activities under relevant circumstances. (Weak Sight is incompatible with Sensitive Sight, Keen Vision, and Blind and you cannot take Weak Hearing with Sensitive Hearing, Sharp Ears, or Deaf.) Sensitive to Cold: You function normally at temperatures considerably above the norm for your part of the world. You lose 1 Fatigue level for every hour you spend in an environment two steps or more below your accustomed conditions on the Environmental Temperatures chart (see sidebar). Your responses to heat are reduced in intensity by 2. Sensitive to Heat: You function normally at temperatures considerably below the norm for your part of the world. You lose 1 Fatigue level for every hour you spend in an environment two steps or more above your habituated conditions on the Environmental Temperatures chart (see sidebar). Your response to ice is reduced in intensity to 0. This is a common Flaw for characters who become Warped by a strong magic environment (see Chapter 2: Auras, Aligned Auras)."
+        MENTIONS {
+            "Keen Vision" -> ^"Keen Vision"
+            "Sharp Ears" -> ^"Sharp Ears"
+            "Keen Vision" -> ^"Keen Vision"
+            "Sharp Ears" -> ^"Sharp Ears"
+        }
+    }
+
+    #tc8NN01ww3xlLq9IplFA6gc4 ^"Tainted by Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Listed in the New Flaws insert (p.49, Minor Supernatural). The book gives no write-up for this Flaw anywhere — the string \"Tainted by Magic\" occurs exactly once in the whole PDF, in that insert. Emitted from the roster so the enumerable set is complete; no rules text is invented. See DECISIONS-FOR-MORNING.md."
+    }}

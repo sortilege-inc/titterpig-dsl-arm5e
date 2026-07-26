@@ -1,0 +1,415 @@
+EXTENSION "ArM5_RoP_Faerie_Wizardry" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: Faerie - Faerie Wizardry"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_RoP_Faerie_Core_Ext"
+
+    #tzCSikKTAOlrLPDyTMRWhmb9 ^"Performing Faerie Rites" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Rites of Faerie" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Faerie rites require the character to possess three things: a Faerie Method, a Faerie Power, and faerie sympathy with the target, represented with an appropriate Sympathy Trait. The Method describes what the character must do to perform the rite, the Power describes the effect of the rite, and the Sympathy Trait describes the qualities the target must possess.\n\nIf the character has an appropriate Sympathy Trait, and has met the activation conditions of the Faerie Method, he rolls a stress die and adds the result to the following formula: the Characteristic associated with the Faerie Method + the character's score in the Faerie Method Ability + the character's score in the Faerie Power Ability + the aura modifier for a Faerie effect. The result is the level of effect produced by the rite, though this cannot exceed the value of (the sum of the character's applicable Sympathy Traits x 5). For example, a character with two applicable Sympathy Traits — one at +2 and the other at +1 — has a Sympathy Trait total of +3, and cannot produce an effect greater than level 15.\n\nIt is possible to use negative Sympathy Traits to perform a rite, since they mean that the character has a powerful relationship with the faerie realm, albeit a negative one. When calculating the maximum level of a faerie rite, you should treat negative Sympathy Traits as if they were positive. Thus, a character with two applicable Sympathy Traits, at +1 and –4, could produce an effect of up to Level 25.\n\nWhen performing a faerie rite, a roll of 1 on the stress die gives the character an experience point in all of the applicable Sympathy Traits used in the ceremony, and a botch removes an experience point from each of them, just as when using Sympathy Traits as specializations. Negative Sympathy Traits also add additional botch dice, as usual.\n\nCharacters have access to a wide variety of Ranges, Durations, and Targets associated with the Faerie realm when performing faerie rites. These are listed in the sidebar below. They can also use any of the standard Hermetic parameters, and players are also encouraged to invent others that seem appropriate to the effects produced by the rites, since there are many other limitations on these effects (especially the requirement for applicable Sympathy Traits).\n\nRitual-level rites take fifteen minutes for each magnitude of the effect, just as in Hermetic magic, but do not require vis. However, it is impossible to produce a permanent effect with a faerie rite, the way it is done with Hermetic spells; rituals with Momentary duration simply end, and the targets immediately return to their natural and unaffected state. The only circumstances that have lasting effects are when the rite involves a natural (or supernatural) process, such as aging, healing, or Warping. For example, an effect that forces a character to age temporarily subjects that character to the same physical conditions that winter causes each year, and if the player fails the roll the character suffers the natural consequences."
+            MENTIONS {
+                "Faerie Power" -> ^"Faerie Power"
+                "Faerie Power" -> ^"Faerie Power"
+                "Hermetic magic" -> ^"Hermetic magic"
+            }
+        }
+
+        #tqg9w4cP7xnNLVkNPlUxJxOl ^"Hermetic Rites" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Rites of Faerie" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A magus with a Faerie Method and Power can design rituals that use the guidelines for faerie rites, and may use any of the special Faerie Ranges, Durations, or Targets in these Hermetic versions. The storyguide should determine which Technique and Form are used for the ritual, but just as in faerie rites the effects are not natural changes, and will fade as soon as the duration expires. These rituals are cast like Hermetic rituals, including the vis cost, though the caster may use magic or faerie vis without penalty. Also, the caster may add his scores in the Method and Power instead of Artes Liberales and Philosophiae to his Casting Total, and the player may use either the Faerie column or the Magic column of the Realm Interaction Table to determine the aura modifier. The caster must still perform the actions prescribed by the applicable Method during the casting of the ritual, including any additional costs such as expended Fatigue levels or Confidence Points."
+            MENTIONS {
+                "Technique and Form" -> ^"Technique and Form"
+                "Artes Liberales" -> ^"Artes Liberales"
+                "Realm Interaction Table" -> ^"Realm Interaction Table"
+            }
+        }
+
+        #tx7WayTIoyHc4joZB9NTP2lw ^"Evocation" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Methods" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Through Evocation, the character ritually calls upon one or more of the many gods associated with the Faerie realm, and through a short ceremony convinces them to lend their power to the rite. The character gains a Warping Point or spends a Confidence Point, and must call upon his patron faeries in a bold voice with firm gestures, much like a typical magus casting a spell. (Note that though this Method may call upon specific gods, it actually draws upon the power of the Faerie realm in general, and so specific faeries may or may not be involved in the rite.)\n\nAs part of learning Evocation, the character learns to activate vis as magi do, with each pawn spent increasing his Rite Casting Total by 2. This vis can be used to improve any rite, even those that use another Method.\n\nThe character is limited to a number of pawns equal to his score in Evocation + his score in the associated Faerie Power for any given rite, and note that unless the vis is associated with Faerie, each pawn of vis adds an additional botch die in case of a 0 on the Casting roll."
+            MENTIONS {
+                "Faerie Power" -> ^"Faerie Power"
+            }
+        }
+
+        #tyjxAxY6O4xG1dMuhVmPGQHU ^"Enchantment" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Methods" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Enchantment involves convincing a target to accept the effects of the rite through some sort of a performance, such as a song, dance, story, or another art form. This is represented through the use of an Ability, making a roll against an Ease Factor of (the magnitude of the intended effect x 3). If the character succeeds at this task, he may then perform the rite in the following round, but with the level of the effect fixed at the intended magnitude. Or, he may begin another performance, making another roll and increasing the magnitude of the effect he is trying to produce by one. The amount by which his previous total exceeds the target Ease Factor may be applied as a bonus to the character's next roll, whether this is another performance or the Casting total for the rite. Thus, it may be better for the caster to risk botching low-level effects for several rounds, and to slowly increase the magnitude of the rite as his advantage builds. If he fails to achieve the declared Ease Factor, he cannot produce the effect of the rite and must start over with no bonus to the roll.\n\nThe character with this Method can perform all of his rites as part of his performance activity, even those that use another Method, and it is impossible for a bystander to recognize where his performance ends and the rite begins except by supernatural means (such as Magic Resistance or effects that detect Faerie powers). Enchantment also allows the player to choose to roll a simple die on the Casting roll for any rite, even those that use another Method, removing the risk of botching and losing sympathy on a roll of 0, but also forgoing the chance to gain sympathy on a roll of 1."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
+        }
+
+        #typMwvqjxVCUQJDPHO5LH1Zv ^"Empathy" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Methods" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Empathy is the ability to create the power of Faerie within the caster, by drawing forth the qualities of the realm through intense concentration. The caster must expend a Fatigue level while undergoing a mystic ritual, typically designed to lull the caster into a trance-like state. (If the character cannot spend Fatigue levels, or is so tired that the loss would knock him unconscious, the character suffers a Light Wound instead.) The ritual takes about an hour to perform, though if the character is already in this state (intoxicated, say, or having gone without sleep for an entire day and night), it takes no additional time. The disorientation caused by the ritual lasts for the duration of the effect, so that the lost Fatigue cannot be recovered until it has ended.\n\nAs long as the character possesses the Empathy Ability, he may extend the length of a rite by expending another Fatigue level. This allows him to double up any bonuses he might receive to the Rite Casting Total, such as from expending Confidence (or vis, if he has access to Evocation). Each time the character exerts himself, the limit of Confidence Points or pawns of vis he can spend is reset. As part of this calculation, Empathy allows him to effectively double the value of the Sympathy Traits that determine his effect level, so that a character with a total of 3 in Traits could produce a maximum level 30 effect by spending two Fatigue levels, or 45 if he spent three."
+        }
+
+        #trLYOi78DPrhIgxR0u2VBAsJ ^"Beguile" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Beguile is the power to command the target to do as you suggest, or to convince him that he has already done so. Note that this power does not typically give the target the ability to do anything it cannot already do, such as allow an inanimate object to move. However, those effects that change a target's memories can change the memories of inanimate objects and other things that do not have a mind — these changes will only come to light if the object is supernaturally questioned, of course.\n\nNormally, the caster must have a Sympathy Trait that is appropriate to the target. With Beguile, however, any Sympathy Trait may be applicable so long as it is appropriate to the memory, emotion, or perception brought about by the rite. For example, a caster with a Wind Sympathy Trait could change a person's memory of a wind, perception of the wind, or feelings about the wind."
+        }
+
+        #ttGdHTMFWkxiVyu1qnK9I16Y ^"Conjure" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Conjure rites produce solid images that conform to the same rules that faeries obey to create their identities — it makes faerie shapes appropriate to a particular faerie's role and made of the power of the realm. A faerie wizard can draw upon his Faerie sympathy to create or change an object in the same way that a faeries does when it adopts a new shape.\n\nThings conjured in this way are called glamours in the guidelines and effects given here, though most faerie wizards would probably not use this word. They are treated like animate illusions with substance, which last only for the duration of the effect, and often the consequences of the glamour are undone when the effect is ended. For example, a fire glamour burns down a house, but as soon as the effect goes away, the house might return exactly as it was. A person slain with a conjured sword is very likely to recover from the wound as soon as the weapon is dispelled.\n\nMany Conjure rites allow the caster to change a target into something else. In these cases, the caster must have an applicable Sympathy Trait for both states, before and after, though both Traits apply to the maximum effect level. For example, to change a monk into a lamb, the caster would need appropriate Sympathy Traits for both a monk and a lamb, but would factor both Traits into the total to decide how powerful an effect he can produce.\n\nSince glamours are based on images, it is possible to create very unnatural situations with them, such as a place that is larger on the inside than on the outside. For example, one could change the inside of a tent into the inside of a castle, or a bag into a deep well. This is simply creating the illusion of the castle on the inside of the tent, but because of the properties of glamours it is as if it were real. When the effect ends, the results are unpredictable and often surprising — the contents of the tent larger on the inside than outside might simply vanish, reappear outside the tent, or wind up transported into Faerie."
+        }
+
+        #tlyL2wmHXcRxi76WfidUlXID ^"Dream" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Dream is the power to see into the lands of Faerie beyond Mythic Europe, as an impartial observer from outside the stories in which faeries play their parts. Here, the dreamer can see the world around him from outside his body, and can comprehend the thoughts and words of others through the universal language of dreams. It is even possible to glimpse an idea of the future through dreams, though the information gained is based on how things generally go in faerie stories, and tends to be in the form of vague signs and portents — symbols of good or bad things to come. Faerie visions can be misleading, and some faerie wizards believe that they actually cause to happen what the dreamer imagines will happen, based on his conviction in his interpretation.\n\nTo handle these visions in the game, the storyguide should allow the player to ask one question about the circumstances in the future, and answer it with a good feeling or bad feeling about the character's fate, perhaps with varying grades of severity. This should be associated with a symbol to give the player something to watch for. For example, a character might see an \"old crow\" as a very good sign within the next day, or a \"green cloak\" as a bad omen for the coming year. The troupe should consider this an opportunity for the dreaming character's player to request a story that he would like to see happen, by describing elements of a vision that the storyguide can bring to pass."
+            MENTIONS {
+                "Mythic Europe" -> ^"Mythic Europe"
+            }
+        }
+
+        #tXxDQlzgTlb3ILs437EFy8dP ^"Grant" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Grant gives the caster the power to bless (or curse) a target with the supernatural power of Faerie. This most often manifests in the form of Warping Points or temporary Virtues and Flaws. Since most of these powers only last for the effect's duration, they are usually cast as rituals that remain until a particular condition is fulfilled. All Flaws gained from this power are either Supernatural (Faerie) or General, and all Virtues are Charmed Virtues; see Chapter 5: Touches of Faerie, Charms for details.\n\nSome Grant effects give the target faerie sympathy in the form of Sympathy Traits. Note that like Sympathy Traits gained through sympathetic influence, these Traits are temporary and cannot be increased, and do not affect the character's Faerie Rank (see Chapter 5: Touches of Faerie, Sympathetic Influence)."
+            MENTIONS {
+                "Virtues and Flaws" -> ^"Virtues and Flaws"
+            }
+        }
+
+    #tbApqjxyPMACmxGdR47NRRIq ^"Portage" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Portage is the power to travel across the sky in the blink of an eye, or put a girdle around the earth in forty minutes. It transports the target and anything attached to it from one place to another by means of the phenomenon known as faerie trods — a Hermetic term to describe areas of space that connect one place to another, like the paths between different levels of regiones. These short-cuts take no time at all to traverse, so that an outsider who watches such a traveler might see him disappear and immediately reappear several paces away. To the traveler himself, of course, this journey appears seamless."
+        }
+
+        #tQD9BzDzmLSPgV2ffrygxgXO ^"Leap of the Shadows" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The caster causes any target he can see to move immediately to a place within the shadows. This requires a Sympathy Trait associated with darkness or shadow to enact."
+        }
+
+        #tqnQ3tcEuMSVL8HVYiDn5Hk1 ^"Hearth Prison" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "All those within the room at the time of casting are prevented from leaving the room for the duration. If the rite is performed within a supernatural aura, this is essentially a permanent effect, though the targets may be able to escape through the Faerie Realm or otherwise departing the mortal realm without actually leaving the room's confines."
+        }
+
+        #tIhzrFIH9wv0uiZq5DTKb1So ^"The Urgent Messenger" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "For as long as the target is traveling, his movement rate is doubled."
+        }
+
+        #tBaOgo40oIiWuuCJsoS903jK ^"Ware" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Ware allows the caster to take responsibility for the target and put it under his protection. This is designed to keep the target safe from harm, both natural and supernatural, often through the use of wards. Wards are effects that keep the specified thing from touching the target, or acting against it in any way. This includes using its powers on the target, and even sticking it with weapons or throwing things at it. The warded subject cannot harm the target, or through its actions cause it harm. While all rites require a Sympathy Trait that is applicable to the target, many of these effects require the caster to have two applicable Sympathy Traits — one to affect the target, and one to describe what the target is protected against. Use both of these Traits to determine the maximum level of the effect. These faerie wards are more effective in keeping away subjects with which the caster has positive sympathy than they are at warding away subjects with which the caster has negative sympathy. Like magical wards, the effect must penetrate to affect a subject with Magic Resistance."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
+        }
+
+        #ttCzYExUDH1mMclzjiHLMCDf ^"Release the Spellbound Servant" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "For the duration, the target is freed from a single supernatural effect, as if the duration of the effect had ended, so long as the level of this rite equals or exceeds the level of the effect. This protection lasts for an hour and a day, at which point the suppressed effect returns."
+        }
+
+        #t6jQYP1BOuCqlDLGrQH772bB ^"Sovereign Silence of Opposition" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "For as long as the target does not speak, or until a month has passed, no creature with a Might Score less than or equal to the level of this effect may harm the target or cause the target to be harmed by its actions. This includes affecting the target with its powers, even if those powers seem to be beneficial. This requires that the caster possesses a Sympathy Trait appropriate to the subjects of the ward, as well as a Trait appropriate to the target. For example, Children would keep creatures associated with childhood at bay, and Stone would ward away beings tied to rock and solid earth."
+        }
+
+        #txPlL0OMBCPlqiI6aCy270jn ^"The Eternal Parry" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The caster wields a blade while performing a dance, and from then on he receives a +3 bonus to his Defense for as long as he continues to brandish his weapon. The effect ends the moment he sheathes it, drops it, or stops fighting."
+        }
+
+        #tAHBwrw28eRMR6ZfhUzErgcO ^"Weal" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Power represents the faerie ability to shrug off damage relatively quickly, since injuries are rarely part of a faerie's persona. They tend to do this by changing how the target heals naturally, rather than actually healing, since most faerie powers do not have lasting effects beyond their durations. This can be seen most clearly in the Weal guidelines below. Weal also affects age, making living targets less likely to suffer the ravages of time, and can cause a target to regress in years for the duration. This effect cannot cause a character to revert to childhood, nor can it affect a character who has not yet reached physical maturity."
+        }
+
+        #t4eqt2cwv0lobmu9HbQcsEeY ^"Curse of the Festering Bruise" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This rite is cast on a weapon of some kind — typically an arrowhead or a knife — and targets the person struck by it. One of this target's wounds (probably the one caused by the weapon) heals as an Incapacitating wound for the duration of the effect. This means that the target must make a Recovery roll at sunrise and sunset, with the normal risk of death or a worsened condition, but is not actually incapacitated. Once the immediate danger has passed, the wound will remain a Heavy wound until the rite's duration ends, at which time it reverts to the level of wound it was previously."
+        }
+
+        #tUvC65Ak8q4TSOgqf0DaQpQ2 ^"The Endless Summer" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "For the duration of the effect, the target receives a bonus to Aging rolls, equal to (3 x (the magnitude of this effect – 2)). For example, a Level-25 effect would subtract 9 from Aging rolls. This also negatively affects Recovery rolls made during the period by the same amount. This effect must remain active for at least half of the period before the roll is made, so the rite must be performed no later than summer to affect a character's Aging roll for that year."
+        }
+
+        #tmQvquKqbSiwkst59z3Wy9si ^"Stir the Body" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The target, who must be either incapacitated or must have suffered a Light wound, may make an immediate Recovery roll. If the results are negative, treat them as no change."
+        }
+
+        #t8rJdppF4BMzDtVbkKSBzzGN ^"The Faerie Shade" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This rite brings the target back from the dead, restoring life to a corpse. The target remembers everything it knew up to the moment of its death, and can make new memories, but cannot learn anything or gain experience. Many believe that the body is animated by the spirit of a faerie, rather than the lost soul, and in support of this theory the person returned to life is often found to have a very different personality."
+        }
+
+        #tsimCPAxu0KHT5DISWZagg5L ^"Woe" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Faerie rites allow faerie wizards to damage a target directly, like the faeries whose power they channel. Consequently, Woe can cause grave injuries with greater ease than Hermetic magic. However, because of the universal properties of faerie rites, this damage immediately goes away as soon as the effect wears off. Those who wield this power thus usually seek to harass and delude their quarry with their rites rather than simply destroying them. And of course, it is generally much easier to simply cut off their enemies' heads once they are disoriented."
+            MENTIONS {
+                "Hermetic magic" -> ^"Hermetic magic"
+            }
+        }
+
+        #tcjPnN0U0wQ7TazvgEWE40Zz ^"Touch of the Merciless Lover" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The caster brushes against the target, and the target immediately wastes away and dies. When the effect's duration ends, the target is restored to life, waking in exactly the same physical state as before the spell took effect, assuming no additional damage has been dealt to his body. However, if the corpse is buried or hanged, the target will likely suffocate upon reawakening. If it is destroyed during the interim, the target might still return but as a faerie ghost or spirit. While under the effects of this rite, the target may undergo something similar to the Faerie Calling, returning to life with a Faerie Sympathy Trait that is appropriate to the experience."
+            MENTIONS {
+                "Faerie Sympathy" -> ^"Faerie Sympathy"
+            }
+        }
+
+        #tgmfddKHcUyr97TtghYHKoX1 ^"Gaze of Gray Years" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Powers" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The caster performs a work of grim and chilling significance, and then concentrates until he can look his target directly in the eye to release the effect. That person, who must be at least 35 years of age, must immediately make an Aging roll. As an additional effect, this rite includes a curse that gives the target a +15 penalty to this roll. This is generally powerful enough to cause the target to gain a Decrepitude Point and suffer an Aging crisis, and since this is a natural consequence of age, these effects are not undone when the duration ends."
+        }
+
+        #tD5zu5qcc6Py6PBXNwEgq7Ea ^"Ars Fabulosa" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The fantastic art facilitates communication between two parties — the summoner and a supernatural being. Like other forms of summoning, the art brings this being to the summoner, and if his skill exceeds its power then it also protects him against it. Unlike other forms of summoning, it does not force the being to comply or bind it to service unless it agrees to the bargain that the summoner proposes. For this reason, the art and its related powers are often called simply \"bargaining.\" There are four powers associated with bargaining: Summoning, Bonding, Captivating, and Dismissing. Each of these powers may be learned as a Supernatural Ability (see Chapter 5: Touches of Faerie, Learning Faerie Abilities) or gained from a Virtue (see Chapter 5: Touches of Faerie, New and Modified Virtues). Once gained, these powers have an initial score of 0, and increase as Arts, though they can be practiced and studied as if they were Supernatural Abilities. There are several other summoning arts (see the Summoning Faeries sidebar), but this type of Summoning is almost always aligned with the Faerie realm. It is possible that there are other versions of this Summoning power aligned to the other realms, which similarly facilitate bargains with magic, infernal, or divine beings instead of faeries, but the other three bargaining arts (Bonding, Captivating, and Dismissing) are exclusively Faerie powers."
+            MENTIONS {
+                "Summoning Faeries" -> ^"Summoning Faeries"
+            }
+        }
+
+        #tXK1eMH3FO3CGY5ugvqoJj06 ^"Summoning Faeries" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "There are at least three other Supernatural Abilities in Mythic Europe that may be used to summon faeries, and since all of them originate from the same art practiced by sorcerers long before the birth of Christ, they use very similar concepts. The differences are mostly in how they target faeries and other supernatural beings, as summarized below. To help distinguish them, each version of Summoning might have a parenthetical in front of it, suggesting its focus. For example, faerie summoning from the Ars Fabulosa might be called (Faerie) Summoning, since it only affects beings of its particular realm. (Spirit) Summoning: This Art calls an incorporeal spirit to the summoner, generally one associated with the realm of power that gives the summoner this power, though demons are also especially likely. If the summoning is successful, the spirit is bound in a circle until released by the summoner. Spirit Summoning is always tainted with the influence of the Infernal, and thus infernal versions are most common, but it may be associated with the Faerie or Magic realms instead. The related arts (Ablating, Binding, and Commanding) are all Infernal. (Realms of Power: The Infernal, pages 114-115.) (Elemental) Summoning: Some applications of this type of hedge magic summon an elemental being associated with a specific element (Aquam, Auram, Ignem, or Terram). This being can come from any realm, including Faerie, and is typically held within a container where it remains under the summoner's control until released. The power is most commonly Magic, though versions associated with other realms are possible. The related Elementalist Arts (Controlling, Divining, and Refining) are always aligned with Magic. (Hedge Magic, Chapter 2: Elementalists, Summoning) Sihr: This Art can summon and bind jinn, including faerie jinn, if the targets have been properly researched by a Hermetic Sihr. It is a Magic power, thought to be very similar to the Elemental version of Summoning, though perhaps Faerie, Infernal, or even Divine versions also exist. (Houses of Hermes: Societates, pages 135-136.)"
+            MENTIONS {
+                "Mythic Europe" -> ^"Mythic Europe"
+                "Ars Fabulosa" -> ^"Ars Fabulosa"
+                "The Infernal" -> ^"The Infernal"
+            }
+        }
+
+        #tn7tFe5haXGbQkT5DdRNQCnt ^"Summoning" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Summoning is the mystic art of calling out faeries from the surrounding area and holding them in attendance in order to bargain with them. To some it may appear as if this art actually creates a faerie, or transforms a mundane object into a faerie, but most summoners believe that the faerie comes from somewhere nearby and manifests in an appropriate shape. And since it is possible to summon faeries who have assumed a specific role, most summoners also believe that the other faeries that appear must exist before the summoning as well. To summon a faerie, a summoner must have an appropriate Sympathy Trait, positive or negative, to represent a connection to that type of faerie. If the summoner has several applicable Sympathy Traits, their scores are added together; if the values are negative, treat them as positive. The sum of these Traits, multiplied by 5, determines the maximum Might Score that the character can summon. The summoner's Faerie Rank also boosts or penalizes his Summoning Total. The summoner must then mentally prepare himself for a few minutes and expend a Fatigue level (if he cannot expend Fatigue, he cannot perform the summoning). The player decides the strength of the faerie he will attempt to summon, which cannot exceed the maximum Might Score determined by his applicable Sympathy Traits, and makes a roll: a stress die + Presence + Summoning + his Faerie Rank + the aura modifier. No matter what the Summoning Total, a faerie will appear, even on a botch. If there is a mundane object nearby that is associated with the Sympathy Traits used in the summoning, the faerie could appear by animating that object, or else it might simply emerge from somewhere in the surrounding environment, like from behind a tree or out of the ground. If the player does botch, the faerie will be hostile to the summoner, or perhaps unbound by the terms of any bargain they make. Or perhaps the summoner calls an angel or a demon by mistake, or a faerie that appears to be a different faerie, or is more or less powerful than the summoner intended. The summoner can try to summon a specific faerie based on its role, though unless he has an Arcane Connection to it there is no guarantee that the faerie he gets is the faerie that he wants. The effect will summon a faerie with Might Score no greater than the maximum value that has all of the qualities of the Sympathy Traits used in the summoning. And if this can apply to more than one faerie in the area, then it is left to the storyguide which one appears. If the summoner does have an Arcane Connection to a particular faerie, he must penetrate its Magic Resistance to be certain that it will appear, and note that the player may add his highest applicable Sympathy Trait to his Penetration score if he has it. Otherwise, the targeted faerie may receive the summons and simply ignore it. If the Summoning Total equals or exceeds to the summoned faerie's Might Score and the effect penetrates its Magic Resistance, the summoner takes hold of the faerie for the duration. When a faerie is held in this way, it is much easier to penetrate its Magic Resistance with his other bargaining arts. Also, until the summoning is over, it must attend to him and listen to what he has to say, and he is warded against any attacks or powers it tries to use against him. However, either the summoner or the faerie can end the summoning at any time, and this immediately returns the faerie to wherever it came from. A faerie might choose to stay and listen to what the summoner has to say, or it might simply leave immediately if it does not care for the circumstances. Most faeries will listen long enough to hear what the summoner has to offer. If the Summoning Total is less than the targeted faerie's Might Score, or the effect fails to penetrate its Magic Resistance, the faerie that appears is not in any way bound by the summoning. It is free to ignore the summoner, attack him, or affect him with its powers as it wishes. The faerie can return to where it came from at will, but the summoner cannot send it away. Once the summoning is over, if the two of them were able to come to an arrangement, the summoner gains an experience point in an appropriate Sympathy Trait. If they did not make a bargain, he subtracts an experience point from an appropriate Sympathy Trait. This means that it is generally bad for the character to harass faeries with disingenuous offers. Any bargain the two of them make is binding for the faerie, and it cannot through action or inaction break this agreement, even if the summoner does not fulfill his part of the arrangement. A summoner who breaks the terms of a bargain made during a summoning immediately gains a –3 Sympathy Trait appropriate to the faerie. This means that it is rarely worthwhile for a summoner to renege on a deal, since this will cause him to lose faerie sympathy and possibly Faerie Rank as well."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
+        }
+
+        #tmg6TUcpMBliqNlK89i2ZJHG ^"Faerie Bargains" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Faeries have a special etiquette all of their own, as anyone with Faerie Lore might know, and a great deal of it has to do with how faeries make bargains. Faeries naturally value vitality, as discussed in Chapter 1: Nature of Faerie, but incognizant faeries may not realize that it is vitality they want. Accordingly, summoning a random faerie within range, even though it avoids the need to Penetrate Magic Resistance, is a risk, because the summoner does not know what this faerie thinks it wants. Intelligence + Faerie Lore rolls against an Ease Factor of 12 or higher may allow the character to work out exactly what a faerie wants after a short period of trial bargaining. It is safer to research a faerie, find an Arcane Connection, and then summon that faerie, but that is not always possible. On the other side, if the summoner does not know what a faerie can do, it is hard to make a reasonable request. Players are encouraged to roleplay the bargaining session, and try to come to an agreement in character. If a player accidentally commits a breach of etiquette, such as saying \"thank you\" or acting above their station, the storyguide may allow the player to make an Intelligence + Faerie Lore roll versus an appropriate Ease Factor to see whether or not the character would have actually made that mistake. A particularly bad social gaffe might make it impossible for the characters to ever come to terms, and end the bargaining session immediately. If after a certain period of time the players cannot come to an agreement, say after a few minutes, you can quickly resolve the bargaining session with a contested Communication + Bargain roll, modified by the character's Faerie Rank. Note that applicable Sympathy Traits may also apply as a specialization to this Ability. Summoners generally bring beer, milk, gemstones, or other vitality-rich items with them when they travel, to offer in bargains; careful choice of Sympathy traits can make it likely that such items will be acceptable. Typical requests they might make of faeries include: service, such as fighting with the summoner against an enemy, using its powers to bless the summoner, or allowing the summoner to affect it with his other bargaining powers; permission to travel through lands owned by the faerie, or to harvest vis or other resources from it; a pact of non-aggression with the summoner and his community or his traveling companions; or the promise to owe the summoner a favor, to come and give aid when next called upon. Most faeries try to avoid long-term commitments, as they restrict their ability to gain vitality. Incognizant or narrowly cognizant faeries may, however, accept long-term commitments that suit them perfectly. They still expect substantial compensation from the summoner, however."
+            MENTIONS {
+                "Faerie Lore" -> ^"Faerie Lore"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Faerie Lore" -> ^"Faerie Lore"
+                "Faerie Lore" -> ^"Faerie Lore"
+            }
+        }
+
+        #tOpXU5VUENfka0lSdJuiblqj ^"Bonding" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "It is possible to establish enough supernatural rapport with a faerie that the summoner can create a mystic bond between him and it, through which he can channel its powers and use them as his own. It relies upon the summoner's Communication and Faerie Rank as well as his score in Bonding, and the maximum Might Score he can affect is again limited by his Sympathy Traits, just as in Summoning. It also requires him to spend a Fatigue level to activate the effect, and the affected faerie must be within range of his voice when the bond is first formed. The Bonding Total must exceed the faerie's Might to succeed, and must penetrate its Magic Resistance (though as usual the summoner can add his highest applicable Sympathy Trait to his Penetration score). If the faerie is held by a successful Summoning (one that penetrated its Magic Resistance), treat the effect level as 0 when calculating the Penetration Total, otherwise the effect level is the faerie's Might Score. For example, to bond with a faerie with Faerie Might 15, the summoner would need a Bonding Total + Penetration bonus of 30, or 15 if the faerie were held by a successful Summoning effect. If the Bonding succeeds, the summoner forges a special connection between himself and the faerie, or between the faerie and something he is touching. This bond acts as an Arcane Connection between the faerie and the bearer for as long as it endures. Through this bond, the bearer gains access to one of the following effects, chosen by the summoner at the time the bond is formed: • The bearer can use any of the faerie's Characteristics or Pretenses as if they were his own, and can take advantage of the faerie's supernatural senses, perceiving his surroundings as the faerie would see them in his place. This includes the use of Faerie Virtues like Faerie Sight and Faerie Speech. The faerie can do the same with the bearer's Characteristics, Abilities, and senses. • The bearer gains access to the faerie's powers, spending the faerie's Might Points to activate them. If the bond is with an object, the bearer or the faerie can treat the object as an extension of himself or itself, and can affect it with their powers at Personal range. The faerie can also draw upon the bearer's fatigue at will. If it wishes to exert itself in combat or for any other reason, the bearer immediately loses a Fatigue level. • The bond is opened for a temporary enchantment of a single faerie effect. Any spell or power the bearer can cast may be placed into the bond, so long as his casting total is at least equal to the effect level. The faerie and the bearer then gain the ability to cast that effect as a power. Both the faerie and the bearer must perform all the same actions as the caster each time the power is activated — including spending time, vis, Confidence, or Fatigue — but they do not need to roll the die, and the effect uses the faerie's (Might Score – the level of the effect) for Penetration. • The bearer is immune to Warping gained from living in a Faerie aura that season, does not suffer wounds caused by suffocation, lack of food or drink, exposure, or extreme fatigue, can ignore all Fatigue penalties, and may delay all Aging rolls until after the bonding is over (these rolls are made all at once as soon as the bond is broken). If the bond is tied to an object instead of a person, the object requires a charm (see Chapter 5: Touches of Faerie, Charms), which must be activated each day for the bearer to receive the effects. This charm is created at the time the bond is formed, and must be taught to the bearer by the summoner. If the secrecy of the charm is broken, the bond is undone and the bargain is ended. The bond also ends if the object is destroyed. A character may only benefit from a single bond at any given time, and activating a second bond destroys the first. Either the faerie or the bearer may also break the bond at will, though faeries rarely do this if it would go against the terms of a bargain. It is possible to bond with a faerie without its permission to do so, assuming the summoner can overcome its resistance, but there is nothing stopping the faerie from ending the effect immediately, if it does not believe the arrangement will be to its benefit."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Penetration Total" -> ^"Penetration Total"
+                "Faerie Sight" -> ^"Faerie Sight"
+                "Faerie Speech" -> ^"Faerie Speech"
+            }
+        }
+
+        #t1BFxzgZ27PHUGvB6R1s93Oc ^"Captivating" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Captivating is the art of exchanging places with a faerie — giving it control over the summoner's body while the summoner becomes the faerie for the duration. The summoner can only affect a faerie that is within range of his voice and has Faerie Might no greater than the absolute total of his applicable Sympathy Traits multiplied by 5. Initiating the effect costs the summoner a Fatigue level. The Captivating Total must exceed the faerie's Might to succeed, and must penetrate its Magic Resistance (though as usual the summoner can add his highest applicable Sympathy Trait to his Penetration score). If the faerie is held by a successful Summoning (one that penetrated its Magic Resistance), treat the effect level as 0 when calculating the Penetration Total, otherwise the effect level is the faerie's Might Score. For example, to change places with a Faerie Might 20 faerie, the summoner would need a Captivating Total + Penetration bonus of 40, or 20 if the faerie were held by a successful Summoning. If the effect penetrates, the summoner and the faerie immediately switch places. Perhaps the easiest way to do this is to have the players trade character sheets. The summoner can do whatever it likes with the faerie, and the faerie has complete control over the summoner. They do not trade their memories, but they do effectively trade minds, so that either character can cast spells on itself to learn about that character's past actions. The only limitation is that the exchange does not affect either character's Personality Traits or Confidence Points (and Faith Points, if the summoner has True Faith), and the summoner also takes his Sympathy Traits with him. Either party can try to cancel the exchange at will, which faeries usually do when the terms of their bargain with the summoner expire. If the other does not wish to relinquish control, they have an emotional struggle for dominance. Both players should choose a Personality Trait that they agree is appropriate to the circumstances and what the character is currently doing — for example, if the summoner's body is sleeping, the faerie's Slothful Trait might best apply, while the summoner might use his Impatient Trait. If the character has no appropriate Personality Traits, treat this as a Trait with a score of 0. If the summoner character has Sympathy Traits appropriate to the faerie he is captivating, that player adds them to his total. Both players then add a stress die roll, and compare the results. If one of them has a higher total than the other, that player may decide whether or not to end the exchange. Captivating is a powerful, continuous effect that warps the summoner over time, giving his body 1 Warping Point every season, and another one every year. However, because the summoner's body is controlled by the faerie, and the faerie is controlled by the summoner, both of them are immune to Faerie Calling for as long as the exchange lasts. It is a risky but effective route to immortality, and a compelling way for a summoner to experience Faerie without giving up his essential humanity. It is said that if the faerie dies while its body is controlled by the summoner, the exchange becomes permanent. Whether or not this is so has yet to be proven, however; others fear that in fact the faerie returns to its body and it is the summoner who dies. Most summoners prefer to ensure that the faerie inhabiting their body remains safe and undamaged for the duration."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Penetration Total" -> ^"Penetration Total"
+                "Personality Traits" -> ^"Personality Traits"
+                "True Faith" -> ^"True Faith"
+                "Personality Trait" -> ^"Personality Trait"
+                "Personality Traits" -> ^"Personality Traits"
+            }
+        }
+
+    #toebBVZRAm2Lp2wWcaImEEl1 ^"Dismissing" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Faerie Bargaining" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Summoners who have studied the art of Dismissing have the power to undo supernatural effects made by beings with Might, and to free these beings from other effects that bind them. To do this, the summoner must expend a Fatigue level, and must speak with the being in question. As with the other Arts, he cannot affect a greater Might Score or effect Level than his Sympathy Traits allow.\n\nDismissing has three uses:\n\n• The summoner can cancel any effect produced by the powers of a being with a Might Score, by exceeding the level of the effect on his Dismissing Total and penetrating the being's Magic Resistance. The summoner can also deflect the use of a being's power before it takes effect, if he beats the being's Initiative Total on a Quickness + Finesse stress roll. (If the summoner has Finesse, he can add his highest applicable Sympathy Trait to his score.) Just as magi can fast-cast spells, a summoner can try to dismiss multiple effects in one round, but he suffers a cumulative –6 penalty for each one. • Dismissing can end the duration of any effects that target a being with a Might Score, if he penetrates that being's Magic Resistance and exceeds the level of the cancelled effect on his Dismissing Total. • The summoner can release a being with a Might Score from the terms of an agreement that has supernatural force, such as a bargain made between a summoner and a faerie. To do this, the summoner must exceed the creature's Might Score on his Dismissing Total, and must penetrate its Magic Resistance. Many believe that through this process the summoner takes the debt upon himself, freeing the being from its obligation.\n\nWhen checking for penetration, do not subtract the effect level from the Penetration Total if the being is held by a successful Summoning effect (as above, one that penetrated its Magic Resistance). Note that the summoner can add his highest applicable Sympathy Trait to his Penetration score if he has it.\n\nDismissing is a good way for a summoner to make bargains with faeries that he has no intention of keeping, without suffering the loss of sympathy. While doing this does not affect the summoner's Faerie Rank, individual faeries are likely to resent this behavior. To avoid their enmity, a shrewd summoner will always offer a faerie something of comparable value to the terms of the original bargain in return for accepting the use of this power against it."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Penetration Total" -> ^"Penetration Total"
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
+        }
+
+        #tjrGAqovKJ0SfkSQUraMS55t ^"Borrowers" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Pagan Traditions" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The Ars Fabulosa have only just begun to spread through Mythic Europe, and among the people who practice them is a strange sort that call themselves \"faerie borrowers.\" These folk often seem especially foreign and exotic — like travelers from far-off lands with odd habits and unusual customs. They may present themselves as merchants or pilgrims, performers or messengers, or even soldiers or spies for distant lords. Their primary interest is in faeries, with whom they are especially skilled at dealing, and it is with faeries that they conduct their business. They essentially make their living selling goods to the faerie realm; their payment is the blessings of the fae. When asked what it is that they borrow, they might answer that they borrow the power of the faeries — though some of them \"borrow\" from humans as well, since not all of their wares are always obtained honestly.\n\nBorrowers usually trade in novelty; they pick up strange goods from distant places, including small animals, food and drink, fine art, and even magical artifacts (such as enchanted devices or other objects containing vis), and these wares often fetch a good price with faeries, since they usually accept the claim that treasures from distant lands contain more vitality than items obtained locally. Through careful negotiation, Borrowers can sustain a burgeoning business on just a few faerie bargains a year, as long as their competition remains relatively scarce. To ensure this, they usually prefer to keep moving — which also keeps their stock fresh, they say.\n\nTo help with the trade, Borrowers occasionally take promising children as their apprentices, usually by bargaining them away from faeries that have claimed or stolen them from their parents. While making use of prentice labor, they teach them to bargain and the intricacies of dealing with faeries, and eventually initiate them into the Ars Fabulosa. Eventually they become skilled enough to take over the trade from their master, or else to set off on their own."
+            MENTIONS {
+                "Ars Fabulosa" -> ^"Ars Fabulosa"
+                "Mythic Europe" -> ^"Mythic Europe"
+                "Ars Fabulosa" -> ^"Ars Fabulosa"
+            }
+        }
+
+        #t1uKLB8lYzv5aIFJk4MOcFg5 ^"Ollamhain" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Pagan Traditions" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The Ollamhain (pronounced \"ah-luh-VAIN\") are Irish poets, sages, and performers who have had many dealings with the Fair Folk, as they call the faeries, and who claim special kinship with them. Many of them have Faerie Blood. Their ancient songs and poems are said to contain magic when performed in the correct style — the power to see into hearts and minds, the future, and even the Faerie Realm itself. For these performances, many of them favor the Irish harp that is symbolically associated with them and their island, and pass from father to son special enchanted instruments that have been blessed to play especially well."
+            MENTIONS {
+                "Faerie Blood" -> ^"Faerie Blood"
+            }
+        }
+
+        #tC8p58084qynihSSrmMhAEhX ^"Volkhvy" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Pagan Traditions" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Far beyond the reach of the eastern arm of the Christian Church are people who have never heard the Gospels and who still keep the old pagan ways — Russian faerie wizards known as the Volkhvy. Their great rites are legendary, where everyone in the community comes together to entreat their faerie gods for aid, usually through glamours and blessings that reflect the harsh wilderness in which they live. They typically possess great conviction because of these extreme conditions, becoming especially self-confident, though of course this Virtue could come from their faerie rites as easily as their personal fortitude."
+        }
+
+        #tgrw7fO5sS1bbXKTz2Vvg0Bo ^"Wise Folk" DEF {
+            EXTENDS ^"Faerie Wizardry"
+            PROPERTIES {
+                ^"Section" STRING "Pagan Traditions" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "There are many sorts of faerie-touched men and women who typically live on the fringes of society. Called \"wise men\" and \"wise women\" by villagers who turn to them when troubled, they are also forced to live apart from the community because of their strange ways and their intimidating powers. Their strengths are in keeping the supernatural at bay and protecting those in their charge, and through their exertions they can mend or injure those who they think worthy. It is folk like this that the magi of the Order of Hermes often imagine when they use the term \"hedge wizard.\""
+            MENTIONS {
+                "Order of Hermes" -> ^"Order of Hermes"
+            }
+        }}

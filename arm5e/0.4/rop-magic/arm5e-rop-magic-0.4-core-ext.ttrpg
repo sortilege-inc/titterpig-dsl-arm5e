@@ -1,0 +1,161 @@
+EXTENSION "ArM5_RoP_Magic_Core_Ext" {
+    NAME "Ars Magica Fifth Edition - Realms of Power: Magic: core type extensions"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_Core_Ability"
+
+    # Realms of Power: Magic introduces the mechanical vocabulary of the Magic
+    # Realm. New first-class types are declared here (spec S13 composition); the
+    # supplement is loaded alongside the arm5e core rulebook.
+    #
+    # Magic Qualities and Inferiorities are the Magic Realm's analogue of the
+    # core rulebook's character Virtues and Flaws, but for MAGIC THINGS (magic
+    # animals, humans, spirits, things). A Quality is the boon, an Inferiority
+    # the drawback; each has a Minor/Major Magnitude, exactly as a Virtue/Flaw
+    # has a size. Counts from ground-truth.json: 49 total — 29 Qualities, 20
+    # Inferiorities; 30 Minor, 19 Major.
+
+    #t0S20p4ukYprl7T0PeIGzgKj ^"Magic Quality" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A Magic Quality: the Magic Realm's analogue of a character Virtue, taken by magic things instead of Virtues."
+    }
+
+    #toHIbgCNPxhRNaJMPess8K6n ^"Magic Inferiority" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A Magic Inferiority: the Magic Realm's analogue of a character Flaw."
+    }
+
+    # The pp.38-39 insert rosters the Powers that magic creatures commonly share.
+    # The insert is the only roster of them; several are named again by a stat
+    # block. Cost / initiative / Form are soft ("Variable points", "Init equal
+    # to (Qik - 5)"), so the write-up text is kept verbatim in the description
+    # rather than forced into numeric fields.
+    #tbQ683ClGPQQ2UpLbIXsx7h3 ^"Common Magic Power" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A Power commonly available to magic creatures, from the pp.38-39 insert."
+    }
+
+    # Chapter Eight's Things of Virtue: herbs, objects, formed stones and trees
+    # that carry raw magic. 25 total (6 herb, 9 object, 6 formed stone, 4 tree).
+    # 13 of them carry a Shape and Material Bonus, kept verbatim from the book's
+    # own bonus inserts.
+    #tnp9TrC5RiJqUQ7DdDtkCBul ^"Thing of Virtue" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Group" ENUM ["herb", "object", "formed stone", "tree"] REQUIRED
+            ^"Shape and Material Bonus" STRING
+            ^"Page" INTEGER
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A Thing of Virtue: a herb, object, formed stone or tree that carries raw vis and confers a Virtue when Enriched."
+    }
+
+    # Magic characters (character guides, templates, and type summaries) and the
+    # Appendix's mundane beasts are SOFT stat blocks: this book prints ranges and
+    # descriptive values ("Magic Might: 0-10 (Animal)"), so every field is kept
+    # as a verbatim STRING — no number is invented. Each printed field label is
+    # its own typed, queryable property. The label set is the full universe from
+    # the verified ground truth.
+    #tkHQwIw27s2JEQNqDUseWeLJ ^"Magic Character" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Shape" ENUM ["character", "template", "type summary"]
+            ^"Insert Title" STRING
+            ^"Page" INTEGER
+            ^"Magic Might" STRING
+            ^"Characteristics" STRING
+            ^"Characteristics and Size" STRING
+            ^"Abilities and Combat Scores" STRING
+            ^"Size" STRING
+            ^"Virtues and Flaws" STRING
+            ^"Personality Traits" STRING
+            ^"Abilities" STRING
+            ^"Vis" STRING
+            ^"Powers" STRING
+            ^"Combat" STRING
+            ^"Soak" STRING
+            ^"Wound Penalties" STRING
+            ^"Season" STRING
+            ^"Appearance" STRING
+            ^"Fatigue Levels" STRING
+            ^"Confidence Score" STRING
+            ^"Reputations" STRING
+            ^"Magic Qualities and Inferiorities" STRING
+            ^"Magical Qualities and Inferiorities" STRING
+            ^"Qualities and Inferiorities" STRING
+            ^"Inherited Virtues" STRING
+            ^"Typical Powers" STRING
+            ^"Natural Weapons" STRING
+            ^"Equipment" STRING
+            ^"Common Flaws" STRING
+            ^"Inherited Flaws" STRING
+            ^"Encumbrance" STRING
+            ^"Warping Score" STRING
+            ^"Common Virtues (or Qualities)" STRING
+            ^"Common Flaws (or Inferiorities)" STRING
+            ^"Common Magical Powers" STRING
+            ^"Notes" STRING
+            ^"Age" STRING
+            ^"Qualities" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A magic character stat block (character guide, template, or type summary) with soft, verbatim stats."
+    }
+
+    #tBFLKJ1X1J5nclbjYP1CLu9B ^"Mundane Beast" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER
+            ^"Magic Might" STRING
+            ^"Characteristics" STRING
+            ^"Characteristics and Size" STRING
+            ^"Abilities and Combat Scores" STRING
+            ^"Size" STRING
+            ^"Virtues and Flaws" STRING
+            ^"Personality Traits" STRING
+            ^"Abilities" STRING
+            ^"Vis" STRING
+            ^"Powers" STRING
+            ^"Combat" STRING
+            ^"Soak" STRING
+            ^"Wound Penalties" STRING
+            ^"Season" STRING
+            ^"Appearance" STRING
+            ^"Fatigue Levels" STRING
+            ^"Confidence Score" STRING
+            ^"Reputations" STRING
+            ^"Magic Qualities and Inferiorities" STRING
+            ^"Magical Qualities and Inferiorities" STRING
+            ^"Qualities and Inferiorities" STRING
+            ^"Inherited Virtues" STRING
+            ^"Typical Powers" STRING
+            ^"Natural Weapons" STRING
+            ^"Equipment" STRING
+            ^"Common Flaws" STRING
+            ^"Inherited Flaws" STRING
+            ^"Encumbrance" STRING
+            ^"Warping Score" STRING
+            ^"Common Virtues (or Qualities)" STRING
+            ^"Common Flaws (or Inferiorities)" STRING
+            ^"Common Magical Powers" STRING
+            ^"Notes" STRING
+            ^"Age" STRING
+            ^"Qualities" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A mundane beast stat block from the Appendix (no Magic Might); soft, verbatim stats."
+    }
+}

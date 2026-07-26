@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Covenants_Core_Ext" {
     NAME "Ars Magica Fifth Edition - Covenants: core type extensions"
-    VERSION "0.4"
+    VERSION "0.4.3"
     SPEC_VERSION "0.4"
     RELEASE_DATE "2026-07-25"
     DEPENDS_ON "ArM5_Core_Covenant"
@@ -39,5 +39,129 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
             ^"Requires" STRING
             ^"Fantasy Level" ENUM ["low", "high"]
         }
+    }
+
+    # The Fortifications chapter prints a crossbow stat line (p.18) with the
+    # same columns the core rulebook's weapon tables use. It was first authored
+    # as a LIST of pipe-delimited strings -- a header row and two data rows
+    # encoded as text -- which is the serialized-stat-block pattern the prime
+    # directive forbids: nothing downstream can read a Damage value out of it.
+    #
+    # Declaring the type here rather than in a generated file keeps a weapon a
+    # first-class entity with typed, queryable stats. Range applies only to
+    # missile weapons and Cost is a free-text band ("Exp."), so neither is
+    # REQUIRED; every combat stat is.
+    #tvUCtR3iDipucKDekcBwv9Qo ^"Weapon" DEF {
+        PROPERTIES {
+            ^"Initiative" NUMBER REQUIRED
+            ^"Attack" NUMBER REQUIRED
+            ^"Defense" NUMBER REQUIRED
+            ^"Damage" NUMBER REQUIRED
+            ^"Strength" NUMBER REQUIRED
+            ^"Load" NUMBER REQUIRED
+            ^"Range" NUMBER
+            ^"Cost" STRING
+            ^"Note" STRING
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+    }
+    # Covenants introduces the LABORATORY as a thing that can be described in
+    # its own right. The core rulebook has Laboratory Activity, Enchantment and
+    # Shape and Material Bonus, but no laboratory entity and no way to say what
+    # a particular lab is like. Chapter 9 gives it 128 Virtues and Flaws in
+    # three groups, parsed deterministically into covenants/ground-truth.json:
+    # Structure 36, Outfittings 45, Supernatural 47; 66 Virtues, 62 Flaws.
+    #
+    # These are NOT character Virtues and Flaws — they attach to the lab, so
+    # they are their own types rather than an EXTENDS of ^"Virtue"/^"Flaw".
+    #taKk3J80C97U9JM8e8grpEvf ^"Laboratory" DEF {
+        PROPERTIES {
+            ^"Size" INTEGER
+            ^"Refinement" INTEGER
+            ^"General Quality" INTEGER
+            ^"Upkeep" INTEGER
+            ^"Safety" INTEGER
+            ^"Warping" INTEGER
+            ^"Health" INTEGER
+            ^"Aesthetics" INTEGER
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+        DESCRIPTION "A magus's laboratory, described in its own right: a set of numeric characteristics plus any number of Laboratory Virtues and Flaws."
+        MENTIONS {
+            "Virtues and Flaws" -> ^"Virtues and Flaws"
+        }
+    }
+
+    #tYwoQHJhsRianV3Iui1tcZOt ^"Laboratory Virtue" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major", "Free"] REQUIRED
+            # The book files every one under exactly one of three groups.
+            ^"Group" ENUM ["Structure", "Outfittings", "Supernatural"] REQUIRED
+            # Some may be taken more than once; the book marks this per entry.
+            ^"Repeatable" BOOLEAN DEFAULT false
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+    }
+
+    #tnHWjNQB23uTkH5AHDfh2ZER ^"Laboratory Flaw" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major", "Free"] REQUIRED
+            ^"Group" ENUM ["Structure", "Outfittings", "Supernatural"] REQUIRED
+            ^"Repeatable" BOOLEAN DEFAULT false
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+    }
+
+    # 47 named vis sources, each tied to one of the fifteen Hermetic Arts. The
+    # Art is a caret ref so a consumer can ask "what Creo vis can this covenant
+    # draw?" rather than parsing a label.
+    #tOyKnFGWkxgPeCHccUaG06R3 ^"Vis Source" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Art" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+    }
+
+    # Chapter Five (Wealth & Poverty) gives a covenant three enumerable finance
+    # sets the core rulebook never named, so each becomes a type that applies to
+    # a ^"Covenant" — the same arrangement as ^"Vis Source". Counts are parsed
+    # deterministically into covenants/ground-truth.json and gated at merge:
+    #   - Sources of Income (14): Agriculture, Charity, Crime, Fishing,
+    #     Forestry, Hospitality, Livestock, Manufacturing, Mining, Money,
+    #     Service, Toll-Gathering, Trade, Wizardry.
+    #   - Covenfolk Categories (7): Craftsmen, Dependents, Grogs, Laborers,
+    #     Servants, Specialists, Teamsters.
+    #   - Yearly Expenditure Categories (9): Buildings, Consumables, Inflation,
+    #     Laboratories, Provisions, Tithes, Wages, Weapons and Armor, Writing
+    #     Materials.
+    # The full rules text of each entry (Pros/Cons/Magical Options for an income
+    # source; the yearly cost rule for an expenditure category) is its own
+    # mechanics and stays VERBATIM in the entry's DESCRIPTION; an expenditure
+    # category's labeled cost formula is also carried in a FORMULAS block.
+    #tJLCOrGO5QuneInU5WPRuRMx ^"Income Source" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+        DESCRIPTION "A named way a covenant earns money each year (Agriculture, Trade, Wizardry,...), with its own pros, cons, and magical options."
+    }
+
+    #tZ5rXgVH6FkSaSXpwQ7lcruK ^"Covenfolk Category" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+        DESCRIPTION "One of the accounting categories the covenfolk are separated into for the purposes of wages and provisioning (Craftsmen, Grogs, Servants,...)."
+    }
+
+    #tnbzNOdDkW9kLaRSpRlbvy5T ^"Expenditure Category" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+        DESCRIPTION "One of the categories a covenant's regular yearly expenditure is divided into (Buildings, Provisions, Wages,...), each with its own cost rule."
     }
 }

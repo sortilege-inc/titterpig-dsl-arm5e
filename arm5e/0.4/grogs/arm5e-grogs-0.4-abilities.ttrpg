@@ -1,0 +1,34 @@
+EXTENSION "ArM5_Grogs_Abilities" {
+    NAME "Ars Magica Fifth Edition, Grogs - New Abilities"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Grogs_Core_Ext"
+
+    #tu5h4xn3dqOCTXEYMVzZrEWh ^"Craft Poppets" DEF {
+            EXTENDS ^"Ability"
+            PROPERTIES {
+                ^"Ability Type" STRING "Arcane" FIXED
+                ^"Specialties" LIST OF STRING ["a particular type of target — women, magi, dragons, kings, etc."]
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The character can make effigies of individuals out of wax, straw, and cloth that house an arcane connection and simultaneously act as a sympathetic connection to the people they represents. A simple effigy is good for one use, takes an hour to make, and requires a Dexterity + Craft Poppets roll against an Ease Factor of 9. A permanent poppet takes a week to make, and has an Ease Factor of 12. Permanent poppets can accept a new Arcane Connection once the previous one has expired; naturally, this must be to the same person. Unlike other symbolic representations, a poppet made with this Ability may be used by any person, not just the character who made it."
+        }
+
+        #tdxESVednr2TuKq8LcQQ5Bga ^"Craft: Farrier" DEF {
+            EXTENDS ^"Ability"
+            PROPERTIES {
+                ^"Ability Type" STRING "General" FIXED
+                ^"Source" STRING "Core Rules"
+            }
+            FORMULAS {
+                "Craft Total" "Intelligence or Dexterity + Craft: Farrier"
+            }
+            DESCRIPTION "This is the professional skill of hoof care and shoeing horses. It differs from Animal Handling by focusing on horses, and by expanding the knowledge of serious care of hooves, teeth and legs. It is also more craft-oriented, as it includes the skills needed to modify and adapt horseshoes made by a blacksmith. It may be used instead of Animal Handling or Medicine to cure equine disease; the farrier has a +1 bonus to resolve it, increasing to +3 if it concerns the feet, compared to somebody using Animal Handling. Many farriers also have Craft: Blacksmith, expanding their expertise to making horseshoes from raw iron as well as other ironworking skills.\n\nNote that the rules from *City &* *Guild* for craft quality (page 67) allow for the farrier to make high quality horseshoes. A Craft Total of 12 makes Superior items, giving a +1 bonus for a single feature. This could cover only some of the typical Riding specialties: speed, sureness of foot, trample damage, jumping skill, etc.. Horseshoes cannot by mundane means affect other specialties, like ease of control or endurance, but a Mythic Farrier could work magic into the shoes. A Craft total of 15 or more makes Excellent items, giving a bonus to all uses of a single Ability of +1 or more, limited to [Craft Ability]/3."
+            MENTIONS {
+                "Animal Handling" -> ^"Animal Handling"
+                "Animal Handling" -> ^"Animal Handling"
+                "Animal Handling" -> ^"Animal Handling"
+                "Mythic Farrier" -> ^"Mythic Farrier"
+            }
+        }}

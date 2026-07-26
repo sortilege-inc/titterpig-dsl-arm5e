@@ -1,0 +1,223 @@
+EXTENSION "ArM5_Hedge_Magic_Hedge_Arts" {
+    NAME "Ars Magica Fifth Edition, Hedge Magic [Revised Edition] - Hedge Arts"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_Hedge_Magic_Core_Ext"
+
+    #tv6RKrV3UPhDddoqdWODubSy ^"Elementalist Air" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Elementalist Air is the study of the supernatural qualities of the air, and how these qualities can be manipulated with elemental magic. It is a Difficult Art, as described in the introduction to this book — it increases as an Ability, but is otherwise considered an Art by Virtues and Flaws that affect Arts, and has no applications that are independent of the other Elementalist Arts. The specific applications of Elementalist Air depend upon the type of Elementalist Technique with which it is paired: Medicinal: Elemental physicians can affect the sanguine humors of the human body with Elementalist Air, which are typically associated with lightheadedness and diseases of the blood. An example would be quotidian fever. Philosophical: Elemental philosophers can use Elementalist Air to affect natural weather phenomena with their powers. They can also affect animals that possess a predominantly sanguine temperament, such as birds. Theurgical: Using Elementalist Air, elemental theurgists can affect air elementals and other creatures with Magic Might associated with Auram. Air elementals tend to have high mental Characteristics, but low physical Characteristics. The character adds his Sanguine Trait to his Soak whenever he is damaged by the element of air, including suffering asphyxiation, inhaling poisonous gases, or being affected by powerful weather phenomena such as winds, hailstones, or lightning."
+            MENTIONS {
+                "Virtues and Flaws" -> ^"Virtues and Flaws"
+            }
+        }
+
+        #tFfsvtrgsC2jEh1Gpsb20pAN ^"Elementalist Earth" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Elementalist Earth is the study of the supernatural qualities of the earth, learning how to manipulate them with the Elementalist Techniques. It is a Difficult Art. Exactly what the character can do with Elementalist Earth varies, depending upon the type of Elementalist Technique with which it is paired: Medicinal: Elementalist Earth allows an elemental physician to draw upon his medical knowledge to affect the melancholic humors of the human body. This includes feelings of sadness, or diseases such as constriction. Philosophical: Elemental philosophers can affect the earth and its minerals with their magic, including animals with a melancholic temperament, such as slow-moving animals like cattle or generally docile animals like mice and badgers. Theurgical: Elemental theurgists can use Elementalist Earth to affect earth elementals and other supernatural beings associated with Terram. Earth elementals generally have high physical Characteristics, but low mental Characteristics. The character adds his Melancholy Trait to his Soak whenever he is damaged by the element of earth, including suffocation, injuries by metal or stone weapons, crushing blows, or falling onto solid ground."
+        }
+
+        #tnTvPfcHUyBDPMeqjssVmidC ^"Elementalist Fire" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Elementalist Fire is a Difficult Art, which involves studying the supernatural qualities of fire, and how to manipulate them with the character's elemental magic. The type of Elementalist Technique with which the character pairs this Form determines what sorts of fire he can affect: Medicinal: With Elementalist Fire, an elemental physician can affect the choleric humors of the human body. These humors tend to inspire anger and impatience, or dry, coughing diseases such as quartan fever. Philosophical: Heat and flame is the province of the elemental philosopher with Elementalist Fire, which includes mundane animals with a choleric temperament — generally those that are fast (such as horses) or fierce (such as predators). Theurgical: Elemental theurgists affect fire elementals and other supernatural creatures associated with heat, light, and flames. Fire elementals typically have high scores in Presence, Communication, Dexterity, and Quickness. The character adds his Choleric Trait to his Soak whenever he is damaged by the element of fire, including exposure to extreme temperatures, blinding light, or burning flames."
+        }
+
+        #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Elementalist Water is the study of the supernatural qualities of water, and how they can be manipulated with elemental magic. It is a Difficult Art. The form of the targets that the elementalist can affect with this Elementalist Form depends upon the type of Technique with which it is paired: Medicinal: Elemental physicians can affect the phlegmatic humors of the human body with their Elementalist Arts. These humors are associated with slow, listless feelings and wet, phlegmatic diseases such as flux. Philosophical: The elemental philosopher affects all sorts of natural liquids with Elementalist Water, and can also affect animals with a phlegmatic temperament, which includes those that swim like fish or creep like reptiles. Theurgical: Elementalist Water allows an elemental theurgist to affect water elementals and other supernatural creatures associated with cold and liquids. Water elementals typically have high scores in Cunning, Perception, Strength, and Stamina. The character adds his Phlegmatic trait to his Soak when he is damaged by the element of water, including suffering from thirst, drowning, drinking poisonous liquids, falling against water, or being crushed by powerful waves."
+        }
+
+    #tGGYiChRClmxlibMWiXSdNh0 ^"Summoning" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Summoning is the art of drawing elements from the surrounding area, often drawing them into a prepared shape or medium. Some elementalists might call this an incorrect description of their powers, since it may seem to them that they create these elements from nothing rather than bringing them to the caster from somewhere else. However, the basic principle is that the four elements are all part of nature, and so may always be found nearby and used to produce a supernatural effect.\n\nSummoning relies upon the character's Stamina, his score in Summoning added to the appropriate Elementalist Form, plus the local aura and a stress die roll. This procedure always costs the elementalist a long-term Fatigue level, and takes anywhere from a few minutes to several hours, depending on the proximity of the summoned target. If successful, the target will appear directly beside the elementalist, within his immediate reach.\n\nSummoning may be used in one of three different ways, depending upon the type of elemental magic the character learned: Medicinal, Philosophical, or Theurgical. With medicinal magic, the character can use Summoning to alter the humors in a human body, curing diseases and resolving crises. The elemental philosopher conjures natural phenomena (wind, flame) or base matter (earth, water) of the appropriate element(s), and can summon living animals native to the area with a dominant temperament appropriate to the element. The elemental theurgist can bring an elemental into being from an amount of pure base material."
+        }
+
+        #tn3sE9MzVVHgNkJE2PRjSsp9 ^"Controlling" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The Controlling Art allows an elementalist to dictate the behavior of the targets he summons with his Summoning power, or to affect appropriate targets he encounters. It depends upon the character's Presence, and always costs him a Fatigue level, though not long term. The elementalist must gesture and speak an arcane incantation to a target within range of his voice, which takes him a single round to perform.\n\nThis effect must penetrate any Magic Resistance possessed by the target, although if the target has been summoned and successfully bound into a ring or container using the Summoning Art, treat the level of a successful Controlling effect as if it were 0 and apply the entire Controlling Total toward penetration. It is possible to control an unbound target, but much more difficult.\n\nControlling may be used in three different ways: The elemental physician can control the emotions of human beings by manipulating the bodily humors, and can issue commands to supernatural creatures that have become part of a human body. The elemental philosopher can affect the motion of natural materials, increase his Soak, and give commands to animals of an appropriate temperament. The elemental theurgist can affect supernatural creatures with Might of the appropriate Form, forcing them to carry out a single command or banishing an elemental permanently."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
+        }
+
+        #tzwzjKhUqBYxTmxttbe8dcaE ^"Divining" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Through Divining, an elementalist can locate and commune with the elements and elemental targets, with an Art based on his natural Perception. Unlike Summoning and Controlling, Divining does not cost the character a Fatigue level.\n\nThis power has two effects. Firstly, it allows the elementalist to sense if an appropriate target is within about a hundred paces of him, and the approximate direction and distance to the target, for as long as he concentrates. Secondly, as long as he is touching an appropriate target, he can intuitively understand its circumstances and situation, and mentally communicate with it on a fundamental level.\n\nAn elementalist can use Divining of any type to locate vis associated with a particular element, and can determine how much of it is present in an object by touch. The medicinal elementalist can recognize when living creatures have imbalanced humors and diagnose disease. The philosophical elementalist can sense natural materials associated with a Form and communicate with animals of the appropriate temperament. The theurgical elementalist can sense beings with Might associated with the appropriate element in the general region."
+        }
+
+        #t9Yp2FAIvr9fcxPirQ5j4XuB ^"Refining" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Elementalists" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The Refining Art allows the elementalist to improve the target by purifying the natural material of which it is composed, or to break it down by combining elements that are naturally opposed. This takes a season of effort, much like a Hermetic laboratory activity, and requires some sort of workshop or laboratory in which the elementalist can work his magic. Instead of Magic Theory, elementalists use an Ability that is associated with the type of Refining they practice. During the season, the elementalist and his target must cooperate, or else the target must be held within a magical container into which it was summoned with the Summoning Art.\n\nUsing the Refining Art often yields raw vis, typically associated with the Form corresponding to the Elementalist Form used to affect the target. An elementalist with the Refining Art can use vis to make himself a kind of potion that is similar to a Hermetic longevity ritual. The elemental physician can make longevity potions for others and potions that increase a person's vigor and natural aptitude. The elemental philosopher may extract vis from a magical aura, affect supernatural animals, and move vis from one object to another. The elemental theurgist can restore Might to a supernatural being, or drain it of its Might in the form of raw vis."
+            MENTIONS {
+                "Magic Theory" -> ^"Magic Theory"
+            }
+        }
+
+    #tgqdFmdkRoYiXVN0Ua1q1SRW ^"Give" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Gruagachan" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Technique governs a gruagach's ability to grant blessings, inflict curses, impart shapes, and provide visions to others. It does not have a close Hermetic equivalent, but encompasses aspects of most Techniques. It can also inflict curses and geasa (singular: geas) on a target."
+        }
+
+        #tDE4wuYduYx5ARNqeSBGF0bN ^"Take" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Gruagachan" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Technique allows a gruagach to remove something from a target. A Take spell might eliminate an aspect of a target or merely acquire a component of it. This Art covers nearly every Hermetic Technique. It can allow a person to recover from hostile magic, and it can acquire information about a target. Take spells can also remove a character's Virtues and reduce his Abilities."
+            MENTIONS {
+                "Hermetic Technique" -> ^"Hermetic Technique"
+            }
+        }
+
+        #t6dYftnq7KpIRkBAXL6kFwC7 ^"Blessing" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Gruagachan" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Form grants the gruagach the ability to confer Virtues, grant bonuses to Abilities, and improve the Characteristics of other characters. In all instances, the gruagach must balance the benefit with a specific prohibition on the target's actions, which if violated causes the benefit to disappear. The more powerful the benefit granted, the more difficult the spell. Take Blessing spells allow the character to nullify certain Virtues or Abilities a character possesses. This Form cannot affect some Virtues — Social Statuses and Divine, Infernal, Hermetic, and Faerie Virtues, for example. Virtues that affect the accumulation of experience points, give access to specific Abilities, or grant physical objects may not be affected."
+        }
+
+        #tHIVPeoa08j3FxI6OYsZPnyR ^"Curse" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Gruagachan" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Gruagachan are able to inflict certain Flaws on a target to reduce his Characteristics or Abilities, inflict him with supernatural problems, or alter the character's personality temporarily. Take Curse spells allow the caster to remove his own curses, either from Give Curse or Take Blessing, and to eliminate the lingering effects of magic, hexes, or other spells cast upon an individual."
+        }
+
+        #t0sbo1Ve3SuWVynKOifcmTs9 ^"Shape" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Gruagachan" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Form allows a gruagach to alter the physical shape of another or herself. Give Shape spells add features of other creatures or completely transform a willing target. Take Shape spells forcibly seize someone's form and can force the Target to take a foreign shape or allow the caster to mimic his shape. All Shape spells also affect the items carried by the Target, incorporating them into the new form."
+        }
+
+        #tWzAHKJJj2Kwe8di3oyzktHe ^"Vision" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Gruagachan" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Gruagachan using Vision spells are able to control a person's perception of the world. This Form allows the creation of simple illusions and can grant invisibility. Vision magic also allows a character to send his fetch out before him to gather information. Vision magic spells are available to a gruagach whether he possesses the Fetch Virtue or not. At its most powerful, Vision magic grants a character a glimpse into the future."
+        }
+
+    #t88ccAFf2AJImbDAR2E6RBY9 ^"Tueor" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Learned Magicians" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Tueor is the Art that guards or defends the target of the charm from certain specific harms. Tueor works in conjunction with the Form of the thing protected. Tueor Salutem charms protect a target's health; they do not protect “against” health. A Tueor Salutem charm could protect a person's health, a field's health, or an animal's health. Although different charms are required to accomplish each feat, the same two Arts can protect a wide range of targets from an infinite range of maladies.\n\nThe more common the potential harm that the charm protects against, the more difficult it is to create. Tueor charms against rare or very specific harms are relatively simple to create and are the most common. A charm against “weapons” requires great skill and effort to create, while a charm against an iron dagger wielded by a left-handed man would be almost trivially easy to create.\n\nSome might think of Tueor charms as the Hermetic equivalent of Rego spells. This is an incomplete analogy at best. Where Hermetic magic controls a targeted Form and prevents anything falling under that Form from harming someone inside a particular area, Tueor magic protects a subject from potential harm, regardless of form, in a very narrow area. For example, a spell such as the Rego Vim spell Circular Ward Against Demons protects from all potential attacks from a demon, including claws, possession, flaming breath, or anything else. Tueor Salutem charms may protect against one type of non-magical attack, claws for instance. This would protect the target from the claws of wild animals, demons, Faerie wolves, a magus in the form of a bear, or anything else, but would be no protection against an animal's bite Any claw-based attack that would need to penetrate Magic Resistance is unaffected; however, those attacks could be defended against by Tueor Magicam charms."
+            MENTIONS {
+                "Hermetic magic" -> ^"Hermetic magic"
+                "Circular Ward Against Demons" -> ^"Circular Ward Against Demons"
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
+        }
+
+        #tnE3kk7ldQdjpoboF8QfUn9E ^"Succurro" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Learned Magicians" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Art allows charms that enhance some pre-existing aspect of a target. Succurro charms cannot grant abilities that have no basis in the original target, and Succurro most closely corresponds to Hermetic Creo magic. Succurro charms cannot, however, create something from nothing or instantly heal a target.\n\nSuccurro magic cannot replicate the unnatural modifications to a target that are available with Muto magic. A charm can assist a person to heal more quickly or improve her sight, but it cannot allow her to grow wings or see through walls because no mere mortal can do those things. Succurro magic removes imperfections in a target, but cannot create perfection."
+        }
+
+        #ta7YVK16gqfFvtbtz1GxbWdN ^"Vulnero" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Learned Magicians" FIXED
+                ^"Art Kind" STRING "Technique" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Vulnero charms cause harm, whether direct or indirect, to a target. Vulnero magic is always harmful to the target. Vulnero charms closely resemble Perdo magic. Both forms of magic can cause a target to suffer damage or become worse examples of person, place, or thing. Unlike Perdo magic, Vulnero magic may not completely remove an aspect of a thing. The more completely some aspect of a thing is destroyed, the more difficult it is to create a Vulnero charm. Similar to Succurro charms, Vulnero charms work most easily when they weaken an already weak aspect of a target.\n\nAll verbal magics that learned magicians perform are referred to as charms, but when the charms are malicious in nature and harm the target, as the Vulnero Technique does, they are often referred to as curses."
+        }
+
+        #tpE1ZVr7XbgYvLdhkZkpTLLi ^"Fortunam" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Learned Magicians" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Fortunam charms affect a target's luck by reducing the likelihood of accidents or improving his good fortune. Although Fortunam magic is cast on a single target, its effects can influence the acts of anyone that target encounters. For example, a Fortunam charm that aids one in combat could cause a defender to be momentarily distracted, a strap on the defender's shield to snap, or the footing of the defender to give. None of these small events happen under the direction of the learned magician or the target, but in combination they can temporarily improve the target's ability to successfully strike his opponent. The Art of Fortunam does not have a Hermetic equivalent."
+        }
+
+        #t4QunJ4nnrUoElmSQaStrdPF ^"Salutem" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Learned Magicians" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Salutem governs the health and general well being of a target. Salutem charms involve disease, age, and other infirmities related to a target's health. For humans, most of the aspects of Salutem charms are included in Corpus magic. However, this Form is much broader than simply being a non-Hermetic equivalent of Corpus, as Salutem charms can affect the health of an animal or plant also. The health of any living creature can be affected by Salutem charms. Abstract entities cannot be affected by Salutem charms. The economic “health” of a city could not be improved by a Salutem charm; this would be more the province of Fortunam.\n\nSalutem charms cannot replicate all aspects of Corpus, Animal, or Herbam magic. A Salutem charm only affects the health of a target. For example, a Salutem charm cannot improve a person's strength so that he is stronger than normal or even above average; however, if an infirmity has caused the target to become weak, either through age, injury, or disease, those imperfections could be removed by a Salutem charm to allow a person to have average strength or whatever strength he possessed before stricken by the malady."
+        }
+
+        #tTObBrRdzao4haYZlGKNw2VT ^"Magicam" DEF {
+            EXTENDS ^"Hedge Art"
+            PROPERTIES {
+                ^"Tradition" STRING "Learned Magicians" FIXED
+                ^"Art Kind" STRING "Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Magicam charms protect wearers from malicious magic or improve a character's amulets and chartae. Tueor Magicam charms protect the character from malicious magic. Succurro Magicam charms can enhance the strength, duration, or range of other charms. Vulnero Magicam charms are used to counteract or eliminate negative magical effects. Although Magicam charms can replicate some of the effects of Vim spells, they cannot influence demons directly. A demon's magical attack may be blunted or nullified, but Magicam charms cannot control or harm the demon itself. Like Vim spells, an Individual Target can apply to either a single person or a spell/charm/magical effect."
+        }}

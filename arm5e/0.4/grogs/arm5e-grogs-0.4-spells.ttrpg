@@ -1,0 +1,29 @@
+EXTENSION "ArM5_Grogs_Spells" {
+    NAME "Ars Magica Fifth Edition, Grogs - New Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Grogs_Core_Ext"
+
+    #tR9GyFuagqH5P4OAVNOIOO9E ^"The Librarian's Buckle" DEF {
+            EXTENDS ^"Formulaic Spell"
+            PROPERTIES {
+                ^"Technique" STRING "Rego" FIXED
+                ^"Form" STRING "Corpus" FIXED
+                ^"Level" INTEGER 25 FIXED
+                ^"Range" STRING "Touch"
+                ^"Duration" STRING "Concentration"
+                ^"Target" STRING "Individual"
+                ^"Source" STRING "Grogs"
+            }
+            LEVEL_CALCULATION {
+                BASE 5
+                MODIFIERS {
+                +1 "Touch"
+                +1 "Concentration"
+                +5 "for 24 uses per day"
+                +5 "levels to allow the device to maintain concentration"
+                }
+            }
+            DESCRIPTION "This enchanted buckle allows the wearer to move with freedom in any direction, even unsupported into the air. It was designed for and awarded to the librarian of a nowdissolved covenant and became a symbol of the office, passed down through generations of librarians. That covenant had a library built in a tall narrow tower, with the most valuable books and scrolls stored in a chamber near the roof that was inaccessible without using the buckle."
+        }}

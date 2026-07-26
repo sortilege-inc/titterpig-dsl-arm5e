@@ -1,0 +1,63 @@
+EXTENSION "ArM5_Grogs_Core_Ext" {
+    NAME "Ars Magica Fifth Edition - Grogs: core type extensions"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Core_Base"
+    DEPENDS_ON "ArM5_Core_Ability"
+    DEPENDS_ON "ArM5_Core_Virtue_Flaw"
+
+    # Grogs replaces the core rulebook's free-form "spend experience points"
+    # step with a LAYERED build: a character takes one childhood package, then
+    # some number of years of career and non-career packages, each granting a
+    # fixed allotment of experience in named Abilities. Chapter Five's worked
+    # example builds Sir Edwin from a Social Childhood plus three years as a
+    # Courtier, six as a Rider and eight as a Soldier.
+    #
+    # That is why a package is a first-class entity rather than prose: a
+    # downstream character builder has to be able to enumerate the packages,
+    # read their grants, and total them. Flattening "Three Years: +15 Area
+    # Lore, +15 Hunt, +15 Survival" into a string would make the whole system
+    # unusable to the thing it exists for.
+
+    #tTK3Uy8WoyvPCqEGcaDrFSaF ^"Training Package" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Category" ENUM ["Childhood", "Career", "Non-Career"] REQUIRED
+            # The parenthesised rider on a career name — Archer (Martial),
+            # Churchman (Academic), Advocate (Academic or None). It states
+            # which Ability-type Virtue the package presumes, and it is a
+            # CHOICE where the book prints one ("Academic or None"), so it is
+            # a LIST rather than a single value. Collapsing it to one string
+            # would silently discard the alternative.
+            ^"Ability Types" LIST OF STRING
+            ^"Source" STRING DEFAULT "Grogs"
+        }
+        DESCRIPTION "A block of training a character undergoes for a stated number of years, granting a fixed allotment of experience points in named Abilities. Packages layer: a character takes one childhood package and then career or non-career packages for as many years as his age allows."
+    }
+
+    # The three sets the book prints, kept as distinct types rather than only
+    # an ENUM on the parent, so a consumer can ask for "every childhood" or
+    # "every career" by type. A character takes exactly one childhood and any
+    # number of the other two.
+    #t9mS1CvfTGx6ukTBhcEQXFZv ^"Childhood Training Package" DEF {
+        EXTENDS ^"Training Package"
+        PROPERTIES {
+            ^"Category" STRING "Childhood" FIXED
+        }
+    }
+
+    #tKrIfRvtw7LUSUR61o27b0Ie ^"Career Training Package" DEF {
+        EXTENDS ^"Training Package"
+        PROPERTIES {
+            ^"Category" STRING "Career" FIXED
+        }
+    }
+
+    #t9oh382Tr08Ls28rMCrBQ4vp ^"Non-Career Training Package" DEF {
+        EXTENDS ^"Training Package"
+        PROPERTIES {
+            ^"Category" STRING "Non-Career" FIXED
+        }
+    }
+}

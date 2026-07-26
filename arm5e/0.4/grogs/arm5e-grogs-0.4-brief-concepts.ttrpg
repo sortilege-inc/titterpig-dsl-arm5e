@@ -1,0 +1,284 @@
+EXTENSION "ArM5_Grogs_Brief_Concepts" {
+    NAME "Ars Magica Fifth Edition, Grogs - Brief Grog Concepts"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Grogs_Core_Ext"
+
+    #tEYLXIMMNUbHeS25nbYuwEyv TEMPLATE "The Accursed" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Lesser Malediction", "Stigmata"]
+                        CHOICE [1 OF ^"Training Package"]
+                }
+                DESCRIPTION "Some live within a covenant as it offers a way of life that can’t be found elsewhere. But others have little choice but to seek out magical aid.\n\nThe Accursed is afflicted with a Supernatural Flaw, such as Lesser Malediction or (Realm) Stigmata, and the covenant is the only place where The Accursed feels safe. Either protected by the Aegis of the Hearth or held in check by the magic of the scholars he serves, The Accursed enjoys relief from his curse, until his masters have need of it. Other than this, the Accursed could have any complement of Abilities, Virtues, or Flaws."
+                MENTIONS {
+                    "Lesser Malediction" -> ^"Lesser Malediction"
+                    "Aegis of the Hearth" -> ^"Aegis of the Hearth"
+                }
+            }
+
+            #t5tJbGWJeWfdJBbknYSTt6PJ TEMPLATE "The Barbarian" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE [^"Outsider", "Foreign Upbringing", "Primitive Equipment"]
+                        CHOICE [^"Archer", ^"Brawler", ^"Rider", ^"Soldier", ^"Woodsman"]
+                }
+                DESCRIPTION "Hermetic magi do travel a lot, and often they will visit remote areas in the farthest corners of Mythic Europe. Local guides or professionals may be hired on such journeys, and a bond may form or some beneficial agreement be made. These locals may choose to join the turb and accompany the magi home. Eastern or northern Europe should provide sufficient cultural differences from a saga set in Britain, France, or the Italian peninsula.\n\nOnce back at the covenant, these Barbarians often have a hard time adapting to the language, society, and even climate. They wear funny clothes, use odd weapons and tools, and in general do things differently — they might even be pagan.\n\nSocial Status like Outsider may apply, although it need not be a stigma. Foreign Upbringing and Primitive Equipment may be appropriate. His native language is one foreign to the local area of the setting, and he needs to learn a second language. Area Lore in his native area is a more likely Ability than the covenant’s locale. Barbarians often have good scores in Survival and Ride, and probably have an Organization Lore that matches their home culture."
+                MENTIONS {
+                    "Mythic Europe" -> ^"Mythic Europe"
+                    "Foreign Upbringing" -> ^"Foreign Upbringing"
+                    "Primitive Equipment" -> ^"Primitive Equipment"
+                }
+            }
+
+            #tjkfZXtGweTJkMpVDdAyXynS TEMPLATE "The Coastal Raider" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE [^"Berserk", ^"Warrior"]
+                        CHOICE [^"Infamous"]
+                        CHOICE [^"Forager", ^"Sailor", ^"Soldier"]
+                }
+                DESCRIPTION "A pirate, Berber, or Turk who takes to the sea to pillage and burn, this character is a sailor and warrior, nothing more, nothing less. For the right price, he’ll paint his shield with whatever banner he’s given — but he’s not just out for himself; he knows the value of a good strong team. One man alone can’t sail a ship, nor stand against a full town levy. Under the right captain, and for the right coin, he’s as reliable as the most honorable soldier, though perhaps more savage.\n\nCoastal Raiders usually perform the dual service of warriors and sailors, and thus must draw Abilities from both skill sets. Suitable Virtues and Flaws are similar to those of the Sailor, and also Berserk, Warrior, and Infamous."
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                }
+            }
+
+            #t2G3A4tZTqFd1CuuxbM8aN6j TEMPLATE "The Coward" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                FLAWS {
+                    ^"Fear" NOTE "probably of something major like “combat.”"
+                }
+                PERSONALITY_TRAITS {
+                        "Brave"
+                }
+                CHOICES {
+                        CHOICE ["Affinity with Ability", "Puissant Ability"]
+                        CHOICE [1 OF ^"Training Package"]
+                }
+                DESCRIPTION "Every turb has one: the unashamed Coward who never knowingly puts himself at risk. He’s a work-shy, easily intimidated weak link, and you can never be sure of trusting him. But he earns his place through exceptional puissance with a single Ability. The unwilling Coward can be coerced into stories, usually through threats, but provides an easy target for enemies to exploit. Alternatively, the Coward could be utterly loyal to the covenant, but unable to force himself to face his fear.\n\nThe Coward is defined through Personality Flaws to represent his cowardice, accompanied by a negative Brave Personality Trait. The defining Flaw of a Coward is Fear — probably of something major like “combat.” These are balanced by both Affinity and Puissance in his key expertise, such as Legerdemain or Guile."
+                MENTIONS {
+                    "Personality Trait" -> ^"Personality Trait"
+                }
+            }
+
+            #tjpR6myo6ZsVuAIbj7dtVmeG TEMPLATE "The Disenfranchised Knight" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Gentleman", ^"Warrior"]
+                        CHOICE [^"Infamous", ^"Fear"]
+                        CHOICE [^"Courtier", ^"Leader", ^"Pikeman", ^"Public Official", ^"Rider", ^"Soldier"]
+                }
+                DESCRIPTION "This is a nobleman, trained to the saddle, sword, and lance, but with no land nor privilege. He may be the bastard son of a Lord, who will never inherit because he has too many legitimate brothers; he may have a reputation as a coward, so no one will meet him on the field at tournament; or he may be a knight of worth whose father’s lands have been confiscated by a usurping baron. There are noblewomen equivalents as well: for instance, an educated lady whose father cannot afford her dowry might prefer to join a covenant than be consigned to the nunnery.\n\nA true knight is a courtier as well as a warrior, learning Etiquette and Intrigue alongside swordplay. Ride and Great Weapon are essential Abilities for those hoping to win honor and reputation on the tourney field. Suitable Virtues and Flaws include Gentleman, Warrior, and any Flaw representing his dishonor (such as Infamous or Fear)."
+                MENTIONS {
+                    "Great Weapon" -> ^"Great Weapon"
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                }
+            }
+
+            #t3uR4mwKz3eCA127mlnyADqy TEMPLATE "The Field Chirurgeon" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Puissant Ability", "Cautious with Ability", "Surgical Empiricus"]
+                        CHOICE [^"Compassionate"]
+                        CHOICE [^"Cunning Man", ^"Cutter", ^"Forager", ^"Local"]
+                }
+                DESCRIPTION "The chirurgeon does his or her part to ensure the health and well-being of the covenfolk. A fighting force in particular has its life expectancy and efficiency increased by proper care. The chirurgeon may be a simple herbwife from the local village, or a formally trained nurse from a monastic hospital. Or he might be a combat veteran with a little training and a lot of practice. Any may work alone, or as the assistant to a doctor of medicine, depending on the covenant’s size and funding.\n\nKey Abilities include Chirurgy, Leadership if he manages a staff of helpers, Survival if he accompanies the turb into the field, and martial abilities if he is a combat medic. Folk Ken could be useful for putting his patients at ease. Suitable Virtues and Flaws include Puissant Chirurgy, Cautious with Chirurgy, Compassionate, and Surgical Empiricus (see Art & Academe, page 55)."
+                MENTIONS {
+                    "Folk Ken" -> ^"Folk Ken"
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                }
+            }
+
+            #tenKeqr9YuF3f6C7XdbF9IuD TEMPLATE "The Fool" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Free Expression", "Perfect Balance", "Troupe Upbringing"]
+                        CHOICE ["Small Frame"]
+                        CHOICE [^"Conman", ^"Minstrel", ^"Storyteller", ^"Tumbler", ^"Wastrel"]
+                }
+                DESCRIPTION "Fools and jesters entertain the lofty and the lowly alike, including magi of the Order. But a Fool may say things that others might not dare, perhaps at the behest of his master seeking to spar with a rival.\n\nThe Fool entertains his audience with wit through Charm and feats of juggling through Profession: Jongleur. Profession: Performer represents his singing ability, while Legerdemain allows sleight of hand. Etiquette gives him knowledge of the acceptable boundaries while at court, all the better to break them. Appropriate Virtues and Flaws include Free Expression, Perfect Balance, Troupe Upbringing and Small Frame."
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                    "Free Expression" -> ^"Free Expression"
+                    "Perfect Balance" -> ^"Perfect Balance"
+                    "Troupe Upbringing" -> ^"Troupe Upbringing"
+                    "Small Frame" -> ^"Small Frame"
+                }
+            }
+
+            #tB4fvDJH6lV50yMRS0SGX8kq TEMPLATE "The Ghost" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+
+                DESCRIPTION "Covenants see much of death, but in the Magical aura common to so many covenants, death may not be a final end. Ghosts haunt many covenants, and while magi may leave them to their ghostly hauntings, bind them to eternal servitude, or treat them as legitimate covenfolk, Ghosts that are able to leave the confines of the covenant make for unusual travel companions.\n\nGhostly grogs do not have a high Might Score and so are vulnerable, but they may each have unique Powers and Abilities that mirror their roles in life.\n\nFor suitable Virtues and Flaws, see Realms of Power: Magic, Chapter 3. Most Ghosts who are grogs have the same Abilities as in life, even though some of those Abilities are no longer relevant. However, a good Awareness, Area Lore, and Organization Lore: Covenant can be useful to those who are sufficiently gifted to perceive the Ghost’s presence."
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                }
+            }
+
+            #tKRwLIqOgf3iEnPS3P44o1IU TEMPLATE "The Hero" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Affinity with Ability", ^"Warrior", ^"Famous"]
+                        CHOICE [^"Infamous", ^"Reckless"]
+                        CHOICE [^"Athlete", ^"Brawler", ^"Leader", ^"Soldier"]
+                }
+                DESCRIPTION "Preternaturally drawn to danger, the first to volunteer when faced with overwhelming odds, and almost certainly destined for an early grave, The Hero is the consummate adventurer, always prepared for anything. He has a broad spread of Abilities, ensuring that he can climb the steepest slopes, swim the widest lakes, and ride the fastest horses. He is likely to be reckless in his approach to life, and have a lust for adventure. Others might find him tiresome or intimidating because he expects others to be as brave and adventurous as he is himself. A covenant is an obvious home for such a one seeking glory and renown, as it offers challenges far beyond the mortal world.\n\nThe Hero usually has a good Athletics, Swim, Ride, and Survival Ability, representing his adventuring spirit. Appropriate Virtues and Flaws include: Affinity with Athletics, Warrior, Famous (or Infamous), and Reckless."
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                }
+            }
+
+            #tAciBML3dDahMxTs7PryvUVM TEMPLATE "The Laboratory Assistant" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Arcane Lore", "Affinity with Ability"]
+                        CHOICE [^"Humble", "Missing Eye", "Fragile Constitution", "Poor Hearing"]
+                        CHOICE [^"Covenfolk", ^"Craftsman", ^"Magician", ^"Servant"]
+                }
+                DESCRIPTION "While older magi have apprentices, familiars, and perhaps even a clutch of enchanted automata to assist them in the laboratory, younger magi appreciate the help of mundane hands. The Laboratory Assistant grog is well-educated and versed in Magic Theory and Magic Lore. The Laboratory Assistant cannot provide direct help to her master since she does not have The Gift, but she is a skilled craftswoman, repairing damaged apparatus after accidents. If her master is particularly terrifying, she may be very good at Stealth; he may not even know she exists, but marvels that his sanctum remains tidy despite the occasional destructive rampage. Because she is privy to her master’s secrets, she has a great deal of authority over the “lesser” servants.\n\nSuitable Virtues and Flaws include Arcane Lore, Affinity with Craft (any relevant), and Humble. Some Flaws might represent being caught in laboratory accidents (such as Missing Eye, Fragile Constitution, and Poor Hearing)."
+                MENTIONS {
+                    "Magic Theory" -> ^"Magic Theory"
+                    "Magic Lore" -> ^"Magic Lore"
+                    "The Gift" -> ^"The Gift"
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                    "Arcane Lore" -> ^"Arcane Lore"
+                    "Missing Eye" -> ^"Missing Eye"
+                    "Fragile Constitution" -> ^"Fragile Constitution"
+                    "Poor Hearing" -> ^"Poor Hearing"
+                }
+            }
+
+            #tjjTulLeJO4F1D1HZ7oP7Dzl TEMPLATE "The Loyal Watchman" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Puissant Ability"]
+                        CHOICE [^"Nocturnal"]
+                        CHOICE [^"Covenfolk", ^"Local", ^"Sentry"]
+                }
+                DESCRIPTION "Always unnoticed and never catching the attention of the masters, the Loyal Watchman will never amount to much and he’d be surprised if the scholars even knew his name. He simply takes his pay, feeds his family, and raises the next generation of Loyal Watchmen.\n\nThe Loyal Watchman defends the covenant. He does not venture out with the magi and is nobody’s custos. But he knows the covenant like the back of his hand; it is all he has known. Every covenant has these downtrodden nameless grogs, but once in a while they come into their own and show their worth. Awareness is the key Ability of the Watchman, and he may well have a good local Area Lore, thanks to long months of intense exploration. Having spent a long time at the covenant, he may have developed a good Organization Lore: Covenant. Appropriate Virtues and Flaws include Puissant Awareness and Nocturnal."
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                }
+            }
+
+            #tdlHLMKRsFKKtXixxgMp8Vnr TEMPLATE "The Officer" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE [^"Custos", ^"Warrior", "Good Teacher", "Puissant Ability", ^"Inspirational" NOTE "for a captain"]
+                        CHOICE [^"Covenfolk", ^"Leader", ^"Public Official", ^"Trainer", ^"Soldier"]
+                }
+                DESCRIPTION "Every fighting turb needs a leader, and most have one. Depending on the size of the turb and the level of organization, the Officer may be anything from the most-senior fighter to a knight or formally trained officer.\n\nCustos is a recommended Virtue, as is Warrior. He needs access to Martial Abilities, and a higher officer needs to know Latin and be literate, in addition to basic arithmetic. Good Teacher or Puissance in favored abilities would help, or Inspirational for a captain. Key Abilities include Folk Ken, Leadership, Martial Abilities, Riding, and Teaching. Etiquette and various Organization and Area Lores apply as well."
+                MENTIONS {
+                    "Good Teacher" -> ^"Good Teacher"
+                    "Folk Ken" -> ^"Folk Ken"
+                }
+            }
+
+    #tn6wuGlKCRF86HkBIMZ0QpMS TEMPLATE "The Poisoner" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Arcane Lore", ^"Educated", "Herbalism", "Puissant Ability"]
+                        CHOICE ["Judged Unfairly"]
+                        CHOICE [^"Apothecary", ^"Cutter", ^"Forager", ^"Local", ^"Physician"]
+                }
+                DESCRIPTION "The art of the apothecary is a subtle one, when the difference between harming or healing a client can be as simple as a minim’s weight of a drug. It is not a career aimed at the clumsy or the careless, and yet sometimes individuals are expected to enter the family trade, no matter what their own wishes. However, the trade can also attract those individuals who enjoy the power over life and death that they hold in their hands, or whose morals around poisoning are up for negotiation, if there is financial gain in it.\n\nTowns rarely tolerate an apothecary who poisons his patients, for whatever reason. After escaping from a lynch mob, the Poisoner can be of great use to bandits and other ne’erdo-wells who live apart from society. Life is harsh for such individuals, and an apothecary can double as a chirurgeon, as well as provide more effective ways of killing their marks. Similarly, a covenant can find a use for a disgraced apothecary incapable of setting up trade in town, but can they ever really trust his nostrums?\n\nNaturally, Profession: Apothecary is an important Ability for the Poisoner, and some may know Medicine (or its folk equivalent) for making more potent poisons. Many have basic knowledge of Chirurgy. Legerdemain is suitable for slipping one’s preparations unseen into another’s food. Suitable Virtues and Flaws include Arcane Lore, Educated, Herbalism (*Art & Academe*, page 55), Puissant Profession: Apothecary, and Judged Unfairly"
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                    "Arcane Lore" -> ^"Arcane Lore"
+                    "Judged Unfairly" -> ^"Judged Unfairly"
+                }
+            }
+
+            #tjD1924zmtQgf3yDa8sUx2yA TEMPLATE "The Robber" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE [^"Warrior", "Well-Traveled"]
+                        CHOICE ["Branded Criminal"]
+                        CHOICE [^"Brawler", ^"Footpad", ^"Forager", ^"Local", ^"Soldier", ^"Woodsman"]
+                }
+                DESCRIPTION "The roads of Mythic Europe are rarely safe, largely due to robbers who extract their own tolls and taxes from those who pass. As an outlaw, the Robber may look at the covenant as a place of sanctuary where his crimes might be ignored and his value recognized.\n\nThe Robber has exceptional knowledge of the local area and his activities ensure that he learns about all manner of goings on. But for all his value, the covenant must occasionally face the consequences of his actions while protecting their own secrecy and reputation.\n\nIn addition to Area Lore (and the Robber may have several different Area Lores), this character uses Stealth to lie in wait, and Leadership to intimidate his victims. Brawl is possibly more important than any Martial Abilities. Appropriate Virtues and Flaws include Warrior, Well-Traveled, and Branded Criminal."
+                MENTIONS {
+                    "Mythic Europe" -> ^"Mythic Europe"
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                    "Branded Criminal" -> ^"Branded Criminal"
+                }
+            }
+
+            #tmrMLGe5VN5wWSnNKD6LPzhm TEMPLATE "The Sailor" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Cautious", "Wilderness Sense"]
+                        CHOICE ["Craving for Travel"]
+                        CHOICE [^"Fisherman", ^"Laborer", ^"Sailor"]
+                }
+                DESCRIPTION "Many covenants earn income from the sea, through fishing or trade, and each ship needs a crew. While crews for these vessels have little to do with the Order, magi who undertake sea voyages would do well to retain a turb of Sailors.\n\nThe chief Ability is Profession: Sailor, but Area Lore for coastal areas is important. And for covenants that have built or bought enchanted vessels, Finesse is useful as it helps the Sailor to control the ship’s enchantments. But the Sailor’s loyalties are to his captain first, his ship second, and then to the covenant. Appropriate Virtues and Flaws include Cautious with Profession: Sailor, Wilderness Sense, and Craving for Travel*."
+                MENTIONS {
+                    "Virtues and Flaws" -> ^"Virtues and Flaws"
+                    "Wilderness Sense" -> ^"Wilderness Sense"
+                    "Craving for Travel" -> ^"Craving for Travel"
+                }
+            }
+
+            #tGAlLhrBOXkPJrA3q4RBEWgP TEMPLATE "The Survivor" DEF {
+                EXTENDS ^"Grog"
+                PROPERTIES {
+                    ^"Source" STRING "Grogs"
+                }
+                CHOICES {
+                        CHOICE ["Delusions", ^"Prohibition", "Warped Senses", "Environmental Sensitivity"]
+                        CHOICE [^"Covenfolk", ^"Forager", ^"Woodsman"]
+                }
+                DESCRIPTION "When covenants die, what happens to their grogs? In some cases, the covenfolk remain in the ruins of the covenant long after the magi have left or been killed by some terrible disaster. Perhaps they are trapped in a regio, or have nowhere else to go. The grogs become warped over time by the aura, and after even a single generation are likely to be culturally different from their more mundane neighbors. For example, a simple desire that the magi will one day return and free them can be transmuted in later generations under the influence of Warping to a messianic cult that treats magi as demi-gods.\n\nCharacters rescued from the ruins of a covenant may share common Delusions, have unusual Prohibitions, and have extreme Personality Traits. They may also suffer inherited Flaws from Warping, such as Warped Senses or Environmental Sensitivity (both from *Realms of Power: Magic*, Chapter 4)."
+                MENTIONS {
+                    "Personality Traits" -> ^"Personality Traits"
+                    "Warped Senses" -> ^"Warped Senses"
+                    "Environmental Sensitivity" -> ^"Environmental Sensitivity"
+                }
+            }}

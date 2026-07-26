@@ -38,6 +38,11 @@ EXTENSION "ArM5_Spell_Rules" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The range of a spell is the distance to the nearest part of the target of the spell. Thus, if the caster is touching the external wall of a room, he can cast a Target: Room Corpus spell on the people within at Touch Range, even though he is not touching any of those people, and indeed cannot see them. The target of the spell is the room, and thus the spell does not violate the Limit of Arcane Connections.\n\nPersonal: The spell only affects the casting magus or things that he is wearing or carrying. The target is thus never larger than Individual.\n\nTouch/Eye: Touch: The magus or anything he touches, whether a person or thing. Eye: The magus may target any person or creature that he has established eye contact with. A human being who knows of no reason to avoid eye contact makes it automatically if dealing with the magus in a social setting. The Gift does not make people avoid eye contact. It is impossible to make eye contact with an unwilling human without getting at least two people to hold the victim down. It is effectively impossible to make eye contact with an enemy in combat; they aren’t looking at your eyes. It typically takes a combat round to establish eye contact with a calm animal, before the magus can start casting the spell. (Touch and Eye are the same “level” of range.)\n\nVoice: Anything to which the magus’s voice carries. Typically, firm words carry about 15 paces, while a shout carries about 50. Magical enhancement of the voice does not increase this range, and a spell cast silently at this range can affect only the caster. The range is based on the distance that the caster’s voice carries, not on whether the target can hear it. Deaf targets, stones, targets in a noisy environment, and targets under the influence of PeIm spells that stop sounds from reaching them can all be affected at the normal range. However, if the caster is silenced or quieted by magic, the range is reduced. Such a spell must penetrate the caster’s Magic Resistance. Magic items use the wielder’s voice; independent items need to be given a voice (CrIm) to use this range. The range is established when the spell is cast, and remains the same even if the magus changes the loudness of his voice. Thus, a Voice range spell can allow silent control, but only as long as the target is within the distance that the magus’s voice carried when he cast the spell.\n\nSight: Anything that the magus can see. If the magus is standing on the highest point for miles, this range can be immense. A blind magus can only affect himself. A magic item uses the wielder’s sight; independent items need to be able to see (InIm) to use this range.\n\nArcane Connection: Anything that the magus has an Arcane Connection to. Distance is immaterial unless the storyguide chooses to impose some limit. Such limits are usually provided in the example spells. Note that while Arcane Connection is a range, it is different from a physical item that is an Arcane Connection. This distinction is important, because some spells require that the caster have an Arcane Connection, but the spell must be cast as some range other than Arcane Connection."
+            MENTIONS {
+                "Arcane Connections" -> ^"Arcane Connections"
+                "The Gift" -> ^"The Gift"
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
         }
         #tER7zuDebXE0JCqctOJ4h6sc ^"Durations" DEF {
             APPLIES TO [^"Character"]
@@ -78,6 +83,11 @@ EXTENSION "ArM5_Spell_Rules" {
                 "Vision" "Boundary (but does not require Ritual magic)"
             }
             DESCRIPTION "Intellego spells can grant magical senses to a person. These spells allow the recipient to detect things that he could not normally sense, and they have different targets, corresponding to the kind of sense that the recipient gets. The range of the spell is the range to the recipient.\n\nIt is possible to grant magical senses to many people at once, but this requires Muto Mentem magic, with Intellego Form requisites.\n\nEach magical sense target grants the recipient information through one of his senses. This information is easily distinguished from mundane information coming through the same sense, but it is subject to the same limitations as the mundane sense. Thus, a magical sense that works with the sense of smell is very bad at giving direction, and can be avoided by staying upwind of the sensor, while a magical sense that works with vision is no good in the dark.\n\nMagical senses must penetrate the Magic Resistance of creatures sensed, as well as the Magic Resistance (if any) of the person granted the sense. Thus, the Penetration of a magical sense should be recorded for future reference. The mundane sense through which the magical sense grants information does not need to penetrate Magic Resistance.\n\nA single spell grants a single magical sense. To gain several magical senses, you must cast several spells.\n\nTaste: The information comes through the sense of taste. This target is equivalent to Individual.\nTouch: The information comes through the sense of touch. This target is equivalent to Part.\nSmell: The information comes through the sense of smell. This target is equivalent to Group.\nHearing: The information comes through the sense of hearing. This target is equivalent to Structure.\nVision: The information comes through the sense of sight. This target is equivalent to Boundary, but, unlike Boundary, it does not require Ritual magic."
+            MENTIONS {
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
         }
         #tnIpGzLVrdSXQ33gyOjRnjht ^"Magical Wards" DEF {
             APPLIES TO [^"Character"]
@@ -97,6 +107,9 @@ EXTENSION "ArM5_Spell_Rules" {
                 "Below level 5" "adding a magnitude only adds one level, and subtracting a magnitude only subtracts one level"
             }
             DESCRIPTION "To calculate the level for a spell using those Arts but with different characteristics, refer to the lists above. For every step by which a category is raised, add one magnitude (five levels) to the level of the spell. For every step by which one is lowered, subtract one magnitude (five levels).\n\nBelow level 5, adding a magnitude only adds one level, and subtracting a magnitude only subtracts one level. Thus, one magnitude lower than level 5 is level 4, and one magnitude higher than level 2 is level 3.\n\nFor example, consider a level 15 spell with range Voice, duration Sun, and target Group. A variant with the same effect but with range Sight, duration Moon, and target Room would be level 25 (+1 magnitude to increase range Voice to Sight, +1 magnitude to increase duration Sun to Moon, and no change for changing the target Group to Room, because they are at the same level). A different variant with range Personal, duration Concentration, and target Individual would be level 2 (–2 magnitudes to decrease range Voice to Personal, –1 magnitude to decrease duration Sun to Concentration, and –2 magnitudes to decrease target Group to Individual). Note that since –2 magnitudes takes the level from 15 to 5, the additional –1 magnitudes only lower the level by –1 per magnitude.\n\nThe categories described here were built into the structure of Hermetic magic by Bonisagus. All spontaneous spells must conform to these requirements (the magus is making the spell up on the fly — he cannot also push the limits of magic theory). Formulaic spells, on the other hand, can be invented with ranges, durations or targets that are not listed here. This is usually slightly more difficult than if the closest category were used, but is largely left to storyguide interpretation."
+            MENTIONS {
+                "Hermetic magic" -> ^"Hermetic magic"
+            }
         }
         #tbQZHoeXE1yuY1ZxoXIb6Xz4 ^"Ritual Spells" DEF {
             APPLIES TO [^"Character"]
@@ -117,6 +130,13 @@ EXTENSION "ArM5_Spell_Rules" {
                 "Added effect is purely cosmetic" "No requisite"
             }
             DESCRIPTION "Most spells involve a simple combination of two Arts, one Form and one Technique. Some spells, however, involve more than two. For instance, a spell that turns a human into a bird uses Muto because you are transforming something, Corpus because you are affecting a human body, and Animal because you are turning the human body into an animal body. In addition to involving the two primary Arts — Corpus and Muto in this case — casting the spell concerns your Animal score as well. This third Art is a requisite.\n\nThere are two kinds of requisite. The first simply allows the spell to have its effect. This includes the Animal requisite on a spell to turn a person into a bird. These requisites do not add to the spell level, as the difficulty of doing such a thing is already accounted for in the guidelines.\n\nThe second adds an effect to a spell. In this case, the base Arts and level for the spell are those for the highest-level effect it has. For example, a magic item that changes a picture to show what is happening at a distant location is an Intellego Imaginem spell with a Muto requisite, not a Muto Imaginem spell with an Intellego requisite, as the Intellego effect is of much higher level.\n\nAs a general rule of thumb, if the spell would still do something without the requisite, but it would do significantly less, then each requisite adds at least one magnitude to the level of the spell. Thus, the Herbam and Terram requisites that allow a spell to change a clothed man into a bird do not add any levels, because they do not significantly increase the power of the spell. However, a Rego requisite added to a Creo Ignem spell to prevent the fire from burning the caster would require additional levels. In addition, a single spell that could turn a human into a wolf, or a wolf into a human, would require an additional magnitude for the Animal requisite, as without it the spell could only effect the transformation in one direction. Most such requisites add only a single magnitude to the spell level, but if the additional effect is sixth magnitude or above, it is often appropriate to add two magnitudes.\n\nAdditional effects may not require a requisite if they are purely cosmetic. Thus, a spell that creates fire that looks like flaming skulls does not require an Imaginem requisite. A spell that allowed the caster to choose how the fire looked would, because that flexibility is more than a cosmetic effect.\n\nRequisites, if any, are listed for each formulaic spell. (See the spell Curse of Circe on page 131 as an example.) Requisites make it more difficult to cast spells, as they demand the caster have wider knowledge. You must use the lesser of your score in the requisite and your score in the spell’s main Technique or Form – Technique if the requisite is a Technique, Form if the requisite is a Form. For example, if you have the scores Animal 6 and Corpus 13, and you cast the Muto Corpus spell Curse of Circe, which has a requisite of Animal, you treat your Corpus score as if it were only 6. Note that if your requisite happened to be higher (for example, if your Animal were 15), you would use the lower basic form (your Corpus of 13 in this case).\n\nSometimes a spell has a requisite for both its Technique and Form. You must use the lowest in each case. And, if several requisites apply to the same primary Art (for example, if there are two Form requisites), your effective score is the lowest of the group. Furthermore, any Deficiencies you have with an Art apply when you use that Art as a requisite.\n\nRequisites listed with a spell’s statistics apply when you are learning, inventing, or casting that spell, but do not apply for determining the defender’s Magic Resistance. The defender’s Magic Resistance is determined by the spell’s primary Form, not that listed as a requisite, even if the caster’s requisite Form score is lower than that of his primary Form score, and thus determines the Casting Total."
+            MENTIONS {
+                "Curse of Circe" -> ^"Curse of Circe"
+                "Curse of Circe" -> ^"Curse of Circe"
+                "Technique and Form" -> ^"Technique and Form"
+                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> ^"Magic Resistance"
+            }
         }
         #tqFuwKqHmAfZXmokNVIrgqBK ^"Casting Requisites" DEF {
             APPLIES TO [^"Character"]
@@ -139,6 +159,9 @@ EXTENSION "ArM5_Spell_Rules" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The Technique and Form are listed in the heading the spell is found under. Spells are arranged first by their Forms, then by their Techniques, in alphabetical order. Following each Technique/Form heading are guidelines that will help you create your own spells, as well as help you determine the necessary level to cast a spontaneous spell.\n\nThe base Range, Duration, and Target for almost all guidelines are the lowest categories: Personal, Momentary, Individual. Thus, a useful spell will often be of significantly higher level than the guideline for that effect, because it has a higher Range, Duration, and Target. There are some exceptions, primarily guidelines for wards, and these are noted explicitly in the guideline. If the guideline does not specify a Range, Duration, or Target, they are Personal, Momentary, and Individual.\n\nTechniques and Forms are often abbreviated by the first two letters of each word; thus a MuTe spell is of Muto Technique and Terram Form. The level is often added after the abbreviation — thus Flash of the Scarlet Flames becomes CrIg 15."
+            MENTIONS {
+                "Flash of the Scarlet Flames" -> ^"Flash of the Scarlet Flames"
+            }
         }
         #tsjWPFNjtA7aLn79wNihpflu ^"Title" DEF {
             APPLIES TO [^"Character"]
@@ -146,6 +169,9 @@ EXTENSION "ArM5_Spell_Rules" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The titles given are the actual names of spells as known by Hermetic magi. When inventing new spells, try to give them creative names that will add color to the game. “Fireball” is not interesting; “Ball of Abysmal Flame” is — you get the idea."
+            MENTIONS {
+                "Ball of Abysmal Flame" -> ^"Ball of Abysmal Flame"
+            }
         }
         #t3gqa2t5fKyvUWRqCss3gkpg ^"Level" DEF {
             APPLIES TO [^"Character"]
@@ -160,6 +186,9 @@ EXTENSION "ArM5_Spell_Rules" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Spells requiring rituals are those that fall outside the categories listed for formulaic and spontaneous spells described under “Ritual Spells” on page 114. Certain powerful spells and spells inherited from the Cult of Mercury are also Ritual spells. Storyguides should use their discretion in declaring other spells Ritual."
+            MENTIONS {
+                "Ritual Spells" -> ^"Ritual Spells"
+            }
         }
         #tvP6xG5Bq6JEuV43ltEfuWwt ^"Requisites" DEF {
             APPLIES TO [^"Character"]

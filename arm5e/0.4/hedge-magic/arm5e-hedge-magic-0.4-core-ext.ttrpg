@@ -1,0 +1,114 @@
+EXTENSION "ArM5_Hedge_Magic_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Hedge Magic [Revised Edition] - core type extensions"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Hedge Magic [Revised Edition] is an EXTENSION on the arm5e edition, loaded
+    # alongside the core rulebook (spec S13 composition). It declares the types
+    # the supplement introduces that the core rulebook has no place for: the
+    # magic systems of the six hedge traditions.
+    #
+    # What it does NOT declare, deliberately:
+    #   - Virtues and Flaws. The book's 101 hedge Virtues and Flaws fit the core
+    #     ^"Virtue"/^"Flaw" types unchanged (same Size enum, same free-text
+    #     Category axis), so arm5e-hedge-magic-0.4-virtues-flaws.ttrpg EXTENDS
+    #     ^"Virtue"/^"Flaw" and DEPENDS_ON ArM5_Core_Virtue_Flaw directly. The
+    #     four entries the book prints as "New or Revised" that share a name with
+    #     a core Virtue/Flaw (Elemental Magic, Fast Caster, Slow Caster,
+    #     Secondary Insight) are emitted as MODIFY of the core anchor with a
+    #     verbatim "Hedge Magic Note" — never a second DEF of the same name —
+    #     exactly as Realms of Power: Magic revises core Virtues/Flaws.
+
+    # ---------------------------------------------------------- Hedge Arts
+    # The hedge traditions that use an Art-and-form magic (Elementalists,
+    # Gruagachan, Learned Magicians) each have their own Techniques and Forms,
+    # parallel to (but distinct from) the Hermetic Arts. Twenty in all. Each is
+    # a Technique or a Form of exactly one tradition.
+    #tHedgeArtHedgeMagicBaseXXX ^"Hedge Art" DEF {
+        PROPERTIES {
+            ^"Tradition" STRING REQUIRED
+            ^"Art Kind" ENUM ["Technique", "Form"] REQUIRED
+            ^"Source" STRING DEFAULT "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "A Technique or Form of a hedge tradition's Art-based magic (Elementalist, Gruagach, or Learned Magician), parallel to the Hermetic Arts but belonging to a single tradition."
+        MENTIONS {
+            "Hermetic Arts" -> ^"Hermetic Arts"
+        }
+    }
+
+    # --------------------------------------------------------- Hedge Spells
+    # The named spells of the hedge traditions, plus the new Hermetic spells the
+    # book introduces for interacting with hedge magic. 57 in all. Each states
+    # its tradition, its Technique and Form (as that tradition names them — the
+    # Hermetic ones use Creo/Corpus, the Learned Magicians use Tueor/Fortunam,
+    # the Gruagachan use Give/Blessing), a level, and a Range/Duration/Target
+    # line. Range/Duration/Target are STRING, not the Hermetic enum: Gruagach
+    # spells use Ranges like "Conversation" and Durations like "Limit"/"Geas".
+    #tHedgeSpellHedgeMagicBaseXX ^"Hedge Spell" DEF {
+        PROPERTIES {
+            ^"Tradition" ENUM ["Hermetic", "Learned Magicians", "Gruagachan"] REQUIRED
+            ^"Technique" STRING REQUIRED
+            ^"Form" STRING REQUIRED
+            ^"Level" INTEGER MIN 1
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Requisite" STRING
+            ^"Code" STRING
+            ^"Source" STRING DEFAULT "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "A named spell of a hedge tradition (or a new Hermetic spell for interacting with hedge magic), with its tradition, Technique, Form, level, and Range/Duration/Target line."
+    }
+
+    # ---------------------------------------------------------- Rune Spells
+    # The Vitkir cast by carving rune scripts. Each rune spell is inscribed with
+    # a primary rune (optionally a secondary rune), has a level (a number, or
+    # "General"), and uses one of the casting Methods. 48 in all.
+    #tRuneSpellHedgeMagicBaseXXX ^"Rune Spell" DEF {
+        PROPERTIES {
+            ^"Rune" STRING REQUIRED
+            ^"Secondary Rune" STRING
+            ^"Level" STRING REQUIRED
+            ^"Method" STRING REQUIRED
+            ^"Descriptor" STRING
+            ^"Source" STRING DEFAULT "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "A Vitkir rune spell, cast by carving a rune script. Inscribed with a primary rune (and optionally a secondary rune), at a level (numeric or General), using one of the casting Methods."
+    }
+
+    # --------------------------------------------------------------- Runes
+    # The 24 runes of the Elder Futhark, each an h3 section of Chapter Seven with
+    # its own letter, meaning, aett, and the kinds of effect it governs. The
+    # rune's guideline write-up is its verbatim DESCRIPTION.
+    #tRuneHedgeMagicBaseXXXXXXXX ^"Rune" DEF {
+        PROPERTIES {
+            ^"Letter" STRING REQUIRED
+            ^"Meaning" STRING REQUIRED
+            ^"Effects" STRING
+            ^"Aett" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "One of the 24 runes of the Elder Futhark, with its Latin-letter transliteration, meaning, aett, and the kinds of magical effect it governs."
+    }
+
+    # ------------------------------------------------------- Modified Runes
+    # The alternate-alphabet correspondences (The Anglo-Saxon Futhorc, The
+    # Younger Futhark) the book tabulates for the Hermetic integration of rune
+    # magic. 49 rows. These are pure alphabet-correspondence data — the book
+    # gives no rules prose for them — so they are soft-statted from the table
+    # (name, letter, pronunciation, meaning, Elder-Futhark equivalent).
+    #tModifiedRuneHedgeMagicBase ^"Modified Rune" DEF {
+        PROPERTIES {
+            ^"Table" STRING REQUIRED
+            ^"Letter" STRING
+            ^"Rune Name" STRING REQUIRED
+            ^"Pronounced" STRING
+            ^"Meaning" STRING
+            ^"Elder Equivalent" STRING
+            ^"Source" STRING DEFAULT "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "A rune from an alternate alphabet (the Anglo-Saxon Futhorc or the Younger Futhark) that the book tabulates against the Elder Futhark for Hermetic integration."
+    }
+}

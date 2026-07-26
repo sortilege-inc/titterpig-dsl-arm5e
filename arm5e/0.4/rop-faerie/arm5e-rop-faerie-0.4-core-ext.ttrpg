@@ -1,0 +1,122 @@
+EXTENSION "ArM5_RoP_Faerie_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: Faerie - core type extensions"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Realms of Power: Faerie is an EXTENSION on the arm5e edition, loaded
+    # alongside the core rulebook (spec S13 composition). It declares the types
+    # the supplement introduces that the core rulebook has no place for.
+    #
+    # What it does NOT declare, deliberately:
+    #   - Virtues and Flaws. The book's 91 faerie Virtues and Flaws fit the core
+    #     ^"Virtue"/^"Flaw" types unchanged: their sizes are the same enum
+    #     (Minor / Major / Free / "Major or Minor" / Special) and their
+    #     categories (Supernatural, Social Interaction, General, Story, Hermetic)
+    #     are the same free-text category axis the core rulebook already uses.
+    #     There is no new axis to widen, so those files EXTEND ^"Virtue"/^"Flaw"
+    #     and DEPEND_ON ArM5_Core_Virtue_Flaw directly — no MODIFY here.
+    #   - Faerie creature stat blocks. The 37 statted faeries are ^"Creature"s
+    #     with a Faerie Might, so the bestiary file EXTENDS ^"Creature" and
+    #     DEPENDS_ON ArM5_Core_Creature directly.
+
+    # -------------------------------------------------------- Faerie Powers
+    # Chapter Three's catalogue of the innate abilities a faerie buys with its
+    # Might. 57 named powers filed under four kinds, which the book prints as
+    # section headers: Ritual, Greater and Lesser, Focus, Personal. The Might
+    # cost is kept BOTH as the printed string ("2 or more points", "10 points")
+    # and, when the book gives a determinate number, as an integer, so a
+    # consumer can total a faerie's Might expenditure without re-parsing prose.
+    #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power" DEF {
+        PROPERTIES {
+            ^"Group" ENUM ["Ritual", "Greater and Lesser", "Focus", "Personal"] REQUIRED
+            ^"Might Cost" STRING
+            ^"Might Cost Value" INTEGER
+            ^"Initiative" STRING
+            ^"Form" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: Faerie"
+        }
+        DESCRIPTION "An innate faerie ability powered by Might. The book files each under one of four kinds (Ritual, Greater and Lesser, Focus, Personal) and states its Might cost, Initiative modifier and associated Hermetic Form."
+        MENTIONS {
+            "Hermetic Form" -> ^"Hermetic Form"
+        }
+    }
+
+    # -------------------------------------------------------- Faerie Blood
+    # Chapter Five's fourteen named faerie bloodlines (Bloodcap Blood, Nymph
+    # Blood, ...). Each is a specific stock a character with faerie ancestry can
+    # descend from, with its own bonuses. Kept distinct from the core rulebook's
+    # single parameterised ^"Faerie Blood" Virtue: these are the enumerated
+    # stocks that Virtue's subject ranges over, each with a full write-up.
+    #tFaerieBloodRoPFaerieBaseXX ^"Faerie Blood" DEF {
+        PROPERTIES {
+            ^"Stock" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: Faerie"
+        }
+        DESCRIPTION "A named faerie bloodline a character with faerie ancestry may descend from, granting the bonuses stated in its write-up."
+    }
+
+    # -------------------------------------------------------- Story Elements
+    # Chapter Seven's story-telling toolkit: 20 evocative elements filed under
+    # Actors, Props and Scenery, each read three ways down a Path of Chance, a
+    # Path of Destiny, or a Forking Path. The three readings are first-class
+    # STRING properties (not one packed blob) so a storyguide can pull the
+    # reading they want.
+    #tStoryElementRoPFaerieBaseX ^"Story Element" DEF {
+        PROPERTIES {
+            ^"Group" ENUM ["Actors", "Props", "Scenery"] REQUIRED
+            ^"Path of Chance" STRING
+            ^"Path of Destiny" STRING
+            ^"Forking Path" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: Faerie"
+        }
+        DESCRIPTION "An evocative element (an actor, a prop, or a piece of scenery) a faerie story can be built around, read three ways: down a Path of Chance, a Path of Destiny, or a Forking Path."
+    }
+
+    # ------------------------------------------------------- Faerie Wizardry
+    # Chapter Six's rules for mortal wizards who bargain with, mimic, or wield
+    # faerie power. 22 rules topics filed under five sections (Rites of Faerie,
+    # Faerie Methods, Faerie Powers, Faerie Bargaining, Pagan Traditions).
+    #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry" DEF {
+        PROPERTIES {
+            ^"Section" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: Faerie"
+        }
+        DESCRIPTION "A rules topic from the Faerie Wizardry chapter, filed under one of its five sections."
+    }
+
+    # The level guidelines for the eight Faerie Wizardry powers (Beguile,
+    # Conjure, Dream, Grant, Portage, Ware, Weal, Woe), read exactly like
+    # Hermetic spell guidelines: a level and the effects available at it. A
+    # single level often lists several distinct effects, kept as a LIST so none
+    # is merged away.
+    #tFaerieWizGuidelineRoPFaeri ^"Faerie Wizardry Guideline" DEF {
+        PROPERTIES {
+            ^"Power" STRING REQUIRED
+            ^"Level" STRING REQUIRED
+            ^"Effects" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: Faerie"
+        }
+        DESCRIPTION "A level guideline for one of the eight Faerie Wizardry powers: the level and the effects that can be achieved at it."
+        MENTIONS {
+            "Faerie Wizardry" -> ^"Faerie Wizardry"
+        }
+    }
+
+    # -------------------------------------------------- Faerie Creature Note
+    # The Faerie Bestiary chapter prints 37 full stat blocks (converted as
+    # ^"Creature"s) interleaved with 57 prose passages that carry no stat block
+    # of their own: variant write-ups ("Lamia Variants"), thematic groupings
+    # ("Child Killers", "Protectors"), and sub-location notes. They are real,
+    # enumerable bestiary content but the book gives them as prose, so they are
+    # soft-statted here: a name, the verbatim passage, and — for a variant — the
+    # base creature it varies. NEVER invented numbers.
+    #tFaerieCreatureNoteRoPFaeri ^"Faerie Creature Note" DEF {
+        PROPERTIES {
+            ^"Relates To" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: Faerie"
+        }
+        DESCRIPTION "A prose bestiary passage without a stat block of its own: a creature variant, a thematic grouping, or a sub-location note. Soft-statted verbatim; no numbers are invented."
+    }
+}

@@ -69,6 +69,10 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "There are three steps in determining how many experience points a character gains in a season.\n\nThe first is determining the Source Quality. This may be set by the troupe (for practice and adventures, as described later), or by the rules, for teaching and books. There are some Virtues and Flaws that affect the Source Quality, such as Good Teacher.\n\nNext, determine the Advancement Total. This may be the same as the Source Quality, but there are Virtues and Flaws that modify the Source Quality, such as Book Learner.\n\nFinally, determine the number of experience points gained. This is normally the same as the Advancement Total, but there are some Virtues and Flaws, such as Affinity, that modify the Advancement Total when calculating the number of experience points gained.\n\nSeasonal advancement always creates one or more Source Qualities, and all the steps described here apply. Other sources of experience points may create an Advancement Total, or simply assign experience points. If a source creates an Advancement Total directly, no Virtues, Flaws, or other factors that modify the Source Quality apply. Similarly, if a source directly grants experience points, nothing modifies the number."
+            MENTIONS {
+                "Good Teacher" -> ^"Good Teacher"
+                "Book Learner" -> ^"Book Learner"
+            }
         }
         #tKXpshd7EV2baTXT834ZCv01 ^"Assigning Seasons" DEF {
             APPLIES TO [^"Character"]
@@ -136,6 +140,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Worship is a seasonal activity (conducted during a free season) and is available to any Christian character with access to a chapel or church. This is different from the normal worship of God performed by virtually everyone in Mythic Europe (attending Mass, religious festivals, etc). This special sort of worship involves a demanding daily routine that includes fasting, prayer, and meditation.\n\nWorship has a Source Quality equal to the Divine aura in the church.\n\nExperience Points from worship may normally be spent on Church Lore, Concentration, Music, or any Supernatural Ability or Art aligned to the Divine that the character already has a Score in. Note that most Supernatural Abilities and the Hermetic Arts are not Divine aligned. The points may be split between several Abilities or Arts; generate separate Advancement Totals for each, based on the assigned worship Source Quality.\n\nSimilar activities are available to followers of other Divine faiths, but the details vary depending on the faith."
+            MENTIONS {
+                "Hermetic Arts" -> ^"Hermetic Arts"
+            }
         }
         #t23foUX8grTBCnmKCj8C7472 ^"Teaching" DEF {
             APPLIES TO [^"Character"]
@@ -159,6 +166,11 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "TRACTATUS" "Source Quality"
             }
             DESCRIPTION "Characters can learn by studying from books, and practicing if the subject of study requires it. It is not possible to study from a book unless you are fluent (have a score of four or higher) in the language in which it is written, and can read and write the writing system used (which requires a score in Artes Liberales).\n\nThere are two types of books, summae (singular summa) and tractatus (singular also tractatus). A summa contains an organized account of a topic, taking it from the basics up to a certain level. It can be studied as long as the student's level in the subject of the book is less than the level of the book. A tractatus contains an in-depth treatment of one aspect of the subject. A tractatus is useful to students at any level of ability, because you can never know everything about your subject.\n\nSee Writing Books, page 379, for the rules for calculating the Source Quality for a book. However, in most cases the quality, and level for a summa, will simply be noted as features of the book.\n\nBooks can be written about any Hermetic Art or any Ability, including Supernatural Abilities and Spell Mastery Abilities. A character can only study a Supernatural Ability from a book if he already has a score of at least one in that Ability.\n\nReading Summae: A student may continue to study a summa as long as his score in the Art or Ability that it concerns is lower than the level of the text. Thus, a summa may be studied for several seasons with profit.\n\nStudying Tractatus: It takes one season to study a tractatus, and a given student may only study a given tractatus once, with benefit. A person gains nothing from studying a tractatus they wrote themselves."
+            MENTIONS {
+                "Artes Liberales" -> ^"Artes Liberales"
+                "Writing Books" -> ^"Writing Books"
+                "Spell Mastery" -> ^"Spell Mastery"
+            }
         }
         #tipnK1muvXCg2or3X178GfAg ^"Vis (Study)" DEF {
             APPLIES TO [^"Character"]
@@ -169,6 +181,10 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "VIS SOURCE QUALITY" "Stress Die + Aura Bonus"
             }
             DESCRIPTION "Magi can study the Hermetic Arts from raw vis. This requires one pawn of vis of the appropriate Art for every five levels or part thereof that the magus has in that Art, and a minimum of one pawn, all of which are consumed during the season's study.\n\nIf the stress die double botches, the maga may enter Wizard's Twilight (see page 228). The number of botch dice equals the number of pawns of vis used in study.\n\nStudying from raw vis does not require a Hermetic laboratory; it can, in principle, be done anywhere. Most magi do study raw vis in their laboratory, though."
+            MENTIONS {
+                "Hermetic Arts" -> ^"Hermetic Arts"
+                "Wizard's Twilight" -> ^"Wizard's Twilight"
+            }
         }
         #th6CSDguidgB3JbtjIWaJhTg ^"Distractions (Advancement)" DEF {
             APPLIES TO [^"Character"]
@@ -256,6 +272,11 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Books copied by people lacking particular skills become corrupted. In the simplest case, the scribe omits small marks that are a vital part of the meaning because he thinks they are merely ink blots. In more complex cases, he 'corrects' parts of the text, creating gibberish. A corrupted text is useless.\n\nA character must be able to read and write the language in which the book is written to copy it without corrupting it. However, a score of 3 in the language is sufficient to allow accurate copying.\n\nA character must have a score of at least 1 in the relevant Realm Lore, or the appropriate Ability, to copy a text about a Supernatural Ability without corrupting it.\n\nA character must have a score of at least 1 in Magic Theory in order to copy a book about the Hermetic Arts or Parma Magica without corrupting it. Scores in the Ability in question are no substitute in this case."
+            MENTIONS {
+                "Magic Theory" -> ^"Magic Theory"
+                "Hermetic Arts" -> ^"Hermetic Arts"
+                "Parma Magica" -> ^"Parma Magica"
+            }
         }
         #tNKzEtAnDUKelkSBF5ZwuHo8 ^"Hermetic Books: Categories of Value" DEF {
             APPLIES TO [^"Character"]
@@ -289,6 +310,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Many Hermetic books are sold through exchanges of letters, carried by Redcaps. Some Redcaps provide ancillary services to the book trade. Some assess goods for sale on behalf of distant clients, or act as neutral parties between a pair of interested vendors. A few act as procurers, finding desired materials for a small fee. House Mercere’s covenants also sometimes act as scribal centers. There are four main methods of postal sale.\n\nSale by public offer occurs when covenants make known the catalog of books they have available, and invite buyers. Public offers often persist over lengthy periods. Some covenants, for example, provide their sodales with a list at each Tribunal meeting. Some public offers specify the price the seller requires, others invite negotiation.\n\nSale by tender occurs when a covenant circulates the desire to possess a certain work, or books of a particular type, and invites contact by potential suppliers. These offers are usually accompanied by an indication of the price the covenant would consider fair, but it is not unusual for a potential seller to contact the tendering covenant and suggest an alternative method of payment. Negotiation for sales by tender can be complex and protracted. It is common for several covenants to answer each call, and the tendering covenant may hold a glacial auction by mail, pressuring the sellers to reduce their price. Covenants who do not wish to advertise their requirements can usually hire a Redcap to discreetly ask nearby covenants if they have a suitable book available.\n\nSale by exchange occurs when a covenant advertises that it wishes to trade one class of text for a second class of text. This sort of barter can lead to extended negotiations, on delivery dates and confirmation of the quality of the copies to be traded by a third party trusted by both vendors. Even the choice of quality assessor is often a matter of haggling.\n\nSale by subscription occurs when a magus announces his intention to create a spell or device and invites magi to pay, in advance, for access to a Lab Text when it becomes available. Some magi seeking subscriptions offer a flat price: for\n\nMany Hermetic books are sold under a condition called the Cow and Calf Oath. This refers to a ruling from the Hibernia Tribunal that has not been ratified by the Grand Tribunal. It is an agreement that the purchaser of the book will not sell, or freely give, copies without the seller's permission. Some magi approve of the Cow and Calf Oath, while others despise it. The prices given later, aside from that for mundane books, assume the characters have sworn the Oath. Prices may be far higher for books that will rival their parents, and reduce the income of the original covenant."
+            MENTIONS {
+                "House Mercere" -> ^"House Mercere"
+            }
         }
         #tIItoySa8G66Ye19VYbtv0vr ^"Mundane Books" DEF {
             APPLIES TO [^"Character"]
@@ -338,6 +362,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Most books of the highest Quality cannot be purchased. Covenants receive them as gifts in exchange for exceptional service, and on the condition that the book will never be copied without the permission of the originating covenant, or magus. The Cow and Calf Oath limits the distribution of some material, but is difficult to enforce.\n\nHouse Bonisagus does allow magi to copy books of exceptional Quality, as part of its members' obligation under the Oath of Hermes. Durenmar does not sell copies of these texts, but does limit copying to one magus at a time, selected by the Primus's representative. Durenmar uses a version of the Cow and Calf Oath to insist that copies of these finest works not be sold, because it is an insult to the authors of the book to value their work against mundane possessions. They may only be given, and with ceremony. There is little the Bonisagus magi can do to prevent the gift being a reciprocation, beyond social pressure.\n\nHouse Tremere is eager to sell, or buy, copies of excellent books. A difficulty is that Coeris is an extraordinarily rich covenant, so simple offers of vis do not interest the Prima. In the past, she has accepted transfer of ownership over valuable vis sources in exchange for books. House Tremere takes the Cow and Calf Oath very seriously and sometimes champions it at the request of others."
+            MENTIONS {
+                "House Tremere" -> ^"House Tremere"
+            }
         }
         #tpcl8RAl5rDShfBk1isVgPCg ^"Learning Supernatural Abilities" DEF {
             APPLIES TO [^"Character"]
@@ -348,6 +375,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "SUPERNATURAL ABILITY SOURCE QUALITY" "Normal Source Quality – Total Score in Supernatural Abilities"
             }
             DESCRIPTION "Only characters with The Gift (see page 63) can learn Supernatural Abilities associated with the Magic realm using these rules, but the teacher need not have The Gift (although, obviously, he must have the Supernatural Ability). Other realms have different conditions, described in the appropriate Realms of Power sourcebook.\n\nSupernatural abilities can only be taught if they have an associated Ability, in game terms. Thus, Shapeshifter can be taught, but Unaging cannot. The initial teaching in a supernatural ability must be by Training or Teaching, as described earlier. Once the character knows the Ability, it may be advanced normally.\n\nIn order to learn a supernatural ability, the student must reach a score of at least 1 in the first season. That is, he must gain at least 5 experience points. However, he must subtract the total of his scores in other supernatural abilities from the Source Quality.\n\nIf the student has had the Hermetic Arts opened (see page 206), he must subtract 15 or the sum of all his Art scores, whichever is higher, from the Source Quality.\n\nFor example, a character has Shapeshifter 3, Dowsing 4, and The Gift. He wants to learn Animal Ken. He must find a character who is willing to teach it to him, despite his Gift, and who can manage a Source Quality of at least 12. If the character has also been opened to the Hermetic Arts, but still has scores of 0 in all of them, he needs to find a teacher who can manage a Source Quality of 27 (15 for the Arts, +3 for Enchanting Music, +4 for Dowsing, +5 for the number of experience points he needs to gain). This is effectively impossible.\n\nMystery Cults can often avoid the penalty due to prior mystical abilities through their Initiation rituals."
+            MENTIONS {
+                "The Gift" -> ^"The Gift"
+                "The Gift" -> ^"The Gift"
+                "Hermetic Arts" -> ^"Hermetic Arts"
+                "The Gift" -> ^"The Gift"
+                "Animal Ken" -> ^"Animal Ken"
+                "Hermetic Arts" -> ^"Hermetic Arts"
+            }
         }
         #tVKkOUzVNR8VWLagC3L3vREx ^"Training Creatures" DEF {
             APPLIES TO [^"Character"]
@@ -365,6 +400,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "REQUIRED POINTS TO TAME A CREATURE" "Might of the Creature, minimum 1"
             }
             DESCRIPTION "Regardless of whether the character taming an animal is a magus, a magical character, or a mundane trainer, taming is a seasonal activity and the character accumulates a number of points each season towards taming the animal. The taming is complete when the accumulated total of points exceeds the Might of the creature. Points only accumulate between consecutive seasons, so if the character does something else in the interim then any points already gained are lost. Points for taming animals cannot be transferred between trainers.\n\nIn all cases, the tamer must be able to interact daily with the creature throughout the season. If the creature has a violent temperament, the tamer may require some kind of protection (magical or otherwise).\n\nIf the tamer can generate enough points to tame a creature in a single season, he may split his point total between the taming of several creatures of the same species, but he cannot tame a number of additional creatures in excess of his Animal Handling Ability Score."
+            MENTIONS {
+                "Animal Handling" -> ^"Animal Handling"
+            }
         }
         #t8gZD8T0Ogi8ygAs5qBopXgB ^"A Hermetic Tamer" DEF {
             APPLIES TO [^"Character"]
@@ -375,6 +413,12 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "TAMING POINTS ACCUMULATED EACH SEASON" "Re(Fo) Lab Total – Creature's Might"
             }
             DESCRIPTION "For a magus, taming an animal is a laboratory activity, and the creature must be housed in the laboratory. Of course, if the creature is very large this may necessitate the construction of a new laboratory. The number of points that the magus accumulates each season is based on the magus' Rego (Form) Lab Total (including bonuses, see insert), which is calculated using the Hermetic Form appropriate to the creature — Aquam for a kelpie, Ignem for a fire elemental, and so on.\n\nFor example, to tame a fire elemental with an Ignem Might 25, the magus must accumulate 25 points. If the magus has a Rego Ignem Lab Total of 40 he will accumulate (40 – 25 =) 15 points each season, and therefore take two complete seasons to tame the elemental.\n\nDuring the process of taming an animal, a Hermetic magus produces a Lab Text that has a level equal to the Might of the creature that was tamed. A magus may use such a Lab Text, written by himself or another, to provide a bonus to his Lab Total when training animals of the same Form (see Hermetic Bonuses insert). In addition, a magus may spend a season replicating the instructions in such a Lab Text to tame another creature of exactly the same species, whose Might does not exceed the level of the Lab Text. To use the Lab Text in this way, the magus must have a Re(Fo) Lab Total at least equal to the level of the Lab Text. Of course, to use any Lab Text the magus must be able to read it; normally a Lab Text prepared by another character needs to be translated.\n\nHermetic Bonuses to Taming Lab Total\nThe following bonuses apply to the Rego (Form) Taming Lab Total for a Hermetic magus:\n• Animal Handling Ability Score • Animal Ken Ability Score • Experimentation Bonus (i.e. a magus can use the Experimentation rules when taming an animal). • +1 for every 5 levels of the highest level similar Lab Text the magus can consult as a guide. A similar Lab Text is an animal taming Lab Text that uses the same Hermetic Form."
+            MENTIONS {
+                "Hermetic Form" -> ^"Hermetic Form"
+                "Animal Handling" -> ^"Animal Handling"
+                "Animal Ken" -> ^"Animal Ken"
+                "Hermetic Form" -> ^"Hermetic Form"
+            }
         }
         #ter90Y5hnPDNV7b8MCrUohE9 ^"Taming Mundane Beasts" DEF {
             APPLIES TO [^"Character"]
@@ -385,6 +429,10 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "EFFECTIVE MIGHT (MUNDANE BEAST)" "1 + 2 x Confidence Score"
             }
             DESCRIPTION "Mundane beasts can also be tamed, and (for this purpose only) mundane beasts have an effective (Animal) Might as given below. Note that taming a beast is a social activity, so penalties for The Gift apply to the number of points accumulated in a season; creatures with Magic Might are often not affected by The Gift in this way."
+            MENTIONS {
+                "The Gift" -> ^"The Gift"
+                "The Gift" -> ^"The Gift"
+            }
         }
         #t5V3gooGi9BHoXviQgrIXO8l ^"A Magical Trainer" DEF {
             APPLIES TO [^"Character"]
@@ -395,6 +443,11 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "TAMING POINTS ACCUMULATED EACH SEASON BY A MASTER OF CREATURES" "Trainer's Might + Trainer's Animal Handling + Trainer's Animal Ken – Creature's Might"
             }
             DESCRIPTION "A character with the Minor Supernatural Virtue Master of (Form) Creatures may tame creatures of that Form that have Cunning statistics. For each consecutive season spent, the character accumulates a number of points equal to:\n\nIf the trainer does not have a Might Score, his Magic Lore Ability Score is substituted for his Might in this calculation (a character with Might can also choose to substitute her Magic Lore Ability Score). If the beast is connected to the same Form as the trainer, the trainer's Might Score is doubled for the calculation above."
+            MENTIONS {
+                "Master of (Form) Creatures" -> ^"Master of (Form) Creatures"
+                "Magic Lore" -> ^"Magic Lore"
+                "Magic Lore" -> ^"Magic Lore"
+            }
         }
         #tG7O17BOYnSqLzVTiCirOmuv ^"A Mundane Trainer" DEF {
             APPLIES TO [^"Character"]
@@ -412,6 +465,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Once an animal is tamed it may be commanded by characters with Intelligence (Int) characteristics. The animal can be commanded by any such character with the Animal Handling Ability or by a character to whom the animal is loyal (see below). Regardless of the method used to the tame the animal, once tamed he does not count as being under a continuing mystical effect."
+            MENTIONS {
+                "Animal Handling" -> ^"Animal Handling"
+            }
         }
         #tc6eO49D5eirwsC0eXDFbex3 ^"Loyalty (Creature Training)" DEF {
             APPLIES TO [^"Character"]
@@ -423,6 +479,11 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "LOYALTY TEST" "Loyal Personality Trait + stress die vs Ease Factor"
             }
             DESCRIPTION "Once a creature is tamed he acquires the Personality Trait (Loyal +0), directed towards the character who tamed him. If the creature already has a Loyal Personality Trait, then he does not gain a new Trait, rather the old Trait is focused towards the trainer and its level does not change. Sometimes commanding an animal calls for a Loyalty Test, and as this is a \"social interaction,\" penalties for the Gift do apply.\n\nIf he wishes, any character with the Animal Handling Ability may spend additional seasons with an already-tamed creature to improve or transfer the loyalty of that creature. Each additional season of training increases the Loyal trait by +1, to a maximum of +3. A character can only improve the loyalty of an animal that is loyal to himself, but instead of increasing the Loyal trait, with this season of extra training the trainer can choose to transfer the animal's loyalty to another character (who must also be present for the season). The trainer may even transfer the loyalty of the animal to himself if he was not the character who originally tamed the animal. A magus who has the Lab Text for a tamed animal (see earlier) may also transfer or improve the Loyal trait of the animal by spending a season, as long as his Re(Fo) Lab Total is at least equal to level of the Lab Text."
+            MENTIONS {
+                "Personality Trait" -> ^"Personality Trait"
+                "Personality Trait" -> ^"Personality Trait"
+                "Animal Handling" -> ^"Animal Handling"
+            }
         }
         #tKamFYAQ2dWoa1rOBVev4ff5 ^"Training Abilities" DEF {
             APPLIES TO [^"Character"]
@@ -430,6 +491,10 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Any character with the Animal Handling Ability may train and therefore improve a tamed animal's Abilities using the standard training rules. As normal, the master must have a greater score in the Ability than the animal does.\n\nUsually, an animal may only be trained in Abilities that he already has a score in, as other Abilities are beyond his capacity. But the troupe may relax this restriction on a case-by-case basis; for example, to allow a horse to be taught to swim. At the end of any season spent training for an Ability that the animal does not already have a score in, make a Loyalty test for the animal against an Ease Factor of 6. If this Loyalty test fails, then the animal does not gain any training experience and the season is wasted. Loyalty tests are not required to improve existing Abilities."
+            MENTIONS {
+                "Animal Handling" -> ^"Animal Handling"
+                "Ease Factor" -> ^"Ease Factor"
+            }
         }
         #t9HyrZYC4rzFWSI384tHIWKe ^"Trained Groups" DEF {
             APPLIES TO [^"Character"]
@@ -437,6 +502,12 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "A character may lead tamed animals in combat, as a trained group. The character must have either tamed each animal himself or spent at least a season working with each animal. The character's Animal Handling Ability score is used instead of his Leadership Ability score to determine how many animals he can lead at one time (see the Obstacles chapter, page 396). Note that while the animals must all have Combat Scores that each fall within a 5-point range, the character leading them does not need to match the Combat Scores of the animals in this way (this is an exception to the normal rules). However, if the character's scores are outside the range, he does not count as part of the group when determining their combat totals. Depending upon the temperament of the animals involved, fighting as a group may require Loyalty tests against an Ease Factor of 6."
+            MENTIONS {
+                "Animal Handling" -> ^"Animal Handling"
+                "Combat Scores" -> ^"Combat Scores"
+                "Combat Scores" -> ^"Combat Scores"
+                "Ease Factor" -> ^"Ease Factor"
+            }
         }
         #tKSeN91BZUWCNzLumo4W9Okf ^"Commanding a Creature" DEF {
             APPLIES TO [^"Character"]
@@ -455,6 +526,13 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "COMMAND BEAST" "Presence + Animal Handling (or Ride or Magic Lore) + stress die vs Ease Factor"
             }
             DESCRIPTION "In general, when the character commands a tamed creature make a Presence + Animal Handling roll against an Ease Factor set from the following table. The Ride Ability may be substituted for Animal Handling when the character is using the animal as a mount, and for exotic creatures another Ability might be more appropriate; the Magic Lore Ability might be used for commanding tamed elementals, for example. A botch may cause the animal to flee, mistakenly perform some other command, or attack its master — depending on the nature of both the command and the beast.\n\nIf several characters issue an animal with contradictory commands, it will preferentially obey commands issued by a character it is loyal to. Otherwise, it will obey the command of the character with the highest Presence + Animal Handling Total. For example, a magus tames a magical wolf (the wolf is now loyal to the magus) and he then commands the wolf to guard his sanctum door; the wolf will not normally obey contradictory commands to leave his post."
+            MENTIONS {
+                "Animal Handling" -> ^"Animal Handling"
+                "Ease Factor" -> ^"Ease Factor"
+                "Animal Handling" -> ^"Animal Handling"
+                "Magic Lore" -> ^"Magic Lore"
+                "Animal Handling" -> ^"Animal Handling"
+            }
         }
         #tr4ijeZWuJzKKvlTw04ffTSa ^"Animal Ken (Training)" DEF {
             APPLIES TO [^"Character"]
@@ -462,6 +540,11 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "A character with Animal Ken (page 159) can speak to animals, including some magical beasts. Such a character can attempt to reason with any animal (regardless of whether it is tamed or not) using his Animal Handling Ability, and so convince it to perform a task. This does not result in a tamed animal, merely an animal that has decided to obey a particular instruction. If an animal is tamed, the character may issue more complex commands to it. The animal is no more likely to obey these commands, but it may allow the character to better utilize an animal as a scout or informant. Another important use of Animal Ken is to convince an animal that is balking at performing some dangerous task that the task is not dangerous after all."
+            MENTIONS {
+                "Animal Ken" -> ^"Animal Ken"
+                "Animal Handling" -> ^"Animal Handling"
+                "Animal Ken" -> ^"Animal Ken"
+            }
         }
         #tKqtPiAdKWdy9cB5PBE9rZq4 ^"Changing Reputations" DEF {
             APPLIES TO [^"Character"]
@@ -489,6 +572,12 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "INITIATION TOTAL" "Presence + (House) Lore + Script bonus"
             }
             DESCRIPTION "The process of Initiation into a Mystery is given a full treatment in *The Mysteries Revised Edition*, but a summary of the mechanics is provided here.\n\nAll of the Exoteric (that is, House) Mysteries are governed by a separate (House) Lore; thus there is a House Bjornaer Lore, a House Criamon Lore, a House Merinita Lore and a House Verditius Lore. Initiates who have not been apprenticed to a member of the House need at least (House) Lore 1; the Mystagogue for any Initiate must also know the same Lore, but generally needs a high level if the Initiation is to succeed. To grant the Initiate a new mystery Virtue, the Mystagogue generates an Initiation Total, which determines the success or failure of the Initiation:\n\nNote that the Initiation Total is based on the scores of the Mystagogue. There is no die roll; if the total is higher than the required target level the Initiation succeeds. Initiation Scripts and their bonuses are described below, and examples are given in the Hermetic Magic chapter. The target for this total is the Initiation Target Level, which depends on the kind of Virtue to be initiated, Major or Minor:\n\nThe Target Level is increased in the unlikely event that the Mystagogue does not know the Initiated Virtue. This is most often the case in the event of a maga who decides to try to Initiate herself in a Mystery Virtue without a Mystagogue, in which case the Initiate acts as her own Mystagogue and uses her own scores in the Initiation Total.\n\nIn addition, if the Initiate underwent a previous Ordeal (gained a Flaw, lost a Virtue, or increased a Flaw from Minor to Major) for a previous Initiation), reduce the Target Level as follows:\n\nOnly one past Ordeal counts towards a new Initiation, and there is a minimum Target Level of 9 no matter how great a reduction is applied. If the Initiation Total equals or exceeds the Target Level, then the Initiation succeeds automatically. No die roll is made — it is required merely to be properly prepared, and skilled enough to succeed.\n\nIf the Mystagogue's Initiation Total does not exceed the Target Level, the Mystagogue may be able to vary and extend the Script, to make it more effective. If that is still not enough (for example, no Script exists) then the Mystagogue can experiment to attempt to discover a Script."
+            MENTIONS {
+                "House Bjornaer" -> ^"House Bjornaer"
+                "House Criamon" -> ^"House Criamon"
+                "House Merinita" -> ^"House Merinita"
+                "House Verditius" -> ^"House Verditius"
+            }
         }
         #tg1lobyXWVSsNAIh22MTHk8y ^"The Initiation Script" DEF {
             APPLIES TO [^"Character"]
@@ -524,6 +613,10 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "Script Variation Test" "Stress Die + Intelligence + (House) Lore vs. Ease Factor"
             }
             DESCRIPTION "It may be necessary for a Mystagogue to modify an Initiation Script; for example, to add additional elements to it to make a difficult Initiation possible for an inexperienced Mystagogue.\n\nTo vary the Script, the Mystagogue makes a test of:\n\nThe Ease Factor is 9 to extend the Script by adding a new component, such as an additional Quest. A magus with lower Presence or (House) Lore will often try to extend a Script he has acquired.\n\nThe Ease Factor is 12 to make a change to a component, such as varying the place, the time, or the subject of a Quest. It is not possible to change which Virtue the Script Initiates; that requires a new Script.\n\nThe Mystagogue may only attempt one change in a given Initiation. If the test fails, the Initiation would fail (and the Mystagogue will know this), but the original Script (or a different variation) may be attempted in another Season. If the variation test roll succeeds, the modified Script is used as above to generate the Initiation Total, and if this equals or exceeds the Initiation Target level, the Initiation succeeds with no further rolls.\n\nIf a single change is not enough to make this Script work, then either a different Script is needed, or the Mystagogue must study more Cult Lore, or experiment."
+            MENTIONS {
+                "Ease Factor" -> ^"Ease Factor"
+                "Ease Factor" -> ^"Ease Factor"
+            }
         }
         #tUGBip4DK1PQpeDYg6ZHHWbK ^"Warping" DEF {
             APPLIES TO [^"Character"]
@@ -583,6 +676,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Anyone subjected to a powerful supernatural effect gains a Warping Point, unless they themselves were responsible for the effect or it was specifically and carefully designed to work on them. 'Powerful effect' is subjective, but any Hermetic spell of sixth magnitude or higher counts. Designing an effect for a particular target requires, in Hermetic terms, that a special version of a Formulaic spell be invented. The spell has its effect on anyone, but only the designated target, and the caster, do not suffer Warping unless the effect is also continuous. Hermetic Longevity Rituals are always designed for a specific target. If the effect is continuous, a Warping Point is gained when it begins and every season thereafter. Ritual effects with Momentary duration are not continuous, but do grant a Warping Point when first applied if they are neither cast by the target nor specifically designed for the target."
+            MENTIONS {
+                "Longevity Rituals" -> ^"Longevity Rituals"
+            }
         }
         #tMqaJTfK13qIL6JMhyh8APBy ^"Constant Supernatural Effects" DEF {
             APPLIES TO [^"Character"]
@@ -590,6 +686,10 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "A character who is constantly under the influence of one or more active supernatural effects gains one Warping Point per year for each effect. The strength of the effect is irrelevant, as is the caster, and whether or not the effect was designed specifically for a certain person.\n\nA character is only under the influence of an effect if she is affected directly and personally. Thus, a character enchanted to fly at all times is under the influence of an effect, but a character living in a flying castle need not be; the castle is directly affected by the magic.\n\nWards are active mystical effects as long as they are protecting someone. Two notable exceptions are Parma Magica and the Aegis of the Hearth, which are based on the same breakthrough by Bonisagus.\n\nEffects with Momentary duration are not continuing effects. A Hermetic Longevity Ritual is, and thus grants one Warping Point per year as a continuing supernatural effect even though it does not grant any Warping Points as a powerful supernatural effect.\n\nThe binding between a Hermetic magus and his familiar or Talisman does not grant Warping Points, nor do any powers enchanted into the bond.\n\nAn effect which is active for half the time counts as constant for these purposes. Less than that, and it does not. Further, it also counts if the character is under the influence of some supernatural effect or other for half the time, even if the particular supernatural effect changes. A character under the effect of a different Sun Duration spell from sunrise to sunset every day for a year would gain a Warping Point.\n\nA powerful, continuous effect that is not specifically designed for an individual grants one Warping Point when first applied, and five every year thereafter: one because it is a continuous supernatural effect and one per season (four total) because it is a continuous powerful supernatural effect."
+            MENTIONS {
+                "Parma Magica" -> ^"Parma Magica"
+                "Aegis of the Hearth" -> ^"Aegis of the Hearth"
+            }
         }
         #tksY7jGUsGL3spKlKbNUrZd9 ^"Supernatural Botches" DEF {
             APPLIES TO [^"Character"]
@@ -619,6 +719,9 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The effects of warping depend on a character's Warping Score, the nature of the character, and the source of the warping.\n\nHermetic magi are made more prone to Wizard's Twilight by their Warping Score. This replaces the normal effects.\n\nMundane characters gain a Minor Flaw when they reach a Warping Score of one. Note that most inhabitants of Mythic Europe have no Warping Points at all, because they live in a low aura and have never been the subject of a supernatural effect. Even those who have been affected by a powerful supernatural effect once only have one Warping Point, not enough for a Minor Flaw.\n\nThis Minor Flaw should reflect the predominant source of the Warping Points. If they are mainly due to an aura, the Minor Flaw will reflect the aura, and most characters will get the same Minor Flaw. If they are mainly due to magical effects, they will reflect the effect. For example, a character who has been repeatedly healed with powerful magic might gain a stigmatic wound, which neither hurts nor causes damage, but looks and feels real.\n\nWhen the Warping Score reaches 3, the character gains a second Minor Flaw.\n\nAt a Warping Score of 5, the character gains a supernatural Minor Virtue attuned to the primary source of Warping Points. This stops any further gain of points from living in a strong aura of the same type as the Minor Virtue.\n\nAt a Warping Score of 6, and every point thereafter, the character gains a Major Flaw appropriate to the main sources of the warping."
+            MENTIONS {
+                "Wizard's Twilight" -> ^"Wizard's Twilight"
+            }
         }
         #tpv81sOZ9C982s422EKeSb2Y ^"Aging" DEF {
             APPLIES TO [^"Character"]
@@ -692,4 +795,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
                 "CRISIS TOTAL" "Simple die + age/10 (round up) + Decrepitude Score"
             }
             DESCRIPTION "**Decrepitude**: Every Aging Point also counts as an experience point towards Decrepitude, which increases as an Ability. Thus, a character who has gained seventeen Aging Points has a Decrepitude score of 2. Characters with a Decrepitude score of 4 are extremely frail, and must roll on the Crisis Table if they undertake stressful activities, such as long journeys, or any combat. Characters with a Decrepitude score of 5 are bedridden and will die within a few months at most. They cannot be saved by mortal intervention.\n\n**Crisis:** Increase the character's Decrepitude first, and then roll on the Crisis Table.\n\nMedical attention may help someone through a crisis. An Int + Medicine roll against an Ease Factor of 6 allows the character to add the attendant's Medicine score to the roll to survive the crisis. Only one doctor may usefully attend a patient, and if the doctor botches the character must subtract 3 from the survival roll.\n\nVirtues that affect aging rolls do not affect crisis survival rolls.\n\nCreo Corpus magic can postpone a crisis, or resolve it if cast as a Momentary Ritual. The level of spell required depends on the severity of the crisis, as noted on the table. Note that the magic required to resolve a crisis that is major or worse is powerful enough to cause warping.\n\nA character who survives a crisis, even through magic, needs the rest of the season to recover fully, and thus cannot undertake any other activities."
+            MENTIONS {
+                "Ease Factor" -> ^"Ease Factor"
+            }
         }}

@@ -1,7 +1,7 @@
 EXTENSION "ARMDef_Realms" {
     NAME "Ars Magica Definitive Edition - Realms"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
     DEPENDS_ON "ARMDef_Core_Base"
 
@@ -47,11 +47,11 @@ EXTENSION "ARMDef_Realms" {
             }
             DESCRIPTION "SPELLCASTING: The aura modifier modifies the Casting Score.\n\nLABORATORY ACTIVITIES: The aura modifier modifies the Lab Total.\n\nABILITY ROLLS: The aura modifier affects supernatural Abilities such as Second Sight, or Wilderness Sense. Most such abilities are Magical in origin, although in particular cases they may be Faerie, Infernal, or even Divine.\n\nMAGIC RESISTANCE: Magic Resistance is altered by the aura modifier. This includes Hermetic Magic Resistance due to the Parma Magica and Forms, as well as the resistance of creatures with supernatural Might. Thus, a magus in a Magic aura of 4 has a +4 bonus to his Magic Resistance, while a demon has a –4 penalty.\n\nPENETRATION: For magi and characters with mystical abilities, the aura modifies the roll to use the ability, which means that Penetration is modified. The aura modifier does not apply to Penetration twice. Thus, a magus in a Divine aura of 2 takes a –6 penalty to his Casting Score. This automatically reduces his Penetration, as that is calculated by subtracting the spell level from the Casting Score. The aura modifier is not subtracted again from the Penetration total. For supernatural creatures, there is no roll to use the ability (see page 426), so the aura modifier applies to Penetration directly."
             REFERENCES {
-                "Second Sight" -> ^"Second Sight"
-                "Wilderness Sense" -> ^"Wilderness Sense"
+                "Second Sight" -> #tK3lWiuLQzp34S7lnZh3DDcI ^"Second Sight"
+                "Wilderness Sense" -> #tIqhPP41OCkIaBGm03JIukWk ^"Wilderness Sense"
                 "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
                 "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
-                "Parma Magica" -> ^"Parma Magica"
+                "Parma Magica" -> #tzLH0KGUBQ1bIuciN3CeqsPr ^"Parma Magica"
                 "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
             }
         }
@@ -188,7 +188,7 @@ EXTENSION "ARMDef_Realms" {
             REFERENCES {
                 "The Church" -> #tNhFepLZdqSnj6phkiJSbOpP ^"The Church"
                 "The Church" -> #tNhFepLZdqSnj6phkiJSbOpP ^"The Church"
-                "True Faith" -> ^"True Faith"
+                "True Faith" -> #tcg0pDpCUzSsp0aoB6YKLwx6 ^"True Faith"
             }
         }
         #t1p9NFyflWKhqbyC7qrYDesb ^"Divine Auras" DEF {
@@ -227,9 +227,9 @@ EXTENSION "ARMDef_Realms" {
             }
             DESCRIPTION "Relics are physical objects that, in some way, house part of the power of the Divine. They are most common in Christianity, and often take the form of parts of the bodies of deceased saints. All relics have a number of common powers, listed below:\n\n1. **FAITH**: All relics contain a True Faith score, giving it Faith Points that may be used by its bearer as Confidence. A relic also grants Magic Resistance equal to ten times its True Faith score to its bearer. A person can only benefit from one relic at a time; any attempt to do otherwise is a sin, and means that they lose the benefits of all relics. However, a person can humbly carry other relics, while only relying on one for the benefits. A character who normally relies on a particular relic would need a very good reason to swap it for another one.\n\n2. **DIVINE MIGHT**: All relics have a Divine Might score, which limits how often their powers may be used (effectively preventing characters from over-using their powers). The Might score also acts as Magic Resistance for the relic against any spells or supernatural effects that target it directly. A relic's Divine Might is equal to the relic's Faith score (or highest Faith score, if more than one applies) multiplied by 10, and the Might Pool is refreshed with every sunrise.\n\n3. **SCOURGING THE INFERNAL**: As supremely holy items, relics are anathema to demons and their followers. Relics radiate an aura of hostility to such creatures that extends a number of feet equal to the Might score of the relic. Any creatures belonging to the Infernal realm that seek to enter this aura will be unable to do so if their Infernal Might does not exceed the Divine Might of the relic. Should they succeed in entering the aura, every round that they remain within it they will be assailed by divine energies causing an amount of damage equal to the Might of the relic, although their Soak still protects them as normal. The assault is accompanied by suitably dramatic visual effects, such as holy fire, lightning, or whatever the storyguide feels is appropriate. It ends as soon as they leave the aura. This power does not affect characters or creatures merely affiliated with the Infernal realm, though they will feel discomfort if they handle the relics for extended periods of time.\n\nIn addition, some relics have powers specific to them. In the case of relics of saints, these powers usually match those of the saint to whom they once belonged. In the case of other relics, the powers are conferred directly by Divine Will. Two sample powers are given here; more can be found on pages 88 and 89 of *Realms of Power: The Divine Revised Edition*."
             REFERENCES {
-                "True Faith" -> ^"True Faith"
+                "True Faith" -> #tcg0pDpCUzSsp0aoB6YKLwx6 ^"True Faith"
                 "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
-                "True Faith" -> ^"True Faith"
+                "True Faith" -> #tcg0pDpCUzSsp0aoB6YKLwx6 ^"True Faith"
                 "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
             }
         }
@@ -300,9 +300,9 @@ EXTENSION "ARMDef_Realms" {
             }
             DESCRIPTION "Any character crossing the boundary of a regio disappears from the normal world and enters a supernatural realm. There are three ways to enter most regiones: being led, entering voluntarily, and getting lost.\n\nAny being native to a regio and part of or affiliated to the realm can lead any number of characters to any level of the regio. Magi are affiliated to the Magic realm, and if they live in a Magical regio they count as native to that regio.\n\nThere are two ways to enter a regio voluntarily, and either or both may apply to a particular regio. The first involves seeing into the regio and then crossing the boundary. This requires some supernatural ability. Second Sight allows a character to see into any regio, as does Magic Sensitivity. Sense Holiness and Unholiness allows a character to see into Divine and Infernal regiones.\n\nTo see into a regio level, roll:\n\nIf you are in an aura different from the aura of the regio, add the current aura and the aura of the regio level to determine the Ease Factor. Thus, the Ease Factor to see from a level 3 Divine aura into a level 5 Magic regio is 21; the difference between these two auras is 8. The Ease Factor may be modified by large amounts on particular days or by particular activities.\n\nAnyone who can see the next level of a regio can lead any number of people into it.\n\nThe second way of entering involves following a particular path or ritual. Sometimes, following the path is enough by itself, and no rolls are needed. In other cases, the rolls specified for seeing into a regio must still be made, but unless the path is followed there is no chance of success. The path can be as simple as walking seven times clockwise around a hill, or as complex as desired, possibly only being available on a particular day, or to a particular kind of person. Some regiones are all but impossible to enter.\n\nFinally, if a character gets lost near a regio boundary, he may accidentally enter the regio. Roll as normal, except that if the character does not have a relevant Ability this merely counts as zero.\n\nAt least one of these methods of entry must apply to any regio, at least if it is to have any impact on the game. There are some regiones into which you must be led by a native, and others into which you cannot be led, or enter voluntarily, but rather must get lost. Natives of a regio can almost always enter and leave freely, but even then there are exceptions. The most secure location possible for a covenant is a regio which people can only enter by being led, but getting into such a regio in the first place is very difficult."
             REFERENCES {
-                "Second Sight" -> ^"Second Sight"
-                "Magic Sensitivity" -> ^"Magic Sensitivity"
-                "Sense Holiness and Unholiness" -> ^"Sense Holiness and Unholiness"
+                "Second Sight" -> #tK3lWiuLQzp34S7lnZh3DDcI ^"Second Sight"
+                "Magic Sensitivity" -> #thhgHSU9xnhN6VFrU83wEHX0 ^"Magic Sensitivity"
+                "Sense Holiness and Unholiness" -> #tlciW1ANh1HX7jWf1rXZSfv0 ^"Sense Holiness and Unholiness"
                 "Ease Factor" -> #tGQufzy8y8Qc3foo2n9p7nMU ^"Ease Factor"
                 "Ease Factor" -> #tGQufzy8y8Qc3foo2n9p7nMU ^"Ease Factor"
                 "Ease Factor" -> #tGQufzy8y8Qc3foo2n9p7nMU ^"Ease Factor"

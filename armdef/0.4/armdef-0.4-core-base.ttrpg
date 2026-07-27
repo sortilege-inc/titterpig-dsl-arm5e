@@ -1,7 +1,7 @@
 BASE "ARMDef_Core_Base" {
     NAME "Ars Magica Definitive Edition - Foundation (actors and characteristics)"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
 
     # Actor hierarchy and character concepts of the Definitive edition
@@ -82,7 +82,7 @@ BASE "ARMDef_Core_Base" {
 
         PROPERTIES {
             ^"House" STRING REQUIRED
-            ^"Hermetic Arts" DEF {
+            #tdca161a54c8c70f3df81 ^"Hermetic Arts" DEF {
                 # Techniques
                 ^"Creo" INTEGER MIN 0 DEFAULT 0
                 ^"Intellego" INTEGER MIN 0 DEFAULT 0
@@ -175,7 +175,7 @@ BASE "ARMDef_Core_Base" {
         }
         DESCRIPTION "Intelligence represents the power to analyze and synthesize concepts, as well as simple memory. It is important for Abilities that require thought power and is paramount for the Hermetic Arts. A character with low Intelligence is not necessarily stupid— common sense, street savvy, wisdom, and the ability to learn are not described by Intelligence."
         REFERENCES {
-            "Hermetic Arts" -> ^"Hermetic Arts"
+            "Hermetic Arts" -> #tdca161a54c8c70f3df81 ^"Hermetic Arts"
         }
     }
 

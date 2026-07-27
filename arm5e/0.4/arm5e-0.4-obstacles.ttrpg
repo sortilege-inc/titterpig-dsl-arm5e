@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Obstacles" {
     NAME "Ars Magica Fifth Edition - Obstacles"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
@@ -39,25 +39,7 @@ EXTENSION "ArM5_Obstacles" {
                 TOPICS [ "combat sequence summary" ]
                 TEXT "1. Roll initiative and calculate initiative order. 2. Party with highest initiative attacks. a. Attacker rolls and generates an Attack Total. b. Defender rolls and generates a Defense Total. c. Calculate Attack Advantage: Attack Total – Defense Total. d. If Attack Advantage is zero or less, the attack missed. Move on to step 3. If it is one or greater, calculate Damage Total. e. Calculate damage taken by defender. 3. Repeat attack sequence (2. a. – e.) for party with next highest initiative. Once all parties have acted once, return to step 2. Note that initiative is not re-rolled."
             }
-        }
-        #tAUxdei1b6C0655G1MsnkuWe ^"Damage Table" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Table Columns" LIST ["Size", "Light", "Medium", "Heavy", "Incapacitating", "Dead"]
-                ^"Source" STRING "Core Rules"
-            }
-            TABLE {
-                "–4 or less" "1" "2" "3" "4" "5+"
-                "–3" "1–2" "3–4" "5–6" "7–8" "9+"
-                "–2" "1–3" "4–6" "7–9" "10–12" "13+"
-                "–1" "1–4" "5–8" "9–12" "13–16" "17+"
-                "0" "1–5" "6–10" "11–15" "16–20" "21+"
-                "+1" "1–6" "7–12" "13–18" "19–24" "25+"
-                "+2" "1–7" "8–14" "15–21" "22–28" "29+"
-                "+3" "1–8" "9–16" "17–24" "25–32" "33+"
-            }
-        }
-        GUIDANCE {
+        }        GUIDANCE {
             ENTRY ^"Example of Initiative" #tYhL7jHlwX0YzEvOiuxd49FN {
                 TOPICS [ "initiative", "worked example" ]
                 TEXT "Suppose there are five parties to a combat. On the first initiative roll they get the following results: John: 10 Will: 6 Michelle: 6 David: 6 Scott: 4 Because David, Will, and Michelle all tied, they must reroll. The reroll only determines the relative ordering of these three players, it does not over-ride the initial initiative result. Here are their rerolls: Michelle: 12 David: 6 Will: 1 The final initiative order is: John Michelle David Will Scott"

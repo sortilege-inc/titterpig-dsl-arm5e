@@ -1,9 +1,14 @@
 # titterpig-dsl-arm5e — TODO
 
 Status as of 2026-07-26 (evening). Corpus validates **arm5e 100 files 0/0, armdef 40 files
-0/0**; MENTIONS arm5e 2145 / armdef 1431 (both 0 unresolved / 0 surface-mismatch);
-MODIFY/no-armdef-type gates clean; sources.json fully synced (146/146). **NOT yet committed** —
-everything past `c51cb9f`/`fe2e4c0` awaits review.
+0/0**; MENTIONS arm5e 2167 / armdef 1431 (both 0 unresolved / 0 surface-mismatch);
+MODIFY/no-armdef-type gates clean; sources.json fully synced (146/146).
+
+**COMMITTED** (not pushed): corpus `a1466f8` (coverage + record gaps) → `a84d4fd` (Things-of-
+Virtue verbatim write-ups); titterpig-mastra `7868d97` (builders/manifests); titterpig-dsl
+`82bb5c5` (MENTIONS tooling + spec). RoP:Magic Ch8 Things-of-Virtue write-ups now recovered
+verbatim via a column-aware PDF re-extraction (the HTML slice was displaced) — the flagged
+extraction defect is RESOLVED.
 
 ## Current effort — five supplements: coverage + record-gap remediation **DONE**
 

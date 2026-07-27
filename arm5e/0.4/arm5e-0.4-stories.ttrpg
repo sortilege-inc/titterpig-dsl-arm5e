@@ -1,7 +1,7 @@
 EXTENSION "ArM5_Stories" {
     NAME "Ars Magica Fifth Edition - Stories"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.4.1"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
 
@@ -100,7 +100,7 @@ EXTENSION "ArM5_Stories" {
             DESCRIPTION "The Order of Hermes has extensive politics, and the mundane elites of particular areas also have political concerns. Negotiation, trade, and court cases all fall under this general heading. Political adventures tend to involve little combat, and normally cannot be solved by the simple application of magic, which makes them good for more powerful magi. It also makes them a good place for companions to shine, particularly mundane politics, where The Gift is a serious hindrance to the magi."
             REFERENCES {
                 "Order of Hermes" -> #t2tZNiB6YhCRxsiY8GALpPw5 ^"Order of Hermes"
-                "The Gift" -> ^"The Gift"
+                "The Gift" -> #tTewiGdZwmTboFEtrtBvqViC ^"The Gift"
             }
         }
         #tCbLdDffoE3oxtwo6RITP5LR ^"Quests" DEF {
@@ -110,52 +110,39 @@ EXTENSION "ArM5_Stories" {
             }
             DESCRIPTION "Quests shape a series of stories, rather than a single story. They differ from treasure hunting in that the object of the quest is more elevated, and the process of getting there is as important, and significant for the characters, as the discovery itself. In troupe-style play, a quest is best designed to be split up by stories involving other characters, so that people do not feel that one magus's obsession is taking over the saga."
         }
-        #tq1MxcxLjR4jtqHVNJLVrF75 ^"Places to Explore" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar listing example places for exploration stories.\n\n• The Covenant. If the covenant was there before the player characters joined, they may not know everything about it. • Mundane Villages. The villages nearest the covenant will become aware of its existence, so it is a good idea if the magi know a bit about them. Friendly relations would be ideal, of course. • Mundane Towns. The magi are likely to need supplies which have to be bought in a town, so they should explore the local towns. This might be best done by sending the grogs, with maybe a companion. • Other Covenants. Magi are expected to give hospitality to visiting magi, even if they turn up uninvited. Getting to know your neighbors is a good idea, provided you can avoid upsetting them. • A faerie forest where the intelligent creatures have the shape of animals, and the dumb brutes have the shape of humans. • A faerie palace where a shining queen grants rewards to those who bring the most beautiful stories. The stories become jewels or fine tapestries when told, and it is possible to learn much from the queen's stored treasures. • A faerie village that looks a lot like a mundane village, except that the wheat is literally golden and the fruit trees bear gems. Attempting to eat the food is not recommended. • A set of ancient standing stones that form a magical regio. In higher levels the stones are aware and intelligent, being the forms of ancient elementals. • An abandoned village, depopulated by an infernal plague and now the home of demons and undead. • A lake that covers both a magical regio and a faerie regio. If characters enter the magical regio, they find many talking fish, which live in an elaborate society. In the faerie regio they find beautiful people living underwater, in a castle built of shells."
-        }
-        #tDxV3NhJSXUFpQn2pyAx6nw3 ^"Treasures to Hunt" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar listing example treasures for treasure-hunting stories.\n\n• The raw vis found in the body of the magical wolf that hunts in the hills north of the covenant. • The raw vis found in the tears of happiness cried by a particular faerie prince. • A shield created by the wizard who trained the wizard who trained Bonisagus. The shield is said to defend its wielder from all magic, no matter how powerful, but it also has great historical interest. • The cauldron owned by a powerful faerie, which is said to have the power to raise the dead. • A staff created by a powerful Flambeau magus, said to have the power to create a fire large and hot enough to reduce a city to fine ash. • A flying castle, crafted by a follower of Verditius over a century ago, but lost after the grogs rebelled against the magi who lived there and threw them over the edge. • The library of a hermit magus who used to live somewhere near the covenant. • A set of scrolls belonging to the Cult of Mercury, detailing some of the Cult's most powerful rituals. • An Arcane Connection to the dragon that lives in the mountains, so that the magi can use sympathetic magic to overcome its Magic Resistance."
-            REFERENCES {
-                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
+        GUIDANCE {
+            ENTRY ^"Places to Explore" #tq1MxcxLjR4jtqHVNJLVrF75 {
+                CONCERNS [ #tVAHWscs419QqEf4B0tcCDvD ^"Exploration" ]
+                TEXT "• The Covenant. If the covenant was there before the player characters joined, they may not know everything about it. • Mundane Villages. The villages nearest the covenant will become aware of its existence, so it is a good idea if the magi know a bit about them. Friendly relations would be ideal, of course. • Mundane Towns. The magi are likely to need supplies which have to be bought in a town, so they should explore the local towns. This might be best done by sending the grogs, with maybe a companion. • Other Covenants. Magi are expected to give hospitality to visiting magi, even if they turn up uninvited. Getting to know your neighbors is a good idea, provided you can avoid upsetting them. • A faerie forest where the intelligent creatures have the shape of animals, and the dumb brutes have the shape of humans. • A faerie palace where a shining queen grants rewards to those who bring the most beautiful stories. The stories become jewels or fine tapestries when told, and it is possible to learn much from the queen’s stored treasures. • A faerie village that looks a lot like a mundane village, except that the wheat is literally golden and the fruit trees bear gems. Attempting to eat the food is not recommended. • A set of ancient standing stones that form a magical regio. In higher levels the stones are aware and intelligent, being the forms of ancient elementals. • An abandoned village, depopulated by an infernal plague and now the home of demons and undead. • A lake that covers both a magical regio and a faerie regio. If characters enter the magical regio, they find many talking fish, which live in an elaborate society. In the faerie regio they find beautiful people living underwater, in a castle built of shells."
             }
         }
-        #trOP3Jc0mS3mcfiHL6UczpSn ^"Things to be Asked" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+        GUIDANCE {
+            ENTRY ^"Treasures to Hunt" #tDxV3NhJSXUFpQn2pyAx6nw3 {
+                CONCERNS [ #txVaAZSZ9ByNcLSy8TgQOWmX ^"Treasure Hunting" ]
+                TEXT "• The raw vis found in the body of the magical wolf that hunts in the hills north of the covenant. • The raw vis found in the tears of happiness cried by a particular faerie prince. • A shield created by the wizard who trained the wizard who trained Bonisagus. The shield is said to defend its wielder from all magic, no matter how powerful, but it also has great historical interest. • The cauldron owned by a powerful faerie, which is said to have the power to raise the dead. • A staff created by a powerful Flambeau magus, said to have the power to create a fire large and hot enough to reduce a city to fine ash. • A flying castle, crafted by a follower of Verditius over a century ago, but lost after the grogs rebelled against the magi who lived there and threw them over the edge. • The library of a hermit magus who used to live somewhere near the covenant. • A set of scrolls belonging to the Cult of Mercury, detailing some of the Cult's most powerful rituals. • An Arcane Connection to the dragon that lives in the mountains, so that the magi can use sympathetic magic to overcome its Magic Resistance."
             }
-            DESCRIPTION "The source presents this as a sidebar listing example requests for assistance.\n\n• A village is being stalked by a monster which carries off and eats virgins. • The same village, nine months later, has a lot of strange babies who don't appear entirely human. • A village is threatened by famine after the river dried up. • The relics have been stolen from an abbey, and the monks fear that magic or devil-worshippers were involved. • Magi at the covenant made a bargain, almost a century ago, with a powerful monster, so that it would not destroy a city. The period of the bargain is almost up, and the city elders want the current magi to extend it. They have no idea what the details were. • A nobleman is involved in a dispute with his neighbor, which is heading towards war. He portrays himself as the innocent victim of an unscrupulous robber, and begs the assistance of the magi. • The other nobleman turns up a week later with a similar story of wronged innocence."
         }
-        #tR4e8Ab6IA7JiHhiJFkwkq8f ^"Potential Crises" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+        GUIDANCE {
+            ENTRY ^"Things to be Asked" #trOP3Jc0mS3mcfiHL6UczpSn {
+                CONCERNS [ #tdnCzchcEoTFQaNR9x0t7Ol1 ^"Requests for Assistance" ]
+                TEXT "• A village is being stalked by a monster which carries off and eats virgins. • The same village, nine months later, has a lot of strange babies who don’t appear entirely human. • A village is threatened by famine after the river dried up. • The relics have been stolen from an abbey, and the monks fear that magic or devil-worshippers were involved. • Magi at the covenant made a bargain, almost a century ago, with a powerful monster, so that it would not destroy a city. The period of the bargain is almost up, and the city elders want the current magi to extend it. They have no idea what the details were. • A nobleman is involved in a dispute with his neighbor, which is heading towards war. He portrays himself as the innocent victim of an unscrupulous robber, and begs the assistance of the magi. • The other nobleman turns up a week later with a similar story of wronged innocence."
             }
-            DESCRIPTION "The source presents this as a sidebar listing example crises at home.\n\n• A monster attacks the covenant. • A magus from another covenant starts a campaign of harassment against the covenant, being careful to avoid blatantly violating the Code. He might attack grogs, or blight crops, but he will not scry on the covenant, nor attack a magus without declaring Wizard's War. • A bishop hears that the covenant is full of heretics, and sets out, with a small army, to investigate. • A local lord demands that the covenant swear fealty to him, or face the consequences. Swearing is against the Code, but so is getting into a war with the nobility. • A powerful faerie decides to use the covenant as part of his latest game. • The covenant's magical aura suddenly strengthens, and the magi find themselves sharing space with a group of annoyed, arrogant, and powerful spirits. • The covenant disappears into a regio, and the magi cannot immediately find the way out. (Or in, for those who were away at the time.) • The grogs rebel against the tyrannical rule of the magi. The players are likely to be playing both sides of this dispute, which could be tricky, but very effective for experienced players."
         }
-        #teW1KdrIHEBFEzwzAGTU9e8r ^"Political Issues" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+        GUIDANCE {
+            ENTRY ^"Potential Crises" #tR4e8Ab6IA7JiHhiJFkwkq8f {
+                CONCERNS [ #tTsj6j6Pdk0tV46XB50ovr7n ^"Crises at Home" ]
+                TEXT "• A monster attacks the covenant. • A magus from another covenant starts a campaign of harassment against the covenant, being careful to avoid blatantly violating the Code. He might attack grogs, or blight crops, but he will not scry on the covenant, nor attack a magus without declaring Wizard’s War. • A bishop hears that the covenant is full of heretics, and sets out, with a small army, to investigate. • A local lord demands that the covenant swear fealty to him, or face the consequences. Swearing is against the Code, but so is getting into a war with the nobility. • A powerful faerie decides to use the covenant as part of his latest game. • The covenant’s magical aura suddenly strengthens, and the magi find themselves sharing space with a group of annoyed, arrogant, and powerful spirits. • The covenant disappears into a regio, and the magi cannot immediately find the way out. (Or in, for those who were away at the time.) • The grogs rebel against the tyrannical rule of the magi. The players are likely to be playing both sides of this dispute, which could be tricky, but very effective for experienced players."
             }
-            DESCRIPTION "The source presents this as a sidebar listing example political stories.\n\n• A Hermetic Tribunal is coming up, and the other covenants are looking for allies. Of course, choosing to work with one makes enemies of another. • One of the player magi is framed for a serious Hermetic crime. • One of the player magi is caught in a serious Hermetic crime. • The covenant tries to build good relations with a local mundane notable, such as a lord, bishop, or abbot. • A mundane enemy of the covenant tries to take an important piece of land, possibly containing a vis source, off them through legal processes. • War threatens to break out in the region around the covenant. While the magi could stay neutral and, most likely, survive, it would not be good for the covenant. Can they broker a peace? • The local bishop begins preaching vigorously against heresy, and priests are instructed to enquire closely into people's activities. Many people resent this, but no one dares speak out publicly for fear of being branded a heretic. • The player character magi disagree strongly over the best course of action to take, and spend the entire session arguing about it."
         }
-        #t3i26aCLDbEmLEhIEWkmkwSv ^"Objects of Quests" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+        GUIDANCE {
+            ENTRY ^"Political Issues" #teW1KdrIHEBFEzwzAGTU9e8r {
+                CONCERNS [ #t4DG1kjw3O1CNmZh4TORi5fV ^"Politics" ]
+                TEXT "• A Hermetic Tribunal is coming up, and the other covenants are looking for allies. Of course, choosing to work with one makes enemies of another. • One of the player magi is framed for a serious Hermetic crime. • One of the player magi is caught in a serious Hermetic crime. • The covenant tries to build good relations with a local mundane notable, such as a lord, bishop, or abbot. • A mundane enemy of the covenant tries to take an important piece of land, possibly containing a vis source, off them through legal processes. • War threatens to break out in the region around the covenant. While the magi could stay neutral and, most likely, survive, it would not be good for the covenant. Can they broker a peace? • The local bishop begins preaching vigorously against heresy, and priests are instructed to enquire closely into people’s activities. Many people resent this, but no one dares speak out publicly for fear of being branded a heretic. • The player character magi disagree strongly over the best course of action to take, and spend the entire session arguing about it."
             }
-            DESCRIPTION "The source presents this as a sidebar listing example objects of quests.\n\n• The Holy Grail. • The cave where Bonisagus devised the Parma Magica. • The lost rituals of the Cult of Mercury. • The resting place of one of the Old Ones, powerful magical creatures who died, or fell asleep, millennia ago. • The fields of Elysium. • The secret of raising the dead through Hermetic magic. • The character's father. • True faith in God."
-            REFERENCES {
-                "Parma Magica" -> ^"Parma Magica"
-                "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
+        }
+        GUIDANCE {
+            ENTRY ^"Objects of Quests" #t3i26aCLDbEmLEhIEWkmkwSv {
+                CONCERNS [ #tCbLdDffoE3oxtwo6RITP5LR ^"Quests" ]
+                TEXT "• The Holy Grail. • The cave where Bonisagus devised the Parma Magica. • The lost rituals of the Cult of Mercury. • The resting place of one of the Old Ones, powerful magical creatures who died, or fell asleep, millennia ago. • The fields of Elysium. • The secret of raising the dead through Hermetic magic. • The character’s father. • True faith in God."
             }
         }}

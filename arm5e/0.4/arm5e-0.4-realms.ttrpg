@@ -1,7 +1,7 @@
 EXTENSION "ArM5_Realms" {
     NAME "Ars Magica Fifth Edition - Realms"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.4.1"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
 
@@ -43,20 +43,11 @@ EXTENSION "ArM5_Realms" {
             }
             DESCRIPTION "The source presents this as a sidebar table. It indicates the degree to which realms influence powers of other realms; the modifiers apply to the effect an aura has on any supernatural act performed within it."
         }
-        #toXxxtWTZfwfvrqNjgCrLYyc ^"Supernatural Activity Rolls Modified by Aura" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar. Spellcasting Rolls: The realm interaction modifier modifies the Casting Score. Lab Totals: The aura modifier in the Lab Total is calculated according on the interaction table. Ability Rolls: The aura rating affects supernatural Abilities such as Second Sight, or Wilderness Sense. Most such abilities are Magical in origin, although in particular cases they may be Faerie, Infernal, or even Divine. Magic Resistance: Magic Resistance is altered by the aura modifier. This includes Hermetic Magic Resistance due to the Parma Magica and Forms, as well as the resistance of creatures with mystic Might. Penetration: For magi and characters with mystical abilities, the aura modifies the roll to use the ability, which means that Penetration is modified. The aura modifier does not apply to Penetration twice. Thus, a magus in a Divine aura of 2 takes a –6 penalty to his Casting Score. This automatically reduces his Penetration, as that is calculated by subtracting the spell level from the Casting Score. The aura modifier is not subtracted again from the Penetration total. For mystical creatures, there is no roll to use the ability, so the aura modifies Penetration directly."
-            REFERENCES {
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Second Sight" -> ^"Second Sight"
-                "Wilderness Sense" -> ^"Wilderness Sense"
-                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
-                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
-                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
-                "Parma Magica" -> ^"Parma Magica"
+        GUIDANCE {
+            ENTRY ^"Supernatural Activity Rolls Modified by Aura" #toXxxtWTZfwfvrqNjgCrLYyc {
+                CONCERNS [ #tYPNFV6mSnRgXez2B0jcLlvs ^"Aura" ]
+                TOPICS [ "realm interaction modifier" ]
+                TEXT "Spellcasting Rolls: The realm interaction modifier modifies the Casting Score. Lab Totals: The aura modifier in the Lab Total is calculated according on the interaction table. Ability Rolls: The aura rating affects supernatural Abilities such as Second Sight, or Wilderness Sense. Most such abilities are Magical in origin, although in particular cases they may be Faerie, Infernal, or even Divine. Magic Resistance: Magic Resistance is altered by the aura modifier. This includes Hermetic Magic Resistance due to the Parma Magica and Forms, as well as the resistance of creatures with mystic Might. Penetration: For magi and characters with mystical abilities, the aura modifies the roll to use the ability, which means that Penetration is modified. The aura modifier does not apply to Penetration twice. Thus, a magus in a Divine aura of 2 takes a –6 penalty to his Casting Score. This automatically reduces his Penetration, as that is calculated by subtracting the spell level from the Casting Score. The aura modifier is not subtracted again from the Penetration total. For mystical creatures, there is no roll to use the ability (see page 191), so the aura modifies Penetration directly."
             }
         }
         #tC66lh83mmbjOmMvNpnxA9F7 ^"Creature Magic Resistance and Penetration" DEF {
@@ -134,9 +125,9 @@ EXTENSION "ArM5_Realms" {
             DESCRIPTION "The Divine realm is the manifestation of the supernatural power of God. The most obvious agent of the Divine in western Europe is the Church, and Divine auras, also called the “Dominion,” or “Dominion auras,” surround its buildings. The Church does not have a monopoly on Divine auras, as Jews and Muslims also live within a Dominion aura, which appears indistinguishable from that of the Church. A Divine aura limits the efficiency and effectiveness of Hermetic magic, and Divine miracles can accomplish feats that magi cannot. Some magi even have True Faith, which does not seem to hinder their magic."
             REFERENCES {
                 "The Divine" -> #t3MYdWCQ7hygy7A794yDxTid ^"The Divine"
-                "The Church" -> ^"The Church"
+                "The Church" -> #tk1b7ldmKS1oYiEYhWZvBYKr ^"The Church"
                 "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
-                "True Faith" -> ^"True Faith"
+                "True Faith" -> #tZ6Eph247POiknECGJmXRr18 ^"True Faith"
             }
         }
         #tVT9KVNLnSArCUAmZMCJu2qA ^"Divine Auras" DEF {
@@ -218,17 +209,16 @@ EXTENSION "ArM5_Realms" {
             }
             DESCRIPTION "Any character crossing the boundary of a regio disappears from the normal world and enters a supernatural realm. There are three ways to enter most regiones: being led, entering voluntarily, and getting lost. Any being native to a regio and part of or affiliated to the realm can lead any number of characters to any level of the regio. Magi are affiliated to the Magic realm, and if they live in a Magical regio they count as native to that regio. There are two ways to enter a regio voluntarily. The first involves seeing into the regio and then crossing the boundary; this requires some supernatural ability. Second Sight allows a character to see into any regio, as does Magic Sensitivity. Sense Holiness and Unholiness allows a character to see into Divine and Infernal regiones. If you are in an aura different from the aura of the regio, add the current aura and the aura of the regio level to determine the Ease Factor. Thus, the Ease Factor to see from a level 3 Divine aura into a level 5 Magic regio is 21: 5 + [2 x (3 + 5)]; the difference between these two auras is 8. Anyone who can see the next level of a regio can lead any number of people into it. The second way of entering involves following a particular path or ritual. Finally, if a character gets lost near a regio boundary, he may accidentally enter the regio. Roll as normal, except that if the character does not have a relevant Ability this merely counts as zero."
             REFERENCES {
-                "Second Sight" -> ^"Second Sight"
-                "Magic Sensitivity" -> ^"Magic Sensitivity"
-                "Sense Holiness and Unholiness" -> ^"Sense Holiness and Unholiness"
+                "Second Sight" -> #t2Lm60x9JehOADnxby9Oub7N ^"Second Sight"
+                "Magic Sensitivity" -> #t32ity40YBIfef8Dn3urAmdV ^"Magic Sensitivity"
+                "Sense Holiness and Unholiness" -> #tbWcaVbjG1E7l9RCj0G0xYvO ^"Sense Holiness and Unholiness"
             }
         }
-        #tWlmozF2Tnq3kKGDMzm7mmlv ^"Tainted Vis" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+        GUIDANCE {
+            ENTRY ^"Tainted Vis" #tWlmozF2Tnq3kKGDMzm7mmlv {
+                CONCERNS [ #tMlb8fcjn7yw8uYKQczssmlV ^"Vis" ]
+                TEXT "Vis found in non-Magic auras may be tainted by its aura of origin. Faerie vis is generally safe for magi to use, although sometimes it may have strange side effects. It does not, however, tend to distort spells or have bad effects on the magi using it. Divine vis makes most magi nervous. First, gathering it often has the potential to annoy the Church. Second, using it in magic seems somehow sacrilegious to many magi, who’d rather not invite Divine retribution. Infernal vis is avoided by all sensible magi. It tends to twist any project to evil ends, and slowly corrupt a magus’s personality as he works with it. At the very least, using Infernally tainted vis adds twice as many botch dice as usual to spellcasting, and requires a roll on the experimental results chart for an enchanted item. Magi should be very wary of discoveries made while working with Infernal vis."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Vis found in non-Magic auras may be tainted by its aura of origin. Faerie vis is generally safe for magi to use, although sometimes it may have strange side effects. It does not, however, tend to distort spells or have bad effects on the magi using it. Divine vis makes most magi nervous. First, gathering it often has the potential to annoy the Church. Second, using it in magic seems somehow sacrilegious to many magi, who'd rather not invite Divine retribution. Infernal vis is avoided by all sensible magi. It tends to twist any project to evil ends, and slowly corrupt a magus's personality as he works with it. At the very least, using Infernally tainted vis adds twice as many botch dice as usual to spellcasting, and requires a roll on the experimental results chart for an enchanted item. Magi should be very wary of discoveries made while working with Infernal vis."
         }
         #tyu0e12Ft6i3skuwSTrFtXZY ^"Magic in Regiones" DEF {
             APPLIES TO [^"Character"]

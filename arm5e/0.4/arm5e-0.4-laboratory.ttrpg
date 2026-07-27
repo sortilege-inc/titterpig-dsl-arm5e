@@ -1,7 +1,7 @@
 EXTENSION "ArM5_Laboratory" {
     NAME "Ars Magica Fifth Edition - The Laboratory"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.4.1"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
 
@@ -105,19 +105,10 @@ EXTENSION "ArM5_Laboratory" {
                 "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
-        #tBeyPuXgCPo3vUCQENf7IAVy ^"Example: Inventing Spells" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. Tillitus of House Bonisagus wants to invent some warding spells, as minor mystical creatures seem to give him a lot of trouble. General wards of this sort are Rego Vim (see page 161), and can be invented at any level. Semita Errabunda, Tillitus's covenant, has a Magic Aura of 5, and Tillitus himself has Intelligence +5, Magic Theory 3, +2 for Puissant Magic Theory, his free Bonisagus Virtue, Rego 5, and Vim 5. Thus, his Rego Vim Lab Total is 25. Consulting the Spells chapter, Matt, Tillitus's player, sees that a separate spell must be invented for each of the four Realms. He decides to start by inventing a good ward against magical creatures. He picks level 20, as this is less than his Lab Total. Tillitus's Lab Total of 25 exceeds the spell level, 20, by 5, so every season Tillitus gains 5 points towards the spell. Since the spell is level 20, that means it will take him four seasons, a whole year, to invent the spell. Matt isn't sure that he wants to spend that much time on it, so he looks at a lower level spell. If Tillitus tries to invent a level 12 spell, he gets 13 points towards it every season, and thus can invent it in a single season. If he tries to invent a level 13 spell, he gets 12 points per season, so it would take him two seasons. Matt thus decides that Tillitus will invent a level 12 ward against magical creatures."
-            REFERENCES {
-                "House Bonisagus" -> ^"House Bonisagus"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+        GUIDANCE {
+            ENTRY ^"Example: Inventing Spells" #tBeyPuXgCPo3vUCQENf7IAVy {
+                TOPICS [ "inventing spells", "worked example" ]
+                TEXT "Tillitus of House Bonisagus wants to invent some warding spells, as minor mystical creatures seem to give him a lot of trouble. General wards of this sort are Rego Vim (see page 161), and can be invented at any level. Semita Errabunda, Tillitus’s covenant, has a Magic Aura of 5, and Tillitus himself has Intelligence +5, Magic Theory 3, +2 for Puissant Magic Theory, his free Bonisagus Virtue, Rego 5, and Vim 5. Thus, his Rego Vim Lab Total is 25. Consulting the Spells chapter, Matt, Tillitus’s player, sees that a separate spell must be invented for each of the four Realms. He decides to start by inventing a good ward against magical creatures. He picks level 20, as this is less than his Lab Total. Tillitus’s Lab Total of 25 exceeds the spell level, 20, by 5, so every season Tillitus gains 5 points towards the spell. Since the spell is level 20, that means it will take him four seasons, a whole year, to invent the spell. Matt isn’t sure that he wants to spend that much time on it, so he looks at a lower level spell. If Tillitus tries to invent a level 12 spell, he gets 13 points towards it every season, and thus can invent it in a single season. If he tries to invent a level 13 spell, he gets 12 points per season, so it would take him two seasons. Matt thus decides that Tillitus will invent a level 12 ward against magical creatures."
             }
         }
         #t2fdvMHP7ScuvdnWHfz2N7Mk ^"Magical Enchantments" DEF {
@@ -127,25 +118,10 @@ EXTENSION "ArM5_Laboratory" {
             }
             DESCRIPTION "Magical enchantments are created through a type of ritual magic, and therefore require a great deal of time, effort, and magical resources. It often requires raw vis to create magical enchantments. The process of enchanting an item transforms the vis, linking the magic power inexorably to the item in which it is instilled. Vis used for enchantments is thus transformed so that it is no longer usable for any other purposes, and it can never be extracted from the enchantment it is used to create. Magi sometimes refer to the magic of enchantments as \"spun,\" rather than \"raw,\" vis. Effects matching those of Ritual spells may not be placed in any enchantment. The elaborate rituals needed to control that much magical power simply cannot be contained in an unthinking physical item. The exception is spells that are Rituals only because the spell level is over 50, not because of Duration, Target, or major effect, may be placed in items."
         }
-        #tPpD0W0rw7nhnfR03ON5vwkU ^"Enchantment Summary" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar summarizing the enchantment process. 1. Choose type of item. Invested Items: Must be opened to enchantment, expensive. Can contain many effects, which can be powerful. Lesser Enchantments: Need not be opened, cheap. Can only contain one effect, and the creator must be able to make it in a single season. Charged Items: No vis cost, can always be created in a single season. Run out. 2. Open item for enchantment (Invested Items only). Uses a number of pawns of Vim vis equal to the product of the material base and the size multiplier, from the Size and Material bonuses. A magus cannot use more than 2 x Magic Theory pawns of vis in a single season. 3. Invest effect. Invested Items and Lesser Enchantments: For every point by which your Lab Total exceeds the level of the effect, you gain one point towards the effect per season. Once your points equal the level of the effect, it is invested. You must invest a Lesser Enchantment in one season. Uses a number of pawns of vis matching the Technique or Form of the effect equal to the level divided by ten (rounded up). Again, a magus cannot use more than 2 x Magic Theory pawns of vis in a single season. Charged Items: For every five points or fraction by which your Lab Total exceeds the level of the effect, you get one charge. 4. Invest further effects (Invested Items only): You can use a number of pawns of vis equal to the number of pawns spent opening the item to invest effects. Once the number of pawns used to invest effects equals the number of pawns used to open the item, the item is full, and no further effects can be added."
-            REFERENCES {
-                "Invested Items" -> #tfSidXnWOSI4aeGXBMwDs5z4 ^"Invested Items"
-                "Lesser Enchantments" -> #tvEsUdLLrh3ZK1NExvKHf5t1 ^"Lesser Enchantments"
-                "Charged Items" -> #tF1TUCQuG6lSZ3gPLBTg5ogD ^"Charged Items"
-                "Invested Items" -> #tfSidXnWOSI4aeGXBMwDs5z4 ^"Invested Items"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Invested Items" -> #tfSidXnWOSI4aeGXBMwDs5z4 ^"Invested Items"
-                "Lesser Enchantments" -> #tvEsUdLLrh3ZK1NExvKHf5t1 ^"Lesser Enchantments"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Charged Items" -> #tF1TUCQuG6lSZ3gPLBTg5ogD ^"Charged Items"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Invested Items" -> #tfSidXnWOSI4aeGXBMwDs5z4 ^"Invested Items"
+        GUIDANCE {
+            ENTRY ^"Enchantment Summary" #tPpD0W0rw7nhnfR03ON5vwkU {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TEXT "1. Choose type of item. • Invested Items: Must be opened to enchantment, expensive. Can contain many effects, which can be powerful. • Lesser Enchantments: Need not be opened, cheap. Can only contain one effect, and the creator must be able to make it in a single season. • Charged Items: No vis cost, can always be created in a single season. Run out. 2. Open item for enchantment (Invested Items only). Uses a number of pawns of Vim vis equal to the product of the material base and the size multiplier, from the Size and Material bonuses. A magus cannot use more than 2 x Magic Theory pawns of vis in a single season. 3. Invest effect. • Invested Items and Lesser Enchantments: For every point by which your Lab Total exceeds the level of the effect, you gain one point towards the effect per season. Once your points equal the level of the effect, it is invested. You must invest a Lesser Enchantment in one season. Uses a number of pawns of vis matching the Technique or Form of the effect equal to the level divided by ten (rounded up). Again, a magus cannot use more than 2 x Magic Theory pawns of vis in a single season. • Charged Items: For every five points or fraction by which your Lab Total exceeds the level of the effect, you get one charge. 4. Invest further effects (Invested Items only): You can use a number of pawns of vis equal to the number of pawns spent opening the item to invest effects. Once the number of pawns used to invest effects equals the number of pawns used to open the item, the item is full, and no further effects can be added."
             }
         }
         #tfSidXnWOSI4aeGXBMwDs5z4 ^"Invested Items" DEF {
@@ -187,19 +163,11 @@ EXTENSION "ArM5_Laboratory" {
                 "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
-        #tA0If9lrFSwRHluEq7kzTLr6 ^"Charged Items Example" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. Mari Amwithig wants to make a wand that casts Agony of the Beast, but she doesn't have much vis, so she considers doing it as a charged item. Agony of the Beast is a level 15 effect, and for a charged item she decides to leave it unchanged. She isn't planning to use the item against creatures with magic resistance, and it doesn't really matter if other people can use it. Her Perdo Animal Lab Total is 15 (Perdo 12 + 3 from Puissant Art) + 7 (Animal) + 3 (Intelligence) + 4 (Magic Theory) + 5 (Magic aura at Semita Errabunda), a total of 34. As she knows the spell, she adds a similar spell bonus of +3, because the spell is third magnitude. In addition, a wand gives a +4 bonus to destroying things at a distance. This gives her a final total of 41. She could create the item even if she didn't know the spell, but she does get some benefit from her prior knowledge. 41 is 26 higher than the level of the effect, which means she gets six charges, four from the four fives by which she exceeds the level, and one from the one point that is the final fraction. Neil, Mari's player, decides to look at making a lesser enchanted item instead, because Mari's Lab Total is a lot higher than the level of the spell."
-            REFERENCES {
-                "Agony of the Beast" -> #tWAFm6BCCt7NBJEKK5mhSBI7 ^"Agony of the Beast"
-                "Agony of the Beast" -> #tWAFm6BCCt7NBJEKK5mhSBI7 ^"Agony of the Beast"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Puissant Art" -> #t4oDdBPBfjQuVaPiRk59IYTk ^"Puissant Art"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+        GUIDANCE {
+            ENTRY ^"Charged Items Example" #tA0If9lrFSwRHluEq7kzTLr6 {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TOPICS [ "worked example: charged items" ]
+                TEXT "Mari Amwithig wants to make a wand that casts Agony of the Beast, but she doesn’t have much vis, so she considers doing it as a charged item. Agony of the Beast is a level 15 effect, and for a charged item she decides to leave it unchanged. She isn’t planning to use the item against creatures with magic resis- tance, and it doesn’t really matter if other people can use it. Her Perdo Animal Lab Total is 15 (Perdo 12 + 3 from Puissant Art) + 7 (Animal) + 3 (Intelligence) +4 (Magic Theory) +5 (Magic aura at Semita Errabunda), a total of 34. As she knows the spell, she adds a similar spell bonus of +3, because the spell is third magnitude. In addi- tion, a wand gives a +4 bonus to destroying things at a distance. This gives her a final total of 41. She could cre- ate the item even if she didn’t know the spell, but she does get some benefit from her prior knowledge. 41 is 26 higher than the level of the effect, which means she gets six charges, four from the four fives by which she exceeds the level, and one from the one point that is the final fraction. Neil, Mari’s player, decides to look at making a lesser enchanted item instead, because Mari’s Lab Total is a lot higher than the level of the spell."
             }
         }
         #trcHGYeX2KkSjgKm1s6dilXu ^"Shape and Material" DEF {
@@ -247,14 +215,11 @@ EXTENSION "ArM5_Laboratory" {
             }
             DESCRIPTION "The source presents the Material and Size Tables together as a single sidebar containing two tables. This record holds the Size table, giving an Example and a Multiplier for each size category."
         }
-        #tWXb5QCAHdEjYAKuiJS6UExT ^"Enchanted Item Example (Shape and Material)" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. Mari turns her attention to making her wand as a real enchanted item. A wand gives a +4 bonus to destroy things at a distance, which makes it a good choice. Animal bone also gives a +4 bonus. Unfortunately, Mari's Magic Theory is only 4, so she would get no additional bonus. She decides to stick with wood, which is less conspicuous."
-            REFERENCES {
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
+        GUIDANCE {
+            ENTRY ^"Enchanted Item Example (Shape and Material)" #tWXb5QCAHdEjYAKuiJS6UExT {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TOPICS [ "worked example: enchanting an item" ]
+                TEXT "Mari turns her attention to making her wand as a real enchanted item. A wand gives a +4 bonus to destroy things at a distance, which makes it a good choice. Animal bone also gives a +4 bonus. Unfortunately, Mari’s Magic Theory is only 4, so she would get no additional bonus. She decides to stick with wood, which is less conspicuous."
             }
         }
         #tjsQsF3HRBtzmMzWdvvuatg1 ^"Preparation for Enchantment" DEF {
@@ -268,14 +233,11 @@ EXTENSION "ArM5_Laboratory" {
                 "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
             }
         }
-        #tnZRXTIxtXhSOjuTtLQ1mH5P ^"Enchanted Item Example (Preparation)" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. A wooden wand is a small wooden object, and thus can only contain four pawns of vis. As Mari is making a Lesser Enchantment she doesn't need to open the item, but she can still only invest four pawns-worth of effects. This isn't a problem; with a Lab Total of 41 the highest level effect she can invest is 20, which takes just two pawns."
-            REFERENCES {
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+        GUIDANCE {
+            ENTRY ^"Enchanted Item Example (Preparation)" #tnZRXTIxtXhSOjuTtLQ1mH5P {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TOPICS [ "worked example: enchanting an item" ]
+                TEXT "A wooden wand is a small wooden object, and thus can only contain four pawns of vis. As Mari is making a Lesser Enchantment she doesn’t need to open the item, but she can still only invest four pawns-worth of effects. This isn’t a problem; with a Lab Total of 41 the highest level effect she can invest is 20, which takes just two pawns."
             }
         }
         #tIHCrZsXgnvTkkBV21o5yjQS ^"Talisman Attunement" DEF {
@@ -382,22 +344,18 @@ EXTENSION "ArM5_Laboratory" {
             }
             DESCRIPTION "The effect is triggered by the results of another effect in the same item. This is most commonly used to allow an item to activate on a mental command, or to limit the people who can use an item. An effect to allow mental activation needs to be able to read surface thoughts continually, with at least Touch Range. This is a base level of 15, +1 magnitude for Touch Range, +1 magnitude for Concentration Duration, +5 levels to have the device maintain concentration, for a final level of 30.\n\nIf a linked trigger effect is resisted, the item will not work, but the wielder can choose not to resist.\n\nA linked trigger adds +3 to the level of the triggered effect. The level of the triggering effect is not altered."
         }
-        #tkn5BuQZjJyljBBKTYdewrws ^"Enchanted Item Example (Designing)" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. Mari doesn’t want any Penetration, and just wants the basic Agony of the Beast effect. That sets the base level at 15. Neil notes that he can raise the level to 20 without the process costing any more vis or taking any longer, so he might as well. The only addition that seems worthwhile is additional uses per day, so he decides to have Mari make a wand that can be used 24 times per day, as that adds five levels to the base fifteen, for a final level of 20."
-            REFERENCES {
-                "Agony of the Beast" -> #tWAFm6BCCt7NBJEKK5mhSBI7 ^"Agony of the Beast"
+        GUIDANCE {
+            ENTRY ^"Enchanted Item Example (Designing)" #tkn5BuQZjJyljBBKTYdewrws {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TOPICS [ "worked example: enchanting an item" ]
+                TEXT "Mari doesn’t want any Penetration, and just wants the basic Agony of the Beast effect. That sets the base level at 15. Neil notes that he can raise the level to 20 without the process costing any more vis or taking any longer, so he might as well. The only addition that seems worthwhile is additional uses per day, so he decides to have Mari make a wand that can be used 24 times per day, as that adds five levels to the base fifteen, for a final level of 20."
             }
         }
-        #tyut5MP6iuHDmJvbnWTvRhys ^"Constant Effect Devices" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+        GUIDANCE {
+            ENTRY ^"Constant Effect Devices" #tyut5MP6iuHDmJvbnWTvRhys {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TEXT "An enchanted device can have a constant effect by giving the effect a duration of Sun, two uses per day, and an environmental trigger (sunrise or sunset). This adds two magnitudes (to raise the duration to Sun) and four levels (one for two uses per day and three for an environmental trigger) to the guideline given in the Spells chapter for the effect. Such a device has a truly constant effect; there are no “flickers” at sunrise or sunset."
             }
-            DESCRIPTION "The source presents this as a sidebar. An enchanted device can have a constant effect by giving the effect a duration of Sun, two uses per day, and an environmental trigger (sunrise or sunset). This adds two magnitudes (to raise the duration to Sun) and four levels (one for two uses per day and three for an environmental trigger) to the guideline given in the Spells chapter for the effect. Such a device has a truly constant effect; there are no “flickers” at sunrise or sunset."
         }
         #txXi186hQRJP24a7Hcw8yuSw ^"Instilling the Effect" DEF {
             APPLIES TO [^"Character"]
@@ -421,15 +379,11 @@ EXTENSION "ArM5_Laboratory" {
                 "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
-        #tdm3dFkD3l3kkRRiG5R9uu4k ^"Enchanted Item Example (Instilling)" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. Mari has, as calculated before, a Perdo Animal Lab Total of 41, which allows her to invest a level 20 effect in a single season. She gets one pawn of Perdo vis and one pawn of Animal vis, and uses them to invest the wand. The process is automatically successful.\n\nWand of Bestial Agony: This plain wooden wand can cast Agony of the Beast 24 times per day, with 0 Penetration."
-            REFERENCES {
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Agony of the Beast" -> #tWAFm6BCCt7NBJEKK5mhSBI7 ^"Agony of the Beast"
+        GUIDANCE {
+            ENTRY ^"Enchanted Item Example (Instilling)" #tdm3dFkD3l3kkRRiG5R9uu4k {
+                CONCERNS [ #tKeOiuaPErSyPSrWSICOL3gE ^"Enchantment" ]
+                TOPICS [ "worked example: enchanting an item" ]
+                TEXT "Mari has, as calculated before, a Perdo Animal Lab Total of 41, which allows her to invest a level 20 effect in a single season. She gets one pawn of Perdo vis and one pawn of Animal vis, and uses them to invest the wand. The process is automatically successful. Wand of Bestial Agony: This plain wooden wand can cast Agony of the Beast 24 times per day, with 0 Penetration."
             }
         }
         #tvRRRSjqKuXcp4XRLlWagL7L ^"Using Enchanted Devices" DEF {
@@ -519,18 +473,10 @@ EXTENSION "ArM5_Laboratory" {
                 "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
-        #tjYQGIb7A26JIGf3sCYMAiE0 ^"Laboratory Texts Example" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a worked example. Carolus decides that he needs at least one combat spell, or he risks being in serious trouble if he gets caught stealing. Given his magical strengths, he decides to look at Perdo Corpus. His Perdo Corpus Lab Total is 10 (Perdo) + 5 (Corpus) + 2 (Intelligence) + 4 (Magic Theory) + 1 (Magic Theory is specialized in inventing spells) + 5 (Aura of Semita Errabunda), for a total of 27. He could invent a level 13 spell by himself in a season, but that wouldn’t be much use.\n\nFortunately, the covenant library has a Lab Text for Grip of the Choking Hand. This spell is level 25, which would take him 13 seasons to invent by himself. His Lab Total is 2 higher than the level, so after thirteen seasons he would have accumulated 26 points, and thus invented the spell. Working from the Lab Text, however, he can invent the spell in a single season."
-            REFERENCES {
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
-                "Grip of the Choking Hand" -> #tcUOnIbdMuinANkpeeWOQTfE ^"Grip of the Choking Hand"
-                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+        GUIDANCE {
+            ENTRY ^"Laboratory Texts Example" #tjYQGIb7A26JIGf3sCYMAiE0 {
+                TOPICS [ "laboratory texts", "worked example" ]
+                TEXT "Carolus decides that he needs at least one combat spell, or he risks being in serious trouble if he gets caught stealing. Given his magical strengths, he decides to look at Perdo Corpus. His Perdo Corpus Lab Total is 10 (Perdo) + 5 (Corpus) + 2 (Intelligence) + 4 (Magic Theory) + 1 (Magic Theory is specialized in inventing spells) + 5 (Aura of Semita Errabunda), for a total of 27. He could invent a level 13 spell by himself in a season, but that wouldn’t be much use. Fortunately, the covenant library has a Lab Text for Grip of the Choking Hand. This spell is level 25, which would take him 13 seasons to invent by himself. His Lab Total is 2 higher than the level, so after thirteen seasons he would have accumulated 26 points, and thus invented the spell. Working from the Lab Text, however, he can invent the spell in a single season."
             }
         }
         #tSLVqSYce4ZAabOYltx7R9Q9 ^"Writing Laboratory Texts" DEF {
@@ -588,7 +534,7 @@ EXTENSION "ArM5_Laboratory" {
             REFERENCES {
                 "Code of Hermes" -> #t2L48d73nFlRxRCkorqBbBG9 ^"Code of Hermes"
                 "Code of Hermes" -> #t2L48d73nFlRxRCkorqBbBG9 ^"Code of Hermes"
-                "The Gift" -> ^"The Gift"
+                "The Gift" -> #tTewiGdZwmTboFEtrtBvqViC ^"The Gift"
                 "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
                 "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
                 "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"

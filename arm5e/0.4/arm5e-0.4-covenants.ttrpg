@@ -1,7 +1,7 @@
 EXTENSION "ArM5_Covenants" {
     NAME "Ars Magica Fifth Edition - Covenants"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.4.1"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
 
@@ -43,15 +43,10 @@ EXTENSION "ArM5_Covenants" {
             }
             DESCRIPTION "Winter covenants are in decline, and on their way to oblivion. They are normally filled with old and peculiar magi, with little interest in recruiting new blood. However, sometimes new recruits are brought in, and the covenant moves round to Spring once more.\n\nPulling a Winter covenant through to Spring is a good saga concept for players who want the freedom of the Spring saga, but also want to be living somewhere with history, lost books, and whole towers where no one has set foot in years. The difference from a Spring saga set in a Winter covenant is mainly that the player characters have to deal with the old inhabitants; magi who are far older and more powerful than they are, but who are interested only in their own bizarre research.\n\nExperienced players might also want to play the old magi in a Winter covenant, concentrating on their own interests as the covenant slowly crumbles around them."
         }
-        #td3nxK4T9d8jnpcDZ3OC6QA2 ^"Aegis of the Hearth" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar. The spell Aegis of the Hearth (page 161) is one of the most important spells in the Order of Hermes. While Parma Magica gives individuals magic resistance, Aegis of the Hearth (often just \"the Aegis\") gives it to a whole covenant. The number of Hermetic covenants with no Aegis at all can most likely be counted on the fingers of one hand, and most covenants want to have the strongest Aegis that they can manage. Thus, if none of the player characters start knowing the spell, you should include it in the covenant library, and make learning it a high priority for someone. Just make sure that you choose a level that a member of the covenant can learn and cast. Note that if the covenant includes magi who are older than the player characters, the player characters need not be able to cast it."
-            REFERENCES {
-                "Order of Hermes" -> #t2tZNiB6YhCRxsiY8GALpPw5 ^"Order of Hermes"
-                "Parma Magica" -> ^"Parma Magica"
+        GUIDANCE {
+            ENTRY ^"Aegis of the Hearth" #td3nxK4T9d8jnpcDZ3OC6QA2 {
+                CONCERNS [ #tURmPSGUB5AUyyvRbptCf4cj ^"Aegis of the Hearth" ]
+                TEXT "The spell Aegis of the Hearth (page 161) is one of the most important spells in the Order of Hermes. While Parma Magica gives individuals magic resistance, Aegis of the Hearth (often just “the Aegis”) gives it to a whole covenant. The number of Hermetic covenants with no Aegis at all can most likely be counted on the fingers of one hand, and most covenants want to have the strongest Aegis that they can manage. Thus, if none of the player characters start knowing the spell, you should include it in the covenant library, and make learning it a high priority for someone. Just make sure that you choose a level that a member of the covenant can learn and cast. Note that if the covenant includes magi who are older than the player characters, the player characters need not be able to cast it."
             }
         }
         #tAN01JkO3mqn8ubnrzttG3Fk ^"Covenant Situations" DEF {
@@ -59,7 +54,7 @@ EXTENSION "ArM5_Covenants" {
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
-            DESCRIPTION "The source presents this as a sidebar. The situation of a covenant is largely independent of its season and power. A more powerful covenant simply has more resources available to deal with its situation. There are some exceptions, of course. A powerful covenant cannot really be struggling, for example. The following suggestions are nothing more than that; if your troupe wants a different situation, you can create one.\n\nThese situations are built out of Boons and Hooks, which are described in detail starting on page 72, and you can use them in the same way to build your own situations. The rules for this are given in Customized Covenant Creation."
+            DESCRIPTION "The situation of a covenant is largely independent of its season and power. A more powerful covenant simply has more resources available to deal with its situation. There are some exceptions, of course. A powerful covenant cannot really be struggling, for example. The following suggestions are nothing more than that; if your troupe wants a different situation, you can create one. These situations are built out of Boons and Hooks, which are described in detail starting on page 72, and you can use them in the same way to build your own situations. The rules for this are given in Customized Covenant Creation."
             REFERENCES {
                 "Customized Covenant Creation" -> #txXBObwU4Am08AbChuCZgBVd ^"Customized Covenant Creation"
             }
@@ -257,49 +252,28 @@ EXTENSION "ArM5_Covenants" {
                 "Accessible Power Levels" -> #tJhLmpBROEVpBr3QWyJI5Unc ^"Accessible Power Levels"
             }
         }
-        #tjAQ90RPt9F7OOkQUnnGk0oi ^"Base Covenant Resources" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar. The following three sets of covenant resources are provided as examples. If you want to save time, just pick one for your covenant. The Customized Covenant Creation rules on page 71 allow you to tailor the covenant more precisely to your needs, but it does take longer.\n\nThe Arts and Abilities covered by the books, spells available as Lab Texts, and types of vis available should be chosen based on the interests of the player character magi."
-            REFERENCES {
-                "Customized Covenant Creation" -> #txXBObwU4Am08AbChuCZgBVd ^"Customized Covenant Creation"
-                "Lab Texts" -> #tIEa1SJocZeCX1mI6rPsut3W ^"Lab Texts"
+        GUIDANCE {
+            ENTRY ^"Base Covenant Resources" #tjAQ90RPt9F7OOkQUnnGk0oi {
+                CONCERNS [ #txXBObwU4Am08AbChuCZgBVd ^"Customized Covenant Creation" ]
+                TEXT "The following three sets of covenant resources are provided as examples. If you want to save time, just pick one for your covenant. The Customized Covenant Creation rules on page 71 allow you to tailor the covenant more precisely to your needs, but it does take longer. The Arts and Abilities covered by the books, spells available as Lab Texts, and types of vis available should be chosen based on the interests of the player character magi."
             }
         }
-        #tfO6xF5Ca937FX6Km6GpOvxp ^"Weak Covenant" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as part of the Base Covenant Resources sidebar.\n\nLibrary: Three Art summae (level 15 quality 12, level 12 quality 12, and level 6 quality 21), one Ability summa (level 4 quality 10), and four tractatus (qualities 11, 10, 10, and 9), on either Arts or Abilities. Lab Texts: Lab Texts for 200 levels of spells, none over level 25.\n\nVis: 1 or more sources, providing a total of 4 pawns per year. No stocks.\n\n200 Build Points spent. This is suitable for a Spring covenant, or for the resources accessible in a Winter covenant."
-            REFERENCES {
-                "Base Covenant Resources" -> #tjAQ90RPt9F7OOkQUnnGk0oi ^"Base Covenant Resources"
-                "Lab Texts" -> #tIEa1SJocZeCX1mI6rPsut3W ^"Lab Texts"
-                "Lab Texts" -> #tIEa1SJocZeCX1mI6rPsut3W ^"Lab Texts"
+        GUIDANCE {
+            ENTRY ^"Weak Covenant" #tfO6xF5Ca937FX6Km6GpOvxp {
+                CONCERNS [ #txXBObwU4Am08AbChuCZgBVd ^"Customized Covenant Creation" ]
+                TEXT "Library: Three Art summae (level 15 quality 12, level 12 quality 12, and level 6 quality 21), one Ability summa (level 4 quality 10), and four tractatus (qualities 11, 10, 10, and 9), on either Arts or Abilities. Lab Texts: Lab Texts for 200 levels of spells, none over level 25. Vis: 1 or more sources, providing a total of 4 pawns per year. No stocks. 200 Build Points spent. This is suitable for a Spring covenant, or for the resources accessible in a Winter covenant."
             }
         }
-        #t0dKy1jFOGYhLkYWxtX1rtaG ^"Medium Covenant" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as part of the Base Covenant Resources sidebar.\n\nLibrary: Eight Art summae (three at level 16, quality 15, five at level 6, quality 21), three Ability summae (one at level 5, quality 20, and two at level 6, quality 15), and seven tractatus on either Arts or Abilities (two quality 11, four quality 10, and one quality 9)\n\nLab Texts: Lab Texts for 1,000 levels of spells, none over level 40.\n\nVis: At least three sources, each providing a different Art, yielding a total of 20 pawns per year. Vis stocks of 100 pawns, spread between Arts as desired. The stocks may all be of a single Art.\n\nEnchanted Items: 200 levels of enchanted items, with a highest level effect of 40. At least 100 levels should be spent on lesser enchanted devices with an effect level of 20 or lower.\n\n800 Build Points spent. This is suitable for a covenant in early Summer, or for the resources immediately available to young magi in an Autumn covenant."
-            REFERENCES {
-                "Base Covenant Resources" -> #tjAQ90RPt9F7OOkQUnnGk0oi ^"Base Covenant Resources"
-                "Lab Texts" -> #tIEa1SJocZeCX1mI6rPsut3W ^"Lab Texts"
+        GUIDANCE {
+            ENTRY ^"Medium Covenant" #t0dKy1jFOGYhLkYWxtX1rtaG {
+                CONCERNS [ #txXBObwU4Am08AbChuCZgBVd ^"Customized Covenant Creation" ]
+                TEXT "Library: Eight Art summae (three at level 16, quality 15, five at level 6, quality 21), three Ability summae (one at level 5, quality 20, and two at level 6, quality 15), and seven tractatus on either Arts or Abilities (two quality 11, four quality 10, and one quality 9) Lab Texts: Lab Texts for 1,000 levels of spells, none over level 40. Vis: At least three sources, each providing a different Art, yielding a total of 20 pawns per year. Vis stocks of 100 pawns, spread between Arts as desired. The stocks may all be of a single Art. Enchanted Items: 200 levels of enchanted items, with a highest level effect of 40. At least 100 levels should be spent on lesser enchanted devices with an effect level of 20 or lower. 800 Build Points spent. This is suitable for a covenant in early Summer, or for the resources immediately available to young magi in an Autumn covenant."
             }
         }
-        #t03OqM1I6FexSAgzo6kO4dnb ^"Powerful Covenant" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as part of the Base Covenant Resources sidebar.\n\nLibrary: Seventeen Art summae, at least one in each Art (one at level 20, quality 11; one at level 18, quality 13; five at level 16, quality 15; ten at level 6, quality 21), six Ability summae (three at level 6, quality 17, and three at level 5, quality 20), and thirty tractatus (12 quality 11, 9 quality 10, 9 quality 9), on either Arts or Abilities.\n\nLab Texts: Lab Texts for 2,500 levels of spells, with no upper limit on the level of individual spells.\n\nVis: At least five sources, each providing a different Art, yielding a total of 50 pawns per year. Vis stocks of 250 pawns, divided freely between the Arts.\n\nEnchanted Items: 500 levels of enchanted items. At least one should have an effect level over 30, and at least 100 levels should be spent on lesser enchanted devices with an effect level of 20 or lower.\n\n2000 Build Points spent. This is suitable for a covenant in high Summer, the total resources of a relatively weak Autumn covenant, or the resources available to young magi in a very powerful Autumn covenant."
-            REFERENCES {
-                "Base Covenant Resources" -> #tjAQ90RPt9F7OOkQUnnGk0oi ^"Base Covenant Resources"
-                "Lab Texts" -> #tIEa1SJocZeCX1mI6rPsut3W ^"Lab Texts"
+        GUIDANCE {
+            ENTRY ^"Powerful Covenant" #t03OqM1I6FexSAgzo6kO4dnb {
+                CONCERNS [ #txXBObwU4Am08AbChuCZgBVd ^"Customized Covenant Creation" ]
+                TEXT "Library: Seventeen Art summae, at least one in each Art (one at level 20, quality 11; one at level 18, quality 13; five at level 16, quality 15; ten at level 6, quality 21), six Ability summae (three at level 6, quality 17, and three at level 5, quality 20), and thirty tractatus (12 quality 11, 9 quality 10, 9 quality 9), on either Arts or Abilities. Lab Texts: Lab Texts for 2,500 levels of spells, with no upper limit on the level of individual spells. Vis: At least five sources, each providing a different Art, yielding a total of 50 pawns per year. Vis stocks of 250 pawns, divided freely between the Arts. Enchanted Items: 500 levels of enchanted items. At least one should have an effect level over 30, and at least 100 levels should be spent on lesser enchanted devices with an effect level of 20 or lower. 2000 Build Points spent. This is suitable for a covenant in high Summer, the total resources of a relatively weak Autumn covenant, or the resources available to young magi in a very powerful Autumn covenant."
             }
         }
         #tSDze3AWLo3EiOLovSrIVwCy ^"Vis" DEF {
@@ -339,8 +313,8 @@ EXTENSION "ArM5_Covenants" {
             }
             DESCRIPTION "Specialists are non-magus NPC members of the covenant with useful skills. They are defined only by the abilities they use to serve the covenant, rather than by a full character sheet, and can include guards as well as teachers and craftsmen. Characters created as grogs or companions need not be paid for with Build Points.\n\nTeachers: A teacher bought with Build Points is employed by the covenant, and available to teach as directed by the magi two seasons per year. The cost is the sum of his Communication and Teaching total and his highest score in the Abilities he will teach. Teachers cannot have The Gift, and thus cannot teach the Hermetic Arts. They may have other Supernatural Abilities, however. His Abilities are limited by his age, as for newly created characters (see page 31).\n\nOthers: Other kinds of specialist are less expensive, costing a number of Build Points equal to their highest score in the Abilities they use to serve the covenant. Their Ability scores are initially limited by age, as for teachers."
             REFERENCES {
-                "The Gift" -> ^"The Gift"
-                "Hermetic Arts" -> ^"Hermetic Arts"
+                "The Gift" -> #tTewiGdZwmTboFEtrtBvqViC ^"The Gift"
+                "Hermetic Arts" -> #tba64f015cf2934999ad6 ^"Hermetic Arts"
             }
         }
         #t7a6h1w2vA0nvDVFeUaDq0ge ^"Hooks" DEF {

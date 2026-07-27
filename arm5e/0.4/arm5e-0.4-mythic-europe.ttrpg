@@ -1,26 +1,27 @@
 EXTENSION "ArM5_Mythic_Europe" {
     NAME "Ars Magica Fifth Edition - Mythic Europe (game use)"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.4.1"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
 
-    #tK9TLedNqBSOeSYemDHTn83g ^"Game Use: Doctrine" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
-            }
-            DESCRIPTION "The source presents this as a sidebar. The deadly sins and theological virtues make excellent Personality Traits for medieval-themed characters. Beyond that, the issues covered by this section are rarely likely to come into play in sagas, which is probably as it should be."
-            REFERENCES {
-                "Personality Traits" -> #tZ5R8NaoE9zkx3HnR4xzSt8G ^"Personality Traits"
-            }
+    GUIDANCE {
+
+        ENTRY ^"Game Use: Doctrine" #tK9TLedNqBSOeSYemDHTn83g {
+
+            CONCERNS [ #tUK9hQDJrJSXEo74DK9qwwEN ^"Doctrine", #tZ5R8NaoE9zkx3HnR4xzSt8G ^"Personality Traits" ]
+
+            TEXT "The deadly sins and theological virtues make excellent Personality Traits for medieval-themed characters. Beyond that, the issues covered by this section are rarely likely to come into play in sagas, which is probably as it should be."
+
         }
-        #tFKYGu8a34cZkAhMtj2FODmi ^"Magic and Sin" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Core Rules"
+
+    }
+        GUIDANCE {
+            ENTRY ^"Magic and Sin" #tFKYGu8a34cZkAhMtj2FODmi {
+                CONCERNS [ #tZLYTfncOXTbHC2Oxzp59T4J ^"The Church" ]
+                TOPICS [ "the sinfulness of magic" ]
+                TEXT "One question that is not decided by the core rules of Ars Magica is whether magic is sinful in itself. It is clear that it can be used for sinful purposes, and lends itself well to all seven deadly sins, but it can also be used for good ends. If magic is inherently sinful, casting a spell is sinful no matter what the purpose. The choice you make here affects the possible relationships between the magi and the Divine. If magic is inherently sinful, saints and angels will always encourage magi to abandon it. This creates a strong tension, and so works best if interactions with the Church are rare. It does not mean that the Divine is always hostile, as the world is full of sinners, and magic, in itself, is not necessarily a particularly serious sin. If magic is not inherently sinful, magi could have close, and good, relations with the Church, saints, and angels, with occasional concerns over sins the magi committed using magic. In this case, giving up magic, whether temporarily or permanently, is a suitable penance in itself; giving up a sin can never be a penance, because it is required anyway."
             }
-            DESCRIPTION "The source presents this as a sidebar offering an optional setting decision. One question that is not decided by the core rules of Ars Magica is whether magic is sinful in itself. It is clear that it can be used for sinful purposes, and lends itself well to all seven deadly sins, but it can also be used for good ends. If magic is inherently sinful, casting a spell is sinful no matter what the purpose. The choice you make here affects the possible relationships between the magi and the Divine. If magic is inherently sinful, saints and angels will always encourage magi to abandon it. This creates a strong tension, and so works best if interactions with the Church are rare. It does not mean that the Divine is always hostile, as the world is full of sinners, and magic, in itself, is not necessarily a particularly serious sin. If magic is not inherently sinful, magi could have close, and good, relations with the Church, saints, and angels, with occasional concerns over sins the magi committed using magic. In this case, giving up magic, whether temporarily or permanently, is a suitable penance in itself; giving up a sin can never be a penance, because it is required anyway."
         }
 
     #tZLYTfncOXTbHC2Oxzp59T4J ^"The Church" DEF {
@@ -99,14 +100,10 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "In the Mass, God Himself becomes manifest in bread and wine, which is shared with the congregation. In most of Europe, the laity now only receive the bread, but in a few places the custom of receiving both bread and wine persists. The bread becomes the body of Christ, known as the \"Host,\" and the wine becomes His Blood, so that the Mass symbolizes the sacrifice of Christ for the salvation of all believers, and the participation of all believers in that sacrifice. Actually receiving the bread is known as \"taking communion,\" and a person must confess and do penance before doing so. (For large penances, a sincere intent to complete it suffices.) As a result, most people only take communion once a year, at Easter, although they attend the service most weeks. Because the consecrated bread and wine are extremely holy, they must be consumed completely during the service, with great care taken not to spill or drop any."
         }
-        #tyuWIK03IIuiuYAd2rPgc1ZE ^"Game Use: Sacraments" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
-            }
-            DESCRIPTION "The source presents this as a sidebar. The sacraments are as central a part of modern Catholicism as they were of the medieval Church, so a degree of care should be taken to avoid offending people, but they are a central part of medieval life and make good stories. Story seeds: A number of covenfolk decide that they want to be confirmed, which means taking them to the bishop, and getting them through the catechism without painting the covenant as a hive of heretics. A moderately pious magus decides to confess and take communion after several lapsed years; the confessor assigns a pilgrimage to a distant shrine, without using magic at all, as a penance. The covenfolk find out that Hermetic magic, or any other magic, is completely incapable of affecting the Host in any way, and form a fraternity devoted to honoring the Host as God's presence on earth. Someone born at the covenant becomes deeply pious, but some power seems to be driving him out of churches, and he has ominous warning dreams; it turns out that he was never baptized. He dies without working out the problem, and after his death a close friend has visions revealing that he is damned to hell, launching a quest for a way to baptize the character posthumously."
-            REFERENCES {
-                "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
+        GUIDANCE {
+            ENTRY ^"Game Use: Sacraments" #tyuWIK03IIuiuYAd2rPgc1ZE {
+                CONCERNS [ #tJ6oHCKmjnDekc6mQ6leUxu6 ^"Sacraments" ]
+                TEXT "The sacraments are as central a part of modern Catholicism, and many other contemporary varieties of Christianity, as they were of the medieval Church. Thus, a certain degree of care should be taken to avoid offending people. That said, they are a central part of medieval life, and thus make good stories. • A number of covenfolk decide that they want to be confirmed; living at the covenant, they have previously had no opportunity. This means taking them to the bishop, and getting them through the catechism without painting the covenant as a hive of heretics. • A moderately pious magus decides to confess and take communion after several lapsed years. The (knowledgeable) confessor assigns a pilgrimage to a distant shrine, without using magic at all, as a penance. • The covenfolk find out that Hermetic magic, or, indeed, any other magic, is completely incapable of affecting the Host in any way. They form a fraternity devoted to honoring the Host as God’s presence on earth. (In 1220, this is unusual, but not heretical. Later, it becomes common and absolutely orthodox.) • Someone born at the covenant becomes deeply pious, but some power seems to be driving him out of churches, and he has ominous warning dreams in which he is overwhelmed by great waves. It turns out that he was never baptized, and the dreams are to encourage him to do so. The unbaptized pious character dies without working out the problem. After his death, a close friend has visions revealing that he is damned to hell, and why, warning them to ensure that everyone is baptized. This could launch a quest for a way to baptize the character posthumously. (This has happened before. At the earnest request of Pope Gregory the Great, later a saint, God allowed the Roman Emperor Trajan to be saved after death. But God did warn the Pope not to ask such things again.)"
             }
         }
         #tnpwbtPlVXdAitOXA5lWEToq ^"Saints" DEF {
@@ -116,15 +113,14 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "Saints are people who served God faithfully when alive, and have now died and joined the Church Triumphant in heaven. (Living Christians are often called the \"Church Militant.\") Strictly speaking, angels are not saints, but the archangels Michael and Gabriel are often treated as saints. Saints are willing to intercede with God on behalf of the living, and while they have no power of their own, God is willing to listen to them. The most important saint is the Virgin Mary, followed by the twelve Apostles, particularly St Peter, and St Paul. There are many other saints, including the saints of the Old Testament, martyrs, and witnesses. The Church is, in 1220, moving towards an official list of recognized saints, although the process is not yet complete. Saints often take an interest in a particular area of life or institution, and petitions addressed to the saint tend to be more effective in that area. Saints are particularly attentive to their relics, physical objects that were closely associated with the saint in life, most often bodies or body parts."
             REFERENCES {
-                "The Church" -> ^"The Church"
+                "The Church" -> #tk1b7ldmKS1oYiEYhWZvBYKr ^"The Church"
             }
         }
-        #tqkFGzr4ZjirbLRvWgm0JbGi ^"Game Use: Saints" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Saints" #tqkFGzr4ZjirbLRvWgm0JbGi {
+                CONCERNS [ #tnpwbtPlVXdAitOXA5lWEToq ^"Saints" ]
+                TEXT "Saints are an excellent medium for divine intervention in a saga. First, most medieval stories of divine activity involve a saint as mediator, so this choice keeps medieval flavor. Further, there are many saints, some quite local and obscure, and they all have different personalities. Some are quite abrasive, particularly when dealing with people opposed to God’s work. Thus, you can make up a local saint with a personality appropriate to the story you want to tell. The attitude of saints to the covenant and the magi depends on whether you decide that magic is inherently sinful. It need not be; magic is opposed by both Divine and Infernal auras, after all. If magic is inherently sinful, any saint will want the magi to abandon it. If it is not, saints will merely urge the magi to use their power in the service of God. Either way, there are many specific options for using saints. • A saint takes an interest in the covenant, and starts looking after it. He or she appears in the dreams of covenfolk offering warnings, and occasionally manifests in the covenant to warn against sin or advise on God’s will. On the one hand, this is a very useful ally. On the other, the magi will want to avoid a Dominion aura springing up within the covenant. • The covenant comes into conflict, over land or some other resource, with a monastery that has a particularly protective patron saint. They find that their magic is opposed by the power of the Divine, forcing them to find another resolution. • Members of the covenant become particularly devoted to a saint with a shrine some distance away, and pilgrimages become a feature of normal life. Even the magi might choose to venerate this saint. • The covenant discovers an important relic in the course of an adventure. Keeping it at the covenant would guarantee a stream of pilgrims and an eventual Dominion aura, but giving it away would make a firm ally of the recipient — and possibly enemies of the other groups who wanted it."
             }
-            DESCRIPTION "The source presents this as a sidebar. Saints are an excellent medium for divine intervention in a saga. The attitude of saints to the covenant and the magi depends on whether you decide that magic is inherently sinful. It need not be; magic is opposed by both Divine and Infernal auras. If magic is inherently sinful, any saint will want the magi to abandon it; if not, saints will merely urge the magi to use their power in the service of God. Story seeds: A saint takes an interest in the covenant and starts looking after it, appearing in the dreams of covenfolk offering warnings — a useful ally, but the magi will want to avoid a Dominion aura springing up within the covenant. The covenant comes into conflict, over land or some other resource, with a monastery that has a particularly protective patron saint, and their magic is opposed by the power of the Divine. Members of the covenant become particularly devoted to a saint with a distant shrine, and pilgrimages become a feature of normal life. The covenant discovers an important relic; keeping it would guarantee a stream of pilgrims and an eventual Dominion aura, but giving it away would make a firm ally."
         }
         #tUzt5izdJBmjD218YeBIeE1s ^"Structures" DEF {
             APPLIES TO [^"Character"]
@@ -133,12 +129,11 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "The head of the Church on earth is the Pope, the Bishop of Rome, who is the Vicar of Christ. Lower-ranked churchmen have a great deal of independence; anyone who disagrees with a lesser bishop's decision can appeal to the Pope, but in practice this is so expensive and difficult that only the most serious problems actually make it there. There are many other bishops across Europe, all based in a city. The church where the bishop has his seat is known as the \"cathedral church,\" from the Latin term for the physical chair (cathedra), and the area around is called the \"diocese.\" A bishop carries out his duties primarily by means of visitations. Within the diocese, Europe is divided up into parishes. Each parish has a church, the parish church, and a priest, the parish priest, assigned to look after the spiritual well-being of all those within, a position called \"having cure of souls.\" In some parishes, the priest with primary responsibility, called the \"rector,\" performs the duties; in others, he pays another priest, called the \"curate,\" to do the actual work."
         }
-        #tId4ZdXmE6AmbKeCtno2ThSL ^"Game Use: Structures" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Structures" #tId4ZdXmE6AmbKeCtno2ThSL {
+                CONCERNS [ #tUzt5izdJBmjD218YeBIeE1s ^"Structures" ]
+                TEXT "All covenants are in a parish, even if they want nothing to do with the Church. Thus, the parish priest could come calling at any time, seeking out the lost sheep of his flock. • A covenant with a cozy relationship with the parish priest hears that the bishop is coming on a visitation. Precisely how this plays out depends on the covenant and bishop, but it needs some response. • The covenant wants to get itself recognized as a separate parish, where the magi can choose the parish priest. This is not unreasonable; most covenants are large enough and rich enough to justify this. But neither is it a foregone conclusion, as the characters will have to negotiate a great deal of Church politics."
             }
-            DESCRIPTION "The source presents this as a sidebar. All covenants are in a parish, even if they want nothing to do with the Church. Thus, the parish priest could come calling at any time, seeking out the lost sheep of his flock. Story seeds: A covenant with a cozy relationship with the parish priest hears that the bishop is coming on a visitation, which needs some response. The covenant wants to get itself recognized as a separate parish, where the magi can choose the parish priest; most covenants are large enough and rich enough to justify this, but the characters will have to negotiate a great deal of Church politics."
         }
         #tgtrTnk1qlmrJd3fEICUgsPb ^"Canon Law" DEF {
             APPLIES TO [^"Character"]
@@ -147,15 +142,14 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "The Church has its own law, canon law, which is based on the old Roman law but covers all aspects of Church life. It also covers marriage, inheritance, and commerce. All canon law cases must, in theory, be heard by the bishop of the appropriate diocese. Heresy is a growing concern of the church courts. Most heretics are encouraged to accept the teachings of the Church by their parish priests. Those who reach court generally recant if convicted, which always ends the case. Those who persist may finally be handed over to the secular authorities for execution. Canon law on commerce makes it illegal to lend money at interest, to buy things and sell them at a profit unless you have transported them a long distance, and to buy large stocks of something when it is cheap, to sell when it is expensive. Canon law only covers Christians, so these activities are all legal for Jews."
             REFERENCES {
-                "The Church" -> ^"The Church"
+                "The Church" -> #tk1b7ldmKS1oYiEYhWZvBYKr ^"The Church"
             }
         }
-        #tFVG9BXRMjHcJ1ooCjmxEdVl ^"Game Use: Canon Law" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Canon Law" #tFVG9BXRMjHcJ1ooCjmxEdVl {
+                CONCERNS [ #tgtrTnk1qlmrJd3fEICUgsPb ^"Canon Law" ]
+                TEXT "• The magi are accused of heresy, and forced to defend themselves in court. • The magi use magic to get around some of the canon law rules on commerce, making a large amount of money, but stirring up opposition from mundane merchants, who appeal to the bishop. • A friendly bishop is faced with a case of heresy where the heretics appear to have diabolical powers. Knowing his limits, he appoints one of the magi as his judge-delegate, sending along a learned clerk to help out. The magus has strict instructions to save as many heretics as possible."
             }
-            DESCRIPTION "The source presents this as a sidebar. Story seeds: The magi are accused of heresy, and forced to defend themselves in court. The magi use magic to get around some of the canon law rules on commerce, making a large amount of money, but stirring up opposition from mundane merchants, who appeal to the bishop. A friendly bishop is faced with a case of heresy where the heretics appear to have diabolical powers; knowing his limits, he appoints one of the magi as his judge-delegate, sending along a learned clerk to help out, and the magus has strict instructions to save as many heretics as possible."
         }
         #tUcefowTidBLwKrDMp7M40Lo ^"Resources" DEF {
             APPLIES TO [^"Character"]
@@ -164,15 +158,14 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "The Church, as an institution, has extensive resources. The most basic of these is the tithe; the Church is entitled to one tenth of everything of which God gives the increase — essentially, all agricultural products. Failing to pay the tithe is a serious sin, for which heavy penances are routinely assigned. In addition, the Church owns a good deal of property, from which it draws income just as any other mundane lord, so many high-ranking clerics are personally very wealthy. In theory, one third of the tithe is supposed to be used to support the poor. In practice, much less than this is devoted to charity, but the Church is still effectively the only source of support for the most vulnerable members of society."
             REFERENCES {
-                "The Church" -> ^"The Church"
+                "The Church" -> #tk1b7ldmKS1oYiEYhWZvBYKr ^"The Church"
             }
         }
-        #t1ruja2Wb169XPO8ct0aEfhG ^"Game Use: Resources" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Resources" #t1ruja2Wb169XPO8ct0aEfhG {
+                CONCERNS [ #tUcefowTidBLwKrDMp7M40Lo ^"Resources" ]
+                TEXT "• Magi still have to pay the tithe. God gives the increase on vis sources. Most priests won’t care, but what if the local priest does? • A covenant might be located so that the nearest major lord is a bishop or monastery, rather than a mundane noble. Alternatively, the mundane noble the covenant had good relations with might die without an heir, leave his lands to the Church, and give the covenant a new, powerful neighbor to handle."
             }
-            DESCRIPTION "The source presents this as a sidebar. Story seeds: Magi still have to pay the tithe. God gives the increase on vis sources; most priests won't care, but what if the local priest does? A covenant might be located so that the nearest major lord is a bishop or monastery, rather than a mundane noble. Alternatively, the mundane noble the covenant had good relations with might die without an heir, leave his lands to the Church, and give the covenant a new, powerful neighbor to handle."
         }
         #tZqfvYPynxgcQZadWWYefhIt ^"Monasteries" DEF {
             APPLIES TO [^"Character"]
@@ -181,14 +174,10 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "Monasteries, and the female equivalent, convents, are a vital part of the Mythic European landscape. The members of monasteries are referred to as \"regular clergy,\" because they are bound by a rule (regulus), as opposed to the \"secular clergy,\" who live in the world (seculum). All monks and nuns take vows of poverty, chastity, stability, and obedience. The vow of poverty means that they have no personal possessions, that of chastity that they have no sexual relations, that of stability that they remain at one monastery, and that of obedience that they do whatever the head of their house commands. The monastic day is structured around the seven monastic offices, church services that take place spread throughout the day. Most monasteries are required to offer hospitality to travelers, at no charge, although visitors are expected to make a donation in line with their means. In the early years of the thirteenth century the mendicant friars, \"begging brothers,\" appear, who take vows of poverty, chastity, and obedience, and travel the world preaching and serving God. The two major orders are Franciscan and Dominican."
         }
-        #tIRrJdh4cTJnvKOqjJIldcpy ^"Game Use: Monasteries" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
-            }
-            DESCRIPTION "The source presents this as a sidebar. Story seeds: While monks make poor player characters, since they are supposed to stay in their monasteries, friars are an excellent choice, as they are supposed to wander around and thus have a perfect excuse for ending up at the covenant. Monasteries are a good place for traveling magi to stay; their duty of hospitality means that they will usually not simply turn away even those with the Blatant Gift. Monastic scholars make good correspondents for magi, and good potential allies."
-            REFERENCES {
-                "Blatant Gift" -> #tNGfqngCU0Dltrgnc6AjN6qS ^"Blatant Gift"
+        GUIDANCE {
+            ENTRY ^"Game Use: Monasteries" #tIRrJdh4cTJnvKOqjJIldcpy {
+                CONCERNS [ #tZqfvYPynxgcQZadWWYefhIt ^"Monasteries" ]
+                TEXT "• While monks make poor player characters, since they are supposed to stay in their monasteries, friars are an excellent choice. They are supposed to wander around, and thus have a perfect excuse for ending up at the covenant. • Monasteries are a good place for traveling magi to stay. Their duty of hospitality means that they will usually not simply turn away even those with the Blatant Gift. • Monastic scholars make good correspondents for magi, and good potential allies."
             }
         }
         #tMGQjtV1k1wGrt7pGudDh2Gb ^"Miracles" DEF {
@@ -201,15 +190,10 @@ EXTENSION "ArM5_Mythic_Europe" {
                 "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
             }
         }
-        #tLeQwjBw9H9qfPHvbBAfKV68 ^"Game Use: Miracles" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
-            }
-            DESCRIPTION "The source presents this as a sidebar. Miracles are an excellent way to emphasize the Myth in Mythic Europe, but they are also the ultimate plot device, so storyguides should use them in moderation. Setting the frequency of miracles is an important part of deciding just how Mythic your Mythic Europe is; the frequency described in the main text is a default level, but you could make miracles very rare, maybe one per year at major shrines, or very common, so that every parish sees a handful of miracles within the parish every year. Story seeds: A grog killed in battle with a dragon is raised from the dead at the prayers of his wife and five small children, coming back with a chilling tale of purgatory and of having seen a recently deceased magus burning in hell. A magus confronting some bandits is suddenly deprived of his magical power, yet his grogs easily defeat the attackers and the magus is unharmed; his power returns afterwards. A character with a serious problem finds that the magi cannot help, as it is part of her Essential Nature, and instead seeks a miracle."
-            REFERENCES {
-                "Mythic Europe" -> #tZ0jn2a7xSBf8hLtPuHomSzD ^"Mythic Europe"
-                "Mythic Europe" -> #tZ0jn2a7xSBf8hLtPuHomSzD ^"Mythic Europe"
+        GUIDANCE {
+            ENTRY ^"Game Use: Miracles" #tLeQwjBw9H9qfPHvbBAfKV68 {
+                CONCERNS [ #tMGQjtV1k1wGrt7pGudDh2Gb ^"Miracles" ]
+                TEXT "Miracles are an excellent way to emphasize the Myth in Mythic Europe, and storyguides should not be afraid to use them that way. They are also, however, the ultimate plot device, as they can do anything, no matter what. Thus, storyguides should use them in moderation, to avoid leaving the players feeling that they have nothing to do. Also, setting the frequency of miracles is an important part of deciding just how Mythic your Mythic Europe is. The frequency described in the main text is a default level, but you could choose to make miracles very rare, maybe one per year at major shrines, or very common, so that every parish sees a handful of miracles within the parish every year. • A grog killed in battle with a dragon is raised from the dead at the prayers of his wife and five small children. He comes back with a chilling tale of purgatory, and of having seen a recently deceased magus burning in hell. He starts an immediate campaign to bring the covenant back to righteousness. • A magus confronting some bandits is suddenly deprived of his magical power. Nevertheless, his grogs easily defeat the attackers, and the magus is unharmed. His power returns afterwards; what lesson is God trying to teach him? • A character with a serious problem finds that the magi cannot help, as it is part of her Essential Nature. Instead, she seeks a miracle."
             }
         }
 
@@ -220,12 +204,11 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "Most of Europe is ruled through the feudal system, tied together by oaths of fealty in which one person swears to provide service (overwhelmingly military) for another in return for control of an area of land. The person swearing is the \"vassal,\" who promises to serve his lord in battle for a certain number of days every year; the area of land is a \"fief.\" If the fief is large, the vassal may provide the services of more than one warrior, and it is common to grant parts of a fief to other warriors on condition of service. The system resembles a pyramid with the king at the top and lords of progressively smaller fiefs below, but is far more complex: lords have direct vassals with fiefs of wildly differing sizes, vassals can swear fealty to several lords, and a lord may be a king's direct vassal for some land and a vassal of a vassal for others. Within his fief a lord is responsible for some aspects of law and order; petty crime is under the local lord's jurisdiction, and the death penalty can only be imposed by the king or some other extremely powerful nobles. All land in the fief is under the lord's control: some he farms himself (the demense), the rest he rents to peasants in return for a share of their crop and some labor on his own lands."
         }
-        #tqjEXrfhrfDKevwZHmnIdMVc ^"Game Use: Feudalism" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Feudalism" #tqjEXrfhrfDKevwZHmnIdMVc {
+                CONCERNS [ #tRNPD0oGvmPDlHp5EMq9ABUL ^"Feudalism" ]
+                TEXT "Because magi are required by the Code to avoid swearing fealty to any mundane lord, feudalism is more likely to be a part of the background of the saga, rather than an immediate source of story seeds. Still, the complex webs of loyalty it creates are ideal breeding grounds for stories."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Because magi are required by the Code to avoid swearing fealty to any mundane lord, feudalism is more likely to be a part of the background of the saga, rather than an immediate source of story seeds. Still, the complex webs of loyalty it creates are ideal breeding grounds for stories."
         }
         #tWXvhn63F6CLtpQtXVEtJlAp ^"Travel (Nobility)" DEF {
             APPLIES TO [^"Character"]
@@ -234,12 +217,11 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "Medieval nobles travel a lot: to fulfill the obligation to fight (wars seldom take place within a noble's own fief), to attend councils or consultations summoned by their lord or the king, and to go on pilgrimages. Lords with scattered fiefs normally travel between them over the course of the year, because it is easier to transport the noble's household than to transport enough food and drink to satisfy dozens of people for weeks. Lords also visit their vassals to reinforce bonds of loyalty, to check the land is well treated, and to weaken threatening vassals (who must expensively support their lord and entourage). Nobles also simply enjoy visiting one another."
         }
-        #toplksBTkgugeUuzK8oUxrxi ^"Game Use: Travel" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Travel" #toplksBTkgugeUuzK8oUxrxi {
+                CONCERNS [ #tWXvhn63F6CLtpQtXVEtJlAp ^"Travel (Nobility)" ]
+                TEXT "Travel, obviously, allows the storyguide to bring nobles into the saga for a single session, or take them out for a period of time, if so desired. • The local lord, who is on excellent terms with the covenant, is expecting a visit from his lord. He asks the covenant for help in defraying the expenses, and in making sure that the visitor is impressed. • The local lord is powerful, and only visits that fief every couple of years. When he does come, however, the magi have to tread very carefully; he doesn’t know the truth about the covenant, and they would prefer to keep it that way. • The local lord, who is somewhat hostile, is called away to a great council, which drags on. His wife, left behind, struggles with a problem facing the fief, and calls on the magi for help. If they succeed, she becomes more friendly, but her husband’s attitude does not necessarily change."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Travel allows the storyguide to bring nobles into the saga for a single session, or take them out for a period of time. Seeds: The local lord, on excellent terms with the covenant, expects a visit from his lord and asks the covenant for help defraying expenses and impressing the visitor. The local lord is powerful and only visits that fief every couple of years; when he comes the magi must tread carefully, as he doesn't know the truth about the covenant. The local lord, somewhat hostile, is called away to a great council that drags on; his wife, left behind, struggles with a problem facing the fief and calls on the magi for help. If they succeed she becomes more friendly, but her husband's attitude does not necessarily change."
         }
         #tjOmIqxidDZHec6qlJVARxFI ^"Entertainments" DEF {
             APPLIES TO [^"Character"]
@@ -251,12 +233,11 @@ EXTENSION "ArM5_Mythic_Europe" {
                 "Mythic Europe" -> #tZ0jn2a7xSBf8hLtPuHomSzD ^"Mythic Europe"
             }
         }
-        #tJNkfR3K1VvwnwcjvlgCCmY9 ^"Game Use: Entertainments" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Entertainments" #tJNkfR3K1VvwnwcjvlgCCmY9 {
+                CONCERNS [ #tjOmIqxidDZHec6qlJVARxFI ^"Entertainments" ]
+                TEXT "• While hunting a magical beast, a noble party is badly injured, and stumbles into the covenant, seeking shelter and assistance. • A group of nobles target an intelligent magical beast that is allied with the covenant. The beast asks for help. • A shapeshifter who can turn into a bear is getting into noble households as a “trained bear.” The bear is extremely impressive, but the shapeshifter has deeper, more devious plans."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Seeds: While hunting a magical beast, a noble party is badly injured and stumbles into the covenant seeking shelter and assistance. A group of nobles target an intelligent magical beast allied with the covenant, and the beast asks for help. A shapeshifter who can turn into a bear is getting into noble households as a \"trained bear\"; the bear is impressive, but the shapeshifter has deeper, more devious plans."
         }
         #tGYHZIR2pg0w2rPvAsRYDAhr ^"Inheritance" DEF {
             APPLIES TO [^"Character"]
@@ -268,12 +249,11 @@ EXTENSION "ArM5_Mythic_Europe" {
                 "Mythic Europe" -> #tZ0jn2a7xSBf8hLtPuHomSzD ^"Mythic Europe"
             }
         }
-        #tpfouZBJqrowpVTGVUdhy69v ^"Game Use: Inheritance" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Inheritance" #tpfouZBJqrowpVTGVUdhy69v {
+                CONCERNS [ #tGYHZIR2pg0w2rPvAsRYDAhr ^"Inheritance" ]
+                TEXT "• A magus was the fifth son of a powerful noble. Now his four older brothers have died, and he is expected to become the new lord. The Order forbids it, but if he doesn’t take the role, war threatens. • A lord with no heirs comes to the magi for help in siring a son. This isn’t very difficult for magi with the appropriate Arts, but the consequences may be profound. • A lord with no male heirs raised his youngest daughter as a boy, to provide an heir within his family. He died when she was very young, but the family servants kept up the pretense, so that the girl is now the lord of the honor. She is, however, expected to marry a woman. She seeks help from the magi."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Seeds: A magus was the fifth son of a powerful noble; now his four older brothers have died and he is expected to become the new lord. The Order forbids it, but if he doesn't take the role, war threatens. A lord with no heirs comes to the magi for help siring a son—not difficult for magi with the appropriate Arts, but the consequences may be profound. A lord with no male heirs raised his youngest daughter as a boy to provide an heir; he died when she was very young, but the family servants kept up the pretense, so the girl is now lord of the honor—yet she is expected to marry a woman, and she seeks help from the magi."
         }
         #tass2PbLEM3Th7fxbNkRMnsB ^"Mythic Options (Nobility)" DEF {
             APPLIES TO [^"Character"]
@@ -296,12 +276,11 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "Markets are the stage before a town and often the nucleus around which new towns grow. A market is a formally established place and time for trading locally produced goods; most gather once per week and draw people from an area about twelve miles across, allowing people to walk to market, do business, and walk home in a single day. There may be rules about who may buy and sell what, fees for setting up stalls, and fines collected by the controlling lord at a market court. The bulk of trade is agricultural produce, with limited other goods (simple tools, clothes, home utensils) tailored to peasant customers—truly exotic goods cannot be found there. Markets are also centers for news, entertainment, and employment. Fairs are essentially temporary towns, normally happening once per year and lasting several days; the smallest draw from a large region and the largest, in the Champagne region of France, draw from the whole of Europe. A fair is like a really big market where almost anything can be bought, including luxury goods for noble and high-church customers. By the early thirteenth century the greatest days of the fairs are over as towns take over their role, but they still have much life left."
         }
-        #tIHbr8NC9fwKKjpp0FViyrtC ^"Game Usage: Markets and Fairs" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Usage: Markets and Fairs" #tIHbr8NC9fwKKjpp0FViyrtC {
+                CONCERNS [ #tCDkBdPSD3ySfzDuYx39ucqP ^"Markets and Fairs" ]
+                TEXT "• Sending the grogs to market makes an excellent story that need not involve any magi. • Markets can provide substantial income, so a covenant might want to establish one under its control. A market controlled by the magi is also a good way to slowly put magically created goods into circulation, without raising too many suspicions. However, markets bring visitors, who might be over curious, and attract hostility from other local markets, that don’t like the competition. • An ambitious covenant might even try to sponsor a fair, but that just makes the potential problems even larger. • Magi needing exotic pieces of laboratory equipment, or materials from distant lands, travel to a fair to find them."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Seeds: Sending the grogs to market makes an excellent story that need not involve any magi. Markets can provide substantial income, so a covenant might establish one under its control—also a good way to slowly put magically created goods into circulation without raising suspicions—though markets bring over-curious visitors and attract hostility from competing local markets. An ambitious covenant might try to sponsor a fair, which just makes the potential problems larger. Magi needing exotic laboratory equipment or materials from distant lands travel to a fair to find them."
         }
         #tzgni54xpg8IDjy782Pp8Dq3 ^"Towns" DEF {
             APPLIES TO [^"Character"]
@@ -310,12 +289,11 @@ EXTENSION "ArM5_Mythic_Europe" {
             }
             DESCRIPTION "Most medieval towns cover a fairly small area, and many are walled; within the walls buildings can have as many as four stories and streets are very narrow. Rubbish, including from slaughterhouses, is thrown into the streets where feral animals feed off it, and sewage may be thrown into the streets or the river. The resulting bad air often unbalances the humors of those living there, so people die significantly younger in towns than in the countryside, and most towns only maintain their population through immigration. People immigrate because there are jobs: daughters of overlarge peasant families work as domestic servants, and landless peasants work as laborers or find a trade. Larger towns are becoming permanent fairs where the wealthy can buy almost anything. Towns mostly stand a little outside the feudal system, often run by councils of leading merchants or wealthy citizens rather than a warrior noble, and sometimes entirely independent and themselves lords of surrounding countryside; people may flee to a town to escape harsh lords or justice, as towns have crowds large enough to lose oneself in."
         }
-        #tDUK1M2z9sETKoK2Gxdavhdc ^"Game Use: Towns" DEF {
-            APPLIES TO [^"Character"]
-            PROPERTIES {
-                ^"Source" STRING "Ars Magica Fifth Edition"
+        GUIDANCE {
+            ENTRY ^"Game Use: Towns" #tDUK1M2z9sETKoK2Gxdavhdc {
+                CONCERNS [ #tzgni54xpg8IDjy782Pp8Dq3 ^"Towns" ]
+                TEXT "Clever use of magic can offset the penalties of the bad air of towns, and small magical auras, or even regiones, might persist, allowing a covenant to be sited there. Most of the story ideas for markets and fairs also apply to towns. In some countries, towns have a great deal of discretion to run their own affairs, as long as they pay a certain amount of tax. Thus, a covenant might try to be legally recognized as a town. Many covenants are certainly large enough."
             }
-            DESCRIPTION "Presented in the source as a sidebar. Clever use of magic can offset the penalties of the bad air of towns, and small magical auras, or even regiones, might persist, allowing a covenant to be sited there. Most of the story ideas for markets and fairs also apply to towns. In some countries, towns have a great deal of discretion to run their own affairs as long as they pay a certain amount of tax, so a covenant might try to be legally recognized as a town—many covenants are certainly large enough."
         }
         #th2pK98SAiMsT9scHbvMbxnk ^"Mythic Options (Towns)" DEF {
             APPLIES TO [^"Character"]

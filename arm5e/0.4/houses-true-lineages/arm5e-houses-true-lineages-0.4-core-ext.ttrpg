@@ -1,0 +1,31 @@
+EXTENSION "ArM5_Houses_True_Lineages_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: True Lineages - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Houses of Hermes: True Lineages is an EXTENSION on the arm5e edition,
+    # loaded alongside the core rulebook (spec S13 composition). It details four
+    # of the twelve Hermetic Houses — Bonisagus, Guernicus, Mercere, Tremere —
+    # each already defined as a mechanical ^"House X" DEF in
+    # arm5e-0.4-houses.ttrpg (EXTENDS ^"Hermetic House"). This book's records
+    # EXTEND / point at those canonical House DEFs; it does not redefine them.
+    #
+    # What it does NOT declare, deliberately (matching the RoP:Faerie precedent):
+    #   - Virtues and Flaws. The book's new Hermetic/Supernatural/General/Social
+    #     Virtues and Flaws fit the core ^"Virtue"/^"Flaw" types unchanged (same
+    #     Size enum, same free-text Category axis). Those records EXTEND
+    #     ^"Virtue"/^"Flaw" and DEPEND_ON ArM5_Core_Virtue_Flaw directly.
+    #   - Spells. Fenicil's Rituals (Guernicus), the Mercere spells, and the
+    #     Tremere new spells fit the core ^"Hermetic Spell" shape unchanged.
+    #   - Narrative. The House histories, organization, customs, and the Code of
+    #     Hermes discussion are prose → the .lore files; their in-chapter
+    #     headings are matched by .lore basename and dispositioned in coverage.
+    #
+    # House-specific SYSTEMS this book introduces (House Acclaim & folios for
+    # Bonisagus; the Redcap network for Mercere; Certamen dueling refinements &
+    # the House structure for Tremere; Quaesitorial duties for Guernicus) are
+    # declared here as new types only where a core type has no place for them —
+    # added per-bucket as those systems are converted. Nothing to declare yet.
+}

@@ -1,0 +1,64 @@
+EXTENSION "ArM5_Covenants_Ward_Spells" {
+    NAME "Ars Magica Fifth Edition, Covenants - Ring and Circle Ward Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    #tnulMRYPCglAoFIX41F0KIHH ^"Ward Against the Curious Scullion" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This spell creates a circle that humans lacking Magic Resistance cannot cross. The spell gently pushes the target away from the ring. It is used to bar entry in many Hermetic sancta.\n\nThis spell has an alternate name, Tytalus’s Prison, which comes from a story, possibly apocryphal, from the life of the Founder Tytalus. It suggests that in the early years of the Order, he cast down a wizard living as a feudal lord in the Rhineland, in part by trapping his mustered army inside a ring placed about the army camp. Members of House Tremere claim a similar feat for one of their early archimagi. Their story seems more likely because he was a vallationist, a builder of magical walls, which explains why the army was not able to deface the ring and escape. It is possible that this is a trick of Guorna the Fetid’s, which both magi knew. The second name also hints at an alternative use of the spell in a magus’s sanctum: to imprison an apprentice inside.\n\n(Base 3 [move “away”], +1 Touch, +2 Ring)"
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+            "House Tremere" -> ^"House Tremere"
+        }
+    }
+
+    #tON8RGshxYlRXs6Q3tNoEWYX ^"Ward Against Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Ring"
+            }
+        }
+        DESCRIPTION "This spell creates a circle that mundane fires cannot cross. It is used, in many laboratories, around heat sources that could tip or spill. It is also popular around grain stores. The fine dust that is found wherever people store flour is highly flammable, and many magi use this spell to quarantine areas in mills and granaries from the fires that are used in other parts of the buildings. Hermetic librarians use this spell far more than is necessary: in one covenant, for example, the drip catcher on every candleholder has a circle for this spell etched into its surface.\n\nThis spell sometimes encloses an entire laboratory, but is of limited usefulness in that application. The fires caused by laboratory accidents are often magically powerful enough to overcome this ward, or hot enough to burn through the wooden boards used as floors and ceilings in many covenants. The spell does keep fires bottled, but this makes them more intense, until they burn through their supply of fuel and air."
+    }
+
+    #tGyRpfBfWfpwGOwcXFp6msSu ^"Ward Against Mundane Intrusions" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Requisite" STRING "Corpus, Animal, Aquam, Herbam"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This spell conglomerates other wards into a single working. It holds at bay many of the things likely to damage Hermetic sancta: flame, excessive light, thieves, pests, moisture, and mildew.\n\n(As Ward Against Flame, +4 requisites)"
+        MENTIONS {
+            "Ward Against Flame" -> ^"Ward Against Flame"
+        }
+    }
+}

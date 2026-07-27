@@ -1,33 +1,39 @@
 # titterpig-dsl-arm5e — TODO
 
-Status as of 2026-07-26. Corpus validates **arm5e 80 files 0/0, armdef 40 files 0/0**;
-MENTIONS/MODIFY/no-armdef-type gates all clean. The five supplements' record buckets +
-the MENTIONS pass + the cross-book MODIFY pass are **committed** (`f3224d1`).
+Status as of 2026-07-26 (evening). Corpus validates **arm5e 100 files 0/0, armdef 40 files
+0/0**; MENTIONS arm5e 2145 / armdef 1431 (both 0 unresolved / 0 surface-mismatch);
+MODIFY/no-armdef-type gates clean; sources.json fully synced (146/146). **NOT yet committed** —
+everything past `c51cb9f`/`fe2e4c0` awaits review.
 
-## Current effort — five supplements (Covenants, Grogs, RoP: Faerie, RoP: Magic, Hedge Magic)
+## Current effort — five supplements: coverage + record-gap remediation **DONE**
 
-Record buckets: **DONE + committed.** Remaining coordinated work to call the effort complete:
+The coverage pass revealed the "record buckets done" milestone measured built buckets, not the
+source's enumerable sets — ~260 genuine mechanical records had been skipped. Those are now
+**built, verbatim, gated**. All five books are at **sidebars-only** (every record gap closed,
+every narrative section captured verbatim to `.lore`, all structural excluded-with-reason):
+grogs 0 uncovered (coverage PASS); covenants 39 / faerie 37 / rop-magic 76 / hedge 65 uncovered
+— **all content sidebars**, the owner's deferred audit.
 
-1. **Core mechanical DEFs + MENTIONS re-run — NEEDS OWNER (new core content).**
-   `Light Wound` / `Medium Wound` / `Ease Factor` / `Recovery Roll` / the wound levels
-   are not DEFs in the arm5e core, so DECISION-7's own worked example ("close the flesh")
-   has nothing to link to. Adding them is new core content (a core wounds / die-rolls /
-   recovery file), then re-run the linker so they resolve automatically. Owner call on
-   whether/how to add.
+Record gaps built (deterministic-from-source, all validating): **RoP:Faerie** 12 Ars-Fabulosa
+spells + 21 R/D/T params; **RoP:Magic** ~123 (15 spells, 77 creature-powers→addressable Power
+DEFs, 15 vis, 10 modifier tables, item, Jinn, beast-virtues, gap-types); **Covenants** ~100
+(craft/scribal/librarian/ward/lab spells, 17 devices, tables, guidelines, **21 sample covenfolk
+→ Companion-type DEFs**, **9 example laboratories → Laboratory DEFs**, Virtuous Hound + Familiar
+Cat); **Hedge** 6 Magic Defenses. `.lore` for all narrative chapters. MENTIONS re-run over both
+editions (`apply_mentions.py` made idempotent — strips existing blocks before re-adding).
 
-2. **Per-book coverage / `.lore` pass (all five books).** Apply the SETTLED coverage
-   policy (structural → exclude-with-reason; mechanics → `.ttrpg`; story-seeds +
-   setting/rules-prose/GM-guidance/examples → `.lore` verbatim; double-capture kept).
-   Get `coverageAudit.ts <manifest>` to exit 0 per book with owner-signed deferrals.
-   Bring the owner **only the sidebar lists** to audit (`.lore` vs `.ttrpg` per sidebar).
-   - RoP:Faerie has no manifest yet — create `coverage/arm5e-rop-faerie.manifest.json`.
-   - Grogs manifest owes a note: `Master of (Form) Creatures` is **covered-by-cross-
-     reference** (canonical in rop-magic; Grogs' Minor/General erratum dropped), not
-     uncovered — its Grogs DEF was removed in the dedup.
+### Remaining — BOTH deferred by the owner (2026-07-26)
+1. **The 234 content sidebars** — `.lore` vs `.ttrpg` per sidebar is the owner's audit. All
+   pre-classified with recommendations in the per-book reports (scratchpad `report-<book>.md`);
+   coverage gates FAIL by design until these are dispositioned. Owner said defer.
+2. **Core wound/recovery DEFs** (`Light/Medium/Heavy/Incapacitating Wound`, `Recovery Roll`) so
+   ~300 supplement description terms MENTIONS-link. Owner has "a different idea" — revisit.
+   Apply-ready package + pre-minted anchors at scratchpad `OWNER-DECISION-core-wound-defs.md`.
 
-3. **`sources.json` sync + final gates.** Covenants' and Grogs' subdir files aren't all
-   tracked in `sources.json` yet; sync all five books, then re-run the full-corpus
-   validator + coverage gates on both editions.
+### Known extraction defect (flagged, owner-aware)
+RoP:Magic Ch8 Things-of-Virtue write-up prose is DISPLACED in the HTML extraction (paragraphs
+misattributed under wrong headings). NOT built from the bad extraction; the 25 Things stay
+covered by their verbatim Shape&Material records. Needs a targeted re-extraction of p.55-130.
 
 ### Flagged (deferred, owner-aware) — see DECISIONS-FOR-MORNING.md
 - **Page-cite strip is incomplete** (~40 residual ArM5/RoP cites in arm5e; armdef clean).

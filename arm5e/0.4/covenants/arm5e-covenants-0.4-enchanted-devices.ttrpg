@@ -1,0 +1,269 @@
+EXTENSION "ArM5_Covenants_Enchanted_Devices" {
+    NAME "Ars Magica Fifth Edition, Covenants - Enchanted Devices"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Covenants_Core_Ext"
+
+    #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device" DEF {
+        PROPERTIES {
+            ^"Technique" STRING
+            ^"Form" STRING
+            ^"Level" INTEGER
+            ^"Requisite" STRING
+            ^"Penetration" STRING
+            ^"Uses" STRING
+            ^"Effect Design" STRING
+            ^"Device Class" STRING
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+        DESCRIPTION "An enchanted item from Covenants: a Lesser Enchanted Device, an Invested Device, or a fantastical device, described by its instilled effect and its function."
+    }
+
+    #tIAqCyJSuwyyGq40NCek02A6 ^"Magical Oven" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Effect Design" STRING "(GL 5, +1 Conc, +5 levels to maintain concentration, +5 levels for 24 uses)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Pers, D: Conc, T: Ind, device maintains concentration The device takes the form of a hollow box of iron encased in fire-brick, with a detachable iron lid. On command, the hollow interior becomes red-hot and stays so until sunset or the command to stop is given.\n\nIf this amount of heat is excessive, as it often is, food may be placed on the oven’s lid, or on a grid above the brick."
+    }
+
+    #tnMYQ5grxLcZViHsnNKFPOhQ ^"The Enchanted Chef" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Requisite" STRING "Animal, Aquam, Ignem"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Effect Design" STRING "(GL 5, +1 Touch, +2 Group, +3 for requisites, +1 flexibility, +5 levels for 24 uses)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Touch, D: Mom, T: Group Placing a selection of food (vegetables, meat, liquids) inside this pot and closing it, the user describes the recipe they wish applied to the food, which is instantly processed and transformed as if by a cook. The edibility and quality of the food is not changed in any way, other than to discard small spoiled parts (as any cook would).\n\nThe resulting dish is as described by the user, and limited by his knowledge (or imagination) and quality of description. A Communication + Finesse roll by the user replaces the Craft: Cook roll (at +3 Ease Factor). The food will be at least technically edible (if edible materials were placed within), though a poor Finesse roll may result in a less appetizing dish than hoped for. The user may substitute Communication + Craft: Cook for Communication + Finesse if he possesses that skill.\n\nCovenants lacking grogs with the desired skills may write out instructions for the device, provided the grogs are literate enough to read a recipe. Use the writer’s quality (as if he were writing a tractatus) in place of die rolls. Failing all else, the user can request “Traveler’s Hot-Pot.” This is a very basic stew, with peeled vegetables and chopped meat, boiled until over-done, which has an Ease Factor of only 3.\n\n(* Because of its high level, many covenants must create this device as an Invested Device.)"
+    }
+
+    #tv7KljmNgJ2eHyLL8gKQuedC ^"Stone-Cutting Knife" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses"
+            ^"Effect Design" STRING "(GL 2, +1 stone, +1 Touch, +1 Part, +10 levels unlimited uses)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Touch, D: Mom, T: Part This enchanted chisel shapes and forms stone as if a well-equipped stonemason were carving it. The device may be used to carve blocks from a quarry (hence the Part Target). The wielder’s Dexterity + Finesse roll substitutes for a mason’s Craft roll (with +3 to the comparable Ease Factor).\n\nIt is a Simple task for a Mason to cut a plain block, so the basic Finesse Ease Factor to use this device to cut blocks for building is 6. Grogs deputed to the task can usually be trusted to carve blocks of approximately regular shape, though they may need trimming to fit, when used."
+    }
+
+    #tzH328obvOyT6iH90gfDJo8Z ^"The Enchanted Porter" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Effect Design" STRING "(GL 3, +1 Touch, +1 Conc, +5 levels to maintain, +5 levels for 24 uses; based on The Unseen Porter)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Touch, D: Conc, T: Ind, device maintains concentration This enchanted glove, when placed against an inanimate object, lifts and pushes the object as the user holds on and moves. When the user removes his gloved hand from the object, it settles to the ground."
+    }
+
+    #tc7XhlHvTd5CgSkUFzmllHWa ^"The Motivated Plow" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Effect Design" STRING "(GL 2, +1 Touch, +1 Conc, +1 Part, +5 levels to maintain, +5 for 24 uses; based on The Forgiving Earth)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "T: Touch, D: Conc, T: Part, device maintains concentration This lightweight, plow-shaped device can easily be pushed along even by a single grog, not needing any harnessed beasts. If settled on the ground, it transforms even hard-packed earth into loose, well-plowed soil in a circle 15 paces across."
+    }
+
+    #tX8ioXqC7WsZEuecPvvuFtUH ^"The Vitalizer of Provisions" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 19 FIXED
+            ^"Requisite" STRING "Herbam"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Effect Design" STRING "(GL 2, +1 Touch, +2 Sun, +2 Group, +3 levels environmental trigger, +1 level for twice daily)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Touch, D: Conc, T: Group This chest preserves food placed within it, preventing decay while the door remains closed. When removed from the box, the effect ceases to affect the food, and it may be cooked and eaten — as fresh as when it was placed within."
+    }
+
+    #tSTUAroxdzb0ytpWaJyG8NBN ^"The Death of Vermin" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Effect Design" STRING "(GL 2, +2 Voice, +2 Sun, +2 Group)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This box is enchanted to fill specific vermin with a desire to approach and enter the box. The box is placed where vermin are found, triggered, and left to gather any that approach the box. The effect lasts until sunset or sunrise: most vermin are either active by day, or active by night, so one use gathers all vermin in that area.\n\nOnce in the box, the vermin may be destroyed by a suitably equipped grog.\n\n(GL 2, +2 Voice, +2 Sun, +2 Group) A spell exists to kill pests instantly, but is level 50 Perdo Animal, and a device to perform this task would require 5 or 6 pawns of vis; as such, it is cheaper to have a grog sit by and stomp on the vermin necessary."
+    }
+
+    #tzeDDr9QEgDmQEb8lLr2lLcV ^"Abluere Magica" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Requisite" STRING "Animal"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses"
+            ^"Effect Design" STRING "(GL 4, +1 Touch, +10 levels for unlimited uses)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "T: Touch, D: Mom, T: Ind The device takes to form of two hinged boards that close together in the manner of a large book. Placing a soiled garment between the boards momentarily renders it clean and fresh, as if a washerwoman had worked her art upon it.\n\nThe user must succeed with a Dexterity + Finesse roll substituting for Profession: Washer-woman, although the clothes will at least be clean and fresh (though creased) even if the user is incompetent; if the user botches, they will be subtly soiled, to be discovered later.\n\nSome covenants enchant a larger device, requiring two people to open and close it, which cleans bedding too."
+    }
+
+    #tRmP6X0QbrJXzXtGQdSdhymA ^"The Dumb Waiter" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Effect Design" STRING "(GL 15 by analogy with ReCo guidelines, +1 Touch, +2 Group, +5 levels for 24 uses)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Touch, D: Mom, T: Group The Dumb Waiter instantly transports food and plates, drink and cups, from the kitchen (where the device resides) to specified places in the covenant within 50 paces. The destination for a given load is indicated by placing a small arcane connection in a receptacle on top of the device.\n\nThe Dumb Waiter ensures that food is as fresh as possible, and still hot, when it reaches the high table; it also ensures that the food is not dropped on the way, nor scraped back onto the plate and delivered anyway."
+    }
+
+    #thuXkbyZL65SxentsEreBwwk ^"Incendior Homines" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Penetration" STRING "+8"
+            ^"Uses" STRING "50/day"
+            ^"Effect Design" STRING "(GL 10, +2 Voice, +6 levels for 50 uses, +4 levels for +8 Penetration)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Voice, D: Mom, T: Ind This aid for the militant turb provides heavy firepower, exceeding that of the long bow, and can be used even by an unskilled grog. When the trigger is activated, a designated target is enveloped in flame, suffering +15 damage, with +8 Penetration. The downside is that targets with Magic Resistance may shrug off the device.\n\nThe device takes different forms according to the whim of the magus making it. The wand is traditional, but a ring or brooch is also common; one magus made a small toy gargoyle that spat a jet of fire when squeezed.\n\n(GL 10, +2 Voice, +6 levels for 50 uses, +4 levels for +8 Penetration).\n\nA level 40 variant offers powerful covenants a fiery blast with +28 Penetration for only one more pawn of vis."
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+        }
+    }
+
+    #thmOZ0W21VDMFuNaN9U2eBoX ^"The Bookstand of Hespera" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Effect Design" STRING "(Base 10, +1 Conc), item maintains concentration (final level 20)"
+            ^"Device Class" STRING "Invested Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This item is a wooden lectern with enough space on its top for a Lab Text, as well as an inkhorn, a small knife, and several quills. The stand moves around to follow the magus so that he is never far from his Lab Text. He only need turn to consult his text or make further notes. The Bookstand adds two points to a Specialization in Texts."
+    }
+
+    #tzcyUDhpjTQJDtBIaWPaWCVs ^"The Crown of Hermes" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Requisite" STRING "In, Mu, Re"
+            ^"Effect Design" STRING "(Base 35, +1 Touch, +2 Sun)"
+            ^"Device Class" STRING "Invested Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "The powerful creator of this artifact, an elaborate, jewel-encrusted golden crown, has been lost to living memory. Although invested with other effects, such as Aura of Rightful Authority, the crown’s most powerful property is that it enables its wearer to enter a kind of trance and thus create an imaginary laboratory in his mind. With seasons of meditation whilst wearing the crown, the wearer can undertake some kinds of lab work (or even lab improvement). When the crown is removed and later put back on, the wearer recalls his imaginary lab in the last state that he left it. Wearing the crown for the first time will inflict one Warping point, since it is a powerful mystical effect. Every year of use will also inflict a Warping point, due to being continuously under the influence of the effect. The imaginary lab may be treated as a standard one, except that it has the Mental Construct Flaw (see above)."
+        MENTIONS {
+            "Aura of Rightful Authority" -> ^"Aura of Rightful Authority"
+            "Mental Construct" -> ^"Mental Construct"
+        }
+    }
+
+    #tTpsGgc8kIWHiDjtN4VX8Xqb ^"The Prodigious Plant Pot" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Effect Design" STRING "(Base 15, +1 Touch, +2 Sun)"
+            ^"Device Class" STRING "Invested Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This object is a large and sturdy clay pot. If filled with loam, a seed or seedling placed in it grows rapidly into a mature plant over the course of a full day. The Plant Pot adds +1 to a lab’s Experimentation Specialization and +2 to its Herbam Specialization."
+    }
+
+    #tsP4IZNdcUeAz3M7L3UDVvu1 ^"The Tireless Servant" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Effect Design" STRING "(Base 10, +1 Conc, +2 complexity), item maintains concentration, unlimited uses per day (final level 40)"
+            ^"Device Class" STRING "Invested Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This is an automaton of sorts, a skeleton which has been animated and may be controlled quite precisely with a limited set of verbal commands. It can be instructed to hold or fetch objects, and perform simple operations, such as lifting and stirring, independently. The Tireless Servant adds +1 to a lab’s General Quality, and +1 to its Safety."
+    }
+
+    #tDPtbZaNpgeFF1bXR2558f9j ^"The Marvelous Hound" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 34 FIXED
+            ^"Requisite" STRING "Corpus, Mentem"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Effect Design" STRING "(Base 15, +1 Touch, +14 levels always on, requisites free)"
+            ^"Device Class" STRING "Lesser Enchanted Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Touch, D: Constant Effect, T: Ind This collar transforms a normal hound into an ideal servant, who walks erect and has hands; has the intellect of a grog; but retains the devotion, willingness to please. and loyalty of a hound. The creature’s overall appearance remains hound-like, but its limbs and intellect are transformed by the device. One defect is that the hounds suffer Warping from the constant effect, but over the lifetime of a dog, this is generally not too much of a problem."
+    }
+
+    #tcR37nnujCU3UxLtHCE5BZAg ^"The Remote Entrance Portal" DEF {
+        EXTENDS ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Effect Design" STRING "(Base 20, +3 Sight, +2 Group, +5 levels for 24 uses)"
+            ^"Device Class" STRING "Fantastical Device"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "R: Sight, D: Mom, T: Group For the security-minded covenant, this is a magical transporter activated only from within the covenant, with no use of Arcane Connections. If the covenant is otherwise physically inaccessible — for example, a flying castle — then hostile ingress may be almost impossible. In typical use, grogs keep a mundane eye on the portal area, watching for visitors, and there is a loud (mundane) bell and flag visitors can use to indicate their request for transport. Finally, there is the circle-of-transport, activated from within the covenant, which transports those seen by the grogs into the covenant. (Visiting magi may resist the effect and remain outside. In such cases, servants are typically sent out to welcome them into external accommodations, outside the Aegis.) The enchantment is a Rego Corpus 45 effect, and transports targets seen up to 500 paces into the covenant, or deposits them outside upon departure."
+        MENTIONS {
+            "Arcane Connections" -> ^"Arcane Connections"
+        }
+    }
+}

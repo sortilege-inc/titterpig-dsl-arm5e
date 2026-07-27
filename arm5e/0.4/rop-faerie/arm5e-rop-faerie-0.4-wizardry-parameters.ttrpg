@@ -1,0 +1,190 @@
+EXTENSION "ArM5_RoP_Faerie_Wizardry_Parameters" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: Faerie - Faerie Wizardry Parameters"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_RoP_Faerie_Core_Ext"
+
+    #tGP035DFhFygb8V1gMV8G0e ^"Faerie Ranges, Durations, and Targets" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "A character casting a faerie rite may always use any of the following Ranges, Durations, and Targets, in addition to those associated with Hermetic magic and the Faerie Magic of House Merinita."
+        MENTIONS {
+            "Hermetic magic" -> ^"Hermetic magic"
+            "Faerie Magic" -> ^"Faerie Magic"
+            "House Merinita" -> ^"House Merinita"
+        }
+    }
+
+    #tWyk2XrNXuDhU9tjjzRxEHd ^"Crossroads (Range)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "This range allows the character to affect a target that is on a road, from another road that intersects it, and is otherwise like Road save that any number of roads can cross each other with this Range. Note that the caster cannot affect targets on the same road as him. It is most effective when cast at an intersection, since there it can affect targets on either road, and is considered the same level as Voice."
+    }
+
+    #tN4jBPCuQehoLxXpPFbqG0b ^"Presence (Range)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The character radiates a sort of faerie aura, which is not visible and has no effect on others except that it allows him to affect targets within this area through an extension of himself. The size of the aura depends upon the character's Presence, as shown below.\n\nPresence / Distance\n+4/+5: 100 paces\n+2/+3: 50 paces\n–1/0/+1: 15 paces\n–2/–3: 5 paces\n–4/–5: 0 paces*\n* Caster only.\n\nFor the purposes of calculating spell levels, this range is the same as Voice."
+    }
+
+    #t7VmsTvEdkzLVBGx9vi6IOU ^"Prop (Range)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "This is the same level as Touch. The caster touches the target with something that he is also touching. If the prop is too large for the caster to carry, the effect must include additional magnitudes for its size. For example, to affect a target through a wall upon which both target and caster stand would likely add two or three magnitudes to the rite."
+    }
+
+    #thmnUFVsJz0Zn2y8BmDlcIz ^"Symbol (Range)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "You can affect a symbol of your target as if it were an Arcane Connection to it, essentially allowing you to create an Arcane Connection. This spell must be a ritual, but is otherwise equivalent to Arcane Connection range. To fashion a symbol, the character must have at least 3 points of Sympathy Traits that are applicable to the target. These are cumulative with the other Symbol parameters, so that a rite that includes Range, Duration, and Target: Symbol requires at least 9 points of Sympathy Traits. If the symbol does not uniquely describe the target, the spell will fail, since an Arcane Connection must be specific to a single target (unless cast with Target: Symbol)."
+    }
+
+    #tyfILJksLUFSDNXANcIeZdf ^"Held (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "This duration is the same level as Concentration. The character may perform the rite as normal, but the effect is delayed for as long as he concentrates. When he releases it, treat it as if cast with Momentary duration."
+    }
+
+    #td2tH2AW0nN4VwtZ7TVpEJ4 ^"Focus (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The effect lasts until the caster performs another supernatural effect, including using Sympathy Traits as Ability specializations. During this time, the caster does not heal, recover fatigue or Might, or gain Confidence. It is equivalent to Concentration."
+    }
+
+    #tlXMfPNaIthC63kIwwLrT5m ^"While (Condition) (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The target must perform some activity such as a musical performance or reading a book, or fulfill some common and temporary physical condition like sleeping or being drunk. As long as that condition lasts, the effect remains. This is the same level as Concentration."
+    }
+
+    #tJJn5USHe5G47llffJ6BqvD ^"Geas (Condition) (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "Instead of causing an effect to take place immediately, the character can cast it as a conditional effect using this Duration. This ensures that the effect only manifests in response to an uncommon circumstance that is clearly outlined for the victim as part of the spell. For example, a geas might specify that a knight will lose all his courage if he ever commits adultery or refuses a challenge. The effect of the geas can also target something other than the person affected by the condition, as long as both targets are within range of the effect when it is cast. If either the target or the victim has Magic Resistance, the effect must penetrate at the time of casting to have any effect, and it may be dispelled through powers that undo other powers before the effect comes to pass. It is the same level of Duration as Sun, but adds a second Duration to describe the triggered effect; i.e. Geas/Moon would cost five magnitudes."
+        MENTIONS {
+            "Magic Resistance" -> ^"Magic Resistance"
+        }
+    }
+
+    #twjoyuQp19IDXDUOiXu8fmD ^"Hour + 1 (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The effect lasts for an hour and a day; approximately 13 hours. It is equivalent to Sun."
+    }
+
+    #t3oEX52hQz7lGo9M10SSM7z ^"Midday/Midnight (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "This duration is equivalent to Sun, but does not manifest until dawn, noon, dusk, or midnight. It then lasts until noon, dusk, midnight, or dawn. For example, a spell cast just after dawn would not manifest until noon, and would then last until dusk."
+    }
+
+    #tSjfqI2zCx4LQ3XNZP5MN6u ^"Not (Condition) (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The spell lasts for as long as the target does not fulfill some common physical condition, such as sleeping or speaking. It is equivalent in level to Sun duration, but cannot last longer than a month."
+    }
+
+    #tEWCrdjJ1JZvLTBkWAHGpZX ^"Season (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "This duration is held until the start of the next equinox or solstice, and lasts only until the following equinox or solstice. It is the same level as Moon, but requires a ritual."
+    }
+
+    #tBWNS4H0BpxTs29jaOJScut ^"Aura (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The spell lasts for as long as the target remains within a supernatural aura. If the target leaves the aura or the physical world entirely (dies or goes to Arcadia, for example) the spell ends. This does allow moving from one aura to another, so long as the two auras overlap — as long as the target never leaves a supernatural aura of some kind. It is equivalent to Year, and always requires a ritual effect."
+    }
+
+    #tNKsmi5dlAPqRp1g5NtPlFz ^"Faerie (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "Either the target or the caster must have Faerie Might, and must be in Mythic Europe; the spell fails the instant this condition is not met, including dying or traveling to the Faerie Realm. This is the same level as Year, and thus requires a ritual to cast."
+        MENTIONS {
+            "Mythic Europe" -> ^"Mythic Europe"
+        }
+    }
+
+    #tp884smBaZ7932PeaKqtvrD ^"Hidden (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The spell lasts as long as the caster or target (or a significant part of the caster or target) is hidden — buried in the earth, placed inside a box, covered with a curtain or disguised by a costume — by anything, even another spell, so long as the effect with the Hidden duration does not itself hide the target. If anyone other than the caster discovers it, the spell ends immediately. This is the same level as Year, and a ritual effect."
+    }
+
+    #tZb3gvRj9qUSMXDcPqOZex6 ^"If (Condition) (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "This effect triggers if the target fulfills a specific condition, which can be common and even impossible to avoid such as eating or sleeping. It has an additional Duration that determines how long the triggered spell lasts after it takes effect. To determine the level, you should add four magnitudes to the level based on the Duration that the spell has when it takes effect, and it must be cast as a ritual. The spell expires without triggering if the caster dies, or if a year passes."
+    }
+
+    #tur1jQutnjj5uR0cybar5Tg ^"Symbol (Duration)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The effect lasts as long as a symbol fashioned at the time of casting does (and the symbol must be a physical object, so that a poem or song, for example, must be written down). To fashion a symbol, the character must have at least 3 points of Sympathy Traits that are applicable to the target. These are cumulative with the other Symbol parameters, so that a rite that includes Range, Duration, and Target: Symbol requires at least nine points of Sympathy Traits. If the symbol is broken, erased, falls apart, dies, or is otherwise damaged, the spell ends. If the target changes so that any of the qualities of the symbol no longer apply, the spell is interrupted, but the effects will return once these qualities are true again — unlike the Until (Condition) Duration, this effect can outlive the caster. It is the same level as Year, and requires a ritual to cast."
+    }
+
+    #tU4sp3g5YN242vsCr0G19ZN ^"Medium (Target)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The effect is held by a medium for the duration of the effect and passed on to an applicable target as soon as it comes within range. When the target is removed from the medium, the effect is interrupted, but as long as the duration continues, the medium can affect another target that comes into range of the effect. For example, a R: Touch rite might target a person, but use an animal as a medium, so that the caster must touch the animal; Then when the animal touches another person, the spell is cast on that person. The caster must have an applicable Sympathy Trait for the medium as well as the target, and it must be within range of the caster when the rite is performed. This is the same level as Part."
+    }
+
+    #tvQxtZqaNNxULH3ESYJZPGQ ^"Passion (Target)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The effect targets a group of people through their passions, affecting only those inclined towards a particular emotion or desire, which is integrated into the spell. Each character within the targeted area must roll a simple die and add or subtract any appropriate Personality Traits. Anyone with a total of 6 or higher is affected. This is the same level of Target as Group, and is similarly modified by the size of the affected area."
+        MENTIONS {
+            "Personality Traits" -> ^"Personality Traits"
+        }
+    }
+
+    #tAam4rvcDsE0s6NNn4tENGq ^"Symbol (Target)" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        DESCRIPTION "The caster affects all targets represented by a symbol within range of the spell. To fashion a symbol, the character must have at least 3 points of Sympathy Traits that are applicable to the target. These are cumulative with the other Symbol parameters, so that a rite that includes Range, Duration, and Target: Symbol requires at least 9 points of Sympathy Traits. The effect is calculated at the same level as Boundary, though it is essentially a large Group, and modifiers according to the size of the target apply. It must be cast as a ritual."
+    }
+
+}

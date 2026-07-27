@@ -1,0 +1,50 @@
+EXTENSION "ArM5_RoP_Magic_Gap_Types" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: Magic - record-gap type extensions"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_RoP_Magic_Core_Ext"
+
+    # A creature Power: an innate Might-fuelled ability of a magic creature. The
+    # book prints each power's cost / initiative / Form / Range / Duration / Target
+    # inline (formats vary widely across creature types), followed by its prose and
+    # a Hermetic-equivalent design line, so the full write-up is kept VERBATIM in
+    # the description rather than forced into typed numeric fields. Made addressable
+    # here (per owner directive) even where the same power's text also appears in a
+    # creature stat block.
+    #tL4MotIBVF5lx9HoVrT1yDlM ^"Power" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Creature" STRING
+            ^"Page" INTEGER
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A creature power: an innate ability a magic creature activates with its Might. The printed statistics (cost, Initiative, Form, R/D/T) and Hermetic-equivalent design line are kept verbatim in each record's description."
+    }
+
+    # Chapter Eight's Extraordinary Vis: raw vis that carries a standing magical
+    # effect. Two kinds — Lesser Enchantment Vis (a continuous lesser-enchantment
+    # effect) and Spell-like Vis (a one-shot spell-like effect that consumes the
+    # vis). The printed effect design (Tech/Form Level, Penetration, R/D/T) and the
+    # "(Effect: Base ...)" line are kept verbatim in the description.
+    #t8yjP1iruXpkEHOUYOUL8Uky ^"Extraordinary Vis" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Group" ENUM ["Lesser Enchantment Vis", "Spell-like Vis"] REQUIRED
+            ^"Page" INTEGER
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "A pawn of Extraordinary Vis that carries a standing magical effect, either a continuous lesser enchantment or a one-shot spell-like effect."
+    }
+
+    # An enchanted item written up in the book (e.g. the Cage of Change). The item's
+    # effect design and stats are kept verbatim in the description.
+    #trjueQXKYwSDmaXty4T4cNQU ^"Enchanted Item" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER
+            ^"Source" STRING DEFAULT "Realms of Power: Magic"
+        }
+        DESCRIPTION "An enchanted device presented in Realms of Power: Magic, with its effect design and statistics kept verbatim."
+    }
+}

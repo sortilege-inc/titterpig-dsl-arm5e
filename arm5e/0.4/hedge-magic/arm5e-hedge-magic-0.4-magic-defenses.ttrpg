@@ -1,0 +1,66 @@
+EXTENSION "ArM5_Hedge_Magic_Magic_Defenses" {
+    NAME "Ars Magica Fifth Edition, Hedge Magic [Revised Edition] - Magic Defenses"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ArM5_Hedge_Magic_Core_Ext"
+
+    #tWUxLjnGlnoR2fOgq3zjH6cX ^"Magic Defenses" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "It is the training of the tradition that grants these defenses, so an untrained character with the appropriate Supernatural Virtues for one or more of the powers of a hedge tradition would not normally acquire the associated defenses. Some magical defenses are listed below, and a particular tradition may have access to none, some, or all of these options:"
+    }
+
+    #tMZgigeSRbyLtRPKhVoawxsN ^"Accelerated Expiry" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "Spells cast on the hedge wizard, in his area of specialty, expire unexpectedly quickly. Diameter Duration spells expire a number of rounds too early equal to the hedge wizard’s Magical Defense Bonus, but last at least one round. Sun Duration spells expire a number of hours too early, but last at least Diameter. Moon Duration spells expire a number of days too early, but last at least Sun. Year Duration spells expire a number of weeks too early, but last at least Moon. Spells with a Momentary, Concentration, or Ring Duration are unaffected. If other characters are affected by the same spell, the spell lasts its usual duration on them."
+    }
+
+    #tzrXmY6AMwa3YoSQOYNXdMG2 ^"Alacritous Fortune" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "The hedge wizard adds his Magical Defense Bonus to his Defense Total when spells are aimed at him."
+    }
+
+    #tb7Gud9n9oOeMWSsgw3I1frV ^"Confounding Magics" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "Add the hedge wizard’s Magical Defense Bonus to the Ease Factor of Concentration rolls made by the casters of effects with Concentration Duration that target the hedge wizard, and are in an area of the hedge wizard’s specialty. Note that if the hedge wizard is part of a Group or large Target effect, only a single Concentration roll is made by the caster. If several hedge wizards with Confounding Magics defenses are in the Group then only the best Magic Defense Bonus is used to modify the Ease Factor of the Concentration roll. This is an instance in which the effect of the hedge wizard’s Magic Defenses can indirectly benefit other characters."
+        MENTIONS {
+            "Magic Defenses" -> ^"Magic Defenses"
+        }
+    }
+
+    #tFLKAGInQHPYcBr1lU9lecq8 ^"Immovable Object" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "If the hedge wizard is affected by an effect in his area of specialty that physically or mentally controls him (usually a Rego effect), then each round a roll is made for the wizard to resist the effect, of Strength + Magical Defense Bonus – Magnitude of Effect + simple die against an Ease Factor of 9. If the effect is still active next round, he is still affected by it but another roll is made for him to resist. This defense could be disastrous if the wizard resists a friendly effect that allows him to fly, for example."
+    }
+
+    #tE6oAr5q8YcfimLed0v3zf81 ^"Magical Fortitude" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "If the hedge wizard is affected by an effect in his area of specialty that causes damage, then he receives a Magical Defense Bonus to his Soak Total."
+    }
+
+    #tNgRSWgCpL4FywV4CDNPFTGU ^"Strength of Form" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        DESCRIPTION "If the hedge wizard is affected by an effect in his area of specialty that changes his form (usually a Muto effect), then he may make a Stamina + Magical Defense Bonus + simple die roll against an Ease Factor of 9 to return to his natural form. The Bjornaer Heartbeast Ability grants a similar defense that has been retained from the House’s pre-Hermetic tradition."
+    }
+}

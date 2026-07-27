@@ -1,0 +1,112 @@
+EXTENSION "ArM5_Covenants_Laboratory_Spells" {
+    NAME "Ars Magica Fifth Edition, Covenants - Example Laboratory Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    #tKuSnL9V95oUvUUuVhnCrUnV ^"The Resolute Mind of the Tireless Researcher" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "This spell is designed for a magus to cast upon himself at the start of a day’s work in the laboratory. Andreas of House Bonisagus, frustrated at his constant lapses of concentration, and finding it difficult to maintain focus on his research, came up with this effect in an effort to make his work days more productive. The target of the spell finds his mind resolutely fixed on the task in hand, and does not waver from it. Opinion is sharply divided on the merits of this spell, with the majority of magi considering it little more than a dangerous self-delusion, which warps the mind of the magus, making him dependent and weak-willed. If this spell is used on a daily basis, a magus should select the Addled laboratory routine (see above)."
+        MENTIONS {
+            "House Bonisagus" -> ^"House Bonisagus"
+        }
+    }
+
+    #tbcF6StJZUqxwiSDH4aa6CIH ^"The Laboratory of Bonisagus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Vim"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            +5 "complexity"
+            }
+        }
+        DESCRIPTION "This rather well-known spell furnishes an empty chamber of the appropriate dimensions with a fully-equipped, standard Hermetic laboratory. It is generally employed by magi who find themselves with plenty of vis, but who otherwise have difficulties in securing the necessary funds and sources to procure the materials by mundane means. This laboratory is actually rather better than the standard, since the magically created outfittings are perfect. Unless this lab is rigorously maintained at the higher level of Upkeep, however, these Virtues will quickly be lost, and it will degrade to a more mundane standard laboratory. It starts with the following statistics: Virtues and Flaws: Flawless Equipment, Flawless Tools, Spotless Characteristics: Size 0, Refinement 0, General Quality +2, Upkeep +3, Safety 0, Warping 0, Health +1, Aesthetics +1 Specializations: Items 2, Vis Extraction 2, Creo 1"
+        MENTIONS {
+            "Virtues and Flaws" -> ^"Virtues and Flaws"
+            "Flawless Equipment" -> ^"Flawless Equipment"
+            "Flawless Tools" -> ^"Flawless Tools"
+            "Vis Extraction" -> ^"Vis Extraction"
+        }
+    }
+
+    #tuevzVSP94aUJ6WN8k3ZwYtC ^"Gleam of the Freshly-Polished Glass" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "This spell maintains the equipment and tools of a lab in a constant state of immaculate cleanliness. Dirt, dust, and grime are all removed, leaving the outfittings positively gleaming, as if they had been freshly dusted and polished. This grants the Spotless Virtue to the lab, provided that the spell is cast every lunar month. If the spell ceases, the magus must maintain this pristine condition through more mundane means, otherwise the Virtue is lost. There is just one small drawback to this spell — the lab’s Warping score increases by one point (giving a Personality Trait Spotless +1) due to the unnatural nature of this cleaning, for as long as it is active."
+        MENTIONS {
+            "Personality Trait" -> ^"Personality Trait"
+        }
+    }
+
+    #tiqaqXCotpYi635kqQV9ouss ^"The Ambulatory Laboratory" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Room"
+            +2 "complexity"
+            }
+        }
+        DESCRIPTION "This spell precisely transports all the movable contents of a chamber into another room to which the caster has an Arcane Connection, leaving their configuration and relative positions intact. Some casting requisites are usually required, depending on the composition of the lab’s outfittings; a Herbam requisite is required to move wooden furniture, an Aquam requisite is required to move liquids, and so on. The destination room must be at least as large as the occupied part of the current room, although it can be a different shape. Magi quite often utilize this effect in order to avoid the tiresome (and expensive) practicalities of moving their sanctum by more mundane means. When this spell is cast on a lab, make a Perception + Finesse roll to determine the precision with which the contents are rearranged in the new chamber. The base Ease Factor is 9 + (3 x Refinement). Add three if the lab is Highly Organized; subtract three if it is Disorganized. Also add three if the shapes of the old and new chambers do not match, or six if they are radically different. If this roll fails, the Disorganized Flaw is gained, or the Highly Organized Virtue is lost. If the roll botches, the Hidden Defect Flaw is gained instead.\n\nA version of this spell with Arcane Connection Range is also believed to exist; with this more powerful variant a magus may summon the contents of a remote lab into the chamber he occupies. It is not unheard of for a nefarious magus to steal an entire lab in this fashion!"
+        MENTIONS {
+            "Highly Organized" -> ^"Highly Organized"
+            "Highly Organized" -> ^"Highly Organized"
+            "Hidden Defect" -> ^"Hidden Defect"
+        }
+    }
+}

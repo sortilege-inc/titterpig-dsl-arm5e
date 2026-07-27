@@ -51,8 +51,9 @@ EXTENSION "ArM5_RoP_Faerie_Wizardry" {
                 ^"Section" STRING "Faerie Methods" FIXED
                 ^"Source" STRING "Realms of Power: Faerie"
             }
-            DESCRIPTION "Enchantment involves convincing a target to accept the effects of the rite through some sort of a performance, such as a song, dance, story, or another art form. This is represented through the use of an Ability, making a roll against an Ease Factor of (the magnitude of the intended effect x 3). If the character succeeds at this task, he may then perform the rite in the following round, but with the level of the effect fixed at the intended magnitude. Or, he may begin another performance, making another roll and increasing the magnitude of the effect he is trying to produce by one. The amount by which his previous total exceeds the target Ease Factor may be applied as a bonus to the character's next roll, whether this is another performance or the Casting total for the rite. Thus, it may be better for the caster to risk botching low-level effects for several rounds, and to slowly increase the magnitude of the rite as his advantage builds. If he fails to achieve the declared Ease Factor, he cannot produce the effect of the rite and must start over with no bonus to the roll.\n\nThe character with this Method can perform all of his rites as part of his performance activity, even those that use another Method, and it is impossible for a bystander to recognize where his performance ends and the rite begins except by supernatural means (such as Magic Resistance or effects that detect Faerie powers). Enchantment also allows the player to choose to roll a simple die on the Casting roll for any rite, even those that use another Method, removing the risk of botching and losing sympathy on a roll of 0, but also forgoing the chance to gain sympathy on a roll of 1."
+            DESCRIPTION "Enchantment involves convincing a target to accept the effects of the rite through some sort of a performance, such as a song, dance, story, or another art form. This is represented through the use of an Ability, making a roll against an Ease Factor of (the magnitude of the intended effect x 3). If the character succeeds at this task, he may then perform the rite in the following round, but with the level of the effect fixed at the intended magnitude. Or, he may begin another performance, making another roll and increasing the magnitude of the effect he is trying to produce by one. The amount by which his previous total exceeds the target Ease Factor may be applied as a bonus to the character's next roll, whether this is another performance or the Casting total for the rite. Thus, it may be better for the caster to risk botching low-level effects for several rounds, and to slowly increase the magnitude of the rite as his advantage builds. If he fails to achieve the declared Ease Factor, he cannot produce the effect of the rite and must start over with no bonus to the roll.\n\nFor example, a knight attempts to enchant a lady of his acquaintance who is watching him at a tournament, using his skill at Single Weapon to hit a target. His player would like to produce a rite with an effect level of 25, which requires him to beat an Ease Factor of 15, but he does not think he will be able to do it without making several rolls. Thus he begins by declaring an effect of Level 15, which means the Ease Factor is 9. The knight makes a pass on the tourney field, and his player rolls a 6. This combined with his score of 5 and his Dexterity of +1 give him a total of 12. He has exceeded the necessary Ease Factor by 3, and if he released the spell he would gain a +3 bonus to his Casting total. Instead, he elects to increase the effect to Level 20 and an Ease Factor of 12, and the knight makes another pass. He rolls an 8, giving him a total of 17 and a bonus of +5. Increasing the effect level to 25 and the Ease Factor to 15, he makes a final pass and rolls a 7. This gives him a total of 17; he decides his performance is finished, and makes his Casting roll for a Level 25 effect with a +2 bonus in the following round.\n\nThe character with this Method can perform all of his rites as part of his performance activity, even those that use another Method, and it is impossible for a bystander to recognize where his performance ends and the rite begins except by supernatural means (such as Magic Resistance or effects that detect Faerie powers). Enchantment also allows the player to choose to roll a simple die on the Casting roll for any rite, even those that use another Method, removing the risk of botching and losing sympathy on a roll of 0, but also forgoing the chance to gain sympathy on a roll of 1."
             MENTIONS {
+                "Single Weapon" -> ^"Single Weapon"
                 "Magic Resistance" -> ^"Magic Resistance"
             }
         }
@@ -75,6 +76,33 @@ EXTENSION "ArM5_RoP_Faerie_Wizardry" {
             DESCRIPTION "Beguile is the power to command the target to do as you suggest, or to convince him that he has already done so. Note that this power does not typically give the target the ability to do anything it cannot already do, such as allow an inanimate object to move. However, those effects that change a target's memories can change the memories of inanimate objects and other things that do not have a mind — these changes will only come to light if the object is supernaturally questioned, of course.\n\nNormally, the caster must have a Sympathy Trait that is appropriate to the target. With Beguile, however, any Sympathy Trait may be applicable so long as it is appropriate to the memory, emotion, or perception brought about by the rite. For example, a caster with a Wind Sympathy Trait could change a person's memory of a wind, perception of the wind, or feelings about the wind."
         }
 
+                #tkQx4yKnFOmspIM58dIdp5Sa ^"Gown of Enfolding Colors" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Evocation/Beguile 15 R: Touch, D: Mid, T: Room The caster causes all the people in a room to perceive her or another as especially beautiful, and more alluring than anyone else. This impression is superficial only, and the targets may see through the effect by interacting with her in a more significant way. (Base 2, +1 Touch, +2 Mid, +2 Room)"
+            }
+
+                #tDuCzzCIrteosuRQoRB3b6nd ^"The Irresistible Dance" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Empathy/Beguile 25 R: Voice, D: Focus, T: Ind The target is filled with wild, hedonistic abandon, and feels compelled to dance. While under the effect of this rite, the target must make Stamina rolls to avoid losing Fatigue levels, and cannot fall unconscious — if he would pass out, he suffers a Light wound instead and keeps dancing. The effect lasts until the caster performs another rite, or uses any other supernatural power. (Base 10, +2 Voice, +1 Focus)"
+            }
+
+                #tKssgfTguiz4cUB9nbcOmXr0 ^"Seduce the Innocent Heart" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Enchantment/Beguile 30 R: Prs, D: Sun, T: Ind The target experiences powerful curiosity and carnal desire, which affects everything he does until the sun rises. These inflamed passions may be easily manipulated by a skilled seducer, though of course the target is unlikely to do anything to which he is fundamentally opposed. The rite merely removes his inhibitions for the duration. (Base 10, +2 Prs, +2 Sun)"
+            }
+
         #ttGdHTMFWkxiVyu1qnK9I16Y ^"Conjure" DEF {
             EXTENDS ^"Faerie Wizardry"
             PROPERTIES {
@@ -83,6 +111,33 @@ EXTENSION "ArM5_RoP_Faerie_Wizardry" {
             }
             DESCRIPTION "Conjure rites produce solid images that conform to the same rules that faeries obey to create their identities — it makes faerie shapes appropriate to a particular faerie's role and made of the power of the realm. A faerie wizard can draw upon his Faerie sympathy to create or change an object in the same way that a faeries does when it adopts a new shape.\n\nThings conjured in this way are called glamours in the guidelines and effects given here, though most faerie wizards would probably not use this word. They are treated like animate illusions with substance, which last only for the duration of the effect, and often the consequences of the glamour are undone when the effect is ended. For example, a fire glamour burns down a house, but as soon as the effect goes away, the house might return exactly as it was. A person slain with a conjured sword is very likely to recover from the wound as soon as the weapon is dispelled.\n\nMany Conjure rites allow the caster to change a target into something else. In these cases, the caster must have an applicable Sympathy Trait for both states, before and after, though both Traits apply to the maximum effect level. For example, to change a monk into a lamb, the caster would need appropriate Sympathy Traits for both a monk and a lamb, but would factor both Traits into the total to decide how powerful an effect he can produce.\n\nSince glamours are based on images, it is possible to create very unnatural situations with them, such as a place that is larger on the inside than on the outside. For example, one could change the inside of a tent into the inside of a castle, or a bag into a deep well. This is simply creating the illusion of the castle on the inside of the tent, but because of the properties of glamours it is as if it were real. When the effect ends, the results are unpredictable and often surprising — the contents of the tent larger on the inside than outside might simply vanish, reappear outside the tent, or wind up transported into Faerie."
         }
+
+                #txCZB12k4HsTCzlVm6zkGUhp ^"A Horse of a Different Color" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Empathy/Conjure 20 R: Voice, D: Sun, T: Ind The target animal grows brightly-colored wings for the duration, transforming into a chimerical beast that is a fanciful combination of two animals. This increases its Size category by 1, and it gains the temporary ability to fly and sing. (Base 3, +2 Voice, +2 Sun, +1 size)"
+            }
+
+                #tL7dIY95WkM1IArPFLQ9BUOY ^"The Old Guard" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Evocation/Conjure 20 R: Touch, D: Sun, T: Group The caster creates the glamour of ten men, properly equipped as grogs, who gather protectively about the caster to protect him from harm. These imaginary people have average Characteristics and no Abilities, and must act as an untrained group. (Base 3, +1 Touch, +2 Sun, +2 Group)"
+            }
+
+                #tljhRjDOw37rxgyraKOpnLCF ^"Curse of the Faerie Forest" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Enchantment/Conjure (Dream) 45 R: Voice, D: Until, T: Group, Ritual The target group is changed into animals that are most appropriate to their surface thoughts. This effect lasts until they apologize to the enchanter and make amends for the insult that inspired this spell, or else until they or the caster die. (Base 5, +2 Voice, +4 Until, +2 Group)"
+            }
 
         #tlyL2wmHXcRxi76WfidUlXID ^"Dream" DEF {
             EXTENDS ^"Faerie Wizardry"
@@ -96,6 +151,33 @@ EXTENSION "ArM5_RoP_Faerie_Wizardry" {
             }
         }
 
+                #tD1gZqjaxOVfeIQX5D1lku1l ^"Words that Live in Song" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Enchantment/Dream 20 R: Touch, D: While, T: Group The caster of the rite clasps hands with one of the targets, and begins a song in his native language. For as long as the song lasts, everyone in the group can understand the lyrics to the song, and can contribute to it by singing their own words. (Base 4, +1 Touch, +1 While, +2 Group)"
+            }
+
+                #tLE4exdeFQVI7927Hf3SIoxu ^"The Reflecting Pool" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Evocation/Dream 30 R: Sympathy, D: Aura, T: Medium, Ritual After this rite has been performed, anyone can look into the pool and perceive events as they transpire at another location, described by the caster during the casting. It is often possible for the person looking into the pool to change this location, if he has strong faerie sympathy with another place. (Base 1, +4 Sympathy, +4 Aura, +1 Medium)"
+            }
+
+                #t5aSOLvEhnzbrrpdtpuCpZYk ^"Vision of the Oracles" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Empathy/Dream 30 R: Prop, D: Mom, T: Ind, Ritual The caster places a coin against the target’s forehead, and concentrates upon a question posed by the target. The caster then experiences a brief, fleeting faerie vision related to that question that concerns potential events in the next year. (Base 25, +1 Prop)"
+            }
+
         #tXxDQlzgTlb3ILs437EFy8dP ^"Grant" DEF {
             EXTENDS ^"Faerie Wizardry"
             PROPERTIES {
@@ -107,6 +189,39 @@ EXTENSION "ArM5_RoP_Faerie_Wizardry" {
                 "Virtues and Flaws" -> ^"Virtues and Flaws"
             }
         }
+
+                #t3q7Kv0lzE7SEVcUWw1EyGjX ^"Red Sky at Dawn, Blue Sky at Dusk" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Empathy/Grant General R: Touch, D: Mid, T: Bound, Ritual The caster tints a Faerie aura with one of his Sympathy Traits for the duration, causing all those within the area to become sensitive to that Trait. (Base effect, +1 Touch, +2 Mid, +4 Bound)"
+            }
+
+                #tvxldsqhrQgKwCk6ESvpfYIy ^"Know Then the Calloused Touch of Faerie Hands" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Evocation/Grant 30 R: Voice, D: Mom, T: Ind The target immediately gains 5 Warping Points — 4 from this effect and 1 from being exposed to a Level-30 rite. For a character who has never experienced Warping, unless the target has some connection to a supernatural realm, this typically increases his Warping Score to 1 and this gives him a Minor Flaw appropriate to his circumstances, such as Fear or Disfigured. Unlike the effects of other faerie rites this is a permanent effect, as Warping is a natural consequence of exposure to concentrated supernatural power. (Base 20, +2 Voice)"
+                MENTIONS {
+                    "Minor Flaw" -> ^"Minor Flaw"
+                }
+            }
+
+                #tcZetX36FZhgTrqzY6ACE5lZ ^"A Proper Blessing" DEF {
+                EXTENDS ^"Faerie Wizardry"
+                PROPERTIES {
+                    ^"Section" STRING "Faerie Powers" FIXED
+                    ^"Source" STRING "Realms of Power: Faerie"
+                }
+                DESCRIPTION "Enchantment/Grant 40 R: Touch, D: Hidden, T: Ind, Ritual The target gains the Puissant Faerie Lore Virtue for as long as he keeps hidden a stone given to him by the caster, typically in his shoe or inside his hat. This is a Charmed Virtue; to make use of it, the target must perform a secret ceremonial charm that is taught to him by the caster during the rite. As with all Charmed Virtues, if the secrecy surrounding this charm is ever broken, the effect fails until the caster can fashion a new one for the target, by recasting the rite. (Base 15, +1 Touch, +4 Hidden)"
+                MENTIONS {
+                    "Faerie Lore" -> ^"Faerie Lore"
+                }
+            }
 
     #tbApqjxyPMACmxGdR47NRRIq ^"Portage" DEF {
             EXTENDS ^"Faerie Wizardry"

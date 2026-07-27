@@ -1,7 +1,7 @@
 EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
     NAME "Ars Magica Fifth Edition, Hedge Magic [Revised Edition] - Hedge Virtues and Flaws"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-26"
     DEPENDS_ON "ArM5_Core_Virtue_Flaw"
 
@@ -13,7 +13,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character has a supernatural affinity with the four elements, such that whenever he studies a particular Ability that is chosen when this Virtue is taken — Medicine, Philosophiae, or one type of (Realm) Lore — he may divide half as many experience points among his Elementalist Forms.\n\nFor example, an elementalist with an Elemental Affinity (Medicine) who gained 8 experience points in Medicine one season would also gain 4 additional experience points to spend among Elementalist Air, Elementalist Earth, Elementalist Fire, or Elementalist Water.\n\nThis Virtue may be taken more than once, as long as a different Ability is chosen each time."
-            MENTIONS {
+            REFERENCES {
                 "Elementalist Air" -> ^"Elementalist Air"
                 "Elementalist Earth" -> ^"Elementalist Earth"
                 "Elementalist Fire" -> ^"Elementalist Fire"
@@ -32,8 +32,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Sanguine Personality Trait" "Warping Score + (Elementalist Air / 5)"
             }
             DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of air. Taking this Virtue gives the character an initial score of 0 in Elementalist Air (see Elementalist Forms, below), and a Sanguine Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Air / 5)."
-            MENTIONS {
-                "Personality Trait" -> ^"Personality Trait"
+            REFERENCES {
+                "Personality Trait" -> #tepstZLfMEMlDVNozcS6GwzP ^"Personality Trait"
             }
         }
 
@@ -48,8 +48,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Melancholic Personality Trait" "Warping Score + (Elementalist Earth / 5)"
             }
             DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of earth. Taking this Virtue gives the character an initial score of 0 in Elementalist Earth (see Elementalist Forms, below), and a Melancholic Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Earth / 5)."
-            MENTIONS {
-                "Personality Trait" -> ^"Personality Trait"
+            REFERENCES {
+                "Personality Trait" -> #tepstZLfMEMlDVNozcS6GwzP ^"Personality Trait"
             }
         }
 
@@ -64,8 +64,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Choleric Personality Trait" "Warping Score + (Elementalist Fire / 5)"
             }
             DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of fire. Taking this Virtue gives the character an initial score of 0 in Elementalist Fire (see Elementalist Forms, below), and a Choleric Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Fire / 5)."
-            MENTIONS {
-                "Personality Trait" -> ^"Personality Trait"
+            REFERENCES {
+                "Personality Trait" -> #tepstZLfMEMlDVNozcS6GwzP ^"Personality Trait"
             }
         }
 
@@ -77,7 +77,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character has a natural aptitude for elemental magic, based on a deep understanding of the physical world. In any season in which the character studies Philosophiae, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).\n\nIn addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in Philosophiae, use his score in Philosophiae instead."
-            MENTIONS {
+            REFERENCES {
                 "Elementalist Air" -> ^"Elementalist Air"
                 "Elementalist Earth" -> ^"Elementalist Earth"
                 "Elementalist Fire" -> ^"Elementalist Fire"
@@ -96,8 +96,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Phlegmatic Personality Trait" "Warping Score + (Elementalist Water / 5)"
             }
             DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of water. Taking this Virtue gives the character an initial score of 0 in Elementalist Water (see Elementalist Forms, below), and a Phlegmatic Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Water / 5)."
-            MENTIONS {
-                "Personality Trait" -> ^"Personality Trait"
+            REFERENCES {
+                "Personality Trait" -> #tepstZLfMEMlDVNozcS6GwzP ^"Personality Trait"
             }
         }
 
@@ -116,7 +116,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character has a supernatural aptitude for elemental magic, based in experience with spirits and beings of a particular realm (usually Magic). In any season in which the character studies (Realm) Lore appropriate to the realm associated with this Virtue, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).\n\nIn addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in the appropriate (Realm) Lore, use his score in (Realm) Lore instead."
-            MENTIONS {
+            REFERENCES {
                 "Elementalist Air" -> ^"Elementalist Air"
                 "Elementalist Earth" -> ^"Elementalist Earth"
                 "Elementalist Fire" -> ^"Elementalist Fire"
@@ -133,9 +133,6 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "This Elementalist Art allows an elementalist to locate, understand, and predict the behavior of the four elements, as described under Elementalist Techniques, later in this chapter. This Virtue gives the character an initial Divining score of 0.\n\nThis Virtue may be taken up to three times, to indicate that the character can find and comprehend multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Divining must be learned separately, but all three use the same Art score, so that a character that takes this Virtue three times would have only one Divining Art, not (Medicinal) Divining, (Philosophical) Divining, and (Theurgical) Divining."
-            MENTIONS {
-                "Major Virtue" -> ^"Major Virtue"
-            }
         }
 
         #tfvJ1hGJDRq2UTgERV99QnNp ^"(Type) Controlling" DEF {
@@ -147,9 +144,6 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Controlling is an Elementalist Art that can be combined with mastery of the four elements to control the behavior of different types of beings, as described under Elementalist Techniques, later in this chapter. Taking this Virtue gives the character a score of 0 in Controlling. This Virtue may be taken up to three times, to indicate that the character can control multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Controlling must be learned separately, but all three use the same Art score, so that a character who takes this Virtue three times would have only one Controlling Art, not (Medicinal) Controlling, (Philosophical) Controlling, and (Theurgical) Controlling."
-            MENTIONS {
-                "Major Virtue" -> ^"Major Virtue"
-            }
         }
 
         #t6vXcOZvYul5qDCypp5xHqg7 ^"Elemental Medicine" DEF {
@@ -160,7 +154,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character has a natural aptitude for elemental magic, based on special understanding of the four humors and the human body. In any season in which the character studies Medicine, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).\n\nIn addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in Medicine, use his score in Medicine instead."
-            MENTIONS {
+            REFERENCES {
                 "Elementalist Air" -> ^"Elementalist Air"
                 "Elementalist Earth" -> ^"Elementalist Earth"
                 "Elementalist Fire" -> ^"Elementalist Fire"
@@ -177,9 +171,6 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "With this Elementalist Art, the character can purify a target by subjecting it to the four elements, as described under Elementalist Techniques, later in this chapter. Taken as a Virtue, it grants Refining with an initial score of 0.\n\nThis Virtue may be taken up to three times, to indicate that the character can refine multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Refining must be learned separately, but all three use the same Art score, so that a character that takes this Virtue three times would have only one Refining Art, not (Medicinal) Refining, (Philosophical) Refining, and (Theurgical) Refining."
-            MENTIONS {
-                "Major Virtue" -> ^"Major Virtue"
-            }
         }
 
         #tHxHXnyWiNtOSxE8xABdBu5B ^"(Type) Summoning" DEF {
@@ -191,9 +182,6 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Summoning is an Elementalist Art that allows the character to use his knowledge of the Elementalist Forms to summon a target associated with that element to him. This target is somehow appropriate to his background — a disease, an aspect of nature, or an elemental being, as determined by the type of Summoning he learns (Medicinal, Philosophical, or Theurgical). This is described in more detail under Elementalist Techniques, later in this chapter. Selecting this Virtue gives the character a score of 0 in Summoning.\n\nThis Virtue may be taken up to three times, to indicate that the character can summon more than one type of elemental target. The first type chosen requires a Major Virtue, the others are Minor Virtues. Each type of Summoning must be learned separately, but all three types use the same Art score, so that a character that takes this Virtue three times would only have one Summoning Art, not (Medicinal) Summoning, (Philosophical) Summoning, and (Theurgical) Summoning."
-            MENTIONS {
-                "Major Virtue" -> ^"Major Virtue"
-            }
         }
 
         #tQao1EGCk8FFv91DYOuZe5qq ^"Vulnerable to (Form)" DEF {
@@ -205,10 +193,10 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The elementalist's mystical association with a particular element makes him more vulnerable to its opposite. You must subtract the elemental Personality Trait for the element that opposes his chosen Form from the character's Soak. For example, a character Vulnerable to Elementalist Water would subtract his Choleric Trait from his Soak whenever he is damaged by water. Furthermore, this Form does not help him at all when he is ill; do not add the Trait associated with the chosen Form to his recovery totals.\n\nThis Flaw can be taken as a Hermetic Flaw, in which case the magus must subtract his Form bonus for the opposing element from his Magic Resistance and Soak whenever he is magically affected or damaged by that element. For example, a magus with Vulnerable to Terram must treat his score in Auram as a penalty to his Form bonus for Terram.\n\nA character may take this Flaw up to four times, as long as a different Form is chosen each time. This Flaw may only be taken if the character has a score in the opposing Form; i.e. to take Vulnerable to Elementalist Fire, he must also have the Elementalist Water Virtue."
-            MENTIONS {
-                "Personality Trait" -> ^"Personality Trait"
+            REFERENCES {
+                "Personality Trait" -> #tepstZLfMEMlDVNozcS6GwzP ^"Personality Trait"
                 "Elementalist Water" -> ^"Elementalist Water"
-                "Magic Resistance" -> ^"Magic Resistance"
+                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
                 "Elementalist Fire" -> ^"Elementalist Fire"
                 "Elementalist Water" -> ^"Elementalist Water"
             }
@@ -222,10 +210,10 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Perhaps the character views his supernatural association with the four elements as merely academic, or else the character is simply weaker at defending himself against them, but for whatever reason you do not add the character's elemental Personality Traits (Sanguine, Melancholy, Choleric, and Phlegmatic) to his Soak when resisting damage from elemental sources, as described under Elemental Warping, below.\n\nThis Flaw can be taken by a magus as a Hermetic Flaw, in which case his Magic Resistance is vulnerable to physical damage appropriate to the elements and all damage from spells associated with Aquam, Auram, Ignem, and Terram. In these circumstances, his Magic Resistance is not increased by his score in the corresponding Form, and his Soak is not increased by his (Form score / 5)."
-            MENTIONS {
-                "Personality Traits" -> ^"Personality Traits"
-                "Magic Resistance" -> ^"Magic Resistance"
-                "Magic Resistance" -> ^"Magic Resistance"
+            REFERENCES {
+                "Personality Traits" -> #tZ5R8NaoE9zkx3HnR4xzSt8G ^"Personality Traits"
+                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
+                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
             }
         }
 
@@ -237,8 +225,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character has been trained as a folk witch. She may perform folk witch laboratory activities such as brewing potions, she uses folk witch casting methods with her Supernatural Virtues and gains the associated magical defenses, and she is a member of a coven who attends sabbat meetings. As she is not supported by a covenant, like a magus is, she must spend two seasons each year supporting herself — normally by performing magical services for the local community. This Virtue is compatible with many other Social Status Virtues and Flaws, and with Wealthy and Poor."
-            MENTIONS {
-                "Virtues and Flaws" -> ^"Virtues and Flaws"
+            REFERENCES {
+                "Virtues and Flaws" -> #tiecmdbbYmwXaQ0CRLRkrj13 ^"Virtues and Flaws"
             }
         }
 
@@ -260,8 +248,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The folk witch doubles the Supernatural Ability used to form her Lab Total when brewing potions (see later), which increases the Brew Potency."
-            MENTIONS {
-                "Lab Total" -> ^"Lab Total"
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
 
@@ -273,8 +261,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Curses cast by the folk witch are only effective if the curse fetish is within 100 yards of the target. The curse takes effect at the moment that the target moves within range of the completed fetish. Once a disease, aging, or miscarriage curse fetish has thus activated, removing the target from the vicinity of the fetish has no effect on the curse. On the other hand, if a target is removed from the range of an emotion, tongue, paralysis, reduction, or beast curse fetish the effect ceases, but resumes again if the target moves back into range (and the effect manages to Penetrate again) — this continues until either the Arcane Connection powering the fetish expires or the fetish is destroyed. This Flaw has no effect on curse potions brewed by the witch. This Flaw is only available if the character is a Gifted Folk Witch or has the Minor Supernatural Virtue Cursing. This Flaw is suitable for a Gifted character whose Opening of The Gift was flawed."
-            MENTIONS {
-                "Folk Witch" -> ^"Folk Witch"
+            REFERENCES {
+                "Folk Witch" -> #tzaZRcWzHCwK6JRokdUZtZsi ^"Folk Witch"
                 "The Gift" -> ^"The Gift"
             }
         }
@@ -340,9 +328,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The folk witch cannot use the incantation casting method. This Flaw cannot be taken if the folk witch has the Rarefied Tradition Major Flaw."
-            MENTIONS {
-                "Rarefied Tradition" -> ^"Rarefied Tradition"
-                "Major Flaw" -> ^"Major Flaw"
+            REFERENCES {
+                "Rarefied Tradition" -> #ta9NhVwraw1COBd5WXdlwPx0 ^"Rarefied Tradition"
             }
         }
 
@@ -374,7 +361,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Things that the folk witch creates in the laboratory (potions, fetishes, etc.) decay and cease to work after one year and one day. This Flaw is suitable for a Gifted character whose Opening of The Gift was flawed, although it may also be taken by unGifted characters."
-            MENTIONS {
+            REFERENCES {
                 "The Gift" -> ^"The Gift"
             }
         }
@@ -407,9 +394,9 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The folk witch can use up to four times her Folk Witch Magic Theory Ability score worth of vis in a season when she brews potions (see later). This is double the usual amount of vis that may be used."
-            MENTIONS {
-                "Folk Witch" -> ^"Folk Witch"
-                "Magic Theory" -> ^"Magic Theory"
+            REFERENCES {
+                "Folk Witch" -> #tzaZRcWzHCwK6JRokdUZtZsi ^"Folk Witch"
+                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
             }
         }
 
@@ -451,9 +438,9 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Intellego effects cast or invented by this magus that grant magic senses do not need to penetrate the Magic Resistance of the sensed creatures. The effect must still penetrate the Magic Resistance (if any) of the person who is granted the sense. Note that this only applies to effects that have a Sense Target."
-            MENTIONS {
-                "Magic Resistance" -> ^"Magic Resistance"
-                "Magic Resistance" -> ^"Magic Resistance"
+            REFERENCES {
+                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
+                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
             }
         }
 
@@ -465,9 +452,6 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The magus may make charged items that incorporate ritual effects. Each charge requires the same number of pawns of vis that casting the effect normally would otherwise cost. For example, a wand that produced an effect similar to Curse of the Unportended Plague (PeCo 55; ArM5, page 133) would require 11 pawns of Perdo or Corpus vis per charge. The number of pawns of vis that the magus may use in a season is limited in the usual way, and the number of charges is also calculated in the normal manner."
-            MENTIONS {
-                "Curse of the Unportended Plague" -> ^"Curse of the Unportended Plague"
-            }
         }
 
     #t9G1nYSsLaGdPWkCEAmhQXu3 ^"Gruagach" DEF {
@@ -478,8 +462,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character is a member of the gruagach magical tradition. The character may perform gruagach laboratory activities and is a member of a gruagach collective. This Virtue is compatible with many other Social Virtues and Flaws, and with Wealthy and Poor. A normal gruagach must spend time supporting himself. UnGifted gruagachan usually do this by performing their normal vocations, but more-powerful Gifted gruagachan may perform services for the community, provide services to local lords, or receive rewards for enforcing justice — these services are usually arranged for by unGifted gruagachan, who interact with the general populace."
-            MENTIONS {
-                "Virtues and Flaws" -> ^"Virtues and Flaws"
+            REFERENCES {
+                "Virtues and Flaws" -> #tiecmdbbYmwXaQ0CRLRkrj13 ^"Virtues and Flaws"
             }
         }
 
@@ -504,7 +488,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Warping resistance" "Stamina + Pictish + stress die vs. Ease Factor 9"
             }
             DESCRIPTION "This Virtue prevents a character from dying because of physical injury. A gruagach may only gain this Virtue through Initiation, as described later. As part of the Initiation process, the character and his mentor place the character’s soul in a separate object. The character must guard this object closely because any damage to it, even so much as a single scratch, kills the character.\n\nWhile the character’s external soul is intact, he can’t be decapitated or have any limb severed. No magic or physical force can dismember the character, and he cannot receive any wound that would result in Incapacitation or Death. If the Damage Table indicates that the character would suffer death or an Incapacitating Wound, the storyguide should distribute the amount of damage among multiple Wound Levels until all of the damage is applied to the character.\n\nEvery time a Wound to the character must be redistributed in this manner, the character suffers a Warping Point unless the player succeeds in a stress die roll of the character’s Stamina + Pictish against an Ease Factor of 9.\n\nIf, in a single battle, a character suffers Warping Points that exceed the character’s Pictish score, the player must roll for negative Warping effects at that time. Warping effects are described in the Magical Dangers, Warping section of this chapter.\n\nExternal Soul also confers the benefit of Unaging on the character. A character with the External Soul Virtue suffers Warping of 1 point per year because of the continuing mystical effect; see ArM5, page 168. The process of extracting a character’s soul is irreversible."
-            MENTIONS {
+            REFERENCES {
                 "Damage Table" -> ^"Damage Table"
             }
         }
@@ -537,7 +521,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "Gruagachan utilize their fetches in their magic, and need not possess this Virtue to do so, but other characters may also have access to a fetch. Fetches are essentially invisible, non-corporeal, magical animal companions. A fetch does not interact with its surroundings and may only become solid if necessary to warn its master of imminent danger; a fetch might bump its master or trip him to prevent him from stepping in a trap or falling to his death, for example. Fetches often embody some aspect of their masters’ personality — a deceptive character might have a fetch of a wolf, while a wise character might possess the fetch of a raven or owl, for instance.\n\nThis Virtue grants the character constant access to her fetch. The fetch has the Supernatural Ability Second Sight with a score of 9, and it is very vigilant. The fetch warns the character when it senses danger. It is nearly impossible to lure the character into an ambush or any form of trap without the fetch warning the character. The warning may be difficult for the character to interpret, and sometimes may be unwarranted because the fetch only has the Cunning of a very bright animal. A gruagachan without this Virtue may only utilize his fetch through Vision magic, and may not even know the shape it takes."
-            MENTIONS {
+            REFERENCES {
                 "Second Sight" -> ^"Second Sight"
             }
         }
@@ -590,9 +574,9 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character is unable to use a single combination of one Technique and Form. The character must possess the ability to use the Technique and Form. For example, a character could be unable to use Give Blessing charms, but would still be able to use Take Blessing, Give Curse, Give Shape, or Give Vision spells."
-            MENTIONS {
-                "Technique and Form" -> ^"Technique and Form"
-                "Technique and Form" -> ^"Technique and Form"
+            REFERENCES {
+                "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
+                "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
             }
         }
 
@@ -604,8 +588,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The gruagach is not able to fully understand tattoo creation. Halve the character’s Lab Total whenever the character creates or investigates a gruagach tattoo."
-            MENTIONS {
-                "Lab Total" -> ^"Lab Total"
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
 
@@ -687,8 +671,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "This Technique allows a gruagach to remove something from a target. A Take spell might eliminate an aspect of a target or merely acquire a component of it. This Art covers nearly every Hermetic Technique. It can allow a person to recover from hostile magic, and it can acquire information about a target. Take spells can also remove a character's Virtues and reduce his Abilities."
-            MENTIONS {
-                "Hermetic Technique" -> ^"Hermetic Technique"
+            REFERENCES {
+                "Hermetic Technique" -> #tjSDBarW271cweidwnNBzTYF ^"Hermetic Technique"
             }
         }
 
@@ -700,12 +684,12 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character is a member of the magical tradition of the Mathematici of Bologna. The character may cast charms and perform laboratory activities according to the rules of this chapter. To possess this Social Status, the character must have at least one Hedge Technique and Form from this chapter.\n\nA mathematicus must also possess a Social Status that defines his role in mundane society, suitable examples include: Clerk, Gentleman, Landed Noble, Magister in Artibus, Mendicant Friar, or Priest. The Social Statuses listed in the Universities and Medicine chapters of Art & Academe are very appropriate, as are those listed in Realms of Power: The Divine, pages 92-93. These lists are not exhaustive, and the troupe may include additional Social Statuses that are appropriate to the learned magician character. The amount of freedom a mathematicus has to study is based on his other Social Status, or whether he possesses the Wealthy Virtue or Poor Flaw."
-            MENTIONS {
-                "Technique and Form" -> ^"Technique and Form"
-                "Landed Noble" -> ^"Landed Noble"
-                "Magister in Artibus" -> ^"Magister in Artibus"
-                "Mendicant Friar" -> ^"Mendicant Friar"
-                "The Divine" -> ^"The Divine"
+            REFERENCES {
+                "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
+                "Landed Noble" -> #tibYGfmiMW8gIVjlds27t5ej ^"Landed Noble"
+                "Magister in Artibus" -> #tevkuWprCcXLN3IeH8T0sk0B ^"Magister in Artibus"
+                "Mendicant Friar" -> #tX7rWvzN7gVk0mGb4jspKy8D ^"Mendicant Friar"
+                "The Divine" -> #t3MYdWCQ7hygy7A794yDxTid ^"The Divine"
             }
         }
 
@@ -720,12 +704,12 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Lab Total" "Intelligence + Philosophiae"
             }
             DESCRIPTION "This Virtue grants the character a score of 1 in the Mythic Alchemy Supernatural Ability. Mythic alchemists can actually transmute types of atoms into other types of atoms through the application of magical rather than philosophical techniques. This Ability always requires at least one season of activity in a properly outfitted alchemical laboratory. The rules described here depend on the rules for alchemists given in Art & Academe, Chapter 5: Experimental Philosophy.\n\nBriefly, a formula is invented in a season by acquiring 5 experience points. Formulae are described like spells, with a single parameter called Alteration that describes the magnitude of the change. The formula is used to produce a reagent in a season using a Lab Total equal to Intelligence + Philosophiae, and the alchemist must accumulate points in excess of the formula's level just like inventing a spell. Mythic alchemists are superior to their non-magical brethren in this, and they may add their Mythic Alchemy to their Lab Totals for creating any alchemical reagents.\n\nThose with this Virtue can devise formulae that employ guidelines for alchemical reagents that are not available to those without the Virtue. The changes effected by Mythic Alchemy are permanent transmutations of the elements and result in non-magical substances, which cannot be dispelled. Alchemists without Mythic Alchemy always fail if they try to recreate these formulae from a Laboratory Text.\n\nLearned magicians with the Mythic Alchemy Virtue may extract and transfer vis as described in ArM5, page 94. The Mythic Alchemist uses his Succurro Magicam Lab Total to determine the number of pawns of Vim vis he may extract from a magical aura. Substitute the character's score in Mythic Alchemy for Magic Theory to determine the number of pawns a character may use in a single season.\n\nMythic Alchemists can also prepare the raw materials for a craftsman in such a way that the Ease Factor for creating Superior, Excellent, or Wondrous items is reduced; see City & Guild, pages 63-73. The alchemist produces a reagent in the form of the primary component of the item to be created. For example, to create superior swords or armor, the alchemist would need to treat the metal used, but not the leather for the hilt or straps. The alchemist may prepare enough raw materials for a craftsman to use in one season (City & Guild, page 68). This process does not require vis. A Slight Alteration subtracts 1 from the Craft Ease Factor, a Minor Alteration subtracts 2, a Substantial Alteration subtracts 3, and a Major Alteration subtracts 4.\n\nTransmuting a complex element into a similar sort of complex element is a Slight Alteration if there is no change in the type of substance; for example, as in turning Welsh copper into Cornish copper (which has a slightly different luster). A Minor Alteration can effect a transmutation of species; for example, base metal to base metal, or processed liquid to processed liquid. And a Substantial Alteration can change genus; for example, base metal to noble metal, or oil into acid. Major Alterations can affect higher categories of genus; so wood can be turned into tin, for example. Solids must remain solids, and liquids must remain liquids in any transmutation, and this is true when transmuting simple matter to complex matter and vice versa. Each dose of a transmutative reagent requires a pawn of Vim vis or vis of the appropriate Form for every 5 points (rounded up) of the reagent's final level. A Mythic Alchemist can handle a number of pawns of vis in a season equal to twice his Mythic Alchemy score; and this may limit the number of doses he can produce regardless of his Lab Total or any Laboratory Texts."
-            MENTIONS {
-                "Lab Total" -> ^"Lab Total"
-                "Lab Total" -> ^"Lab Total"
-                "Magic Theory" -> ^"Magic Theory"
-                "Lab Total" -> ^"Lab Total"
-                "Laboratory Texts" -> ^"Laboratory Texts"
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Magic Theory" -> #tMqnTmgIB0zutKtk6zjlg4Lk ^"Magic Theory"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Laboratory Texts" -> #tzSR5Dj51xLU1ihd6ZSzEQyU ^"Laboratory Texts"
             }
         }
 
@@ -740,8 +724,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Concoction roll" "Intelligence + Mythic Herbalism vs Ease Factor"
             }
             DESCRIPTION "Mythic Herbalism is a Major Supernatural Virtue that grants a score of 1 in the Mythic Herbalism Ability. Mythic Herbalism permits a character to create unguents and poultices that can heal the wounded, cure the diseased, or assist the poisoned. The Ability also allows a character to create especially virulent poisons. Finally, the Mythic Herbalist may create potions that grant temporary bonuses to various physical characteristics. The effects of the concoctions are detailed in the nearby chart.\n\nFor any creation, the character must spend a number of days equal to one-third the Ease Factor of the intended effect to prepare and brew the necessary ingredients. Anyone with the Ability Profession (Apothecary) and access to plants growing in a Magic aura may supply the ingredients.\n\nThe character may create multiple doses of any concoction; the Ease Factor is increased by 1 for each additional dose. The character must select the total number of doses he wishes to create prior to beginning the brewing process. Large batches are more difficult to create because of instability during the brewing process, but they do not take longer to create than a single dose does. The character does not need access to a full Hermetic laboratory, but may create potions with only a few basic tools and a constant source of heat.\n\nAt the end of the process, the player must roll the character's Intelligence + Mythic Herbalism against the target Ease Factor. If the roll fails, the concoction is useless. If the roll is a botch, the resulting concoction may poison the creator or its recipient.\n\nAfter one Season, an unused poultice, poison, or potion expires and thereafter lacks all powers. An unguent or poultice grants a bonus to Recovery rolls based on the target Ease Factor selected by the player and the character's Mythic Herbalism score. Unless otherwise stated, the curative is effective for one month and must be reapplied if the patient's Wound takes longer to heal. If a character receives the benefit of a poultice and a spell, only the larger Recovery bonus applies.\n\nUse the Ease Factors above to create an ingested poison. If the poison is a contact poison, increase the Ease Factor by +3.\n\nPotions created by Mythic Herbalism that grant physical bonuses last for Sun Duration. The effects of the potions are not cumulative. The bonus to Fatigue rolls may not exceed +2, only one level of Fatigue may be ignored per day, and the bonuses to Soak do not stack.\n\nSpecialties: Healing wounds, Creating potions, Creating poisons. (Supernatural)"
-            MENTIONS {
-                "Ease Factors" -> ^"Ease Factors"
+            REFERENCES {
+                "Ease Factors" -> #t0PAqERchG5FLBBh2eeqBcMW ^"Ease Factors"
             }
         }
 
@@ -773,8 +757,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "This Virtue allows the character to utilize natural magic principles — such as elemental forces, natural affinities, magical contagion, and sympathetic connections — in performing any Magic-aligned Supernatural Ability to limit or eliminate the negative realm interaction effects of Divine or Infernal realms. Because of the time and materials required to utilize all of the natural magical principles, this ability may only aid activities that take a season or longer to perform.\n\nThe player adds his character's Philosophiae score to the Casting Total, Laboratory Total, or Supernatural Ability roll. The Philosophiae score may never be greater than the absolute amount of the negative realm interaction modifier. It is only useful in overcoming the negative realm interaction effects of an aura. The use of this Virtue never assists the character in achieving the initial effect total, and cannot aid in Penetration. This Virtue provides no benefit for activities performed in Faerie or Magic realms. This Virtue may be used in conjunction with Entreat the Powers."
-            MENTIONS {
-                "Entreat the Powers" -> ^"Entreat the Powers"
+            REFERENCES {
+                "Entreat the Powers" -> #tdv8a9vP14D12IZW80kviRjW ^"Entreat the Powers"
             }
         }
 
@@ -796,8 +780,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character may not create amulets, but may create chartae. The character may possess this Virtue in conjunction with the No Chartae Making Flaw, which prevents him from creating any devices in the laboratory."
-            MENTIONS {
-                "No Chartae Making" -> ^"No Chartae Making"
+            REFERENCES {
+                "No Chartae Making" -> #tH2ntG6ZxU8BAvQG4ZHpeWeX ^"No Chartae Making"
             }
         }
 
@@ -819,8 +803,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character may not memorize charms and may only cast charms with the assistance of a text. The character may possess this Virtue in conjunction with the No Text Casting Flaw, which prevents him from casting any charms."
-            MENTIONS {
-                "No Text Casting" -> ^"No Text Casting"
+            REFERENCES {
+                "No Text Casting" -> #t8MiWE2mOtOVVVhqXEuMdbNu ^"No Text Casting"
             }
         }
 
@@ -842,8 +826,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character cannot create chartae, but may create amulets. The character may possess this Virtue in conjunction with the Charm Magician Flaw, which prevents him from creating any amulets or chartae."
-            MENTIONS {
-                "Charm Magician" -> ^"Charm Magician"
+            REFERENCES {
+                "Charm Magician" -> #tRfFMx8WpkaiLnZoYS2h7qNU ^"Charm Magician"
             }
         }
 
@@ -855,8 +839,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character can't cast charms from texts. The character may possess this Virtue in conjunction with the Laboratory Magician Flaw, which prevents him from casting any charms."
-            MENTIONS {
-                "Laboratory Magician" -> ^"Laboratory Magician"
+            REFERENCES {
+                "Laboratory Magician" -> #taxo2nojZWZB60dZGxw0bDoK ^"Laboratory Magician"
             }
         }
 
@@ -878,8 +862,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character is less proficient at creating amulets than the typical learned magician. Subtract five from your Lab Total when creating amulets. This Flaw does not affect the character's ability to create chartae."
-            MENTIONS {
-                "Lab Total" -> ^"Lab Total"
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
 
@@ -891,8 +875,8 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character is less proficient at creating chartae than the typical learned magician. Subtract five from your Lab Total when creating chartae. This Flaw does not affect the character's ability to create amulets."
-            MENTIONS {
-                "Lab Total" -> ^"Lab Total"
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
 
@@ -917,10 +901,10 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Entreat the Powers Total" "Stress Die + Presence + (Realm) Lore"
             }
             DESCRIPTION "The Virtue Entreat the Powers allows a character to mitigate or eliminate negative realm interaction effects. When casting a charm or creating an amulet or charta, the character calls to the powers of the realm from which he seeks aid, loudly and firmly naming the powers he is invoking. The magician may not use Quiet Magic or silently cast a charm while using the Virtue Entreat the Powers. A learned magician adds his Entreat the Powers total to his Casting Score or Lab Total. The Entreat the Powers Total may never be greater than the absolute amount of the Aura Modifier component of the Casting or Lab Total. Therefore, Entreat the Powers only aids a learned magician in overcoming the negative realm interaction effects of an aura. It never assists a learned magician in achieving the initial effect total required to create the charm or device, and cannot aid in Penetration. If the learned magician calls upon a power other than the one in which the magic occurs, the Entreat the Powers total is divided by the hostile aura."
-            MENTIONS {
-                "Quiet Magic" -> ^"Quiet Magic"
-                "Lab Total" -> ^"Lab Total"
-                "Lab Total" -> ^"Lab Total"
+            REFERENCES {
+                "Quiet Magic" -> #tzpleZZvUPp5JS6P2ruWNizc ^"Quiet Magic"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
 
@@ -966,9 +950,9 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Entreat the Powers Total" "Stress Die + Presence + (Realm) Lore"
             }
             DESCRIPTION "For magicians with either Entreat the Powers or Entreat the (Realm) Powers Virtues, they may reduce the realm interaction effects upon their magic by calling upon the powers of the specified realm. This Virtue has no effect in areas where there is no negative realm interaction. Although the magicians may call upon entities outside the Magic Realm, this does not mean that they are practicing a supernatural ability aligned with that realm. The character adds the total to his Casting Score or Lab Total, but it may never be greater than the absolute amount of the Aura Modifier component, and it never assists in achieving the initial effect total nor in Penetration."
-            MENTIONS {
-                "Entreat the Powers" -> ^"Entreat the Powers"
-                "Lab Total" -> ^"Lab Total"
+            REFERENCES {
+                "Entreat the Powers" -> #tdv8a9vP14D12IZW80kviRjW ^"Entreat the Powers"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
 
@@ -1014,12 +998,12 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "See intangible phantasticum with Second Sight" "Ease Factor 9"
             }
             DESCRIPTION "A character with this virtue is able to stray; that is, he may send his spirit away from his body, and have it take material form at a distant place. This separated spirit, in solid or immaterial form, is called a phantasticum. The ability to generate a phantasticum allows the character to accept responsibilities, and perform acts, that are described in greater detail in the following sections.\n\nThis Virtue includes all of the following powers:\n\n• The character may stray while insensible, and lead others astray. • The character knows a method of forcing insensibility. • The character may use the Second Sight Ability in phantastic form, and gains a score of 1 in that Ability. He may not use it while in his body, unless he has the Second Sight Virtue. If he does, he has one score in Second Sight that he uses in both situations. • The character involuntarily creates the accouterments usual to his or her tradition while in phantastic form. If these accouterments include traditional weapons, these weapons damage foes despite their apparent fragility. • The character may make his spiritual form tangible or intangible using a Stamina + Concentration roll. • The character may harm spirits in intangible form, as if both were tangible. • The presence of the character in phantastic form causes drowsiness. • If the character's tradition uses animal or elemental shapes to travel, for processions, or for fertility battles, the character may do so. While in inhuman form, the character has the combat statistics and senses of a creature of the appropriate species, but retains his Intelligence and identity. • The character may speak to the sleeping, causing them to have dreams, and may converse with people who are awake, although this is arduous.\n\nThe Virtue also includes the following duties and limitations:\n\n• The character's body appears dead and is terribly vulnerable while the phantasticum is absent. • The character has the Magical Air Flaw while in phantastic form • The character must muster for every battle or procession, as described below, if these are part of the character's regional tradition, and does so involuntarily. • Injuries the character takes in phantastic form are proportionally reflected on the waking form. • The character must not describe the battles or processions, in any detail, to outsiders. • This virtue does not provide Magic Resistance or Might. • Characters in intangible phantastic form may be harmed by spells that affect ghosts or spirits, and may be seen with Second Sight (Ease Factor 9). • Characters in tangible phantastic form may be harmed by anything that would harm mundane versions of their form."
-            MENTIONS {
+            REFERENCES {
                 "Second Sight" -> ^"Second Sight"
                 "Second Sight" -> ^"Second Sight"
                 "Second Sight" -> ^"Second Sight"
-                "Magical Air" -> ^"Magical Air"
-                "Magic Resistance" -> ^"Magic Resistance"
+                "Magical Air" -> #t2phCqCT9Od1HohMOvPmyX4n ^"Magical Air"
+                "Magic Resistance" -> #tlGQ74lDDi7aSQx6wD4ns0MO ^"Magic Resistance"
                 "Second Sight" -> ^"Second Sight"
             }
         }
@@ -1045,7 +1029,7 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 "Use Second Sight ritual" "Athletics + Stamina vs. Ease Factor 6 (or lose a fatigue level)"
             }
             DESCRIPTION "A half taltós is a potential taltós — a regional variant of nightwalker described later — who failed to defeat an elder taltós at his initiatory battle. In folklore half taltós have a variety of powers, but this Virtue only grants a limited form of Second Sight and the ability to affect spiritual entities with a limited range of physical objects. Half-taltós player characters can be differentiated by selecting other supernatural Virtues.\n\nSecond Sight comes only with difficulty to half taltós. They must perform a simple ritual, which varies by taltós and takes a minute, before they can use the Virtue for one minute or until the conclusion of one battle, whichever is longer. Using this ritual repeatedly is very tiring. Each use requires an Athletics + Stamina roll against an Ease Factor of 6, or the half taltós loses a fatigue level. The half taltós may affect spirits with his personal armaments. These are usually a sword or whip, with a smaller weapon for emergencies. These are physical weapons with a spiritual nature. If a half taltós loses a weapon, it takes a month of occasional work for him to create the Arcane Connection to a new weapon necessary for it to be used to harm spirits."
-            MENTIONS {
+            REFERENCES {
                 "Second Sight" -> ^"Second Sight"
             }
         }
@@ -1152,9 +1136,9 @@ EXTENSION "ArM5_Hedge_Magic_Virtues_Flaws" {
                 ^"Source" STRING "Hedge Magic [Revised Edition]"
             }
             DESCRIPTION "The character is a Norse rune wizard, believed by magi to belong to a group called the Order of Odin. At one time he was respected and feared by other men living in the north, but now very few of his people even know his kind exists. He is still considered by many magi to be an enemy of the Order of Hermes, and those who discover what he is may try to hunt him down and kill him, or else attempt to force him to teach them his magical secrets. Vitkir may take Arcane Abilities, Martial Abilities, or Academic Abilities during or after their apprenticeship, just like Hermetic magi, as long as these Abilities are appropriate to their masters’ backgrounds (for example, an academic vitki is unlikely to teach his apprentice Great Weapon, and a warrior vitki probably does not ensure his followers are well versed in Philosophiae). All vitkir must take this as their Social Status Virtue, and it is only available to them."
-            MENTIONS {
-                "Order of Hermes" -> ^"Order of Hermes"
-                "Great Weapon" -> ^"Great Weapon"
+            REFERENCES {
+                "Order of Hermes" -> #t2tZNiB6YhCRxsiY8GALpPw5 ^"Order of Hermes"
+                "Great Weapon" -> #t3LwouR6XreRCH9qdlLWGSw5 ^"Great Weapon"
             }
         }
 

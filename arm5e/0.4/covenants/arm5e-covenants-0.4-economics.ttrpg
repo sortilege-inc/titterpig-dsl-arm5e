@@ -1,7 +1,7 @@
 EXTENSION "ArM5_Covenants_Economics" {
     NAME "Ars Magica Fifth Edition, Covenants - Finances"
-    VERSION "0.4"
-    SPEC_VERSION "0.4"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-25"
     DEPENDS_ON "ArM5_Covenants_Core_Ext"
 
@@ -96,7 +96,7 @@ EXTENSION "ArM5_Covenants_Economics" {
                     "Heavy use (average of three seasons or more per year)" "x 1.5"
                 }
                 DESCRIPTION "Laboratory's Upkeep Score / Points: –5 = 1; –4 = 2; –3 = 3; –2 = 5; –1 = 7; 0 = 10; +1 = 15; +2 = 30; +3 = 60; +4 = 100; +5 = 150. These following multipliers apply to maintenance costs, but not construction costs: Light use (average of one season or less per year) x 0.5; Typical use (average of about two seasons per year) x 1; Heavy use (average of three seasons or more per year) x 1.5. A covenant's total in this area is the sum of the points for all the laboratories in the covenant. For an Upkeep score of between –5 (the lowest possible) and +2, the number of points per laboratory is as specified in the above table. For example, a standard laboratory (Upkeep 0) equates to ten points. Beyond +2, the number of extra points gained per level of Upkeep increase is equal to the new Upkeep score times ten. For example, increasing the Upkeep from +2 to +3 increases the number of points by 30 (+3 multiplied by ten), taking it from 30 to 60. Thus, for a laboratory with an Upkeep of +2 or greater, the number of points is equal to ten times the number of experience points needed to buy an Art score with the same value as the Upkeep, as specified in the Advancement Table of ArM5, page 32. For example, a lab with an Upkeep of +15 equates to 1200 points, ten times the cost of an Art score of 15 (120 experience points). There is no upper limit on an Upkeep score except the covenant's ability to pay for it!"
-                MENTIONS {
+                REFERENCES {
                     "Advancement Table" -> ^"Advancement Table"
                 }
             }
@@ -145,9 +145,6 @@ EXTENSION "ArM5_Covenants_Economics" {
                     ^"Source" STRING "Core Rules"
                 }
                 DESCRIPTION "Some magi, living at the edges of mundane society and lacking a legitimate source of wealth, find themselves falling into criminal habits, in which their supernatural talents may be highly useful. In wild or lawless areas, options relying on the simple application or threat of force may be feasible. These include banditry, racketeering (demanding protection money), and piracy. Subtler possibilities include blackmail, smuggling, forgery, fencing, espionage, and assassination. It should be noted that several of the other sources of income listed in this section, if undertaken without a right or permission, may be considered criminal. Under these circumstances, hunting is poaching, toll-gathering is theft, and moneylending is usury.\n\nPros: Crime pays, offering rewards that are disproportionate to the effort invested.\n\nCons: The constant threat of capture and punishment (which is usually severe); imperilment of the soul and possible demonic interest.\n\nMagical Options: Imaginem spells for disguise (for example, Disguise of the Transformed Image); Mentem for deception; even minor magics can cause fear or give the impression of a significant threat.\n\nExamples\nLesser: A gang of highway bandits. Typical: An organized crime network in a large city.\nGreater: The pirate fleet of the Rhine covenant of Waddenzee.\nLegendary: Robin Hood, with demonic assistance."
-                MENTIONS {
-                    "Disguise of the Transformed Image" -> ^"Disguise of the Transformed Image"
-                }
             }
             #tru7m65KWhRED5epmdkG2h9T ^"Fishing" DEF {
                 EXTENDS ^"Income Source"
@@ -169,7 +166,7 @@ EXTENSION "ArM5_Covenants_Economics" {
                     ^"Source" STRING "Core Rules"
                 }
                 DESCRIPTION "A decent living can be made by providing food, drink, and shelter (and possibly other, more specialized facilities or comforts) to wealthy travelers. Inns and taverns, with their related breweries and butcheries, are an obvious choice, but hospitals, farriers, and brothels also do good business. Such enterprises are usually located in towns and cities, along trade or pilgrimage routes, or at sites of religious significance or natural beauty. Unless the covenant happens to be located in such a place, a hospitable business may therefore need to be placed some distance away.\n\nPros: Subtle magics may make such a business very profitable; Redcaps tend to favor hospitable covenants.\n\nCons: Magi, having The Gift, tend to be unwelcoming types who do not usually relish mundane visitors to their covenant. If the business is located elsewhere, it must be independently managed by a trusted companion.\n\nMagical Options: Mentem magics to bolster the spirits of visitors and loosen their purses; magically enhanced beverages or food.\n\nExamples\nLesser: A large town tavern. Typical: A luxurious Parisian brothel.\nGreater: The Bierhaus brewery and inn in Bamberg, Franconia.\nLegendary: The great hospital of St. John, in Jerusalem."
-                MENTIONS {
+                REFERENCES {
                     "The Gift" -> ^"The Gift"
                 }
             }
@@ -200,8 +197,8 @@ EXTENSION "ArM5_Covenants_Economics" {
                     ^"Source" STRING "Core Rules"
                 }
                 DESCRIPTION "For those who already find themselves with a surplus of cash, it is possible to profit in a number of ways, including moneylending, banking, moneychanging, or pawnbroking. Since the Church regards usury (the charging of interest) as sin, moneylending is mostly undertaken by Jews, although some other moneylenders and moneychangers employ various tricks to hide their interest, such as demanding repayment in a more valuable currency. In the 13th century, banking is in its infancy, only existing to any extent in the urban centers of northern Italy.\n\nPros: No heavy lifting; money breeds money.\n\nCons: Usury is sin — moneylenders may be vilified or punished; the risk of bad debt; requires you to have money in the first place!\n\nMagical Options: Creo Terram to create coins from scratch; Muto Terram or Muto Imaginem to change the denomination of coins or their appearance; Mentem magics to influence customers.\n\nExamples\nLesser: The main pawnbroker in a sizable town.\nTypical: A large and wealthy Jewish family.\nGreater: A Mercer House specializing in moneylending.\nLegendary: The Genoese bank of Leccacorvo."
-                MENTIONS {
-                    "Mercer House" -> ^"Mercer House"
+                REFERENCES {
+                    "Mercer House" -> #tgjTuHFRLx7J3e7vmw5pnt13 ^"Mercer House"
                 }
             }
             #tzGuMopfC1k04eLwI3Aknuae ^"Service" DEF {
@@ -231,10 +228,10 @@ EXTENSION "ArM5_Covenants_Economics" {
                     ^"Source" STRING "Core Rules"
                 }
                 DESCRIPTION "Some covenants take the straightforward approach of trying to profit directly from their magical talents. Magical items, potions, the casting of spells disguised as charms or fortune-telling, and so on, may be offered to wealthy nobles for the right price. This needs to be undertaken with considerable discretion, in order to avoid mundane meddlement and attracting unwanted attention to the Order of Hermes. An alternative possibility is to sell items of Hermetic value, such as books, lab texts, vis, items, longevity rituals, and even seasons of service to other covenants or magi. Although vis is the far more usual Hermetic currency, rich covenants and magi may sometimes be willing to pay in cash, or with other mundane wealth — even a single pawn of vis may be worth a dozen or more pounds to the right buyer. This avoids the problems of selling to mundanes, but it is rather demeaning to hawk away one's magics for mere silver.\n\nPros: Wealthy folk will pay handsomely for magic; needs very few covenfolk.\n\nCons: Most magi tend to view those who sell their magics with some measure of contempt; possible attention from the Quaesitores; loss of seasons and vis.\n\nMagical Options: This is the magical option!\n\nExamples\nLesser: Occasional minor charms or potions sold to the local nobility.\nTypical: A couple of smaller items or Longevity Rituals per year sold to the nearest Mercer House.\nGreater: Michael Scot, the court wizard of Frederick II, the Holy Roman Emperor.\nLegendary: Verdi, the domus magna of House Verditius."
-                MENTIONS {
-                    "Order of Hermes" -> ^"Order of Hermes"
-                    "Longevity Rituals" -> ^"Longevity Rituals"
-                    "Mercer House" -> ^"Mercer House"
+                REFERENCES {
+                    "Order of Hermes" -> #t2tZNiB6YhCRxsiY8GALpPw5 ^"Order of Hermes"
+                    "Longevity Rituals" -> #t5IGlnWI5qope95oJHqu4Ho4 ^"Longevity Rituals"
+                    "Mercer House" -> #tgjTuHFRLx7J3e7vmw5pnt13 ^"Mercer House"
                     "House Verditius" -> ^"House Verditius"
                 }
             }
@@ -309,8 +306,8 @@ EXTENSION "ArM5_Covenants_Economics" {
                     "Wages Cost" "2 pounds for every 10 points of inhabitants"
                 }
                 DESCRIPTION "Covenfolk are not usually paid a daily wage; they instead receive food and lodging in return for their service. Nevertheless, it is common for them to be given a modest weekly or monthly stipend so that they may occasionally buy things for themselves. For example, a grog in a typical Spring covenant might get one penny per week, enough to buy a dozen mugs of ale. Although magi do not get paid wages per se, they nevertheless often have some kind of allowance for discretionary personal spending. This caters for minor purchases such as clothing, jewelry, and the like, which need not be accounted for separately. The \"wages\" for horses can be assumed to be spent on the extra food that they require.\n\nYou may adjust these wage costs as appropriate for your covenant, but bear in mind that the more you pay them, the happier the covenfolk will be (and vice-versa). The standard wage costs listed here make no adjustment to Loyalty; if you increase (or reduce) them, you may gain the benefits (or penalties) to Loyalty outlined in Chapter 4: Governance, Prevailing Loyalty.\n\n**Wages Cost:** 2 pounds for every 10 points of inhabitants\n\nThe formula equates to one penny per point of inhabitants, per week. Add one pound per each penny that is paid daily to any professional soldiers in the covenant's service. For example, for the Veteran Fighters and Crossbowmen Boons, add one or nine pounds per soldier, respectively."
-                MENTIONS {
-                    "Veteran Fighters" -> ^"Veteran Fighters"
+                REFERENCES {
+                    "Veteran Fighters" -> #tUENAG0ymvvxZNAiLrLEZ6Il ^"Veteran Fighters"
                 }
             }
             #tFc9H8xqfdrXVG8IdivFx7Uj ^"Weapons and Armor" DEF {

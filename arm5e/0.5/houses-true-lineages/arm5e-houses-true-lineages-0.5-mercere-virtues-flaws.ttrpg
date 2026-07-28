@@ -1,0 +1,294 @@
+EXTENSION "ArM5_HoH_True_Lineages_Mercere_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: True Lineages - House Mercere Virtues and Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Virtue_Flaw"
+
+    # The chapter's new Virtues and Flaws. They fit the core ^"Virtue"/^"Flaw" types
+    # unchanged. Size and Category are taken from each entry's OWN opening line
+    # ("Minor, Hermetic"), not from the summary sidebar on pp.105/108 - that sidebar's
+    # first group heading did not survive extraction, so reading categories off it
+    # would silently mis-file an entry.
+
+    #tdf733d3217ce1443656df8 ^"Blood of Heroes" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are descended from a great hero of legend or a powerfully supernatural being. You do not have The Gift, and taking this Virtue means that you are a Mythic Companion.\n\nYou should have some idea of the character’s heritage, linking your background to the story of some legendary ancient or medieval hero. You need not be descended from that figure, but you should give some thought as to how it has been reborn or made manifest in your character, and consider what you will be expected to accomplish because of it. This will help describe your personality and your heroic powers, though the specifics may remain a mystery to the character if you wish.\n\nYou may take Heroic Virtues and Flaws, and each point of Flaws that you take during character creation balances two points of Virtues instead of one. You also receive one free Minor Virtue that describes your supernatural heritage. You must take the Heroic Personality Flaw (described below), and you must normally belong to House Mercere. For most hero characters, this means taking Redcap, and that leaves you with nine more points of Flaws for as many as eighteen points of Virtues. As a member of House Mercere, you are considered a full member of the Order of Hermes and are treated with special respect by your House. Other magi may think less of you, just as they might not think much of Redcaps, but you have much more chance of getting away with voting at Tribunal than a normal unGifted Redcap. Nevertheless, you are normally expected to abstain, out of respect for those with The Gift.\n\nThis sort of character is very rare, and much more powerful than other unGifted Redcaps, similar in potential to Hermetic magi. For game balance, the storyguide may rule that you cannot play both a magus and a character with Blood of Heroes, and veto heroic characters that seem like they would be overpowered or implausible in your saga.\n\nLike The Gift, Blood of Heroes is a free Virtue. It is not possible to have both Blood of Heroes and The Gift; magi can gain access to Heroic Virtues and Flaws by taking Mythic Blood. Also like The Gift, Blood of Heroes is not available to grogs; this Virtue makes a character too important to be a grog."
+    }
+
+    #tfe970919eadd6dc0e27681 ^"Boosted Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "By spending a pawn of vis when casting formulaic spells you may “boost” the Range, Duration, or Target of the effect by one magnitude. You can do this multiple times for the same spell. For example, boosting Range from Touch to Sight and Target from Individual to Group would cost you four pawns of vis. This has no effect on spontaneous or Ritual spells, though you can still use vis to boost your Penetration as normal. Note that while magi with Mutantum Magic (see below) can invent spells that allow this, they cannot boost spells that were not designed to do so without taking this Virtue."
+    }
+
+    #t0091ee52009046d8e0fa24 ^"Charmed Life" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Fortune smiles upon you, often protecting you from the random consequences of adventure. You have the Luck virtue, and whenever you roll a 0 on a stress die in dangerous or deadly circumstances, you may spend a Confidence point to reroll it rather than checking for a botch. This should be applied in chaotic circumstances, not calculated efforts, since luck must play a factor to make use of this virtue — for example, charging into a rain of arrows or diving off a sheer cliff are appropriate actions, but not forging a letter or following a set of tracks."
+    }
+
+    #t342cddf7efb3563a61a3ae ^"Faerie Blood" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Bloodcap:* You are descended from a frightening spirit of cruel, dark winter, and receive a +1 bonus to your Strength, though this does not increase your score beyond +3. Your teeth and nails tend to be much longer than normal and you look older than you actually are. You also tend to be very susceptible to the Divine, and should\n\ntake a Flaw to represent that fact. This faerie lineage is rare in humans, and probably found only in characters of House Mercere."
+    }
+
+    #t099bdae67cfbc60bc044f6 ^"Gift of Tongues" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You can understand and speak any language as long as you are communicating directly with someone else who is fluent in that language. Others who hear your words and who understand that language can understand what you are saying. You cannot carry on a conversation in multiple languages, but you can act as a translator for two or more people who do not have this virtue."
+    }
+
+    #tbf00064dc29519ef60b8bd ^"Great Bearer" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You can carry twice as much on your back before you become weighted down, as long as you have time to arrange yourself and your equipment properly. Divide your Burden by two before calculating your Encumbrance. You can also travel twice as far before you become fatigued by a journey."
+    }
+
+    #tb678f87089b56037da664e ^"Harnessed Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You have great control over your spells. You are able to cancel any of your spells simply by concentrating. You can even cancel the magic in magic items which you created. The act of canceling your magic should be treated as if you were casting a spell for timing and concentration purposes. If you are distracted and fail a Concentration roll, another attempt may be made in a later round. Spells and magic items can be canceled out over any distance, but once they have been canceled, you must recast a spell or reinvest a power in a magic item to start the effect again.\n\nThe drawback is that when you die, all of your spells and magic items sputter out."
+    }
+
+    #t32428eac5a913f999b14f2 ^"Heroes’ Birthright" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You have a special magical power which you can invoke and cancel at will, or which is always active. It should be designed as a Hermetic effect, no greater than Level 15, which works like the Mythic Blood virtue in **Ars Magica** 5th Edition (page 47) with regards to words and gestures. There should be something about your background that explains why you have been blessed in this way, beyond simply having Blood of Heroes — perhaps it is a reward for your heroic actions, or you have been given the power to help you complete an important task. This\n\nvirtue can be taken more than once to indicate a more powerful birthright, and is compatible with Mythic Blood, though none of your accumulated powers can have effects greater than Level 30."
+    }
+
+    #t6c26e2ae332e6f4d045ce9 ^"Invisible to Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "By concentrating, you can cause yourself to become temporarily invisible to magic, which can prevent Intellego spells from detecting you and can cause other spells that target you directly to have no effect. This doesn’t protect you against area effect spells; if a spell creates something and tries to hit you with it, your only recourse is to get out of the way.\n\nYou must make a Stamina + Concentration roll for each spell every round during which you would be affected, against an Ease Factor of 3 + (3 x the magnitude of the spell). For example, avoiding *The Wound That Weeps* (PeCo15) would require a total of at least 12, while *Weight of a Thousand Hells *(CrMe25) would need 18 or more. If you have magic resistance, first check that the spell can “see” you, and then resolve Penetration as normal. Attempting to perform other actions while invisible to magic requires additional Concentration rolls, but you do not need to know where spells are coming from to make yourself invisible to them."
+    }
+
+    #t6609e84ab8521009543e5e ^"Lone Redcap" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Status" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are a Redcap who does not maintain ties to a Mercer House, and thus do not receive magic items and longevity potions. You still begin with 300 experience points for your fifteen years spent as an apprentice, and receive the benefits of the Well-Traveled virtue, but you are estranged from the other Redcaps in your area, and have a poor reputation at level 2 within your House.\n\nYou must still devote two seasons each year carrying messages and performing other services for the Order, for if you do not there is the possibility you will be declared Orbus and thrown out of your House. This work pays enough for you to live on if you do not belong to a covenant, unless you take the Poor flaw and must work a third season as well. If you take the Wealthy virtue, you can maintain your position with only a single season of effort each year."
+    }
+
+    #t4cec7914e0cc079ecbbbbf ^"Magic Items" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You begin with 25 more starting levels of magic items than you would otherwise, and the rate at which your items are improved is increased by one level per year. This is probably because of your exceptional devotion to the House, or because you have inherited a number of items from other Redcaps. You must be a Redcap to take this virtue, and you may take it more than once, though no single effect in any of your items can be greater than Level 30."
+    }
+
+    #t7e81e26db7c00c01ad4719 ^"Messenger’s Memory" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You can remember, word for word, any short messages you have heard or read in the last year. You must concentrate when you first read or hear the message, but afterwards you can recite or copy it exactly, and you can even recall personalized details like inflection and handwriting, though you may not be able to perfectly reproduce these nuances. While you might recall excerpts of longer works, like an hour-long speech or a book, it is impossible for you to memorize more than a few choice passages."
+    }
+
+    #ta1db6f0e79c04174c54ee0 ^"Mutantum Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are descended from the Mutantum lineage, and can thus invent formulaic spells and magic items that take advantage of Boosting, Harnessing and Tethering (see Mutantum Magic, under Magic, above). You may also take the Tamed Magic virtue, and half of your starting spells may be “tamed” versions of common spells. Most characters with Mutantum Magic belong to House Mercere and consider themselves Mutantes, and all of them must be descended by blood from the Founder or one of his ancestors."
+    }
+
+    #t16c9aa263a347c132ce7fd ^"Mythic (characteristic)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Because of your great innate potential, you may take a specialty for one of your positive Characteristics, similar to an Ability specialty. Whenever this specific circumstance applies to one of your rolls for that Characteristic, you may treat your score as if it were one greater, and if you roll a potential botch, you reduce the number of dice by one. You may take this virtue more than once, though not for the same Characteristic.\n\nHere are some specialty suggestions for each Characteristic. *Intelligence:* brilliant ideas, quick thinker, great knowledge *Perception:* notices details, big picture, attuned to change *Strength:* killing blows, athletic prowess, brute strength *Stamina:* tireless will, iron constitution, Bacchus’s\n\nendurance *Presence:* alluring eyes, commanding presence, terrifying\n\nvisage *Communication:* prolific author, stirring speaker, strong\n\nleader *Dexterity:* nimble fingers, legendary aim, relentless attacker *Quickness:* lightning-fast defense, sudden strikes, short-distance runner"
+    }
+
+    #tf8cc0d4011d52e44172e67 ^"Mythic Mimicry" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This Virtues grants all the abilities of *Messenger’s Memory* (see above), but in addition you are so accomplished at memorizing and reciting messages that you can recall accounts of any length, and perfectly recreate the voice or handwriting of the author, so much that it is indistinguishable from the original. Once you have heard or read something from a person, you can easily mimic their voice or writing style, creating perfect imitations if you are so inclined. With a season of effort you can even\n\nmemorize an entire book, and reproduce it in another season afterwards, though you must have been able to comprehend the contents to do this accurately."
+    }
+
+    #tbc2d0ec9be8a4ad9d73bdd ^"Sure Traveler" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "As long as you have traveled the route before, you never become lost on a journey, and you may add +3 to any Survival rolls based on finding your way through unfamiliar terrain. You are never adversely affected by weather, bad roads, or other negative travel conditions; you can muddle through no matter what, making nearly the same time as you would in ideal circumstances. If you are leading other travelers you can speed the journey for all of you by encouraging them to match your pace. This does not apply when you do not control of the means of travel (riding in a cart, traveling by ship); then you are at the mercy of your driver."
+    }
+
+    #t2116d6df1f6ad3fd16b693 ^"Tamed Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You have the equivalent of both Harnessed Magic and Tethered Magic, but do not suffer the inherent flaws of those Virtues. That is, you can also use the principles of Mutantum Magic to change any of your spontaneous or formulaic spells or effects of magic items that you activate, but your spells and effects are not arcane connections to you and do not sputter out when you die. This virtue may only be taken by characters who also begin with Mutantum Magic (see above)."
+    }
+
+    #tfb722bd4009f5fdcc91af0 ^"Tethered Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You can pass control of your non-Ritual spells to others, just as if they were the caster, “tethering” the magic to them for the spell’s duration. You may also tether a spell to an object, which can then transfer the spell to an appropriate target when it comes into range. This can even be done whenever you activate an effect in a magic item. However, a side effect of this sort of magic is that all of your spells and the effects of any magic items you activate are arcane connections to you."
+    }
+
+    #t05fae8564cf71c063d0a94 ^"Vis Sensitivity" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are unusually sensitive to raw vis, and can tell whether or not an object contains any simply by touching it. You can also determine how many pawns it is worth by weighing it in your hand, and learn what Art it is associated with by examining it closely. In this way you can recognize magic items, active rituals, familiars, and other objects that require vis to prepare, though you cannot identify them or determine any specific details about them. You may also begin with the Magic Sensitivity virtue at no cost. Magic Sensitivity is not compulsory, if you do not want the penalty to Magic Resistance."
+    }
+
+    #tf593b791a691dde851cf29 ^"Bound Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "When you die, all of your spells end abruptly and any magic items that you created cease to function. This suggests that you could have a natural aptitude for Mutantum Magic, or you might take it with Tamed Magic to represent an imperfect understanding of your talent. You cannot take this with Harnessed Magic (**Ars Magica** 5th Edition, page 43), as it already includes this effect."
+    }
+
+    #t9ddb712b9179f4c08e25ad ^"Fettered Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "All of your spells and the effects of any magic items you activate are arcane connections to you. This suggests that you may have a natural aptitude for Mutantum Magic, or you might take it with Tamed Magic to represent an imperfect understanding of your talent. You cannot take this with Tethered Magic, as it already includes this effect."
+    }
+
+    #t07f5b583780e1cd2a59e0f ^"Hermetic Patron" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You must be a Redcap or magus to take this Flaw. You are watched over by an older magus or a more established Redcap, who considers you his charge and helps you out from time to time. This patron must be an NPC. Because of your special relationship, he is willing to do additional favors for you that cost him little, such as casting spells on you, lending you magic items, allowing you access to his books, providing you with mundane materials, supporting you financially for a season or two, or even adopting you into his House. However, in return he will expect special attention from you, and may periodically send you on missions or assign you important tasks.\n\nYou may take this Flaw with a large group of magi as your patrons, though the more numerous your benefactors, the more you will be expected to do for them."
+    }
+
+    #tc5f6b24b15834374fe2760 ^"Heroic Personality" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You may take Personality traits of up to +5 or –5, and have a Confidence score of two. You also begin with five Confidence points instead of three. As part of your being a hero, however, you may occasionally do things without knowing why, as you receive guidance or direction from some kind of higher power. Your feelings are so strong that you may lose control of yourself and act on instinct, without thinking about the consequences, allowing the storyguide to bring you into a story or cause you to\n\nrespond to a situation in a certain way, based on these heroic traits. Thus, you should choose Personality traits that reflect your heroic behavior, to give the storyguide ideas for passions that motivate your character. **Note:** If you take this Flaw, the storyguide *can* occasionally tell you what your character does. If you are not happy with this potential loss of control, do not play a character with heroic blood."
+    }
+
+    #tea06fd1470989671b25c84 ^"Illegitimate Lineage" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You were raised in House Mercere, but are not descended by blood from Mercere or one of his heirs, and so are not considered a “true Mercere.” Because of this, Redcaps do not follow or admire you as they do other magi, and Gifted Merceres think of you as inferior to them. You have a poor reputation (Illegitimate) within the House at level 2, and you receive no special benefits for belonging to House Mercere, such as interest-free loans, magic item contracts, or vis exchanges at no charge. Your parens probably has a poor reputation as well. Only through exemplary service to the Order and taking legitimate apprentices born to Redcaps or other magi descended from the Founder will you be forgiven for your heritage."
+    }
+
+    #t18aec532f7fe2a86d1fca9 ^"Legacy" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are descended from a legendary magus or Redcap of old, or have such potential that it is assumed you will rise to similar greatness. Because of this, you are accorded great respect by magi of your House who care about such things, the equivalent of Hermetic Prestige. You may also take Heroic Virtues and Flaws if they are appropriate to your lineage. However, you are also expected to live up to your reputation by performing great deeds, and you are given much more difficult tasks than your peers. As a Redcap, you will not simply be asked to carry messages, for your assigned duties will involve greater danger and much more effort."
+    }
+
+    #tc465d4ab7a1fbe83c992de ^"Pagan" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You do not follow the teachings of the Church, and have never been baptized. This tends to upset those in authority in Mythic Europe and frighten common people\n\nwho learn of it. You do not observe Christian holidays, and you try to avoid churchmen and the Dominion. You cannot pretend to go along with society, however, because you believe that it would displease your gods and incur their wrath — you might suffer grave supernatural consequences if you take Communion or appear to worship gods other than your own. You may begin with Magic Lore or Faerie Lore, depending on the specifics of your faith. (This is not a Flaw in areas of Mythic Europe with substantial pagan populations, but by 1220 the only such areas are in parts of the Novgorod Tribunal.)"
+    }
+
+    #t0ef241050f5119c6436927 ^"Tragic (characteristic)" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Heroic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You must take a specialty for one of your negative Characteristics, similar to an Ability specialty. Whenever this specific circumstance applies to one of your rolls for that Characteristic, subtract three from your total and roll one additional botch die. You should roleplay this failing whenever you attempt this sort of action. Here are some examples of negative Characteristic specialties.\n\n*Intelligence:* easily tricked, confused by magic, horrible memory\n\n*Perception:* overlook the obvious, poor face recognition, often gets lost\n\n*Strength:* weak back, not grounded, no follow-through *Stamina:* glass jaw, fainting spells, sensitive to cold *Presence:* awful odor, monstrous reputation, face curdles milk\n\n*Communication:* nervous speaker, unintentionally insulting, unintelligible\n\n*Dexterity:* easily unbalanced, all thumbs, bad aim *Quickness:* often surprised, lumbering run, easy target"
+    }
+
+    #t673c53024532c763e7a323 ^"Usurer" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Status" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You often lend silver or other valuables to people at interest rates that many consider abusive. You get away with this somehow, possibly because you belong to a group that can avoid moral judgment for these actions, because you operate outside of the law, or perhaps because you lend a type of currency not accepted by the mundane population. You receive the equivalent of approximately ten pounds of silver each year from interest payments, though you may occasionally need to chase down debtors, and you have a poor reputation (Usurer) at level 4 within your community and the local region."
+    }
+
+}

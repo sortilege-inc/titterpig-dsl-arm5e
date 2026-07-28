@@ -1,0 +1,221 @@
+EXTENSION "ArM5_HoH_True_Lineages_Tremere_Spells" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: True Lineages - House Tremere new spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    # The chapter's new spells. They fit the core ^"Formulaic Spell" shape unchanged;
+    # Technique and Form come from each spell's printed group banner (which the source
+    # sometimes sets without the word SPELLS), and the stat line is parsed into typed
+    # fields rather than left duplicated in the prose.
+
+    #t2b0e3fdf04b1172aa5b972 ^"Venomous Velites" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Requisite:** Rego Creates a swarm of a hundred poisonous scorpions. The Rego requisite allows the magus to command them to attack specific targets. If used in combination with spells like “To Mark With Umbrage”, the magus can command his scorpions to kill anyone on the battlefield not bearing his sigil. It is important for magi with weak Parmae Magicae to ensure they bear the mark.\n\n(Base 5, +3 Sight, +2 Sun, +1 Group, +1 extra effect from requisite.)"
+    }
+
+    #t9e6dd809e6ad0a6cbccca1 ^"To See As Others See" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Range" STRING "Arcane"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Requisite:** Rego This spell allows a magus to read the thoughts of an animal, and give it directions. This allows the magus to indirectly sense the animal’s location, using it as a spy. The magus’s perceptions are filtered through the mind of the animal, so they focus on those stimuli that the animal finds most vivid. Dogs find smell vivid, so the magus’s perceptions, when using a dog, will focus on odiferous substances. A magus reading the mind of a magpie finds that they fixate on reflective surfaces.\n\n(Base 5, +4 Arcane Connection, +2 Sun, +1 Group, +1 extra effect from requisite.)"
+    }
+
+    #ta02bc551ba1e398578b868 ^"The Unfaithful Favor" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" STRING "20"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell commands a silk handkerchief to strangle an enemy for whom the magus has an arcane connection. The handkerchief appears near the victim and swiftly wraps itself about their throat. They take damage according to the rules in **Ars Magica** until death or the destruction of the handkerchief. Conscious victims can often avoid the handkerchief, so this spell is usually cast at night. After the victim dies, the handkerchief hides itself in their bedding, or up their sleeve.\n\n(Base 1, +4 Arcane, +2 Sun, +1 Commands in addition to transport)"
+    }
+
+    #ta942272978fb1f69f94950 ^"Exactly to Scale" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Requisite:** Mentem This spell, designed by a Tremere Artificer with broader imagination than vocabulary, is used to draw precise pictures of a magus’s ideas. The inventor used this spell to draft technical diagrams, but many of his sodales use it for mapmaking. It requires the presence of a pot of ink and a drawing surface, because the spell creates permanent images using mundane materials.\n\nThe magus requires an Intelligence + Finesse roll of 9+ for the diagram to be legible. (Base 3, +1 Touch, +2 for highly unnatural control)"
+    }
+
+    #t96e6aada45ac606fc9350d ^"To Mark with Umbrage" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" STRING "40"
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell marks every member in a force mundanes, so that, in the confusion of battle, they can tell friend\n\nfrom foe. The mark is a large visual representation of the sigil of the magus. The spell’s creator had a shadowy sigil, so the grogs she marked appeared dark and featureless, giving the spell its name. The spell can be cast on any group of people, and can project any sort of visual mark, so Tremere magi also use it for processions and sport.\n\nAny Awareness roll concerning the location of forces has a +3 bonus while this spell is in effect. Examples include selecting areas of the battlefield to target with destructive spells, selecting victims for missile fire, finding groups to rally to when separated from the army in the swirl of battle.\n\nThis version of the spell is able to mark up to a thousand individuals, in groups within the magus’s Sight. Some younger magi prefer a version of the spell suited for smaller units of grogs. This version is level 25, is effective to Voice range, and can only affect a group of about ten. Others don’t bother because grogs from House covenants usually have a covenant symbol (called a badge) or color on their clothes.\n\n(Base 1, Range +4, Duration +2, Group +3, Size+2)"
+    }
+
+    #t4c591280c924b66f665954 ^"False Prophecy" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "30"
+            ^"Range" STRING "Arcane"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell alters the victim’s memories of their dreams, so that they recall a persistent nightmare. The magus crafts this nightmare, but usually includes material designed to influence the victim’s decisions.\n\n(Base 3, +4 Arcane, +3 Moon)"
+    }
+
+    #te5ea84d38967ad7b7a4d20 ^"Swords of Silver and Moonlight" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Requisites" STRING "Terram"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell makes the metal accouterments of a ghost solid. Many ghosts are able to affect the world with a single, favored object, but this spell allows them to use their entire kit. Weapons that are a composite of wood and metal work normally for the ghost, but only the metal parts may strike a mortal. Hard-pressed Tremere magi sometimes cast this spell upon the ghosts of dead shield grogs. Eye contact must be made with the ghost.\n\n(Base 25, +1 Eye, +2 Sun)"
+    }
+
+    #t515c105a6bb723d843e6c9 ^"Spectral Quinreme" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Structure"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "A ghostly ship is not the spirit of a ship, it’s a prop projected by the psyche of a ghost, like the clothes or weapons of a ghostly soldier. Ghost ships, as figments of the imagination of the dead, can be called up with\n\nMentem magic. This spell makes a spectral ship sufficiently solid for humans to sail upon her, and stow cargo safely within her hold. It does not summon or command the ghostly ship: that requires the magus to summon and command the ghost or ghosts who manifest the ship.\n\n(Base 15, +1 Eye, +3 Moon, +3 Structure)"
+    }
+
+    #t6ab0d6a1d8e3703755cf6e ^"Arming the Legion of the Dead" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "70"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Group"
+            ^"Ritual" STRING "Yes" FIXED
+            ^"Requisites" STRING "Terram"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell makes the metal accouterments for an army of ghosts, up to 10,000 strong, solid. It does not, however, give caster any control over the ghosts. Many ghostly legionnaires can affect the world with a single weapon, but this spell allows them to use their complete kit, granting missile attacks, the ability to engage in field engineering, and the use of siege weapons.\n\n(Base 25, +1 Touch, +3 Moon, +2 Group, +3 size)"
+    }
+
+    #t8adb6b0d361c22889cb0ad ^"Voices from Hollow Spaces" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "35"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell binds ghosts to objects or places. Traditional sites include mirrors, skulls and graves. It does not compel trapped ghosts to serve willingly, but members of House Tremere threaten or bribe their ghosts into compliance.\n\n(Base 15, +2 Voice, +2 Ring)"
+    }
+
+    #tb607b8b4019f20db02ec25 ^"The Face in the Mirror" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "40"
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell forces a ghost to possess a magus, but allows the magus to maintain control. This brings the ghost inside Personal range and allows mental communication. The Tremere magus can follow the ghost’s advice and allow it control of his muscles, to use skills. The ghost is usually purged from the magus’s body if the Parma Magica is raised during the duration of this spell, so Tremere Assessors tend to use it briefly, in cities, for urgent, vital tasks. Possession is treated like level 25 Rego Mentem effect.\n\nThis spell does not summon a ghost. Its designer assumed that he would have the ghost he wished to use stored in a mirror. Tremere magi are supplied with ghosts by Leadworkers, or call them up.\n\nThis spell allows the magus to give the ghost complex, unbreakable instructions, but Assessors find it best to convince their ghosts to assist. This is not difficult, because most ghosts are tied to the Earth by a piece of unfinished business that they cannot accomplish. The\n\nTremere can usually bargain for the ghost’s assistance, in exchange for the resolution of its problem.\n\n(Base effect: 20, +1 Eye, +3 Moon)"
+    }
+
+    #tf9ad8862e2f60d25847961 ^"Call the Fallen Eagles from the Mist" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "65"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Group"
+            ^"Ritual" STRING "Yes" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "A spell used on ancient battlefields to call up the pagan dead. This spell grants control of the dead, but if ordered to directly oppose their reason for remaining on Earth, they occasionally break the magus’s control. Roman legionnaires asked to attack Rome, for example, might break control.\n\n(Base 15, +1 Touch, +3 Moon, +2 Group, +3 size: up to 10,000 ghosts, + 1 summon and control)"
+    }
+
+    #t1749d0235560e02ccfcbc6 ^"A Simple Method for Rapid Vallation" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" STRING "35"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "The sciences of vallation, surrounding your forces with walls, and countervallation, surrounding your enemies with a wall to cut off their supply lines, were well understood by the Romans. They could not, however, accomplish these feat as easily as a Tremere Architect.\n\nThis spell makes a wall of granite up to 500 paces wide, 5 paces high, and 1 pace thick. One needs miner’s tools to break through it, though it can be toppled if it is not connected to a support on its side or top. The wall this spell creates has a walkway, protected by crenellations, along one side. Architects who plan to use this spell often master it, because during the Corruption of Tytalus, a Tremere magus had the misfortune to botch this spell. The walkway appeared on the enemy side.\n\n(Base 3, +2 Voice, +2 Sun, +4 size)"
+    }
+
+    #tea1d649c5dca2a87551beb ^"Love’s Unfaithful Witness" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "35 This spell is used to question jewelry about its wearer’s activities. The sympathies of the largest gemstone determine the personality of a piece of jewelry. Rubies tend to be bloodthirsty, garnets sanguine and so on, as represented by the Materials Table in **Ars Magica** (page 110). Unadorned silver is treacherous and unadorned gold is pious, judgmental and accusatory.\n\n(Base 25, +1 Touch, +1 Conc)"
+    }
+
+    #td5033502874d95462810d5 ^"A Window of Singular Direction" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" STRING "10"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell, created by the Architects of Tremere, makes a circle of wall transparent, from one side only. It was developed in the early years of the Order, to allow magi protected by temporary fortifications to target their foes.\n\n(Base 3, +1 Touch, +2 Ring)"
+    }
+
+}

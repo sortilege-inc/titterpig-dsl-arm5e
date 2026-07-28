@@ -82,4 +82,59 @@ EXTENSION "ArM5_Houses_True_Lineages_Core_Ext" {
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
         }
     }
+
+    # ── Types introduced by Chapter Two (House Guernicus) ──────────────────
+
+    #tHoHTL05CodeClauseTypeAAA ^"Code Clause" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Oath Text" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05TribunalStepTypeAA ^"Tribunal Procedure Step" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Stage" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05HermeticPenaltyAAA ^"Hermetic Penalty" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Kind" ENUM ["Damages", "Fine", "Punishment"] REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05QuaesitorPowerAAAA ^"Quaesitorial Duty" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05FenicilRitualAAAAA ^"Fenicil Ritual" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Scale" ENUM ["Greater", "Lesser"] REQUIRED
+            ^"Technique and Form" STRING
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Ease Factor" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05SpellGuidelineAAAA ^"Spell Guideline Set" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Technique" STRING REQUIRED
+            ^"Form" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
 }

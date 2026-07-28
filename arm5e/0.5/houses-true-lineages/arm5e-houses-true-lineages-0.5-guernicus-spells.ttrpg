@@ -1,0 +1,473 @@
+EXTENSION "ArM5_HoH_True_Lineages_Guernicus_Spells" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: True Lineages - Quaesitorial magic"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    # The Quaesitorial spells, the new spell guidelines they are built on, and
+    # Fenicil's Rituals. The spells fit the core ^"Formulaic Spell" shape unchanged.
+    # Fenicil's Rituals do NOT: the source says their Technique and Form "are not
+    # involved in the casting or learning", they are cast against an Ease Factor
+    # rather than a level, so they use their own ^"Fenicil Ritual" type.
+
+    #t71b453c515d4cb396ff9e0 ^"Creo Mentem Guidelines" DEF {
+        EXTENDS ^"Spell Guideline Set"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "**Level 4: **Restore a memory of a brief event to a fresh state,\n\nas long as a fragment of it remains. The affected mem-\n\nory can be no more extensive than a short conversation (two or three rounds). **Level 5: **Restore a memory of an event to a fresh state, as\n\nas long as a fragment of it remains. Events are remembered as if they had occurred only an hour before.\n\nlong as a fragment of it remains. The affected memory can be no more extensive than about two minutes. **Level 10:** Restore a memory of a day’s events to a fresh state,"
+    }
+
+    #t3af99bb8ab1761840fe30b ^"Intellego Terram Guidelines" DEF {
+        EXTENDS ^"Spell Guideline Set"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "**Level 30: **Commune with a natural rock. Speak with a\n\nmetal object. **Level 35: **Commune with an artificial rock (for example,\n\na statue) **Level 40: **Commune with a metal object (for example, a\n\nknife)."
+    }
+
+    #t2619455ef983ac2fa47127 ^"Creo Vim Guidelines" DEF {
+        EXTENDS ^"Spell Guideline Set"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "**Gen:** Refreshes all spell traces within the target that are\n\nless then the magnitude of the guideline –1, in negative magnitude. **Level 10: **Detect any active magic and any trace of positive magnitude."
+    }
+
+    #ta6d798aa94e4511b0aec81 ^"Intellego Vim Guidelines" DEF {
+        EXTENDS ^"Spell Guideline Set"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "In general, separate spells are needed to analyze effects from each of the four Realms of power. Quaesitors normally learn the spells to detect and analyze magical effects, but the other spells are known. Spells could be invented to detect Infernal traces, but there would be no point. **Gen:** Detect the traces of magic of negative magnitude up\n\nto the magnitude of the guideline used – 2.\n\n+3 magnitudes gives the rough details of the effect and the sigil of the caster. This level also enables the Quaesitor to tell if a Hermetic effect was created by a spell or invested device. Quaesitors with extensive experience of a particular sort of non-Hermetic power can also identify that; the limit is the Quaesitor’s ability to interpret the information provided by the spell."
+    }
+
+    #taabd8c2e3a2e00fbc69a04 ^"Perdo Vim Guidelines" DEF {
+        EXTENDS ^"Spell Guideline Set"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This combination can be used to make spell traces harder to detect by aging the trace. However, a spell to magically age a trace will leave its own fresh trace; this is generally counterproductive. However, if cast with *Shroud Magic* it can still prove useful. So far, no way has been found of designing a spell that leaves no trace. **Gen:** Ages a spell trace to a negative magnitude equal to\n\nthe guideline used. **Gen:** Dispel a Hermetic enchantment with a level less\n\nthan the guideline level used + a stress die (no botch). Spell must be a ritual. **Gen:** Dispel a specific type of enchantment with a level\n\nless than twice the guideline level used + a stress die (no botch). To qualify the spell needs to specify a particular Hermetic Form or a specific type of enchantment, such as Talismans, Familiars or Longevity Rituals. More general enchantments do not qualify. Spell must be a ritual."
+    }
+
+    #t9d2ab650c4e5c8b3b1212f ^"The Whole from the Part" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" STRING "20"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Conc,** T:** Ind,** Level 20**\n\nThis spell needs to be cast on a current Arcane Connection to a human (or human like creature). This spell gives the caster a mental image of the subject’s essential nature. Thus the caster sees the subject without clothes, tattoos, scars or other mutilations. The spell does not target the actual subject; it only probes the arcane connection itself. Thus the spell does not need to penetrate the real subject’s Magic Resistance.\n\n(Base 10, +1 Touch, +1 Conc)"
+    }
+
+    #t5eb6eb9fec9d546748556a ^"Sight of the Molting Magus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" STRING "25"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell allows the caster to spot Corpus material (hair, blood, etc.) within his line of sight. Such material appears to glow with a reddish hue. The spell also allows the magus to estimate how long ago the item parted company from its owner by the brightness of the glow. This spell is used to place suspects in a particular time and place. The spell *The Whole from the Part* (see above) is often used to identify who the item belonged to.\n\n(Base 4, +1 Conc, +4 Vision)"
+    }
+
+    #t01924fe86092f24fd4a7ca ^"The Discerning Eye" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" STRING "Gen"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "An enhanced version of *Discern the Images of Truth and Falsehood*. You can tell whether an image has been created or altered by magic, seeing both the original and false images in the case of alterations. The enhanced sense works by extromission (sending magical species from the eyes). If these encounter any Magic Resistance, they may be blocked. Therefore an area protected by Magic Resistance will appear dark to the magical aspect of the caster’s vision. When cast without Penetration the caster is able to spot areas of Magic Resistance (which would include an invisible magus). To detect an illusion this spell must be at least fifteen levels higher than the effect that generated it. However, use of the Acute Sense mastery ability may still detect an anomaly. If you botch the spell, you mistake illusions for the real thing and reality for illusion. Your discernment is not limited to visual illusions, although you can only tell that a sound is illusory if you are looking at the apparent source.\n\n(Base, +2 Sun, +1 Enhanced Effect)"
+    }
+
+    #t47f77ea1b76c0ad224a55f ^"By His Works" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "5"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Refreshes a specific memory within the mind of the caster; as long as some fragment of it remains, this spell will restore it. Once refreshed, the caster can hold the perfected memory as long he concentrates. Studying the memory effectively creates a new one which does not fade when the spell expires. This spell was created to allow Quaesitors to perfectly recall spell sigils they encounter. The spell can be used to recall other details of a brief event, like faces or voices. This spell is often used to double-check identification.\n\n(Base 4, +1 Conc)"
+    }
+
+    #t10071657c38192369239cd ^"The Good Witness" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "25"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Sun,** T:** Ind,** Level 25** Refreshes a day’s memory within the mind of the subject; as long as some fragment of it remains this spell will restore it. The subject is asked to recall some event within the day in question as the spell is cast. Events that day are remembered as if they had occurred only an hour before. Depending on how long ago the day was, any particular event may have completely disappeared, depending on how memorable the event was. Thus some details may be recalled perfectly and others will be entirely missing.\n\n(Base 10, +1 Touch, +2 Sun)"
+    }
+
+    #t9486f47c812c6db142f1ea ^"Ear of Truth" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "30"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Hearing"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "The caster can tell if he is hearing the truth or not. If a speaker’s Magic Resistance blocks the enhanced sense, the caster is aware of it as an absence. Many Quaesitors develop a high level of mastery of this spell and use it with the Acute Sense ability to great effect.\n\n(Base 10, +1 Conc, +3 Hearing)"
+    }
+
+    #t8de5751a0f4e4389129783 ^"Trust Me" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "20"
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Occasionally a Quaesitor may need to question mundanes directly, typically grogs and companions. This spell can be used to make the process less effort and more productive. The effect simply creates a counter-balancing force on the subject’s mind. The Gift itself is not affected in any way, only the subject’s mind is.\n\nThe spell is as powerful as *Aura of Rightful Authority*, but more subtle. The spell only acts to level the subject’s attitude to the caster, not make them obedient or unnaturally well-disposed. Since the affected person retains free will, this effect does not count as scrying. Questioning using* Aura of Rightful Authority* does count as scrying.\n\n(Base 5, +1 Eye, +2 Sun)"
+    }
+
+    #t32386c1bc117d22c54d9e7 ^"The Penitent’s Confession" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "30"
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "The target will truthfully and willingly relate his involvement in anything the magus questions him about. The subject will do his best to inform the magus as fully as possible; he will not ramble in inane detail, be overly literal or in any other way evasive. He may bring up related matters not asked about specifically if he genuinely believes it might be of interest.\n\nThis effect qualifies as scrying and causes warping, so very few magi will voluntary submit to it. Magi may allow this spell to be used on their servants however.\n\n(Base 20, +1 Eye, +1 Conc)"
+    }
+
+    #te0cd192c2c43e169f94090 ^"Aura of Inconsequence" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" STRING "25"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Sun,** T:** Spec,** Level 25** Occasionally a Quaesitor may need to conduct investigations in mundane society. Inspired by the non-Hermetic* Veil all Eyes* ritual (see below), this spell can be used to aid avoiding mundane attention. This spell can be cast on either the magus himself or an ally; this individual is the recipient. At any point during the spell’s duration, individuals enter the influence of this spell by looking at the recipient. The spell stops influencing people as soon as they look away. The spell’s target is rated at T: Structure. The Penetration of the spell should be noted when cast, as this applies throughout the duration.\n\nThis spell simply deflects casual attention away from the recipient. Unless the recipient calls attention to himself or an observer is actively watchful, people will pay him no mind. If a character has some reason to be alert they are allowed a Per + Awareness roll of 12+ to noticed the recipient. The Blatant Gift reduces the Ease Factor to 9+. If the magus takes care to be inconspicuous this Ease Factor may be increased. Quaesitors with effective com-\n\npanions often cast this spell on themselves to avoid compromising mundane investigations with their presence. However, animals still react to the magus as normal.\n\n(Base 3, +1 Touch, +2 Sun, +3 Spec)"
+    }
+
+    #t9d5e7957301a52e7df0149 ^"Tell of the Forged" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" STRING "45"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Sun,** T:** Ind,** Level 45** As* Stone Tell of the Mind that Sits*, but can be used on even metal objects. The spirit of the object will reflect its function and experience. It may have acquired traits of its owner. Precisely what level of cooperation and perceptional ability a spirit will demonstrate is up to the storyguide.\n\n(Base 30, +1 Touch, +2 Sun)"
+    }
+
+    #tee3472471e206aba9a4b53 ^"Dream of the Mind That Sits" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Sun,** T:** Ind,** Level 50 Requisite:** Creo Allows you to probe the memories of a spirit within a natural stone object. The spell also perfects those memories in the same way as *The Good Witness*. Probing the memories of such a spirit is extremely slow. A typical session lasts between six and twelve hours, during which the caster is oblivious to the outside world. The spell allows the caster to perceive the memories of the spirit. The spirit’s senses are limited and slow, but its memory of them is very long. Using this spell the caster can relive events witnessed by the spirit, as it recalls them. Larger stone objects have more powerful spirits and so have better perceptions. Precisely what level of detail an individual spirit can perceive is up to the storyguide.\n\n(Base 30, +1 Touch, +2 Sun, +1 Creo effect)"
+    }
+
+    #t7e82c81972fcaaf4374ad2 ^"Dream of the Artifice" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" STRING "50"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Sun,** T:** Ind,** Level 50** As* Dream of the Mind that Sits*, but can be used on artificial stone objects and the memories of older events will be faded. The cooperation of the spirit is not required, but as always the level of detail recalled is up to the storyguide.\n\n(Base 35, +1 Touch, +2 Sun)"
+    }
+
+    #t46b50112000d347d983d76 ^"Dream of the Forged" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" STRING "60"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Sun,** T:** Ind,** Level 60, **Ritual **Requisite:** Creo As* Dream of the Mind that Sits*, but can be used on even metal objects. The cooperation of the spirit is not required, but as always the level of detail recalled is up to the storyguide.\n\n(Base 40, +1 Touch, +2 Sun, +1 Creo effect)"
+    }
+
+    #t85b2ac8bf28dc805fccb38 ^"Restore the Faded Threads" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "Gen"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Dia"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Dia,** T:** Circle,** Level Gen** Once a trace has been found or suspected, this spell is used to make it examinable. This spell temporarily restores spell traces to a fresh state (as if they had just expired). The spell will restore spell traces of negative magnitude up to the magnitude of this spell –1. The trace must still be existent to be affected (magnitude –9 or greater). Thus the maximum effective level of this spell is 50.\n\nVersions of this spell also exist for all standard Targets. Diameter duration is normally long enough to conduct Intellego Vim investigations of the spell traces.\n\n(Base, +1 Touch, +1 Dia)"
+    }
+
+    #td6e55cb6a9e87829503bd0 ^"Bitter Taste of Betrayal" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "15"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Taste"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "If the caster comes under the affect of any active magic he will experience a bitter taste in his mouth. Ongoing affects like *Aegis of the Hearth* can be ignored, new affects will be noticed. This spell allows Quaesitors to detect that their Parma has been penetrated. The spell provides no other information.\n\n(Base 5, +2 Sun)"
+    }
+
+    #tb2a1f4886d44e9542aea0e ^"Impression of the Faded Sigil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "30"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Touch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell allows the magus to examine magic of positive magnitude. If more than one effect trace is present on the touched object, the magus can identify one per casting. In the case of Hermetic effects, this spell gives the Technique and Form, the rough details of the effect and the casting sigil of wizard responsible. It can also detect if a Hermetic effect was generated by a spell or invested device. If the effect was non-Hermetic, similar information is provided, but a Quaesitor without knowledge of that sort of magic may not be able to interpret it.\n\nThis spell is commonly mastered and combined with Quaesitorial training gives a good chance to detect magical deceptions.\n\n(Base 10, +1 Touch, +3 Details)"
+    }
+
+    #t8e4c3a0c743285d532180c ^"Odor of Lingering Magic" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "30"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Smell"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell allows the magus to smell active magic or traces of –1 magnitude or more. With time and patience, all active spells and fresh traces can be located. Once located other magics can be used to refresh and investigate them.\n\nIncreasing the magnitude of this basic design allows negative magnitude traces to be seen. The highest nonritual version (Level 50) allows traces of –5 magnitude to be discovered. However, to detect a –9 magnitude trace requires a Level 70 ritual.\n\n(Base 15, +1 Conc, +2 Vision)"
+    }
+
+    #t381dc79ea2aa2175e519ad ^"Sight of the Sigil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "50"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Used by the most experienced Quaesitors, this spell allows the magus to spot active magic or traces of positive magnitude. In the case of Hermetic effects, this spell gives the Technique and Form, the rough details of the effect and the casting sigil of wizard responsible. It can also detect if a Hermetic effect was generated by a spell or invested device. If the effect was non-Hermetic, similar\n\n(Base 10, +1 Conc, +4 Vision, +3 Details)"
+    }
+
+    #t97f7ab90205814ab722fec ^"Circle of Clarity" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "Gen"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Mom,** T:** Circle,** Level Gen** This spell will dispel any active Vim effect within the circle whose Casting Total was less than or equal to the spell level + 15 + stress die (no botch).\n\n(Base, +1 Touch)"
+    }
+
+    #t52eec68a67f4b5ec9c6305 ^"Cutting the Cords" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" STRING "Gen"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "ouch"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION ")\n\n**R:** Touch,** D:** Mom,** T:** Ind,** Level Gen, **Ritual Used as a Tribunal punishment, this spell requires the active cooperation of the convicted magus. The cords connecting magus and familiar are cut permanently if double the level of this spell – 5 + a stress die (no botch), exceeds the highest enchantment given the familiar (this may be the Familiar Bond Enchantment). This is an extremely painful and emotionally scarring experience for both parties. After the cords have been cut, both magus and former familiar find each other’s presence too much to bear. A familiar normally flees into the wilderness and avoids all future contact with magi. The former familiar cannot normally be rebound."
+    }
+
+    #t6ab446498ca1df215880d6 ^"Greater Rituals" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "These rituals take a whole season to enact. Treat as a lab activity in terms of time commitment.\n\nAs can be imagined these rituals are not cast casually, and in fact some have never been. Only experienced Guernicus magi are ever taught them or know their details. Should the Primus send word, participants should make their way to Magvillus with all speed. At Magvillus special rituals chambers are set up in constant readiness.\n\nIt should be noted that there is no proof these rituals work at all."
+    }
+
+    #t07687456e807867eb941d6 ^"Curse of Thoth" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Greater" FIXED
+            ^"Technique and Form" STRING "PeVi"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Spec"
+            ^"Ease Factor" STRING "78"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell curses another magical group with misfortune. The final act of casting involves the blood sacrifice of a member of the group to be cursed. If successful, each member of the target group is tested for resistance. If the spell penetrates, the victim must always count as stressed on all magical rolls and doubles any botch dice. They also gain the Twilight Prone flaw (or equivalent for non-Hermetics) for the duration.\n\n**Ease Factor: **78"
+    }
+
+    #t24922e7c2e595a0f812a2d ^"Curse of Mars" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Greater" FIXED
+            ^"Range" STRING "eMe"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Spec"
+            ^"Ease Factor" STRING "78"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell curses a nation to internal strife. The final act of casting involves the blood sacrifice of a nobleman of the cursed nation. If successful, each noble in the target nation is tested for resistance. If the spell penetrates the victim is inclined to instigate or support a civil war. If a lieutenant in an army, an affected noble will be more inclined to act in a short-sighted, self-interested and tactically inappropriate way."
+    }
+
+    #tfefdb314984bca946fa277 ^"Call for Justice" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Greater" FIXED
+            ^"Technique and Form" STRING "ReVi"
+            ^"Range" STRING "eVi"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Ease Factor" STRING "78"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell calls on Nemesis herself to deliver justice to a criminal. If the call is unjust Nemesis will punish those who made the call. Nemesis is known best for her hatred of immoderation. She strives to re-establishing order and proportion by punishing excesses of pride and undeserved fortune. She is merciless to unjust men of violence. As this ritual has never been attempted, what exactly would happen is an open question. Given that the other greater rituals target large groups, it is expected to be highly effective.\n\nNemesis is thought to be an entity of the magic realm. If she physically manifested in Mythic Europe she would equal or exceed the most powerful magical or faerie beings normally present. Even the most powerful Hermetic magus would be in serious peril. However, it is\n\nmore likely that she would manipulate the strands of fate to bring ruin to her subject.\n\nHowever, if this ritual is enacted, the participants had better be totally sure Nemesis will agree with their judgment.\n\n**Ease Factor: **78"
+    }
+
+    #t06599b300fae2efc3de6c1 ^"Lesser Rituals" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Unlike the greater rituals these see occasional use, although the costs are still prohibitive. They are known to have real effects. Again, only Guernicus magi are taught these rituals.\n\nAll these rituals take five minutes for each point of Ease Factor to cast. Those below are only a selection; there may be more at the storyguide’s discretion."
+    }
+
+    #tcdba920eea6b2202516541 ^"Wisdom of Athena" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Lesser" FIXED
+            ^"Technique and Form" STRING "CrMe"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Ease Factor" STRING "12"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Allows the ritual leader a +5 bonus to all Folk Ken, Intrigue and Awareness tests. This effect approaches a mythic level of perception. At the storyguide’s discretion a character under the effect of these spell can spot the most subtle clues. As the effect acts only on the beneficiary it cannot be magically resisted.\n\n**Ease Factor: **12"
+    }
+
+    #t0bb058a4db06dc76385bb4 ^"Sight of Alatheia" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Lesser" FIXED
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Ease Factor" STRING "12"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Gives ritual leader the equivalent of the Second Sight ability with a score of 5 for the duration. If the beneficiary already has the Second Sight ability, they gain a +5 bonus to all Second Sight rolls for the duration. This effect functions exactly like Second Sight, particularly with respect to Magic Resistance."
+    }
+
+    #t89f5e4c3e628f658e58b93 ^"Veil All Eyes" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Lesser" FIXED
+            ^"Technique and Form" STRING "ReMe"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "ouch"
+            ^"Ease Factor" STRING "18"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "D:** Moon,** T:** Spec Allows the ritual participants to pass unnoticed. A beneficiary will be ignored by everyone who sees him unless he is directly threatening. Even if noticed, people will tend to forget the encounter, particularly details of the subject. Affected people retain the sense not to walk into a subject; they know he is there, but his presence is otherwise beneath attention. In effect the subject is mentally invisible to those about him. The effect’s Penetration should be noted as it applies throughout the effect’s duration.\n\n**Ease Factor: **18"
+    }
+
+    #tdc407bf7b8924065709ed0 ^"The Oath of Truth" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Lesser" FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Spec"
+            ^"Target" STRING "Ind"
+            ^"Ease Factor" STRING "18"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This ritual can only be cast on a willing subject. At the end of the ritual, the participants link hands to form a circle around the subject. The ritual leader asks the subject to swear to tell the truth in an upcoming trial. The ritual ends when the target agrees (presumably). Dire consequences will follow if this oath is broken (death or worse). This effect resists dispelling as a 60th level spell, but seeking to dispel the effect counts as breaking the oath. As a non-Hermetic spell, most magi would not be familiar enough with it to design specific counter-magics. Since the effect is passive until triggered, there is no warping."
+    }
+
+    #ta565b670addc6740b43fd6 ^"The Will of Alatheia" DEF {
+        EXTENDS ^"Fenicil Ritual"
+        PROPERTIES {
+            ^"Scale" STRING "Lesser" FIXED
+            ^"Technique and Form" STRING "PeCo"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Spec"
+            ^"Target" STRING "Ind"
+            ^"Ease Factor" STRING "24"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell can only be cast on a willing subject. Near the end of the ritual, the participants link hands to form a circle around the subject. The ritual leader asks the subject to swear to avoid a specific action. The ritual ends when the target agrees (presumably). Dire consequences will follow if this oath is ever broken (normally death or worse). Even considering breaking the oath causes nausea. This effect lasts indefinitely and resists dispelling as a 80th level spell; seeking to dispel the effect counts as breaking the oath. As a non-Hermetic spell, most magi would not be familiar enough with it to design specific counter-magics. Since the effect is passive until triggered, there is no warping.\n\nThis ritual is occasional used as a Tribunal punishment. However, it is seen as heavy-handed and is only used in extreme cases.\n\n**Ease Factor: **24"
+    }
+
+    #t611052741120fbf39f3679 ^"Fenicil’s Rituals" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "These rituals are still largely Mercurian or pre-Mercurian in nature. Although a Technique and Form has been given, these Hermetic Arts are not involved in the casting or learning of these rituals. The Form is relevant only for the purpose of any Magic Resistance. The Ease Factor is used for casting, calculating the Penetration and determining vis cost. The Ease Factor does not relate to any Hermetic guideline and is only vaguely linked to the power of the effect. Characters with the Unstructured Caster flaw cannot learn these rituals at all.\n\nEach ritual is learnt like a Hermetic spell from a teacher. No lab total is required, but each requires a whole season. Like Hermetic spells, the ritual has an associated Ability that can be developed; this Ability is critical to successful casting. Like Hermetic rituals, mastery Ability can be gained and developed via practice. The magus practices parts of the ritual, becomes familiarized with the details and contemplates the subtleties. This process requires no vis or risk. There are also books on these Abilities; they are kept at Fenicil’s library within Magvillus.\n\nIt is practically impossible for an individual to cast the more powerful rituals; a large group needs to gather in order to generate the effect. Before starting, the group needs to cast *Wizard’s Communion* spells with a combined magnitude equal to the Ease Factor of the ritual.\n\nThe Casting Total for these rituals is:\n\n**Sta + [Sum of Ability Scores] + Aura Modifier **\n\n**+ Die Roll**\n\nThis roll is made by the ritual leader. If the Ease Factor is not met, the effect fails. However, the slow, methodical method of casting is quite safe. Unless stressed or disrupted there are no botch die.\n\nAs well as requiring many magi, these rituals are fantastically slow to cast and prodigious in their consumption of vis. Each ritual requires a number of pawns of vis equal to its Ease Factor. Half this vis can be substituted with expensive, exotic, and meticulously prepared materials. These materials cost a pound of silver for each pawn substituted and the materials need to be prepared in a season’s laboratory activity. The Mercurian Magic virtue may act to half the vis and material costs, but all the participants need to have the virtue (rare for Guernicus magi).\n\nThe advantage of these rituals is that they often generate an effect Hermetic magic would find difficult or impossible; otherwise they would be made Hermetic."
+    }
+
+}

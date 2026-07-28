@@ -1,0 +1,42 @@
+EXTENSION "ArM5_HoH_MysteryCults_Merinita_Tables" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Mystery Cults - House Merinita tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_Houses_Mystery_Cults_Core_Ext"
+
+    # Sidebar tables whose column header the source tiers as a heading, so the
+    # extractor emits the rows as prose. Column sets read off the printed page; each
+    # TABLE keeps the source's own heading as its name, and the box's non-row prose
+    # rides with it so nothing is dropped.
+
+    #tb818743288dcec94ebcb1c ^"Recurring Spells" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Frequency", "Magnitudes"]
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        TABLE {
+            "minute" "+5"
+            "day" "+4"
+            "month" "+3"
+            "year" "+2"
+            "decade" "+1"
+        }
+        DESCRIPTION "Use the frequency that most closely matches how often the spell recurs, rounding up to the next greater magnitude. For example, a spell that recurs every ten minutes adds five magnitudes. Spells cannot recur more often than once per minute."
+    }
+
+    #t695c3bab82886c72244369 ^"Area Size Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Size", "Area", "Example"]
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        TABLE {
+            "+1" "One pace in diameter" "A well or spring"
+            "+2" "Ten paces in diameter" "A great boulder"
+            "+3" "100 paces in diameter" "A grove of trees"
+            "+4" "1,000 paces in diameter" "A frozen plain"
+            "+5" "10,000 paces in diameter" "The North Wind"
+        }
+    }
+
+}

@@ -1,0 +1,171 @@
+EXTENSION "ArM5_HoH_Societates_Agencies" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Societates - Appendix: Agencies"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Houses_Societates_Core_Ext"
+
+    # The Agencies appendix: the system for recruiting, using and maintaining
+    # agents. It is rules end to end, so its sections are records rather than
+    # narrative, and its tables are structured TABLE DEFs named with the source's
+    # own headings. Column sets were read off the rendered pages (risk class R5) --
+    # the raw grids interleave three sub-tables per box.
+
+    #tdd7f4133f415e12ab3e992 ^"Appendix: Agencies" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Magi often maintain networks of mundane contacts, which they call agencies. Agents pursue the goals of the magus while ensuring that he cannot be implicated in meddling with mundane politics. The following sections describe how agents may be recruited, used, and managed.\n\nA character controlling an agency is called its **principal**, in this chapter. Principals need not be magi, and the rules presented here are suitable for companion characters as well as magi; however, the focus of this book is the Houses of the Order, and so the material here is biased towards magi as principals.\n\nAn **agent** is a person bound to offer assistance to a principal. They may be bound by feudal ties, legal contracts, emotional debts, social obligations, or blackmail. Assistance may take many forms, including providing information, using special skills as directed, controlling other people, or completing tasks. A character paid to do his normal job, or convinced to perform a service during play, is not an agent. Much of the work of agents occurs between stories, unobserved by player characters."
+    }
+
+    #t038a4b3fc3d359111a4b5a ^"Agents are Directly Controlled" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Charismatic principals or those skilled at manipulating others may directly control many agents. If the principal attempts to control more agents than the maximum provided by the formula below, he is subject to problems among his agents due to his inability to manage such a large agency effectively. The result is that stories are incurred (see Maintaining Agents, below), and the principal must let some of his\n\nagents go (or recruit a factor, see below) to cope. The characters of other players may be part of an agency, but are not included in this total. A character can always control one agent, no matter how poor his social skills or what the penalty of his Gift.\n\n**Maximum Number of Agents: [2 x **\n\n**(Presence + Intrigue ***or*** Leadership – social penalty of The Gift)], minimum 1**"
+    }
+
+    #t68ad716f6abcd6d41179e3 ^"Agents Act as Intermediaries" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "than most agents, and it is often convenient for another player to run the factor as a grog or companion character. If this option is not taken, the storyguide will have to determine his relevant statistics, and how these change over time.\n\nMost of the people commanded through an agency are not directly controlled by the principal: they are controlled by one of the principal’s agents. For example, a mercenary leader, who is directly controlled, has a band of cutthroat followers, whom he controls. These additional people are treated as resources, not agents. They do not count toward the principal’s total number of agents, and do not incur stories of their own (see Maintaining Agents, below).\n\nAn agent employed to control an entire agency on behalf of a magus is called a **factor**. Magi with weak Leadership, poor Presence, or the Blatant Gift often employ the single agent they are permitted as a factor.\n\nIndirectly controlled people serve a useful role under Hermetic law. They enable magi to influence events without the use of magic, and with no mundanely discernable connection between the magus’s instructions and their outcomes. A factor recruits and uses agents on behalf of his principal, and the factor’s Characteristics and Abilities are used in all totals detailed below. Factors usually require more mechanical detail"
+    }
+
+    #tee4d02b186e6b39456d72f ^"Designing Agents" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "It is not necessary for players to design the character sheets of their characters’ agents, but a handful of statistics are required, to quantify the usefulness of each agent. Each agent should have:\n\n• A name • A Social Status Virtue or Flaw • A Bond , which is a Personality Trait that expresses the reason that the agent is subordinate to the principal • A list of resources useful to the principal, like Abilities, wealth, social influence, or membership in a social circle\n\n*Example: Carolus has many agents drawn from the criminal underworld of a large city. His player Mark details two of these contacts as follows:*\n\n*Aelfric: Outlaw Leader; Bond: Loyal to Carolus +1. Aelfric runs a small team of bandits who occasionally prey on local merchants. Carolus has protected them thus far from the law, and Aelfric owes him a modicum of loyalty. *\n\n*Godfroi: Merchant; Temporal Influence; Bond: Fear of Carolus +2. Godfroi handles stolen goods, and Carolus supplies him with merchandise. Godfroi is influential in local government, and the Merchant Guild.*\n\nAgents may be controlled by principals they consider their inferiors only through coercion. A principal who recruits an agent of higher social standing acquires the effects\n\nof the Difficult Underlings Story Flaw for dealings with this character, to represent the attempts of the agent to win free from the controlling influence of the principal. The coercion of the agent is represented by a Flaw (such as Blackmail, Dark Secret, and so forth). Thus, a merchant may control a bishop through financial favors, but the bishop hates it. A priest may control a knight with blackmail, but the knight loathes him for it. The exception to this rule is magi, who stand outside the social hierarchy of Mythic Europe and can potentially recruit any individuals they meet as their agents. This problem with social standing is why many magi prefer to deal with their agents directly rather than employing a factor, who often have low social status."
+    }
+
+    #tcc675e4779ed17b04452f4 ^"Recruiting Agents at Character Creation" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Some Virtues and Flaws give characters agencies prior to play. These include Social Contacts, Mercenary Captain, Outlaw Leader, Close Family Ties, and Landed Noble. An agency acquired in this way is created by selecting agents from the Resistance of Agents Table, then paying **agency points** for each equal to the desired Bond Strength plus the Resistance Strength from the table. The player has 12 agency points to spend. Every agent must cost at least 1 point, and have a Bond score of at least +1."
+    }
+
+    #t4180d24a20669efa75ab38 ^"Recruited Agents as Story Rewards" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "be used to strengthen the Bond of agents the magus already has, as described under Maintaining Agents, below.\n\nTo recruit an agent during a story, the player determines the sort of person she wishes to add to her character’s agency. The potential agent may be someone who the character has already met, or she may need to actively seek an appropriate person. The principal must make a favorable impression on the potential agent at some point during the story; note that “favorable” in this context means favorable to the principal. A character who thoroughly intimidates a target can still make a favorable impression!\n\nAn agency can also be inherited from another principal, as the result of story events. This must be done with the collaboration of the previous principal. The new principal must impress each agent in turn, as above, but the Bond Strength between the agent and the previous principal adds to the Ease Factor of this roll . If this roll fails, then the agent refuses to transfer his loyalty and leaves the agency, perhaps taking whatever resources he can lay his hands upon. If the roll succeeds, each agent’s Bond Strength is maintained at the former score by the new principal, but its description may change. A knight who serves a widowed noblewoman because he loves her, for example, may change his bond from Love to Loyalty when the agency passes to her son. A character who Feared the old principal may feel Gratitude toward the new one. Hostile takeovers are not usually possible; instead, each agent must be recruited in the normal fashion. As soon as the agent’s Resistance reaches zero then loyalty is transferred to the new principal.\n\nIf this roll fails, then the principal cannot try to recruit this agent; the magus repels the character with her personality, or her suggested threats hold insufficient force to be taken seriously. The magus can try again after another story involving an interaction between the two characters.\n\n**Impressing a Potential Agent: **\n\n**Presence + Leadership – social penalty of The Gift + stress die vs. Ease Factor 6**\n\nHaving identified and impressed the contact, the player must then initiate story events that cajole, persuade, or force her target to form a Bond with the character. At the end of each story, players are given Adventure experience. They spend this normally, but are given an equal number of **agency experience points** for recruiting those whom they have assisted during that story. Even if the player decides not to take experience from that adventure (in favor of other forms of advancement), these agency experience points are still available.\n\nAgents can also be given by the storyguide as rewards for skilled play. Some story events offer immediate Bonds. For example, if characters save the life of a student, he might feel gratitude sufficient to form a Bond. Agents cannot be purchased with money or vis. These would be hirelings, which are detailed in *Covenants*.\n\nTo begin the process of recruiting an agent, calculate the initial Resistance Strength of that character, then apply the agency experience points to this score. It takes the current value of a given Resistance Strength in agency experience points to decrease that strength by one. Thus, five points reduce a Resistance Strength statistic of +5 to +4. A particularly effective agent, with a strong Bond, may take several stories to cultivate. Once a character’s Resistance is reduced to zero, he becomes an agent, although the principal must develop a Bond Strength of at least +1 to call upon him for information or assistance. Agency experience points can also"
+    }
+
+    #t6f0888291f99709fbe7a3e ^"Using Agents" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "A magus uses his agents by setting one or more of them a task. Agents must, at the discretion of the troupe, have the skill and opportunity required to fulfill the principal’s request, and the agent must have a Bond Strength of at least +1. The player of the principal then makes the following roll to determine if the agent agrees to perform the requested action:\n\n**Persuasion Roll: Communication + **\n\n**Charm, Intrigue, or Leadership + Bond **\n\n**Strength – social penalty of The Gift + stress die vs. Ease Factor (see table **\n\n**under Tasks for Agents)**\n\nAssuming the agent accepts the task, the storyguide may choose to resolve the task with a die roll against an appropriate Ability of the agent’s (using the Easy, Hard, or Impressive Ease Factor from the Tasks for Agents insert). Alternatively, the storyguide can run a side story, with the player taking on the character of the agent, and other players taking on antagonistic roles. This latter suggestion can prove disruptive to troupe-style play, and should only be used for important plot exposition. All agents are assumed to have contacts, which they use without prompting, to fulfill requests from the principal.\n\nThe most common use for an agent is as a source of **information**; well-placed agents in the right places can feed back useful information to their principals almost passively with little effort. The agent may also be used in an active manner, seeking a specific piece of information, at possible risk and/or cost to themselves. It must be possible that an agent knows the requested information, or can obtain it with minor effort. If this is not true, then the character is asking for assistance from her agent (see below), rather than information.\n\ntive must be good, for time is valuable. Agents with Social Status Flaws might be unavailable for long periods of time as they hide from the authorities or spend time in jail (see Confounding Factors, below).\n\nA principal should not ask for substantial information from each of her contacts more than once per season, else the contact considers the principal an unwelcome burden and looks for ways to loosen her hold. Of course, this restriction does not apply to simple gossip, scuttlebutt, or general information known to many people, just to information which is sensitive, or to which the contact is privy and has intrinsic value.\n\nAgents may also be called upon for **assistance**. By cashing in past favors, or applying pressure or incentive on an agent, a principal can induce that contact to use his individual skills or knowledge in the service of his employer. Once again, the assistance requested must be appropriate to the agent — a priest cannot be asked to break into a castle at night to steal a lock of hair from the duke’s daughter; this is a task for a criminal practiced in stealth and climbing. Most characters have only two “free” seasons a year, and since this time is spread throughout the year rather than occurring in discrete blocks, an agent cannot always spare the time. Characters with Social Status Virtues may have more time to devote to their principal, but the incen-\n\n*Example: Carolus needs to borrow the signet ring of a mayor, which he intends to enchant with a minor effect. He therefore approaches Tom the Cutpurse, one of his agents with a Bond of Gratitude +3. The favor he is asking is a hard task that incurs moderate risk to Tom, so Mark (Carolus’s player) needs a persuasion roll of 9 or more to persuade his agent to do this favor.*\n\n*Assuming this roll is successful (probably through the expenditure of Confidence Points), to resolve the theft itself the storyguide pits Tom’s Dexterity + Legerdemain against an Ease Factor of 12, on a stress die with three botch dice. If this succeeds, Carolus will need Tom’s services again in a season’s time to replace the ring.*"
+    }
+
+    #td6887a41585d9a40532b7f ^"Confounding Situations" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "requests, and a Major Flaw should be about twice as inhibiting.\n\nA character who begins play with an agency due to a Virtue or Flaw may take the Story Flaw Difficult Underlings to represent a fractured relationship with his agents, in which case it applies to all agents. As mentioned above, when this Flaw is gained when a non-magus recruits an agent of higher social standing than himself, its effects apply only to the agents of higher social status.\n\nAn agent who has a Flaw listed in the Resistance of Agents insert is not always available to his principal. These Flaws will not always come into play, but the storyguide should ensure that they do limit the usefulness of that character to the principal under certain circumstances, and a Major Flaw should be more problematic to circumvent than a Minor Flaw. As a guide, an agent with a Minor Flaw might be unable to help his principal once out of every four"
+    }
+
+    #tf6b986c835cca9b54be1d6 ^"Maintaining Agents" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Agencies are not static things. Death is an inevitable part of life in Mythic Europe, and agents may be lost due to story events or to events outside the control of the principal. Having an agency is therefore similar to having a Story Flaw, in that characters who possess them may find themselves having to become involved in stories to maintain them. For example:\n\n• An agent who is regularly pressed for sensitive information may acquire a reputation as a snitch, which will reduce his overall effectiveness. • An agent recruited through blackmail might call the bluff of a principal. • An agent might be accused of a crime that will result in his death if he is found guilty.\n\n• An agent might die, but his brother or son might seek the same deal with his principal.\n\nDepending upon how these stories are resolved, the Bond Strength of the agent involved might decline by one or more\n\npoints, and should a Bond Strength decline below zero, the agent ceases to work for the principal. Bond Strengths can only\n\nincrease through active participation of the principal, and there are two main methods: favors and money.\n\nexperience points are applied directly to the strength of the Bond, using the same progression as Arts on the Advancement Table (ArM5, page 31). Such stories can focus heavily on one character, so the storyguide may wish to conduct these stories separately from the main game night, or involve the other players as antagonists (or even protagonists).\n\n**Favors **are an effective way of cultivating an agent and increasing his Bond Strength. The player of the principal must conceive a way in which her character can assist the agent, perhaps with advice from the storyguide. Once the story has been played out, the storyguide awards Adventure experience points in the usual fashion, and an equal number of agency\n\n*Example: Bandits are regularly stealing Godfroi’s supplies, so Carolus uses mind-reading spells to find out which of the merchant’s employees *\n\n*has been selling the caravan’s routes to the bandits, and then arranges an ambush. This earns the magus three Adventure experience points. The magus spends the three points normally, but the ruthless manner in which he dealt with the issue has also earned three agency experience points toward Godfroi’s Bond Strength, which is enough to raise his Fear (Carolus) +2 to +3.*\n\n**Money** can be used to increase the Bond Strength of an agent, but agents are not generally employees, and only so much loyalty can be bought. To certain types of agents, this might seem suspiciously like bribery, and a principal must tread lightly if he has such individuals as part of his agency. One Mythic Pound’s worth of material goods can take the place of 5 agency experience points (or 4 shillings per point) without need for a story. The exchange rate of money for agency points may vary according to the wealth of the agent: for example, hard cash might be twice as effective for an impoverished agent, but half as effective for a rich one. However, Bond Strength can never rise above +3 by the application of money. If using the Wealth and Poverty rules from *Covenants* (see Chapter 5: Wealth and Poverty), a troupe may wish to impose a regular minor upkeep cost for agents; it is suggested that 10 points of Bond Strength divided between one or more agents incur the same cost to maintain as a single nonspecialist servant of the covenant."
+    }
+
+    #t36b7922547cf65d4411863 ^"Social Status Resistance Examples" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Social Status", "Resistance", "Examples"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Major Social Virtue" "3" "Landed Noble*, Magister et Artibus, Redcap"
+            "Minor Social Virtue" "1" "Clerk, Custos, Failed Apprentice, Gentleman/woman, Knight, Mendicant Friar, Mercenary Captain*, Priest, Wise One"
+            "Free Social Virtue (except Hermetic Magus)" "0" "Covenfolk, Craftsman, Merchant, Peasant, Wanderer"
+            "Minor Social Status Flaws" "–1" "Branded Criminal, Outcast, Outlaw Leader*"
+            "Major Social Status Flaws" "–3" "Outlaw, Outsider"
+        }
+    }
+
+    #t4227dcec17f7b694e01162 ^"Circumstance Modifier Examples" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Circumstance", "Modifier", "Examples"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Major Flaws likely to inconvenience principal" "–3" "Enemies, Feud, Lycanthrope, Plagued by Supernatural Entity"
+            "Minor Flaws likely to inconvenience principal" "–1" "Black Sheep, Dark Secret, Dependant, Diabolic Past, Favors, Infamous"
+            "Minor Flaw used by the player character to dominate agent" "–6*" "Principal has hostage (Dependent or True Love), is Blackmailing using Dark Secret, Diabolic Past, or other leverage (Blackmail)"
+        }
+    }
+
+    #t992c3a703e3cc8dfa1710c ^"Resource Modifier Examples" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Resource", "Modifier", "Examples"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Extraordinary skill: Main Ability score is 6 or more" "+1" ""
+            "Exceptional skill: Main ability score 8 or more" "+3" ""
+            "Minor General or Supernatural Virtue" "+1" "Gossip, Magic Sensitivity, Protection, Skinchanger, Social Contacts, Temporal Influence"
+            "Major General or Supernatural Virtue" "+3" "Entrancement, True Faith, Wealthy"
+            "Serves Rival Covenant" "+9" ""
+            "Underlings" "+1" "Up to a half-dozen people, including agents and hirelings"
+            "Many Underlings" "+3" "Up to two dozen people, including agents and hirelings"
+            "Useful Minor Flaw" "+1" "Busybody, Faerie Friend, Magical Animal Companion, Mentor"
+            "Has more than three resources in this list" "+6" ""
+            "Has more than six resources in this list" "+9" ""
+        }
+    }
+
+    #tab610038c726cf419734d0 ^"Task Ease Factor for Persuasion Roll" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Task", "Ease Factor for Persuasion Roll", "Example"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Provide common information, which is easily obtained" "3" "Relay what the gossips are saying about yesterday’s events in the town square"
+            "Provide sensitive information, which is difficult to obtain" "6" "Discover the address of the bishop’s mistress"
+            "Provide secret information, known to a select few" "9" "Uncover which other nobles are members of the duke’s diabolic cabal"
+            "Perform an Easy task (Ease Factor 6)" "3" "Persuade a merchant to give passage to a magus with The Blatant Gift"
+            "Perform a Hard task (Ease Factor 12)" "6" "Steal a ring from a lady’s finger"
+            "Perform an Impressive task (Ease Factor 18)" "9" "Arrange a fatal accident for the prince"
+        }
+    }
+
+    #t77bc44a62ba81d6d256c37 ^"Timeframe Modifer" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Timeframe", "Modifer"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Within a few weeks" "+0"
+            "Within a few days" "+1"
+            "Within a day" "+3"
+        }
+    }
+
+    #tfb0af616a7a5945ca71223 ^"Personal Risk Modifier Example" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Personal Risk", "Modifier", "Example"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "No risk to self (simple die)" "+0" "Deliver a package to a merchant"
+            "Risk of embarrassment or reputation (attempt requires a stress die, 1 botch die)" "+1" "Deliver a prostitute to a merchant"
+            "Risk of injury or imprisonment (attempt requires a stress die, 3 botch dice)" "+3" "Deliver a threat to a rich merchant"
+            "Risk of death (attempt requires a stress die, 5 botch dice)" "+6" "Deliver a threat to the bishop, in his own palace"
+        }
+    }
+
+}

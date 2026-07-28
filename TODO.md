@@ -14,16 +14,16 @@ extraction defect is RESOLVED.
 Both cores + all 5 supplements now fully 0.5-compliant: validator arm5e 104/0/0 + armdef 41/0/0,
 references 0 hashless both, constructs 0 err, **all 6 arm5e coverage gates + armdef PASS**. The
 five supplements' previously-deferred "sidebars-only" gap (217 Text Boxes) was **backfilled**
-(owner call): verbatim GUIDANCE + structured TABLE DEFs in new `*-0.4-sidebars.ttrpg`. Grogs
+(owner call): verbatim GUIDANCE + structured TABLE DEFs in new `*-0.5-sidebars.ttrpg`. Grogs
 editorial records → GUIDANCE. Full hashless disambiguation done (owner-reviewed per cluster).
 Core 0.5.1: consolidated duplicate `^"Damage Table"` / `^"Advancement Table"` DEFs; Houses
-restructured (mechanical DEF + verbatim `arm5e-0.4-houses.lore`, OoH dup DEFs dropped).
+restructured (mechanical DEF + verbatim `arm5e-0.5-houses.lore`, OoH dup DEFs dropped).
 Committed/pushed: arm5e `8051006`, mastra `234bb21`, dsl `df12989`. **Live state-of-record now
 lives in `titterpig-dsl/DSL-0.5-worklog.md`** — the sections below are pre-2026-07-27 history.
 
 ### FUTURE PASS — apply the Houses-restructure pattern to other long-DESCRIPTION core records
 The Houses restructure split each `^"House X"` into a **mechanical DEF** (`EXTENDS "Hermetic
-House"` + PROPERTIES) plus **verbatim narrative in `.lore`** (`arm5e-0.4-houses.lore`, pointing
+House"` + PROPERTIES) plus **verbatim narrative in `.lore`** (`arm5e-0.5-houses.lore`, pointing
 back to the DEF). Other core records that carry long narrative prose inside a DEF `DESCRIPTION`
 are candidates for the same treatment (mechanics stay structured; story → `.lore`, mirror not
 duplicate). Not yet surveyed — a future pass could `grep` for oversized `DESCRIPTION` bodies on

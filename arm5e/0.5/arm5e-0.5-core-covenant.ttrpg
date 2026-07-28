@@ -1,0 +1,40 @@
+BASE "ArM5_Core_Covenant" {
+    NAME "Ars Magica Fifth Edition - Covenant (core types)"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-24"
+
+    # Base types for Chapter Six (arm5e-0.5-covenants.ttrpg): the covenant
+    # itself, its Boons and Hooks, and the build-point resource categories.
+
+    #tMql8hzM4bv6ng0WYA6N9VrH ^"Covenant" DEF {
+        PROPERTIES {
+            ^"Aura" INTEGER MIN 0
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tWz08H40XIFI8HYJLjvKVjxa ^"Covenant Boon" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #t5zTycnLMd14Nt4eLJ965o2y ^"Covenant Hook" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tV54XgN4YfJwz3nVkUtYZnMN ^"Covenant Resource" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Build Points" INTEGER
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

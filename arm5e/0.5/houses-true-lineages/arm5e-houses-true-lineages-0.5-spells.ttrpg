@@ -1,0 +1,26 @@
+EXTENSION "ArM5_HoH_True_Lineages_Spells" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: True Lineages - New Spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    # New Hermetic spells printed in Houses of Hermes: True Lineages. They fit the
+    # core ^"Formulaic Spell" shape unchanged. Chapter One contributes one, printed
+    # inside Glaucon's stat-block sidebar on page 14 under NEW INTELLEGO MENTEM SPELL.
+
+    #tcf87565c3456bd5cea82aa ^"Reveal the Lingering Spirit" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "**R:** Per,** D:** Conc,** T:** Vision,** Level 20** This spell allows you to see invisible ghosts. If the spell penetrates the ghost’s magic resistance, you can see it. This spell does not force the ghost to become visible to others.\n\n(Base 3, +1 Conc, +4 Vision)"
+    }
+
+}

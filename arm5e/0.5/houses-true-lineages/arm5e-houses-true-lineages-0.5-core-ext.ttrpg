@@ -21,11 +21,65 @@ EXTENSION "ArM5_Houses_True_Lineages_Core_Ext" {
     #     Tremere new spells fit the core ^"Hermetic Spell" shape unchanged.
     #   - Narrative. The House histories, organization, customs, and the Code of
     #     Hermes discussion are prose → the .lore files; their in-chapter
-    #     headings are matched by .lore basename and dispositioned in coverage.
+    #     headings are dispositioned in coverage (a .lore contributes only its
+    #     own basename to the entity set — verified against coverageAudit).
     #
     # House-specific SYSTEMS this book introduces (House Acclaim & folios for
     # Bonisagus; the Redcap network for Mercere; Certamen dueling refinements &
     # the House structure for Tremere; Quaesitorial duties for Guernicus) are
     # declared here as new types only where a core type has no place for them —
-    # added per-bucket as those systems are converted. Nothing to declare yet.
+    # added per-bucket as those systems are converted.
+
+    # ── Types introduced by Chapter One (House Bonisagus) ──────────────────
+    # Each is a named, enumerable kind the book itself distinguishes; a core
+    # type has no place for them. Instances live in the per-House .ttrpg files.
+
+    #tHoHTL05HouseUtilityTypeAA ^"House Utility" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"House" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05BreakthroughTypeAA ^"Breakthrough" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Scale" ENUM ["Minor", "Major", "Hermetic"] REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05OrigResearchStepAA ^"Original Research Step" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Order" INTEGER REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05ExampleDiscoveryAA ^"Example Discovery" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Breakthrough Scale" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05ParmaMagicaFoldAAA ^"Parma Magica Fold" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Latin Name" STRING REQUIRED
+            ^"Translation" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
+
+    #tHoHTL05ExampleCharacterAA ^"Example Character" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
+        }
+    }
 }

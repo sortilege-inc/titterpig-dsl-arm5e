@@ -1,0 +1,70 @@
+EXTENSION "ArM5_Houses_Mystery_Cults_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Mystery Cults - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Houses of Hermes: Mystery Cults is an EXTENSION on the arm5e edition,
+    # loaded alongside the core rulebook (spec S13 composition). It details four
+    # of the twelve Hermetic Houses - Bjornaer, Criamon, Merinita, Verditius -
+    # each already defined as a mechanical ^"House X" DEF in
+    # arm5e-0.5-houses.ttrpg. This book's records point at those canonical House
+    # DEFs; it does not redefine them.
+    #
+    # Not declared, deliberately, matching the True Lineages and Societates
+    # precedent: Virtues and Flaws fit the core ^"Virtue"/^"Flaw" types
+    # unchanged; spells fit ^"Formulaic Spell"; narrative goes to .lore.
+
+    # The book's signature mechanic, and one no core type holds: a ritual by
+    # which a Mystagogue Initiates a character into a Mystery Virtue. The source
+    # prints all three fields as its own bolded labels, for 18 scripts book-wide.
+    #tMCInitiationScriptTypeAAAA ^"Initiation Script" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Ease Factor" STRING
+            ^"Script Bonus" STRING
+            ^"Mystery" STRING
+            ^"House" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Mystery Cults"
+        }
+    }
+
+    # A named cult or tradition inside a House that teaches Mysteries.
+    #tMCMysteryCultTypeAAAAAAAAA ^"Mystery Cult" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Mystery Cults"
+        }
+    }
+
+    # House Bjornaer's clans and septs are mechanical: membership carries a
+    # Virtue, a political stance and its own Initiations.
+    #tMCHouseClanTypeAAAAAAAAAAA ^"House Clan" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Political Stance" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Mystery Cults"
+        }
+    }
+
+    # Carries a spell's printed stat line verbatim next to the parsed fields
+    # (decision S-11): parsing alone destroys the line's own tokens.
+    #tMCPrintedStatLineTypeAAAAA ^"Printed Stat Line" DEF {
+        APPLIES TO [^"Formulaic Spell"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Houses of Hermes: Mystery Cults"
+        }
+    }
+
+    # A named rules practice a House teaches or uses.
+    #tMCHermeticPracticeTypeAAA ^"Hermetic Practice" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Mystery Cults"
+        }
+    }
+}

@@ -1,0 +1,78 @@
+EXTENSION "ArM5_HoH_MysteryCults_Bjornaer_Tables" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Mystery Cults - House Bjornaer tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_Houses_Mystery_Cults_Core_Ext"
+
+    # Sidebar tables whose column header the source tiers as a heading, so the
+    # extractor emits the rows as prose. Column sets read off the printed page; each
+    # TABLE keeps the source's own heading as its name, and the box's non-row prose
+    # rides with it so nothing is dropped.
+
+    #ta106009487dfa8eb035ff1 ^"Examples of Mythic Blood" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Blood", "Magical Feat", "Minor Magical Focus", "Personality Flaw"]
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        TABLE {
+            "Birna" "*Form of the (Temperament) Heartbeast*" "Legendary Creatures" "Slothful"
+            "Wolf of Virtue" "Paralyze a man at R: Eye" "Wolves" "Envious"
+            "Owl of Virtue" "*Silence of the Smothered Sound*" "Ghosts" "Nocturnal"
+            "Griffin" "*Panic of the Elephant’s Mouse*" "Courage" "Reckless"
+            "Phoenix" "*Coat of Flame*, R: Touch" "Aging" "Higher Purpose"
+        }
+    }
+
+    #t02f937aadaca08af2b5bdb ^"Mental Characteristics of Creatures" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type", "Cun", "Per", "Pre", "Com"]
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        TABLE {
+            "Clawed Beast" "0" "0" "–2" "–5"
+            "Hoofed Beast" "–2" "0" "–4" "–5"
+            "Bird" "–1" "+2" "–1" "–2"
+            "Fish" "–3" "–2" "–5" "–6"
+        }
+    }
+
+    #ta96ebb925b15c855b0c95e ^"Example Physical Characteristics of Creatures" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type of Creature", "Size", "Str", "Sta", "Dex", "Qik", "Example"]
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        TABLE {
+            "Small predator" "–5" "–7" "0" "+1" "+5" "Polecat"
+            "Large predator" "–1" "0" "+3" "–1" "+1" "Lynx"
+            "Rodent" "–7" "–12" "+1" "+3" "+5" "Rat"
+            "Small herbivore" "–3" "–7" "+3" "+2" "+2" "Hare"
+            "Large herbivore" "0" "+2" "+2" "0" "+1" "Boar"
+            "Songbird" "–6" "–12" "0" "+3" "+7" "Thrush"
+            "Predatory bird" "–3" "–6" "0" "+1" "+6" "Falcon"
+            "Reptile" "–4" "–8" "+2" "+2" "+3" "Adder"
+            "Large fish" "–2" "–4" "+4" "0" "0" "Salmon"
+        }
+    }
+
+    #t28cdf7e66927cf7a64a530 ^"Natural Weapons Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Weapon", "Init", "Atk", "Dfn", "Dam"]
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        TABLE {
+            "Grapple" "0" "0" "0" "n/a"
+            "Dodge" "0" "n/a" "0" "n/a"
+            "Teeth" "0" "+3" "+1" "+1"
+            "Large Teeth" "+0" "+4" "+1" "+3"
+            "Tusks" "+0" "+4" "+2" "+5"
+            "Claw" "–1" "+2" "+3" "+2"
+            "Large Claws" "0" "+5" "+3" "+4"
+            "Horns" "+1" "+3" "–1" "+2"
+            "Large Horns/Antlers" "+2" "+3" "+2" "+3"
+            "Hooves" "+2" "+2" "+2" "+1"
+        }
+        DESCRIPTION "All natural weapons use the Brawl Ability. Strength, Load, and cost are not applicable."
+    }
+
+}

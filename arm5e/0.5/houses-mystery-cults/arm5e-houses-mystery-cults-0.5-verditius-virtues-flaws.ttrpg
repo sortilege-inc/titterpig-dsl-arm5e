@@ -1,0 +1,134 @@
+EXTENSION "ArM5_HoH_MysteryCults_Verditius_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Mystery Cults - House Verditius Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_Core_Virtue_Flaw"
+
+    # Found by evidence: a section whose first paragraph OPENS with the source's
+    # own "*Size, Category*" note, run in ahead of the body. Size and Category are
+    # classified by value, not by position; a parenthesised qualifier becomes its
+    # own field. The kind comes from the "New Virtues" / "New Flaws" heading the
+    # record sits under.
+
+    #tfbe98e57c4132849e62de4 ^"Masterpiece" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "For some benevolent reason, the magus’s parens has allowed him to keep the lesser enchanted item he made to prove himself a magus and pass his Gauntlet. This masterpiece must be a lesser enchanted item. You may design a lesser enchanted item that your character could make based on his Lab Totals at character generation, following the regular rules for construction of such a device. You ignore vis costs, as the magus’s parens provided those from his laboratory stores."
+    }
+
+    #te8089ebb561a3d54845d7f ^"Forge-Companion" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character is an unGifted craftsman attached to a Verditius magus and working for him in his lab. You receive 50 additional experience points, which you can use to raise the particular Crafts her master practices. As a member of his household, she receives protection and\n\nsupport, but she is not protected by any of the legal codes of the Order of Hermes."
+    }
+
+    #t37d1d2d25a165da33362b9 ^"Venditor" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Social"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character is a venditor, a sellingagent for a Verditius maga, bartering her goods to other interested mundane parties. He is most likely a minor noble, ousted merchant-guild master, or defrocked cleric. He may select Academic Abilities at character generation. You also receive 50 additional experience points that you can put in Bargain, Charm, Folk Ken, Guile, Intrigue, or any Living Language."
+    }
+
+    #tf9cde085c7596b1950f6c1 ^"Craft Automata" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character knows how to make automata, mechanical men and beasts. He has a score of 1 in Craft Automata. See the Major Inner Mystery Automata for details."
+    }
+
+    #tfa6e53a84dd8cec567610f ^"Spontaneous Casting Tools" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character must use casting tools to cast spontaneous spells just as he does for casting formulaic spells. He has 15 individual tools, one for each Art, which he must use in various combinations to cast spontaneous spells."
+    }
+
+    #t3a5182b8bea5ab2f05bfd5 ^"Consumed Casting Tools" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character’s casting tools are magically consumed after he uses them. It takes an hour to make a new casting tool. Regular casting tools do not allow the magus to make multiple copies of\n\nthem, so he may not stock up on casting tools. Making a casting tool for a spell that already has a casting tool erases the magical connection from the existing tool to the spell. The magus does not need a laboratory to make casting tools."
+    }
+
+    #tbd1f873eceb5f238abb2f8 ^"Bound Casting Tools" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The magus’s casting tools are so personal that they become lasting Arcane Connections to him. Regular casting tools remain as Arcane Connections for a few weeks, his last years."
+    }
+
+    #tf664d0570087d8f6987a6f ^"Hobbled" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Both of the character’s legs are severely damaged. She may not walk unless assisted by crutches or other devices, with which she can only move a mere half mile per hour. Any roll that requires moving quickly is penalized by –9. Her Dodge and other combat rolls are penalized by –6, and you roll double the normal botch dice in combat situations."
+    }
+
+    #t97666547f5ac62da6ff922 ^"Confraternity Member" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The magus is a member of one of the smaller cults of magi in House Verditius. He is eligible for his confraternity’s unique Inner Mystery and can easily find Mystagogues to lead him through the Inner Mysteries. His fellow members may occasionally ask him for assistance, which he feels obligated to provide. He may not engage in vendettas with confraternity members."
+    }
+
+    #tdc24caa5d5e311d64a3f51 ^"Grudge" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "For some reason, based on a past event, the magus holds a large grudge\n\nagainst one of his fellow Verditius magi. His feelings are so strong that they influence his lab work and extracurricular activities, although they are not strong enough to interrupt his lab work. He is constantly interested in what the other person is doing, what he is working on, and how he can outdo them."
+    }
+
+    #ta4b54d93bbc0bcc7bd41fa ^"Primogeniture Lineage" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character is in line for Primus of House Verditius. Either her parens, or her parens’s parens, is the Primus, and she is one of his descendents. She is at least three places removed from the Primus. She receives undue attention from the House, as they eye her as a prospective Primus. The other magi in the same line may also regard her poorly, hoping to somehow remove her from her heritage. Her ascension to Primus is far from guaranteed, and many events may transpire to prevent her from claiming the title. This should foster very political stories for her."
+    }
+
+    #tba24bb5cb7b1bcdcd608d7 ^"Vendetta" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The magus is engaged in one of House Verditius’ vendettas, mostly likely carrying on his parens’s vendetta against another Verditius magus. This vendetta stops just short of physical injury to him or the other. Neither of them will bring this feud to the Quaesitores, wishing to finish it themselves. The magus with whom he is feuding must be an NPC, who regularly takes some sort of action with which the character must contend."
+    }
+
+}

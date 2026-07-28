@@ -19,7 +19,7 @@ editorial records → GUIDANCE. Full hashless disambiguation done (owner-reviewe
 Core 0.5.1: consolidated duplicate `^"Damage Table"` / `^"Advancement Table"` DEFs; Houses
 restructured (mechanical DEF + verbatim `arm5e-0.5-houses.lore`, OoH dup DEFs dropped).
 Committed/pushed: arm5e `8051006`, mastra `234bb21`, dsl `df12989`. **Live state-of-record now
-lives in `titterpig-dsl/DSL-0.5-worklog.md`** — the sections below are pre-2026-07-27 history.
+lives in `titterpig-mastra/worklogs/DSL-0.5-worklog.md`** — the sections below are pre-2026-07-27 history.
 
 ### FUTURE PASS — apply the Houses-restructure pattern to other long-DESCRIPTION core records
 The Houses restructure split each `^"House X"` into a **mechanical DEF** (`EXTENDS "Hermetic

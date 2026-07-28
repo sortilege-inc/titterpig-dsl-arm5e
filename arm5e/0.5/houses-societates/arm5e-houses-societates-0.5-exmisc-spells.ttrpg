@@ -1,0 +1,102 @@
+EXTENSION "ArM5_HoH_Societates_ExMisc_Spells" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Societates - House Ex Miscellanea spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    # The chapter's spells, from body and sidebars alike. A section becomes a
+    # spell only if it actually prints a stat line.
+
+    #t48a5ea473b17d905ed47c6 ^"A Father’s Concern" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 40
+            ^"Range" STRING "*Adelphixis*"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "InCo 40 R: *Adelphixis*, D: Mom, T: Group"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Created by Anatol, a *magos* formerly of House Jerbiton, this spell was used by him to check periodically on his six daughters. He had left them behind to begin an apprenticeship late in life, and when he had completed his studies they’d become married adults and moved away; he couldn’t locate them by mundane means.\n\nThis spell gives a brief insight into the targets’ physical condition. It applies to anyone to whom the *Adelphixis* Range applies for the *magos*, but an easier version of the spell would be more useful to those who don’t bear such bonds to multiple people.\n\n(Base 10, +4 *Adelphixis*, +2 Group)"
+    }
+
+    #tbb2ca51cb56d855f1d5bfe ^"The End of Hatred" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 50
+            ^"Range" STRING "*Adelphixis*"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeCo 50 R: *Adelphixis*, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Used only once during the Cult’s association with the Order of Hermes, this spell instantly slays its target. It requires the caster to have a great rivalry with the target that drowns out all other thought;\n\nin game terms, the caster must have the Enemies Flaw relating to the target.\n\nWhen the inventor used it to slay his mundane rival, he was discovered by the Cult after a Quaesitor began investigating the death. The Quaesitor was able to determine that magic was involved, but had been unable to determine the caster. While the investigator was fooled, the Cult was not, and the *magos *who cast the spell was himself destroyed in an Orphic ritual to keep the Cult’s secrets safe.\n\n(Base 30, +4 *Adelphixis*)"
+    }
+
+    #ta367c3fbcb1eb54bbc470d ^"The Private Speech of Eros and Psyche" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 60
+            ^"Range" STRING "*Adelphixis*"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING ""
+            ^"Requisite" STRING "Cr"
+            ^"Printed Stat Line" STRING "In(Cr)Me 60 R: *Adelphixis*, D: Year, T:"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Ind, Ritual For one year after this spell is cast, the *magos* may, at will, speak mentally with the target, and vice versa. This communication is not impeded by distance, and may not be revoked by either party without somehow canceling the spell.\n\nThis spell was developed by a *magos * who wanted to hear his True Love’s voice at all times, and is generally used for such purposes. However, at least once in the history of the Cult, it was used to deliver a year’s worth of threats to an enemy.\n\n(Base 15, +4 *Adelphixis*, +4 Year, +1 Creo to send words)"
+    }
+
+    #tffb7f18391233c2ee7ece6 ^"The Heathen Witch Reborn" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeVi Gen R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell cancels the effect of any shapechanging spell or Supernatural Ability if (spell level + 10 + stress die [no botch]) beats the level of the shapechanging spell (or the Shapeshifter Ability x 5). It does not affect characters with the Heartbeast Ability. This spell can be used as a template for spells that affect other types of exotic magic.\n\n(Base effect, +2 Voice)"
+    }
+
+    #tdb06c06004bfe0b91f6072 ^"Quiet the Cursing Tongue" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReVi Gen R: Voice, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The target of this spell cannot use any curse magic with a level less than or equal to (spell level – 10). If the curse magic is controlled by a Supernatural Ability, then its level is equivalent to (Score x 5). This spell can be used as a template for spells that affect other types of exotic magic.\n\n(Base effect, +2 Voice, +2 Sun)"
+    }
+
+    #taf69446bcf1deb2112e348 ^"Suleiman’s Wrath on the Oath-Forsaken Jinni" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeVi Gen R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell weakens and possibly destroys a creature with Magic Might. If\n\nthe spell penetrates the creature’s Magic Resistance, the creature loses Might equal to the spell’s level. A creature with zero Might is permanently destroyed. The creature must be sensed by the caster to be a valid target; the caster may have to employ other magic to perceive a spirit before using this spell.\n\n(Base effect, +2 Voice)"
+    }
+
+}

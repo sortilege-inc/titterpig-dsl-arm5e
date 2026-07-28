@@ -1,0 +1,171 @@
+EXTENSION "ArM5_HoH_Societates_Tytalus" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Societates - House Tytalus systems"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Houses_Societates_Core_Ext"
+
+    # Chapter Three's mechanical records: the Fine Art of Debate (the Tytalan
+    # debate system, its case rulings and Argument Strength) and the framing prose
+    # for each of the chapter's magical traditions. The House itself is the
+    # canonical ^"House Tytalus" DEF in arm5e-0.5-houses.ttrpg; the chapter's
+    # narrative is arm5e-houses-societates-0.5-tytalus.lore.
+
+    #t4bc25a17487c046ab04f49 ^"The Fine Art of Debate" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "*One should destroy the seriousness of one’s opponent with laughter, and his laughter with seriousness.*\n\n*— *Gorgias\n\nThe rules given below present a mechanic for settling an argument through debate. They are broken down into two sections: the testing of the strength of each other’s positions in a debate, and the consequences of winning the debate on the opinions of the observers. Naturally, if there are no observers, or the issue is one of little consequence, then the second step is unnecessary. However, they become of vital importance to a magus who is prosecuting or defending a case at Tribunal."
+    }
+
+    #t7425803020fce23ed37196 ^"Resolving Differences" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "**Defense Total: Intelligence + Defense **\n\n**Ability + stress die**\n\n**Attack Advantage: Attack Total – **\n\n**Defense Total (if Attack Total is higher)**\n\n**Weakening Total: Presence + Attack **\n\n**Resistance Total: highest positive **\n\n**Reputation + Confidence score**\n\nFatigue inflicted by the debate is not physical fatigue, but affects all the arguments of the opponents in an identical manner. If a debater has the Clear Thinker Virtue, then decrease the penalties for reduced Fatigue Levels by one point, for debate fatigue only. If a debater has the Strong Willed Virtue, then he receives a +3 bonus to his Resistance Total. Virtues and Flaws that affect physical fatigue (e.g., Long-Winded) do not influence debate fatigue.\n\nThe Ability chosen for the Attack Total determines the style of the debater’s oration in that round, whereas the Defense Ability determines what argument or tactic he is employing. For example, a threat holds no weight unless the character has the Leadership to make it worthwhile, and a direct lie from a character with no Guile is too transparent to damage his opponent. Examples are given below; players are encouraged to paraphrase their characters’ words, explaining how they are using these particular tacks in the debate.\n\nThe rules for debating are very much like the rules for certamen in **Ars Magica Fifth Edition**, and the purpose is very similar. Instead of exhausting your opponent, you instead attack his arguments. Each round of a debate may last a few minutes or a few hours, depending on the complexity of the issue at hand. Before the debate begins, the opponents must decide how long it will continue; an independent arbiter (such as the praeco at a Tribunal) might allow the debate for continue for a preset number of rounds (typically 5–10), or else decide arbitrarily when it is over. A debate ends in any case if one debater’s position is left “unconscious” by an attack of his opponent.\n\n**Advantage**\n\n**Folk Ken **relies on the understanding of human behavior and motivation to secure an advantage.\n\n• **Charm**: You offer a compromise or a disarming compliment. • **Guile**: You support your point with a complete fabrication of the truth. • **Leadership**: You issue a personal threat or insult against your opponent.\n\nIn each round of the debate choose which of the three Attack Abilities (Folk Ken, Intrigue, or Artes Liberales) and which of the three Defense Abilities (Charm, Guile, Leadership) you are employing. Much like a certamen, the debate rules depend on six totals.\n\n**Intrigue **represents the ability of the debater to manipulate his opponent into traps, and to employ dirty tricks.\n\n**Initiative Total: Perception + stress die**\n\n• **Charm**: You misdirect your opponent, or baffle him with an obtuse comment.\n\n**Attack Total: Communication + Attack **\n\n**Ability + attack modifier + stress die**\n\n• **Guile**: You hint that you know things that your opponent would not want publicly known, or cite false authority. • **Leadership**: You scare-monger over your opponent’s points, or hint at friends in high places.\n\n**Artes Liberales**, particularly the specialty of Rhetoric, determines the debater’s ability to use sophisticated verbal techniques against their opponents.\n\n• **Charm**: You employ hyperbole and rhetoric to confuse your opponent with erudition, distracting him from the matter at hand. • **Guile**: You tease your opponent with wit, or play to the crowd by using premises based on popularity rather than fairness. • **Leadership**: You forcibly interrogate your opponent, or question whether he has followed proper procedure.\n\nParticular styles of debating are more effective against some tactics than others, and a debater is often required to adapt his debating style several times during the debate to try to secure the biggest advantage. For each Attack Total, the attacker gains an **Attack Modifier** based on the Defense Ability used by his opponent. Refer to the following table:"
+    }
+
+    #ta4ef864033676de9d68b3f ^"Winning Arguments" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The debate rules can be placed in a wider context, if the outcome of the debate may convince onlookers of the merits of the opinions of the debaters. The debate tests the strengths and weaknesses of each opponent’s position over the issue, but it is down to any outside observers as to which opponent truly won the argument. At a Tribunal, this distinction becomes even clearer, because decisions are made by voting, and the way an observer votes on a case is not solely due to who won the argument, but also determined by alliances and enmities.\n\nfactioning becomes more complex, but the overall concept still applies. The number of votes available in each faction should be detailed by the storyguide, for this is not necessarily the same as the number of magi. The neutral faction is the vitally important one; the main purpose of any debate at Tribunal is to win those over to one’s side, and these voters abstain unless swayed one way or the other. Once the spectators have been divided into three camps, calculate the **Argument Strength** of the victor:\n\nIf a debate ends because one opponent’s argument loses 5 or more Fatigue Levels, then the winner is clear. Otherwise, the opponent whose argument has the smallest Fatigue penalty is deemed to be the technical victor. To convert winning an argument into winning a vote, the storyguide must first divide the observers of the debate into factions, depending upon whether they were initially inclined towards the defense principle, the prosecution principle, or neither. Where there are more than two opponents in a debate, this\n\n**Argument Strength: Difference **\n\n**between the number of Fatigue Levels **\n\n**lost**\n\nRefer to the table at the bottom of the page for the effects of the Argument Strength on the voting pattern of the audience. Note that if a debater roundly defeats\n\n*the storyguide estimates that 20 are her solid allies, whereas Carolus has the certain support of only ten other magi. Nevertheless, he won the debate with an Argument Strength of 3, which means he wins 20% of the 25 neutral voters, for a total of 5 other votes. This still gives him only 15 votes; not enough to win the case. He would have needed to have had an Argument Strength of at least 5 to have won this issue; that would have given him 40% of the neutral vote (ten extra votes) and 10% of Moratamis’s faction (two extra votes). Instead, Carolus mentally rehearses his “contrite” plea for mercy.*\n\nhis opponent, then some of his opponent’s allies are so swayed by the force of the winner’s debate that they abandon their faction and vote for the winner.\n\nHaving determined which way the Tribunal votes, the storyguide should tally up the results to determine the final outcome of the debate. Note that those neutral votes that remain unassigned abstain from voting.\n\n*Example: Moratamis the Quaesitor is a popular figure at Tribunal. Of the 55 votes present, *"
+    }
+
+    #ta5376baf537d9d63e7169f ^"Case Rulings" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "As detailed in *Houses of Hermes: True Lineages*: House Guernicus, most cases (i.e., those with clear legal merit) do not make it to a public hearing, instead being mediated by a Quaesitor prior to the Tribunal. Those cases that do make it to the Order’s debating floor are those in which the interpretation of the Code is not cut and dried, and it is here where political magi such as the Tytali excel.\n\nOnce the evidence has been presented by both principles in a case in the form of testimonies, the two sides engage in a debate contest in front of the Tribunal. The praeco typically ends the debate if the battle extends past 10 rounds. Each testimony possessed by an opponent may be used once per debate to support an argument. The prosecution principle may use a testimony to increase her Attack Total, whereas the defense principle may use a testimony to support his Defense Total. Once used in a round, the testimony may not be used again in the debate. The player should describe how he is using the witness to support the debating technique they are using, and then receive the bonus described on the following table:"
+    }
+
+    #t1234ddd6e199ae0a3f6f91 ^"Proposal Cases" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Proposal cases are ones in which a magus seeks a correction, clarification, or addition to the Code of Hermes. In such cases, the debate is held between the proposer and the rest of the Tribunal. Any magus may enter into a debate with the proposer, and once the praeco feels that the case has been fully discussed, he stops the debate and calls for a vote. In game terms, the debate continues for a preset number of rounds, typically 5–10 (although the players do not know in advance how many rounds will eventually take place). Each round, the proposer faces a question or objection from a member of the audience. The storyguide should present each opponent’s argument, allow the player magus to respond, and then make a debate roll. The storyguide should assign Attack and Defense Ability scores to each interrogator, but the proposer is fighting against a single opponent — the whole Tribunal — and the blows he lands are counted against that single entity.\n\nOnce all the points have been debated, the proposer’s Argument Strength is used to determine the margin of victory in the usual way. However, the Argument Strength may suffer a penalty determined by the type of modification required to the Code. Magi are wary about making drastic changes to the Code of Hermes, and thus the more alteration required, the more difficult it is to win the case. A **clarification** does not propose to change the Code, it merely asks for a clear statement to be made about the Tribunal’s attitude towards a specific position. An **addition** doesn’t change the Code of Hermes either, but it expands the meaning of a specific case to cover a more general situation. An **alteration** of the Code actually suggests that a previously made ruling was incorrect, and should be replaced with a superior version, authored, of course, by the proposer. Note that a regional Tribunal can only make modifications to the local Peripheral Code, although they can recommend that a successful proposal case be taken to the next Grand Tribunal, where it may modify the Code as practiced in all Tribunals."
+    }
+
+    #t50c146146f88ea9dc3011c ^"Argument Strength" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Clarification 0\n\nAddition –1\n\nAlteration –3\n\nCase being heard at the Grand Tribunal\n\n–1 (cumulative)"
+    }
+
+    #tf316bd7651919c7340a9e7 ^"Magic" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "*Critias said that more men are good from practice than from nature. A magus who does not practice will never be good, no matter what his nature.*\n\n*— *Analects of Tytalus\n\nTytalus magi have different interests, and thus may have very different tastes in magic. However, all show a fascination for intrigue, which lends itself well to the practice of Mentem magics. The following sections describe some useful spells for activities in which Tytalan magi usually excel."
+    }
+
+    #te0b414ea76714b6ca24aa1 ^"Magic for the Debating Arena" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "use the Leadership Ability. Tytalan magi have developed similar spells that make them seem more likeable (and thus affect Charm defenses) or more believable (and thus improve Guile defenses); see the spells *Aura of Beguiling Appearance* and *Aura of Childlike Innocence* below. At the option of the storyguide, *Aura of Ennobled Presence* might warp the manifestation of The Gift in the same way as these two spells; while still giving the usual bonus against mundanes, the character expresses his enhanced leadership as a harsh taskmaster or cruel lord.\n\nOther magi are quick to cry foul if they discover that such spells have been used during a Tribunal meeting, but there is no provision in the Code of Hermes to prevent these tactics. Of course, should their use become widespread then either the advantage will be lost to the Tytali, or magical or legal countermeasures will be taken to negate them. Tytalan magi are warned by their parentes to use these spells with care (or with a good *Masking the Odor of Magic* spell!).\n\nThe use of magic in the debating arena is heavily frowned upon by the Order of Hermes. Several Tribunal meetings take place under an *Aegis of the Hearth* cast by the praeco and the presiding Quaesitor specifically to inhibit magic that might influence the democratic processes of the Order. In other Tribunals, the Quaesitores specifically request that enchantments not be used in the debating arena, and run periodic checks against them. Not all Tribunals take such precautions, however, and a member of House Tytalus can often benefit from some judicial use of debating magic. Magi taking this perilous route should concentrate on magic that enhances their own abilities rather than directly affecting the audience. For example, *Aura of Ennobled Presence* changes the magus’s image so that he emits species of sight and hearing that make him appear more convincing, granting a +3 bonus to all debating Defense Totals that"
+    }
+
+    #td2cf447eb10a4a19e5c4fb ^"The Magic of Impersonation" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Those magi who have spent time and effort developing personae often learn or invent spells that assist them in maintaining these separate identities. Most Tytalan magi do not rely upon a magical disguise when using a persona because of the need to renew it on a regular basis, and the fact that some individuals are gifted with Second Sight or Magic Sensitivity, and can destroy their cover easily. Nevertheless, a magical enchantment can overcome these limitations with a constant effect in an enchantment, particularly if coupled with *Mask the Odor of Magic*. Despite the problems associated with a magically maintained persona, some magi do employ such tricks. Occasionally it is necessary to create a persona of the opposite sex, with a specific characteristic such as red hair or dwarf stature, or even with all the particular features of a certain real person. In such cases, spells such as *Disguise of the Transformed Image* and *Disguise of the New Visage* can prove very useful. Members of House Tytalus even trade Lab Texts of such spells that cause the caster to become a specific individual; those versions can only be used to adopt the guise of the person determined when the spell was invented, but that disguise is flawless, and does not rely on the caster knowing the individual whom he is copying.\n\nThe Tytalan spell *Donning the Mask of Another* allows a magus to acquire a deep cover disguise by stealing one from another. This spell is most commonly used to pass a cover on to another magus once it is no longer useful to the magus who initially developed it, perhaps because he has finished with the schemes that precipitated its creation. In this case the spell is often cast through a *Wizard’s Communion*, and the caster extends his Parma round the donor (ArM5, page 87) so that only the Form Resistance of the donor needs to be overcome by the spell’s Penetration. Such an arrangement usually places the new owner in the debt of the former owner. However, this spell may also be used to steal a persona from another; with a Perdo requisite added to the spell during its invention, it can even remove all memory of the identity from the donor’s mind."
+    }
+
+    #t16c1ed6c99d4a7a580f53a ^"The Magic of Intrigue" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Magi of House Tytalus often employ magics that assist them in their intrigues. Scrying on the agents and antagonists of one’s plots is an important facet of a Tytalan intrigue, although naturally the magus should take care if he has embroiled other members of the Order of Hermes in his schemes. To be on the safe side, a Tytalus maga may employ forceless casting (*Houses of Hermes: True Lineages*, page 72), ensuring that her magic has no ability to penetrate even a Magic Resistance of zero. Spells such as *Prying Eyes* and *Whispering Winds* can prove very useful, as can *The Invisible Eye Revealed*, to foil the scrying of one’s rival. Tytalan magi often need to discover what plots they have become embroiled in without their knowledge, which is the purpose of the spell *Betraying Whispers of the Jealous Mind*, detailed below.\n\nTytali rarely control the mundane agents of their schemes directly with magic; these spells tend to inhibit freedom of thought, and Tytalan magi prefer agents who are capable of adapting to a situation over mindless automata. Furthermore, Rego Mentem spells that are powerful enough to be of use usually cause Warping, which is an annoyance for any agent who is to be used more than once. More subtle spells, such as ones to induce feelings of loyalty, or to spread malicious gossip about a rival (see *Burning Issue of the Day*, below), are far more popular.\n\nFor meeting with co-conspirators, Tytalan magi often preserve their anonymity with face-changing or face-blurring magic (see *The Clandestine Mask*, below), or else meet in total darkness. Some do both, just in case one concealment method is negated by treachery. Spells can be employed to ensure the secure transfer of information between conspirators (see *Enchantment of the Pedestrian Pigeon*, below), or else communications can be written in Tytalan ink (see below)."
+    }
+
+    #t41ab7b7d81552fe64de734 ^"The Magic of the Titanoi" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Spirits abound in Mythic Europe, present wherever an object exists which expresses a particular quality strongly. Thus, spirits of fire can be found near open flames and spirits of love can be found near courting couples. These spirits are akin to animals and plants, have no personal names, and do not involve themselves in the physical world unless forced to through magic. Spells of a specific Form can command any spirit tied to that Form, for example, Ignem can command any fiery spirit. Mentem spells (using the Rego Mentem guidelines, ArM5, page 151) can command any spirit with an Intelligence score, but some spirits have no Intelligence, and those are affected by Rego (Form) spells.\n\n,\n\n,\n\nThe Titanoi are also interested in the named spirits, the Daimons. Such spirits are not so easy to control, and only those versed in the Mystery of Theurgy are truly skilled in doing so. Unlike simpler spirits, a Daimon can manifest in several places simultaneously, by projecting only one Aspect of itself in each. Instead of summoning such a spirit, the Titanos instead forms a pact with one, causing it to send an Aspect to the magus to perform some task on his behalf in return for the spiritual sustenance provided by casting a ritual spell.\n\nFor more information about spirits and Daimons, see *The. Mysteries. Revised. Edition*."
+    }
+
+    #te2890e3bbee5906ac37ec0 ^"The Magic of the Leper Magi" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The leper magi employ all of the magical techniques of other Tytali, but they also have a strong focus in spells of health and healing. Nearly every magus aegrotus knows *Chirurgeon’s Healing Touch*, as well as other spells that heals more serious wounds. It is the combating of diseases at which they excel, however, as well as the prolongation of life through the creation on Longevity Rituals and the resolution of Aging Crises."
+    }
+
+    #tde9f349cdb139b38b62717 ^"Tytalan Ink" DEF {
+        EXTENDS ^"Hermetic Practice"
+        PROPERTIES {
+            ^"House" STRING "House Tytalus"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Tytalan ink is a charged item that takes the form of colorless ink. A Dexterity + Artes Liberales roll of 9 or more is required to write legible text with ink that cannot be seen. Upon uttering the command word, the ink becomes black (or any other color determined at the ink’s creation) until the Duration expires, at which point it reverts to its colorless state. Each charge produces enough ink to for approximately two pages of writing; alternatively, multiple charges can be placed in the same vial of ink, allowing the message to be read multiple times."
+    }
+
+    #t2a972068b0c41a6b56cfb1 ^"Charm Guile Leadership" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Charm", "Guile", "Leadership"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Folk Ken" "+3" "–3" "0"
+            "Intrigue" "0" "+3" "–3"
+            "Artes Liberales" "–3" "0" "+3"
+        }
+        DESCRIPTION "Folk Ken +3 –3 0\n\nIntrigue 0 +3 –3\n\nArtes Liberales –3 0 +3\n\n*Example: In this round of a debate at Tribunal, Moratamis is trying to interrogate Carolus regarding his activities, whereas Carolus is infuriating her (and pleasing the crowd) with disarming words. Moratamis is attacking with Artes Liberales and defending with Leadership. Carolus is attacking with Folk Ken and defending with Charm.*\n\n*Carolus won initiative and attacks first. His Folk Ken Attack Total gets no bonus against Moratamis’s Leadership defense, but when she counter-attacks, she receives a –3 penalty to her Artes *\n\n*Liberales Attack Total because Carolus is employing a Charm defense.*\n\n*In the next round she tries to continue her interrogation, but Carolus has switched tactics, suddenly changing from compliments to obtuse comments loaded with meanings that confuse her (he is still using Charm, but this time with Intrigue). Carolus now enjoys a +3 bonus to his Attack Total, as well as inflicting a penalty on his opponent’s Attack Total as before. Moratamis will probably switch tack herself next round.*"
+    }
+
+    #taed6d91b318a2eff50db08 ^"Type of Testimony" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type of Testimony", "Bonus"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Written testimony" "+1"
+            "Testimony of a mundane" "+1"
+            "Testimony of a social inferior (apprentice, familiar, etc.)" "+2"
+            "Testimony of a peer (another magus)" "+3"
+            "Testimony ratified by Quaesitorial examination" "+3 (cumulative)"
+        }
+    }
+
+    #ta83b57659a7d30efa9b3b1 ^"Type of Case" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type of Case", "Penalty to Argument Strength"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Clarification" "0"
+            "Addition" "–1"
+            "Alteration" "–3"
+            "Case being heard at the Grand Tribunal" "–1 (cumulative)"
+        }
+    }
+
+}

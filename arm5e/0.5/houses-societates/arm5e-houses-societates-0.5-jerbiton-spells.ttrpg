@@ -1,0 +1,237 @@
+EXTENSION "ArM5_HoH_Societates_Jerbiton_Spells" {
+    NAME "Ars Magica Fifth Edition, Houses of Hermes: Societates - House Jerbiton spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ArM5_Core_Magic_Spell"
+
+    # The example spells Chapter Two prints inside its sidebars. Each fits the
+    # core ^"Formulaic Spell" shape unchanged. A segment becomes a spell only if it
+    # actually prints a stat line - classified on evidence, not on position.
+
+    #td9d82519c0df3e841afc10 ^"Ambush on the Deserted Road" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Printed Stat Line" STRING "PeIm 20 R: Touch, D: Ring, T: Circle"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell destroys all of the species that the group of things within the Circle emit in a single direction. It can — for example — make a magus’s traveling party invisible from the direction of another group they wish to ambush. The base level of this spell includes an adjustment that accounts for the magus’s ability to gently move the direction of effect, so that as the enemy group passes by, they cannot spot the hidden party. Other people, for example the members of the magus’s company, can still see each other, because the species reaching their eyes are unobstructed. The transparency requires a Perception + Finesse roll against an Ease Factor of 9 to be convincing.\n\nThe transparency requires a Perception + Finesse roll against an Ease Factor of 6 to be convincing, if the target remains stationary. If the target is moving slowly and predictably, as, for example, a sentry on a route or a pedestrian strolling to a gate, this increases to 9. It increases to 15 for a character moving very swiftly but predictably, for example, a horseman following a road."
+    }
+
+    #t7b801283d5582db03e0aac ^"Hiding In The Crowd" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeIm 10 R: Per, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell makes the caster selectively invisible. It destroys a thin cone of the species the magus emits, so that a single person cannot see the caster. People around the magus, who are outside the cone, continue to see the caster. This is particularly useful in city crowds, because it stops the magus being buffeted by oblivious passersby. Note that this spell only works if the magus knows the location of the single viewer to be excluded, and if the viewer moves predictably. If the viewer moves rapidly out of the cone, the magus becomes visible to him.\n\n(Base 5, +1 Touch, +2 Ring)\n\n(Base 4, +2 Sun)"
+    }
+
+    #t2642796723d069b4c4d7d8 ^"Glowing Footprints of the Thief" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "MuIm 20 R: Sight, D: Conc, T: Group"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell makes the traces of sweat left by a person visible, by transforming\n\nthe stream of olfactory species of the person’s scent into a stream of iconic species. The way this light appears is dependent on the sigil and Finesse of the magus. This spell is mimetic, so all nearby people can see the scent traces. Note that to cast this spell, the magus must be distinctly aware of the scent of the thief, so that there is a valid target for the spell.\n\n(Base 2, +3 Sight, +1 Conc, +2 Group)"
+    }
+
+    #t892752615fc3aa04f803dc ^"Sight of the Warm Surface" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Vision"
+            ^"Printed Stat Line" STRING "MuIm 15 R: Touch, D: Conc, T: Vision"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Although Imaginem magic cannot create heat, warm surfaces emit species, which humans can sense through touch. This spell transforms those into species that the eye responds to. How the warmth is seen varies by magus.\n\n(Base 2, +1 Touch, +1 Concentration, +4 Vision)"
+    }
+
+    #ta643a276023568c925b90c ^"A Visible Demand for Repair" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circ"
+            ^"Printed Stat Line" STRING "MuIm 5 R: Touch, D: Ring, T: Circ"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell transforms the groans and squeaks of damaged pieces of equipment into iconic species reminiscent of the magus’s sigil. This makes it easier for magi to find the flaws in damaged parts, granting a +3 bonus to Craft or Profession rolls.\n\n(Base 2, +1 Touch, +2 Ring)"
+    }
+
+    #tf66a356289552ae4ad0fef ^"The Brushstrokes Revealed" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Printed Stat Line" STRING "InIm 10 R: Touch, D: Ring, T: Circle"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell makes the species cast by an object within the circle more vivid, so that the magus can see tiny details that are otherwise invisible. This spell has traditionally been used to investigate the physical construction of artworks, but nature-oriented Jerbiton magi have recently begun using it to investigate the handiwork of God, by examining the tiny structures of creation.\n\n(Base 3, +1 Touch, +2 Ring)"
+    }
+
+    #t72f363b4483c9c7d896e46 ^"An Enemy Awash in the Pure Sigil of the Magus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "CrIm 15 R: Sight, D: Conc, T: Part"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell washes the target with concentrated visible species, overloading the eyes. It requires no Finesse roll, because the species do not construct an image. In this case, the sheer number of species is being used to overload the capacity of the eye, so that the target is unable to see anything else. The spell’s name comes from its appearance, which is always based strongly on the sigil of the caster. The victim’s eyes recover two minutes after the spell is complete, or in only a round if the victim thinks to close his overburdened eyes when first struck by the spell.\n\nSpells similar to this one can create detailed images, but that requires Finesse rolls.\n\n(Base 2, +3 Sight, +1 Concentration, +1 Part)"
+    }
+
+    #t59ace2476b65a5f508d4bd ^"False Window" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun (some versions use Ring)"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrIm 5 R: Touch, D: Sun (some versions use Ring), T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell allows the magus to trace the frame of a door or window and create a miniature that seems to show something that lies beyond the frame. A Perception + Finesse roll is required to craft a convincing illusion. The Ease Factor is 9 if the image seems to show a room, 12 if it seems to show a structure, or 15 if it seems to run to the horizon. These numbers already include the reduction for limiting the viewer’s line of sight, but could be reduced or increased by familiarity with the depicted scene.\n\nMany casters of *False Window* add an additional magnitude, so that figures\n\nwithin the image appear to move, and the pattern of light changes to suit the time of day, but this simpler version creates only a static image. This spell also models similar spells for the other senses: a mirror that plays a tune, provided its face is not turned toward a wall, is an example. Directly created species like these are resisted by the Parma Magica.\n\n(Base 2, +2 Sun or Ring, +1 Individual)"
+    }
+
+    #t2145f469ece51d385382ff ^"Silent Shout" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "CrIm 10 R: Sight, D: Mom, T: Part"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell creates a burst of species, matching the caster’s voice, which strike the target in the head. This spell requires a Perception + Finesse roll against an Ease Factor of 6 to make the voice sound convincingly like that of the magus (the base Ease Factor is 9, with a –3 modifier for deep familiarity), but even if the roll fails, the target still hears the message. This spell is used on battlefields, or to instruct apprentices in the Tribunal chamber. It takes advantage of the directional nature of miniatures to prevent others from overhearing its contents.\n\n(Base 2, +3 Sight, +1 Part)"
+    }
+
+    #tb2fc9f28b3022dc30d2676 ^"Fooling the Eye" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "CrIm 10 R: Sight, D: Mom, T: Part"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "A magus using this spell creates the correct species for the swift movement of a small bright object, and casts them at the head of the target. Virtually all humans have in involuntary reflex that makes their eyes track the paths of moving objects, particularly those that might strike them. The magus uses this reflex against the victim, because when she looks where the object should be, she makes eye contact with the magus. This allows the magus to cast spells with Eye Range on the victim.\n\nThis spell does not require a Finesse roll, because it does not simulate a particular object.\n\n(Base 2, +3 Sight, +1 Part)"
+    }
+
+    #tbbbe25cf0d95751467bfd5 ^"Creation of the Simile" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrMe 20 R: Eye, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell creates a new category of thing in the mind of the viewer, granting unconscious familiarity with a broad range of instances of that thing. Alternatively, the spell may be used to grant a broad knowledge of a category of thing of which the target is already aware. A magus deeply familiar with a simile, as described earlier, may make the target deeply familiar with the simile, while a magus only broadly familiar with a simile may only create broad familiarity in the target.\n\nThis spell is usually created with a long Range and Duration, because it allows the magus to create unreal similes in the minds of hostile targets. This is most effective when the target does not already have a ready category for the thing the magus wishes to hide. As an example, a magus carting odd spell components into a city may convince the guards that they are “geegaws,” or some other meaningless category, and thus unimportant. This will not work if the guard already has a simile that includes things that look like spell components, for example “tools of the Devil.”\n\n(Base 5, +1 Eye, +2 Sun)"
+    }
+
+    #t5d58e118f1993ff2950716 ^"Agnosia" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeMe 10 R: Eye, D: Sun T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell destroys familiarity with a category of object represented by a single noun. The victim of this spell cannot recognize instances of the thing, although she is that aware such things exist. If confronted with a representative object, the victim cannot identify or use it. This spell does not destroy Abilities, so if the character is placed in a position where she uses an object without conscious monitoring, her Abilities return. This can be alarming for the spell’s target, since she cannot consciously use the tool to repeat her inadvertent actions.\n\n(Base 3, +1 Eye, +2 Sun)"
+    }
+
+    #t01fbbf50daa5250067badf ^"Dissolving the Wall of Shields" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "PeMe 20 R: Voice, D: Mom, T: Group"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell removes the memories that allow a group of soldiers to fight as a unit. This spell can be used to destroy other simple skills, too small to be encompassed by an Ability. For example, a magus might cast it on a group of courtiers so that all of them forget the steps of a particular dance. These memories do not return when the spell concludes, but may be regained with simple demonstration and practice, requiring time but not experience points.\n\nThis spell does not damage autobiographical memory, so it is obvious to the victims that he has lost a skill he previously possessed. The spell does not impair judgment, so the victim may infer that the magus is responsible. A version of this spell with Sight Range (level 25) is less conspicuous.\n\n(Base 4, +2 Voice, +2 Group)"
+    }
+
+    #t63d324723c3abec5f07761 ^"Creation of an Undeserved Reputation" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrMe 20 R: Eye, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell creates the memory that a certain person has confessed to having an extremely enjoyable evening of intercourse with another person. The second person may be named, if the magus wishes, or, with a penalty of 3 on the Finesse roll, merely suggested so that the target of the spell draws his own conclusions.\n\nIf there is no possible reasonable inference, the spell fails, so it cannot force most characters to commit suicide or do things that are abominable. Characters cannot be convinced to do things that are dangerous unless the character regularly faces that sort of danger as part of his profession. A shepherd might fight off a wolf, or a town watchman arrest a violent drunk, but neither would reasonably infer that they should perform the task better suited to the other.\n\nWhen the Duration expires, the details of the episode vanish, but the character remembers recalling them. This means the character may not be able to remember where or when the confession was made, but remembers that it was. If pressed, the character starts to infer the context of the memory, which then becomes more solid with each recollection."
+    }
+
+    #t86f212d562efc7faa6ebc6 ^"The Unbidden Task" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuMe 25 R: Eye, D: Moon, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell creates a simple prospective memory in the target, which repeats itself so often that the target infers a reason for the memory. Simple memories, like, “I need to leave the back door unlocked tomorrow night” draw out reasonable inferences like, “because his lordship is sneaking out for a night on the town after her ladyship falls asleep.” The magus takes advantage of the action the prospective memory guides, so in the example above the magus could send a servant to rob the house, knowing the door would be unlocked.\n\n(Base 5, +1 Eye, +2 Sun)\n\n(Base 5, +1 Eye, +3 Moon)"
+    }
+
+}

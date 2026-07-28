@@ -67,6 +67,17 @@ EXTENSION "ArM5_Houses_Societates_Core_Ext" {
         }
     }
 
+    # A named rules practice a House teaches or uses: urban magic, the species
+    # rules for perception and deception, the memory techniques. Broader than
+    # ^"Combat Rule", which is specific to fighting.
+    #tSocHermeticPracticeTypeAAA ^"Hermetic Practice" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
     #tSocSpellMasterySpecialAbil ^"Spell Mastery Special Ability" DEF {
         APPLIES TO [^"Magus"]
         PROPERTIES {

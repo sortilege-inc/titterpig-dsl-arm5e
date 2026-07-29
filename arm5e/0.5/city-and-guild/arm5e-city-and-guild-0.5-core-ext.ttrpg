@@ -8,7 +8,11 @@ EXTENSION "ArM5_City_And_Guild_Core_Ext" {
     # City & Guild is an EXTENSION on the arm5e edition, loaded alongside the core
     # rulebook (spec S13 composition). Types are declared here only where no core
     # type holds the record; narrative goes to .lore and tables are structured TABLE
-    # DEFs, neither of which needs a type. Virtues and Flaws fit the core
+    # DEFs, neither of which needs a type.   ^"Ordeal"                   p30, 4 records. The ordeals of trial by ordeal --
+                                  combat, cold water, hot water and iron -- each a
+                                  procedure a town court may put a defendant to.
+    
+    Virtues and Flaws fit the core
     # ^"Virtue"/^"Flaw" unchanged, the p78 spell fits ^"Formulaic Spell", and the
     # four named characters fit ^"Example Character".
 
@@ -46,6 +50,12 @@ EXTENSION "ArM5_City_And_Guild_Core_Ext" {
     }
 
     #tCGFairChargeTypeAAAAAAAAAA ^"Fair Charge" DEF {
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+    #tCGOrdealTypeAAAAAAAAAAAAAA ^"Ordeal" DEF {
         PROPERTIES {
             ^"Source" STRING DEFAULT "City & Guild"
         }

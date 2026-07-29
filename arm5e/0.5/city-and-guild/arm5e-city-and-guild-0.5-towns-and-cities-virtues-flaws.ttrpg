@@ -1,0 +1,33 @@
+EXTENSION "ArM5_CityAndGuild_Towns_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Chapter One Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # The FOURTH printing of a Virtue or Flaw in this book: the whole Text Box is
+    # the record, and its TITLE is the only place the source states the size, the
+    # category and the name ('Major General Flaw: Leprosy'). Nothing inside the box
+    # repeats them, so a body-only recogniser finds none of these.
+
+    #t4cfffc2c95f6f4b78814ec ^"Leprosy" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "General"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "A leper has a permanent –2 modifier to her Living Condition (with an additional –1 if she lives in a leper colony), and whenever she undergoes an Aging Crisis (ArM5, page 170) the leper sustains a Heavy Wound in addition to any other result. Lepers cannot gain a positive reputation due to a pungent rotting smell that they emanate."
+    }
+
+    #t793dc78e9f823c9965e471 ^"Town Magistrate" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character has a position of judicial responsibility in the town, with a small staff of minor officials (up to five individuals). The character must be a citizen, have a score of at least 3 in the Civil and Canon Law (or Common Law) Ability, and is paid a wage or gains special privileges in return for his services. Being a magistrate occupies the character for two seasons each year, but he is free for the remaining two seasons. Academic Abilities may be bought for the character, during character generation."
+    }
+
+}

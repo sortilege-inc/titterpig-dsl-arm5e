@@ -1,0 +1,66 @@
+EXTENSION "ArM5_CityAndGuild_PriceList_Tables" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Appendix: Price List tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #tc6feac203d61b37704ac82 ^"Quality Multiplier" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quality", "Multiplier"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Shoddy" "x0.5"
+            "Standard" "x1"
+            "Superior" "x2"
+            "Excellent" "x5"
+            "Wondrous" "x5 or more"
+        }
+    }
+
+    #t6d5067e222402515afc21e ^"Price List" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Standard Price"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Longbow" "15 shillings"
+            "Cart" "10 pennies"
+            "Chainmail, full" "2 pounds"
+            "Chainmail, partial" "1 pound"
+            "Chair" "8 pennies"
+            "Chamber pot" "20 pennies"
+            "Chest with lock" "2 and 1/2 pounds"
+            "Dagger" "6 pennies"
+            "Gallon of ale" "half a penny"
+            "Great sword" "13 shillings"
+            "Heavy Leather, full" "2 and 1/2 shillings"
+            "Heavy Leather, partial" "15 pennies"
+            "House, luxurious" "50 pounds"
+            "House, peasant" "2 pounds"
+            "House, urban" "5 pounds"
+            "Leather Scale, full" "10 shillings"
+            "Leather Scale, partial" "5 shillings"
+            "Loaf of bread" "half a penny"
+            "Long sword" "10 shillings"
+            "Non-Hermetic books" "11 shillings"
+            "Pair of shoes" "6 – 16 pennies"
+            "Shield, buckler" "3 shillings"
+            "Shield, heater" "8 shillings"
+            "Shield, round" "8 pennies"
+            "Short sword" "3 shillings"
+            "Shovel" "4 pennies"
+            "Tunic, dyed" "8 shillings"
+            "Tunic, fur lined" "13 shillings"
+            "Tunic, peasant" "16 pennies"
+            "Tunic, wool" "5 shillings"
+            "Wagon" "20 pennies"
+        }
+    }
+
+}

@@ -1,0 +1,114 @@
+EXTENSION "ArM5_CityAndGuild_Trade_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Virtues & Flaws for traders"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # Found by evidence: an h4 whose body opens with the source's own italic type
+    # line, run in ahead of the text. Size and Category are classified by VALUE and
+    # not by position, because this book prints both orders. The kind -- Virtue or
+    # Flaw -- comes from the `New Virtues` / `New Flaws` heading the record sits
+    # under, the only place the source states it.
+
+    #t72eb33a371397dad94ead1 ^"Capo" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character manages a trading company that has branches in at least two cities. This gives the character many advantages, which a later section of this chapter details. A capo who is also a partner in the business does not select the Partner Virtue, instead selecting Poor or Wealthy, as appropriate to his circumstances."
+    }
+
+    #td0671cce3f54ee9541db25 ^"Factor" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character manages the interests of a trading house in a single city. This gives the character many advantages, which the main body of this chapter describes in detail. Many factors are junior partners in their companies, and they choose the Partner Virtue, not this one."
+    }
+
+    #tfd787509cd8957ec6b3598 ^"Merchant Adventurer" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is in command of a ship, and a crew. The character has sufficient capital for a cargo, but may have substantial debts, which may be represented by the Favors Flaw. Further details are given in the main body of this chapter. A merchant adventurer who owns a share of the company he works for should select the Partner Virtue instead of this one."
+    }
+
+    #tf9d361d3098fb2871c68e2 ^"Partner" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character has a large financial stake in a wealthy company. This provides sufficient income for the character to live as well as a minor member of the nobility, but without military trappings. The company’s capo is answerable to his partners, and they are permitted, when practicable, to take their profits in service from the house’s captains and factors, if they wish. A partner may act in any of the roles of the house without taking the Virtue that corresponds to that role, save the role of capo, with the permission of the troupe. That is, a partner who is also a factor, merchant adventurer, local carrier, or urban merchant need not purchase that Virtue if she has this one."
+    }
+
+    #t020a7fc0a5a5c521c69964 ^"Perfect Eye for (Commodity)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character gains an extra (3 x Wealth Multiplier) Labor Points per year."
+    }
+
+    #t369e3493ed56c0cedc8c92 ^"Vernacular Education" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+    }
+
+    #t90d31a96a37179b5182985 ^"Bigamist" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character has two entirely separate lives, in two cities, and moves between the two as he trades. Bigamists have two spouses, and maintain two households, which they must pay for. The merchant’s annual cost of maintaining his business rises by (6 x Wealth Multiplier) Labor Points. Some bigamists mitigate this expense by pretending to be of lower status in their alternate life, which reduces the additional Labor Point cost by half (to 3 x Wealth Multiplier)."
+    }
+
+    #t89ea99e0a221131dadad30 ^"Employed by Company" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Characters with this Flaw are salaried employees, answerable to an employer. They may be merchants who travel on behalf of a company, or administrators who are answerable to the partners. On the other hand, they are also backed up by the resources of the company. See the Companies section, above, for more detail."
+    }
+
+    #td63677c4753be6d5d2657e ^"Many Marriageable Daughters" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character has a lot of daughters and needs to participate in stories to marry them off suitably. Information on dowries is included in the Marriage and Dowries section, below."
+    }
+
+    #tccd38599fc28946065ae95 ^"Unhappily Married" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Young merchants often marry for financial reasons. The character has married for money, not love, and seeks solace outside his marital bed. Unhappily married characters must hide their affairs of the heart from their spouses, their spouses’ families, and possibly from their partners’ spouses. In many areas, separation due to infidelity is permitted, although this is not divorce. In many such cases the wife’s dowry must be returned, in part or full."
+    }
+
+}

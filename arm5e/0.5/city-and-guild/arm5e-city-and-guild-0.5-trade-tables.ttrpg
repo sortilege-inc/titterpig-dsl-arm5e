@@ -1,0 +1,43 @@
+EXTENSION "ArM5_CityAndGuild_Trade_Tables" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Chapter Seven: Trade tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #tb4f8b52afba8bd1701f614 ^"Sabotage Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type of Sabotage", "Sentry’s Awareness Bonus", "Examples"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Defacement" "+0" "Throwing a bladder of ink at a monument."
+            "Rendezvous" "+3" "Meeting a spy inside the enemy’s area of control for a brief time. This is also the modifier for seducing an enemy’s relative in his own house."
+            "Arson" "+6" "Lighting a large fire within a warehouse or private residence. Prompt attention by sentries can mitigate damage caused by fires."
+            "Burglary" "+9" "Removing documents, which the agent must search a room for."
+            "Spoilage" "+12" "Adding fish oil to each barrel of a shipment of wine, so that the damage is not discovered until after the wine has been exported."
+        }
+    }
+
+    #ta5abb241b395a3d7254758 ^"Largesse: The Costs of Excellent Building" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Construction", "Cost"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Monument" "1 pound"
+            "Road" "2.5 pounds"
+            "House" "5 pounds"
+            "Well" "7.5 pounds"
+            "Bridge" "10 pounds"
+            "Mill" "25 pounds"
+            "Chapel" "40 pounds"
+            "Church" "250 pounds"
+        }
+    }
+
+}

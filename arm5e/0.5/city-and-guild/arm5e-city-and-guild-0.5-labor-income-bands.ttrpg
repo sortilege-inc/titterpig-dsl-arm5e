@@ -1,0 +1,72 @@
+EXTENSION "ArM5_CityAndGuild_Labor_Income_Bands" {
+    NAME "Ars Magica Fifth Edition, City & Guild - the six income bands"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # Found by evidence: a paragraph opening with the source's own bolded run-in
+    # label. The source states there are six bands and there are six labels. A
+    # following paragraph carrying no label of its own is a printed column split and
+    # continues the band above it, so no band's text stops where its column does.
+
+    #t741dd0d070c042f4498907 ^"Trivial" DEF {
+        EXTENDS ^"Income Band"
+        PROPERTIES {
+            ^"Annual Income" STRING "10 Mythic Pounds"
+            ^"Qualifying Social Status Virtues" LIST ["Craftsman (inexpensive and standard goods)", "Journeyman", "Laborer"]
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "A single workshop, in an average craft, earns 10 Mythic Pounds for its owner each year. This level of income is purchased with one of the following Social Status Virtues: Craftsman (inexpensive and standard goods), Journeyman, or Laborer."
+    }
+
+    #t7ea97f76ee9163447f21d0 ^"Minor" DEF {
+        EXTENDS ^"Income Band"
+        PROPERTIES {
+            ^"Annual Income" STRING "20 Mythic Pounds"
+            ^"Qualifying Social Status Virtues" LIST ["Craftsman (expensive goods)", "Guild Master", "Merchant"]
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "A merchant with a store in a major city earns 20 Mythic Pounds per year, as does a single workshop crafting expensive items, or a string of workshops manufacturing inexpensive goods. This level of income may be purchased with the following Social Status Virtues: Craftsman (expensive goods), Guild Master, or Merchant."
+    }
+
+    #t8d4379b877061bb869e44a ^"Lesser" DEF {
+        EXTENDS ^"Income Band"
+        PROPERTIES {
+            ^"Annual Income" STRING "40 pounds"
+            ^"Qualifying Social Status Virtues" LIST ["Guild Master", "Merchant", "Senior Master"]
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "A merchant with a dozen carts, or a small ship that trades bulk goods locally, earns 40 pounds per year. A guild master who can regularly produce superior quality standard goods or expensive goods also falls in this category, as does a master who has been working for several years at his trade. This level of income may be purchased with the following Social Status Virtues: Guild Master, Merchant, or Senior Master."
+    }
+
+    #t02d4b09e80317ddde2c5ca ^"Typical" DEF {
+        EXTENDS ^"Income Band"
+        PROPERTIES {
+            ^"Annual Income" STRING "100 Pounds"
+            ^"Qualifying Social Status Virtues" LIST ["Factor", "Guild Dean", "Merchant Venturer", "Senior Master (must be able to make quality items)"]
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "A merchant ship chasing rumors of profit across Europe, or the coordinator of a small fleet of ships trading within nearby regions, earns 100 Pounds per year. This level of income may be purchased with the following Social Status Virtues: Factor, Guild Dean, Merchant Venturer, or Senior Master (must be able to make quality items)."
+    }
+
+    #taa3edfd5b371f0d1ca37d3 ^"Greater" DEF {
+        EXTENDS ^"Income Band"
+        PROPERTIES {
+            ^"Annual Income" STRING "250 Mythic pounds"
+            ^"Qualifying Social Status Virtues" LIST ["Factor", "Capo", "Guild Dean"]
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "A merchant house with offices in at least two cities, which ferries many consignments each year, earns 250 Mythic pounds annually. Alternatively, a fleet of up to a dozen ships of varying sizes, which ply profitable routes throughout either the Mediterranean or the Atlantic, suits this band. This level of income may be purchased with the Factor, Capo, or Guild Dean Social Status Virtues, but troupes should seriously consider if a starting character with this level of affluence supports the stories they wish to tell."
+    }
+
+    #t76f6ee5ef76e5c89d38480 ^"Legendary" DEF {
+        EXTENDS ^"Income Band"
+        PROPERTIES {
+            ^"Annual Income" STRING "1,000 Mythic pounds"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "In Northern Europe, an annual fleet to Acre or Egypt, returning with silk and spices, earns 1,000 Mythic pounds per year. In southern Europe, an annual journey to Persia, India, Ethiopia, or one of the other near-mythical places where gemstones are mined would suit this band. The Dean of the Venetian Glass-Blowers’ Guild and the Dean of Constantinople’s Silk Makers’ Guild also receive this level of income. There are perhaps three merchants and a half-dozen guild deans in all of Europe with this much power. Player characters never start with this level of income."
+    }
+
+}

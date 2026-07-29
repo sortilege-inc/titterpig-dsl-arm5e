@@ -1,0 +1,25 @@
+EXTENSION "ArM5_City_And_Guild_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, City & Guild - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # City & Guild is an EXTENSION on the arm5e edition, loaded alongside the core
+    # rulebook (spec S13 composition). Types are declared here only where no core
+    # type holds the record; narrative goes to .lore and tables are structured TABLE
+    # DEFs, neither of which needs a type.
+    #
+    # ^"Income Band" is NOT ^"Income Source". Covenants' Income Sources are what an
+    # enterprise DOES (Agriculture, Fishing, Crime); a band is the scale of profit it
+    # returns, and this book is where the six are named and priced.
+
+    #tCGIncomeBandTypeAAAAAAAAAA ^"Income Band" DEF {
+        PROPERTIES {
+            ^"Annual Income" STRING
+            ^"Qualifying Social Status Virtues" LIST OF STRING
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+}

@@ -1,0 +1,23 @@
+EXTENSION "ARMDef_Grogs_Aging_Subtype" {
+    NAME "Ars Magica Fifth Edition, Grogs - grog-specific Aging subtype"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-29"
+    DEPENDS_ON "ARMDef_Long_Term_Events"
+
+    # Injected by scripts/retarget_armdef.py (owner's ruling, 2026-07-29), not
+    # copied from arm5e: arm5e's grog aging references point at arm5e core
+    # ^"Aging", and ArMDef distinguishes a grog's decade-based aging from a
+    # magus's. This subtype is the ArMDef-side home for that distinction. It
+    # changes neither ArMDef core nor arm5e. The grog aging RULES themselves are
+    # the corpus's own ^"Aging Chart" / ^"Aging, the Easy Way" records, carried
+    # over by copy; this is only the type they conceptually sit under, and the
+    # target the grog corpus's "Aging Points" references now resolve to.
+    #tARMDefGrogAgingSubtypeAAAA ^"Grog Aging" DEF {
+        EXTENDS ^"Aging"
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Grogs"
+        }
+        DESCRIPTION "Aging as it applies to grogs. Grogs advance by the decade using the simplified rules and the Aging Chart, rather than the year-by-year aging rolls a magus makes; this subtype of core Aging is where a grog's aging references resolve, so that grog aging does not intersect a magus's."
+    }
+}

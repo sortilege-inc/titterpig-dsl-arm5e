@@ -42,25 +42,124 @@ BASE "ARMDef_Core_Concepts" {
         DESCRIPTION "The Order of Hermes is an organization of magi that spans the whole of Mythic Europe, even reaching some distance beyond. It has about 1200 members, living in thirteen Tribunals which divide up the continent. In the Magical Realm, no single group can even think to challenge the Order as a whole, but the power of God is far beyond even Hermetic magi. This chapter lays out the history and current state of the Order of Hermes, to which **Ars Magica** characters are almost all affiliated in some way."
     }
 
-    # ⚠ FOURTEEN MORE CONCEPTS ARE REFERENCED AND NOT DECLARED HERE, DELIBERATELY.
-    #
-    # Two of them looked sourceable and are not. ArMDef's only passage on
-    # `Hermetic Magic` under that heading is a VIGNETTE -- "Under the eerie glow
-    # of the full moon rising, our clandestine meeting unfolds among ancient
-    # standing stones" -- and its only passage on `The Infernal` is saga-design
-    # advice, "How many demons do you want in your saga?". Neither defines its
-    # concept, and quoting fiction or advice into a DESCRIPTION would misrepresent
-    # what ArMDef says.
-    #
-    # The other twelve -- `Aging Points`, `Technique and Form`, `Lab Total`,
-    # `Lab Texts`, `The Divine`, `Extreme Unction`, `Damage Table`,
-    # `Wound Recovery Table`, `Personality Rolls`, `Aging Rolls`,
-    # `Laboratory Activity`, `Magical Animal Companion` -- have no ArMDef .lore
-    # coverage to draw on at all, though several have a near-named ArMDef record
-    # (^"Aging", ^"Damage Table (Wounds)", ^"Lab Texts (Build Points)",
-    # ^"Animal Companion"). Choosing among those is a judgement about ArMDef's
-    # rules, not a mechanical repair.
-    #
-    # All fourteen are listed with their reference counts and candidates in
-    # titterpig-mastra/worklogs/ARMDEF-RETARGET-findings.md, for the owner's call.
+    # ── The owner's rulings, 2026-07-29 ────────────────────────────────────────
+    # Six of the remaining concepts resolved to records ArMDef ALREADY declares
+    # under another name, and those are re-pointed by the transformer rather than
+    # redeclared here (^"The Divine" -> ^"The Divine Realm", ^"The Infernal" ->
+    # ^"The Infernal Realm", ^"Aging Points" and ^"Aging Rolls" -> ^"Aging",
+    # ^"Damage Table" -> the merged record). The rest are declared below.
+
+    # A stub, at the owner's direction. ArMDef devotes a whole chapter to
+    # Hermetic magic but declares no record for the concept itself, and its only
+    # passage under that heading is a vignette rather than a definition -- so the
+    # DESCRIPTION here is an editorial anchor note, NOT quoted rules text, and
+    # says so. 18 references, from six of the nine sourcebooks.
+    #tARMDefConceptHermeticMagic ^"Hermetic Magic" DEF {
+        PROPERTIES {
+            ^"Treated In" STRING "armdef-0.5-hermetic-magic.ttrpg"
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Anchor for the magic practised by the members of the Order of Hermes. ArMDef treats it in full in its Hermetic Magic chapter; this record exists so that cross-references to the concept resolve."
+    }
+
+    # ArMDef states the Lab Total inside ^"Basic Laboratory Activities", which is
+    # scoped to a Laboratory rather than to the sum itself. The sum is referenced
+    # on its own 12 times, so it gets its own record -- ArMDef's own words and
+    # ArMDef's own formula, lifted from that record, not rewritten.
+    #tARMDefConceptLabTotal ^"Lab Total" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        FORMULAS {
+            "YOUR BASIC LAB TOTAL IS" "Technique + Form + Intelligence + Magic Theory + Aura Modifier"
+        }
+        DESCRIPTION "You use one sum, called the Lab Total, frequently in calculating your ability to accomplish various laboratory tasks."
+    }
+
+    # Separate from ^"Lab Texts (Build Points)", at the owner's direction: that
+    # record is the COST of stocking a covenant's library, this one is the thing
+    # itself. Build Points may be spent on Lab Texts; they are not the same record.
+    #tARMDefConceptLabTexts ^"Lab Texts" DEF {
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Anchor for lab texts themselves -- the written record of a magus's laboratory work, which allows another magus to repeat it far more quickly. Their cost as a covenant's starting resource is the separate ^\"Lab Texts (Build Points)\" record."
+        REFERENCES {
+            "Lab Texts (Build Points)" -> ^"Lab Texts (Build Points)"
+        }
+    }
+
+    # The paired Arts of a Hermetic spell. ArMDef declares ^"Hermetic Technique"
+    # and ^"Hermetic Form" separately; the sourcebooks reference the pair as one
+    # concept when naming what a spell is built from.
+    #tARMDefConceptTechniqueForm ^"Technique and Form" DEF {
+        APPLIES TO [^"Formulaic Spell"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Anchor for the paired Arts that define a Hermetic spell -- its Technique and its Form. ArMDef declares each separately as ^\"Hermetic Technique\" and ^\"Hermetic Art\"."
+    }
+
+    # armdef-0.5-mythic-europe.lore :: "Sacraments" -- ArMDef's own sentence.
+    #tARMDefConceptExtremeUnction ^"Extreme Unction" DEF {
+        PROPERTIES {
+            ^"Treated In" STRING "armdef-0.5-mythic-europe.lore"
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Extreme Unction is the final sacrament, given just before death. For this reason, it draws the most ambiguous attitude of any sacrament. While it is generally believed to ease the passage to heaven, many people believe that, if you have received it, you are dead to the world in some sense, and must enter a monastery if you recover."
+    }
+
+    # From the printed ArMDef core table the owner supplied (pp.178-180 / p405).
+    # ArMDef's own content, not the sourcebooks'.
+    #tARMDefConceptWoundRecovery ^"Wound Recovery Table" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Wound Level", "Interval", "Stable Ease Factor", "Improvement Ease Factor"]
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        FORMULAS {
+            "RECOVERY TOTAL" "Stamina + Medic's Chirurgy or Medicine score + Magical Aid + Stress Die"
+        }
+        TABLE {
+            "Light" "One week" "4" "10"
+            "Medium" "One month" "6" "12"
+            "Heavy" "One season" "9" "15"
+            "Incapacitated" "See below" "" ""
+        }
+        DESCRIPTION "Roll interval determined by wound severity. Equal or Exceed Improvement Ease Factor: Wound improves by one level. Equal or Exceed Stable Ease Factor: Wound remains at same level, +3 bonus to future rolls. Below Stable Ease Factor: Wound becomes one level worse. Characters recover from all their wounds at the same time."
+    }
+
+    # Distinct from ^"Laboratory", at the owner's direction: the laboratory is the
+    # place, this is a season's work done in one. ArMDef's ^"Basic Laboratory
+    # Activities" enumerates them; this is the type they are instances of.
+    #tARMDefConceptLabActivity ^"Laboratory Activity" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Anchor for an activity a magus performs using a laboratory, as distinct from the laboratory itself. ArMDef enumerates the basic set in ^\"Basic Laboratory Activities\"."
+    }
+
+    # EXTENDS ArMDef's own ^"Animal Companion", at the owner's direction.
+    #tARMDefConceptMagicalAnimalComp ^"Magical Animal Companion" DEF {
+        EXTENDS ^"Animal Companion"
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "An animal companion that is itself a creature of the Magic Realm."
+    }
+
+    # The owner's read: this is new in Grogs rather than inherited from core. It is
+    # declared here because ArMDef is what the re-targeted book now builds on, and
+    # a reference has to land somewhere -- but WHERE it belongs is flagged in
+    # ARMDEF-RETARGET-findings.md, because a Grogs-only rule arguably belongs in
+    # the Grogs corpus, not in ArMDef core.
+    #tARMDefConceptPersonalityRolls ^"Personality Rolls" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Anchor for a roll made against a Personality Trait to determine how a character behaves."
+    }
 }

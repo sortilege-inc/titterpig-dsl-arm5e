@@ -1,0 +1,148 @@
+EXTENSION "ArM5_CityAndGuild_Crafts_Tables" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Chapter Four: Crafts tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #t736c318e09dbc69815a9be ^"Innovation Score" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Innovation Score", "Total Labor Points"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "+1" "100"
+            "+2" "300"
+            "+3" "600"
+        }
+    }
+
+    #t369915d7ac60a5160a17e2 ^"Raw Materials Score" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Raw Materials Score", "Total Labor Points"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "+1" "50"
+            "+2" "150"
+            "+3" "300"
+        }
+    }
+
+    #ta42d45aa0d854f9b89a2c9 ^"Standard Quality Items Constructed in a Season" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Guild", "Cost"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "1 suit of full chainmail" "armorer" "Exp."
+            "2 longswords" "swordsmith" "Exp."
+            "8 shortswords" "swordsmith" "Std."
+            "2 great swords" "swordsmith" "Exp."
+            "8 heater shields" "shield maker" "Std."
+            "16 round shields" "shield maker" "Inexp."
+            "32 suits of clothing" "tailor" "Inexp."
+            "15 silver bracelets" "goldsmith" "Exp."
+            "8 wagons" "carter" "Std."
+            "3 locks" "locksmith" "Exp."
+            "30 hoes" "blacksmith" "Inexp."
+            "15 plowshares" "blacksmith" "Inexp."
+            "4 full suits of leather scale armor" "tanner & armorer" "Std."
+            "18 saddles" "tanner" "Std."
+            "15 barrels" "cooper" "Inexp."
+            "Parchment for 4 books" "percamenarius (Scribes’ Guild)" "Exp."
+            "90 glass flasks" "glass maker" "Std."
+            "6 alembics" "glass maker" "Exp."
+            "2 town houses*" "carpenter" "Exp."
+            "1/2 of a ship*" "ship maker" "Exp."
+            "1/2 of a stone tower*" "mason" "Exp."
+            "1/5 of a castle*" "mason & carpenter" "Exp."
+            "1/50 of a cathedral*" "mason, carpenter, & glass maker" "Exp."
+        }
+    }
+
+    #t2cfe76097fad7fafa83a04 ^"Finished Goods Craft Levels" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Craft Level"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Distant war, famine, plague" "+1"
+            "Active war, famine, plague" "+3"
+            "Scarce materials" "+1"
+            "Severe or multiple interruptions" "+2"
+            "Losing an employee" "+1"
+            "Gaining a new employee" "+1 (first season only)"
+            "Working in an Infernal, Faerie, or Magical aura" "+1"
+        }
+        DESCRIPTION "The standard Craft Level used for seasonal crafting is 6. This can be modified, and the following chart offers suggestions for doing so. Anything that might somehow hamper production raises the Craft Level. Modifying the basic Craft\n\nLevel also changes the Craft Levels of different quality goods. For example, if the storyguide decides that the Basic Craft Level is 9, then a craftsman character needs a 15 to make superior goods and an 18 to make excellent goods."
+    }
+
+    #t2799d161f5a72d2f22a03a ^"Workshop Exertion Results" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Roll", "Result"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Botch" "Disaster"
+            "0–3" "No special results"
+            "4–5" "Disappointing ramifications"
+            "6–7" "No benefit"
+            "8" "Story event"
+            "9" "Invention"
+            "10" "Increased Reputation"
+            "12+" "Increased understanding"
+        }
+    }
+
+    #t9a42b225902e8e36b72acc ^"Stress Check Modifier" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Stress Check Modifier"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Trained to use item" "+ Ability score"
+            "Previously repaired" "–1"
+            "Shoddy Quality" "–1"
+            "Superior Quality" "+1"
+            "Excellent Quality" "+3"
+            "Wondrous Item" "+5"
+            "Hermetically Enchanted Item" "+ magnitude of the total of instilled spell effects"
+            "Poor lighting or weather" "–1"
+            "Severe weather or no light" "–3"
+            "Prolonged use" "–3"
+        }
+    }
+
+    #te7073a62b10fa4d527745a ^"Item Quality" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item Quality", "Base Damage Levels"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Shoddy" "1"
+            "Standard" "2"
+            "Superior" "3"
+            "Excellent" "4"
+            "Supernatural" "5"
+        }
+    }
+
+    #te32bc7a71c33bf7f31737f ^"Item Size" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item Size", "Damage Level Modifier"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "–5 to +1" "1"
+            "+2 to +5" "2"
+            "+5 to +8" "3"
+            "+9 and larger" "4"
+        }
+    }
+
+}

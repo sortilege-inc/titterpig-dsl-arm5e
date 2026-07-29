@@ -1,0 +1,42 @@
+EXTENSION "ArM5_CityAndGuild_Crafts_Virtues" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Craftsmen Supernatural Virtues"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # Found by evidence: a bolded run-in label carrying the source's own
+    # parenthesised size. The kind -- Virtue -- is read off the box's own heading,
+    # the only place the source states it.
+
+    #t59d88f0b035aa9d8551529 ^"Eye of Hephaestus" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character can innately tell the quality of a manufactured item. If the item is somehow flawed he is instantly aware of that by merely touching it. He also has a chance to tell if an item is magical. For supernatural items made by a craftsman, make a Perception + Awareness + stress die roll against an Ease Factor of 9. If successful, the character knows the power of the item. For Hermetic enchanted items, or those made by other sorcerers, make a Perception + Awareness + stress die roll against a 12. If successful, the character knows the item is enchanted, but has no idea how, or what its powers might be. Botching either roll results in false information. This Virtue does not offer any information about the actions or commands necessary to trigger an item’s powers.\n\nHephaestus was a pagan god of craftsmen, primarily metallurgists. Calling this Virtue the Eye of St Dunstan is more appropriate for Christian characters."
+    }
+
+    #t6bd7e3554633c4d21b83c7 ^"Touched by (Realm)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Through ancestry, accident, or supernatural intervention, the character has a small amount of magic in his blood and may make wondrous items through his craft. Unlike The Gift, this supernatural ability does not interfere in any type of social interaction. You must determine the source of this power, either Divine, Faerie, Infernal, or Magic. He is considered to be affiliated with the realm you choose, and thus immune to Warping due to prolonged exposure to auras of that realm."
+    }
+
+    #t425c22408aad10a5784844 ^"Crafter’s Healing" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Like the smiths of ancient lore, the character can magically heal wounds by touching them with the tools of his trade. This is a rare and mysterious power that Hermetic magi cannot understand or duplicate, and it is common for this Virtue to follow familial bloodlines. Selecting this Virtue gives the character the Crafter’s Healing Ability at a score of 1.\n\nWhen using this Ability, each wound can only be treated once, regardless of its severity. Make a Presence + Crafter’s Healing + stress die roll against an Ease Factor equal to the Improvement Ease Factor determined by the Wound Recovery Table (ArM5, page 179). Healing a wound costs a Long-Term Fatigue level. If successful, the wound is healed one level: heavy wounds become medium, medium wounds light, and light wounds heal totally. If the roll fails, nothing happens besides fatigue loss. If the roll botches, the healer suffers a similar wound immediately. The wounded recipient gains a Warping Point each time this Ability is used on her, regardless of its success."
+    }
+
+}

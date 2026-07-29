@@ -1,0 +1,84 @@
+EXTENSION "ArM5_CityAndGuild_Crafts_Exertion_Results" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Workshop Exertion Results"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # The eight outcomes of the Workshop Exertion Results roll. Each record's Roll
+    # is taken from the table printed in the same box and matched by name, so the
+    # table and the descriptions cannot disagree -- an unmatched name fails here.
+
+    #t254d94dd3fdb93ce3dad61 ^"Disaster" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "Botch"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character’s increased efforts have gone horribly awry. The storyguide determines the exact results, but the character’s misfortune is tantamount to potential ruin. For example, he could ruin his stock, destroy his raw materials, kill a journeyman through a workshop accident, get caught by guild officials and face a major fine, or burn down his workshop."
+    }
+
+    #tccb4735e00a64b5f8a1347 ^"No Special Results" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "0–3"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The season goes as planned without any unfortunate incidents."
+    }
+
+    #te4310f4c8f4402a7abe73b ^"Disappointing Ramifications" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "4–5"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The season is fruitful, but the character attracts the attention of someone or something that he would rather not have. Or, some aspect of the production that he didn’t think connected to his season becomes problematic. For example, raw materials become harder to acquire for a year, income is decreased by 10% due to a market glut, he gains a temporary enemy, or the magi make greater demands on him once they notice his skill."
+    }
+
+    #t8068ca42dfd3e2ab0055bb ^"No Benefit" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "6–7"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Despite his best efforts, the character does not receive any bonus to the Workshop Total for the season."
+    }
+
+    #t3ffb2d024709ac7031a9fb ^"Story Event" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "8"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "As a successful season ends, something happens that draws the character into a story to resolve. This could involve the character directly, or instead relate to his staff, his competitors, clients, or neighbors."
+    }
+
+    #t845d297bf70ddb29ec6825 ^"Invention" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "9"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "During his efforts the craftsman discovers a way to increase the overall production of his workshop. Put a simple die’s worth of Labor Points towards the workshop’s Innovation score."
+    }
+
+    #t3944d035b65dbefed2f8f6 ^"Increased Reputation" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "10"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "News of the craftsman’s efforts spreads quickly. Add a simple die worth of experience points to the craftsman’s (Craft) Reputation score."
+    }
+
+    #tc9df196ab6ea163b4830f4 ^"Increased Understanding" DEF {
+        EXTENDS ^"Workshop Exertion Result"
+        PROPERTIES {
+            ^"Roll" STRING "12+"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The craftsman discovers more about his craft through his season’s work and gains experience points in his Craft Ability. Add the results of a simple die to his experience points in his Craft Ability."
+    }
+
+}

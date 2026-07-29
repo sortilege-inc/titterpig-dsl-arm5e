@@ -155,11 +155,29 @@ BASE "ARMDef_Core_Concepts" {
     # a reference has to land somewhere -- but WHERE it belongs is flagged in
     # ARMDEF-RETARGET-findings.md, because a Grogs-only rule arguably belongs in
     # the Grogs corpus, not in ArMDef core.
+    # Owner's ruling, 2026-07-29: make it an extends. A Personality Roll is built
+    # on a Personality Trait, so it EXTENDS ArMDef's ^"Personality Trait" rather
+    # than standing as a bare ^"Character" anchor.
     #tARMDefConceptPersonalityRolls ^"Personality Rolls" DEF {
-        APPLIES TO [^"Character"]
+        EXTENDS ^"Personality Trait"
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
-        DESCRIPTION "Anchor for a roll made against a Personality Trait to determine how a character behaves."
+        DESCRIPTION "A roll made against a Personality Trait to determine how a character behaves."
+    }
+
+    # A story genre ArMDef treats in armdef-0.5-stories.lore :: "Exploration".
+    # ArMDef declares no story-genre records, so House Grogs' `MODIFY ^"Exploration"`
+    # (which adds its own Grogs Story Genre note) had nothing to resolve against --
+    # the one remaining validator error. Declared here from ArMDef's OWN lore text,
+    # the same concept-anchor pattern as ^"Mythic Europe"; the Grogs MODIFY then
+    # augments it. Not taken from the Grogs sourcebook.
+    #tARMDefConceptExploration ^"Exploration" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Treated In" STRING "armdef-0.5-stories.lore"
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "The characters go somewhere they haven't been before, and find out about it. This covers going into caves, killing monsters, and taking their stuff, but it is much broader. It also includes traveling to the local abbey and trying to set up good relations with the abbot, finding a faerie forest and learning how to collect raw vis there, and even visiting other covenants of the Order for the first time."
     }
 }

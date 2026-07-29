@@ -1,0 +1,153 @@
+EXTENSION "ArM5_CityAndGuild_Travel_Tables" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Chapter Five: Travel tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #t13e41798adbbecc3058b9b ^"Area Lore Ease Factors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "What the Character Knows"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "6+" "A shop selling any common product or service, desired by all people, and places where goods may be had for free, like fishing and hunting spots"
+            "" "Any major road, ferry, ford, pass, or bridge"
+            "" "Any major hazard to travel on the main route"
+            "" "Any major inn"
+            "" "Appropriate behavior as a minor participant at festivals"
+            "9+" "A shop selling any good or service desired only by a section of society. Examples include farriers, coopers, or weapon smiths. This is also the level required to contact most hedge magicians."
+            "" "Smaller gravel or paved roads"
+            "" "Hazards to travel within the region, off the main roads and rivers"
+            "" "The largest inn or hospice near each village"
+            "" "People with Reputations of 6+"
+            "" "Local customs, ignorance of which is illegal or despised"
+            "12+" "A shop selling goods that are desired only by a narrow group within society. Examples include anything related to the book trade, to cosmetics, or to luxury fabrics."
+            "" "The road to any mundane place in the region"
+            "" "Hazardous sections of towns or cities, and the correct method of traveling through them"
+            "" "Small hospices or inns along the route, and their quality, and places where a merchant might comfortably camp along the route"
+            "" "People with Reputations of 3+"
+            "" "Local laws or customs that will cause the character to slowly develop a poor Reputation if ignored"
+            "15+" "A person selling a service or product that is illegal, and actively repressed. This includes burglars, kidnappers, and herbalists willing to sell illicit poison."
+            "" "Minor tracks, or the roads to deserted settlements"
+            "" "Individual persons or places of ill repute, where other travelers have suffered. Suffering, in this case, may be as severe as murder, or as minor as uncomfortable beds and watered drinks."
+            "" "Where to get the best room at every time of year, and where to seek shelter in weather too poor to travel"
+            "" "Any person who is publicly a member of any community on the route. The character may need to take the time to ask locals, but with this successful roll, they know whom to ask."
+            "" "The public alliances, commercial dealings, and marital links between persons of note (Reputations of 3+)"
+            "" "Who is really in charge, and how to meet them. This Ease Factor is used in places where real power is widely known to be held by private people, who control proxies holding public offices."
+            "18+" "A person selling services that are considered heinous, for example thugs willing to commit murder"
+            "" "Roads considered to be under supernatural influence, such as faerie trods or black ways"
+            "" "Factors that make places hazardous briefly, before they revert to safe. This includes places that become mystically charged on certain nights, but also includes an understanding of the circuit of the local bailiffs, or the methods of customs inspectors."
+            "" "How to contact mundane people who have taken efforts to be anonymous, like smugglers or bandits"
+        }
+    }
+
+    #t41ac346cca33c08a4cfc6d ^"Naval Trade Tables (1)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Bruges", "Dublin", "Edinburgh (Leith)", "Hamburg", "London", "Paris", "Brittany Junction", "Skagarek Junction"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Bruges" "0" "11" "8" "7" "4" "32" "8" "11"
+            "Dublin" "11" "0" "12" "17" "12" "36" "7" "9"
+            "Edinburgh (Leith)" "8" "12" "0" "9" "9" "38" "13" "9"
+            "Hamburg" "7" "17" "9" "0" "9" "38" "10" "7"
+            "London" "3" "11" "8" "8" "1" "32" "5" "17"
+            "Paris" "27" "31" "33" "33" "5" "0" "35" "34"
+            "Brittany Junction" "7" "5" "13" "10" "9" "40" "0" "16"
+            "Skagarek Junction" "9" "17" "9" "7" "12" "39" "16" "0"
+        }
+        DESCRIPTION "These tables divide Europe into six regions, linked by junctions. A junction is a place that a ship must pass to move from one region of Europe to another. A player designing a voyage simply adds together the times to each junction, then to the final port.\n\nConstantinople 6 4 7 10 3 0 Junction tables continue on next page"
+    }
+
+    #t0bda1484d9befc553a3761 ^"Naval Trade Tables (2)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Danzig", "Lubeck", "Reval", "Riga", "Skagarek Junction"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Danzig" "0" "6" "8" "6" "8"
+            "Lubeck" "6" "0" "12" "10" "5"
+            "Reval" "8" "12" "0" "6" "13"
+            "Riga" "6" "10" "6" "0" "12"
+            "Skagarek Junction" "8" "5" "13" "12" "0"
+        }
+    }
+
+    #tcea53deec563621a6ef55f ^"Naval Trade Tables (3)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Bilhorod", "Constanta", "Kaffa", "Trebizond", "Varna", "Constantinople Junction"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Bilhorod" "0" "3" "2" "10" "5" "6"
+            "Constanta" "3" "0" "6" "12" "1" "4"
+            "Kaffa" "2" "6" "0" "7" "7" "7"
+            "Trebizond" "10" "12" "7" "0" "15" "10"
+            "Varna" "5" "1" "7" "15" "0" "3"
+            "Constantinople Junction" "6" "4" "7" "10" "3" "0"
+        }
+    }
+
+    #ta3c1df6b0cd408859b97ad ^"Naval Trade Tables (4)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Bordeaux", "Lisbon", "Seville", "Brittany Junction", "Gibraltar Junction"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Bordeaux" "0" "14" "21" "6" "19"
+            "Lisbon" "14" "0" "7" "13" "5"
+            "Seville" "19" "5" "0" "18" "5"
+            "Brittany Junction" "6" "13" "20" "0" "18"
+            "Gibraltar Junction" "19" "5" "7" "18" "0"
+        }
+    }
+
+    #tce9106dc05027aeceedf7a ^"Naval Trade Tables, Continued (1)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Algiers", "Barcelona", "Genoa", "Marseilles", "Naples", "Palermo", "Palma", "Pisa", "Rome", "Valencia", "Gibraltar Junction", "Messina Junction", "Syracuse Junction", "Tunis Junction"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Algiers" "0" "5" "10" "8" "11" "10" "3" "10" "10" "4" "8" "12" "12" "8"
+            "Barcelona" "5" "0" "7" "4" "11" "11" "3" "7" "8" "3" "10" "13" "14" "9"
+            "Genoa" "10" "7" "0" "4" "6" "8" "9" "1" "4" "10" "17" "9" "11" "9"
+            "Marseilles" "8" "4" "4" "0" "9" "9" "6" "4" "6" "7" "14" "11" "12" "9"
+            "Naples" "11" "11" "6" "9" "0" "3" "11" "5" "21" "13" "19" "3" "5" "6"
+            "Palermo" "10" "11" "8" "9" "3" "0" "10" "7" "4" "13" "18" "2" "4" "4"
+            "Palma" "3" "3" "9" "6" "11" "10" "0" "9" "9" "3" "9" "12" "13" "8"
+            "Pisa" "10" "7" "1" "4" "5" "7" "9" "0" "3" "10" "17" "8" "9" "8"
+            "Rome" "10" "8" "4" "6" "21" "4" "9" "3" "0" "11" "18" "5" "7" "6"
+            "Valencia" "4" "3" "10" "7" "13" "13" "3" "10" "11" "0" "8" "15" "15" "11"
+            "Gibraltar Junction" "8" "10" "17" "14" "19" "18" "9" "17" "18" "8" "0" "20" "20" "16"
+            "Messina Junction" "12" "13" "9" "11" "3" "2" "12" "8" "5" "15" "20" "0" "1" "6"
+            "Syracuse Junction" "12" "14" "11" "12" "5" "4" "13" "9" "7" "15" "20" "1" "0" "5"
+            "Tunis Junction" "8" "9" "9" "9" "6" "4" "8" "8" "6" "11" "16" "6" "5" "0"
+        }
+    }
+
+    #te9a3ab57499a686397b990 ^"Naval Trade Tables, Continued (2)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Acre", "Alexandria", "Crete (Iraklion)", "Cyprus (Larnaca)", "Smyrna", "Split", "Venice", "Constantinople Junction", "Messina Junction", "Syracuse Junction", "Tunis Junction"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Acre" "0" "6" "22" "3" "12" "23" "26" "16" "19" "19" "24"
+            "Alexandria" "6" "0" "7" "6" "10" "20" "23" "14" "16" "16" "20"
+            "Crete (Iraklion)" "22" "7" "0" "8" "5" "13" "17" "9" "10" "9" "5"
+            "Cyprus (Larnaca)" "3" "6" "8" "0" "10" "22" "25" "15" "18" "18" "22"
+            "Smyrna" "12" "10" "5" "10" "0" "16" "19" "5" "12" "12" "17"
+            "Split" "23" "20" "13" "22" "16" "0" "4" "19" "9" "9" "14"
+            "Venice" "26" "23" "17" "25" "19" "4" "0" "22" "12" "13" "18"
+            "Constantinople Junction" "16" "14" "9" "15" "5" "19" "22" "0" "16" "15" "20"
+            "Messina Junction" "19" "16" "10" "18" "12" "9" "12" "16" "0" "1" "6"
+            "Syracuse Junction" "19" "16" "9" "18" "12" "9" "13" "15" "1" "0" "5"
+            "Tunis Junction" "24" "20" "5" "22" "17" "14" "18" "20" "6" "5" "0"
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+EXTENSION "ArM5_CityAndGuild_Travel_Sidebars" {
+    NAME "Ars Magica Fifth Edition, City & Guild - Chapter Five: Travel sidebars"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
+
+    # Every Text Box the source's outline enumerates for this chapter. Prose
+    # sidebars become GUIDANCE with verbatim TEXT; a box carrying a real table unit
+    # also emits a structured TABLE DEF. Sidebar units are never reordered
+    # (decision M-15): a box is one self-contained flow and the page-level reading
+    # oracle cannot tell its text from the main column's.
+
+    GUIDANCE {
+        ENTRY ^"Greek Fire" #tdd970f69fbc8be679532d1 {
+            TEXT "Greek Fire\n\nGreek fire is a sticky, flammable substance that cannot be extinguished by water. The Byzantine navy, prior to the fall of Constantinople, used siphons and ceramic pots flung from catapults to incinerate enemy vessels. The secret of the manufacture of Greek fire, or a similar concoction made in imitation by Arabic alchemists, is closely guarded. Characters might acquire it, as part of a major story."
+        }
+    }
+
+}

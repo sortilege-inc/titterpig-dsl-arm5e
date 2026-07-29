@@ -1,0 +1,94 @@
+EXTENSION "ARMDef_HoH_True_Lineages_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: True Lineages - Virtues and Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ARMDef_Core_Virtue_Flaw"
+
+    # The book's new Virtues and Flaws. They fit the core ^"Virtue"/^"Flaw" types
+    # unchanged, so they EXTEND those directly rather than a book-local type.
+    # Size and Category carry what the source's category headings (MINOR HERMETIC
+    # VIRTUES, MINOR STORY FLAW, ...) convey, matching the core and Grogs treatment.
+
+    #t26ac69c15b74e600159c66 ^"New Virtues and Flaws" DEF {
+        PROPERTIES {
+            ^"House" STRING "House Bonisagus"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Over the years House Bonisagus has included many members with particular Virtues and Flaws. Since the House can select other magi’s apprentices, youths who exhibit these powers are often adopted into the House. However, this does not mean that Bonisagi are the sole recipients of these boons. Virtues and Flaws marked with an asterisk depend on the structure of House Bonisagus, and so are exclusive to the House. Others are not."
+    }
+
+    #t1a7962635b70777080ab16 ^"Colens Arcanorum" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"House Exclusive" STRING "House Bonisagus"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are a member of one of the inner circles of House Bonisagus, the Collectors of Secrets. You begin the game with the House Bonisagus rank* cannophori.* During your seven year tenure you will receive Lab Texts and tractatus from other magi Bonisagi, which you may keep. At the end of your service you must attend the Colloquium Delectorum and decide which of these submitted text will be included in a folio. You must also contribute to the folio’s construction. This Virtue is\n\nnot appropriate for magi Bonisagi fresh from their gauntlet; you should have passed your apprentice’s gauntlet at least ten years ago."
+    }
+
+    #t7c222d86f60b3f89502aee ^"Tenens Occultorum" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"House Exclusive" STRING "House Bonisagus"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are a member of one of the inner circles of House Bonisagus, the Tenders of Secret Knowledge. You have been chosen by the Primus to occupy one of the four Tenentes Occultorum positions. Your exact position is depending on your experience, judged by the numbers of seasons since your gauntlet. If you are a younger magus you will be the Spring Tenens. Certain responsibilities accompany this Virtue."
+    }
+
+    #td0ca04957b8e2a85774130 ^"Figurine Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Supernatural" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You have been taught the art of Figurine Magic, which allows you to construct small wax or wood figurines of power, whose benefits may assist you or others. You may either be a Gifted magus or a non-Gifted practitioner. Taking this Virtue confers the Ability Figurine Magic 1. See the optional example in the Example Discoveries section for more information."
+    }
+
+    #tc07b18375dd3facf4c75c2 ^"Linguist" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are extremely proficient learning new languages. All Study Totals for any Language are increased by a quarter, as any experience points you put into any language at character generation. Both Living and Dead languages are augmented with this Virtue."
+    }
+
+    #td92d7b6f08d9d785ae29e0 ^"Stockade Parma Magica" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Hermetic" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Because of your restricted understanding of Parma Magica, you cannot suppress your Parma once it is erected. Any friendly spell or magical affect must penetrate your Parma Magica to affect you, just as if it were a hostile spell."
+    }
+
+    #ta95f11c75fa33cd0985b1b ^"Seeker" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Personality" FIXED
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You are a self-proclaimed member of the Seekers, a loose organization of competitive magi searching for ancient magic and arcane artifacts. Much of your life is spent in pursuit of these items. Your interests may occasionally clash with other interests of your House."
+    }
+
+    #ted839968d82b31dcd4f06a ^"Fostered Apprentice" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "Story" FIXED
+            ^"House Exclusive" STRING "House Bonisagus"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You were fostered as an apprentice, briefly serving another magus in his laboratory. You have a lasting relationship with this magus, similar to the relationship you have with your parens. You also have a connection to another magi Bonisagi that you trained with. Either of these people may ask favors of you, which you feel obligated to perform."
+    }
+
+}

@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_RoP_Magic_Abilities" {
+    NAME "Ars Magica Definitive Edition, Realms of Power: Magic - New and Modified Abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_RoP_Magic_Core_Ext"
+
+    MODIFY ^"Animal Handling" {
+        PROPERTIES {
+            ^"RoP Magic Note" STRING "Besides being able to train and take care of animals (as described in ArM5, page 62), you can apply the same principles when interacting with other beings that have Cunning instead of Intelligence. For example, with this Ability you can manage and train elementals, animate trees, or animal spirits."
+            ^"RoP Magic Source" STRING "Realms of Power: Magic"
+        }
+    }
+
+    #taUAtP1qs9uQ09XiFMN1BQzf ^"(Form) Resistance" DEF {
+        EXTENDS ^"Ability"
+        PARAMETERS { ^"form" OF ^"Art" }
+        PROPERTIES {
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a single source of damage inflicted by that Form"]
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters with a Magic Might Score can possess this Ability. Through exposure to a particular magical Form, the character has developed a natural resistance to things associated with that Form, in the same way that magi become more resistant by studying the magic of the associated Hermetic Form. You may add the character’s score in this Ability as a bonus to attempts to resist damage from things of that Form (as described in the examples on pages 78-79 of ArM5). For example, you may add your score in Vim Resistance to rolls to resist Agitation and to your soak total against damage inflicted by your own magical powers. Like Form bonuses for magi, this also increases a magic character’s Magic Resistance against spells of that Form, but this is only compatible with Magic Might; it does not stack with the Parma Magica."
+        REFERENCES {
+            "Magic Might" -> #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might"
+            "Hermetic Form" -> #tUEdmiz0IADMNt9MPAbcgRyn ^"Hermetic Form"
+            "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            "Magic Might" -> #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might"
+            "Parma Magica" -> ^"Parma Magica"
+        }
+    }
+
+    #tBapzC9frzWETwU4EkhEh2X7 ^"Magical Meditation" DEF {
+        EXTENDS ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["recovering Might Points", "preventing Acclimation", "maintaining concentration"]
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Only characters with a Magic Might Score can possess this Ability. By concentrating, the character enters a trance-like state in which it can absorb magic from its surroundings at an increased rate. This has two effects. • As long as the character concentrates, it recovers 1 Might Point for each level of the Magic aura over the course of about ten minutes, so that when concentrating in a level 5 Magic aura, a character with this Ability would recover 30 Might Points every hour. • By concentrating within a Magic aura, the character may prevent Acclimation at twice the normal rate. For example, a character with 30 Might could prevent acclimation as if it had a Might Score of 15. While concentrating, the character usually appears to be asleep. Magical beings with nonliving forms may appear completely inanimate to outsiders during this time. If disturbed, the character must roll on the Concentration table, using this Ability instead of Concentration. Failure means that the effort is wasted for that period."
+        REFERENCES {
+            "Magic Might" -> #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might"
+        }
+    }}

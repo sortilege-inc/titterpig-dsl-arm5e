@@ -1,0 +1,105 @@
+EXTENSION "ARMDef_CityAndGuild_Guilds_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, City & Guild - Chapter Three: Guilds Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_City_And_Guild_Core_Ext"
+
+    # Found by evidence: a bolded run-in label carrying the source's own
+    # parenthesised size ('Failed Master (Minor): '). The kind -- Virtue or Flaw --
+    # is read off the enclosing box's heading, the only place the source states it.
+    # A label whose text WRAPS out of the emphasis run is rejoined before the record
+    # is named (p53's 'Male Guild Sponsor (Free, General Virtue)').
+
+    #t051205f862d84f2435989e ^"Failed Master" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Either through faulty management or illegal business practices, the character has run his workshop into the ground. He must work as a journeyman if he wants to practice his trade legally in town. The character has a bad Reputation of 4 in town, and it will be difficult for him to regain his legal status as a master."
+    }
+
+    #tf8434418a661f05f946f63 ^"Failed Journeyman" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character has been expelled from his guild due to past illegal or questionable practices. He may not practice his trade in town nor sell his goods there. The character is expected to find another means of livelihood, although no other guild will accept him, so many such men must find a way to practice their trade illegally. He has a bad Reputation of 2 in town."
+    }
+
+    #t2ffbdc5f112dfcb3f56b1d ^"Laborer" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is a trained worker who practices a trade that is a valuable service to his community, but by which no finished good is produced. Unlike a peasant, who is an agrarian worker who works at a variety of jobs, a laborer concentrates on one specific endeavor to earn his livelihood, be it hauling wood, washing clothes, cleaning latrines, carrying luggage, or serving food."
+    }
+
+    #t5893360d04db16e3f031bb ^"Craftsman" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is a general craftsman, as described in the core rules (ArM5, page 41). He is either an adult practicing a trade or a youth learning it from his master. He may live rurally or in an urban environment. If he lives in a town, his trade is not represented by a guild. The character may be either male or female and any appropriate age."
+    }
+
+    #t731b60ec35acffba2321df ^"Male Guild Sponsor" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Category" STRING "General Virtue"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character’s father or husband is a guild craftsman and she has been allowed entry into his field of work, which is otherwise restricted to men. The character may work at her trade, following the same procedures as the regular male workers. Every guild allows such members, so she may practice any craft she desires. The character must select a separate guild Social Virtue as well as this free General Virtue to represent her status in the guild system."
+    }
+
+    #t5b9d4d8d72fc4c26dcab6a ^"Guild Apprentice" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is a youth between the ages of 10 and 20 who is learning his trade from a guild master or journeyman. He has entered into a contract with his master that guarantees his training. The character is not able to benefit from either the Poor Flaw or the Wealthy Virtue, since he is essentially the property of his master, until he moves to the journeyman rank. Most of his time is spent in ways determined by his master."
+    }
+
+    #tf9f67ec7231736409d6944 ^"Journeyman" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is a trained guild craftsman and may practice his trade in town under guild supervision. He works for a master for a wage."
+    }
+
+    #ta47f826b38591b060b343c ^"Guild Master" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is a guild master and may legally practice his trade in town, and hire journeymen to work for him. He participates in guild activities and is considered a member in good standing. You may select Academic Abilities at character generation."
+    }
+
+    #td7b046657786b70ace5601 ^"Senior Master" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character has been a prosperous guild master for a number of years and has risen to a position of authority in his guild. He has knowledge of guild affairs and participate in the self-governing of the guild. He may own multiple workshops and employ a large number of workers. You may select Academic Abilities at character generation."
+    }
+
+    #t8929ab4e10785d31bf97dc ^"Guild Dean" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "The character is the ultimate authority of his guild, the man who decides many of the important decisions that face the guild and represents it politically. The character is involved in town politics, long-term trade contacts, and negotiations with other guilds and local craftsmen. The town’s population views him as an important and prestigious member of their community. You may select Academic Abilities at character generation."
+    }
+
+}

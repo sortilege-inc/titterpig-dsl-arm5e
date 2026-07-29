@@ -1,0 +1,170 @@
+EXTENSION "ARMDef_HoH_True_Lineages_Mercere" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: True Lineages - House Mercere rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ARMDef_Houses_True_Lineages_Core_Ext"
+
+    # Chapter Three's laboratory and magic rules: the Mastered Spell special
+    # abilities, Mercere's Portals, and Mutantum Magic. The chapter's narrative is
+    # armdef-houses-true-lineages-0.5-mercere.lore; its Virtues and Flaws and its
+    # spells are in the sibling files.
+
+    #t907df98f9d1df985f7fa3f ^"Laboratory Rules" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "These include long-term activities as well as variations on standard lab work."
+    }
+
+    #t20fbd5857902bd66d501b6 ^"Mastered Spell Special Abilities" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Any time magi earn a level in a spell mastery ability, they may choose from these special abilities in addition to those in **Ars Magica **5th Edition, as long as some of the experience points were taught by someone with the Ability. Most magi in the true lineages prefer to share this specialized knowledge only with their apprentices, though their methods may be written down in books that anyone can read, and it is not impossible for a master to decide to teach a student with very similar goals and loyalties.\n\nCharacters who take Mastered Spells during character creation and who have access to these abilities during apprenticeship may spend their mastery points on them if they wish."
+    }
+
+    #tc738ff5e26257f7a2a0e5b ^"Adaptive Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Cult of Mercury"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This special ability may only be taken for General spells. You may use your mastery score and all the special\n\nabilities associated with this spell whenever you cast the same spell at a different level."
+    }
+
+    #t4598bee244a78c355b3132 ^"Boosted Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Mutantes"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "When casting this spell, you may use vis to increase the Range, Duration, or Target by one magnitude for each pawn spent. You may not boost the Duration to Year or the Target to Boundary unless the spell is already a Ritual."
+    }
+
+    #tb97c9f9fe1019d22bc7f61 ^"Ceremonial Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Cult of Mercury"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You may use ceremonial methods when casting this spell, increasing the casting time and adding your Artes Liberales and Philosophiae to your total. This cannot be taken for Ritual spells, which always require ceremonial casting."
+    }
+
+    #t3d3b44247a22fe768c5bfa ^"Disguised Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Cult of Mercury"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "When casting this spell, you may suppress or alter your sigil, to hide your identity or make the spell appear to have been cast by someone else. Since this actually changes your sigil, it is impossible for others to recognize you from it, though magi might be able to recognize that a fake sigil is not genuine. When you mimic the sigil of another magus, you may add your Spell Mastery score to the roll that determines how difficult it is to recognize."
+    }
+
+    #td11e027a590cd6da5851e1 ^"Harnessed Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Mutantes"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You may end the effects of this spell at will, simply by concentrating on it. For timing and concentration purposes, treat this as if you were casting the spell. If you are distracted and fail your Concentration roll, you may try again in another round."
+    }
+
+    #td61632da0ccd8e7596cff6 ^"Lab Mastery" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Cult of Mercury"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You understand the theory of this spell so perfectly that you may add your spell mastery score to your Lab Total when designing effects that are similar to it (see Similar Spells, **Ars Magica **5th Edition page 101). This is in addition to the standard similar spell bonus."
+    }
+
+    #t30d029defd548507f76ddb ^"Learn from Mistakes" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Cult of Mercury"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "The first time in a session that you botch a roll for this spell or fail it by exactly one point, you gain five experience points towards mastery of this spell. The roll must come up naturally in the course of the story."
+    }
+
+    #t864be574fec3089ceaaf19 ^"Stalwart Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Cult of Mercury"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This spell is less exhausting for you. If it is a Ritual, you lose normal Fatigue instead of long-term Fatigue\n\nwhen casting it, and half as many Fatigue levels, rounded up (but always at least one). If it is formulaic, you never lose Fatigue levels because of a low casting total, even if the spell doesn’t succeed."
+    }
+
+    #t043c94fdd17402ca2800b9 ^"Tethered Casting" DEF {
+        EXTENDS ^"Mastered Spell Special Ability"
+        PROPERTIES {
+            ^"Tradition" STRING "Mutantes"
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "You may give control of this spell to another person, who is subsequently treated as the caster, or to an object that holds the spell like a charged item for its duration and casts it if an appropriate target comes into range. This cannot be taken for Ritual spells."
+    }
+
+    #t56a43d654342b1873f6747 ^"Mercere’s Portals" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "This activity is generally restricted to Mercere magi. This is because they must spend a season studying an existing Mercere’s Portal or the lab notes of someone who has already built one to learn the method of constructing them, and the House prefers to limit access to this information, keeping it exclusively inside House Mercere.\n\nOnce the secret method is learned, the magus must design two archways as invested devices, each with an instilled effect of Rego Terram, level 65 (base level 35, +4\n\nArc; +10 for Unlimited uses). They can be built by different magi in different locations, but both sides of the paired set must include an arcane connection to the other. Portals built after the Schism War always include special passwords, and many of them have linked triggers that only permit a member of House Mercere to activate them.\n\nAfter the two devices are enchanted in the lab, they are moved into place and a magical connecting ceremony similar to *Hermes’ Portal *(ReTe75) is performed simultaneously in each location. This ceremony is learned as part of the procedure, and does not require a roll, but until it is completed the devices do not function. Once the two Portals have been connected, they cannot be moved without permanently destroying the effect."
+    }
+
+    #ta86246b525385bef1f039d ^"Magic Rules" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "These are variations on the way Hermetic magic is performed."
+    }
+
+    #t8e6eaf38807df6aa1bd5f6 ^"Mutantum Magic" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Mutantum Magic is a special form of metamagic found primarily in House Mercere. Thorough grounding in their lineage’s magical philosophy and their natural affinity with change allows Mutantes to invent spells that have unusual power over magic, altering it in specific ways. Mutantes can use this metamagic when casting formulaic spells designed to take advantage of it, or investing magic items with appropriate effects. They can also write or teach the resulting spells in a way other Mutantes can understand and learn. These changes include:\n\n**Boosting:** The Mutantes can spend vis while casting a boosted spell or activating a boosted item to increase the Range, Duration, or Target by one magnitude for each pawn. For example, a spell with Sun duration could be made to last a year by spending two pawns of vis. This vis is spent before the die roll, and increases the number of dice if a potential botch is rolled. Mutantes picture this process as “feeding” the magic, using vis to make it grow bigger and stronger. It is not possible to boost Duration to Year or Target to Boundary unless the spell is a Ritual.\n\n**Harnessing:** Spells normally last their duration and then end, but harnessed effects are put to work like domesticated animals, and can be released from their service when necessary. They are made to end prematurely simply by the caster concentrating on them; this takes about the same amount of time and concentration as casting a spell, and can be done over any distance. If distracted during this process, the caster may always try again.\n\n**Tethering:** Magical “tethers” allow the caster to give the reins of his spells to others, or tie them to an inanimate object. Control may be passed to another person within range of the caster, who may treat the effect as if he or she were the caster; or to anything that can hold the spell like a charged item, casting it automatically when an appropriate target comes into range. A tether only lasts as long as the duration of the effect it controls, and Ritual spells cannot be tethered.\n\nThe unique magical abilities and interests of the Mercere lineages have found expression in new spells."
+    }
+
+    #t2b201d9605804134b2b84f ^"Mutantum Spells" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "The Mutantes design spells that have unusual variations on standard magic built into their effects, and only characters with the power to perform that kind of magic due to an appropriate Virtue can cast them. If a character cannot manage one of the qualities of the Mutantum spell, that character cannot learn it.\n\n**Boosted**: Requires Boosted Magic or Mutantum Magic\n\n**Harnessed**: Requires Harnessed Magic or Mutantum Magic\n\n**Tethered:** Requires Tethered Magic or Mutantum Magic\n\nNote that the Mutantum Magic Virtue allows a character to learn, cast and invent any of these effects as part of formulaic spells and invested devices, and the Tamed Magic Virtue makes them possible with spontaneous spells as well (see Virtues and Flaws). For a descriptions of what each of these qualities can do, see Mutantum Magic, above.\n\nThese spells are primarily used by the Milvi Antiquiti (see their society description in House Mercere, Mutantes)."
+    }
+
+    #tacac75f468e86f09fad993 ^"Other Spells" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "These spells are associated with the Cult of Heroes, and are rarely found outside of that society."
+    }
+
+    #tbd2c558cd285a04b5fa31f ^"Virtues and Flaws" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "The spell is tethered, so that it may be controlled by another, and boosted so that it may be made to last longer if necessary.\n\n(Base 2, +4 Arcane Connection, +1 Concentration; Boosted, Tethered)"
+    }
+
+    #tbfa41fa84f0add8e3ccf30 ^"Merchants and Bankers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Covenant", "", "Redcap", "Example"]
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        TABLE {
+            "1p (v.t.)" "=" "1p (v.f.)" "1 Muto for 1 Corpus"
+            "2p (v.f.)" "=" "1p (v.f.)" "2 Aquam for 1 Ignem"
+            "2p (v.t.)" "=" "1p (v.t.)" "2 Intellego for 1 Creo"
+            "4p (v.f.)" "=" "1p (v.t.)" "4 Vim for 1 Rego"
+        }
+    }
+
+    #t0012f686c34762b73ec894 ^"Heroic" DEF {
+        PROPERTIES {
+            ^"Source" STRING "Houses of Hermes: True Lineages"
+        }
+        DESCRIPTION "Only “Heroic” characters can take Heroic Virtues and Flaws. These are characters with the Blood of Heroes virtue or the Legacy flaw, or magi with Mythic Blood. Other story circumstances such as Latent Magic Ability might warrant taking them, at the storyguide’s discretion."
+    }
+
+}

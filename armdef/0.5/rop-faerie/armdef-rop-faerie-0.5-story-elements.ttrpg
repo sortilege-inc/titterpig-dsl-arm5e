@@ -1,0 +1,667 @@
+EXTENSION "ARMDef_RoP_Faerie_Story_Elements" {
+    NAME "Ars Magica Definitive Edition, Realms of Power: Faerie - Story Elements"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_RoP_Faerie_Core_Ext"
+
+    #t4DXr5oGBQCNzxn0xzBlQxu4 ^"Vitality and Fable in Faerie" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Characters are not bound to obey the laws of the Faerie Realm as its inhabitants are, but if they deny the fantasy in favor of a mundane solution they exert less control over the outcome. Vitality is the power of stories that nourishes faeries; while in the Faerie Realm, humans can spend vitality by partaking in stories and receive in fair exchange a measure of control over them. Characters accumulate fable points when they accept the glamour of the realm as reality and play along in the story they are experiencing — that is, whenever they spend vitality. These fable points contribute to a fable score representing the control the character has over the Faerie Realm through the vitality he has spent. The first fable point gained is immediately converted into a fable score of 1; further points can raise the fable score or exert influence over Faerie. The fable score also reflects how much faerie has influenced the character. A human cannot have a fable score unless he is in the Faerie Realm — all fable points and score disappear upon leaving, and a character returning to Faerie begins with none, regardless of any previous total."
+        }
+
+        #tMwE1djnXXKfeJ0kMFGlfufy ^"Gaining Fable Points" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Broadly, every time the character is presented with a choice to act with or against a faerie story and chooses the former, he expends vitality and gains a fable point in return. Acquiring fable points often requires acting according to dramatic necessity rather than common sense. These are one-time awards; a character who decides to eat fay food does not gain a point every meal, just when he first makes the decision. The list of examples is non-exhaustive; any dramatic, entertaining event should be rewarded, and players should find it easy to earn 10 or more per session in Faerie if they want. Managing fable points is important: the character is rewarded with bigger bonuses, but upon completion of the quest the final fable score determines how much time has passed in the real world and how much warping the character has gained. Experienced travelers show far less enthusiasm for a high fable score than novices."
+        }
+
+        #tD2dhG6UtRVJ3Rw1CCzxhhNU ^"Becoming Faerie Through Fable" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Fable can leave an imprint on the character; those who spend much vitality in the Faerie Realm often take on a faerielike nature, the fable score representing the magnitude of the changes. A player may exchange a number of the character's Virtues equal to the fable score with Virtues from Chapter 3, and the storyguide and/or troupe exchanges an equal number of Flaws. Whenever the fable score increases the player may exchange a new Virtue or keep it in reserve. Returning to the mundane world restores the normal selection of Virtues, but returning to Faerie reasserts all exchanged Virtues and Flaws, and further exchanges may continue; changes should be recorded on a copy of the character sheet used only in the Faerie Realm. Repeated trips gradually transform the character into a faerie being. With troupe agreement the player may also choose thematically appropriate non-faerie Virtues. When deciding Flaws, those swapped out first should pertain to the mundane world (such as Feud or Outlaw Leader); others may be altered to pertain to Faerie (a mundane Mentor could become a faerie Mentor, a magical Supernatural Nuisance a faerie one). Other appropriate Flaws (such as Disfigured and Greater/Lesser Malediction) may replace the character's Flaws. Often the resolution of a faerie story relies on a magical act; any character with a fable score not wholly used to swap Virtues can learn from a faerie to duplicate the effects of any power or Virtue it possesses, gained as Lesser or Greater Benedictions, with Flaws acquired often as Lesser or Greater Charms. Instruction takes minutes to several days, and the donor often has to give up the ability it teaches (a bird who teaches flight loses it himself); faeries are often loathe to teach such abilities and may require persuasion."
+            REFERENCES {
+                "Virtues and Flaws" -> ^"Virtues and Flaws"
+                "Outlaw Leader" -> #thDQTyvAlz8oT2cn1a8HGult ^"Outlaw Leader"
+                "Supernatural Nuisance" -> #tGSws3bJ4ltyBPxu5eHRFvAA ^"Supernatural Nuisance"
+                "Lesser Malediction" -> #tIZNh4y3BumR8nrv1LAxKysO ^"Lesser Malediction"
+            }
+        }
+
+        #tqNMeQS9PdBW1vE3nTcPwQwh ^"Creativity in the Faerie Realm" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The Faerie Realm is subject to human creativity, like all things fay. Characters with the requisite creative spark can in effect make a bargain with the Faerie Realm itself: in return for a creative performance the character can alter the environment of Faerie, the symbolism of the current scene, or the attitude of the faeries taking part. Making changes requires a trade — the character expends vitality (charted by the acquisition of a fable score) in exchange for the ability to change the nature of Faerie, so any character with unspent fable points can attempt to enact a change in the story he and his companions are experiencing. To initiate a change the character must make an offer: a description of the desired change, in words or through another creative outlet such as performance or craft, including the promise of a service that supplies the necessary vitality. If the offer is accepted, the change occurs as described."
+        }
+
+        #tn7obakmx8CVI6VMongiYID8 ^"Crafting an Offer" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Offers are usually made verbally, using either the Charm or Profession: Storyteller Ability. Performance artists may use other professional Abilities, and a crafter may work her hopes into an object and offer it instead. Crafted offers take the same time as a mundane object, so this is not favored in Faerie except for simple crafts like whittling, though some items can be prepared before entering and finished quickly. An offer constructed with insufficient skill always fails, because the faerie cannot comprehend its value. The Ease Factor to make a change does not depend on the extent of the change but on the size of the obstacle the change lets the human overcome; the more a change simplifies the story, the greater the compensation the principal faerie's glamour demands. The threat table classifies threats by the harm they are likely to cause the individual human if not overcome; faeries scale the challenge to the humans available, so a peasant may find a sprite deadly while a minstrel supported by Merinita magi finds a giant trivial."
+        }
+
+        #thgHfFjkPr5AGtS6KJinzl2C ^"Offer Modifiers" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Certain situations grant bonuses to rolls for making offers to faeries. A character can only gain a single bonus from a Virtue, or for an offer of goods; use the highest bonus that applies. This includes Virtues not listed; a character with Puissant Charm and Free Expression only gets a +3 bonus. Further modifiers may apply according to the environmental, attitudinal, or symbolic change desired. Stories in Elysium strongly resist this process due to the faithful repetition of legends by mortals in an unchanging form; consequently offer rolls in Elysium have a penalty of 6, except when creative efforts restore an Elysian story back on track after it has gone astray, in which case all Ease Factors are decreased by 3."
+            REFERENCES {
+                "Free Expression" -> #tpodVRMxYaoeEwKO0Syj3EH6 ^"Free Expression"
+                "Ease Factors" -> #tGQufzy8y8Qc3foo2n9p7nMU ^"Ease Factor"
+            }
+        }
+
+        #tDaDMNgATVmr0b5Qq1s5t4JR ^"The Promise of Service" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "In addition to offering mundane goods and one's personal gift of vitality, the human character must make a promise to perform some action that symbolically transfers the vitality to Faerie. This promise might be entirely symbolic and accomplished immediately, or may involve a complex scheme to grant a major boon, thereby enacting a story. It is this action — or the promise of the action — that negates the threat posed by the story. The greater the promise, the bigger the bonus to the Offer Total, but woe betide those who renege on a promise made to Faerie."
+        }
+
+        #tPvNarXkhQEicphOEcIkMUgp ^"Changes in Environment" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A character may use artistic Abilities to alter the environment of Faerie areas. Magi and highly cognizant faeries understand that the artist is really altering the glamour that the principal faerie has spread over the area. The faerie's glamour allows this to improve the story in a way requested by the human; in exchange, the faerie harvests a little of the human's vitality when the story concludes, and may gain other benefits through negotiation."
+        }
+
+        #tLJUHAZvddXaFNwvq7xe1QPO ^"Changes in Attitude" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The simplest change a faerie can accept is an alteration in its role in the story. A faerie blocking the characters' progress that allows them to pass in exchange for a cask of beer is accepting a change of attitude: by taking a symbolic object and harvesting a little vitality as the story progresses, the faerie agrees to a minor change in the part of its glamour that affects its attitude. Powerful faeries, which present greater challenges, require greater prompting to alter their role. Changes of attitude usually only last for a single transaction, and may only be toward a single person."
+        }
+
+        #tHdY77KrV8YX3G99xjySOAvJ ^"Changes in Symbolism" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A character with an understanding of symbolism may be able to alter the glamour of the faerie so that its motifs change. This has profound effects on the faerie, since the appearance, actions, and thoughts of a faerie are inextricably connected. There is no simple way for a human to know which changes are possible within the faerie's glamour before the attempt, and many faeries are angered by efforts to rewrite their nature."
+        }
+
+        #tUtF2dfGFZPgFdnY6pSYtFA6 ^"An Example of Using Creativity" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The characters are in the woods of the Queen of Winter, trekking to her palace, when a closing blizzard becomes a Serious threat (Ease Factor 12). One of the player characters is a minstrel with a Communication + Profession score of 8 and the Free Expression Virtue, giving him a base Offer Total of 11 before the stress die and bonuses. His options are: have a nearby tree change into a hut to hide from the storm (+3 changes a single object, -6 requires only mundane actions) for -3 on his roll and few repercussions; sing the ground around him into spring (0 changes environment, -6 requires only mundane actions) for -6, but this may alarm nearby faeries; draw out a local ice maiden and offer to woo and bed her if she will thaw the earth about his camp (-3 changes the mind of a local faerie, -3 requires simple but ritualized actions) for -6 and a Carouse check, allowing easy passage where the ice maiden's writ runs; or sing of the beautiful gift he would bring to the Queen of Winter if only she were not so harsh and cruel, assuming the blizzard represents her attitude (-6 changes a major motif of the faerie, +3 for owing the troupe a cunning and dangerous plan) for -3 on his roll, thawing the Queen's disposition to the party but requiring the perfect gift or a cunning plan to avoid death when they reach the Palace."
+            REFERENCES {
+                "Queen of Winter" -> #tnkSENMKeUzmvMAGAiWSn4RT ^"Queen of Winter"
+                "Free Expression" -> #tpodVRMxYaoeEwKO0Syj3EH6 ^"Free Expression"
+                "Queen of Winter" -> #tnkSENMKeUzmvMAGAiWSn4RT ^"Queen of Winter"
+            }
+        }
+
+        #tnkSENMKeUzmvMAGAiWSn4RT ^"Queen of Winter" DEF {
+            EXTENDS ^"Faerie Creature Note"
+            PROPERTIES {
+                ^"Relates To" STRING "An Example of Using Creativity"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A powerful faerie who rules a woodland domain in the Faerie Realm, with a palace at its heart. In the example of using creativity, the characters trek through the woods of the Queen of Winter toward her palace and face a closing blizzard that represents her harsh and cruel attitude; a minstrel might sing of the beautiful gift he would bring her to thaw her disposition to the party. She also features in the Leaving Faerie discussion, where a story revolving around fighting the force of Winter and restoring Spring reshapes the Guardian of the Threshold."
+            REFERENCES {
+                "Leaving Faerie" -> #tDAbPQfwBFDdQOWqhtz9I7H8 ^"Leaving Faerie"
+            }
+        }
+
+        #tvbi7HpnhTM3vfbfkwb0F0rs ^"Consequences of Creativity" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The use of creativity in the Faerie Realm allows a character to change a story and potentially bypass a dramatic story element; however, this should never be resolved by a simple die roll. Even relatively minor changes require the character to come up with a clever way to employ his creative abilities, and must often also promise a story in return for the resolution. The cost in fable points and Fatigue limits the use of this device in any given story. Creativity cannot entirely bypass an entire story, just a single plot element. By encouraging creative ways to negotiate their way out of situations they cannot solve normally, the player characters generate stories and feed Faerie. A storyguide should ensure that as much enjoyment can be derived from the creative changes as from the original story."
+        }
+
+        #tDAbPQfwBFDdQOWqhtz9I7H8 ^"Leaving Faerie" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Adventures in the Faerie Realm come to an end when the story reaches its conclusion — there is always a conclusive end: the hero triumphs over the villain, recovers the princess, or fails to save his kingdom. Once the story has run its natural course, the characters encounter the Guardian of the Threshold again, who sends them home. Under most circumstances the Guardian appears slightly different than at first, depending on the outcome; for example, if a story revolved around fighting the force of Winter and restoring Spring, the ancient white stag that barred the way may return as a stumbling fawn, or a bride may transform into the crone who was the Guardian, an inscription may change, or a barrier of thorns become a garden of roses. Passing the Guardian a second time returns the characters to the mundane world, usually where they left, though those exploiting the Mother Road find themselves elsewhere. Characters cannot prolong their stay by refusing to partake in stories: a magus who tries to study a season in Arcadia will find adventure comes knocking, and the resolution of even the tiniest nuisance ends the story and returns him to the mundane world."
+        }
+
+        #tbH3rPCZhQMC6PhtgCkmd7bX ^"Leaving by Using Merinita Mysteries" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Members of House Merinita who are Initiated into the Mystery Virtue of Arcadian Travel (Houses of Hermes: Mystery Cults, page 92) can leave the Faerie Realm with greater ease and finesse than other characters. They can leave before the story has ended and can choose their destination. The rules for determining the passage of time and warping apply to characters leaving through Arcadian Travel just like any other characters."
+            REFERENCES {
+                "House Merinita" -> #tAvJA0CHntoqharlhg0bbRvf ^"House Merinita"
+            }
+        }
+
+        #t3DroE4x497Qz6QCTNxnTMK2 ^"The Subjective Nature of Time" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "What happens if a group of characters travels into the Faerie Realm, meets another human who has been there for a different amount of real time, and then they all return together — for example, characters aiming to release a captive from several months of bondage? The storyguide must determine what happens when they all return together. The effects should not be known prior to the rescue event, and may be different the next time such a situation occurs. Some possibilities are given."
+        }
+
+        #tRTlq6AAWCgdZY53SxmAlBIU ^"Warping and the Passage of Time" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "None leave the Faerie Realm unscathed. Those who reveled in the stories they played out may have been assisted by the vitality they accumulated (fable points), but this vitality means they are more likely to suffer permanent Warping points, and they may discover that weeks, months, or years have passed when they thought it was merely days. Conversely, characters who stubbornly resist the story have a harder time resolving issues to return home (since they do not accumulate fable points to spend), but by avoiding the story they resist the transformative glamour and escape with little or no Warping, and by rejecting Faerie it rejects them in return, so the whole experience may take less time than they believed. Once the story is over, convert any remaining fable points into fable score, if possible; the final fable score determines the speed at which time passes in the mortal world. As the character passes out of Faerie he may elect to shield himself against excessive time dilation by taking Warping points, taking some of the realm's glamour with him. It is not necessary to take Warping points, and many characters instinctively reject the siren call of glamour. Any character with the Faerie Lore Ability of at least 1 is aware of the possibility and can warn others. If a group leaves the Faerie Realm at the same time, they all suffer the same time dilation, equal to that of the person who elected for the lowest effective fable score, and the others take sufficient Warping points to bring them to the same level; magi do not need to check for Twilight from these Warping points. Unlike time dilation in some Faerie regiones, characters in the Faerie Realm make aging rolls according to the time spent in Faerie, not the time that has passed in the real world."
+            REFERENCES {
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+            }
+        }
+
+        #tZ6NA2SNRpKlIHrAwHLpUUqL ^"Living in the Story" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A character can quite literally become a living story in the Faerie Realm. Rather than participating in stories, the character begins to stage them instead, and becomes more and more mired in the glamour of the realm. Eventually the desire to return home fades entirely, along with the character's humanity; the glamour of the Faerie Realm gradually replaces his flesh, and the character becomes a faerie. Since the character has retired from the game by choosing to remain in Faerie, there need be no specific mechanic for this process; troupes who need to simulate it are directed to the Becoming Mystery Virtue on pages 93-96 of Houses of Hermes: Mystery Cults, House Merinita. Typically this process starts to take place after several years pass since gaining a fable score of 10."
+            REFERENCES {
+                "House Merinita" -> #tAvJA0CHntoqharlhg0bbRvf ^"House Merinita"
+            }
+        }
+
+        #tnM55Tc0VPN9re3kZ1Utjrh2 ^"Spinning Tales in the Faerie Realm" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Stories that take place in the Faerie Realm are fairy tales in a way that tales involving faeries in the mundane world are not. In worldly stories a peasant cannot become a prince, but in Faerie this is not only possible but expected. General advice on running faerie stories is in Chapter 7: Telling Faerie Stories, but for adventures in the Faerie Realm you can be less inhibited: here the fabulous is commonplace and marvels can be bought for two a penny. Due to this loosening of the bounds of the credible and banal, stories spun in the Faerie Realm should be more vivid and perhaps more bizarre than would normally be entertained. One way to make a clear separation between faerie stories in the mundane world and those in the Faerie Realm is through audience participation."
+        }
+
+    #tExrtKlBzKqno3k5LR5haFUi ^"Audience Participation" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Fairy stories are not static things. Every storyteller worth her salt embellishes a tale as she spins it, making it truly hers. The story is thus invested with the teller's own creativity, and has appeal even to those who have heard it before. In this vein, stories that take place in the Faerie Realm need not be fixed and immutable. While the story has defined dramatis personae and acts, the playing out of those acts by player characters can often take an unexpected turn, and in the Realm of Stories itself, this should be even more true. Allowing the characters to change the stories that they are experiencing through the expenditure of fable points (see Creativity in the Faerie Realm, earlier) puts some of the power into the hands of the players. Another effective way to make the players invest in the tales of the Faerie Realm is to offer some of the control of the plot to them directly. This can be done in two principle ways. Player-driven stories are those in which the players decide even the gross elements of the scenery and the characters they meet, although the storyguide still controls the underlying plot. Alternatively, player-influenced stories allow a player to change the events that affect his character without changing the flow of the story too dramatically."
+            REFERENCES {
+                "Creativity in the Faerie Realm" -> #tqNMeQS9PdBW1vE3nTcPwQwh ^"Creativity in the Faerie Realm"
+            }
+        }
+
+        #trM2K2wRNaiq6TSe44W2xwfs ^"Player-Driven Stories" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "An effective way to introduce the wonder and malleability of a story set in Faerie is to place the reins of the adventure initially in the hands of the players. Imagine this: a group of characters have a reason to enter the Faerie Realm. They perform a rite to attract the Threshold and step onto the Path of Chance. They encounter the Guardian, and negotiate the onwards journey. The storyguide then announces to her players: \"leaving the Guardian behind, you proceed deeper into the Faerie Realm. Before you lies the landscape of Arcadia. What does it look like?\"\n\nSuddenly, the control of the story is in the hands of the players. After initial confusion (mirrored by the confusion of their characters, no doubt), they begin to describe the scenery before them. The storyguide should ask more questions to clarify the scene before them, looking for ways to integrate one of her story elements, and ensuring that the scene is properly populated with potential storyguide characters, if appropriate. The scene's contents are described by the players, but their role is determined by the storyguide. The players might describe a snow scene complete with the Queen of Winter, but the storyguide determines whether the queen will be a protagonist, antagonist, or simply background color in the story.\n\nThis technique may only really works the first time that a group of players experience Arcadia. After the first visit — indeed, after the first few scenes of the first visit— this technique quickly loses its focus, and the storyguide will need to exert some control over the story to ensure that it includes the elements she has planned. However, some troupes may take to the freeform nature of this technique, and decide to continue with player-driven stories rather than adopting a more traditional style of gaming."
+            REFERENCES {
+                "Queen of Winter" -> #tnkSENMKeUzmvMAGAiWSn4RT ^"Queen of Winter"
+            }
+        }
+
+        #tWEsCJHQZBi7QbWRlugP3T6N ^"Player-Influenced Stories" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "An alternative to the player-driven stories, but still not returning wholly to the storyguide-driven stories of the mundane world, are those stories in which players influence the outcome of certain events in a way that enhances the enjoyment for all without abandoning the point of the story itself. This can be done by issuing each player with a generic plot device that he can use once during the adventure in the Faerie Realm. A plot device should be encapsulated in a succinct phrase or proverb, such as \"misery loves company\" or \"never judge a book by its cover,\" and given in secret to the player. At any point in the game, the player can elect to influence the plot by employing his device, which he should do by revealing the device to the storyguide and briefly outlining how the device can be used to change the current situation. A plot device is applied to the player's own character, and can change the situation for that character only; although storyguide characters and perhaps any pooled characters may be indirectly affected. A plot device cannot directly influence another player's character. The storyguide should try find a way to integrate the suggestions of the player into the scene, but is not obliged to do so and can always veto the use of a plot device if it does not seem appropriate. If the plot device is refused by the storyguide, then the player can attempt to use it later on in the story.\n\nPlot devices should not be tailored to the specifics of the story. That is, the successful resolution of a story should not be dependent on a player employing the plot device assigned to him. Plot devices are assigned to players, not characters. If you are using the troupe-style play of Ars Magica Fifth Edition, then the player should use his plot device on his magus or companion character rather than any grog character he is currently running. However, this is not a hard and fast rule, and the plot device should be employed where it will improve the game the most. Successfully employing a plot device is worth the reward of a bonus Confidence point at the end of the story, and also earns the character to whom it was applied a fable point."
+        }
+
+        #tCGHKE3FlO98uXvQua671OM2 ^"Example Plot Devices" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Proverbs make excellent plot devices, and storyguides are encouraged to use books or web pages of proverbs and aphorisms to invent new plot devices. Here are twenty plot devices (some proverbial, some not) to get you started:\n\n- Charity Begins at Home\n- Even a Strong Man Drowns in Armor\n- Familiarity Breeds Contempt\n- Double Jeopardy\n- Pride Comes Before a Fall\n- To Err is Human\n- A Stumble Prevents a Fall\n- Misplaced Trust is the Unkindest Cut\n- Barking Dogs Don't Bite\n- Give a Man a Second Chance\n- Every \"Bad\" has its \"Worse\"\n- Diamonds May Be Overlooked When Covered in Mud\n- Kind Words Unlock Iron Doors\n- A Dragon's Tail Can Look Like a Snake\n- Every Garden Has Weeds\n- Every Cloud has a Silver Lining\n- Many Hands Make Light Work\n- There is Nothing to Fear but Fear Itself\n- A Problem Shared is a Problem Halved\n- What Doesn't Kill Me Makes Me Stronger"
+        }
+
+        #t7cqoELJSreO8vDTYgKlXGwa ^"Pitfalls in Player-Run Stories" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Player-driven or player-influenced stories are an effective storytelling technique, but the storyguide must be careful not to allow her players to dominate the story. She must be prepared to veto any player input that threatens to unbalance the game or wreck her plotlines. However, this power of veto should be used sparingly, else why bother with player input in the first place? Remember that player-driven elements cannot determine the role of any given element, only its description, so a player cannot create a plot-breaking device. A player-influenced device is similarly limited in that it can affect only a single scene (and only the player's own character), so there are no \"get out of jail free\" devices that bypass the challenge presented by the story.\n\nAnother pitfall to avoid is familiarity. If the characters are (un)lucky enough to make another trip to the Faerie Realm, change the rules. If you used player-driven plots before, use player-influenced ones this time. Faerie in general — and Arcadia in particular — should never be predictable."
+        }
+
+        #tuG1gunmsRQYz4HIm2s6knvK ^"Example of Arcadian Story Creation" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Andrea is planning an adventure in Arcadia. She knows that the purpose of the journey is to free the local priest from the grip of a disgruntled faerie, so she makes the Enchanted Priest one of her story elements. She also wants to introduce her players to a particular faerie— Lofanneth Wolf-Brother — who will be important in a later story. Finally, she needs to include the priest's captor Arduinna, the villain of the piece, and a variant of the Pale Man element described later. She decides to pick two more elements at random from the tables later on in this chapter, and comes up with the Stone Drum and the Wounded River. She now has to associate these elements with each other. Arduinna is clearly the captor of the Enchanted Priest, and Andrea also decides to make Lofanneth Wolf-Brother her captive as well, but she overlays this with a link of rivalry between the two faeries. Andrea makes the Stone Drum the weakness of Arduinna; the sound it makes causes all her powers to cease. Lofanneth is the donor who is the means by which the heroes (i.e. the characters) acquire the Drum, in that he knows where it is hidden. But since he is under Arduinna's power, he can't tell anyone. Finally, the Wounded River (a strange combination, but it came up at random and Andrea liked the idea of a river of blood) is where the drum is hidden, but Andrea also decides to link it to Arduinna, in that she bathes there every day to refresh her Might.\n\nFrom starting with a handful of elements, Andrea has invented a story in a matter of minutes that has the feel of a faerie tale. She doesn't know the details yet, but the framework is there already. Since she already knows that the characters will be entering Arcadia using a river as a geographical boundary, she decides that this will become the Wounded River once they cross the Threshold, making it the first story element to be encountered. They will then encounter a Transference act that takes them either to Arduinna (initiating a Reconnaissance) or Lofanneth (initiating a Receipt)."
+        }
+
+        #tQr3Vv8FymLeYKh1taQIf5YL ^"Arcadia" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Arcadia is the face of the Faerie Realm where new stories are born. It can be a place of fanciful whimsy, abject terror, high fantasy, or gritty bloodshed, or perhaps all of these and more. Of the three faces of the Faerie Realm presented in this chapter, Arcadia is the one with which long-time players of Ars Magica will be most familiar, and for characters \"in the know\" it is the place that they usually mean when they speak of the Faerie Realm.\n\nThe Path of Chance is so named since journeys into Arcadia have no plan (as there is in Elysium) or purpose (as there is in Eudokia). Primarily, therefore, it is a place of adventure and experience. Arcadia is responsive to the perceptions of those who experience it, and in contrast to many stories in a typical game session, the players have as much influence over the flow of the story as does the storyguide."
+        }
+
+        #t8m4GMlZigbdGwUNlPiiRWjw ^"The Inhabitants of Arcadia" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Everything in Arcadia is potentially a faerie — the creatures, the objects, even the landscape the characters walk though. More precisely, every entity that comes to the attention of mortal characters has the potential to become an element in the story they experience while in Arcadia.\n\nStudents of Faerie have debated as to whether Arcadia is the home to faeries, or their point of origin, or if it is independent of the faeries found in the mortal realm. Like the nature of the faeries themselves, such questions cannot be answered. The same types of faeries found in the mundane world are found in Arcadia, but here they all take on an additional role — The role is that imposed upon them by the presence of the characters. In the mundane world, a story is defined by the faeries who act it out; but in Arcadia, the story defines the faerie."
+        }
+
+        #tzlNGH64S9NjWR3I3CmTkOGW ^"The Path of Chance" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Arcadia is the most common destination of mundanes entering the Faerie Realm because any of the conditions that attract a Threshold can lead to the Path of Chance. Trods — which are by far the most common routes into Faerie — almost all lead to Arcadia, as do extemporized works of artistic endeavor."
+        }
+
+        #t8v004l3LEwuxl7Fz7QF8MhA ^"Typical Arcadian Guardians of the Threshold" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Arcadian Guardians of the Threshold are most commonly animals or humans, although the other types of guardians do occur. It is common for the Guardians who block the Path of Chance to place some form of blessing or prohibition on characters who choose to continue on the path. Some examples follow.\n\n• A woman, unbelievably old, is wrapped in a warm woolen shawl. Those who accept her invitation for a meal in the safety of her hut miss the Threshold. Those who politely decline are given a friendly warning not to eat any food they're offered.\n• A terrapin who has fallen onto his back pleads with the characters to restore him to the safety of his pool, which he says is just around a nearby thicket. In reality, that path leads them back to the mundane world. He may curse the characters who pass him by, promising them misfortune near water.\n• A sibyl with a book under one arm containing her prophecies. She warns them to return to whence they came for she has foreseen a dire fate for them. If they inquire of this fate but are resolved to continue, the doom she utters is sure to come about.\n• A goose stands at the fork in a path. She states that one path leads to safety (without revealing that this equates to the mundane world), but the other leads to excitement and peril. Should they choose the latter, she'll grant them a gift to aid them against the dangers they will face.\n• A thicket of wild roses, the color of sunset. The tangle is almost impassable, and those who attempt it are sure to be pricked by the poisonous thorns, and yet make it through to Faerie.\n• A sphinx who declares that none shall pass unless they can tell her a riddle she cannot answer. Those who succeed are punished for their cleverness."
+        }
+
+        #txiXOiP5Jf2MHGsLOPwYatzj ^"Arcadian Stories" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "In Arcadia, the rambling Path of Chance can take the characters off in any number of directions, but an Arcadian adventure is perhaps not as random as some might think. The difference between it and an adventure in the mundane world is that the players play an equal role in determining the story with the storyguide. Note that this is an equal share — stories run in Arcadia are not necessarily player-led. The storyguide should plan the major elements of the story that she wishes her players to experience, but should not lock these plot elements into a rigid order or linear path."
+        }
+
+        #tFpEWAh9inivgApC7Esg43HH ^"Planning Arcadian Stories" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Stories in Arcadia should be free-form and flexible. There should be no need to follow a logical order in acts in Arcadia; such chaos is a feature of many faerie tales. For example, take the following story elements: the Rye-King who has stolen a child; a Mouse who knows the King's only weakness; a Tree of Silver from which an arrow must be fashioned to kill him; and a Palace of Woven Grass that is the prison of the stolen child. While this might seem like the obvious order in which to encounter these elements, they can actually occur in any order. The characters might visit the Palace of Woven Grass first and rescue the child, and spend the rest of the story being pursued by the Rye-King. Else they might meet the Mouse first without realizing his true worth, and when they seek him out again the manner in which he was treated the first time determines how willing he is to assist.\n\nThere is a simple method to put together a story in Arcadia that will have the feel of a faerie tale. Later on in this chapter are described a number of story elements — actors, props, and scenery. The relationships between each of these elements builds up the story. Pick a number of story elements — a good guide is to take one per story experience point you intend to hand out. These can be chosen from the accompanying lists, randomly determined on the tables, or invented from your own imagination. Determine whether each of the story elements will be a dramatis persona, or else take part in an act, or both. Now associate each of these elements with one to three other elements through a link of some description. This link might be another story act (such as Villainy, Trickery, or so forth), or it might be an emotion or weakness. Finally, determine which element will serve as the start point for the character's adventures. To run the story in Arcadia, the characters will travel from story element to story element along the links you have provided."
+        }
+
+        #t8pTdqFla9VXCfQ94krJOkDh ^"Elysium" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "In the Land of Legend, all stories have already been told. Here, characters can encounter Roland fighting the Moors in Spain, take part in the abduction of Idun from Asgard, or stalk Theseus in the labyrinth in the place of the Minotaur. It matters not that a story is little-remembered in the current day; if it was told, and loved, then it lives on in Elysium.\n\nThe reasons for coming to Elysium are varied. The most basic is to witness a great legend in action, although most player-characters do not make good spectators to such stories. There is a strong temptation to become involved — who would not relish casting spells with Merlin or fighting alongside Romulus? Such interference is usually harmless, and may form an important part in an Initiation Quest into a Mystery Cult. However, since all legends in Elysium derive from human-told stories, it is not possible to uncover secrets unknown to the tellers of the legend. The faerie copy of a local dragon legend cannot be used to discover the dragon's fatal weakness, unless that weakness is part of the legend. The words whispered by Odin to his dead son Balder will forever remain a mystery even if the characters witness the funeral first hand in Elysium. These stories are just faerie copies of the true tales, and encompass all the variants, twists, and permutations that have been added over the years.\n\nThe stories in Elysium can serve a greater purpose than simply to echo a heroic deed, though. By stepping onto the Path of Destiny, a character can intentionally take the role of one of the dramatis personae in a suitable story that symbolizes a task for which he needs help. By completing the story in the manner prescribed by the tale, the \"hero\" acquires a vital boon to some fitting task. This boon is often an insight into the desired problem, but may also be some forgotten detail of the story, or else a supernatural item or power brought out of Faerie to complete its destined purpose.\n\nThe aid provided by the successful conclusion of an Elysian quest is rarely direct, and it cannot be of a non-Faerie nature. For example, it could not grant an Insight (Ancient Magic, pages 8–9) into lost magic since this is a Magical process; nor could it result in simply being handed the answer to a problem. However, the hint or knowledge obtained is sufficient to point the characters in the correct direction.\n\nWhile an Elysian quest is an unusual way to advance a plot, it is an appropriately mythic one, and can provide insights or help where none is mundanely possible. It requires careful planning by the storyguide and the characters who intend to embark on the quest, for they must ensure that every act in the original story has the same overall resolution in their reenactment, even if the exact details are not right. In the example given above, it does not matter how Kerberos is evaded, or how Persephone is impressed, as long as these things occur.\n\nThere are a large number of stories known to the inhabitants of Mythic Europe that make suitable stories for adventures in Elysium. Listed below are a number of stories that are appropriate to Elysian adventures; searching for these names in libraries and on the internet will reveal the full text, and more examples can be found in the sources listed in Chapter 8: Bibliography."
+            REFERENCES {
+                "Mythic Europe" -> #tARMDefConceptMythicEurope ^"Mythic Europe"
+            }
+        }
+
+        #tAM74T4BdgwFyRU6ZXlZqdiB ^"The Bible" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "It might seem surprising that biblical stories could be part of adventures set in the Faerie Realm. However, they fit all the requirements for Elysian stories, in that they are told often and they provoke an emotional response in the listener. The Old Testament, in particular, is filled with highly appropriate stories. Although many of the characters in these stories are suspected to have possessed Divine Powers, in Elysium they have Faerie Powers. Remember that these characters are not actually the prophets and kings of history, just faeries who are playing their roles. No-one has ever recounted an attempt to embark on an Elysian story taking the role of Christ, these being too blasphemous for most characters to consider.\n\n• Lot's escape from Sodom and Gomorrah (Genesis 18–19)\n• Jael and Sisera (Judges 5–6)\n• Samson and Delilah (Judges 13–16)\n• David and Goliath (I Samuel 17)\n• King Jereboam and the Prophet (I Kings 13)\n• The Testing of Job (Job, passim)\n• The Conversion of Saul (Acts 9)"
+        }
+
+        #tdsozHJQsayIs8VhMmqe2klQ ^"Legends of Ancient Greece and Dead Rome" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The transmission of ancient Greek legends to the medieval period is far from complete, and only educated men are familiar with them. And even then, such stories are only commonly encountered as counter-examples to a good, Christian life. The later history of Rome — that is, outside of the legendary period and into the history books — also provides a wealth of stories.\n\n• The Sorrows and Labors of Hercules\n• The Sack of Troy\n• Theseus in the Underworld\n• Prometheus, Epimetheus, and Pandora\n• The Flight of Icarus\n• Romulus and Remus"
+        }
+
+        #t8Bf9aY79MFtGXeQ1RM0v9XB ^"Pagan Legends" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The legends of pagan peoples were generally recorded by members of the clergy following the conversion of their country. In Ireland, for example, stories were gathered in the fifth and sixth centuries, in Wales in the eighth and ninth centuries, and in Scandinavia in the eleventh and twelfth centuries (Snorri Sturluson, the great compiler of the Norse myths, is still alive in Iceland in 1220). As folk tales, these stories of gods and pagan heroes live much longer in the popular memory, although some may have been cleaned of paganism to pacify the Church.\n\n• Cu Chulainn\n• Oisin and Niamh\n• Culhwch and Olwen\n• Pwyll, Prince of Dyfed\n• Thor and Thrym\n• Bard, the God of Snaefell"
+        }
+
+        #t8xHYHclfVbS1PwzBmc9rmZe ^"Romances and Märchen" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The medieval fascination with the romances of King Arthur and his court has yet to reach its peak, and yet many stories are already well known in parts of Mythic Europe, particularly France and England. Sir Lancelot has yet to make an appearance in his familiar form, and the legend of the Grail Quest has not been fully realized, but many familiar elements are already in place. The chasons de geste of French-speaking lands and the Märchen of German lands constitute the principle cycles of non-Arthurian epics, which together with local folk tales constitute a rich heritage of storytelling in Mythic Europe.\n\n• Perceval\n• Gawain\n• The Song of Roland\n• Reynard the Fox\n• Huon of Bordeaux\n• Maugis d'Aigremont\n• Herzog Ernst"
+            REFERENCES {
+                "Mythic Europe" -> #tARMDefConceptMythicEurope ^"Mythic Europe"
+                "Mythic Europe" -> #tARMDefConceptMythicEurope ^"Mythic Europe"
+            }
+        }
+
+        #tIZ2a07RnctGJEQkm0NoRuhW ^"A Thousand and One Nights" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Professional storytellers, or rawis, are a popular part of the culture of Islamic lands, and talented amateurs love to get their hand in wherever they can. The opposition from Islam regarding falsehood and deception has lead to elaborate circumlocutions: \"It is said — but only Allah knows the truth — that...\" has become a clichéd, but necessary, way to open a story.\n\n• The Story of Es-Sindibad of the Sea and Es-Sindibad of the Land\n• The Story of the City of Brass\n• Prince Camaralzaman and the Princess Badoura\n• 'Antar, slave, warrior, and poet\n• Rustem, slayer of dragons and demons"
+        }
+
+        #th6e37ECO6IsE7FTC9Yq77CO ^"The Road of Destiny" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "It is unusual — although not impossible — for a group of characters to stumble onto the Path of Destiny by mistake; accidentally crossing the Threshold is much more likely to lead to Arcadia or Eudokia. Getting to Elysium requires a certain amount of forethought, since all the conditions affecting Threshold points must be specifically aligned toward the story the characters desire. The timing of the journey should coincide with an auspicious time (such as the feast-day of a god, the anniversary of a hero, etc.). Any Faerie auras should arise from an appropriate location, artistic endeavors employed should be in praise or commemoration of the target story, and so forth. Not all these elements must be present, but all sources of Threshold points that are inappropriate actually subtract from the total, rather than adding to it."
+        }
+
+        #t3f6YjBYETFncVM4rC9ElJAO ^"Typical Elysian Guardians of the Threshold" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Elysian Guardians of the Threshold are most commonly of the kerberos type, taking the form of horrible monsters or seemingly dangerous challenges. An important function of the Elysian Guardian is to confer a symbol of the role of hero; this is usually accompanied by a boon (which is often a Virtue with a Charm, see Chapter 5: Touches of Faerie) and a prohibition.\n\n• A three-headed dog, the original Kerberos. He is chained to a post, but the characters cannot squeeze past. He can be put to sleep with honey cakes. After passing the creature the characters see a patch of blue flowers, the only thing within reach that the monster has left untouched. This herb can repel monsters.\n• A knight blocks the road; his armor is enameled in red, and his helm obscures his face. He demands single combat with a champion, else none shall pass. The Red Knight's combat scores are identical to those of the character, but any wounds he inflict heal like Fatigue levels after the fight. If the character wins, the knight cedes his sword, but admonishes his opponent to never refuse an honorable battle.\n• The baying of hounds and drumming of hooves heralds a large host ahead; a person is bound to be reminded of the Wild Hunt. If he continues, he is confronted merely by a strong wind.\n• An ibis, who looks at the characters with a cocked head and asks them if their hearts are pure enough to proceed. He weighs each heart against a feather plucked from his plumage. Ask each player whether her character's heart is pure. Those who fail do not receive their heart back, and can experience no emotions while in Faerie (although this may be a boon depending upon what they are fated to face)."
+        }
+
+        #tXCsrtyLoEL9FykL8kE3nT9G ^"Identification as the Hero" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "An important aspect of embarking on this road is that of identification. The character or characters, as soon as they pass the Guardian of the Threshold, must declare themselves to be the hero they wish to emulate. By standing in faerie and stating clearly and unequivocally \"I am Prince Ivan,\" the character is infused with the glamour of Elysium, and becomes Prince Ivan. Every faerie he meets from that point on will treat him as Prince Ivan. His clothes and possessions will change to signify the identification, although he does not acquire any magical accouterments that are significant in the story about to be embarked upon, and all his Characteristics, Abilities, and so forth remain the same. Identification with the hero in this manner costs the character a Confidence point, and thus is only possible for companions and magi. Simply identifying with the hero grants the character his first fable point, and thus a fable score of 1 (see Vitality in Faerie, earlier). This will prove useful in executing the functions of the hero.\n\nIf the character is not alone on his journey, then there are two options. Firstly, one character can take the role of the hero and be supported by the other characters. In this case the other characters are largely ignored by the inhabitants of Elysium. Any actions they perform to assist the hero in the completion of his tasks are assumed to originate from the hero. However, allowing other characters to overcome challenges on behalf of the hero means that he can never claim total victory for that scene. See later for more details of measuring success.\n\nThe other way for multiple characters to take part in a Elysian story is for them to share the role of hero. Each must identify himself as the hero upon entering Elysium through a firm statement and the expenditure of a Confidence point. Following this, any of the identified characters can act in the role of the hero, but only one at a time. There must be some form of token — a sword, hat, cloak, or so forth — that the character currently taking the role of the hero must possess. The character who carries this token is treated as the hero. Even if the token is handed over in full view of a faerie, the faerie simply redirects his attention to the new character and seems not to notice the change in person. Note, however, that highly cognizant faeries (of which there are admittedly few in Elysium) recognize this change in role and may seek to prevent it, although will still accept it if it takes place. It is wise from a game management point of view to issue the players with a token as well (such as a stick or a hat), to indicate the current \"owner\" of the hero's role."
+        }
+
+        #tebsCLlJFsqv7q6tkzRgcj2l ^"Hermetic Legends" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Even the stories of the Order of Hermes have been witnessed in Elysium. Magi have reported taking part in Merinita's first meeting with Bonisagus, the First Tribunal, and the Tempest that ended the Schism War. However, witnessing and participating in such stories cannot reveal secrets, for the components of such legends are constituted from the reportage of those who participated and told the tale to other mortals. Thus, the fate of Tytalus when he disappeared into the Maddenhofen woods cannot be illuminated in Faerie, since there were no spectators to this event. Similarly, conflicting stories of the same event (such as the many confused retellings of the Schism War) are equally true in Elysium. And the appearance of the actors (who are of course faeries) conform to the preconceptions of the talespinners — the character of Bonisagus in a story from his own house has a very different appearance than the same character born of a Flambeau tale.\n\nDespite these limitations, Hermetic legends are still a popular topic among the few members of the Order who travel in Elysium. As most of these are members of House Merinita, that Founder is the most commonly witnessed. Those faerie magi who have conversed with an Elysian version of Merinita have come away with the distinct impression that their Founder is alive and well, and living in Faerie …"
+            REFERENCES {
+                "Order of Hermes" -> #tARMDefConceptOrderOfHermes ^"Order of Hermes"
+                "House Merinita" -> #tAvJA0CHntoqharlhg0bbRvf ^"House Merinita"
+            }
+        }
+
+        #tq9FVc5isfLHyzlghlZ0hk6k ^"Example of Elysian Story Creation" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The characters in Andrea's saga are in desperate need of a source of particular vis to maintain a ritual to safeguard the covenant. They elect to go on an Elysian quest to uncover clues to its location. The story decided upon is that of Reynard the Fox, who is desperately seeking food. The story breaks down into the following scenes:\n\nScene 1: Reynard raids the henhouse and catches Chantecler the cockerel, but is pursued by dogs. The cockerel escapes by appealing to Reynard's pride, making him open his mouth to speak. The characters must sneak into the henhouse and capture the vigilant chicken, then — ensuring that they have been spotted — let their prize go.\n\nScene 2: Still hungry, Reynard encounters a titmouse, who he persuades to give him a kiss, hoping to get a juicy mouthful of bird. He is tricked by the titmouse into revealing his true nature. The characters must continue to evade the dogs, which is the real purpose of this act; since deliberately failing to eat a small bird is hardly a challenge.\n\nScene 3: Reynard next encounters Tibalt the cat. Knowing where there is a snare trap, Reynard challenges Tibalt to a race, but fails three times to snare himself some supper. When the dogs from the henhouse incident catch up with Reynard, Tibalt trips him up and into the snare. Similarly to the previous challenge, deliberately losing a race is no fun. However, the storyguide decides that Tibalt fails to see the snare, and so the characters must prevent him from getting caught despite his own best efforts to do precisely that.\n\nScene 4: Caught in the snare, the farmer has his hands on the thieving fox, and prepares to give him a beating. Once again, Reynard escapes using his sharp tongue. The challenge is two-fold here — endure the beating handed out by the farmer, and outwit him to secure escape.\n\nScene 5: Finally, Reynard encounters Tiercelin the Raven, who has found some cheese. Reynard persuades Tiercelin to display his beautiful singing voice, thus he drops the cheese. Reynard finally gets to eat. Unfortunately for the characters, Tiercelin is unwilling to sing; he's wise to the fox's plan and will not be fooled in this manner. The characters must make him drop the cheese in a different manner."
+        }
+
+    #t6xj7Q2pUOss3LQ6NFU7ahmg ^"Story Elements" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The adventures that take place in the Faerie Realm are made up of story elements and acts, as discussed in the previous sections. This section provides some example story elements that can be integrated into any trip to Faerie. Each follows the same template:\n\nTitle\n\nA descriptive paragraph.\n\nPath of Chance: The literal interpretation of the story element, as most commonly discovered in Arcadia. Each story element has a link to the previous or next one.\n\nPath of Destiny: The mythological or metaphysical interpretation of he story element, as found along the many roads of Elysium.\n\nForking Path: The figurative interpretation of the story element, leading to one of two (or more) choices.\n\nThe story elements have been divided into three separate categories — Actors, Props, and Scenery. Any element in one of these three categories can take one of the roles described later (see Chapter 7: Telling Faerie Stories, Dramatis Personae), and/or become involved in one or more of the scenes (see Chapter 7: Telling Faerie Stories, Acts)."
+        }
+
+        #tT9YHco8zcozpT0BUCH1LMtH ^"Actors" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The people of Faerie are the actors in its stories — protagonists, antagonists, or incidental characters. Those faeries who constitute a story element are never bit parts or walk-on roles, as such individuals draw no more notice than scenery (see later). In Elysium, the actors are the gods and heroes of antiquity, while in Eudokia they are caricatures of morality."
+        }
+
+        #tPwCOQFAFSN53GdDIpchEDTW ^"The Pied Stranger" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "As his pied clothing suggests, the man is a magpie — both a thief and an entertainer."
+                ^"Path of Destiny" STRING "The two halves are a façade; the Pied Stranger uses his music to steal, and he's after something in particular."
+                ^"Forking Path" STRING "His pied clothing echoes the choice: either to entertain the crowds, or to exploit them. The minstrel earns his money, whereas the thief takes it."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A man whose clothing (or skin) is partly colored; his right side is white and his left side is black. Sometimes his sleeves, gloves, or footwear are counter-changed. He carries a musical instrument — pipes, or sometimes a harp."
+        }
+
+        #t9BP2JIsrk1JEppAlYJVYq8m ^"Grateful Lions" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "The lions offer friendship and aid."
+                ^"Path of Destiny" STRING "The questers must rescue the lions from peril to ensure that their help is bought for a later part of the quest."
+                ^"Forking Path" STRING "Not everything that is frightening is actually a cause for fear. Refusing the help of the lions will hurt their feelings, but characters might be too suspicious of ulterior motives to take what is offered freely."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Two lions, indistinguishable from each other. They are impressive and fearsome creatures, but are as playful as kittens, and friendly. They have the ability to speak, and ask for assistance in a minor task (such as removing a thorn, or rescuing their son from a pit). Alternatively, this could be any predatory animal."
+        }
+
+        #tT7HZpNtIedhAgEWTMEfIf9Z ^"The Captive Princess" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "This is a straightforward rescue mission."
+                ^"Path of Destiny" STRING "The obstacles must be overcome and the princess rescued in precisely the right manner. Alternatively, the quester could be the princess, or the guard who must fail to stop the hero."
+                ^"Forking Path" STRING "Have the characters stopped to think as to why the princess is imprisoned? Perhaps there is a very good reason. Alternatively, this could be a test of obedience — is it not a father's right to dispose of his children as he sees fit?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A beautiful maiden imprisoned in a tower, pit, or dungeon. An essential companion actor is her guard — typically an ogre, a dragon, or a hedge of thorns. Her parents have placed her in this situation, for complex reasons of their own."
+        }
+
+        #tBdXgVwITrUJ5uHd3ysLHa6U ^"The Task-Setting Ogre" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "The duty of the captive is to escape from bondage, coupled with possibly slaying his imprisoner."
+                ^"Path of Destiny" STRING "Each task must be completed, perhaps with the assistance of the ogre's daughter. The quester can thus escape from bondage."
+                ^"Forking Path" STRING "Are the characters so arrogant that they cannot admit that some tasks are meant to be impossible?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A hideous giant, vastly bigger and/or more powerful than the characters, who forces them to perform seemingly impossible tasks under threat of violence. Such tasks might include: sorting barley from wheat in a mixed vat; cutting down a forest in a single day; filling a bucket with a sieve; eating more than a wildfire can consume; or catching a magical horse. Alternatively, the ogre could be any fierce monster, such as a dragon or a manticore."
+        }
+
+        #tZE2y5Rt01SrA8G7gNAewImP ^"The Mouse-Groom" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "The Mouse-Groom is a distraction, nothing more. His devotion can be exploited by a canny group, as he is deft at creeping into small places, or stealing small objects."
+                ^"Path of Destiny" STRING "The Mouse-Groom offers to help in some difficult task, but in return he asks to marry a female character. At the completion of the task, the groom must be successfully transformed into human form through the actions of the characters."
+                ^"Forking Path" STRING "The character might expect a transformation in her groom, and be disappointed — sometimes a mouse is just a mouse. Does she still honor her promise?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A tiny mouse, easily overlooked. He can talk, and takes a fancy to a female character, courting her with gifts and poetry. Alternatively, the mouse could be a different animal (such as a cat or frog), or a monster. Or the mouse could be a bride rather than a groom."
+        }
+
+        #tBqxCrtxZRpHGQ6OTOPTLecI ^"The Ferryman" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "The ferryman must be persuaded to carry the characters across; they are not of a type that he usually transports (that is, they are alive, or humans, or so forth). There is no other safe way to cross."
+                ^"Path of Destiny" STRING "The ferryman is a king in disguise, and he must work as a ferryman until the one whom he is waiting for comes. He transports many interesting and dangerous passengers until that day comes. When the special passenger arrives, the ferryman must ensure he does not reach the other side, or else obey his every command."
+                ^"Forking Path" STRING "What is on the other side? Is it worth paying the price asked by the ferryman? Is it best to be content with what one has got rather than to wish for a future that may not arrive?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A man in a gray cloak, his face hidden by a hood or a hat. He stands in a low skiff on the shore, a punting pole in his hand. The skiff is just big enough to carry the characters across the lake or river. Alternatively, the ferryman transports them in a different manner, such as by carrying them. The ferryman may also be a guardian of another threshold, such as a bridge or a doorway."
+        }
+
+        #t3ZEhi92T20wgHRhvQl6ILNI ^"The Pale Man" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Actors" FIXED
+                ^"Path of Chance" STRING "The vampire is a ravaging monster who eats corpses and craves blood. Since he is already dead, he is difficult to defeat. Those who he has consumed alive can be rescued from his belly."
+                ^"Path of Destiny" STRING "The man is Death, or, at least, a death. He is a guide to the recently departed, who must be tricked into passing over his victim, or taking someone else instead."
+                ^"Forking Path" STRING "Does the man represent death, or the refusal to accept that one has died? The Pale Man can assist in grief, since he demonstrates that there are worse alternatives to dying."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "An emaciated man with taut gray skin, red eyes, and prominent teeth. He is dressed in a burial shroud. The man is a vampire, who feeds on the living. Alternatively, the Pale Man is a woman."
+        }
+
+        #tZ34fsmQwEpMcn4oOfgvApyw ^"Props" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "In this category are all inanimate objects, although this does not make them less significant than the actors or the scenery. In Arcadia, a prop is often the carrier of a faerie power. In Elysium, the props are never incidental to the story, but play a pivotal role. They might be the vital ingredient of a sleep potion, a token of love to melt the princess' heart, or the goal of the quest in the first place."
+        }
+
+        #tezl5hZ7HdwCh2dxNAuWFajE ^"The Poisoned Apple" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Props" FIXED
+                ^"Path of Chance" STRING "A random chance; does the character eat from the poisoned side or the safe side?"
+                ^"Path of Destiny" STRING "The quester must either persuade another to eat of the poisoned side, or do so himself."
+                ^"Forking Path" STRING "Self-sacrifice or deliberate poisoning? Is it better to allow evil to live, or to commit evil in killing it?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A luscious fruit, half of it bathed in a horrible poison, half of it sweet and delicious. There is no magical way to determine the difference; one either knows or one does not. This prop typically occurs in a situation where it must be shared with another."
+        }
+
+        #tUgv0aWl79BO5rgLOJyfbPlJ ^"Mjollnir" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Props" FIXED
+                ^"Path of Chance" STRING "Who would not want to smite giants with Thor's hammer?"
+                ^"Path of Destiny" STRING "The characters may be enacting Mjollnir's forging, its theft by the giants, or its retrieval from said giants."
+                ^"Forking Path" STRING "Finding Mjollnir creates a dilemma — it is a mighty weapon, but if it is not returned to Thor, then mankind's defense against the powers of winter and frost is deprived of his power."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The hammer of the mighty Thor — a thunderbolt imprisoned in iron. It was designed as a war hammer but its handle is a little short, subtracting 2 from both Attack and Defense scores. A successful hit inflicts +30 damage from the lightning imprisoned within it, as well as normal weapon damage. The penetration of the lightning is equal to the Might of the wielder; for a magus, use his Auram score."
+        }
+
+        #tHSqm4xbeng79MfNuk8Zs1gc ^"The Dragon’s Tongue" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Props" FIXED
+                ^"Path of Chance" STRING "Eating the tongue of a dragon is said to grant magical powers, such as the ability to speak with animals. It is not always a good thing to know what creatures are saying about you, however."
+                ^"Path of Destiny" STRING "The heroes kill the dragon, and cut out its tongue as proof of their deed. An impostor cuts off the head from the corpse, which he later seeks to use as his own proof."
+                ^"Forking Path" STRING "The tongue symbolizes humility for one's abilities, whereas the dragon's head is a symbol of vainglory."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "When first encountered, this prop will be in the possession of the dragon, although the beast may already be dead."
+        }
+
+        #tTSGPgNUsTskAZ9DSI3OjIQk ^"The Swan Cloak" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Props" FIXED
+                ^"Path of Chance" STRING "Stealing the cloak from the maiden allows the wearer to transform like she does."
+                ^"Path of Destiny" STRING "A hero hides the cloak so that the maiden will remain in human form and wed him. When she finds the cloak again, she flees him, and he must quest to win her love for real."
+                ^"Forking Path" STRING "Hiding the cloak from the maiden ransoms her heart. Letting her choose between her love and her swan cloak is a truer expression of love."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A maiden owns a cloak of white feathers that causes her to take her true form, that of a swan. Alternatively, the prop is a different item of clothing, such as a hat or girdle. Alternatively, the cloak transforms the wearer into another animal, such as a seal or a wolf."
+        }
+
+        #tazTnBIVxa11tm4QuFpNN2Wa ^"The Dull Knife" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Props" FIXED
+                ^"Path of Chance" STRING "In the contradictory way of Faerie, sometimes the dullest knife in the world is the only thing that can cut the uncuttable."
+                ^"Path of Destiny" STRING "The knife becomes rusty to indicate when another is in peril. At such a signal, the quester must ride to rescue his partner."
+                ^"Forking Path" STRING "As a gift, the Dull Knife is useless. Should this be interpreted as an insult on the part of the giver, or will the character accept it with grace?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "An unremarkable blade, of crude manufacture. Its blade is so dull it can barely cut butter. Alternatively, this could be any tool that is unable to perform its function due to a defect."
+        }
+
+        #tHPFfOITZlbbtRgmse2dEsQO ^"Snake Soup" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Props" FIXED
+                ^"Path of Chance" STRING "Suspicion over the safety of the soup might cause the characters to miss out on the magical powers it grants, or else save them from a horrible curse."
+                ^"Path of Destiny" STRING "The soup is served to her dinner guests by a crone, who gives her son the choicest portion with the meat of three white snakes. When eaten, they grant supernatural strength and resilience. The questers must ensure that they receive the magical portion, not the witch's son."
+                ^"Forking Path" STRING "It's all a matter of trust. What looks foul and unappetizing might be beneficial, but again it might also be exactly as it appears — disease-ridden swamp water."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A bubbling cauldron of brown-gray liquid, with suspicious-looking meat and unknown vegetables. Alternatively, a green fluid in a bottle, or a knobbly fruit with red spots."
+        }
+
+    #tJSQzUNhWviDPQ8fp3VvezTQ ^"Scenery" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The scenery should not be neglected as a story element. In the Faerie Realm, the scenery can be a villain as readily as any mustachio-twirling blackguard."
+        }
+
+        #tLVa0KwljmwYuHqq20qEDXzH ^"The Market at the Crossroads" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "An opportunity to spend one’s hard-earned cash, but let the buyer beware! Faerie vendors rarely require silver in exchange for their goods; and that which is purchased is not always what it seems."
+                ^"Path of Destiny" STRING "The characters must obtain a specific item. Are they able to locate the vendor, and are they willing to pay the price demanded of them?"
+                ^"Forking Path" STRING "The dilemma of the market is that the vendor wants the highest price he can get for his wares, while the buyer wants it as cheaply as possible. A fair deal leaves both satisfied. But an unfair deal will leave the buyer bilked or the vendor cheated."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Rough-built stalls line both sides of the two intersecting roads. Each stall displays the wares of the vendors, from the mundane to the fantastic. The market may be thronging with browsing customers, or else it might be eerily empty. The stalls, vendors, and other customers are all equally part of the scenery, although the characters may meet one or more actor story elements here, or they could be here to obtain a prop element."
+        }
+
+        #t7EagK4YkItumIVZEtJCTfnZ ^"Winter" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "Winter is a passive guardian for the snow-bound castle, or a prison for those within. It is a challenge to be met, and overcome."
+                ^"Path of Destiny" STRING "Winter represents sterility and patience. Nothing grows and nature holds its breath before the promise of spring. It serves as a pause before the action, the lull before the storm. In the winter, the wicked queen ruled supreme, Demeter ceased her search for her daughter, and the men were softened for Ragnarok."
+                ^"Forking Path" STRING "Many rail against the chill of winter with fire and furs, but is it a fight that can be won? Perhaps it is better instead to submit to the inevitability of nature."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Snow covers the ground, rime-frost coats every surface, and icicles depend from horizontal surfaces. The breath steams in the frigid air, and the heat is sapped from the body."
+        }
+
+        #tHmaiwMruNiXzdYc1eEfVgqv ^"Further Ideas for Scenery Story Elements" DEF {
+            APPLIES TO [^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Consider these ideas, as well:\n- • Spring\n- • Autumn\n- • Beneath the Sea\n- • In the Kingdom of Death"
+        }
+
+        #trHvgu0ZsgkxBXpAO7eMB9hO ^"The Forbidden Chamber" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "The room contains either fabulous treasure or a hideous secret. Disobedience might be signified by a transformation in the interloper, or the sounding of an alarm."
+                ^"Path of Destiny" STRING "The inevitability of getting into the forbidden chamber is central to the quest. This may require the quester to obtain the key from its owner. The characters may not like what they find inside."
+                ^"Forking Path" STRING "This is a simple choice between curiosity and obedience. It may be made harder if cries for help are heard from beyond the door. If curiosity is not stronger, then perhaps chivalry is."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "There is a room in a castle that everyone is forbidden from entering. It has an immensely strong door but no lock. On occasion, strange noises are heard from behind the door. Alternatively, it could be locked, and the key held by the castle’s owner. Or, the chamber could instead be a chest, or a question that must not be asked."
+        }
+
+        #tnfoOEwjZq1vNU1hiRVmP2aa ^"Summer" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "In the Summerlands pies and sweetmeats grow on trees, the rivers run with mead and milk, and every need is catered to. It is a respite from hardship, and also a trap for the self-indulgent."
+                ^"Path of Destiny" STRING "Summer is symbolic of bounteous times, of incipient action, and of vigor. It is in the Lands of Summer where one is forever young."
+                ^"Forking Path" STRING "The luxury of summer lulls one to sloth, but it is a season of action and adventure. Does one take a much-needed rest, or spurn the seduction?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The sun shines bright on a green and pleasant land. Plants are at the height of growth, and animals are well fed and content. Bees drone among the flowers, and the air is still and fragrant."
+        }
+
+        #tuBrxlizm8085SfL5g4iTnvW ^"The Glass Mountain" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "An obstacle to test the ingenuity of the characters. They can try chipping out handholds, or dipping their shoes in tar, or perhaps circumvent the glass entirely by flying to the top."
+                ^"Path of Destiny" STRING "The mountain must be attempted three times, each time assisted by a different magical animal. Only the third attempt is successful."
+                ^"Forking Path" STRING "How quickly do the characters give up trying to scale the mountain? Perseverance is the lesson here. If one tirelessly strives for one’s goals, there is nothing that cannot be achieved."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A towering edifice of green glass as big as a hill. The glass is perfectly smooth, as if melted in place. At its summit is a castle — the destination of the characters. Birds of immense size circle the castle, watching for climbers upon which to drop rocks. Alternatively, the mountain may be made of ice, or guarded by snakes. Or, the summit might bear a tree with magical fruit, or the well of wisdom."
+        }
+
+        #tDZ6FA5vCcDSxnJSkWnvRTg4 ^"The Perilous Forest" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "A forest can hide all sorts of ne’er-do-wells, mysterious hermits, magical trees, and fierce beasts."
+                ^"Path of Destiny" STRING "The traditional abode of the hag, the Ironwood is filled with her wolfish children."
+                ^"Forking Path" STRING "They say there is nothing to fear except fear itself. How true is that when one is lost among demonic-looking shadows and sharp-fanged critters?"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A dark and foreboding wood, where little light reaches through the canopy. Strange noises haunt the forest, along with half-seen, swiftly moving shapes. Alternatively, the trees could be dead, and all sounds are swallowed."
+        }
+
+        #tzgBSLtEHIwjI9OhQof4lJpt ^"The Abandoned Shrine" DEF {
+            EXTENDS ^"Story Element"
+            PROPERTIES {
+                ^"Group" STRING "Scenery" FIXED
+                ^"Path of Chance" STRING "This is the place for the villain to hold his showdown, or for the priest to be forced to yield his faerie powers."
+                ^"Path of Destiny" STRING "The blood of an innocent will wake the god who slumbers in the shrine."
+                ^"Forking Path" STRING "Is it fair to let gods die? A powerful faerie who has protected his human worshipers for millennia risks death because his worship is considered idolatrous."
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "In the midst of a tangle of undergrowth, a single standing stone is found, carved with strange glyphs and leering faces. Circles carved into the ground hold traces of dried blood. Alternatively, the shrine could be found in a deep pit, or in a deserted town."
+        }}

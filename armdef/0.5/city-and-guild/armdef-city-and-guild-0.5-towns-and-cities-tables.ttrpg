@@ -1,0 +1,140 @@
+EXTENSION "ARMDef_CityAndGuild_TownsAndCities_Tables" {
+    NAME "Ars Magica Definitive Edition, City & Guild - Chapter One: Towns & Cities tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #t10c63be38daecbf348fbcb ^"YORK MAP KEY" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["No.", "Location"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "1" "All Saints Church Fishergate"
+            "2" "St. George's Chapel"
+            "3" "St. George's Church"
+            "4" "St. Stephen's Church"
+            "5" "St. Mary's Church"
+            "6" "St. Mary Bishophill"
+            "7" "St. Mary Bishophill"
+            "8" "Holy Trinity Church"
+            "9" "St. Thomas Hospital"
+            "10" "St. Gregory's Church"
+            "11" "St. John's Church"
+            "12" "All Saints Church"
+            "13" "St. Leonard's Hospital"
+            "14" "St. Olave's Church & Chapel"
+            "15" "St. Wilfrid's Church"
+            "16" "St. Martin's Church"
+            "17" "St. Helen's Church"
+            "18" "Wandesford Hospital"
+            "19" "Treasurer's House"
+            "20" "St. John Del Pire Church"
+            "21" "St. Maurice's Church"
+            "22" "Merchants Taylor's Hall"
+            "23" "St. Cuthbeht's Church"
+            "24" "St. Anthony's Hall"
+            "25" "St. Benedict's Church"
+            "26" "St. Michael's Church"
+            "27" "St. Peter's Church"
+            "28" "All Staints Pavement"
+            "29" "St. Anne's Chapel"
+            "30" "Hospital of St. Loy Dr Leonard"
+            "31" "St. John's Church"
+            "32" "Percy Inn"
+            "33" "St. Deny's Church"
+            "34" "St. Margaret's Church"
+            "35" "St. Peter in the Willows"
+            "36" "St. Michael's Church"
+            "37" "St. Lawrence's Church"
+        }
+    }
+
+    #t84a04c3113d3fe55eccda3 ^"CANTERBURY MAP KEY" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["No.", "Location"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "1" "Westgate"
+            "2" "North Gate"
+            "3" "Queningate"
+            "4" "Burgate"
+            "5" "St. George's Gate"
+            "6" "Riding Gate"
+            "7" "Postern"
+            "8" "St. Peters Church"
+            "9" "Holy Cross Church"
+            "10" "St. Augustine Abbe"
+            "11" "Christ Church Priory"
+            "12" "Cathederal Church for Holy Trinity"
+            "13" "St. Pauls"
+            "14" "St. George's Church"
+            "15" "St. John's Church"
+            "16" "St. Mary Magdalen's Church"
+            "17" "Guild Hall"
+            "18" "St. Margaret's Church"
+            "19" "St. Mary Bredman Church"
+            "20" "Poor Priests Hospital"
+            "21" "Maynard's Hospital"
+            "22" "St. Mildred's Church"
+            "23" "St. Thomas Chapel"
+            "24" "St. John's Hospital"
+            "25" "St. Gregory & Priory"
+            "26" "St. Dunstan's Church"
+            "27" "Eastbridge Hospital"
+            "28" "All Saints Church"
+            "29" "St. Mary de Castro Church"
+            "30" "Archbishop's Palace"
+            "31" "St. Alphege's Church"
+            "32" "St. Andrew's Church"
+            "33" "St. Sepulchre's Nunnerey"
+        }
+    }
+
+    #t2ab79e6c5b6c9c47824fa9 ^"Occupations" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["", "Agriculture", "Craft", "Service", "Trade"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Small Town" "50%" "50%" "—" "—"
+            "Medium Town" "10%" "30%" "30%" "10%"
+            "Large Town" "10%" "30%" "30%" "30%"
+        }
+        DESCRIPTION "Medium Town 10% 50% 30% 10%"
+    }
+
+    #tdaca65b95ef9f9fdacdc6c ^"Living Condition Modifier" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Condition", "Modifier"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Leper" "–2"
+            "Live in a leper colony*" "–1"
+            "Work in a bad air trade" "–1"
+            "Work in a mine" "–1"
+        }
+        DESCRIPTION "A Living Condition modifier is applied to the Aging Roll (ArM5, page 170). Additional modifiers are given below:\n\n* Cumulative with “Leper.”\n\nFor example, a character who lives in a town (–2, ArM5, page 170), is a leper (–2), and works in a tannery (bad air trade, –1) has a total Living Condition modifier of –5."
+    }
+
+    #t6b455c8e50d0aaef011b22 ^"Court Decisions" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Circumstance", "Modifier"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Defendant actually is innocent" "–3"
+            "Defendant has a negative reputation in the court" "+3"
+            "The majority of credible witnesses declare the defendant is guilty" "+3"
+        }
+        DESCRIPTION "A court session can make for an interesting story, but if the troupe wants to quickly decide a case, make a Communication + Civil and Canon Law roll against an Ease Factor of 6, on behalf of the defendant or his proxy. If the roll is successful, the defendant is found innocent. In England, the Common Law Ability is used instead. As this is a social interaction, penalties for The Gift and other Virtues and Flaws apply. The Ease Factor is modified by the following:\n\nCivil Law, unlike Canon Law, can accept arguments that are based on logic, and so the Artes Liberales (logic) Ability can be used to influence whether a particular witnesses declarations are considered credible, or not, by the court."
+    }
+
+}

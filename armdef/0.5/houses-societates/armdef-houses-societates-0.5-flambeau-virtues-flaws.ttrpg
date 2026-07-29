@@ -1,0 +1,23 @@
+EXTENSION "ARMDef_HoH_Societates_Flambeau_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Societates - House Flambeau Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ARMDef_Core_Virtue_Flaw"
+
+    # Chapter One's new Flaw. It fits the core ^"Flaw" type unchanged, so it
+    # EXTENDS that directly rather than a book-local type. Size and Category come
+    # from the record's OWN opening line ("Minor, Story"), never from a summary
+    # sidebar.
+
+    #t77bb86323e74bfbeb051bb ^"Miles" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The character, who must be a member of House Flambeau, is a member of the\n\nmilites (see “The Milites” earlier in this chapter). She has made a public oath to uphold the Code of Garus or some similar code of honor. This carries both benefits and obligations.\n\nThe character gains 5 experience points in House Acclaim for House Flambeau. Other milites regard the character as a brother-in-arms and can be relied upon to provide support and assistance. However, the character may lose respect (represented by House Acclaim points) if he relies too heavily on their assistance and seems unable to accomplish tasks on his own.\n\nOther milites may occasionally ask the character for assistance as well. The character has sworn an oath to obey the Primus of House Flambeau and may receive orders from the Primus at any time. (The Primus cannot give orders that affect how a magus uses his vote or what he says at Tribunal.) Successfully fulfilling a direct order from the Primus grants experience points in House Acclaim.\n\nThis Flaw covers the relationship of the miles to other Flambeau magi. How the character views the rest of the Code of Garus _ the parts about honesty, courage, and so on _ is up to the player to decide. The player may wish to choose additional Personality Flaws (for example, Higher Purpose or Dutybound) if the character intends to strictly follow the milites’ code of conduct.\n\nIf the storyguide approves, player characters may acquire this Flaw after character creation by joining House Flambeau and publicly swearing the milites’ oath."
+    }
+
+}

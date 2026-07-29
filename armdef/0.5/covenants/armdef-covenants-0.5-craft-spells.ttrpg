@@ -1,0 +1,188 @@
+EXTENSION "ARMDef_Covenants_Craft_Spells" {
+    NAME "Ars Magica Definitive Edition, Covenants - Rego Craft Spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tfgy0BZ4q2JDdDTEfLS0Snui ^"A Spell to Milk Cattle" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "While you wait, the cows are magically milked without further handling, transferring their milk into nearby milkpails. The magus’s Perception + Finesse roll substitutes for an Animal Handling roll by a competent farmer; the spell gathers the milk, but if the roll is failed, the cattle may be spooked.\n\nMilking cattle is normally Simple (3) if the cattle are accustomed to the process and the milking hand, so the basic Finesse Ease Factor is at least 6, higher if anything disturbs the cows. Cows are initially be disconcerted at being milked by invisible hands, and need soothing (The Gentle Herd is ideal for this task). Unless magically calmed, the Finesse roll is Very Hard (15+) the first time cows are milked by magic, but this Ease Factor reducing over time and successful milking to 12, then 9, until the cows become accustomed to the process (6)."
+        REFERENCES {
+            "Animal Handling" -> #teWrQcCWtN9DNBmHrm2qAE9c ^"Animal Handling"
+            "The Gentle Herd" -> #te60jRGCpp8YNkecj8ZAjMl9 ^"The Gentle Herd"
+        }
+    }
+
+    #te60jRGCpp8YNkecj8ZAjMl9 ^"The Gentle Herd" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "A group of animals are rendered calm and placid, even while unusual events occur, such as invisible hands milking them."
+    }
+
+    #tyi9GDRvl0PuOfuWcM6Vbe6L ^"The Carpenter’s Keen Eye" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "The magus learns whether wood is suitable for use in carpentry, with an indication of the treatment needed (e.g. “unseasoned — season it”, or “old, brittle, and dry — discard it”)."
+    }
+
+    #tYDQKd7EOsYinol8pOtURV7Y ^"A Spell to Kill Weeds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "The magus touches a weed, and it and all similar plants within a 15-pace range — up to 10 cubic paces of plant material — are weeded out."
+    }
+
+    #tTsYyBjIzffBt4Jq18K2z5C4 ^"The Mystical Carpenter" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            +1 "flexibility"
+            }
+        }
+        DESCRIPTION "The magus selects a pile of wood, and the spell cuts, splits, carves, and joins the wood into the desired form. Any nails needed must be supplied, but wooden dowels can be formed from the supplied wood.\n\nThe magus must make a Perception + Finesse roll to determine the success of the process, substituting for a Craft: Carpenter roll, and if this fails, the results is just a mess of chopped-up wood. The Ease Factor is at least 3 higher than a carpenter’s Craft roll would require, so the simplest basic items have an Ease Factor of 6, increasing as the task gets harder. If the magus chooses inappropriate wood (such as green, unseasoned wood), the spell still acts — as if an unwilling carpenter worked against his better judgment — but the resulting goods will undoubtedly split and warp later. The magus’s choice of wood can be improved by The Carpenter’s Keen Eye, or the advice of a real carpenter."
+        REFERENCES {
+            "The Carpenter’s Keen Eye" -> #tyi9GDRvl0PuOfuWcM6Vbe6L ^"The Carpenter’s Keen Eye"
+        }
+    }
+
+    #tZOVzLZeD3sC7aNrpb30waHc ^"The Invisible Glass-worker" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 4 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Glass"
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "The magus may transform a piece of glass into a finished form, as if a glassworker had shaped and formed it. The magus must succeed with a Perception + Finesse roll substituting for Craft: Glassworker against an Ease Factor at least 3 higher than the mundane Ease Factor. Failure reduces the glass to a slumped lump as if an incompetent beginner had worked on it.\n\nNote that in the thirteenth century, most glass is not particularly clear — making clear glass is an alchemical process, beyond a craft-spell. Glass often has bubbles and distortions unless a real expert works on it, with a proportionately high Ease Factor."
+    }
+
+    #tqSAy3JzxwrJNlZIUBMDBcKv ^"The Spell of Wrought Iron" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Metal"
+            +1 "Touch"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "The spell transforms raw pig-iron from a furnace into plain bars of wrought iron, as if a blacksmith had worked the iron in his forge. The magus must succeed in a Perception + Finesse roll to work the bars and separate out the slag. The task is normally Easy (6) for a blacksmith, so the base Ease Factor is 9. Failure means the iron and inclusions do not separate; a botch means that the inclusions go unnoticed, and the iron will be flawed and crack under strain."
+    }
+
+    #tIVMt81AqPuAQhYCCR4zDy9b ^"The Phantom Blacksmith" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Metal"
+            +1 "Touch"
+            +2 "Group"
+            +1 "flexibility"
+            }
+        }
+        DESCRIPTION "The magus transforms iron bars (or other ready iron) into a crafted and formed result, as if a blacksmith had worked to the magus’s instructions. The magus must succeed in a Perception + Finesse roll substituting for the smith’s Craft: Blacksmith roll, with +3 to any Ease Factor. Failure means that the device also fails to function; a botch means it has hidden flaws."
+    }
+}

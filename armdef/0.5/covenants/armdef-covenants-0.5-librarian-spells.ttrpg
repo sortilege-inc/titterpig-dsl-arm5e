@@ -1,0 +1,269 @@
+EXTENSION "ARMDef_Covenants_Librarian_Spells" {
+    NAME "Ars Magica Definitive Edition, Covenants - Librarian Spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #t7EpJML8BKmHBA0Cld9nB5e9 ^"Repair Cracks and Tears" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This spell allows a magus to heal cracks and tears in the parchment and leather of a book. It is a comparatively expensive way to repair books, so it is only used when the covenant lacks skilled craftsmen, or on books of such historical significance that their owners prefer they are not repaired by human hands. For example, if one of the holographic diaries of Bonisagus is damaged, it is repaired in this way, rather than by having a scribe create a replacement page, because it preserves the handwriting of the Founder.\n\n(Base 5 [one hide], +2 treated animal product [parchment] +1 Touch)"
+    }
+
+    #tgZvi9aPJkrAmiSRuGQdFSZ4 ^"A Useful Inculcator of Comments" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 4 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "This spell allows librarians to add new descriptions to their catalogs, by sliding the letters on a page aside to create the space for the new entry. The spell was originally created by a magusscribe to assist in glossing books, but is not effective for this purpose in newer works. That’s because the oak-gall “ink” in newer books is really a dye, and to move aside such characters, which are made of dyed parchment, would require an Animal requisite. This limitation can be ignored if magi use true inks, which are suspensions of colored material in fluid, to write their catalogs. This spell assumes an ink made of soot, gum, and vinegar, all of which lie within a single Form. A Dexterity + Finesse roll determines the quality of the text after the magus has relocated it. A result less than 6 indicates that the text has interpolated into and corrupted some other passage."
+    }
+
+    #tmD5hjWzu8YfyFKBhkzWTqr7 ^"A Simple Test for the Completeness of Books" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Herbam"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +1 "requisite"
+            }
+        }
+        DESCRIPTION "This spell allows the magus to check the physical condition and history of a book. It also, through the Herbam requisite, allows the magus to test the quality of the plant-based inks used in its creation."
+    }
+
+    #to0sZxhkH4dIqNvhq6bqouAu ^"Books that Scream in Pain" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Herbam"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +1 "requisite"
+            +2 "room"
+            }
+        }
+        DESCRIPTION "This spell allows the magus to check every book in a room for a physical or historical property. The name of the spell comes from the habit of an early librarian at Durenmar of making the books in the collection cry out if they were damaged, but the sigil of the caster determines the appearance of the spell’s signal. The spell’s Herbam requisite allows it to detect words in the books, provided they have a plant-based ink or binding agent, like gum arabic."
+    }
+
+    #tlFwPJKl0ULkLr41de8MWilc ^"The Avariciousness of the Ptolemies" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 4 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This ward makes it impossible for those lacking Magic Resistance to remove a book from the library, because the book cannot cross a circle inscribed on the floor, or around the single doorway. It is traditional for librarians to defend these wards by placing destructive magical items near the entrances with the triggering condition “tampering with the book ward.”\n\n(Base 1, +1 Touch, + 2 Ring)"
+        REFERENCES {
+            "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+        }
+    }
+
+    #toOVVRMtR6vKRRRyWSacvDR5 ^"Reorder the Contents of the Armarius" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Room"
+            ^"Requisite" STRING "Intellego, Mentem (the latter optional, raises level to 15)"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Room"
+            +1 "requisite"
+            +1 "versatility"
+            }
+        }
+        DESCRIPTION "This spell places books in a book chest or closet into a sequence. Sample sequences include the Art or Ability the books concern, the authors’ names, size through any dimension, the color of the covers, the binding material, the newness of the books, and their opening sentences. If the books are marked with acquisition or shelf location numbers, then those may also guide the sequence. With a Mentem requisite the magus can shelve books based on whether he has read them or not, how much he liked the books while reading them, how he feels about the authors, or his emotional attachment to the people who gave him the books. Books in chained libraries need to be taken off their rails for this spell to be used."
+    }
+
+    #t3N5VemJv6G1NwGiifuE3xu8 ^"A Simple Charm for the Recovery of Misfiled Books" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "This spell makes a misplaced book fly swiftly to rest on its lectern, in an open bookcase, or to the hand of the caster. The spell requires an Arcane Connection to the book, which is usually the library catalog, although the book’s voucher can serve equally well. The book moves about as quickly as a running man, and falls to the ground if the caster’s concentration lapses before it arrives. This spell cannot cause books to pass through solid objects, so the book must have a clear path to the magus for the spell to work. Stolen books are usually kept in a chest, or behind a closed door, to prevent this spell’s use."
+    }
+
+    #tv98n4FQtbSLexAJlIPWc0zg ^"The Demand of the Frustrated Scholar Soothed" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This spell makes a book that is within 500 paces materialize by the hand of the caster. The spell requires an Arcane Connection to the book, which is usually the library catalog. There are higher-level versions of this spell that draw a book from up to seven leagues away.\n\n(Base 20 [movement up to 500 feet, using ReCo guidelines], +4 Arc)"
+    }
+
+    #t3c6ACDnCFtW54qK1DFWVKWf ^"Determine the Location of the Absent Volume" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Imaginem, Creo (the latter optional)"
+            ^"Source" STRING "Covenants"
+        }
+        DESCRIPTION "This spell allows the caster to determine the location of a missing book by having the magus’s sigil appear on a map. Library floor plans on tablets are often used in conjunction with this spell. With a Creo requisite, the magus can project an image of the book’s location on a mirror, and hand-held magic items using this variant are often employed in libraries that encourage visitors.\n\n(Based on The Inexorable Search, +1 requisite)"
+    }
+
+    #tp6lajBUJlgXEIVBzEXPMpG9 ^"The Weightless Transportation of Books" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "This spell makes the books within a chest almost weightless. This allows library staff or Redcaps to easily carry a collection of books to a new location. This spell does not make the book chest itself weightless; that requires an Herbam requisite, and adds five levels to the spell’s difficulty. This spell is also used, enchanted into book cases, to make a library weigh less, which is important if the covenant has a growing library and no desire to replace the timber floors on the upper levels of its towers."
+    }
+
+    #tFQ2SqDxVpLxECptvPzU4nsk ^"Chamber of Summer Breezes" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Ignem"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "unnatural"
+            +1 "requisite"
+            }
+        }
+        DESCRIPTION "This spell creates a breeze of fresh, dry, warm air that continually moves throughout a room, keeping the air unpolluted and the humidity and temperature constant. This spell is often cast on armarii and book chests."
+    }
+
+    #toDVajCvPnOZb9JRcS2OLieV ^"Drawing Up the Siege Ladder" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "This spell was originally developed to allow defenders to draw siege ladders over a castle’s wall. These could then be used as fuel by the beseiged, or, if soldiers clung to them, dropped from great heights. Librarians use it to rearrange wooden furniture, but it can move any group of wooden objects. Items containing this effect can, for example, be used to stack firewood, move barrels, pile grain sacks, and perform many other useful forms of labor."
+    }
+
+    #teb91kkiyMmfXCZMlocEJze8 ^"Eternal Repetition in a Bottomless Pool" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +4 "Arc"
+            +2 "Sun"
+            +1 "clear words"
+            +2 "accepts commands"
+            +1 "extremely intricate"
+            }
+        }
+        DESCRIPTION "This spell uses enchanted mirrors to display the text of a book to which the magus has an Arcane Connection. The magus commanding the mirror can navigate the book by vocal command. For example, “next page” and “the first bit about marsh fronds “ are both legitimate commands. The spell’s name is a vestige of the early order, when mirrors were more expensive and the spell was enchanted into clay vessels, read by pouring black ink into them."
+    }
+}

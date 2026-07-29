@@ -1,0 +1,1190 @@
+EXTENSION "ARMDef_Hedge_Magic_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, Hedge Magic [Revised Edition] - Hedge Virtues and Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_Core_Virtue_Flaw"
+
+    #t1dyQB2cdh9DoMHrPPyKuEtK ^"Elemental Affinity" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character has a supernatural affinity with the four elements, such that whenever he studies a particular Ability that is chosen when this Virtue is taken — Medicine, Philosophiae, or one type of (Realm) Lore — he may divide half as many experience points among his Elementalist Forms.\n\nFor example, an elementalist with an Elemental Affinity (Medicine) who gained 8 experience points in Medicine one season would also gain 4 additional experience points to spend among Elementalist Air, Elementalist Earth, Elementalist Fire, or Elementalist Water.\n\nThis Virtue may be taken more than once, as long as a different Ability is chosen each time."
+            REFERENCES {
+                "Elementalist Air" -> #tv6RKrV3UPhDddoqdWODubSy ^"Elementalist Air"
+                "Elementalist Earth" -> #tFfsvtrgsC2jEh1Gpsb20pAN ^"Elementalist Earth"
+                "Elementalist Fire" -> #tnTvPfcHUyBDPMeqjssVmidC ^"Elementalist Fire"
+                "Elementalist Water" -> #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water"
+            }
+        }
+
+        #tNSieg5eFwZruHMjUUnW1pg3 ^"Elementalist Air" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Sanguine Personality Trait" "Warping Score + (Elementalist Air / 5)"
+            }
+            DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of air. Taking this Virtue gives the character an initial score of 0 in Elementalist Air (see Elementalist Forms, below), and a Sanguine Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Air / 5)."
+            REFERENCES {
+                "Personality Trait" -> #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+            }
+        }
+
+        #tJKnkCncEr7Aqg4JquVgLKA7 ^"Elementalist Earth" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Melancholic Personality Trait" "Warping Score + (Elementalist Earth / 5)"
+            }
+            DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of earth. Taking this Virtue gives the character an initial score of 0 in Elementalist Earth (see Elementalist Forms, below), and a Melancholic Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Earth / 5)."
+            REFERENCES {
+                "Personality Trait" -> #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+            }
+        }
+
+        #tPxut0fN8kYUt6YZQpTnWqw5 ^"Elementalist Fire" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Choleric Personality Trait" "Warping Score + (Elementalist Fire / 5)"
+            }
+            DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of fire. Taking this Virtue gives the character an initial score of 0 in Elementalist Fire (see Elementalist Forms, below), and a Choleric Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Fire / 5)."
+            REFERENCES {
+                "Personality Trait" -> #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+            }
+        }
+
+        #tlDNASQQlJZnGS4r7RB0Qxri ^"Elemental Philosophiae" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character has a natural aptitude for elemental magic, based on a deep understanding of the physical world. In any season in which the character studies Philosophiae, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).\n\nIn addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in Philosophiae, use his score in Philosophiae instead."
+            REFERENCES {
+                "Elementalist Air" -> #tv6RKrV3UPhDddoqdWODubSy ^"Elementalist Air"
+                "Elementalist Earth" -> #tFfsvtrgsC2jEh1Gpsb20pAN ^"Elementalist Earth"
+                "Elementalist Fire" -> #tnTvPfcHUyBDPMeqjssVmidC ^"Elementalist Fire"
+                "Elementalist Water" -> #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water"
+            }
+        }
+
+        #txSsvkKF4EZs3P0Yh3Z4e2Xf ^"Elementalist Water" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Phlegmatic Personality Trait" "Warping Score + (Elementalist Water / 5)"
+            }
+            DESCRIPTION "This power combines with the Elementalist Techniques to affect the element of water. Taking this Virtue gives the character an initial score of 0 in Elementalist Water (see Elementalist Forms, below), and a Phlegmatic Personality Trait (see Elemental Warping, below) equal to his Warping Score + (Elementalist Water / 5)."
+            REFERENCES {
+                "Personality Trait" -> #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+            }
+        }
+
+    MODIFY ^"Elemental Magic" {
+        PROPERTIES {
+            ^"Hedge Magic Note" STRING "Major, Supernatural. The character has a supernatural affinity with the four elements, specifically how they interact with each other. If the character studies one of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, or Elementalist Water) during a season, he may assign one additional experience point to each of the other three. If he gains experience in more than one Form in a single season (perhaps from Adventure experience), he cannot assign more than one free experience point to each Ability.\n\nIn addition, when affecting multiple elements with his elemental magic, he may use the highest Form score among them rather than the lowest.\n\nA Hermetic version of this Virtue is relatively common among magi of the Order of Hermes (ArM5, page 41), and affects the Forms of Aquam, Auram, Ignem, and Terram instead of the elemental powers."
+            ^"Hedge Magic Source" STRING "Hedge Magic [Revised Edition]"
+        }
+    }
+
+        #tl7ZUYHRMepAg5NKAaCAPGgK ^"Elemental Theurgy" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character has a supernatural aptitude for elemental magic, based in experience with spirits and beings of a particular realm (usually Magic). In any season in which the character studies (Realm) Lore appropriate to the realm associated with this Virtue, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).\n\nIn addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in the appropriate (Realm) Lore, use his score in (Realm) Lore instead."
+            REFERENCES {
+                "Elementalist Air" -> #tv6RKrV3UPhDddoqdWODubSy ^"Elementalist Air"
+                "Elementalist Earth" -> #tFfsvtrgsC2jEh1Gpsb20pAN ^"Elementalist Earth"
+                "Elementalist Fire" -> #tnTvPfcHUyBDPMeqjssVmidC ^"Elementalist Fire"
+                "Elementalist Water" -> #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water"
+            }
+        }
+
+        #tem6AD3v8MHnbNQZiwRIFEIh ^"(Type) Divining" DEF {
+            EXTENDS ^"Virtue"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Elementalist Art allows an elementalist to locate, understand, and predict the behavior of the four elements, as described under Elementalist Techniques, later in this chapter. This Virtue gives the character an initial Divining score of 0.\n\nThis Virtue may be taken up to three times, to indicate that the character can find and comprehend multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Divining must be learned separately, but all three use the same Art score, so that a character that takes this Virtue three times would have only one Divining Art, not (Medicinal) Divining, (Philosophical) Divining, and (Theurgical) Divining."
+        }
+
+        #tfvJ1hGJDRq2UTgERV99QnNp ^"(Type) Controlling" DEF {
+            EXTENDS ^"Virtue"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Controlling is an Elementalist Art that can be combined with mastery of the four elements to control the behavior of different types of beings, as described under Elementalist Techniques, later in this chapter. Taking this Virtue gives the character a score of 0 in Controlling. This Virtue may be taken up to three times, to indicate that the character can control multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Controlling must be learned separately, but all three use the same Art score, so that a character who takes this Virtue three times would have only one Controlling Art, not (Medicinal) Controlling, (Philosophical) Controlling, and (Theurgical) Controlling."
+        }
+
+        #t6vXcOZvYul5qDCypp5xHqg7 ^"Elemental Medicine" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character has a natural aptitude for elemental magic, based on special understanding of the four humors and the human body. In any season in which the character studies Medicine, the player may also assign one free experience point in each of the four Elementalist Forms (Elementalist Air, Elementalist Earth, Elementalist Fire, and Elementalist Water).\n\nIn addition, when affecting multiple elements with his elemental magic, he may use his highest Form score rather than his lowest. If the highest score exceeds his score in Medicine, use his score in Medicine instead."
+            REFERENCES {
+                "Elementalist Air" -> #tv6RKrV3UPhDddoqdWODubSy ^"Elementalist Air"
+                "Elementalist Earth" -> #tFfsvtrgsC2jEh1Gpsb20pAN ^"Elementalist Earth"
+                "Elementalist Fire" -> #tnTvPfcHUyBDPMeqjssVmidC ^"Elementalist Fire"
+                "Elementalist Water" -> #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water"
+            }
+        }
+
+        #tx6BRqr0vimLh3qQ1W047Vpn ^"(Type) Refining" DEF {
+            EXTENDS ^"Virtue"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "With this Elementalist Art, the character can purify a target by subjecting it to the four elements, as described under Elementalist Techniques, later in this chapter. Taken as a Virtue, it grants Refining with an initial score of 0.\n\nThis Virtue may be taken up to three times, to indicate that the character can refine multiple types of elemental targets (Medicinal, Philosophical, or Theurgical). The first type chosen requires a Major Virtue, the others are Minor. Each type of Refining must be learned separately, but all three use the same Art score, so that a character that takes this Virtue three times would have only one Refining Art, not (Medicinal) Refining, (Philosophical) Refining, and (Theurgical) Refining."
+        }
+
+        #tHxHXnyWiNtOSxE8xABdBu5B ^"(Type) Summoning" DEF {
+            EXTENDS ^"Virtue"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Summoning is an Elementalist Art that allows the character to use his knowledge of the Elementalist Forms to summon a target associated with that element to him. This target is somehow appropriate to his background — a disease, an aspect of nature, or an elemental being, as determined by the type of Summoning he learns (Medicinal, Philosophical, or Theurgical). This is described in more detail under Elementalist Techniques, later in this chapter. Selecting this Virtue gives the character a score of 0 in Summoning.\n\nThis Virtue may be taken up to three times, to indicate that the character can summon more than one type of elemental target. The first type chosen requires a Major Virtue, the others are Minor Virtues. Each type of Summoning must be learned separately, but all three types use the same Art score, so that a character that takes this Virtue three times would only have one Summoning Art, not (Medicinal) Summoning, (Philosophical) Summoning, and (Theurgical) Summoning."
+        }
+
+        #tQao1EGCk8FFv91DYOuZe5qq ^"Vulnerable to (Form)" DEF {
+            EXTENDS ^"Flaw"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Hermetic or Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The elementalist's mystical association with a particular element makes him more vulnerable to its opposite. You must subtract the elemental Personality Trait for the element that opposes his chosen Form from the character's Soak. For example, a character Vulnerable to Elementalist Water would subtract his Choleric Trait from his Soak whenever he is damaged by water. Furthermore, this Form does not help him at all when he is ill; do not add the Trait associated with the chosen Form to his recovery totals.\n\nThis Flaw can be taken as a Hermetic Flaw, in which case the magus must subtract his Form bonus for the opposing element from his Magic Resistance and Soak whenever he is magically affected or damaged by that element. For example, a magus with Vulnerable to Terram must treat his score in Auram as a penalty to his Form bonus for Terram.\n\nA character may take this Flaw up to four times, as long as a different Form is chosen each time. This Flaw may only be taken if the character has a score in the opposing Form; i.e. to take Vulnerable to Elementalist Fire, he must also have the Elementalist Water Virtue."
+            REFERENCES {
+                "Personality Trait" -> #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+                "Elementalist Water" -> #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water"
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+                "Elementalist Fire" -> #tnTvPfcHUyBDPMeqjssVmidC ^"Elementalist Fire"
+                "Elementalist Water" -> #tCRtJ26slS2a5NH36SUE5AKu ^"Elementalist Water"
+            }
+        }
+
+        #tmkQoaXFl4ywMGECj4rLVJd5 ^"Weak Elemental Resistance" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Hermetic or Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Perhaps the character views his supernatural association with the four elements as merely academic, or else the character is simply weaker at defending himself against them, but for whatever reason you do not add the character's elemental Personality Traits (Sanguine, Melancholy, Choleric, and Phlegmatic) to his Soak when resisting damage from elemental sources, as described under Elemental Warping, below.\n\nThis Flaw can be taken by a magus as a Hermetic Flaw, in which case his Magic Resistance is vulnerable to physical damage appropriate to the elements and all damage from spells associated with Aquam, Auram, Ignem, and Terram. In these circumstances, his Magic Resistance is not increased by his score in the corresponding Form, and his Soak is not increased by his (Form score / 5)."
+            REFERENCES {
+                "Personality Traits" -> #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+    #tzaZRcWzHCwK6JRokdUZtZsi ^"Folk Witch" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Social Status" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character has been trained as a folk witch. She may perform folk witch laboratory activities such as brewing potions, she uses folk witch casting methods with her Supernatural Virtues and gains the associated magical defenses, and she is a member of a coven who attends sabbat meetings. As she is not supported by a covenant, like a magus is, she must spend two seasons each year supporting herself — normally by performing magical services for the local community. This Virtue is compatible with many other Social Status Virtues and Flaws, and with Wealthy and Poor."
+            REFERENCES {
+                "Virtues and Flaws" -> ^"Virtues and Flaws"
+            }
+        }
+
+        #ttyROaFu6aB1uBbWIxIdzWjT ^"Flawed Folk Witch Gift Opening" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Hermetic" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The Opening of the folk witch's Gift was flawed — she does not treat one of the seven folk witch Supernatural Abilities as favored, and she may not learn the Ability during character generation. This Flaw can be taken several times, each time for a different Supernatural Ability. She can still learn the Ability at a later date, but she suffers the usual penalties for learning a Supernatural Ability. In addition, even if she does eventually learn the Ability she suffers a –1 penalty on all totals generated with it. This Flaw is Hermetic as it can only be taken by Gifted folk witches; it is normally unavailable to Gifted characters who are not folk witches."
+        }
+
+        #tjOOEjaddJC4GynC5LRcnyQ4 ^"Expert Potion Brewer" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch doubles the Supernatural Ability used to form her Lab Total when brewing potions (see later), which increases the Brew Potency."
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+            }
+        }
+
+        #t1ryuKc5S9m9VFq7HarWdnP1 ^"Short-Ranged Curses" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Curses cast by the folk witch are only effective if the curse fetish is within 100 yards of the target. The curse takes effect at the moment that the target moves within range of the completed fetish. Once a disease, aging, or miscarriage curse fetish has thus activated, removing the target from the vicinity of the fetish has no effect on the curse. On the other hand, if a target is removed from the range of an emotion, tongue, paralysis, reduction, or beast curse fetish the effect ceases, but resumes again if the target moves back into range (and the effect manages to Penetrate again) — this continues until either the Arcane Connection powering the fetish expires or the fetish is destroyed. This Flaw has no effect on curse potions brewed by the witch. This Flaw is only available if the character is a Gifted Folk Witch or has the Minor Supernatural Virtue Cursing. This Flaw is suitable for a Gifted character whose Opening of The Gift was flawed."
+            REFERENCES {
+                "Folk Witch" -> #tzaZRcWzHCwK6JRokdUZtZsi ^"Folk Witch"
+                "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+            }
+        }
+
+        #t37gCEF9SPquDDp3pYfOdZAi ^"Flight" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch character can fly. She has a score of 1 in the Supernatural Ability Flight (see later)."
+        }
+
+        #t2tgZnQne5NXgNfRUXaUJrGo ^"Cursing" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch can cast curses on other characters. She has a score of 1 in the Supernatural Ability Cursing (see later)."
+        }
+
+        #tGoBu4AP4aejKxsAJGksYBei ^"Painless Moon" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch does not suffer a Medium Wound during each month of her Witch's Moon (see later)."
+        }
+
+        #tA0XSRsF6hOsDJPfd0vDPike ^"Well-Trained Folk Witch" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "General" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Due to the quality of her induction into the folk witch tradition, the character receives an extra 50 experience points to spend during apprenticeship. This Virtue can be taken several times."
+        }
+
+        #tFlWS2NNxHoemGMlixbTTOgs ^"Life-Linked Folk Witch Magic" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Casting Total Boost" "+5 per Fatigue level spent"
+            }
+            DESCRIPTION "The folk witch may expend Fatigue levels to boost her Casting Total. Boost her Casting Total by 5 for each Fatigue level spent."
+        }
+
+        #t61kZlBXmcjrDfZs6oUGtUni ^"Silent Tradition" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch cannot use the incantation casting method. This Flaw cannot be taken if the folk witch has the Rarefied Tradition Major Flaw."
+            REFERENCES {
+                "Rarefied Tradition" -> #ta9NhVwraw1COBd5WXdlwPx0 ^"Rarefied Tradition"
+            }
+        }
+
+        #tc1bglzU2xR2tvOk8Mk9BB3f ^"Primitive Tradition" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch is incapable of brewing potions (see later)."
+        }
+
+        #tqQq2XT0aHE4EyPTx6H7MEGu ^"Animal Healer" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch can heal animals, and she has a Supernatural Ability Animal Healing with a Score of 1. This works exactly the same as the Healing Ability except that it works on animals instead of people (expending Animal vis instead of Corpus). A folk witch character can also make potions using this Ability. This is not normally a Favored Ability of folk witches, although it is for some variant covens. The character may also have the Healing Ability."
+        }
+
+        #tvtHsy2mDGE6tZVjw3THtqmk ^"Unstable Magic" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Things that the folk witch creates in the laboratory (potions, fetishes, etc.) decay and cease to work after one year and one day. This Flaw is suitable for a Gifted character whose Opening of The Gift was flawed, although it may also be taken by unGifted characters."
+            REFERENCES {
+                "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+            }
+        }
+
+        #ta9NhVwraw1COBd5WXdlwPx0 ^"Rarefied Tradition" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch may only use her Supernatural Abilities via potions. That is, she must brew and drink a suitable potion when she uses her Supernatural Abilities; she cannot use the other folk witch casting methods."
+        }
+
+        #tBhX9Cv1gZi6YcirYbL5hKO2 ^"Poorly Trained Folk Witch" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "General" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch was not well trained; she receives 50 fewer experience points to spend during her apprenticeship."
+        }
+
+        #tD81fD5GgFyMIKozZb79RLMB ^"Concentrated Potions" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch can use up to four times her Folk Witch Magic Theory Ability score worth of vis in a season when she brews potions (see later). This is double the usual amount of vis that may be used."
+            REFERENCES {
+                "Folk Witch" -> #tzaZRcWzHCwK6JRokdUZtZsi ^"Folk Witch"
+                "Magic Theory" -> #t7KPhjriPvQO5FqBFYxCbWYN ^"Magic Theory"
+            }
+        }
+
+        #tAbS7nM87RKUPSlp2ygKZkuv ^"Harsh Moon" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The folk witch suffers a Heavy Wound (instead of a Medium Wound) during each month of her Witch's Moon (see later)."
+        }
+
+    #t9mkFQRUyRNknTjoiy7PEWaP ^"Subtle Opening" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Hermetic" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The magus had his Arts Opened using a more-subtle and flexible technique than normal. Consequently, he does not suffer a penalty to the study Source Quality for his Arts scores when learning Supernatural Abilities (see **ArM5**, page 166). The magus is still penalized for scores in other Supernatural Abilities."
+        }
+
+    #to4TE5usvvyntAiUKZydIcnL ^"Energy Magic" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Hermetic" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The magus may access additional Creo Corpus and Perdo Corpus guidelines."
+        }
+
+        #t28GmT3Eper00oZn4hBdDDtB ^"Sense of the Mystic" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Hermetic" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Intellego effects cast or invented by this magus that grant magic senses do not need to penetrate the Magic Resistance of the sensed creatures. The effect must still penetrate the Magic Resistance (if any) of the person who is granted the sense. Note that this only applies to effects that have a Sense Target."
+            REFERENCES {
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+        #tZZIdoTXVCiicdrJiV0C0b5M ^"Ritual Items" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Hermetic" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The magus may make charged items that incorporate ritual effects. Each charge requires the same number of pawns of vis that casting the effect normally would otherwise cost. For example, a wand that produced an effect similar to Curse of the Unportended Plague (PeCo 55; ArM5, page 133) would require 11 pawns of Perdo or Corpus vis per charge. The number of pawns of vis that the magus may use in a season is limited in the usual way, and the number of charges is also calculated in the normal manner."
+        }
+
+    #t9G1nYSsLaGdPWkCEAmhQXu3 ^"Gruagach" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Social Status" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is a member of the gruagach magical tradition. The character may perform gruagach laboratory activities and is a member of a gruagach collective. This Virtue is compatible with many other Social Virtues and Flaws, and with Wealthy and Poor. A normal gruagach must spend time supporting himself. UnGifted gruagachan usually do this by performing their normal vocations, but more-powerful Gifted gruagachan may perform services for the community, provide services to local lords, or receive rewards for enforcing justice — these services are usually arranged for by unGifted gruagachan, who interact with the general populace."
+            REFERENCES {
+                "Virtues and Flaws" -> ^"Virtues and Flaws"
+            }
+        }
+
+        #tbD3MKkT74rrMu2UiiuA45FO ^"Cailleach Magic" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character’s gruagach tradition has incorporated aspects of the followers of Cailleach, the Pictish earth goddess and companion to Gruagach. When the character casts a spontaneous spell, the lowest applicable Art is doubled before the casting total is divided by two."
+        }
+
+        #tGsjkxvsziEqR8H2rR6dKo0T ^"External Soul" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Warping resistance" "Stamina + Pictish + stress die vs. Ease Factor 9"
+            }
+            DESCRIPTION "This Virtue prevents a character from dying because of physical injury. A gruagach may only gain this Virtue through Initiation, as described later. As part of the Initiation process, the character and his mentor place the character’s soul in a separate object. The character must guard this object closely because any damage to it, even so much as a single scratch, kills the character.\n\nWhile the character’s external soul is intact, he can’t be decapitated or have any limb severed. No magic or physical force can dismember the character, and he cannot receive any wound that would result in Incapacitation or Death. If the Damage Table indicates that the character would suffer death or an Incapacitating Wound, the storyguide should distribute the amount of damage among multiple Wound Levels until all of the damage is applied to the character.\n\nEvery time a Wound to the character must be redistributed in this manner, the character suffers a Warping Point unless the player succeeds in a stress die roll of the character’s Stamina + Pictish against an Ease Factor of 9.\n\nIf, in a single battle, a character suffers Warping Points that exceed the character’s Pictish score, the player must roll for negative Warping effects at that time. Warping effects are described in the Magical Dangers, Warping section of this chapter.\n\nExternal Soul also confers the benefit of Unaging on the character. A character with the External Soul Virtue suffers Warping of 1 point per year because of the continuing mystical effect; see ArM5, page 168. The process of extracting a character’s soul is irreversible."
+            REFERENCES {
+                "Damage Table" -> #tPmMFIniA2THCTPSXmiTuGW0 ^"Damage Table"
+            }
+        }
+
+        #tSScjsmKqeEUFa9XYjpr7xEN ^"Flexible Gruagach Magic" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The gruachach’s Formulaic spells are more versatile than most. Instead of being able to vary the Range, Duration, or Target of a known spell by 10 levels, the gruagach is able to vary the spells by 15 levels."
+        }
+
+        #tGUZ6su3GXSnpII6IfKrFD9X ^"Tattoo Mastery" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "A character with the Tattoo Mastery Virtue is more adept at creating gruagach tattoos than others. The gruagach may reduce the vis cost of a tattoo by his score in Pictish, but the cost may never be less than half the usual cost."
+        }
+
+        #tdJdT7kmsOjlN2ecB3OLSjfM ^"Fetch" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Gruagachan utilize their fetches in their magic, and need not possess this Virtue to do so, but other characters may also have access to a fetch. Fetches are essentially invisible, non-corporeal, magical animal companions. A fetch does not interact with its surroundings and may only become solid if necessary to warn its master of imminent danger; a fetch might bump its master or trip him to prevent him from stepping in a trap or falling to his death, for example. Fetches often embody some aspect of their masters’ personality — a deceptive character might have a fetch of a wolf, while a wise character might possess the fetch of a raven or owl, for instance.\n\nThis Virtue grants the character constant access to her fetch. The fetch has the Supernatural Ability Second Sight with a score of 9, and it is very vigilant. The fetch warns the character when it senses danger. It is nearly impossible to lure the character into an ambush or any form of trap without the fetch warning the character. The warning may be difficult for the character to interpret, and sometimes may be unwarranted because the fetch only has the Cunning of a very bright animal. A gruagachan without this Virtue may only utilize his fetch through Vision magic, and may not even know the shape it takes."
+            REFERENCES {
+                "Second Sight" -> ^"Second Sight"
+            }
+        }
+
+        #tuAfnAp5Q5nfYc8UKrXewf55 ^"Well-Trained Gruagach" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Due to the skill of the gruagach’s master or his extensive time studying under his master, the character may spend an extra 50 experience points on gruagach Arts and take an extra 25 levels of spells. This Virtue may be taken multiple times."
+        }
+
+        #tI2DbHA2tAXn5d9Fqo3BvLhz ^"No Tattoo Magic" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The gruagach is unable to understand tattoo creation. The character may not create or investigate a gruagach tattoo."
+        }
+
+        #tDINLRAY98kVEsSTlQKRNeve ^"Transformation Prone" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is especially prone to undergoing transformation, the gruagach equivalent of Twilight. The player must roll to resist transformation on a single magical botch, rather than on a double botch like most gruagachan."
+        }
+
+        #tUfpJnsPNDLJjeIy6Y69sXsM ^"Gruagach Master" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Social Status" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is the leader of a gruagach collective. The character has unGifted students who provide him with many of the necessities of life. In exchange for these necessities, the character must spend one season per year training those students. If the character is Poor, he only has a few followers with relatively few resources, so he must spend a normal amount of time every year on supporting himself, in addition to the time spent teaching. If the character is Wealthy, he has many apprentices or a few of means. The troupe should determine the level of experience of the students and their identities."
+        }
+
+        #t8fTjFyykh01jyHqeGZ17EAu ^"Incompatible Hedge Arts" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is unable to use a single combination of one Technique and Form. The character must possess the ability to use the Technique and Form. For example, a character could be unable to use Give Blessing charms, but would still be able to use Take Blessing, Give Curse, Give Shape, or Give Vision spells."
+            REFERENCES {
+                "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
+                "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
+            }
+        }
+
+        #tHhnwa9CDbGgvXY7sQ3paB4u ^"Weak Tattoo Magic" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The gruagach is not able to fully understand tattoo creation. Halve the character’s Lab Total whenever the character creates or investigates a gruagach tattoo."
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+            }
+        }
+
+        #t7Bva0Pzv25dqGg0LyfTQmHD ^"Inflexible Magic" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The gruagach’s Formulaic spells are not as versatile as most. Instead of being able to vary the Range, Duration, and Target of a known spell by 10 levels, the gruagach is only able to vary his spells by 5 levels."
+        }
+
+        #tXW8JhWbmdta0e2L9PdI71SA ^"Poorly Trained Gruagach" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Due to the incompetence or negligence of the gruagach’s master, the character must spend 50 fewer experience points on gruagach Arts and take 25 fewer levels of spells than normal. This Flaw may be taken multiple times, but may not reduce the gained experience to 0."
+        }
+
+        #te08SL6RQrGZ2P0ZcD8XL1WT ^"Shape" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Form allows the gruagach to change the shape of another or herself. A Give Shape spell will only work on a willing target, and the caster can grant aspects of another creature to the target or allow the target to take on other forms. Take Shape forces another to change from his current form into another. A Take spell can return the target to his original form or force him into a foreign form."
+        }
+
+        #tz2KZ14LNZWfhEWaOlMSgZTE ^"Blessing" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Form grants the gruagach the ability to confer Virtues, grant bonuses to Abilities, and improve the Characteristics of other characters. In all instances, the gruagach must balance the benefit with a specific prohibition on the target's actions, which if violated causes the benefit to disappear. The more powerful the benefit granted, the more difficult the spell. Take Blessing spells allow the character to nullify certain Virtues or Abilities a character possesses. This Form cannot affect some Virtues — Social Statuses and Divine, Infernal, Hermetic, and Faerie Virtues, for example. Virtues that affect the accumulation of experience points, give access to specific Abilities, or grant physical objects may not be affected."
+        }
+
+        #tS3ouWzmHUtigVl8E0rRTt0D ^"Curse" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Form allows the gruagach to inflict Flaws on a target or to reduce his Characteristics and Abilities. All Give Curse spells must contain a condition that, if the target fulfills it, removes the curse. Take Curse spells allow the caster to remove her own curses or the lingering effects of magic, hexes, or other spells cast upon an individual."
+        }
+
+        #tsx0YFJBRelmHZHsIex2IhYA ^"Vision" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Form allows a caster to manipulate a subject's perception of the world. This Form not only governs a gruagach's use of illusions, but also allows a character to perceive things beyond his normal senses, including the detection of vis. At its most powerful, it can grant the target a glimpse into a possible future."
+        }
+
+        #tjagrwBQTuQVhETs6ukmAf88 ^"Give" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Technique governs a gruagach's ability to grant blessings, inflict curses, impart shapes, and provide visions to others. It does not have a close Hermetic equivalent, but encompasses aspects of most Techniques. It can also inflict curses and geasa (singular: geas) on a target."
+        }
+
+        #txzbIaIraxMfhDHx00FY8ChD ^"Take" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Technique allows a gruagach to remove something from a target. A Take spell might eliminate an aspect of a target or merely acquire a component of it. This Art covers nearly every Hermetic Technique. It can allow a person to recover from hostile magic, and it can acquire information about a target. Take spells can also remove a character's Virtues and reduce his Abilities."
+            REFERENCES {
+                "Hermetic Technique" -> #tRgVo1ja4K0oM5BwXFMt8dFK ^"Hermetic Technique"
+            }
+        }
+
+    #tQsr0gmWNey6xgOIGSR2CTRa ^"Mathematicus of Bologna" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Social Status" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is a member of the magical tradition of the Mathematici of Bologna. The character may cast charms and perform laboratory activities according to the rules of this chapter. To possess this Social Status, the character must have at least one Hedge Technique and Form from this chapter.\n\nA mathematicus must also possess a Social Status that defines his role in mundane society, suitable examples include: Clerk, Gentleman, Landed Noble, Magister in Artibus, Mendicant Friar, or Priest. The Social Statuses listed in the Universities and Medicine chapters of Art & Academe are very appropriate, as are those listed in Realms of Power: The Divine, pages 92-93. These lists are not exhaustive, and the troupe may include additional Social Statuses that are appropriate to the learned magician character. The amount of freedom a mathematicus has to study is based on his other Social Status, or whether he possesses the Wealthy Virtue or Poor Flaw."
+            REFERENCES {
+                "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
+                "Landed Noble" -> #tylYPzXpVsfCCu5Q2aAh4WjR ^"Landed Noble"
+                "Magister in Artibus" -> #t5Zk9c2eCMQXtBlBfQxz7XOR ^"Magister in Artibus"
+                "Mendicant Friar" -> #tSeeB5trfBwm4wETi8ItYuym ^"Mendicant Friar"
+                "The Divine" -> #t3MYdWCQ7hygy7A794yDxTid ^"The Divine"
+            }
+        }
+
+        #taatYcWzVvjDZygRiRw5lfzS ^"Mythic Alchemy" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Lab Total" "Intelligence + Philosophiae"
+            }
+            DESCRIPTION "This Virtue grants the character a score of 1 in the Mythic Alchemy Supernatural Ability. Mythic alchemists can actually transmute types of atoms into other types of atoms through the application of magical rather than philosophical techniques. This Ability always requires at least one season of activity in a properly outfitted alchemical laboratory. The rules described here depend on the rules for alchemists given in Art & Academe, Chapter 5: Experimental Philosophy.\n\nBriefly, a formula is invented in a season by acquiring 5 experience points. Formulae are described like spells, with a single parameter called Alteration that describes the magnitude of the change. The formula is used to produce a reagent in a season using a Lab Total equal to Intelligence + Philosophiae, and the alchemist must accumulate points in excess of the formula's level just like inventing a spell. Mythic alchemists are superior to their non-magical brethren in this, and they may add their Mythic Alchemy to their Lab Totals for creating any alchemical reagents.\n\nThose with this Virtue can devise formulae that employ guidelines for alchemical reagents that are not available to those without the Virtue. The changes effected by Mythic Alchemy are permanent transmutations of the elements and result in non-magical substances, which cannot be dispelled. Alchemists without Mythic Alchemy always fail if they try to recreate these formulae from a Laboratory Text.\n\nLearned magicians with the Mythic Alchemy Virtue may extract and transfer vis as described in ArM5, page 94. The Mythic Alchemist uses his Succurro Magicam Lab Total to determine the number of pawns of Vim vis he may extract from a magical aura. Substitute the character's score in Mythic Alchemy for Magic Theory to determine the number of pawns a character may use in a single season.\n\nMythic Alchemists can also prepare the raw materials for a craftsman in such a way that the Ease Factor for creating Superior, Excellent, or Wondrous items is reduced; see City & Guild, pages 63-73. The alchemist produces a reagent in the form of the primary component of the item to be created. For example, to create superior swords or armor, the alchemist would need to treat the metal used, but not the leather for the hilt or straps. The alchemist may prepare enough raw materials for a craftsman to use in one season (City & Guild, page 68). This process does not require vis. A Slight Alteration subtracts 1 from the Craft Ease Factor, a Minor Alteration subtracts 2, a Substantial Alteration subtracts 3, and a Major Alteration subtracts 4.\n\nTransmuting a complex element into a similar sort of complex element is a Slight Alteration if there is no change in the type of substance; for example, as in turning Welsh copper into Cornish copper (which has a slightly different luster). A Minor Alteration can effect a transmutation of species; for example, base metal to base metal, or processed liquid to processed liquid. And a Substantial Alteration can change genus; for example, base metal to noble metal, or oil into acid. Major Alterations can affect higher categories of genus; so wood can be turned into tin, for example. Solids must remain solids, and liquids must remain liquids in any transmutation, and this is true when transmuting simple matter to complex matter and vice versa. Each dose of a transmutative reagent requires a pawn of Vim vis or vis of the appropriate Form for every 5 points (rounded up) of the reagent's final level. A Mythic Alchemist can handle a number of pawns of vis in a season equal to twice his Mythic Alchemy score; and this may limit the number of doses he can produce regardless of his Lab Total or any Laboratory Texts."
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Magic Theory" -> #t7KPhjriPvQO5FqBFYxCbWYN ^"Magic Theory"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Laboratory Texts" -> #tjEieTlDNfk0F8RAacxbNRxp ^"Laboratory Texts"
+            }
+        }
+
+        #tQZHRKi47Gn356XKGU1zNTbI ^"Mythic Herbalism" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Concoction roll" "Intelligence + Mythic Herbalism vs Ease Factor"
+            }
+            DESCRIPTION "Mythic Herbalism is a Major Supernatural Virtue that grants a score of 1 in the Mythic Herbalism Ability. Mythic Herbalism permits a character to create unguents and poultices that can heal the wounded, cure the diseased, or assist the poisoned. The Ability also allows a character to create especially virulent poisons. Finally, the Mythic Herbalist may create potions that grant temporary bonuses to various physical characteristics. The effects of the concoctions are detailed in the nearby chart.\n\nFor any creation, the character must spend a number of days equal to one-third the Ease Factor of the intended effect to prepare and brew the necessary ingredients. Anyone with the Ability Profession (Apothecary) and access to plants growing in a Magic aura may supply the ingredients.\n\nThe character may create multiple doses of any concoction; the Ease Factor is increased by 1 for each additional dose. The character must select the total number of doses he wishes to create prior to beginning the brewing process. Large batches are more difficult to create because of instability during the brewing process, but they do not take longer to create than a single dose does. The character does not need access to a full Hermetic laboratory, but may create potions with only a few basic tools and a constant source of heat.\n\nAt the end of the process, the player must roll the character's Intelligence + Mythic Herbalism against the target Ease Factor. If the roll fails, the concoction is useless. If the roll is a botch, the resulting concoction may poison the creator or its recipient.\n\nAfter one Season, an unused poultice, poison, or potion expires and thereafter lacks all powers. An unguent or poultice grants a bonus to Recovery rolls based on the target Ease Factor selected by the player and the character's Mythic Herbalism score. Unless otherwise stated, the curative is effective for one month and must be reapplied if the patient's Wound takes longer to heal. If a character receives the benefit of a poultice and a spell, only the larger Recovery bonus applies.\n\nUse the Ease Factors above to create an ingested poison. If the poison is a contact poison, increase the Ease Factor by +3.\n\nPotions created by Mythic Herbalism that grant physical bonuses last for Sun Duration. The effects of the potions are not cumulative. The bonus to Fatigue rolls may not exceed +2, only one level of Fatigue may be ignored per day, and the bonuses to Soak do not stack.\n\nSpecialties: Healing wounds, Creating potions, Creating poisons. (Supernatural)"
+            REFERENCES {
+                "Ease Factors" -> #tGQufzy8y8Qc3foo2n9p7nMU ^"Ease Factor"
+            }
+        }
+
+        #tqs4yND0UbPI75a6FSxTtGpn ^"Strong Amulet Magic" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is especially adept at creating chartae and amulets. When creating either, the character receives a +10 bonus to all Lab Totals."
+        }
+
+        #tHt6vHgle2qeJQGUjDOvDxmY ^"Strong Verbal Charms" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is especially proficient in verbal charms. When casting a verbal charm, the character's casting total plus die roll is used to determine the spell level; the sum is not divided by two. When casting a charm from a text, the sum of the character's casting total and his die roll is divided by two rather than the normal five."
+        }
+
+        #tYXBbfdxlslIKwrkxeK4amwt ^"Natural Magician" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Virtue allows the character to utilize natural magic principles — such as elemental forces, natural affinities, magical contagion, and sympathetic connections — in performing any Magic-aligned Supernatural Ability to limit or eliminate the negative realm interaction effects of Divine or Infernal realms. Because of the time and materials required to utilize all of the natural magical principles, this ability may only aid activities that take a season or longer to perform.\n\nThe player adds his character's Philosophiae score to the Casting Total, Laboratory Total, or Supernatural Ability roll. The Philosophiae score may never be greater than the absolute amount of the negative realm interaction modifier. It is only useful in overcoming the negative realm interaction effects of an aura. The use of this Virtue never assists the character in achieving the initial effect total, and cannot aid in Penetration. This Virtue provides no benefit for activities performed in Faerie or Magic realms. This Virtue may be used in conjunction with Entreat the Powers."
+            REFERENCES {
+                "Entreat the Powers" -> #tdv8a9vP14D12IZW80kviRjW ^"Entreat the Powers"
+            }
+        }
+
+        #tbFHvx8Wfxe8YiygAdgcXZl3 ^"Skilled Master" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "General" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Due to the skill of the learned magician's master or his extensive time studying under his master, the character may spend an extra 50 experience points on Arts, Abilities, and charms. This Virtue may be taken multiple times."
+        }
+
+        #tRfFMx8WpkaiLnZoYS2h7qNU ^"Charm Magician" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character may not create amulets, but may create chartae. The character may possess this Virtue in conjunction with the No Chartae Making Flaw, which prevents him from creating any devices in the laboratory."
+            REFERENCES {
+                "No Chartae Making" -> #tH2ntG6ZxU8BAvQG4ZHpeWeX ^"No Chartae Making"
+            }
+        }
+
+        #tKz9WpfWSgzYXmjHDQDWxq6u ^"Intervention Prone" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is especially prone to undergoing intervention, the learned magician equivalent of Twilight. The player must roll to resist intervention on a single magical botch, rather than on a double botch like most learned magicians."
+        }
+
+        #taxo2nojZWZB60dZGxw0bDoK ^"Laboratory Magician" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character may not memorize charms and may only cast charms with the assistance of a text. The character may possess this Virtue in conjunction with the No Text Casting Flaw, which prevents him from casting any charms."
+            REFERENCES {
+                "No Text Casting" -> #t8MiWE2mOtOVVVhqXEuMdbNu ^"No Text Casting"
+            }
+        }
+
+        #tiMZ9x05p9qfb5OIVr8lrWEh ^"Weak Verbal Charms" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is less adept at verbal charms than the typical learned magician. The sum of the character's casting total and his die roll is always divided by five whether he knows the charm or is reading it from a text."
+        }
+
+        #tH2ntG6ZxU8BAvQG4ZHpeWeX ^"No Chartae Making" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character cannot create chartae, but may create amulets. The character may possess this Virtue in conjunction with the Charm Magician Flaw, which prevents him from creating any amulets or chartae."
+            REFERENCES {
+                "Charm Magician" -> #tRfFMx8WpkaiLnZoYS2h7qNU ^"Charm Magician"
+            }
+        }
+
+        #t8MiWE2mOtOVVVhqXEuMdbNu ^"No Text Casting" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character can't cast charms from texts. The character may possess this Virtue in conjunction with the Laboratory Magician Flaw, which prevents him from casting any charms."
+            REFERENCES {
+                "Laboratory Magician" -> #taxo2nojZWZB60dZGxw0bDoK ^"Laboratory Magician"
+            }
+        }
+
+        #twuNL4fwAXRSmP3VH2u0dvY6 ^"Poorly Trained Magician" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Due to the incompetence or negligence of the learned magician's master, the character may spend 50 fewer experience points on his Arts and charms than normal. This Flaw may be taken multiple times, but may not reduce the available experience points to zero."
+        }
+
+        #tLNWU9XBVdAASY4sFVKjOnqO ^"Weak Amulets" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is less proficient at creating amulets than the typical learned magician. Subtract five from your Lab Total when creating amulets. This Flaw does not affect the character's ability to create chartae."
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+            }
+        }
+
+        #tVW8KsNuwYY1dwPnGckS7SQW ^"Weak Chartae" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is less proficient at creating chartae than the typical learned magician. Subtract five from your Lab Total when creating chartae. This Flaw does not affect the character's ability to create amulets."
+            REFERENCES {
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+            }
+        }
+
+    #tUSqwh9uRD4QLUzMosCb5iVI ^"Healing" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The learned magician may create Succurro charms that heal a target instantly, overcoming the normal limitation that Succurro charms cannot instantly heal a target."
+        }
+
+        #tdv8a9vP14D12IZW80kviRjW ^"Entreat the Powers" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Entreat the Powers Total" "Stress Die + Presence + (Realm) Lore"
+            }
+            DESCRIPTION "The Virtue Entreat the Powers allows a character to mitigate or eliminate negative realm interaction effects. When casting a charm or creating an amulet or charta, the character calls to the powers of the realm from which he seeks aid, loudly and firmly naming the powers he is invoking. The magician may not use Quiet Magic or silently cast a charm while using the Virtue Entreat the Powers. A learned magician adds his Entreat the Powers total to his Casting Score or Lab Total. The Entreat the Powers Total may never be greater than the absolute amount of the Aura Modifier component of the Casting or Lab Total. Therefore, Entreat the Powers only aids a learned magician in overcoming the negative realm interaction effects of an aura. It never assists a learned magician in achieving the initial effect total required to create the charm or device, and cannot aid in Penetration. If the learned magician calls upon a power other than the one in which the magic occurs, the Entreat the Powers total is divided by the hostile aura."
+            REFERENCES {
+                "Quiet Magic" -> #tPMRFVovsqtQ7JgNZBPlZwhr ^"Quiet Magic"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+            }
+        }
+
+        #tQfwYvaCEAvLoNi36IDWjqDy ^"Succurro" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "This Art allows charms that enhance some pre-existing aspect of a target. Succurro charms cannot grant abilities that have no basis in the original target, and Succurro most closely corresponds to Hermetic Creo magic. Succurro charms cannot, however, create something from nothing or instantly heal a target. Succurro magic cannot replicate the unnatural modifications to a target that are available with Muto magic. A charm can assist a person to heal more quickly or improve her sight, but it cannot allow her to grow wings or see through walls because no mere mortal can do those things. Succurro magic removes imperfections in a target, but cannot create perfection."
+        }
+
+        #tPfVfaKLTuMgODGRT2AfMpdt ^"Tueor" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Tueor is the Art that guards or defends the target of the charm from certain specific harms. Tueor works in conjunction with the Form of the thing protected. Tueor Salutem charms protect a target's health; they do not protect \"against\" health. A Tueor Salutem charm could protect a person's health, a field's health, or an animal's health. Although different charms are required to accomplish each feat, the same two Arts can protect a wide range of targets from an infinite range of maladies. The more common the potential harm that the charm protects against, the more difficult it is to create. Tueor charms against rare or very specific harms are relatively simple to create and are the most common."
+        }
+
+        #t2paGkDahDzV6w1tKPyb5OnL ^"Vulnero" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Vulnero charms cause harm, whether direct or indirect, to a target. Vulnero magic is always harmful to the target. Vulnero charms closely resemble Perdo magic. Both forms of magic can cause a target to suffer damage or become worse examples of person, place, or thing. Unlike Perdo magic, Vulnero magic may not completely remove an aspect of a thing. The more completely some aspect of a thing is destroyed, the more difficult it is to create a Vulnero charm. Similar to Succurro charms, Vulnero charms work most easily when they weaken an already weak aspect of a target. All verbal magics that learned magicians perform are referred to as charms, but when the charms are malicious in nature and harm the target, as the Vulnero Technique does, they are often referred to as curses."
+        }
+
+        #tedkaZg0kpUriNSfuBmUxLSb ^"Entreat the (Realm) Powers" DEF {
+            EXTENDS ^"Virtue"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Entreat the Powers Total" "Stress Die + Presence + (Realm) Lore"
+            }
+            DESCRIPTION "For magicians with either Entreat the Powers or Entreat the (Realm) Powers Virtues, they may reduce the realm interaction effects upon their magic by calling upon the powers of the specified realm. This Virtue has no effect in areas where there is no negative realm interaction. Although the magicians may call upon entities outside the Magic Realm, this does not mean that they are practicing a supernatural ability aligned with that realm. The character adds the total to his Casting Score or Lab Total, but it may never be greater than the absolute amount of the Aura Modifier component, and it never assists in achieving the initial effect total nor in Penetration."
+            REFERENCES {
+                "Entreat the Powers" -> #tdv8a9vP14D12IZW80kviRjW ^"Entreat the Powers"
+                "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
+            }
+        }
+
+        #tSicPQuUyGioafB1hJZ3LpNj ^"Fortunam" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Fortunam charms affect a target's luck by reducing the likelihood of accidents or improving his good fortune. Although Fortunam magic is cast on a single target, its effects can influence the acts of anyone that target encounters. For example, a Fortunam charm that aids one in combat could cause a defender to be momentarily distracted, a strap on the defender's shield to snap, or the footing of the defender to give. None of these small events happen under the direction of the learned magician or the target, but in combination they can temporarily improve the target's ability to successfully strike his opponent. The Art of Fortunam does not have a Hermetic equivalent."
+        }
+
+        #tn5oMw2LxVIoHTpezG0majLn ^"Magicam" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Magicam charms allow a character to acquire or improve magical powers. They can also be used to enhance or strengthen the magic of amulets or other charms, or more commonly, to protect against or remove the effects of hostile magic upon a target. Of all a learned magician's Forms, Magicam corresponds most closely to the Hermetic Art of Vim."
+        }
+
+        #tVJ6R707lWCpA9GFybqbTp2n ^"Salutem" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural Form" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Salutem governs the health and general well being of a target. Salutem charms involve disease, age, and other infirmities related to a target's health. For humans, most of the aspects of Salutem charms are included in Corpus magic. However, this Form is much broader than simply being a non-Hermetic equivalent of Corpus, as Salutem charms can affect the health of an animal or plant also. The health of any living creature can be affected by Salutem charms. Abstract entities cannot be affected by Salutem charms. The economic \"health\" of a city could not be improved by a Salutem charm; this would be more the province of Fortunam. Salutem charms cannot replicate all aspects of Corpus, Animal, or Herbam magic. A Salutem charm only affects the health of a target."
+        }
+
+    #tlNgwV81G5NHpkJyHFQ8OYxy ^"Nightwalker" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Make phantastic form tangible or intangible" "Stamina + Concentration"
+                "See intangible phantasticum with Second Sight" "Ease Factor 9"
+            }
+            DESCRIPTION "A character with this virtue is able to stray; that is, he may send his spirit away from his body, and have it take material form at a distant place. This separated spirit, in solid or immaterial form, is called a phantasticum. The ability to generate a phantasticum allows the character to accept responsibilities, and perform acts, that are described in greater detail in the following sections.\n\nThis Virtue includes all of the following powers:\n\n• The character may stray while insensible, and lead others astray. • The character knows a method of forcing insensibility. • The character may use the Second Sight Ability in phantastic form, and gains a score of 1 in that Ability. He may not use it while in his body, unless he has the Second Sight Virtue. If he does, he has one score in Second Sight that he uses in both situations. • The character involuntarily creates the accouterments usual to his or her tradition while in phantastic form. If these accouterments include traditional weapons, these weapons damage foes despite their apparent fragility. • The character may make his spiritual form tangible or intangible using a Stamina + Concentration roll. • The character may harm spirits in intangible form, as if both were tangible. • The presence of the character in phantastic form causes drowsiness. • If the character's tradition uses animal or elemental shapes to travel, for processions, or for fertility battles, the character may do so. While in inhuman form, the character has the combat statistics and senses of a creature of the appropriate species, but retains his Intelligence and identity. • The character may speak to the sleeping, causing them to have dreams, and may converse with people who are awake, although this is arduous.\n\nThe Virtue also includes the following duties and limitations:\n\n• The character's body appears dead and is terribly vulnerable while the phantasticum is absent. • The character has the Magical Air Flaw while in phantastic form • The character must muster for every battle or procession, as described below, if these are part of the character's regional tradition, and does so involuntarily. • Injuries the character takes in phantastic form are proportionally reflected on the waking form. • The character must not describe the battles or processions, in any detail, to outsiders. • This virtue does not provide Magic Resistance or Might. • Characters in intangible phantastic form may be harmed by spells that affect ghosts or spirits, and may be seen with Second Sight (Ease Factor 9). • Characters in tangible phantastic form may be harmed by anything that would harm mundane versions of their form."
+            REFERENCES {
+                "Second Sight" -> ^"Second Sight"
+                "Second Sight" -> ^"Second Sight"
+                "Second Sight" -> ^"Second Sight"
+                "Magical Air" -> #tASlopIQIdlv3QNKOsFggzrh ^"Magical Air"
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+                "Second Sight" -> ^"Second Sight"
+            }
+        }
+
+        #ts59pJCI2JFfOVuqo7ALDvKs ^"Versatile Phantasticum" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Versatile Phantasticum is a virtue taken by traditions whose members can fight in animal or elemental form when not at a fertility battle. A character may have a Versatile Phantasticum because all members of the character's regional tradition have one, or because the character has powers superior to those usual to the regional tradition. Traditions that require this Virtue of their members are described below."
+        }
+
+        #tWTgRImth9Qou9p27yA8r10Y ^"Half Taltós" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            FORMULAS {
+                "Use Second Sight ritual" "Athletics + Stamina vs. Ease Factor 6 (or lose a fatigue level)"
+            }
+            DESCRIPTION "A half taltós is a potential taltós — a regional variant of nightwalker described later — who failed to defeat an elder taltós at his initiatory battle. In folklore half taltós have a variety of powers, but this Virtue only grants a limited form of Second Sight and the ability to affect spiritual entities with a limited range of physical objects. Half-taltós player characters can be differentiated by selecting other supernatural Virtues.\n\nSecond Sight comes only with difficulty to half taltós. They must perform a simple ritual, which varies by taltós and takes a minute, before they can use the Virtue for one minute or until the conclusion of one battle, whichever is longer. Using this ritual repeatedly is very tiring. Each use requires an Athletics + Stamina roll against an Ease Factor of 6, or the half taltós loses a fatigue level. The half taltós may affect spirits with his personal armaments. These are usually a sword or whip, with a smaller weapon for emergencies. These are physical weapons with a spiritual nature. If a half taltós loses a weapon, it takes a month of occasional work for him to create the Arcane Connection to a new weapon necessary for it to be used to harm spirits."
+            REFERENCES {
+                "Second Sight" -> ^"Second Sight"
+            }
+        }
+
+        #tpW9fYOtHRGAjwLMUs4mh902 ^"Hamr" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Hamr is a Norse term for what Hermetic scholars would call a corporeal phantasticum. Warriors with a hamr have the ability to enter a trance within sight of the battlefield, so that they can send forth their spirit to do battle in animal shape. An example is the folk hero Boðvar Bjarki, who would hide before battles but was not considered a coward by his fellows because a great white bear would appear in his stead, and he would have the bear's injuries after the battle.\n\nIf the warrior's body is found while he is in a trance, he is in a very vulnerable state. His body will not awaken until the hamr returns to it. If the body is killed, the hamr becomes an unusual ghost, and there are several possible outcomes. The hamr may vanish as the character dies. Or the hamr may remain on the battlefield until the battle is over, fulfilling the ghost's last wish. Most hamr are able to remain in the world only until the flesh of their decaying body falls from the bones. But occasionally the hamr remains on Earth indefinitely, single-mindedly seeking out those who killed the magician.\n\nSuch nemeses are usually unsuitable as player characters. Only their fixation on revenge allows them to remain in the world, which makes them unable to assist other player characters in stories unrelated to their vengeance. Hamr are also notably animalistic in their thinking, and so are rarely able to plausibly find ways of working patiently and methodically toward the downfall of their foe, as anthropomorphic ghosts sometimes can.\n\nThe character requires a prop that places him in a dissociated mental state. This is the hide of an animal in some groups. In others it is a drug, alcohol being particularly popular in some traditions. These characters take (10 – Concentration minutes) to enter the trance state and express the hamr — far slower than conventional skinchangers — but they do not take a season to replace their prop if it is lost or stolen. Many reduce this time by arriving at battles so severely inebriated that they are on the very verge of insensibility, which shortens the time required to three rounds (drink, lie down, express hamr). While in the trance state, they are unaffected by inebriation and the trance state does not cease as the body neutralizes the drug.\n\nHamr can be used for purposes other than battle. For example, bird hamr make excellent scouts. The Hamr Virtue doesn't grant any other magical powers usual for ecstatic magic."
+        }
+
+        #tlr5Jm61NJM8uDekHc9bCAUJ ^"Sleepwalker" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "Hermetic magi prone to speculation on these things, particularly from the Houses of Bjornaer and Tremere, have noted that there is a class of hedge magicians who sleepwalk within their hamr, rather than entering a trance hidden away from the battlefield. The hamr is larger than a human is, and may appear to be a hybrid of human and animal forms. The magician is cloaked within the phantasticum, the more durable and combatworthy form. In battle, a Heavy Wound may cut the hamr so deeply that the skin of the human within is visible through the laceration. Sleepwalkers are unable to stray, in the sense of their phantasticum losing physical contact with the body, so lack virtually all of the powers of nightwalkers.\n\nSleepwalkers, like magicians with a hamr, require props and are likely to arrive at tense situations almost out of their minds. It often occurs that those sleepwalking in their hamr act with the ferocity of their animal form, and fail to recognize friends and family who are dear to them in the waking state."
+        }
+
+    #tzrWgax5T2DUWbYbhQCykabO ^"Deft Rune" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The vitki is particularly skilled with one rune. He suffers no penalty to his Casting Total when he does not inscribe his name or a description of the effect on a script that incorporates this rune. This Virtue may be taken more than once, each time with a different rune."
+        }
+
+    MODIFY ^"Fast Caster" {
+        PROPERTIES {
+            ^"Hedge Magic Note" STRING "Minor, Supernatural. The character can make a rune script much more quickly than other vitkir, accurately inscribing the runes in half the normal time. He can also fast-cast a rune spell, much the same way that magi can fast-cast spontaneous spells, though he must always leave off his name and the description of the effect, as there isn’t time to inscribe them."
+            ^"Hedge Magic Source" STRING "Hedge Magic [Revised Edition]"
+        }
+    }
+
+        #tcUPkW1qRNxMsUsfQf79h06K ^"Major Rune Focus" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The vitki has a magical focus in a type of rune magic, which is also associated with a particular material. Whenever the vitki inscribes runes into the proper material for an effect associated with the focus, you may double his score in the rune used for the script. (See the Vitkar Magic Foci sidebar for a list of these types and the materials associated with them.)"
+        }
+
+        #tQUUjmC8odbunV9gQWzfuT2s ^"Mastered Rune" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character has mastered a single rune, reducing the frequency of magical accidents. Whenever he inscribes this rune in a rune script, your botch dice are reduced by three (to a minimum of one die), and all penalties to your casting rolls are halved. You may take this Virtue more than once, each time with a different rune."
+        }
+
+        #t1KXOUVXtqAyEznImb9HT2GX ^"Minor Rune Focus" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The vitki has a magical focus with a single rune used in a particular type of rune magic (see the Vitkar Magic Foci sidebar). Whenever the vitki casts a rune spell with an effect appropriate to the focus and the chosen rune, and inscribes this rune into the material associated with the focus, you may double the vitki’s score in the rune used for the formula."
+        }
+
+        #t7yB3uOfUjv7u98TI2nxu5d9 ^"Nameless Runes" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character may cast rune spells without inscribing his name into the script at no penalty, though he receives no benefit when he does. The runes still form a magical connection to him that other magic characters can detect with their spells and use to identify him, but it is not obvious to those who can read the writing on the stone."
+        }
+
+    MODIFY ^"Secondary Insight" {
+        PROPERTIES {
+            ^"Hedge Magic Note" STRING "Major, Supernatural. When the vitki is studying any of the runes, he also gains a single experience point in all of the other runes in that same aett. He may not put more than one bonus experience point into a single rune during the same season, even if he studies multiple runes, and if he studies runes from multiple aetts, he must choose which group of seven runes receives the bonus."
+            ^"Hedge Magic Source" STRING "Hedge Magic [Revised Edition]"
+        }
+    }
+
+        #tlnz36gAq3pGjGYioMo06Tya ^"Secret Runes" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character may hide the runes that describe the effect of his rune scripts without suffering a penalty to his Casting Total, and taking only a –5 penalty when he does not describe the effect at all. He gains no benefit from inscribing the runes normally, but does receive a bonus when he exaggerates the runes. He may take this Virtue twice to eliminate the penalty altogether."
+        }
+
+        #twKvXaxxIgJTj3ExWXtMn2rq ^"Vitki" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Social Status" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The character is a Norse rune wizard, believed by magi to belong to a group called the Order of Odin. At one time he was respected and feared by other men living in the north, but now very few of his people even know his kind exists. He is still considered by many magi to be an enemy of the Order of Hermes, and those who discover what he is may try to hunt him down and kill him, or else attempt to force him to teach them his magical secrets. Vitkir may take Arcane Abilities, Martial Abilities, or Academic Abilities during or after their apprenticeship, just like Hermetic magi, as long as these Abilities are appropriate to their masters’ backgrounds (for example, an academic vitki is unlikely to teach his apprentice Great Weapon, and a warrior vitki probably does not ensure his followers are well versed in Philosophiae). All vitkir must take this as their Social Status Virtue, and it is only available to them."
+            REFERENCES {
+                "Order of Hermes" -> #tARMDefConceptOrderOfHermes ^"Order of Hermes"
+                "Great Weapon" -> #tEJFnp2ppuV0LkIzGNa8LPPz ^"Great Weapon"
+            }
+        }
+
+        #t93vq0LmcGS14RCbpF9zfAs0 ^"Major Magical Deficiency" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The vitki has a magical deficiency with all of the runes in a single aett. Whenever one of his rune scripts includes one of these runes, his casting total is halved. Or, the vitki may have a grave deficiency with three runes, such that he cannot use those runes in any of his spells."
+        }
+
+        #teUi9nzL5p0wiAG2YJqtbHCd ^"Minor Magical Deficiency" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The vitki has a deficiency with three of the runes. Whenever one of his rune scripts includes these runes, his casting total is halved. Or, the vitki may have a grave deficiency with a single rune, such that he cannot use it in any of his spells."
+        }
+
+        #tlmzoMKgM8YQ9HCEhVE4IqVY ^"Nátt-thel Prone" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The vitki is particularly susceptible to being overwhelmed by the power of magic, and suffers the effects of Nátt-thel (described later) any time you roll a single supernatural botch, rather than a double botch."
+        }
+
+        #t3QIIrTBEcNu1nlrQIGB0DjO ^"Short-Lived Runes" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Hedge Magic [Revised Edition]"
+            }
+            DESCRIPTION "The magic in the vitki’s runes naturally fades, and unlike other rune spells is not permanent as long as the rune is not damaged. The storyguide should secretly roll a stress die (no botch) on the Nátt-thel Duration Chart to determine how long any given effect lasts. The vitki can spend Confidence or vis to lengthen the duration, as well as to increase his casting total. The storyguide should add 1 to this duration roll for each pawn or Point spent for this purpose during the casting."
+        }
+
+    MODIFY ^"Slow Caster" {
+        PROPERTIES {
+            ^"Hedge Magic Note" STRING "Minor, Supernatural. The vitki’s rune scripts require much more time to prepare and execute than that of other vitki, taking him twice as long to carve. It is impossible for him to produce an effect in a single round, though he can manage a hasty spell in two rounds if he takes the –15 penalty and leaves off his name and the description of the effect."
+            ^"Hedge Magic Source" STRING "Hedge Magic [Revised Edition]"
+        }
+    }}

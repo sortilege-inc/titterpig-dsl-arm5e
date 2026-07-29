@@ -1,0 +1,88 @@
+EXTENSION "ARMDef_Houses_Societates_Core_Ext" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Societates - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-27"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # Houses of Hermes: Societates is an EXTENSION on the arm5e edition, loaded
+    # alongside the core rulebook (spec S13 composition). It details four of the
+    # twelve Hermetic Houses - Flambeau, Jerbiton, Tytalus, Ex Miscellanea - each
+    # already defined as a mechanical ^"House X" DEF in armdef-0.5-houses.ttrpg
+    # (EXTENDS ^"Hermetic House"). This book's records EXTEND / point at those
+    # canonical House DEFs; it does not redefine them.
+    #
+    # What it does NOT declare, deliberately (matching the True Lineages precedent):
+    #   - Virtues and Flaws. The book's new Virtues and Flaws fit the core
+    #     ^"Virtue"/^"Flaw" types unchanged, same Size enum and free-text Category.
+    #   - Spells and guidelines. They fit ^"Formulaic Spell" / ^"Spell Guideline".
+    #   - Narrative. House history, culture, organization, tournaments and the
+    #     Wizard's War custom are prose -> the .lore files; their in-chapter
+    #     headings are dispositioned in coverage (a .lore contributes only its own
+    #     basename to the entity set).
+
+
+    # ── Types introduced by Chapter One (House Flambeau) ───────────────────
+    # Each is a kind the book itself enumerates and names; no core type holds
+    # it. Instances live in the per-House .ttrpg files.
+
+    #tSocSchoolOfMagicalCombatTy ^"School of Magical Combat" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Recommended Virtue" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
+    #tSocHouseReputationSystemTy ^"House Reputation System" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Reputation" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
+    #tSocCombatRuleTypeAAAAAAAAA ^"Combat Rule" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
+    #tSocEnchantmentEffectModTyAA ^"Enchantment Effect Modification" DEF {
+        APPLIES TO [^"Enchantment"]
+        PROPERTIES {
+            ^"Level Modifier" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
+    # Carries a spell's printed stat line verbatim next to the parsed fields.
+    #tSocPrintedStatLineTypeAAAA ^"Printed Stat Line" DEF {
+        APPLIES TO [^"Formulaic Spell"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
+    # A named rules practice a House teaches or uses: urban magic, the species
+    # rules for perception and deception, the memory techniques. Broader than
+    # ^"Combat Rule", which is specific to fighting.
+    #tSocHermeticPracticeTypeAAA ^"Hermetic Practice" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"House" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+
+    #tSocSpellMasterySpecialAbil ^"Spell Mastery Special Ability" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Cult" STRING
+            ^"Source" STRING DEFAULT "Houses of Hermes: Societates"
+        }
+    }
+}

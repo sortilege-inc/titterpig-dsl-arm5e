@@ -1,0 +1,134 @@
+EXTENSION "ARMDef_HoH_MysteryCults_Merinita_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Mystery Cults - House Merinita Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Core_Virtue_Flaw"
+
+    # Found by evidence: a section whose first paragraph OPENS with the source's
+    # own "*Size, Category*" note, run in ahead of the body. Size and Category are
+    # classified by value, not by position; a parenthesised qualifier becomes its
+    # own field. The kind comes from the "New Virtues" / "New Flaws" heading the
+    # record sits under.
+
+    #te72bfa4e9623805cbcc93f ^"Alluring to (Beings)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "This Virtue is associated with one of three classes of beings: mundane animals, faeries, or magical beings. These last two include characters associated with Faerie or the Magic realms, respectively, through Supernatural Virtues or Flaws, as well as beings with Faerie or Magic Might.\n\nThese beings are strangely drawn to the character, and generally trust or obey her without thinking. She gets +3 on Communication and Presence rolls to affect them. Characters who are Offensive to beings of this sort cannot take this Virtue, including those who have The Gift or Magical Air, though characters who are Inoffensive to them or have the Gentle Gift may.\n\nNote that while Alluring to Magical Beings can affect Hermetic magi, the Parma Magica protects against this effect as part of resisting the social penalties of The Gift. Might and other forms of general Magic Resistance do not hinder this effect."
+    }
+
+    #t231ebcf619db69e9ce8d83 ^"Enchanting (Ability)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Like Enchanting Music (ArM5, page 65), this Supernatural Ability applies to a particular type of artistic expression:\n\ndance, drawing, storytelling, even craftwork. Those with this Virtue may find that in Faerie auras this Ability allows them to change or control events based on how well they depict them with their art."
+    }
+
+    #t1d22e6990c13bd92dc43eb ^"Faerie-Raised Magic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character’s experience with faeries and the Faerie realm has conditioned him to invent spells very quickly; to him, formulaic spells seem like inherent powers that you can learn through observation and experimentation. Because of this, he can teach himself spells outside of the laboratory. You may spend experience points from Exposure, Adventure, and Practice on spells that mimic faerie powers or other supernatural effects your character has observed that season.\n\nIf the magus already knows a spell that is similar to one he wishes to invent (see Similar Spells, ArM5 page 101), any experience points you spend towards learning that spell are increased by onehalf. This means that a level 25 spell would cost 6 experience points instead of 9, for example. This Virtue also includes Spell Improvisation (see below). That is, you may add the magnitude of a known formulaic spell as a bonus to your character’s Casting Total when spontaneously casting a spell that is similar to it.\n\nIf you take this Virtue during character creation, you should also take the Faerie Upbringing Flaw. Because the magus’s master also had to teach him about human society, he probably had less time to teach him Hermetic magic. It is possible that the apprentice invented formulaic spells quickly enough on his own to compensate for this, but you might take the Weak Parens Flaw to suggest this limitation of his apprenticeship.\n\nTo invent a spell in this way, the magus’s Technique + Form + Intelligence + Magic Theory must at least equal (the spell’s level – 10), and you must spend a number of experience points equal to (the spell magnitude + 4). Spells of level 5 or less cost their level in experience points (but always at least 1). For example, a level 2 spell costs 2 experience points, and a Level 15 spell costs 7 experience points. The magus cannot invent Ritual spells in this way."
+    }
+
+    #te9cd4acb2aa1eb0a583711 ^"Independent Study" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character develops new skills extremely quickly on his own. When he is studying through Practice, add two to the Source Quality, and add three to the Source Quality of his Adventure experience."
+    }
+
+    #t97491249267e9f40f86110 ^"Inoffensive to (Beings)" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "This Virtue is associated with one of three classes of beings: mundane animals, faeries, or magical beings. These last two include characters associated with Faerie or the Magic realms, respectively, through Supernatural Virtues or Flaws, as well as beings with Faerie or Magic Might.\n\nThe character’s Gift does not bother beings of this sort, although it still has the normal effects on others. For example, Inoffensive to Animals makes it easier for her to get along with mundane beasts. Animals who react positively to The Gift still react positively to her, since she does have The Gift, but those that do not are not disturbed by her presence.\n\nYou may not take this Virtue more than once; characters who are Inoffensive to more than one type of being should\n\ntake Gentle Gift instead. UnGifted characters may take this Virtue only if they have the Flaw Magical Air.\n\nSome Merinitae refer to these Virtues with special terms that suggest the three cords of the enchantment that binds a magus to his familiar. Inoffensive to Animals is called “The Bronze Gift,” Inoffensive to Faerie Beings is “The Silver Gift,” and Inoffensive to Magical Beings is known as “The Golden Gift.”"
+    }
+
+    #t11869c5f87a69536fb11b2 ^"Spell Improvisation" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The magus may add the magnitude of a formulaic spell he knows as a bonus to his Casting Total when spontaneously casting a spell that is similar to it (see Similar Spells, ArM5 page 101). This includes fast-casting a spell that is the same as or very similar to one of his formulaic spells, though he does not get this bonus if he has the Fast Cast Ability for a mastered spell, since in that case you add his Mastery Ability instead. This bonus does not stack with other bonuses to his Casting Total, nor does it stack with itself if the magus happens to know several similar spells."
+    }
+
+    #t36fe605fd569e905b06f28 ^"Harmless Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character’s Perdo spells cannot permanently destroy anything; they temporarily disrupt the target, like Perdo Imaginem magic, but as soon as the duration has passed the target returns to its natural state as if nothing had happened, like a Muto effect. This means that a version of *The Wound that Weeps* (PeCo15), for example, briefly causes a painful, bleeding wound that immediately closes again. Likewise, *Fist of Shattering *(PeTe10) causes an object of stone or weaker material to briefly break apart, but then\n\nfuse itself together again. The character’s Ritual Perdo spells function normally, however.\n\nThis weakness can be a boon to a crafty character. A maga might invent a spell to destroy a heavy rock at Concentration Duration; she could then cast it and lie in wait. When her enemy walks into the vacant space, she could release her concentration and crush her victim beneath it when it reforms. However, in most cases this limitation is a minor hindrance, as useful Perdo magic requires longer Durations."
+    }
+
+    #t67866a83528ee8d9b00e25 ^"Inconstant Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character’s magic is easily distracted, it stutters and starts. Spells that require his guidance (e.g. concentration, or aimed spells) after being cast are not immediately responsive, as if the character must focus the spell’s attention, and spells that are triggered by a condition (such as *Waiting Spells* or enchanted devices) take about two minutes to activate, as if the magic had wandered off when the caster was not watching it carefully. Any magic items he creates with constant effects are interrupted at sunrise and sunset; the magic is not seamless. The character suffers a –3 penalty to all Finesse rolls."
+    }
+
+    #td37fe61679753addbe9e81 ^"Offensive to (Beings)" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "This Flaw is associated with one of three classes of beings: mundane humans, demons, or divine beings. These last two include characters associated with the Divine or the Infernal realm, respectively, through Supernatural Virtues or Flaws, as well as beings with Divine or Infernal Might.\n\nBeings of the chosen category react badly to the character, as if he had The Gift, which makes them very uncomfortable around him and gives him a –3 to all social interaction rolls with them.\n\nYou may not take this Flaw more than once; characters who are Offensive to more than one kind of being should take Magical Air instead. Characters with The Gift may take this Flaw only if they have the Gentle Gift, which makes this type of being react to them negatively while others are unaffected."
+    }
+
+    #tb6657039700bf0dd3c3900 ^"Unbearable to (Beings)" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "This Flaw is associated with one of three classes of beings: mundane humans, demons, or divine beings. These last two include characters associated with the Divine or the Infernal realms, respectively, through Supernatural Virtues or Flaws, as well as beings with Divine or Infernal Might.\n\nYou may not take this Flaw more than once; characters who are Unbearable to more than one kind of being should take the Blatant Gift instead.\n\nThese beings are extremely disturbed, frightened, and possibly enraged by the character’s presence. She suffers an additional –3 penalty on all social interactions with them, which adds to the –3 penalty normally associated with The Gift. Only characters with The Gift or Magical Air may take this Flaw, and it cannot be combined with the Blatant Gift.\n\nThe Flaw is sometimes known by different names among Merinitae, depending on the type of being it affects. Offensive to Humans is called “The Tin Gift”; Offensive to Infernal Beings is called “The Iron Gift”; and Offensive to Divine Beings is called “The Leaden Gift.” These Flaws are thought to balance the similar Inoffensive Virtues; it is very common for characters with one of the positive versions of The Gift to have one of these negative versions as well."
+    }
+
+    #ta3be71f43994052d0bfaaa ^"Unnatural Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Because of the unreal and illusory nature of your magic, none of the character’s Creo rituals have a permanent effect. Wounds magically closed with *The Chirurgeon’s Healing Touch *(CrCo20), for example, reopen again as soon as he finishes casting the spell, as the magic truly lasts only a moment. He also cannot extract vis from an aura using Creo, since his version of that Art is too unstable for it to remain in a lasting physical form."
+    }
+
+    #t0c611eab56022b2dc6cdc4 ^"Vulnerable Magic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "The character’s magic is automatically dispelled in certain uncommon circumstances. Examples include: when touching\n\niron, when under the influence of the Divine, when crossing over running water, when his name is spoken three times, or when he is not touching the ground. This condition immediately ends the duration of a spell when it is applied to the target, or all of your active spells when applied to you.\n\nThis Flaw may be taken multiple times, so long as a different condition is specified for each."
+    }
+
+}

@@ -1,0 +1,108 @@
+EXTENSION "ARMDef_CityAndGuild_Fairs_Tables" {
+    NAME "Ars Magica Definitive Edition, City & Guild - Chapter Six: Fairs & Markets tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #t28949c0d33151d72b38614 ^"Length" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quantity", "Equals"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "12 inches" "1 foot"
+            "3 feet" "1 yard*"
+            "1.25 yards" "1 ell**"
+        }
+        DESCRIPTION "Across Mythic Europe, the units used to measure out goods vary. The same quantity can have different names, and the same word can mean different amounts, from one place to another. Even when using the same measuring vessel, the amount may be heaped or striked (filled to the brim then leveled off). Some goods have their own special systems of measure. Even counting is not uniform, for example in parts of England “one hundred” of something might as likely mean 120 as 100. This table based on the British system may be useful as a quick guide to units for retail transactions, with sufficient detail to add flavor to the game.\n\n12 inches = 1 foot 3 feet = 1 yard* 1.25 yards = 1 ell*  This was originally the distance between the nose and the tip of an outstretched arm. ** This is an English measure; the Scottish ell is only just over a yard.\n\n7000 grains* = 1 ounce 16 drams = 1 ounce 16 ounces = 1 pound 14 pounds = 1 stone 112 pounds = 1 hundredweight 20 hundredweight = 1 ton * This was originally based on the weight of a grain of barley."
+    }
+
+    #tbf3f0e19840e1c5fb48d5d ^"Capacity" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quantity", "Equals"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "4 gills" "1 pint"
+            "2 pints" "1 quart"
+            "4 quarts" "1 gallon"
+            "2 gallons" "1 peck"
+            "8 gallons" "1 bushel"
+        }
+    }
+
+    #t214ead9e9021bcd47de5e7 ^"Weight" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quantity", "Equals"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "7000 grains*" "1 ounce"
+            "16 drams" "1 ounce"
+            "16 ounces" "1 pound"
+            "14 pounds" "1 stone"
+            "112 pounds" "1 hundredweight"
+            "20 hundredweight" "1 ton"
+        }
+    }
+
+    #taa7b89ba5748e134ce3b90 ^"Weights for Gold and Silver" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quantity", "Equals"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "24 grains" "1 pennyweight"
+            "20 pennyweights" "1 Troy ounce"
+        }
+    }
+
+    #tc3fd148e7c00950b0ded08 ^"Weights for Apothecaries" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quantity", "Equals"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "20 grains" "1 scruple"
+            "3 scruples" "1 drachm"
+            "8 drachms" "1 ounce"
+        }
+    }
+
+    #t83cde099ef1fa533410ef0 ^"The Champagne Cycle" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Fair", "Dates"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Lagny" "January 1 for 6 weeks"
+            "Bar-sur-Aube" "mid-Lent for 2 weeks"
+            "Provins" "Ascension week for 6 weeks"
+            "Troyes" "June 24 for 6 weeks"
+            "Provins" "September 14 for 6 weeks"
+            "Troyes" "November 2 for 6 weeks Generally there is an interval of about two weeks in between fairs.\n\nUnlike other fairs, where everything on sale is available throughout the fair, the Champagne fairs regulate trade during the six-week fairs as follows: 1 week for setting up stalls, then ten days for cloth trading, 11 days for leather trading, and 19 days for trade in other goods, followed by a few days for settling accounts."
+        }
+    }
+
+    #td9d1faf7b03cfdbe0d53b6 ^"The English Fair Cycle" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Fair", "Dates"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Stamford" "Ash Wednesday to Palm Sunday (owner: Earl Warenne)"
+            "St. Ives" "Easter Monday for 3 or 4 weeks (owner: Abbot of Ramsey)"
+            "St. Botolph’s, Boston" "Feast of St. John the Baptist (June 24) for 1 month"
+            "Bury St. Edmunds" "July 22 for 6 days (around the feast of St. James on July 25) (owner: Abbot of St. Edmund’s)"
+            "King’s Lynn" "July 20 until the Feast of the Beheading of St. John the Baptist (August 29) (owner: Bishop of Norwich)"
+            "St. Giles’, Winchester" "August 31 for 15 days (owner: Bishop of Winchester)"
+            "Northampton" "Feast of St. Martin (November 11) for 8 days"
+        }
+    }
+
+}

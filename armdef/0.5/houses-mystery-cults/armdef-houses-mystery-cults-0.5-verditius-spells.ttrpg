@@ -1,0 +1,41 @@
+EXTENSION "ARMDef_HoH_MysteryCults_Verditius_Spells" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Mystery Cults - House Verditius spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Houses_Mystery_Cults_Core_Ext"
+
+    # The chapter's spells, from body and sidebars alike. A section becomes a spell
+    # only if it actually prints a stat line.
+
+    #te406aa35399bd513deadd9 ^"Tie the Threads that Bind" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING ""
+            ^"Printed Stat Line" STRING "ReVi Gen R: Touch, D: Mom, T:"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Group, Ritual This spell is uniquely used for the construction of automata. The base effect level of the spell level must equal or exceed the construct’s Magic Might to be successful, meaning the final spell level must equal or exceed the automaton’s Magic Might + 15.\n\n(Base Effect, +1 Touch, +2 Group)"
+    }
+
+    #t1be3caa316cdd9c40865bb ^"Embrace of Boethius" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING ""
+            ^"Printed Stat Line" STRING "PeMe 35 R: Touch, D: Mom, T:"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Part, Ritual Req: Vim, Corpus This spell damages the target’s mind, heart, and Gift, destroying a part of his understanding of formulaic spell casting and forcing him to rely on casting tools. This highly irregular spell was developed to initiate Hermetic magi of other Houses into House Verditius, and is only used in that rare instance. Because of the bizarre nature of this spell, the target receives 7 Warping Points and must check to avoid temporary Twilight.\n\n(Base 15, + 1 Touch, +1 Part, +2 necessary requisites)"
+    }
+
+}

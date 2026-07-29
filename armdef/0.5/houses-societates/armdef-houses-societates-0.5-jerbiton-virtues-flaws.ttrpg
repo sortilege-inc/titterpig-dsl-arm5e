@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_HoH_Societates_Jerbiton_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Societates - House Jerbiton Virtues & Flaws"
+    VERSION "0.5.1"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Core_Virtue_Flaw"
+
+    # Chapter Two's new Virtues and Flaws. They fit the core ^"Virtue"/^"Flaw"
+    # types unchanged. Size and Category come from each record's OWN opening line,
+    # never from a summary sidebar, and are classified by value rather than by
+    # position because the book prints them in either order.
+
+    #tea47fce5ec2712cdd583bb ^"Muse" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "A muse possesses that rare beauty that encourages others to rise to worthiness. A character with this Virtue may grant Free Expression to a single other character, or can double the effect of Free Expression that a single character already possesses, while the muse is with him. The artist typically holds the muse in such high regard that he feels the need to continually improve, both in artistic technique and as a person, to be worthy of the muse’s attention. Muses may be of either sex, and need not have beautiful bodies."
+    }
+
+    #tc00d66dddc3a1fb156f0e9 ^"Mystical Choreography" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The magus’s skill at manipulating the shape and movement of the body allows him to reduce the amount of time required to perform Ceremonial Magic. The character performs ceremonies as per page 83 of ArM5, but requires only five minutes per magnitude. If the character has a prepared space, used frequently for ceremonial casting, this falls to one minute per magnitude.\n\nThis Virtue is particularly important to those Jerbiton magi who use ceremonial casting to overcome the penalties associated with the Dominion."
+    }
+
+    #tb30878e746663c47f527e1 ^"Supernatural Beauty" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The character possesses that style of mystical beauty that, when threatened, calls royal power, folk magic, and heroism to its defense. A player may use this Virtue, once per story, to ask a storyguide to insert a fortunate coincidence, of the storyguide’s choice, into a scene. The troupe may veto the use of the Virtue in any situation where supernatural aid seems profoundly unlikely. Characters with this Virtue are frequently assisted by passing knights of chivalrous inclination, often find magic weapons, and frequently have their jailers, or their jailers’ daughters, fall in love with them.\n\nFaeries frequently assist characters with this Virtue. Faeries understand the classic forms of aid that beauty evokes in stories, and so many of the magical steeds and wandering princes the character encounters are actually faeries, watching the story unfold from the inside.\n\nA character lacking a positive Presence score may not have this Virtue."
+    }
+
+    #t18e2359e1cb415d0fe762f ^"Brutal Artist" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Hermetic"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The magus creates and enjoys art that is ugly, according to his Housemates. He suffers a –3 penalty on social rolls with Jerbiton magi, and cannot develop a positive Reputation in the House, because his mind is so obviously disturbed. This restricts his involvement in the leagues. Over time, the character might convince his sodales that his work is not ugly, but this requires stories, much as removing any other Flaw."
+    }
+
+    #t0aad4e0b474a5bde8ed489 ^"Envied Beauty" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The character’s beauty draws revulsion and jealousy. This envy does not strike everyone, but vain persons of the character’s gender are particularly susceptible to it.\n\nCharacters with this Flaw may avoid its penalties by refusing to reveal their beauty to the world, which creates its own complications.\n\nA character lacking a positive Presence score may not have this Flaw."
+    }
+
+}

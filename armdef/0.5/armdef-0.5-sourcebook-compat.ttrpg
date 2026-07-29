@@ -1,0 +1,85 @@
+BASE "ARMDef_Sourcebook_Compat" {
+    NAME "Ars Magica Definitive Edition - sourcebook compatibility types"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-29"
+    DEPENDS_ON "ARMDef_Core_Base"
+    DEPENDS_ON "ARMDef_Core_Covenant"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    # WHY THIS FILE EXISTS
+    #
+    # The nine Ars Magica Fifth Edition sourcebooks -- Covenants, Grogs, Hedge
+    # Magic, the Realms of Power pair, the Houses of Hermes trilogy and City &
+    # Guild -- are converted against the arm5e edition and are re-targeted here so
+    # a saga can be built on ArMDef with full sourcebook support.
+    #
+    # Their records EXTEND five type names that arm5e core declares and ArMDef
+    # core does not. Rather than rewrite 278 references across 213 files -- which
+    # would edit the books to suit the engine -- the five names are declared HERE,
+    # once, and every reference in every book is left exactly as converted.
+    #
+    # Nothing in this file is lifted from either rulebook. arm5e's ^"Magus",
+    # ^"Companion" and ^"Grog" carry DESCRIPTION text quoted verbatim from the
+    # Fifth Edition core rules; copying that prose into the ArMDef corpus would
+    # put one edition's words in the other's mouth. These are type declarations
+    # only -- the schema the sourcebooks need, and not one sentence of rules text.
+
+    # ── Two that ArMDef already has under its own name ──────────────────────────
+    # ArMDef declares ^"Boon" and ^"Hook" with exactly the shape arm5e gives
+    # ^"Covenant Boon" / ^"Covenant Hook": APPLIES TO [^"Covenant"], the same
+    # Magnitude ENUM, plus a ^"Requires" field of its own. So these are declared as
+    # SUBTYPES rather than as parallel duplicates -- Covenants' 214 boons and hooks
+    # resolve under the name the book uses, while ArMDef's own vocabulary stays
+    # underneath them and a consumer querying ^"Boon" still sees the whole set.
+    #tARMDefCompatCovenantBoon ^"Covenant Boon" DEF {
+        EXTENDS ^"Boon"
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+    }
+
+    #tARMDefCompatCovenantHook ^"Covenant Hook" DEF {
+        EXTENDS ^"Hook"
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Covenants"
+        }
+    }
+
+    # ── Three that ArMDef has no counterpart for ────────────────────────────────
+    # ArMDef restructured character types: it declares ^"Hermetic Magus" and treats
+    # grogs as a ^"Covenfolk Category", with ^"Custos" a Social Status Virtue. It
+    # has no character-type DEF a sourcebook template can EXTEND. Grogs' 36 templates
+    # and brief concepts and Covenants' 21 sample covenfolk need one, so the two
+    # arm5e names they were built against are declared here.
+    #
+    # ⚠ This is a real structural difference between the editions, not a gap in the
+    # conversion. It is recorded in ARMDEF-RETARGET-findings.md, and how a troupe
+    # should read a Fifth Edition grog template against ArMDef's covenfolk model is
+    # an open question for the owner -- not something this file decides.
+    #tARMDefCompatGrogType ^"Grog" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tARMDefCompatCompanionType ^"Companion" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    # ArMDef prints its spell guidelines as one DEF per Technique/Form pair
+    # (^"Creo Animal Guidelines" and so on) with no abstract type above them.
+    # Societates' seven Flambeau guideline records EXTEND the abstract name.
+    #tARMDefCompatSpellGuideline ^"Spell Guideline" DEF {
+        APPLIES TO [^"Formulaic Spell"]
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"]
+            ^"Form" ENUM ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"]
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

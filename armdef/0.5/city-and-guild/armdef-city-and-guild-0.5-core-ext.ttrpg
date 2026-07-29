@@ -1,0 +1,60 @@
+EXTENSION "ARMDef_City_And_Guild_Core_Ext" {
+    NAME "Ars Magica Definitive Edition, City & Guild - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # City & Guild is an EXTENSION on the arm5e edition, loaded alongside the core
+    # rulebook (spec S13 composition). Types are declared here only where no core
+    # type holds the record; narrative goes to .lore and tables are structured TABLE
+    # DEFs, neither of which needs a type. Virtues and Flaws fit the core
+    # ^"Virtue"/^"Flaw" unchanged, the p78 spell fits ^"Formulaic Spell", and the
+    # four named characters fit ^"Example Character".
+
+    #tCGIncomeBandTypeAAAAAAAAAA ^"Income Band" DEF {
+        PROPERTIES {
+            ^"Annual Income" STRING
+            ^"Qualifying Social Status Virtues" LIST OF STRING
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+    #tCGWondrousItemTypeAAAAAAAA ^"Wondrous Item" DEF {
+        PROPERTIES {
+            ^"Craft Level" STRING
+            ^"Magnitude" STRING
+            ^"Hermetic Effect" STRING
+            ^"Made By" STRING
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+    #tCGExertionResultTypeAAAAAA ^"Workshop Exertion Result" DEF {
+        PROPERTIES {
+            ^"Roll" STRING
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+    #tCGPatronSaintTypeAAAAAAAAA ^"Patron Saint" DEF {
+        PROPERTIES {
+            ^"Trades" STRING
+            ^"Feast" STRING
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+    #tCGFairChargeTypeAAAAAAAAAA ^"Fair Charge" DEF {
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+    #tCGOrdealTypeAAAAAAAAAAAAAA ^"Ordeal" DEF {
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "City & Guild"
+        }
+    }
+
+}

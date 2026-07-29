@@ -1,0 +1,457 @@
+EXTENSION "ARMDef_HoH_Societates_Flambeau_Spells" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Societates - House Flambeau spells & guidelines"
+    VERSION "0.5.1"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    # Chapter One's new spells and the spell guidelines they are built on. Both
+    # fit the core ^"Formulaic Spell" / ^"Spell Guideline" shapes unchanged. The
+    # printed stat line is parsed into typed fields and REMOVED from the
+    # DESCRIPTION, so no half-parsed label leaks into the prose; the level-total
+    # breakdown line ("(Base 3, +2 Voice, ...)") is kept, since it is the source's
+    # own text. Group labels like "CREO AQUAM SPELLS" convey the Technique and Form,
+    # which are typed fields on each record, and are excluded from coverage.
+
+    #t3ad303e3062ca6463af7a9 ^"Summoning the Creeping Death" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Re"
+            ^"Printed Stat Line" STRING "Cr(Re)An 25 R: Touch, D: Diam, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Conjures an asp, which magically obeys the caster’s mental commands. Use the statistics for an adder from the *Book of Mundane Beasts, *except that an asp’s venom is much more deadly than an adder’s. The effects of asp venom are given on page 180 of ArM5. The snake has no Might and hence no Magic Resistance of its own, but since it is a magically created creature, Magic Resistance does protect against its attack (use the caster’s Penetration Total).\n\nThis spell is sometimes used by magi who follow the School of Sebastian, but other Flambeau magi tend to disdain it as an ignoble form of attack.\n\n(Base 10, +1 Touch, +1 Diameter, +1 Rego requisite)"
+    }
+
+    #tca3597bd52404cd66aa410 ^"Fury of the Charging Bull" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReAn 20 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The target animal (which may be as large as Size +3) becomes angry and must make a Personality roll using a trait such as Angry or Fierce (or perhaps others, at the storyguide’s discretion). If the roll exceeds an Ease Factor of 9, the animal flies into a rage. Once the animal is aroused, it calms down normally. Docile animals such as\n\newes or oxen calm down almost immediately, while especially aggressive animals like boars or wolves may go on a rampage lasting several minutes. While angry, the animal tries to drive away people or other animals that are nearby, and may attack those who do not flee from it.\n\nSome magi who follow the School of Vilano use this spell to make animals attack their enemies. In practice, its effects are unpredictable _ the animal is just as likely to attack a bystander as the intended target, and there is nothing to prevent it from turning on the caster!\n\n(Base 5, +2 Voice, +1 Size)"
+    }
+
+    #t672b4608a61d98a89110ee ^"Dagger of Ice" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Re"
+            ^"Printed Stat Line" STRING "Cr(Re)Aq 10 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Creates a foot-long, sharp icicle and hurls it at a target. The icicle always hits, provided it penetrates Magic Resistance. It inflicts +5 damage (partly because of its sharp point). After impact, the icicle shatters to tiny fragments, which promptly disappear.\n\n(Base 3, +2 Voice, +1 Rego requisite)"
+    }
+
+    #t8355d892cbaa0fb8ef50fa ^"Alchemist’s Revenge" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrAq 25 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Splashes a target with acid, inflicting +15 damage if it penetrates Magic Resistance. At the storyguide’s option, the acid may damage the target’s equipment.\n\n(Base 15, +2 Voice)"
+    }
+
+    #t871f3f6068f78abddb7010 ^"Shackles of the Frozen Ice" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "ReAq 10 R: Voice, D: Sun, T: Part"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Freeze a circular portion of a body of water into solid ice. Anyone wading or swimming in the water is trapped in the ice. Magic Resistance does not prevent the ice from surrounding a character and holding her fast. The area affected by the spell is the same size as a base Individual: a roughly bowl-shaped volume about five paces across and two paces deep at the center.\n\nSince the ice is magical, it only inflicts cold damage if it penetrates Magic Resistance. Rules for cold damage are given in ArM5, page 181; the ice created by this spell inflicts a base damage of +1. Characters who are completely encased in ice begin to suffocate (see ArM5, page 180).\n\nA trapped character may break free of the ice by making a Strength roll. Characters may also chop their way out of the ice using tools or weapons, but this\n\ntakes time. Magic, including Perdo Aquam or Creo Ignem spells, may be able to free a character instantly."
+    }
+
+    #t6912f44e036820d9874099 ^"Catapult of the Mighty Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Re"
+            ^"Printed Stat Line" STRING "Cr(Re)Au 30 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Terrifically strong winds sweep up an object (such as a barrel, a piece of furniture, or an unfortunate human being) and hurl it on a high, arched trajectory toward any point within range. If the projectile has Magic Resistance, this spell must penetrate in order to affect it. However, once the projectile is airborne, its motion is natural and hence it bypasses the Magic Resistance of anything it hits.\n\nYou must succeed at an aiming roll to hit the intended target. Because this spell gives the caster only indirect control of the projectile, the aiming roll suffers a –3 penalty and an extra botch die. The winds are strong enough to throw a grown man 20 feet into the air. Both the projectile and anything underneath it suffer damage when it crashes to earth: the damage is usually +10 but it could be less if the projectile is considerably lighter than an adult human.\n\n(Base 5, +2 Voice, +2 unnatural, +1 Rego requisite)"
+    }
+
+    #t504d07d728b5c6aac609fa ^"Curse of the Evil Humors" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "MuAu 25 R: Voice, D: Diam, T: Part"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Converts clean air into foul humors that can cause disease. The humors form a cloud about 20 paces across and ten paces high. They are invisible but foul-smelling and noxious. Characters who breathe the befouled air must make Stamina roll against an Ease Factor of 6 or contract malaria (roll once, the first time a character is exposed). This disease, whose name is Italian for “bad air,” causes a Medium Wound. Once a character has contracted the disease, further exposure to this spell has no effect.\n\nThe foul humors dissipate when the spell Duration expires. A brisk breeze can disperse the humors within two or three\n\nrounds, and strong winds make the spell unusable.\n\n(Base 5, +2 Voice, +1 Diam, +1 Part)"
+    }
+
+    #tddfee18c5d808ed89824cd ^"Wizard’s Leap" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReCo 15 R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The caster instantly transports himself up to 50 paces in any direction, provided he can see his destination or has an Arcane Connection to it. His Talisman comes with him automatically but casting requisites are required to bring along any other clothing or equipment. This spell is very effective as a fast-cast defense to escape attacks or other mishaps, and can also be used for bypassing obstacles or launching surprise attacks.\n\n(Base 15)"
+    }
+
+    #td66b95ca3aa6ea3bdd3340 ^"Aegis of Unbreakable Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING ""
+            ^"Printed Stat Line" STRING "MuHe 15 R: Touch, D: Sun, T:"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Ind. Makes a wooden shield (or object of comparable dimensions) as strong as iron, increasing its Defense bonus by +1. This is the best benefit magic can provide without increasing the size of the shield. The weight (and Load) of the shield are unchanged. It remains susceptible to fire, but is otherwise nearly indestructible.\n\n(Base 4, +1 Touch, +2 Sun)"
+    }
+
+    #td4f67e12b3a9208276f494 ^"Tree Falling in the Forest" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Re"
+            ^"Printed Stat Line" STRING "Pe(Re)He 35 R: Sight, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Instantly cuts down a tree, making it fall in the direction the caster designates. With a successful aiming roll, you can make it fall on a living creature. Damage is up to +18 for a mature tree, and the victim or victims may also be pinned by the tree’s weight. When used as a form of attack, this spell bypasses Magic Resistance.\n\n(Base 5, +3 Sight, +2 size, +1 Rego requisite)"
+    }
+
+    #t42c2d18a344316b61eaa6a ^"Test of the Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Printed Stat Line" STRING "CrIg 15 R: Touch, D: Ring, T: Circle"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Waist-high flames fill the target circle. Everything inside the circle takes +5 damage each round.\n\nThis spell is of ancient origin and is thought to have originated as a ritual ordeal within the Cult of Mithras. It was once used by Flambeau magi as a test of endurance, a kind of alternative to certamen. The people being tested (including, usually, the caster) would stand inside the circle, without using their Parmae Magicae, trying to withstand the flames as long as possible. The last person to leave the circle was considered the winner. Etiquette suggested that if anyone were to fall helpless due to burn damage, someone would break the Ring and end the spell to rescue the unfortunate. This test is little used in 1220 because most Flambeau magi prefer standard certamen; also, some members of House Flambeau (such as the example\n\ncharacter page 25 of ArM5) possess a supernatural immunity to fire, giving them an unfair advantage in the test.\n\n(Base 4, +1 Touch, +2 Ring)"
+    }
+
+    #t31190c2d5070130ed851d6 ^"Last Flight of the Phoenix" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 50
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrIg 50 R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "The caster bursts into flames, immolating himself in a white-hot blast of fire that does +45 damage to himself and everything within four paces. Everything between four and six paces takes +20 damage from the radiant heat, and everything between six and ten paces takes +5 heat damage. Within the four-pace radius the fire is hot enough to melt steel. This spell is sometimes actually used by magi who enjoy a Greater Immunity to fire. Since its Range is Personal, it bypasses the caster’s own Magic Resistance.\n\nAn early version of this spell was found in the lab notes of Flambeau himself. Some members of his House speculate that he may have used it to go out in a blaze of glory in a final battle against his Moorish enemies.\n\n(Base 40, +2 Size)"
+    }
+
+    #tc27dcbbcc7aa256e350da3 ^"Quench the Raging Conflagration" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeIg 20 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Extinguish any fire up to the size of a house fire. Many Flambeau magi learn this spell, or carry items enchanted with a similar effect, to control any incidental fires caused by errant Creo Ignem magic.\n\n(Base 4, +2 Voice, +2 size)"
+    }
+
+    #t8d89dfeb4db3cb2aef670b ^"The Obedient Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReIg 20 R: Voice, D: Conc, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Control the rate and direction in which a fire spreads. The caster may make the fire spread across combustible surfaces as fast as a man walks. It can leap most gaps as much as one pace across but cannot cross even the tiniest trickle of water. The caster can prevent the fire from spreading in certain directions but cannot actually\n\nkeep it from burning things it touches. He could, for instance, make a fire spread into the shape of a circle and then expand outward, or keep the fire away from himself while it follows his enemies around the room. If the fire surrounds a person, its heat is non-magical and so bypasses Magic Resistance. An aiming roll is required to get the fire close enough to do damage. If the fire grows larger than a basic Room Target, the caster loses control of it entirely.\n\n(Base 4, +2 Voice, +1 Conc, +1 Size)"
+    }
+
+    #t6cf9b0e82be11ab911a4cd ^"Heart of the Lion" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrMe 15 R: Eye, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Instill a person with indomitable courage, increasing his Brave Personality Trait by +3. This may, but does not always, lead to acts of recklessness. If you cast this spell on your grogs, be advised that they will lose their fear of you as well as their fear of the enemy.\n\n(Base 4, +1 Eye, +2 Sun)"
+    }
+
+    #t43f8a90bd8e42cbf2473dd ^"Sword from the Unseen Scabbard" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrTe 15 R: Touch, D: Diam, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Conjure a steel longsword. The sword only lasts for two minutes — about 20 combat rounds — but that is usually long enough to defend oneself in a single skirmish. The magically created sword must penetrate in order to harm opponents who have Magic Resistance. Note that creating artificial things with magic requires an Intelligence + Finesse roll, as noted on page 77 of ArM5. An Ease Factor of 6 is sufficient to make a sword of mediocre, but serviceable, workmanship.\n\n(Base 5, +1 Touch, +1 Diameter)"
+    }
+
+    #t0644660aeafc11c55116bc ^"Silvery Scales of the Knight" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "An"
+            ^"Printed Stat Line" STRING "CrTe(An) 30 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Conjure a suit of full chain mail armor. The Animal requisite is required to create the armor’s leather straps, woolen padding, and gambeson — without these elements, the armor would not be effective. The\n\nstyling of the armor, including any crest that appears on the helmet, depends on your Wizard’s Sigil. The armor is magical, so its wearer cannot punch or grapple a magic-resistant creature while wearing the gauntlets. The armor has the same Load as non-magical armor, and it takes just as long to put on (several minutes at least). An Intelligence + Finesse roll against an Ease Factor of 9 is required to make armor of average quality; a failed roll may result in reduced Protection and/or increased Load, at the storyguide’s discretion.\n\n(Base 5, +1 Touch, +2 Sun, +2 very elaborate shape)"
+    }
+
+    #tfb9df9caff8af9f26e653a ^"Hardness of Adamantine" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuTe 25 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell instills a metal object with supernatural strength and hardness. Even weak metals like gold or lead can be affected. The object becomes nearly unbreakable by mundane means.\n\nIf used on chain mail or metal scale armor, the Protection value of the armor is increased by +2. If used on an edged or pointed weapon, the weapon gains +1 to damage. This bonus can be combined with that from *Edge of the Razor* or other spells.\n\n(Base 4, +1 Touch, +2 Sun, +2 affect metal)"
+    }
+
+    #tfde66119d454b91a36b756 ^"Undoing the Stonemason’s Handiwork" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "PeTe 15 R: Voice, D: Mom, T: Part"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "This spell smashes a piece of masonry or pavement into its component bricks or stones. It has no effect on solid stone. The affected volume is one pace wide, one pace high, and up to one pace deep (depending on the thickness of the masonry), and can be a part of a larger piece of stonework.\n\nFollowers of the School of Vilano sometimes use this spell to produce a large number of loose stones, which they can then use as ammunition. Magi with a knowledge of stonemasonry can use it to weaken or collapse stone structures by damaging load-bearing walls and arches, though solid pillars and the like are immune to its effects.\n\nnaturally, such an attack is not subject to Magic Resistance. Instead, an aiming roll is required to hit the intended target (see ArM5, page 86). Attacking with this spell normally takes two rounds: one to move the stone over the target, and another to aim and release it.\n\nDamage inflicted depends mainly on the size of the stone: +5 for a stone the size of a man’s fist, +10 for a typical building-stone, up to +21 for a large boulder (see also the Impact Table on page 181 of ArM5). Particularly large stones can damage structures as well as creatures.\n\nThe main limitation on this spell’s combat effectiveness is the availability of large stones. Vilano himself once lamented that there was never a good rock around when he needed one!\n\n(Base 3, +2 Voice, +1 Part, +1 destroy stone)"
+    }
+
+    #tdfcd3c9b0d232f62524936 ^"Hauberk of Sublime Lightness" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeTe 30 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Render a suit of metal armor nearly weightless. Armor made from metal-reinforced leather, metal scale, or chain mail has its Load reduced to 1 for a partial suit or 2 for a full suit. The spell eliminates the weight of the armor, but not its bulk.\n\n(Base 5, +1 Touch, +2 Sun, +2 affect metal)"
+    }
+
+    #tf8dbbe378b294db7ad6519 ^"Ominous Levitation of the Weighty Stone" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReTe 15 R: Voice, D: Conc, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Move a stone through the air as fast as a bird flies. When the caster stops concentrating, the stone immediately falls to the ground.\n\nThe spell’s name suggests one of its common applications: dropping a heavy rock onto someone. Because the stone falls\n\n(Base 3, +2 Voice, +1 Concentration, +1 affect stone)"
+    }
+
+    #t740e3e9f2deadf69bbf67c ^"Invisible Sling of Vilano" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReTe 10 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Hurl a stone (of a size that could be thrown with a mundane sling) at a target within range. Unlike the standard version of *Wielding the Invisible Sling* (ArM5, page 155), this spell hurls the stone as a projectile. An aiming roll is required to hit the intended target, but if it succeeds, Magic Resistance offers no protection. The stone inflicts +5 damage on impact and has a range increment of 20 paces.\n\n(Base 5, +1 Touch)"
+    }
+
+    #tf06a14a2008e612e63afbe ^"Creo Aquam Guidelines" DEF {
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "as a floe or icicle."
+    }
+
+    #t3b3104642e87812f053adc ^"Creo Aquam Level 3" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Create ice in a natural shape, such"
+    }
+
+    #tb1df48863498539bd6edbc ^"Muto Auram Guidelines" DEF {
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "causing a Medium Wound (Stamina roll against Ease Factor 6 to resist)"
+    }
+
+    #te176a6f87491902ddffa6e ^"Muto Auram Level 4" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Transform a gas into a harmful gas causing a Light Wound (Stamina roll against Ease Factor 6 to resist)"
+    }
+
+    #t3d5fc7b591ec0e4722e657 ^"Muto Auram Level 5" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Transform a gas into a harmful gas"
+    }
+
+    #tc865527d8373f5473c19f2 ^"Perdo Terram Guidelines" DEF {
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "its weight or its cohesiveness"
+    }
+
+    #t37f5a4629bb571680fc2ef ^"Perdo Terram Level 5" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Destroy one aspect of dirt, such as"
+    }
+
+    #t37e108cb9cd9478b8d5f2b ^"Rego Terram Guidelines" DEF {
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "When Rego Terram spells are used to throw stones, the damage inflicted is\n\nlimited by the level of the spell. Low-level spells may be able to move heavy stones, but they cannot throw them violently enough to do a lot of damage.\n\nenough force to do +15 damage (range increment of 20 paces)"
+    }
+
+    #t99c9bda331f8ffdf8415f6 ^"Rego Terram Level 5" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Hurl a stone projectile with enough force to do +5 damage (range increment of 20 paces)"
+    }
+
+    #t9b80a5460183a46e7e4b27 ^"Rego Terram Level 10" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Hurl a stone projectile with enough force to do +10 damage (range increment of 20 paces)"
+    }
+
+    #t3decdf42a9788d17232676 ^"Rego Terram Level 15" DEF {
+        EXTENDS ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        DESCRIPTION "Hurl a stone projectile with"
+    }
+
+}

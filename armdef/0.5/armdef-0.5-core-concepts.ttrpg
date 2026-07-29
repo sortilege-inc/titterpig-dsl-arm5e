@@ -1,0 +1,66 @@
+BASE "ARMDef_Core_Concepts" {
+    NAME "Ars Magica Definitive Edition - named concepts referenced across the corpus"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-29"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # WHY THIS FILE EXISTS
+    #
+    # ArMDef covers these concepts in its NARRATIVE files, and a .lore file
+    # contributes only its own basename to the corpus entity set -- its internal
+    # section headings never resolve as named entities. So a cross-reference to
+    # ^"Mythic Europe" has nothing to land on, even though ArMDef devotes a
+    # chapter to it. The re-targeted Fifth Edition sourcebooks make 88 such
+    # references between them.
+    #
+    # Each DEF here is an ANCHOR for a concept ArMDef already has, and its
+    # DESCRIPTION is ArMDef's OWN opening definition of that concept, quoted from
+    # ArMDef's own .lore. Nothing is taken from the sourcebooks, and nothing is
+    # written fresh -- the owner's constraint, and the right one: the sourcebooks
+    # are Fifth Edition products and their words do not belong in this edition.
+    #
+    # These are deliberately thin. The chapter remains the real treatment; this is
+    # the handle a reference can hold, mirroring the narrative rather than
+    # duplicating it.
+
+    # armdef-0.5-mythic-europe.lore :: "XIV. Mythic Europe" -- 60 references
+    #tARMDefConceptMythicEurope ^"Mythic Europe" DEF {
+        PROPERTIES {
+            ^"Treated In" STRING "armdef-0.5-mythic-europe.lore"
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "The official setting for **Ars ** **Magica** is Mythic Europe, a world very like the Middle Ages of our world, but with magic. For many people, this setting is a large part of the fun of the game. You can 'change history', or at least 'visit' historical places. When you save a country from demons, you've saved France, not some imaginary land. It's also possible to actually visit the place where your saga is set, although that's easier for European players."
+    }
+
+    # armdef-0.5-order-history.lore :: "II.The Order of Hermes" -- 28 references
+    #tARMDefConceptOrderOfHermes ^"Order of Hermes" DEF {
+        PROPERTIES {
+            ^"Treated In" STRING "armdef-0.5-order-history.lore"
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "The Order of Hermes is an organization of magi that spans the whole of Mythic Europe, even reaching some distance beyond. It has about 1200 members, living in thirteen Tribunals which divide up the continent. In the Magical Realm, no single group can even think to challenge the Order as a whole, but the power of God is far beyond even Hermetic magi. This chapter lays out the history and current state of the Order of Hermes, to which **Ars Magica** characters are almost all affiliated in some way."
+    }
+
+    # ⚠ FOURTEEN MORE CONCEPTS ARE REFERENCED AND NOT DECLARED HERE, DELIBERATELY.
+    #
+    # Two of them looked sourceable and are not. ArMDef's only passage on
+    # `Hermetic Magic` under that heading is a VIGNETTE -- "Under the eerie glow
+    # of the full moon rising, our clandestine meeting unfolds among ancient
+    # standing stones" -- and its only passage on `The Infernal` is saga-design
+    # advice, "How many demons do you want in your saga?". Neither defines its
+    # concept, and quoting fiction or advice into a DESCRIPTION would misrepresent
+    # what ArMDef says.
+    #
+    # The other twelve -- `Aging Points`, `Technique and Form`, `Lab Total`,
+    # `Lab Texts`, `The Divine`, `Extreme Unction`, `Damage Table`,
+    # `Wound Recovery Table`, `Personality Rolls`, `Aging Rolls`,
+    # `Laboratory Activity`, `Magical Animal Companion` -- have no ArMDef .lore
+    # coverage to draw on at all, though several have a near-named ArMDef record
+    # (^"Aging", ^"Damage Table (Wounds)", ^"Lab Texts (Build Points)",
+    # ^"Animal Companion"). Choosing among those is a judgement about ArMDef's
+    # rules, not a mechanical repair.
+    #
+    # All fourteen are listed with their reference counts and candidates in
+    # titterpig-mastra/worklogs/ARMDEF-RETARGET-findings.md, for the owner's call.
+}

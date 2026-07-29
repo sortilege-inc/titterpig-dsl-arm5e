@@ -1,0 +1,111 @@
+EXTENSION "ARMDef_CityAndGuild_Guilds_Characters" {
+    NAME "Ars Magica Definitive Edition, City & Guild - Chapter Three: Guilds named characters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_City_And_Guild_Core_Ext"
+
+    # Named, fully-statted characters printed in the book's sidebars, one DEF each
+    # (owner decision 2026-07-27: a single named character belongs in a .actor file,
+    # per the DSL skill's query test). Every stat line is kept as its own typed field
+    # carrying the source's own label, verbatim, rather than flattened into one prose
+    # string. The field set is the one the source prints, not a fixed list.
+
+    #tb56aacdf29a3df618893fa ^"Julian, Apprentice Carpenter" DEF {
+        EXTENDS ^"Example Character"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int –1, Per +1, Pre +1, Com 0, Str +1, Sta +2, Dex +2, Qik –1"
+            ^"Size" STRING "–1"
+            ^"Age" STRING "15 (15)"
+            ^"Decrepitude" STRING "0"
+            ^"Warping Score" STRING "0 (0)"
+            ^"Virtues and Flaws" STRING "Guild Apprentice; Busybody, Magic Sensitivity; Short Attention Span, Small Frame, Visions"
+            ^"Personality Trait" STRING "Curious +2, Brave +1, Loyal –1"
+            ^"Reputations" STRING "None"
+            ^"Combat" STRING "Brawl: Init –1, Attack +6, Defense +3, Damage +1"
+            ^"Soak" STRING "+2"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Abilities" STRING "Athletics 2 (running), Awareness 2 (strangers), Bargain 1 (meals), Brawl 3 (fists), Carouse 2 (meeting women), Carpenter 3 (framing houses), English 5 (rhyming), Folk Ken 2 (city folk), Guild Lore 1 (apprentice rules), Guile 2 (lying to master), Intrigue 1 (guild members), Magic Sensitivity 3 (enchanted items), Stealth 2 (hiding)"
+            ^"Equipment" STRING "rough clothes, leather apron, saw"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Appearance" STRING "Julian is a small but well-built lad with a kind face. He has bright blue eyes that constantly scan his environment. Julian typically carries his saw with him, an evident sign that he is a professional carpenter; peasant woodworkers carry axes."
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Julian is a carpenter’s apprentice. Despite his natural proclivity for abandoning his tasks, he has performed well for five years and anticipates becoming a journeyman in two more. Perhaps he was selected by his master because of his innate ability to sense enchanted items, rather than any sign of extreme competence.\n\nJulian’s curiosity is a good way to get him involved in a story. He quickly notices strangers in a crowd, especially if they have a suspicious air about them (such as The Gift). He also roams far from town, following an odd inclination or magical scent. He is bold enough, or foolish enough, to act on his visions, which could bring him to the covenant.\n\nJulian is suitable as a player’s character, although you should either replace his Story Flaw: Visions with another appropriate General Flaw in that case, since grog characters should not take Story Flaws, or upgrade him to a companion."
+    }
+
+    #t2ee5b97da7f905a5dc7669 ^"Obano, Journeyman Swordsmith" DEF {
+        EXTENDS ^"Example Character"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int +1, Per +1, Pre –2, Com +1, Str +3, Sta +3, Dex +1, Qik –2"
+            ^"Size" STRING "0"
+            ^"Age" STRING "25 (25)"
+            ^"Decrepitude" STRING "0"
+            ^"Warping Score" STRING "0 (0)"
+            ^"Virtues and Flaws" STRING "Journeyman; Improved Characteristics, Social Contacts; Blackmail, Disfigured, Oversensitive"
+            ^"Personality Trait" STRING "Brave, +2, Touchy +2, Loyal +1"
+            ^"Reputations" STRING "None"
+            ^"Combat" STRING "Brawl, Init -2, Attack +4, Defense +1, Damage +3 Dagger, Init -2, Attack +7, Defense +2, Damage +6"
+            ^"Soak" STRING "+3"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6– 10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Abilities" STRING "Athletics 2 (climbing), Awareness 3 (alertness), Bargain 3 (raw materials), Brawl 3 (dagger), Carouse 2 (guild feasts), French 4 (selling goods), Folk Ken 2 (customers), Guild Lore 2 (working hours), Hunt 2 (killing rats), Intrigue 2 (finding work), Spanish 5 (slang), Swim 1 (annual bath), Swordsmith 5 (greatswords), Teaching 1 (advanced students), Town Area Lore 3 (craftsmen’s shops)"
+            ^"Equipment" STRING "swordsmith tools, dagger"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Appearance" STRING "Obano is a darkhaired, pug-nosed journeyman, originally from Aragon. He is extremely strong, with thick biceps and a broad chest. His hands and arms are covered in scars, earned from the forge while learning his trade."
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Obano works in town for a master whom he is quite content with. He is proud to be a member of his trade, and thinks that working for the guild is a position of much esteem. He is so happy to be a guild member that he bristles if someone speaks disparagingly of the organization. He has been involved in several drunken brawls with craftsmen from other guilds, especially those who precede the Swordsmiths’ Guild in religious parades.\n\nHis former master dealt illegally with his suppliers, and Obano has evidence of this shoddy practice. His former master knows that Obano’s knowledge could lead to trouble, especially now as he rises in prestige among guild members. Since the master is well liked, Obano knows that other guild masters won’t necessarily protect the journeyman from the master; his Social Contacts provide him with work, little else. Both the former master’s desire to erase Obano’s memories and Obano’s desire for protection could involve player characters."
+    }
+
+    #t734bcd6ec4ee56a2fd7984 ^"Doolin, Guild Master Clothier" DEF {
+        EXTENDS ^"Example Character"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int +1, Per –1, Pre +2, Com 0, Str –1, Sta –1, Dex +3, Qik 0"
+            ^"Size" STRING "0"
+            ^"Age" STRING "35 (35)"
+            ^"Decrepitude" STRING "0"
+            ^"Warping Score" STRING "0 (0)"
+            ^"Virtues and Flaws" STRING "Guild Master; Puissant Craft, Second Sight; Afflicted Tongue, Faerie Friend, Reckless"
+            ^"Personality Trait" STRING "Reckless +3, Loyal +2, Brave –1"
+            ^"Reputations" STRING "None"
+            ^"Combat" STRING "Dodge, Init 0, Attack n/a, Defense +6, Damage n/a"
+            ^"Soak" STRING "–1"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6– 10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Abilities" STRING "Artes Liberales 1 (gram- mar), Awareness 3 (inspect- ing goods), Bargain 3 (selling), Brawl 2 (dodge), Carouse 3 (staying sober), Charm 3 (first impressions), Clothier 6+2 (excellent quality blouses), Etiquette 2 (guild funerals), Folk Ken 3 (guild inquisitors), French 5 (guild lingo), Guild Lore 3 (defrocked members), Intrigue 3 (guild politics), Latin 3 (Church ceremonies), Leadership 4 (rep- rimanding apprentices), Second Sight 2 (faeries), Ride 1 (in pro- cessions), Teaching 2 (female students), Town Area Lore 3 (street layout)"
+            ^"Equipment" STRING "excellent quality clothes, furred hat"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Appearance" STRING "Doolin is a welldressed clothier, with a hooked nose and dark, brooding eyes. He is a man of inexhaustible energy, which is evident in his quick gait and nervous gestures."
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Doolin is a master clothier, living in Paris and prospering at his trade. He has been a master in good standing for eight years and has his eyes set on being a senior master. Because of his skill, he has regularly been able to make excellent quality clothing for several years.\n\nDoolin is interested in hiring new staff, having fired his old staff in a frenzied move to “find new blood.” He has his ear to the ground looking for new clothiers. Assisted by a vagabond faerie named Argantael, Doolin could become aware of an excellent crafter bound to the covenant. He would also be interested in draping the magi in his exquisite, and costly, clothes.\n\nArgantael tells Dooling that there is a society of wizards who surround themselves with a mysterious display of pomp. He whispers about grand meetings where wizards from all over Mythic Europe gather, and Doolin dreams of monopolizing the formal attire of such functions. However, he would not be interested in leaving Paris, so might need a merchant partner if his clothing enterprise becomes a reality."
+    }
+
+    #t9be762fbd62a44fcc33140 ^"Banco, Dean of the Goldsmith’s Guild" DEF {
+        EXTENDS ^"Example Character"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int +2, Per –3, Pre +2, Com 0, Str –2(2), Sta –3(1), Dex +3, Qik –2(1)"
+            ^"Size" STRING "0"
+            ^"Age" STRING "50 (50)"
+            ^"Decrepitude" STRING "2 (8)"
+            ^"Warping Score" STRING "0 (0)"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Guild Dean; Touched by the Divine Realm; Educated, Famous, Improved Characteristics; Ambitious, Favors; Fragile Constitution, Poor Hearing, Weakness (for flattery)"
+            ^"Personality Trait" STRING "Ambitious +3"
+            ^"Reputations" STRING "Renown Goldsmith 4 (Rome)"
+            ^"Combat" STRING "Brawl: Init –2, Attack +5, Defense 0, Damage –1 Dagger: Init –2, Attack +8, Defense +1, Damage +2"
+            ^"Soak" STRING "–3"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6– 10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Abilities" STRING "Artes Liberales 2 (rhetoric), Awareness 2 (guild inquisitors), Bargain 5 (contracts with other guilds), Brawl 2 (dagger), Carouse 3 (guild functions), Charm 3 (guild inquisitors), Church Lore 1 (papal curia), Civil and Canon Law 3 (town law), Goldsmith 8 (wondrous items), Etiquette 3 (guild funerals), Folk Ken 3 (fellow masters), Guild Lore 5 (roster membership), Guile 3 (masters), Intrigue 3 (guild politics), Italian 5 (technical language), Latin 5 (legal codes), Leadership 5 (guild masters), Teaching 2 (young apprentices), Town Area Lore 2 (city gates)"
+            ^"Equipment" STRING "elegant robes and gown, gold rings and jewelry, and a jeweled dagger hidden beneath his gown"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Appearance" STRING "Banco is tall and thin, with a slight stoop from years bent over his workbench. He walks with a regal bearing, befitting his guild rank, and is adorned in the finest fashions of Rome. He hasn’t fared well aging, and his face and hands are wrinkled, leathery, and boney."
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "Banco is a member of the great Roman Savelli family, as is the current Pope, Honorius III. Banco has been the Goldsmith’s Guild dean for two years, having gained the appointment due to his crafting skills, his three prosperous workshops, and the influence of his family connections. His clientele includes bishops, cardinals, and the pope himself. Banco spends much of his days meeting with guild members, overseeing his own shops, interacting with his family, and personally following his own ambitious plans.\n\nBecause of his skill in making wondrous goods, Banco is interested in other enchanted items, particularly those made by Hermetic magi. He would love to learn how to make genuine magic items, and secretly sends guild members to investigate other methods of magical production. He would certainly visit nearby covenants and possibly host visiting magi, plying them with fine wine and stronger beverages to pry loose their secrets.\n\nBanco is a suitable companion character for a player."
+    }
+
+}

@@ -1,0 +1,191 @@
+EXTENSION "ARMDef_HoH_MysteryCults_Bjornaer_Spells" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Mystery Cults - House Bjornaer spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Houses_Mystery_Cults_Core_Ext"
+
+    # The chapter's spells, from body and sidebars alike. A section becomes a spell
+    # only if it actually prints a stat line.
+
+    #td2c26b42e00b532daad5b3 ^"The Voice of the Bjornaer Magus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuAn 15 R: Per, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "This spell allows the caster to speak with a human voice when shapechanged into the form of an animal. The caster must be in animal form to cast this spell because it targets the vocal capacity of that form, and must be able to cast this spell with no words or gestures (usually a –15 penalty), but while under its influence, may use his own voice without penalty to spellcasting.\n\n(Base 5, +2 Sun)"
+    }
+
+    #tedb9c34c67d40284d58ae7 ^"Form of the (Temperament) Heartbeast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuAn 20 R: Per, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "There are four versions of this spell, one for each of the sanguine, choleric, melancholic, and phlegmatic temperaments. These spells must be cast in animal form because they enhance the correspondences to the temperament of that form, whereas humans naturally have a more balanced temperament than animals. A Bjornaer magus may revert to human form after casting this spell and still retain its effects. It is not required that the animal form he takes take matches the temperament listed in the spell’s name; however, if the two do match, all bonuses granted by the spell are increased by one. Only one of these spells may be cast on the same character at any one time; they operate by influencing the bodily humors, and only one humor at a time may be influenced in this way.\n\n*Sanguine: *+1 Qik; +3 to all rolls to negate the natural fear the caster instills (as a wild animal with The Gift); temporarily acquires the Cheerful Personality Trait at +3 (or increases preexisting trait by 3)\n\n*Choleric: *+1 Dex; +3 to all rolls to follow a trail or find something deliberately hidden; temporarily acquires the Brave Personality Trait at +3 (or increases preexisting trait by 3)\n\n*Melancholic: *+1 Sta; +3 to all rolls to communicate across a language barrier, through empathy, via sign language, and so forth; temporarily acquires the Creative Personality Trait at +3 (or increases preexisting trait by 3)\n\n*Phlegmatic:* +1 Str; +3 to all rolls involving intuition and memory; temporarily acquires the Cool-Headed Personality Trait at +3 (or increases preexisting trait by 3)\n\n(Base 5, +2 Sun; +1 complexity)"
+    }
+
+    #t60debc16a1c6929020ecbe ^"Facilitate the Stifled (Form) Spell" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuVi Gen R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "This spell is cast at the same time as another formulaic spell (see ArM5, page 159) whose level must be less than twice the level of this spell. If successfully cast, the targeted spell may be cast with no penalty to the casting total due to reduced or absent gestures and/or voice. While this Muto Vim spell requires gestures and voice as normal, the casting total of the follow-up spell is not penalized, and thus difficult spells at the limit of a magus’s ability have a greater chance of success when in restricted circumstances, without incurring fatigue loss. If the targeted spell has Range Voice, the volume used to cast this spell determines the actual range. There are ten versions of this spell, each affecting spells of one of the Hermetic Forms. This spell is particularly useful to Bjornaer magi who wish to maintain the appearance of mundane animals yet still cast spells.\n\n(Base effect, +1 Touch)"
+    }
+
+    #tf941a9662ffd7549f831c3 ^"Perceive the Change" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 14
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "InAn 14 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Pen 0, constant effect This effect detects whether the enchanted item is touching an animal; if so, it triggers any effects tied to it with a Linked Trigger. Linked powers should be designed with constant effect. It cancels any linked effects as soon as human form is assumed. The wielder can choose not to resist this effect (see ArM5, page 99). If this effect is instilled in a talisman, it can be made with Range Personal for a final level of 9.\n\n(Base 3, +1 Touch, +2 Sun; +1 two uses/day, +3 environmental trigger [sunrise/sunset])"
+    }
+
+    #t6b964f6ebdf7a88265431b ^"Revenge of the Bitten Toad" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Flavor"
+            ^"Printed Stat Line" STRING "PeAn 20 R: Per, D: Diam, T: Flavor"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Any creatures who bite (or otherwise taste) the caster suffer a Heavy Wound. Any successful bite attack against the caster results in the creature tasting him, even if no wound is actually inflicted. The caster still suffers any damage inflicted by the bite, but his opponent is typically deterred from further attacks.\n\n(Base 15, +1 Diam)"
+    }
+
+    #tdf26adce7b2384ef616538 ^"Hibernation of the Slumbering Turb" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING ""
+            ^"Printed Stat Line" STRING "ReMe 35 R: Per, D: Year, T:"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Texture, Ritual Req: Creo Anyone touching the caster falls asleep and does not awaken until the spell expires. The caster is not affected by this magic, and his own sleep is natural. Those affected by the spell do not need to eat or drink while it persists, but when they awaken, they are ravenously hungry. Despite the usual length of a Year Duration spell, this spell’s effects always end at the Spring Equinox. This spell was invented by Odorpes of the Sept of Urgen, who lives separate from the rest of her covenant. She hibernates and puts all her covenfolk to sleep with her, so she need not provision them during the winter.\n\n(Base 4, +4 Year, +1 Texture, +1 Creo requisite, +1 complexity)"
+    }
+
+    #tfbb2a3a4ef4a3a5eb81aef ^"Scent of the Predator" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Scent"
+            ^"Printed Stat Line" STRING "CrMe 20 R: Per, D: Sun, T: Scent"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Anyone smelling the caster is struck by an overwhelming sensation of menace\n\nand hostility. The cowardly flee, whereas braver souls are intimidated, granting the caster a +3 to all attempts to cow the target into obeying him.\n\n(Base 4, +2 Sun, +2 Scent)"
+    }
+
+    #t210776eae24cb44ff7324d ^"Marking the Territory" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Scent"
+            ^"Printed Stat Line" STRING "ReCo 15 R: Per, D: Ring, T: Scent"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Anyone smelling the territory marked out by the caster’s scent (usually his urine) cannot enter the warded area for as long as the scent stays fresh, requiring the caster to renew it regularly. The spell manifests as a physical compulsion to turn back upon smelling the magus’s scent. This spell must penetrate successfully to bar passage to any intruder with Magic Resistance, assuming that the intruder is usually associated with the Form of Corpus. (Intruders associated with other Forms are not warded against in any way.)\n\n(Base 3 [move in direction “away”], +2 Ring, +2 Scent)"
+    }
+
+    #t35fdab10d1b62b9e9915ef ^"Clarion Call of the War Horse" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Sound"
+            ^"Printed Stat Line" STRING "MuMe 15 R: Per, D: Diam, T: Sound"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Anyone hearing the caster’s battle cry is heartened by its tone, and receives a +3 bonus to his Brave Personality Trait.\n\nThose attaining Brave scores greater than +3 through this spell perform acts of courage well beyond those expected of them.\n\n(Base 3, +1 Diam, +3 Sound)"
+    }
+
+    #t01ed3c2c929146fd482e67 ^"The Rooster’s Crow" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Sound"
+            ^"Printed Stat Line" STRING "PeVi Gen R: Per, D: Mom, T: Sound"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Any demons who hear the caster’s shout lose Might equal to the spell’s (level – 5) if the spell penetrates their Magic Resistance.\n\n(Base effect, +3 Sound)"
+    }
+
+    #t6aab854c4eb7a55ee00e0a ^"Brilliance of the Eagle’s Plumage" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Spectacle"
+            ^"Printed Stat Line" STRING "CrIg 30 R: Per, D: Conc, T: Spectacle"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Anyone looking directly at the caster is blinded by the brilliant light shining from his body. The caster does not shed light as such; it is only those who look at him who are affected. All victims must make a Stamina stress roll against an Ease Factor of 9 to avoid blindness. On a botch, the blinding is permanent, otherwise a Stamina stress roll (no botch) against an Ease Factor of 9 can be attempted every minute until recovered.\n\n(Base 5, +1 Conc, +4 Spectacle)"
+    }
+
+    #tf16c667de33487b947391b ^"Closed Mouth of the Nightwalker" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Spectacle"
+            ^"Printed Stat Line" STRING "PeMe 40 R: Per, D: Sun, T: Spectacle"
+            ^"Source" STRING "Houses of Hermes: Mystery Cults"
+        }
+        DESCRIPTION "Anyone seeing the caster instantly forgets that he did so, assuming that the spell’s Penetration breaches the target’s Magic Resistance. The caster may not necessarily be aware that he has been seen.\n\n(Base 10, +2 Sun, +4 Spectacle)"
+    }
+
+}

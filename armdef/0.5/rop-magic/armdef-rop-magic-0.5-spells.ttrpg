@@ -1,0 +1,342 @@
+EXTENSION "ARMDef_RoP_Magic_Spells" {
+    NAME "Ars Magica Definitive Edition, Realms of Power: Magic - New Hermetic Spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tmixecpihs4TSv9aJXqDDvT9 ^"Feeding the Font of the Covenant" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Boundary"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Causes an immediate roll on the Aura Strengthening Table for the Magic aura in which it is cast, with a modifier equal to the spell’s magnitude minus five, adding one to the number of botch dice for this roll and for subsequent yearly rolls. The modifier must be 0 or greater, thus the minimum possible spell level is 25. The yearly aura modifier (including the +1 bonus from the casting of this spell) does not add to the roll. If the casting of this spell is botched, a suitable outcome might be either to roll as above, but on the Aura Weakening Table instead, or to make the roll an automatic botch, resulting in the regio outcome."
+    }
+
+    #tmASNl1gl19WN82SoaKv0fN4 ^"Stratifying the Subtle Realities" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Muto"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Boundary"
+            +1 "Muto requisite"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "A variant of Feeding the Font of the Covenant, this spell likewise causes an immediate roll on the Aura Strengthening Table for the Magic aura in which it is cast, with a modifier equal to the spell’s magnitude minus 6, but treating a roll of 2 as a 0 and adding five to the number of botch dice for this roll and for subsequent yearly rolls, meaning that a regio (or new regio levels) is somewhat more likely to result. The modifier must be 0 or greater, thus the minimum possible spell level is 30."
+        REFERENCES {
+            "Feeding the Font of the Covenant" -> #tmixecpihs4TSv9aJXqDDvT9 ^"Feeding the Font of the Covenant"
+        }
+    }
+
+    #tQOiOrdBzuRhEsyDlWfyyCl0 ^"Stripping the Superfluous Realities" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Muto"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Boundary"
+            +1 "Muto requisite"
+            }
+        }
+        DESCRIPTION "An inverse variant of Stratifying the Subtle Realities, this spell causes an immediate roll on the Aura Weakening Table for the Magic regio in which it is cast, with a modifier equal to 0, but treating a roll of 2 as a 0 and adding five to the number of botch dice for this roll and for subsequent yearly rolls. If a botch results then the desired effect occurs, which is that the regio level in which it is cast is destroyed. Even if this spell does not immediately remove the targeted regio level, the extra botch dice for subsequent rolls in following years might cause it to later vanish. Depending on the outcome of the roll, this spell might have the (probably) unwanted side effect of weakening the aura instead. If the casting of this spell is botched, suitable outcomes might be to roll as above, but on the Aura Strengthening Table instead, to inadvertently destroy the wrong regio level, or to otherwise corrupt the structure of the regio."
+        REFERENCES {
+            "Stratifying the Subtle Realities" -> #tmASNl1gl19WN82SoaKv0fN4 ^"Stratifying the Subtle Realities"
+        }
+    }
+
+    #tHhXd8a1jhQCv8BFXerFYOj9 ^"Locus of the Literatus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "With this spell, the caster creates a drawing of his location as a vestige, illuminated on a page inside a book that he carries with him. By casting this spell in several different places, the caster produces a map that may be used with InIm spells to travel more easily through the Magic Realm."
+    }
+
+    #tmgX3B8hnyfJDSU19z3AlSA6 ^"Adoration of the Magical Isle" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Bound"
+            +3 "maximum level"
+            }
+        }
+        DESCRIPTION "This Ritual permanently increases the strength of an Aquam boundary in the Magic Realm by one, to a maximum of 5. This effectively boosts the aura in the region by 1, or by 2 when casting Aquam effects."
+    }
+
+    #tVBPnBko9bk3B6URW9vT1a1Y ^"See the Paths through the Void" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Conc"
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "This spell allows the caster to recognize the level of all boundaries or vestiges he can see that are associated with Auram, and to pass through any of them into the Twilight Void if he should desire to do so."
+    }
+
+    #tSK5DWW4th69NQT5n2m49z2r ^"Comprehending the Mystic Doorway" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Structure"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Str"
+            }
+        }
+        DESCRIPTION "The caster can see into the Twilight Void through the vestige of a wooden structure in the Magic Realm, and lead others through it with a +9 bonus to his Vestige Travel Total."
+    }
+
+    #ttAMfjLR9GE6nj0iSoKJVfYe ^"Torch of the Realm-bound Reveler" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "For the duration of the spell, the target may affect fiery objects with Magic Realm Magic in the mundane world, as if it had Magic Might associated with Ignem. For example, he could use an Intellego Ignem effect to see through a flame into the Magic Realm, and pass through it to a microcosm of that flame."
+        REFERENCES {
+            "Magic Might" -> #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might"
+        }
+    }
+
+    #tegc9X9J4N6Q4Y4SvjBdMzp6 ^"Visions of Olympus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diam"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "This spell causes a group of intelligent beings in the Mentem province of the Twilight Void to become perceptible to others outside of the Twilight Void. For example, a traveler in the Twilight Void might find his way to the lair of a particular creature with which he wishes to communicate. This effect makes the creature able to see and hear him and several others for the duration, as if they were vestiges in the place where that creature lives."
+    }
+
+    #tGUDTdZxCKnzETynlH4jxgBZ ^"When Fortuna Blinks" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+        }
+        DESCRIPTION "The magus disappears from the Magic Realm for a moment, long enough to avoid a killing blow or a blast of flame, or any threat that immediately endangers him. If the danger is something physical, such as a large rock falling on the magus, he reappears either beside or on top of the intervening material, never underneath or inside it. While good for desperate situations, this effect is somewhat inconvenient for magi, since the disappearance cancels their Parma Magica ritual. It is useful for characters with inherent Magic Resistance, though"
+        REFERENCES {
+            "Parma Magica" -> ^"Parma Magica"
+            "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+        }
+    }
+
+    #tyaWrOeU6wrC11jNA0KuZunf ^"Repose of the Eternal Moment" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            }
+        }
+        DESCRIPTION "This ritual, which must be cast within the Magic Realm or by a character with Corpus Might, causes the target to disappear into the Twilight Void. As long as it lasts, it is as if he doesn’t exist; he will have no memory of the intervening time when, and if, he returns. Note that when the effect is cast in the Magic Realm, it is effectively permanent. A magus determined to ensure he no longer ages might use this effect on himself, first creating a vestige of himself that can be used as a link to draw him back."
+    }
+
+    #tqd2qXIUteczZUuEgrXkpYv5 ^"The Night-Badgers’ Burrow" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Terram"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Moves the targets from the Animal province to the Terram province in the Twilight Void. This can allow them to leave the Void through a Terram vestige or boundary."
+    }
+
+    #t8L8Vbg2TWgnxwvFC40jbHxQ ^"Swift Wings of Timeless Days" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+        }
+        DESCRIPTION "The length of the caster’s journey through the Twilight Void is reduced by three steps from his initial Speed Level. With a Speed Level of 6 the caster would return to the Magic Realm after a year, and this spell would increase his Speed Level to 18, meaning that he emerges after only a day."
+    }
+
+    #tN5VsbCy2BKz3hH7cgP9WIiu ^"Rarefy the Crude Water" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "This ritual spell rarefies a base amount of water (up to a pool of 5 paces diameter and 2 paces deep) to bring a water elemental into existence. At its maximum size, the elemental has a Might of 15 and a Size of 0, but smaller bodies of water will yield smaller elementals. The character guides given later in the chapter describe typical elementals created by this spell. For larger (and thus more powerful) elementals, this spell must be invented with a Size modifier to the target, with each application of the modifier giving +3 Size. Since Size determines Might (see later), 1 extra size magnitude gives an elemental a Might of 20 (Size +3), 2 a Might of 25 (Size +6), etc. This spell doesn’t need to penetrate the Might of the elemental instantiated; until the completion of the spell, the elemental doesn’t exist."
+    }
+
+    #txLuh7spjtISMFhAXZZaNvVh ^"Command the Living Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "This spell allows the caster to control the actions of a fire elemental up to Size 0, if the Penetration Total exceeds the elemental’s Magic Might. For larger elementals, versions of the spell with a Size modifier to the Target are required. If an elemental is already under supernatural control, the most recent spell or power used is the one that commands it."
+        REFERENCES {
+            "Penetration Total" -> #tTfWL26oYi5zr70uLeeLqvH2 ^"Penetration Total"
+            "Magic Might" -> #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might"
+        }
+    }}

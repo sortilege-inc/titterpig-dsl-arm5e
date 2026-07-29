@@ -1,0 +1,231 @@
+EXTENSION "ARMDef_RoP_Magic_Modifier_Tables" {
+    NAME "Ars Magica Definitive Edition, Realms of Power: Magic - Modifier Tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_RoP_Magic_Core_Ext"
+
+    #tSZdgT07mr3uz3ZjMr4aaKrG ^"Yearly Aura Modifier" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 10
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Effect" "Add to Modifier" ""
+            "Current aura score differs from base aura score" "+3 x (base aura" ""
+            "" "score – current" ""
+            "" "aura score)" ""
+            "Stronger foreign Magic aura impinges on aura" "" "+2"
+            "Stronger foreign Faerie aura impinges on aura" "" "+1"
+            "Stronger foreign Divine aura impinges on aura" "" "–6"
+            "Stronger foreign Infernal aura impinges on aura" "" "–2"
+            "Magical activity (labwork and non-Ritual spellcasting)" "" ""
+            "of a typical Spring covenant" "" "+1"
+            "Magical activity (labwork and non-Ritual spellcasting)" "" ""
+            "of a typical Summer covenant" "" "+2"
+            "Magical activity (labwork and non-Ritual spellcasting)" "" ""
+            "of a typical Autumn or Winter covenant" "" "+3"
+            "Beneficial magical botch (2 or more Warping Points gained)" "" "+1"
+            "Detrimental magical botch (2 or more Warping Points gained)" "" "–1"
+            "Expenditure of vis (3 or more pawns) in study," "+1 per instance" ""
+            "spellcasting, or certamen" "" ""
+            "Extraction of vis from aura" "–1 per instance" ""
+            "" "(one season by" ""
+            "" "one magus)" ""
+        }
+        DESCRIPTION "The Yearly Aura Modifier table from Realms of Power: Magic (page 10); rows reproduced verbatim from the source."
+    }
+
+    #t4tiQ4CviweDb0c0oVOGYFkj ^"Aura Effect Table" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 15
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Aura" "Personality Trait" ""
+            "Level" "Adjustment" ""
+            "1 – 3" "" "+1"
+            "4 – 6" "" "+2"
+            "7 – 10" "" "+3"
+        }
+        DESCRIPTION "The Aura Effect Table table from Realms of Power: Magic (page 15); rows reproduced verbatim from the source."
+    }
+
+    #tKtFrEzplRT5rLePq15ftySV ^"Magical Travel" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 23
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Familiarity" "Familiarity Modifier" ""
+            "Enigmatic Wisdom" "" "score"
+            "Magic Lore" "" "score"
+            "Area Lore (Magic Realm)" "" "(score x 3)"
+            "Knows name or description" "" ""
+            "of the destination" "" "1"
+            "Has seen the destination before" "" "3"
+            "Visited the destination before" "" "6"
+            "Arcane Connection to" "" ""
+            "the destination" "" "15"
+            "Speed Level" "Length of journey"
+            "–1 or lower" "permanent"
+            "0" "seven plus a stress die"
+            "" "(no botch) years"
+            "3" "seven years"
+            "6" "Year"
+            "9" "one season"
+            "12" "Moon"
+            "15" "day (24 hours)"
+            "18" "Sun"
+            "21" "two hours"
+            "24" "Diameter (2 minutes)"
+            "27" "one minute"
+            "30+" "Momentary"
+        }
+        DESCRIPTION "The Magical Travel table from Realms of Power: Magic (page 23); rows reproduced verbatim from the source."
+    }
+
+    #tEMuuS5PTbuDFD2kcHGHZRty ^"Auras and Might Recovery" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 30
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Subtotal" "" "Recovery Time"
+            "" "0" "24 hours"
+            "" "1" "12 hours"
+            "" "2" "6 hours"
+            "" "3" "3 hours"
+            "" "4" "90 minutes"
+            "" "5" "45 minutes"
+            "" "6" "22 minutes"
+            "" "7" "10 minutes"
+            "" "8" "5 minutes"
+            "" "9" "2 minutes"
+        }
+        DESCRIPTION "The Auras and Might Recovery table from Realms of Power: Magic (page 30); rows reproduced verbatim from the source."
+    }
+
+    #twDFHI2qcWyHCahHRxP4KP7S ^"Season" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 34
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Character" "Starting"
+            "Season" "Experience"
+            "Spring" "120"
+            "Summer" "360"
+            "Autumn" "720"
+            "Winter" "1200"
+        }
+        DESCRIPTION "The Season table from Realms of Power: Magic (page 34); rows reproduced verbatim from the source."
+    }
+
+    #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 34
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Power" "Grog" "Companion" "" "Magus"
+            "Low" "0" "" "5" "10"
+            "Medium" "3" "" "10" "20"
+            "High" "5" "" "15" "30"
+            "Legendary" "10" "" "25" "50"
+        }
+        DESCRIPTION "The Magic Might table from Realms of Power: Magic (page 34); rows reproduced verbatim from the source."
+    }
+
+    #tw6uZt3E581GZ2MdU7dMyJ33 ^"Vis Consumption" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 54
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Roll" "Result"
+            "0" "Possible botch, otherwise no effect"
+            "2–4" "No effect"
+            "5–6" "Side effect (negative)"
+            "7–8" "Side effect (positive)"
+            "9" "Special or story event"
+            "10+" "Transformation"
+        }
+        DESCRIPTION "The Vis Consumption table from Realms of Power: Magic (page 54); rows reproduced verbatim from the source."
+    }
+
+    #t88RAPISDs5pTfe5brD5kAeT ^"Might Score and Qualities" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 74
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Might Score" "Description" ""
+            "1–10" "Serpents and very weak drakes" ""
+            "11–20" "Powerful" "serpents, weak"
+            "" "drakes, and worms" ""
+            "21–30" "The mightiest" "serpents (a"
+            "" "basilisk is about Might 30)," ""
+            "" "typical" "drakes and worms,"
+            "" "weak dragons" ""
+            "31–40" "Typical" "dragons, powerful"
+            "" "worms" "and drakes. Drakes"
+            "" "above Might 40 are rare." ""
+            "41–50" "Powerful dragons" ""
+            "51–74" "Dragons of might and legend" ""
+            "75" "Jörmungandr," "the Midgard"
+            "" "Serpent" ""
+        }
+        DESCRIPTION "The Might Score and Qualities table from Realms of Power: Magic (page 74); rows reproduced verbatim from the source."
+    }
+
+    #ttnOUf3ehlRG5t6b3bhCJFze ^"Claw and Fang" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 75
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "" "Init" "Atk" "Dfn" "Dam"
+            "Claws" "–1" "+2" "+3" "+2"
+            "Large Claws" "0" "+5" "+3" "+4"
+            "Fangs/Teeth" "0" "+3" "+1" "+1"
+            "Large Teeth" "0" "+4" "+1" "+3"
+        }
+        DESCRIPTION "The Claw and Fang table from Realms of Power: Magic (page 75); rows reproduced verbatim from the source."
+    }
+
+    #tmpX8A2p8d65kL0zdzZlNC3b ^"How Big is a Giant?" DEF {
+        APPLIES TO [^"Entity"]
+        PROPERTIES {
+            ^"Page" INTEGER 84
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        TABLE {
+            "Size" "Height" "Weight"
+            "-2" "2’9” - 3’9”" "22 - 46 lbs"
+            "-1" "3’9” - 4’9”" "46 - 100 lbs"
+            "0" "4’9” - 6’2”" "100 - 215 lbs"
+            "+1" "6’2” - 8’" "215 - 465 lbs"
+            "+2" "8’ - 10’" "465 - 1000 lbs"
+            "+3" "10’ - 13’" "1000 - 2150 lbs"
+            "+4" "13’ - 17’" "2150 - 4600 lbs"
+            "+5" "17’ - 22’" "2 1/2 - 5 tons"
+            "+6" "22’ - 28’" "5 - 10 tons"
+            "+7" "28’ - 37’" "10 - 23 tons"
+            "+8" "37’ - 47’" "23 - 50 tons"
+            "+9" "47’ - 61’" "50 - 107 tons"
+            "+10" "61’ - 79’" "107 - 230 tons"
+            "+15" "220’ - 280’" "5,000 - 10,800 tons"
+            "+20" "800’ - 1000’" "230,000 - 500,000 tons"
+        }
+        DESCRIPTION "The How Big is a Giant? table from Realms of Power: Magic (page 84); rows reproduced verbatim from the source."
+    }}

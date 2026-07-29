@@ -1,0 +1,54 @@
+EXTENSION "ARMDef_CityAndGuild_Guilds_Tables" {
+    NAME "Ars Magica Definitive Edition, City & Guild - Chapter Three: Guilds tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_City_And_Guild_Core_Ext"
+
+    # The chapter's tables, structured (the prime directive: a table is never
+    # prose). Column sets are read off the printed page or the words' own
+    # x-geometry, never guessed, and every cell is gated by cell_verbatim.
+
+    #t0372fa9184c5dbf059201d ^"Guild Member Ages & Abilities" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Age", "Guild Rank", "Craft Ability", "Secondary Ability"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "10–20" "Apprentice" "3" "–"
+            "20–30" "Journeyman" "5" "2 (Bargain)"
+            "30–40" "Master" "5–6" "3 (Bargain)"
+            "40–50" "Senior Master" "7" "3 (Leadership)"
+            "50+" "Dean" "7" "5 (Leadership)"
+        }
+        DESCRIPTION "Much of a guild member’s rank depends on his age, which should also indicate the number of years he has been working at his craft. The following chart provides a rough guideline for appropriate Craft Ability scores for a guild member depending on his age and rank. It\n\nalso suggests a secondary Ability necessary for certain ranks of guild characters. It can also be helpful in determining a starting character’s appropriate Craft Ability. These are only suggestions and should not be used to impose arbitrary limits on any troupe’s saga."
+    }
+
+    #td2f2d017338887dcdcfc5f ^"Guild Length of Apprenticeship" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Guild", "Length of Apprenticeship"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "Dyer, Tailor, Mason" "8"
+            "Carpenter, Blacksmith" "9"
+            "Locksmith, Butcher, Painter" "10"
+            "Carter, Armorer" "11"
+            "Silversmith, Chestmaker, Bookmaker" "12"
+        }
+    }
+
+    #t77ce94b2a965f26b10a17a ^"Number of Guilds in a Town" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Population", "Guilds in 1220", "Guilds in 1250", "Guilds in 1300"]
+            ^"Source" STRING "City & Guild"
+        }
+        TABLE {
+            "1,000 or less" "0–1" "0–2" "1–3"
+            "10,000 or less" "0–3" "3–5" "5–10"
+            "20,000 or less" "5–10" "50–200" "100–300"
+            "50,000 or less" "5–20" "50–300" "100–500"
+        }
+    }
+
+}

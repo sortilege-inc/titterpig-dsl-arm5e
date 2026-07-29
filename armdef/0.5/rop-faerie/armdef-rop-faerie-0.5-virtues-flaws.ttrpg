@@ -1,0 +1,1084 @@
+EXTENSION "ARMDef_RoP_Faerie_Virtues_Flaws" {
+    NAME "Ars Magica Definitive Edition, Realms of Power: Faerie - Faerie Virtues and Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_Core_Virtue_Flaw"
+
+    #tFO1lLTJBGiIG7AOVvnvD3Es ^"Fast Might Recovery" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Virtue allows faeries to recover spent Might in a quarter of the normal time. Instead of completely refreshing its Might over the course of 24 hours, the character restores its entire Might Pool in only six hours."
+        }
+
+        #tKE3Ke8X2iLK76NuF8Q0XQhK ^"Feast of the Fae" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Virtue allows a faerie to recover 5 lost Might by receiving traditional sacrifices left from a human. Sacrifices include food left on doorsteps for the faerie to consume, but some dark faeries feed on the wards left to keep them at bay, accepting them as the price that humans pay for safety. This power can only be used once per day."
+        }
+
+        #tsFtG3mTEPyHxXhTXtLQD1wv ^"Feast of the Dead" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Virtue allows a faerie to recover 2 lost Might after draining a Long Term Fatigue Level from, or causing at least a Medium Wound to, a human. Different fairies employ various methods to extract vitality from humans. This Virtue does not, of itself, cause damage. For example, a faerie that feeds on the blood of sleeping shepherds must make a successful Bite attack to drink sufficient blood from a sleeping shepherd to cause the loss of a Long Term Fatigue Level. The faerie's player can then claim 2 lost Might points."
+        }
+
+        #t4Wi9rTJqEAYN5doNaGIS7mJ ^"Increased Faerie Might" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "As a Minor Virtue, this increases the faerie's Might Score by 5. As a Major Virtue, it increases Might by 15. With the approval of the troupe, this Virtue may be taken multiple times."
+        }
+
+        #t2qQybRuwERzqCfK2pkKd0v7 ^"Time or Place of Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Determine time or place" "Intelligence + Faerie Lore vs Ease Factor 9"
+            }
+            DESCRIPTION "The character's Might Score is 10 points higher at a certain time or in certain places that are strongly linked to the character's role. The time or place is known to any character who makes an Intelligence + Faerie Lore roll of against an Ease Factor of 9. This Virtue may not be taken multiple times."
+            REFERENCES {
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+            }
+        }
+
+        #t0IDsx8baTO8F8T4CinnICR0 ^"Decreased Might" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The faerie has only 1 point of Might, instead of the usual 5. Faeries with this Flaw retain the use of powers that do not require the expenditure of Might, like regeneration and the ability to generate equipment that does not cause Encumbrance."
+        }
+
+        #tj8ryBP6WKKExesqEyBr07qc ^"Restricted Might" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The faerie is nearly powerless at certain times or under certain conditions. At the onset of these disadvantageous conditions, any ongoing supernatural effects that the creature has started with its powers immediately end, except for those that constantly affect the creature itself. As long as the conditions last, the creature is unable to spend or recover Might points.\n\nThis Flaw may be Major or Minor. If it is Major, the creature's Might is restricted under relatively common circumstances, such as when exposed to daylight or during the winter. The conditions should be in effect at least one-quarter of the time. For the Minor version of this Flaw, the conditions are uncommon, such as during a thunderstorm or on the night of the new moon."
+        }
+
+        #t8oBzaWSc0CC49G4C6TQ0R7F ^"Slow Might Recovery" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A faerie being with this Flaw recovers a single Might Point per day, rather than all Might Points over the course of a day. A variant of this Flaw occurs in some faeries that regain all of their Might at a certain phase of the moon, but at no other time."
+        }
+
+        #twQIyEgfJfs3pDtSbKoIXmwo ^"Might Recovery Requires Vitality" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Might Points recovered per 8 hours" "prevailing Aura as modified by the Realm Interaction Table, or 1, whichever is greater"
+            }
+            DESCRIPTION "The character must get a full night's rest and eat a meal to replenish its Might Points after they have been spent. This must be done within a human community by eating leavened bread, drinking beverages fermented by humans, feeding on human blood, or listening to humans sing or scream. For every eight hours the character rests, it recovers a number of Might Points equal to the prevailing Aura as modified by the Realm Interaction Table, or 1, whichever is greater."
+            REFERENCES {
+                "Realm Interaction Table" -> #tzoDnMSy4mVtVX27beivDr1c ^"Realm Interaction Table"
+            }
+        }
+
+        #t3REKvS415DVzTA0yqUR8BqL ^"Huge" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "General (faeries only)" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is far larger than usual. Its Size score is increased, its Characteristics are adjusted, and its Body levels change, as detailed in the inserts accompanying this section."
+        }
+
+        #tRlZhtfkLQoRb7k8buBVI5Qk ^"Little" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "General (faeries only)" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is far smaller than usual. Its Size score is decreased, its Characteristics are adjusted, and its Body levels change, as detailed in the inserts accompanying this section."
+        }
+
+        #tWtTlKRyGAohorFjb8CWnHqC ^"External Vis" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The faerie's spiritual essence (anchor) resides in one of the props traditional for its role, and this can be carried far from the faerie's body without the faerie suffering ill effects. There is an Arcane Connection between the object containing the faerie's spiritual essence and the faerie's body. If this connection is broken, or if the object is destroyed, the faerie's distant body disintegrates, but the essence can construct a new body, given sufficient time. If the vis in the prop is used, the faerie is permanently destroyed.\n\nWhen selected as a Major Virtue, the prop provides its bearer with any one Minor Virtue, selected at creation. This provides the faerie with a little additional power, but its main advantage is that humans who discover the object are far more likely to treasure it, and keep it safe. This provides the faerie with time to form a new physical body and reclaim his object.\n\nAs an example, a faerie warrior with a Might of 20 uses his sword as his spiritual anchor. A character that defeats the warrior finds that the sword contains 4 pawns of vis, but also finds that the sword has no Encumbrance and grants a human wielder a +2 bonus on the Single Weapon Ability. The bonus comes from the Grant Puissance power, described later. If the human keeps the weapon, then eventually the faerie can generate a fresh body, and seek out the wielder and challenge him to a duel."
+            REFERENCES {
+                "Single Weapon" -> #teT2LcXE2F4TDMJ6PBCx2GZI ^"Single Weapon"
+            }
+        }
+
+        #tUnHGtLmZYIDr4BiP2xoHajJ ^"Faerie Beast" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character appears to be an animal. It has all of the advantages of being a faerie, and having a faerie body. The innate limitations of an animal form, such as having no hands and being unable to pronounce human words, may not be taken as Flaws. Faerie beasts that wish to speak like humans may take Language Pretenses, or the Faerie Speech Virtue."
+            REFERENCES {
+                "Faerie Speech" -> #tWhqaCK2XLduFdikCXnn8PY2 ^"Faerie Speech"
+            }
+        }
+
+        #ttLz6u8onIb8GxvNdmEdnmbQ ^"Faerie Sight" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Read another faerie's glamour" "Ease Factor = Might of other faerie/5"
+                "See mundane things hidden by glamour" "Ease Factor = 3 + (Might of Faerie causing the glamour – Might of the faerie attempting to see through the glamour)/5"
+            }
+            DESCRIPTION "This Virtue, which works constantly at no cost to the faerie, is used in conjunction with the Awareness Pretense. It allows faeries to:\n\n• Tell mundane from glamourous things. (Automatic success: no roll required.) • See the borders of glamour, so that they know which faerie that props and territories belong to. (Automatic success: no roll required.) • See Arcane Connections, so that they know which objects belong to a human (automatic success), and also to which human they belong. (If human and object can be observed, automatic success.) • Read each other's glamour. Faerie Lore is a body of knowledge that humans learn through experience, so very few faeries have it. (Ease Factor = Might of other faerie/5) Faeries use the ability to read each other's glamour to guide their interactions, instead of using Faerie Lore. • See mundane things hidden by glamour. (Ease Factor = 3 + (Might of Faerie causing the glamour – Might of the faerie attempting to see through the glamour)/5)"
+            REFERENCES {
+                "Arcane Connections" -> ^"Arcane Connections"
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+            }
+        }
+
+        #tWhqaCK2XLduFdikCXnn8PY2 ^"Faerie Speech" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Many faeries have a Pretense called Faerie Speech, which they use instead of acquiring human languages. Faeries seem to know the same languages as whomever they are talking to. If speaking to a group that has demonstrated mixed linguistic skills, the faerie may select which language to speak in.\n\nThis effect occurs whenever the faerie speaks and costs no Might. It is not magically resisted, because the effect only alters the behavior of the faerie. If the faerie has not heard a person from its audience speak, it may only use whichever language it last used with humans. Once its audience speaks, the faerie may then converse in the correct language for its audience.\n\nIn the bestiary chapter, Faerie Speech is frequently given to characters designed as NPCs. Characters designed for possible use by players have this Virtue more rarely, to free up a Virtue slot, but it is still appropriate for a wide variety of faeries."
+        }
+
+        #tADSToiiaoPO7Wlf7LOhiqTm ^"Humanoid Faerie" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character has a material body of roughly human shape. It has all of the advantages of being a faerie, and of having a faerie body."
+        }
+
+        #tEH8m8MhNITh1bP7Bx9t1wtA ^"Hybrid Form" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character has a material body that mixes human and animal elements, and lacks a humanoid structure. It has all of the advantages of being a faerie, and of having a faerie body."
+        }
+
+        #tO1kyKH0xASvM7HF6ITDtwhG ^"Immune to (Source of Damage)" DEF {
+            EXTENDS ^"Virtue"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The bodies of faeries are made of matter held together by rules, and this means that they are vulnerable to injury according to those rules, not the usual rules of human physiology. A faerie with this Virtue takes no damage from natural or magical examples of the nominated force. This is a Minor Virtue if the thing is rare, or only likely to be employed by the environment or magi — examples include cold or lightning. It is Major Virtue if it is a force that mobs of mundanes might employ to assault the faerie — like fire, iron weapons, or wooden weapons. Immunity to entire Forms sometimes occurs, but only where the faerie is so strongly tied to an element that any person with Common Sense could tell that the weapon will be ineffective, like wooded weapons against a forest god or metal weapons against a dwarfish blacksmith. Immunities to entire Forms are Major Virtues."
+            REFERENCES {
+                "Common Sense" -> #tSmfpmVQdvf6p6lQevHDQz9B ^"Common Sense"
+            }
+        }
+
+        #thH1bCzoiitnhPpJ0mq02EIG ^"Improved Damage" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Deduce weapon is supernatural" "Intelligence + Awareness vs Ease Factor 11 – Damage amount chosen"
+            }
+            DESCRIPTION "One of the character's natural weapons has been enhanced by a story event before play begins, making it sharper, heavier, or somehow more dangerous. Before each combat, the player nominates how much additional damage the weapon does, up to +5. If the player chooses a score above +2, then those watching the combat can deduce that the weapon is supernatural after it causes injury. This requires an Intelligence + Awareness roll against an Ease Factor of 11–Damage amount chosen."
+        }
+
+        #tRogbksbiq5qXldkIwzM1iaq ^"Improved Initiative" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "One of the character's natural weapons has been enhanced due to a story event before play commences, making the character more likely to act first in combat. Increase its Initiative score by 3."
+        }
+
+        #tH0x5tzyFFTxltyTlq6NrgCR ^"Improved Soak" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's natural protection is magically enhanced, making it more effective at warding away blows and physical injury. Increase the character's Soak by 2. This Virtue may be taken more than once."
+        }
+
+        #tJSsV9IueYlOnEBhX5Hga7R7 ^"Puissant Pretense" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's form is well suited to a particular Pretense, gaining a +2 bonus on roles in its use. For example, a character that has a body designed for combat gains +2 Attack and Defense for a single combat Pretense."
+        }
+
+        #tVdJ8sIJm95EuCBZ0UlgzloZ ^"Residual Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "When the character's body is destroyed, one of its faerie powers is automatically triggered. This often has the useful effect of preventing the faerie's vis from being gathered, so that the faerie eventually regenerates."
+        }
+
+        #tpXc1Ho9QMFGZ2Fb87rjYL0s ^"Intangible Flesh" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is immaterial, and cannot physically influence the world. Characters with this Flaw should consider the Eidolon and Loosely Material powers."
+            REFERENCES {
+                "Loosely Material" -> #tNipLsgWpyY6TC3xe8uYQwOP ^"Loosely Material"
+            }
+        }
+
+        #thFQ2AwvF9bDGWjas15977QH ^"Poor Combatant" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's form is well suited to a role that involves combat, but the character's role makes it incompetent. It loses 2 Attack and Defense for a single combat Pretense. This flaw may not be taken more than once."
+        }
+
+        #tyAQCl7o40D8pzLJq0w9M0Iu ^"Reduced Damage" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "One of the character's natural weapons has been blunted by a story or event before play commences, making it less damaging or dangerous. Decrease its Damage score by 2, but only if it is naturally greater than 0."
+        }
+
+        #tg5PDMn5mTeYTqGo4fgxzh07 ^"Reduced Initiative" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "One of the character's natural weapons has been slowed due to a story or event before play commences, making the character less likely to act first. Decrease its Initiative score by 3, but only if it is naturally greater than 0."
+        }
+
+        #tKPgmtqwdEPNDUsf2QRGbaFT ^"Reduced Soak" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's natural protection has been damaged by contact with a Ward, making it more vulnerable to physical damage. Reduce the character's Soak by 2, but only if it is greater than 0. This Flaw may be taken multiple times."
+        }
+
+        #tNupvndHqv29enwLqi5UUnki ^"Role Requires Suffering" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's role requires both frequent injury and that it feels pain and physical debilitation. The character retains the faerie ability to regenerate all but superficial damage, but it experiences pain as if it bore the wounds that its injuries superficially resemble. If the faerie attempts to use its Pretenses, including the Penetration Pretense for its powers, it suffers the negative modifiers that a human would for the equivalent level of injury or exhaustion."
+        }
+
+        #tFOXUVtbdvPZ76SWELzKvlUh ^"Susceptible to Deprivation" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's role limits it, so that it suffers human consequences if it lacks air, food, and water. The character is still immune to aging."
+        }
+
+        #tQTYyew3BrGKrLNg8xO7geUd ^"Vulnerable to (Substance)" DEF {
+            EXTENDS ^"Flaw"
+            PARAMETERS { ^"subject" OF STRING }
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The body of the character, and all of its accouterments, are made of matter held together by glamour. The character's glamour provides no defense against a particular source of damage. This is particularly problematic, as the faerie's armor contains glamour. The character has a Soak score of 0 against this substance. This is a minor Flaw if it is something that people would not consider using unless prompted by a wise person with the Faerie Lore Ability — examples include weapons smeared with garlic, bunches of fennel, sharpened rocks, and burning brooms. Major Flaws suit characters vulnerable to obviously dangerous things — like iron weapons or fire, or to entire Hermetic Forms."
+            REFERENCES {
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+            }
+        }
+
+        #tFBGL1W1WTq9MJJ4LU7Bq9PJ ^"Monstrous Appearance" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Social Interaction" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Something about the character looks strange and frightening to others, giving the character a –6 penalty in all social situations where its appearance is a factor."
+        }
+
+        #tYlMyDC9910Ob9dDdLOJNJYl ^"Negative Reaction" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Social Interaction" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "People find something about the character disturbing. This causes a –3 on all social rolls. In many communities, all obvious faeries suffer this reaction."
+        }
+
+        #tsoPPuQgKXrwmDmOaM7yVt9R ^"Passes for Human" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Social Interaction" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character suffers no social consequences, as it can seem human. The character lives at the margins of human society and does not mimic prestigious human roles; to do so requires the Infiltrator Virtue, described later."
+        }
+
+        #tUM84mopNyjTLwQd731bf1X1 ^"Positive Folktales" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Social Interaction" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character's type of faerie is described in local folklore, and because of this, the character is treated with respect, caution, and deference when its nature is obvious."
+        }
+
+        #tmRShh8NWonRXiPApjgPVmDg ^"Infiltrator" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Social Interaction" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "An Infiltrator is a faerie who, during most stories, lives as if he were a human being. This costs the same as the Social Status the Infiltrator is mimicking. If the revelation that the character is a faerie would destroy the character's status in mortal society, then the player should consider the Dark Secret Flaw."
+            REFERENCES {
+                "Dark Secret" -> ^"Dark Secret"
+            }
+        }
+
+        #tkrQQDLtvftOSIRp2ePA3MUM ^"Incognizant" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is not aware that it can change its role, although it may develop additional Pretenses by assisting humans in stories. Incognizant faeries do not, however, notice that they are more skilled than they once were, and cannot consciously seek developmental opportunities."
+        }
+
+        #tCYemS1t8VXge8tqX8Z0i0Pg ^"Narrowly Cognizant" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is able to improve itself in ways traditional for characters of this type. A dwarf may seek to become a dwarf king, for example. Or a faerie maid may wish to steal a child to raise as her own."
+        }
+
+        #ti6Lqt7gTkrpXip9CedZXrcc ^"Highly Cognizant" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is aware that creative humans can generate change in faeries, and can actively seek out such changes."
+        }
+
+    #tsgOS22bE7Hx9XuGDX4I41Jy ^"Traditional Ward" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "If a taboo is selected as a Minor Flaw, then the faerie may not touch a thing protected by the ward with its glamour. The faerie is likely uncomfortable in the presence of the ward, but is not compelled to flee. The faerie cannot regenerate Might points in the presence of a traditional ward. If forced to touch the ward, the glamour holding the faerie's body together begins to break down: its body begins to flake away. Prolonged contact with the ward destroys the body of the faerie by unpicking the glamour holding its body together.\n\nThis may appear to humans as if the ward is burning the faerie. The damage to the faerie's body can be simulated with the Heat and Corrosion rules found on page 181 of ArM5. Assume that the object acts as a source of damage with an intensity of +6.\n\nIf a faerie receives an Incapacitating wound from an item that is a Traditional Ward, then in addition to the usual effects of Incapacitating wounds (ArM5, page 178–179) the faerie cannot spend any further Might points. It can still activate powers with a zero cost, though. If the character has constant-effect powers with a non-zero cost, they expire at the next sunrise or sunset and cannot be reactivated until the character is no longer Incapacitated. The character may heal at a human rate, or may remove the injury with an appropriate story event."
+            REFERENCES {
+                "Heat and Corrosion" -> #th8pxsiBPwTGjyPnTwvQzxJp ^"Heat and Corrosion"
+            }
+        }
+
+        #t96u9ocfX8If56Zwkv8Ax0hO ^"Sovereign Ward" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "If a taboo is selected as a major flaw, the faerie may not harm a person or thing that is defended by the ward. \"Harm\" is defined very broadly in the faerie's glamour. A faerie that is vulnerable to religious symbols, for example, can not work around the symbol by putting mundane poison in the food of the wearer, or burning his house down around him. The person is completely safe from the faerie. The faerie must attempt to flee the ward, and its body is destroyed instantly by the ward's touch."
+        }
+
+    #t0fv82NTygs0Ne6zJ82Jzmhh ^"Reputation as Confidence" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Some faeries are forced, by their glamour, to live up to their Reputations. These faeries don't have true Confidence, but pretend to have it to such a skilled degree that the distinction does not matter. A faerie with this Virtue gains a number of false Confidence points equal to its highest reputation, and may spend them, one at a time, on rolls that support any Reputation. The faerie regains these points when a human would regain Confidence.\n\nHighly cognizant faeries may be aware of the link between their Reputation and their need to uphold that Reputation with Confidence; other faeries with this Virtue are not."
+        }
+
+        #t0RRoMDuelQsTmoXNRLpEuxU ^"Focus Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Might Point cost" "magnitude of the effect"
+                "Initiative" "Quickness – the power's maximum magnitude"
+            }
+            DESCRIPTION "The character has a power that produces varied effects related to a theme, which is smaller than a Hermetic Form. The theme must be selected at character creation, but the effects within the theme are fluid, like those of spontaneous spells. The player receives 25 spell levels to spend on this power. This Virtue may be selected more than once to allow for more-powerful effects. Effects may not have a level higher than the faerie's Might Score unless they have been fortified with the Improved Powers Virtue, described below.\n\nThis power has a Might Point cost of the magnitude of the effect, and an initiative score of (the character's Quickness – the power's maximum magnitude). Players should also note the Form or Forms associated with the focus, to evaluate Magic Resistance.\n\nAny spell levels that are left over may be used to increase the effect level of other Focus Powers, or they can be converted into Intricacy points."
+            REFERENCES {
+                "Hermetic Form" -> #tUEdmiz0IADMNt9MPAbcgRyn ^"Hermetic Form"
+                "Improved Powers" -> #toQvBVJ9B6LtAco1wna4ohts ^"Improved Powers"
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+        #tO5XFGkxH39d8IsuOBi2cXBp ^"Greater Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Might Point cost" "(the magnitude of the effect / 2)"
+                "Initiative" "Quickness – (the magnitude of the effect / 2)"
+            }
+            DESCRIPTION "The character has spell-like powers designed, at character creation, like formulaic spells. Taking this Virtue gives the character 50 spell levels to spend on these powers, and this Virtue may be selected repeatedly, to allow effects of higher level. Each power has a Might Point cost equal to (the magnitude of the effect / 2), and an Initiative score equal to the character's Quickness – (the magnitude of the effect / 2). Players should note the Forms associated with the effect, to calculate Magic Resistance.\n\nAny spell levels that are left over may converted into intricacy points, with 5 full spell levels equal to 1 intricacy point."
+            REFERENCES {
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+        #trycp5AY4LCEmvmCP10xvgWb ^"Lesser Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Might Point cost" "the magnitude of the effect"
+                "Initiative" "Quickness – (2 x Magintude)"
+            }
+            DESCRIPTION "The character has spell-like powers, which are designed at character creation like formulaic spells. Each effect's Might Point cost is equal to the magnitude of the effect. The initiative of the power is equal to Quickness – (2 x Magintude).\n\nAny spell levels that are left over may be used to increase the effect level of other Lesser Powers, or converted into intricacy points, with 5 full levels of effects equal to 1 intricacy point."
+        }
+
+        #twVnpmKsGJtg08QxdZoxyf5O ^"Personal Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Might Point cost" "(the magnitude of the effect / 2)"
+                "Initiative" "Quickness – (the magnitude of the effect / 2)"
+            }
+            DESCRIPTION "The character has a spell-like power, which is designed at character creation like a formulaic spell. Personal powers must have Personal Range.\n\nThis Virtue grants the character 25 levels to spend on a power, and may be taken multiple times to allow for effects of higher level. Personal Powers have a Might Point cost equal to (the magnitude of the effect / 2), and an initiative score equal to the character's Quickness – (the magnitude of the effect / 2). Players should note the Forms associated with the effect, to calculate Magic Resistance.\n\nAny spell levels that are left over may be used to increase the effect level of other Personal Powers, or converted into intricacy points, with 5 full levels of effects equal to 1 intricacy point."
+            REFERENCES {
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+        #tGhEx5niu51Fsp9n0z9acWgM ^"Ritual Power" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Might Point cost" "the magnitude of the effect"
+                "Initiative" "Quickness – (the magnitude of the effect x 2)"
+            }
+            DESCRIPTION "Players designing Ritual Powers should consult with their Troupes. The character has 25 spell levels with which to purchase Ritual-level effects. If this Virtue is taken multiple times, these spell levels can be combined into effects of greater magnitude. An effect needs to be a ritual if:\n\n• It would require a magus to perform a Ritual spell, • It has a level higher than 50, or • It breaks Hermetic limits in ways that faeries do not usually break Hermetic limits, as decided by the troupe.\n\nAll Ritual Powers are at least Level 20, regardless of the actual level of the effect, and have a Might Point cost equal to the magnitude of the effect. The Initiative for the power is equal to the character's Quickness – (the magnitude of the effect x 2). The player should also note the Forms of the effect, to calculate Magic Resistance.\n\nBesides reducing the character's Might Pool, Ritual Powers also require the player to subtract one from the character's Might Score for each point in the Might cost, whenever it activates the effect. This lost Might may return over time, at the storyguide's discretion, but at a much slower rate than recovering lost Might Points. For example, the character may regain a single point for each story in which it plays a decisive role.\n\nAny spell levels that are left over after the Ritual Power is designed may be used to increase the effect level of other Ritual Powers, or converted into intricacy points, with 5 spell levels equal to 1 intricacy point. These may be spent like the intricacy points gained from the Improved Powers Minor Virtue on any of the character's Ritual Powers."
+            REFERENCES {
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+                "Improved Powers" -> #toQvBVJ9B6LtAco1wna4ohts ^"Improved Powers"
+            }
+        }
+
+        #toQvBVJ9B6LtAco1wna4ohts ^"Improved Powers" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Virtue gives the character 5 intricacy points to spend on any of its powers. This Virtue may be taken more than once."
+        }
+
+        #t7aYZMF70dGlQ6gS8JZgEL4W ^"Reduced Power" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Subtract 5 intricacy points from any of the character's powers. Each lost intricacy point increases the number of Might Points needed to activate a power by 1, or subtracts 1 from the character's Initiative score for a power. This Flaw may be taken more than once, but the activation cost for a power may not exceed the character's Might Score, and you cannot reduce a power's Initiative below 0."
+        }
+
+        #toiwEhbleiqZsyNKvNqqCMuD ^"Slow Power" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "One of the character's powers is very slow, so that it requires an additional round of preparation to activate. This Flaw may be taken more than once, if the character has multiple powers, but all powers affected must be used in situations such that the Flaw seriously reduces their effectiveness."
+        }
+
+    #twrkqWCASLiHe9hHzanAnHH7 ^"Faerie Instructor" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Some faeries have the ability to take human Abilities when striking bargains. If the faerie has this Virtue, these Abilities can be stored, then given to favored humans. The faerie imparts the Ability by trading it for the Ability that the student currently has. It does this either by giving the human a prop and claiming it is a magic item, which allows the faerie to easily trade the Abilities back when the story is over, or by pretending to teach the human. Human teachers know that faeries are faking, because their training is too swift to be natural, and too similar to mystery initiation to be effective. It focuses on the trainee reaching an appropriate mental state, rather than the repetitive practice required for real learning."
+        }
+
+        #t77IJN6T3EpFTAWNNseVtDUL ^"Faerie Trainer" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character has one or more human Abilities, rather than Pretenses, and so it may train humans using conventional methods. The faerie can develop these abilities further using human methods, or can convert them to Pretenses and increase them as a faerie would. Once an Ability has been advanced as a Pretense, the maximum level at which the faerie can train humans has been reached."
+        }
+
+        #tUok9GhN9NoQhNRLPv6Z9RLH ^"Aloof" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "General" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Aloof fairies play roles in which they do not find humans particularly interesting, and so rarely increase their Pretenses. Over the course of a saga, these characters can be expected to gain Pretenses for around one season per year. During character creation, an Aloof faerie has a Pretense multiplier of 10."
+        }
+
+        #tLAIZYRo0aW9e5cIHg94HqMC ^"Freshly Sprung" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Subtract 50 experience points from the character’s pool for purchasing Pretences. This represents the character losing some of its glamour. This Flaw may be taken more than once, but players cannot select this Flaw unless the character has at least 50 pretense points to lose."
+        }
+
+        #tmX660ymCEmpic6ShkWpBkCU ^"Observant" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Free choice" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A typical faerie player character increases its Pretenses in two seasons per year. In the other season, it completes the tasks set by its role."
+        }
+
+        #toAIQRpCwjFFSBPZuUVXHMyo ^"Ostentatious" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "General" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A character with this quality is closely interested in the bubbling vat of emotion that is the life of a human community. It finds ways of involving itself in useful stories every single season, and gains Pretense appropriately. During character creation an ostentatious faerie has a Pretense multiplier of 25 instead of 15."
+        }
+
+        #tQe8LgQOBy8TzBvcqBlu0bRw ^"Pretentious" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "General" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A character with this quality is closely interested in a particular family or group of humans, and regularly finds ways to increase its pretense by aiding them through life’s challenges. It increases its Pretense, on average, for three seasons every year. During character creation a pretentious faerie has a Pretense multiplier of 20 instead of 15."
+        }
+
+    #tHcoZZ7cQgMH0qwg7jGFwnbo ^"Beguile" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Beguile with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        #tRTkmrgn7XmRYirg6QWqsHqP ^"Bonding" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description. Choosing this Virtue gives the character Bonding with an initial score of 0."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #tzD3h2OVzdwYEjJFrLOdRQHy ^"Captivating" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description. Choosing this Virtue gives the character Captivating with an initial score of 0."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #t2HkRXG8aUiJ3V2loTsvbbYN ^"Ceremony" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Faerie Abilities, later, for a full description of this Supernatural Ability. Choosing this Virtue gives the character Ceremony with an initial score of 1."
+        }
+
+        #tQNWye6dP8evnmB7OsWocCwn ^"Conjure" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Conjure with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        #tWoyjJdSAoBoGenT1CGLbKqv ^"Curse-Throwing" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Characters with this Virtue are able to cure diseases and remove curses by transferring them to another person. Choosing this Virtue confers the Supernatural Ability Curse-Throwing 1."
+        }
+
+        #tDHe1VDMBngiGtbMb3wqVwL9 ^"Dismissing" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description. Choosing this Virtue gives the character Dismissing with an initial score of 0."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #tQvk7VEtswPVF18BgdCDrxOK ^"Dream" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Dream with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        #tN8wGkz1lsIWrD49FxEiGJW1 ^"Empathy" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Method. Choosing this Virtue gives the character Empathy with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #tCPz9mPbMS1UIKl1su9obj4T ^"Enchantment" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Method. Choosing this Virtue gives the character Enchantment with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #tODbpaEKqD8eg81LsAFBD5jV ^"Evocation" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Method. Choosing this Virtue gives the character Evocation with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #t1fj89Obou0Tq11knN8QZX6L ^"Faerie Background" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Free" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Due to something unusual about the character's birth or childhood, the character has a strong resonance with one aspect of the faerie realm. It grants the character two Sympathy Traits, one positive and the other negative, with initial values equal to the character's Warping Score. These Traits should be appropriate to the character's faerie background; for example, a character raised by faerie wolves might have Fear (positive) and Courage (negative) Sympathy Traits, perhaps to represent wolves' love of causing fear and their tendency to back down when challenged. See the Faerie Sympathy Virtue and Faerie Antipathy Flaw, below, for information about how these Traits increase and decrease. Players with this Virtue may freely increase their character's Warping Score during character creation, though they should have some idea of what in the character's past caused this Warping to occur. This Virtue is especially appropriate for characters who have the Faerie Blood or Strong Faerie Blood Virtues, or the Faerie Upbringing Flaw; see the expanded descriptions of the different types of Faerie Blood, earlier, for suggested Sympathy Traits."
+            REFERENCES {
+                "Faerie Sympathy" -> #txEG4o1GMEym1Q8RrQkwzDaD ^"Faerie Sympathy"
+                "Faerie Antipathy" -> #t3opMUKlzhntjQqdq4qUWhX6 ^"Faerie Antipathy"
+                "Faerie Blood" -> ^"Faerie Blood"
+                "Strong Faerie Blood" -> #twxUa66F0S1XzKTFgXR0eF6H ^"Strong Faerie Blood"
+                "Faerie Upbringing" -> #tyUEE2h7T9lvIR8xlnWMyavZ ^"Faerie Upbringing"
+                "Faerie Blood" -> ^"Faerie Blood"
+            }
+        }
+
+        MODIFY ^"Faerie Blood" {
+            PROPERTIES {
+                ^"RoP Faerie Note" STRING "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+                ^"RoP Faerie Source" STRING "Realms of Power: Faerie"
+            }
+        }
+
+        #tIhebrw0rTRHZgVsAc5h2TC1 ^"Faerie Doctor" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Special" FIXED
+                ^"Category" STRING "Special" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Virtue makes the character into a Mythic Companion. It grants the Dowsing Virtue for free, and allows the character to take two Virtue points for every Flaw point. This Virtue is incompatible with The Gift."
+            REFERENCES {
+                "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+            }
+        }
+
+        #tlH8dsroAoHZozzOfd0YQ1xw ^"Faerie Legacy" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Virtue can only be taken by characters with Faerie Blood or Strong Faerie Blood. Your Faerie Blood is particularly potent, and the usual benefit deriving from it is replaced with a more powerful version. See Varieties of Faerie Blood (earlier) for details on how the benefit is affected. Note that the legacy benefit from this Virtue is instead of the normal benefit, not in addition to it."
+            REFERENCES {
+                "Faerie Blood" -> ^"Faerie Blood"
+                "Strong Faerie Blood" -> #twxUa66F0S1XzKTFgXR0eF6H ^"Strong Faerie Blood"
+                "Faerie Blood" -> ^"Faerie Blood"
+                "Faerie Blood" -> ^"Faerie Blood"
+            }
+        }
+
+        #txEG4o1GMEym1Q8RrQkwzDaD ^"Faerie Sympathy" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character receives a positive Sympathy Trait. As a Major Virtue, this has an initial score of +3; as a Minor Virtue it is +1. This Trait may be increased with experience points, up to a maximum score of (the initial value + the character's Warping Score). For example, a character with Warping Score 1 and the Major Virtue could begin with a +4 Trait. Players with this Virtue may freely increase their character's Warping Score during character creation, though they should have some idea of what in the character's past caused this Warping to occur. This Virtue may be taken more than once. See Sympathy, earlier, for more information about Sympathy Traits."
+        }
+
+        #tFnlWKD2rQtH3zvYkktL7UCV ^"Familiarity with the Fae" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "You have a natural understanding of faerie ways, perhaps due to spending time among them. You get a +2 to all rolls involving social interaction with faeries. You also gain the effects of the Common Sense Virtue, but only when the situation pertains to faeries. You may purchase Faerie Lore at character generation, even if normally unable to take Arcane Abilities."
+            REFERENCES {
+                "Common Sense" -> #tSmfpmVQdvf6p6lQevHDQz9B ^"Common Sense"
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+            }
+        }
+
+        #t26kIbH5bpyyWDArC87eBFiI ^"Frightful Presence" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            FORMULAS {
+                "Brave Personality roll Ease Factor" "3 + Presence (ignore negative sign)"
+                "Penetration Total" "0"
+            }
+            DESCRIPTION "You are capable of instilling great dread through your appearance. This can work in one of two ways: you are either able to contort your face into a vision of terror (common if Presence is less than zero); or else radiate an aura of awe and splendor that makes others weak at the knees (common if Presence is greater than zero). Everyone witnessing you displaying your Frightful Presence must make an immediate Brave Personality roll against an Ease Factor of 3. Add your Presence to the Ease Factor, ignoring any negative sign (for example, a Presence of +3 or –3 makes the Ease Factor 6). A failure means that they either attempt to flee your immediate vicinity, or else are cowed before your glory. If the targets remain within your presence (because they are awed or because they are trapped), they can reattempt the Brave roll every two minutes. Once a person has been affected by the Frightful Presence and recovered from its effects, he cannot be affected again; although you will acquire an appropriate Reputation (such as Fearsome or Awesome) at a score of 2 among those you have affected, which will color your dealings with them. This effect has a Penetration Total of 0."
+            REFERENCES {
+                "Penetration Total" -> #tTfWL26oYi5zr70uLeeLqvH2 ^"Penetration Total"
+            }
+        }
+
+        #txfWyiuLK3aJG8xkZ82ercbV ^"Grant" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Grant with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        #tRSCb5PEinLRCM0FfWoSQfAk ^"Greater Benediction" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "You've been blessed by some supernatural power. The effects of the benediction should be comparable to other Major Virtues. (See insert for examples.)"
+        }
+
+        #t0ZwN7IYNQZbLWYzNgXSKctl ^"Lesser Benediction" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "You've been blessed by some supernatural power. The effects of the benediction should be comparable to other Minor General Virtues. (See insert on next page for examples.)"
+        }
+
+        #tVKnFGziMc69zNgWaGpLyJps ^"Portage" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Portage with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        MODIFY ^"Strong Faerie Blood" {
+            PROPERTIES {
+                ^"RoP Faerie Note" STRING "In addition, this Virtue raises the maximum score to which the character may increase his Sympathy Traits by 3. A character with Strong Faerie Blood and a Warping Score of 2 could increase his Sympathy Traits to +5."
+                ^"RoP Faerie Source" STRING "Realms of Power: Faerie"
+            }
+        }
+
+        #tyXyFn2eCuQfhkycOf0c1kZF ^"Summoning" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description. Choosing this Virtue gives the character Summoning with an initial score of 0."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            }
+        }
+
+        #tBf4zjd94ssGRS5T6W0WFAPw ^"Ware" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Ware with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+    #t3opMUKlzhntjQqdq4qUWhX6 ^"Faerie Antipathy" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major or Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character has a negative relationship with the Faerie realm, and receives a negative Sympathy Trait, with an initial value of –1 for a Minor Flaw and –3 for a Major Flaw. Subtract the character's Warping Score from this value at the end of character creation, so that a character with the Minor version of the Flaw and a Warping Score of 3 would begin with a –4 Trait.\n\nThis Flaw may be taken more than once. See Sympathy, above, for more information about Sympathy Traits."
+        }
+
+        #tZ3aNFs0GbSzX5AXMtUDQkiS ^"Weal" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Weal with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        #tmToTI3ixGgMLeKuvkK9BK4e ^"Woe" DEF {
+            EXTENDS ^"Virtue"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "See Chapter 6: Faerie Wizardry for a full description of this Faerie Power. Choosing this Virtue gives the character Woe with an initial score of 1."
+            REFERENCES {
+                "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+                "Faerie Power" -> #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power"
+            }
+        }
+
+        #tPShaqfkH1Ix0PfGIHHSzibN ^"Faerie Heritage" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Story" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Flaw can only be taken by characters with Faerie Blood or Strong Faerie Blood. Your birth was intentionally engineered by a highly cognizant faerie to fulfill some aspect of his or her glamour. You have a role to play in the story of your faerie stepfather or stepmother, although you may be initially unaware of the interest in your life. Before she involves you in her schemes, your \"patron\" is likely to test your suitability as her champion with a series of trials. You can expect to receive no assistance from your \"patron.\""
+            REFERENCES {
+                "Faerie Blood" -> ^"Faerie Blood"
+                "Strong Faerie Blood" -> #twxUa66F0S1XzKTFgXR0eF6H ^"Strong Faerie Blood"
+            }
+        }
+
+        #tgQImzsHkMl5FRav87fNu36R ^"Faerie Metamorphosis" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural, Hermetic" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This Flaw can only be taken by characters with The Gift (as a Hermetic Flaw) or the faerie equivalent (as a Supernatural Flaw), such as a Mythic Companion Virtue. When the character's Warping score reaches 1, he develops a glamour as described under Faerie Warping. The Reputation granted by this glamour progresses just like a character suffering Faerie Warping, although he does not develop further Flaws or Virtues as a result of Warping. The character continues to experience Twilight (if a Hermetic magus) or Faerie Calling (if a faerie magician)."
+            REFERENCES {
+                "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+            }
+        }
+
+        MODIFY ^"Faerie Upbringing" {
+            PROPERTIES {
+                ^"RoP Faerie Note" STRING "In addition, this Flaw raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Upbringing and a Warping Score of 2 could increase a Sympathy Trait to +3."
+                ^"RoP Faerie Source" STRING "Realms of Power: Faerie"
+            }
+        }
+
+        #tgvRjWzF1keAr2bDEQfuoyiJ ^"Greater Charm" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Story" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "One of the character's Virtues (usually a Supernatural Virtue) is ruled by a charm, which is required to activate it. This Flaw has all the effects of the Lesser Charm Flaw (see below) with one important difference — only one copy of the charm can exist, and the charmed Virtue is transferable to anyone who steals it (either the physical object or else by someone overhears a charm-poem or a ritual). To regain his Virtue, the character must either retrieve or destroy the original charm. In the case of a verbal charm such as a song or poem, or a performance charm such as a dance or a tune, the character forgets how to perform the charm when it is stolen, and therefore must witness the thief using the charm before he can steal it back by performing it himself. The charm may be transferred over and over again to many different people before the character manages to regain it. See Charms, earlier, for more details about using the Greater Charm Flaw."
+            REFERENCES {
+                "Lesser Charm" -> #tluAD8bWa8P37ugiICdqFS5b ^"Lesser Charm"
+            }
+        }
+
+        #tXvzLVtesAeqAd9Cw3VYzWbA ^"Homunculus Wizard" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Major" FIXED
+                ^"Category" STRING "Story, Hermetic" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character must have The Gift to take this Flaw. The character has a special Faerie version of The Gift, by virtue of its bond with a faerie homunculus. See later for more information. This is a Story Flaw, but may also count as a Hermetic Flaw if the character is a magus."
+            REFERENCES {
+                "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+                "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+            }
+        }
+
+        #tluAD8bWa8P37ugiICdqFS5b ^"Lesser Charm" DEF {
+            EXTENDS ^"Flaw"
+            PROPERTIES {
+                ^"Size" STRING "Minor" FIXED
+                ^"Category" STRING "Supernatural" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "One of the character's Virtues (usually a Supernatural Virtue) is ruled by a charm, which is required to activate it. There is always some minor ritual involved to use the affected Virtue; this ritual need not be complex or obvious (taking less than a round), but is a necessary condition of the Virtue. Typical activation charms involve reciting a poem, applying a lotion, rubbing the head of a carved image, or kissing the pommel of a sword. The charm only works for the owner of the virtue; if it is stolen or its secrecy compromised, the charm stops working and must be made anew by the character before the Virtue may be used again. Remaking the charm takes the same time that it would to make a mundane object of the same type, typically less than a day. See Charms, earlier, for more details about using the Lesser Charm Flaw."
+        }}

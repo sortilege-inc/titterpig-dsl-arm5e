@@ -1,0 +1,125 @@
+EXTENSION "ARMDef_Covenants_Tables" {
+    NAME "Ars Magica Definitive Edition, Covenants - Tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ARMDef_Covenants_Core_Ext"
+
+    #tqVmgrWY2J4ARDOI7GyJcWvs ^"Gift Modifiers to Base Loyalty" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Gift", "Modifier to Base Loyalty"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "No Gift" "0"
+            "The Gentle Gift" "0"
+            "The Gift" "–30"
+            "The Blatant Gift" "–105"
+        }
+        DESCRIPTION "The Gift a member possesses modifies the covenant’s Base Loyalty score, as shown in this table."
+        REFERENCES {
+            "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+        }
+    }
+
+    #ts5nGlhn0emub4VdI5DnROaG ^"Situational Modifiers to Loyalty" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Category", "Situation", "Modifier to Prevailing Loyalty"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "Living Conditions" "Covenfolk have a –2 Aging modifier for living conditions" "–20"
+            "Living Conditions" "Covenfolk have a –1 Aging modifier for living conditions" "–10"
+            "Living Conditions" "Covenfolk have no Aging modifier for living conditions" "0"
+            "Living Conditions" "Covenfolk have a +1 Aging modifier for living conditions" "+10"
+            "Living Conditions" "Covenfolk have a +2 Aging modifier for living conditions" "+20"
+            "Equipment" "Covenfolk have only Inexpensive equipment" "–10"
+            "Equipment" "Covenfolk have Standard equipment" "0"
+            "Equipment" "Covenfolk have Standard equipment and one piece each of Expensive equipment" "+10"
+            "Equipment" "Covenfolk have access to any equipment (within reason) that they need" "+20"
+            "Money" "Covenant grants no salary" "–20"
+            "Money" "Covenant grants a miserly salary (half standard Wages)" "–10"
+            "Money" "Covenant grants a standard salary (standard Wages)" "0"
+            "Money" "Covenant grants a generous salary (half again standard Wages)" "+10"
+            "Money" "Covenant grants a lavish salary (twice standard Wages)" "+20"
+            "Money" "Covenant provides a pension upon retirement (half Wages until death) (cumulative with bonuses from high wages)" "+10"
+            "Specialists" "Turb Captain" "+ (Prs + Leadership)"
+            "Specialists" "Steward" "+ (Prs + Profession: Steward)"
+            "Specialists" "Chamberlain" "+ (Prs + Profession: Chamberlain)"
+        }
+        DESCRIPTION "Modifiers to a covenant’s Prevailing Loyalty arising from the covenfolk’s living conditions, equipment, pay, and the presence of certain specialists."
+    }
+
+    #tfwD5oV9w6uMmTHZ5o7axyap ^"Example Loyalty Point Penalties" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Penalty", "Attitude", "Punishment", "Wound", "Local Event"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "–1" "Rudeness" "Minor Humiliation" "Superficial" "Minor Hardship"
+            "–3" "Obliviousness" "Public Humiliation" "Light" "Severe Hardship"
+            "–6" "Maliciousness" "Restraint" "Medium" "Tragic Event"
+            "–9" "Callous Disregard" "Infliction of Pain" "Heavy" "Prolonged Hardship"
+            "–12" "Deliberate Cruelty" "Brutal Punishment" "Incapacitating" "Widespread Hardship"
+            "–15" "Heinous Malfeasance" "Brutal Punishment Clearly Enjoyed by Magus" "Death" "Devastating Event"
+        }
+        DESCRIPTION "Example loyalty point penalties applied for each magus who treats the covenfolk in the described fashion, cross-indexed against Attitude, Punishment, Wound, and Local Event."
+    }
+
+    #th0Ws16MrE0xSTYLN9tQypyh ^"Source of Income Categories" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Source of Income", "Relevant Hook or Boon", "Typical Annual Income (pounds)"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "(None)" "Poverty Hook (Major)" "0"
+            "Lesser" "Poverty Hook (Minor)" "40"
+            "Typical" "n/a" "100"
+            "Greater" "Wealth Boon (Minor)" "250"
+            "Legendary" "Wealth Boon (Major)" "1000"
+        }
+        DESCRIPTION "The categories of a covenant’s source of income, the Hook or Boon that corresponds to each, and its typical annual income in pounds."
+    }
+
+    #tnAhHEQn8ws7Pz1CwKL9uH3d ^"Income Modification" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Effect", "Income Multiplier", "Stress Die Result"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "Slump" "x 0.5" "botch"
+            "Contraction" "x 0.8" "0"
+            "Stagnation" "x 0.95" "2"
+            "Status Quo" "x 1" "3–8"
+            "Growth" "x 1.05" "9"
+            "Expansion" "x 1.2" "10–19"
+            "Boom" "x 1.5" "20+"
+        }
+        DESCRIPTION "A stress die roll each year modifies a covenant’s income by the given multiplier, from a Slump on a botch to a Boom on a 20 or more."
+    }
+
+    #ttbh8hs4rQmE1rQ6CiHWYiQb ^"Laboratory Size" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Size", "Square feet"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "–3" "100"
+            "–2" "200"
+            "–1" "350"
+            "0" "500"
+            "+1" "650"
+            "+2" "800"
+            "+3" "1000"
+            "+4" "1250"
+            "+5" "1500"
+        }
+        DESCRIPTION "The floor area, in square feet, corresponding to each laboratory Size."
+    }
+}

@@ -1,0 +1,169 @@
+EXTENSION "ARMDef_HoH_Societates_ExMisc_Tables" {
+    NAME "Ars Magica Definitive Edition, Houses of Hermes: Societates - House Ex Miscellanea tables"
+    VERSION "0.5.1"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_Houses_Societates_Core_Ext"
+
+    # Tables whose column header the source sets as a heading, so the extractor
+    # tiers it as a section. Column sets and row pairings were read off the printed
+    # page; the raw grids interleave the label and value columns.
+
+    #t094dd9e681504d0e0f892a ^"Ability Score" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ability Score", "Number of Animals Arriving"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "1" "1 animal of Size –2, or equivalent mass (3 of Size –3, 5 of Size –4, 10 of Size –5, 30 of Size –6, etc.)"
+            "2" "3 animals of Size –2, or equivalent mass (1 of Size –1, 5 of Size –3, 10 of Size –4, 30 of Size –5, etc.)"
+            "3" "5 animals of Size –2, or equivalent mass (1 of Size 0, 3 of Size –1, 10 of Size –3, 30 of Size –4, etc.)"
+            "4" "10 animals of Size –2, or equivalent mass (1 of Size +1, 3 of Size 0, 5 of Size –1, 30 of Size –3, etc.)"
+            "5" "30 animals of Size –2, or equivalent mass (1 of Size +2, 3 of Size +1, 5 of Size 0, 10 of Size –1, etc.)"
+        }
+        DESCRIPTION "**Specialties**: a particular type of animal (Supernatural)"
+    }
+
+    #t06aa6e68b7a9b3a0e481e0 ^"Ease Factor Strength of Wind" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Strength of Wind"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "6" "Light breeze, strong enough to clear a stench from a room"
+            "9" "Moderate wind, strong enough to affect the accuracy of arrows"
+            "12" "Strong wind, powerful enough to propel a sailing ship"
+            "15" "Gale force wind, strong enough to knock someone over"
+            "18" "Hurricane force wind, strong enough to uproot trees"
+        }
+        DESCRIPTION "**Specialties**: at sea, in mountains, during the winter (Supernatural)"
+    }
+
+    #td3b08d2c382713abcb234f ^"Possible Effects" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ability Score", "Possible Effects"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "1" "Keep minor diseases away from plants"
+            "2" "Double the daily production of an animal (eggs, milk, weight gain), or prevent daily production"
+            "3" "Grant a +3 or –3 modifier to Stamina rolls to avoid contracting a disease, increase or decrease crop yield by one-half"
+            "4" "Ensure the conception of a baby, strike a creature barren, ensure an easy childbirth, grant a +1 or –1 Living Condition Modifier to Aging (must last a year)"
+            "5" "Grant a +6 or –6 modifier to Stamina rolls to avoid contracting a disease"
+        }
+        DESCRIPTION "**Specialties**: vegetables, cows, women (Supernatural)"
+    }
+
+    #t6ed7c20aee0efac0760113 ^"Ease Factor Area" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Area"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "3" "Near"
+            "6" "Structure"
+            "9" "Boundary"
+        }
+        DESCRIPTION "A successful Banishing attempt expels all creatures of the appropriate realm from the designated area, whether the character is aware of them or not. The only way\n\nto avoid Banishing friendly creatures of the same realm as the one targeted is to include the True Name of the target of the banishment. (See *Realms of Power: The Infernal*, page 34.)\n\nA banished creature must depart the designated location by the quickest means available to it. The creature may attempt to return to the designated location by succeeding in a Stamina + (Realm) Lore roll against an Ease Factor of 12, where the applicable (Realm) Lore is the origin of the character’s Banishing Ability. If the designated location is within an aura that is aligned with the character’s Banishing Ability, the creature’s roll is modified by the Realm Interaction Table on ArM5,\n\npage 183. If the creature succeeds, it may enter the designated location, but its Might score is reduced by one-half the character’s Banishing score. If the creature’s Might score would be reduced to zero or lower, the creature may not enter. If the creature leaves the designated location, its Might score returns to normal.\n\nWhile an affected creature is in the designated location, its Might score is reduced and it suffers overwhelming pain and discomfort (and negative modifiers) as described in *Weight of a Thousand Hells* (ArM5, page 148). This extreme discomfort causes most creatures to develop deep enmity for the character who banished them. Infernal and other creatures of\n\nappropriate temperament may develop an obsession with exacting revenge on the character. If a creature is unable to avenge a banishment, it often seeks allies or assistance in punishing the character. Friendly creatures may not go to these lengths for revenge, but few are pleased to suffer the torment of banishment.\n\nAlthough all of the Donatores’s Banishing capabilities are aligned with the Divine, Banishing may be aligned with any realm. A character may use Banishing against creatures aligned with the same realm as the character’s Banishing Ability, but it is difficult to keep an aligned creature out of the designated area. Of course, Divine creatures are immune to the effects of Banishing if they are fulfilling God’s Divine plans.\n\n*Example: Allessandro has a score of 18 in Banishing and Presence of 2. He is surprised by the ghost of his former master and wants to banish it from the covenant. Allessandro loudly calls upon the powers of nature and all that is magical (his Banishing Ability is aligned with the Magic realm) to expel this Infernal creature from the covenant, which falls under the Structure category and gives him an Ease Factor of 6. The Infernal ghost has a Might of 25. Allessandro rolls a 6, for a total of 26. The covenant is in a Magic aura of 6, which improves his total to 32. Because Allessandro has no suitable Arcane Connection to his master with him, his Penetration is 26 (32 – 6), which forces the creature to leave the covenant immediately. The ghost may attempt to re-enter the covenant by succeeding in a Stamina + Magic Lore roll against an Ease Factor of 12, but because Allessandro’s Ability is aligned with Magic and he is in a Magic aura, the Infernal ghost must add 6 to the Ease Factor because of the realm interaction modifier. Had the ghost been of the Magic or Faerie realms, the Ease Factor would have been lowered appropriately. If the ghost succeeds, its Might is reduced by 9 (onehalf Allessandro’s score in Banishing) until the next sunrise or sunset. The ghost flees, giving Allessandro time to find an Arcane Connection to his master and prepare for the final battle.*\n\n**Specialties**: Any Realm (Supernatural)"
+    }
+
+    #t0db20e5f5c2635ed0a56a2 ^"Flaw Bonus" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Flaw", "Bonus"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Dependent" "Rolls to support or protect"
+            "Enemies" "Rolls to attack or defend"
+            "True Love (NPC)" "Rolls to impress or persuade"
+            "Animal/Magical Animal Companion" "Rolls involving the natural world"
+            "Close Family Ties" "Rolls to empathize with or understand another person"
+            "Mentor" "Rolls to recall or comprehend information"
+        }
+        DESCRIPTION "For example, a character with the Story Flaw Enemies receives a +3 bonus to any mundane roll that involves attack or defense, or a +5 bonus to such Hermetic\n\nspells, regardless of whether the target of the roll is an Enemy as defined by the Flaw. A character with Close Family Ties receives a bonus to rolls to comprehend other people, regardless of whether they are family."
+    }
+
+    #tf255e61d81fa69a561eb7f ^"Source of Magic Ease Factor" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Source of Magic", "Ease Factor"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Magus" "12 – magnitude of highest Art"
+            "Character with Supernatural Virtue" "15 – Ability score, –3 if he also has The Gift"
+            "Creature with Might" "15 – magnitude of Might score"
+            "Spell or Spell-like Power" "18 – magnitude of level"
+            "Supernatural Power" "18 – number of Might Points spent"
+            "Enchanted Item" "18 – magnitude of strongest power"
+            "Magic Aura" "12 – aura level"
+            "Vis" "9 – number of pawns"
+        }
+        DESCRIPTION "Supernatural Virtues that do not grant a corresponding Ability are assumed to have an Ability score of 3 if a Minor Virtue, or 5 if a Major Virtue. A successful roll identifies the presence or absence of magic. If the character continues to concentrate for a round, he may also determine the type of magic that is being scrutinized: Hermetic magic, curse magic, and so forth. A second round of\n\nstudy reveals the approximate function of an ongoing spell, power, or enchanted item (in terms of its corresponding Hermetic Arts), or for a being, the Hermetic Form that corresponds most strongly with its magical ability. If the character is familiar with types of magic other than Hermetic magic, then he can determine the type of magic under that frame of reference instead. A third round of study reveals the approximate magnitude of the magic being observed.\n\nAlthough determining the presence of magic requires but a moment of observation, the character must maintain concentration (ArM5, page 82) to acquire any of the subsequent information. If observing a being with Magic Resistance, this power must penetrate, as usual; but even if the Penetration Total proves to be insufficient, the character is aware of the presence of magic if the Ease Factor was met.\n\nAfter three round of observation, the character has sufficient information to use the insight he has gained to make his magic more effective. Any insight bonus applies only to the specific creature or magic studied; even if an identical creature is encountered later, it must be studied again to get this bonus. The observer may add twice his Comprehend Magic score to the Casting Total of any spontaneous Muto, Perdo, or Rego Vim spell used against the object or creature studied.\n\nAdditionally, when investigating enchantments (ArM5, page 100) in the\n\nlaboratory, an observer with Comprehend Magic can multiply his Magic Theory by his score in Comprehend Magic before applying it to the Lab Total. At the option of the storyguide, this Ability might also give an insight into adapting non-Hermetic magic into Magic Theory.\n\n**Specialities**: magical beings, specific type of magic (Supernatural)"
+    }
+
+    #t6eaf7a2535e215533ff248 ^"Bonus" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Command", "Example", "Target’s Bonus"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Innocuous" "Listen to my song" "+0"
+            "Questionable" "Come to me" "+3"
+            "Dangerous" "Follow me out of town" "+6"
+            "Heinous" "Kill your fellows" "+9"
+            "Suicidal" "Crash your ship upon the rocks" "+12"
+        }
+        DESCRIPTION "**Specialties**: Men, children, rats. (Supernatural)\n\nAlthough Siren Song is a more powerful Virtue than Enchanting Music, the two Virtues may be used in combination. Unlike the Enchanting Music Ability, which creates an emotion in a person and can influence individuals on a long-term basis, Siren Song actually controls the mind of the person while he listens to the music. When a character uses both Virtues, her initial command made with Siren Song can be reinforced by an appropriate emotion provided by the Enchanting Music Virtue. The combination can continue to influence the victim after the music has ceased. For the Abilities to be combined, the character must successfully overcome the victim’s Stamina on both rolls. If other Seirenes accompany the character in performing, their Enchanting Music scores may be added to the leader’s roll. The same restrictions and benefits from the Siren Song Virtue apply to a group performing with the Enchanting Music Ability."
+    }
+
+    #t823f1037cd13753c079a05 ^"Bargain Modifiers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Provision", "Modifier"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Terms are general in scope (“Follow me around and do as I say”)" "+3"
+            "Terms are specific in scope (“Help me find the Emerald of Al-Andalus”)" "+0"
+            "Terms constitute a single task (“Get me safely across the Straits of Gibraltar”)" "–3"
+            "Service to last 1 day" "–3"
+            "Service to last 1 week" "0"
+            "Service to last 1 month" "+3"
+            "Service to last 1 season" "+6"
+            "Service to last 1 year" "+9"
+            "Sahir accepts a simple duty" "–3"
+            "Sahir accepts an onerous duty" "–6"
+            "Sahir spent less vis than the standard cost" "+2*"
+            "Sahir spent more vis than the standard cost" "–2*"
+        }
+    }
+
+    #tbc9a45a1d2f71b3a1ee455 ^"Mythic Herbalism Ease Factor Table (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Healing Effects", "Poisons", "Physical Bonuses"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "3" "Add Mythic Herbalism score to patient’s Stamina roll to resist any disease" "Ease Factor 6, Sleep" "Add +2 to all Fatigue rolls"
+            "6" "Prevent all of a patient’s wounds from getting worse for one day" "Ease Factor 6, Light Wound" "Ignore Wound Penalties up to Medium Wounds"
+            "9" "Add Mythic Herbalism Score x 2 to Recovery roll" "Ease Factor 9, Medium Wound" "Add +3 to Soak"
+            "12" "Add Mythic Herbalism Score x 3 to Recovery roll" "Ease Factor 9, Heavy Wound" "Ignore one level of Fatigue"
+            "15" "Add Mythic Herbalism Score x 4 to Recovery roll" "Ease Factor 9, Incapacitating Wound" "Add +5 to Soak"
+            "18" "Heal the debilitating after-effects of a disease, poison, or injury" "Ease Factor 9, Death" "Increase one negative physical characteristic to 0"
+            "21" "Resolve a major aging crisis" "Heal a Medium Wound caused by poison" "Increase one physical characteristic to +1"
+            "24" "Resolve a terminal aging crisis" "Heal an Incapacitating Wound caused by poison" "Increase one physical characteristic to +2"
+        }
+    }
+
+    #t194c4fcae9d5ea7e627995 ^"Opening the Arts of a Hedge Wizard (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Intellego Vim Lab Total", "Effect of Season"]
+            ^"Source" STRING "Houses of Hermes: Societates"
+        }
+        TABLE {
+            "Less than level" "Unable to open the Arts"
+            "Greater than or equal to level" "Arts opened, all Supernatural Abilities lost"
+            "Greater than or equal to twice level" "Arts opened, some or all Supernatural Abilities converted into Hermetic Virtues"
+        }
+    }
+
+}

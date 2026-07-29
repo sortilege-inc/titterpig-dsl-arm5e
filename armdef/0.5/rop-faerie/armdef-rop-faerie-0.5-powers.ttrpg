@@ -1,0 +1,763 @@
+EXTENSION "ARMDef_RoP_Faerie_Powers" {
+    NAME "Ars Magica Definitive Edition, Realms of Power: Faerie - Faerie Powers"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-26"
+    DEPENDS_ON "ARMDef_RoP_Faerie_Core_Ext"
+
+    #twfKfMXXYaYNzdb9BmhFQ3JC ^"Binding Oath" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Ritual" FIXED
+                ^"Might Cost" STRING "10 points, Init (Qik – 20), Vim"
+                ^"Might Cost Value" INTEGER 10
+                ^"Initiative" STRING "Init (Qik – 20)"
+                ^"Form" STRING "Vim"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Enforces the power of a solemnly sworn oath or contract between two or more parties. All parties must agree to the oath of their own free will, and the power must penetrate the Magic Resistance of all parties to take effect.\n\nIf one participant attempts to act in direct contravention to the oath, the other participants are immediately aware of this. Humans who attempt to break their oaths are given a warning. This warning often takes the form of a memory or sensation this is reminiscent of the faerie’s motif. If the human fails to understand, or disregards, this warning he suffers a Major or Minor Flaw at the discretion of the Troupe.\n\nThe Troupe should assign the Flaw based on the powers of the faerie, the nature of the oath, and the seriousness of the transgression within the framework of the story. This Flaw can be removed by powers that destroy mystical effects. The character may also end the Flaw by fulfilling the conditions of the oath, swearing a new oath with the wronged faerie, or destroying all of the oath’s other participants.\n\nFaeries cannot break their oaths, although some roles allow them to seek loopholes and alternative interpretations.\n\nCosts 50 levels. Special, No Hermetic equivalent (R: Touch, D: Mom, T: Group, Ritual)"
+            REFERENCES {
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+        #tFZRK5DJxXpNvWjGHuggvhrx ^"Grant (Major Virtue)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Ritual" FIXED
+                ^"Might Cost" STRING "10 points, Init (Qik – 20), Vim"
+                ^"Might Cost Value" INTEGER 10
+                ^"Initiative" STRING "Init (Qik – 20)"
+                ^"Form" STRING "Vim"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Imposes the named Major Virtue upon a target. Each creature may have more than one power of this type, each bestowing a different Virtue. The creature can decide to bestow the Virtue permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might Score as well as Might pool (see Ritual Power, above). If temporary, the Might Points spent on this power are only recovered when its effects are withdrawn. The faerie may do this at any time simply by choosing to, but it also often occurs when a prohibition placed at the time the blessing was made is broken. The prohibition is often just a time limit, like a year and a day.\n\nIf the Virtue requires Might to use, a human may instead spend a Fatigue level for every five Might required. Many enchanted objects given by faeries are actually uses of this power with a suitable prop generated from glamour. The material effects of the blessing do not disappear when the effect is over: fertile crops do not wither, and money earned from faerie gold does not vanish.\n\nCosts 50 levels. Special, No Hermetic equivalent. (R: Touch, D: Mom, T: Ind, Ritual)"
+            REFERENCES {
+                "Ritual Power" -> #tGhEx5niu51Fsp9n0z9acWgM ^"Ritual Power"
+            }
+        }
+
+        #t08DYiBIoMgk7qFTX4rmvBvJ ^"Grant (Minor Virtue)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Ritual" FIXED
+                ^"Might Cost" STRING "5 points, Init (Qik –10), Vim"
+                ^"Might Cost Value" INTEGER 5
+                ^"Initiative" STRING "Init (Qik –10)"
+                ^"Form" STRING "Vim"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Imposes the named Minor Virtue upon a target. Each creature may have more than one power of this type, each bestowing a different Virtue. The creature can decide to bestow the Virtue permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might Score as well as Might pool (see Ritual Power, earlier). If temporary, the power only costs points from the Might pool.\n\nMight Points spent on this power in its temporary form are only recovered when its effects are withdrawn. The faerie may do this at any time simply by choosing to, but it also often occurs when a prohibition placed at the time the blessing was made is broken. The material effects of the blessing do not disappear when the effect is over.\n\nThis Virtue can allow humans to use faerie powers. If the power requires Might to use, the human may instead spend a Fatigue level for every five Might required. Many enchanted objects given by faeries are actually uses of this power with a suitable prop generated from glamour. Popular granted powers include regeneration, water breathing, flight, and the Virtue Puissant (Single Weapon).\n\nCosts 50 levels. Special, No Hermetic equivalent (R: Touch, D: Mom, T: Ind, Ritual)"
+            REFERENCES {
+                "Ritual Power" -> #tGhEx5niu51Fsp9n0z9acWgM ^"Ritual Power"
+                "Single Weapon" -> #teT2LcXE2F4TDMJ6PBCx2GZI ^"Single Weapon"
+            }
+        }
+
+        #tr52VUZ0hG8Yo3kib4hkXCKz ^"Grant (Major Flaw)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Ritual" FIXED
+                ^"Might Cost" STRING "10 points, Init (Qik – 20), Vim"
+                ^"Might Cost Value" INTEGER 10
+                ^"Initiative" STRING "Init (Qik – 20)"
+                ^"Form" STRING "Vim"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Imposes the named Major Flaw upon a victim. Each creature may have more than one power of this type, each bestowing a different Flaw. The creature can decide to bestow the Flaw permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might score as well as Might pool (see Ritual Power, earlier). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn. If this power can affect families, bloodlines, households, or villages add 5 levels to its price at character creation, and add 1 to the Might cost for each use.\n\nCurses can have immediate effect, or be triggered by an action like breaking an oath or stealing an object. The material effects of the curse do not disappear when the effect is over: burned crops do not magically regenerate, and lost stock is not found. Traditional curses cause pain, visions, paralysis, madness, nightmares, petty annoyances, and poverty. It is not possible to use this virtue to kill a victim directly. Players should recall that the props traditional to a faerie’s role, made of glamour, extend the Touch range of the faerie.\n\nCosts 50 levels. Special, No Hermetic equivalent (R: Touch, D: Mom, T: Ind, Ritual)"
+            REFERENCES {
+                "Ritual Power" -> #tGhEx5niu51Fsp9n0z9acWgM ^"Ritual Power"
+            }
+        }
+
+        #tGeFgX5WRXRTNmZyy7UMB2wv ^"Grant (Minor Flaw)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Ritual" FIXED
+                ^"Might Cost" STRING "5 points, Init – 10, Vim"
+                ^"Might Cost Value" INTEGER 5
+                ^"Initiative" STRING "Init – 10"
+                ^"Form" STRING "Vim"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Imposes the named Flaw upon a victim. Each creature may have more than one power of this type, each bestowing a different Flaw. The creature can decide to bestow the Flaw permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might score as well as Might pool (see Ritual Power, earlier). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn.\n\nAdd 5 levels and 1 Might to the cost if the curse can affect families, bloodlines, households, or villages.\n\nThe material effects of the curse do not disappear when the effect is over.\n\nCosts 50 levels. Special, No Hermetic equivalent (R: Touch, D: Mom, T: Ind, Ritual)"
+            REFERENCES {
+                "Ritual Power" -> #tGhEx5niu51Fsp9n0z9acWgM ^"Ritual Power"
+            }
+        }
+
+        #tSfpzXq6CuvYABRlzxoX1wbR ^"Adhere" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "1 point, Init –1, Corpus"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "Init –1"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Takes control of the muscles of the lower body of the target. He cannot dismount the faerie animal unless it wishes, which is of aid when riding friendly flying animals, but is dangerous with animal-like kelpies.\n\nCosts 5 spell levels (ReCo Base 3 +1 Touch +1 Conc.)"
+        }
+
+        #tN1GaLuGLRLzye1jdo3aoQuK ^"Allure" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "1 point, Init –1, Mentem"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "Init –1"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This power causes the faerie to seem more attractive and pleasant than it really is, granting a +3 bonus on all rolls that involve impressing or convincing others.\n\nCosts 10 spell levels (Base 3 +1 Touch +2 Sun)"
+        }
+
+        #tQbWFzbIpiN5KdjhTLWrtJCK ^"Cause Fatigue" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, usually Corpus but varies"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "usually Corpus but varies"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This faerie can cause a human to lose a fatigue level. The mechanism that harms the human varies by faerie. Some harvest faeries cause heatstroke, for example.\n\nCosts 20 spell levels (Base 10 +2 Voice)"
+        }
+
+        #tWGTBB3wBCGUvErgEwWRaOuF ^"Cause Drowsiness" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "1 point, Init –1, Corpus or Animal"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "Init –1"
+                ^"Form" STRING "Corpus or Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the faerie to cause a human it touches to fall asleep. Versions that are slightly more powerful allow the faerie to affect people at Voice range, or keep them asleep until a certain time.\n\nCosts 5 spell levels for Touch range (Base 4 +1 Touch), Costs 10 spell levels for Voice range (Base 4 +2 Voice). Costs 1 Might, Init –1.\n\nAdd 20 spell levels for Until duration. Cost rises by 2 Might points and Initiative has further –2 penalty."
+        }
+
+        #tgHUz7QlzQQPIlWkIoLHGWMq ^"Cause Sickness" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Corpus"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The faerie can cause a specific, serious illness with its touch, or poison objects it touches so that they harm humans who consume them. See ArM5 page 133 for guidelines.\n\nCosts 25 spell levels (Base 20 +1 Touch)"
+        }
+
+        #tVQKv25L4mpoCxahb6JtWNwz ^"Craft Magical Trinket" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "10/15 points, Init 0, as per target"
+                ^"Initiative" STRING "Init 0"
+                ^"Form" STRING "as per target"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The faerie may create an object, from glamour, that allows the character with the trinket to use a particular Virtue once. The Virtue that the faerie’s trinkets permit is selected at character creation. The faerie does not automatically regain the Might spent to produce a trinket, but may refresh itself if it has Virtues that allow it to regain Might by consuming sacrifices or humans.\n\nThe trinket ceases to function when a condition placed at the time of creation is met, or when it spends an entire day when no human with a passionate intention to use it for a specific purpose beholds it. This makes stockpiling trinkets impossible except in dire situations. In exceptional circumstances, large numbers of trinkets are possible: for example, in a covenant that knows it will soon have to withstand a Mongol siege, it might be possible for the faerie to give a trinket to each of the covenfolk.\n\nA trinket costs 10 Might points if it invokes a Minor Virtue, and 15 points if it invokes a Major Virtue.\n\nCosts 50 spell levels (Special)"
+        }
+
+        #t885Vlj2jC9rqq8xEP0AI5tP ^"Damaging Effect" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, By weapon"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "By weapon"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Causes all of the faerie’s weapons, which are part of its glamour, to take on a more deadly aspect for two minutes. The danger of the aspect varies according to the motif usual for the faerie, but always increases the weapon’s Damage by +5. Faeries that produce mounts from their glamour can improve the Damage of those mounts with this power, since they are effectively weapons of the faerie.\n\nCosts 15 spell levels (Base 5 +1 Part +1 Diameter. This Base is lower than might appear usual in Hermetic magic, because faeries are creatures of stories, and conflict is such a useful tool in roleplaying games.)"
+            REFERENCES {
+                "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
+            }
+        }
+
+        #tAKo7IIqWowcmjb7nd6p3v6O ^"Eidolon" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Imaginem"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Imaginem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Creates an illusionary form that is visible and audible. The creature can create a single form for each version of this power they possess. The image can move and speak as directed by the faerie, and lasts until the faerie has no further use for it. This power is particularly favored by tiny faeries who wish to interact with humans.\n\nCosts 20 spell levels (Base 2: +2 move at direction, +1 Touch, +2 Sun, +1 intricacy)"
+        }
+
+        #tEaK0HfH5TSsTAdkNyxgWo9j ^"Enthralling Sound" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Mentem"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows a faerie to create a particular emotion in any group of people that can hear it. Fear, loyalty, and infatuation are popular choices. This power also increases the intensity of an emotion that already exists. A stress roll with an appropriate Personality trait against an Ease Factor of 9 allows a victim to overcome this power’s effect.\n\nCosts 30 spell levels (CrMe Base 4 +2 Voice +2 Sun +2 Group)"
+        }
+
+        #tZR5do9Ta6zkNdxr30DOaATK ^"Enthrallment" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "4 points, Init –4, Mentem"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows a faerie to take complete control of a single human’s mind for a day, by making eye contact.\n\nCosts 40 spell levels (ReMe as Enslave the Mortal Mind, ArM5 page 152)"
+        }
+
+        #tKoD0MQmyfe9BBfHSM8yd7fx ^"Fearful Flaming Eyes" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Corpus"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Completely paralyzes a human who makes eye contact with the faerie.\n\nCosts 15 spell levels (Base 5, +1 Eye, +1 Conc)"
+        }
+
+        #tcq0Dz5hDyppj7vPcB04gG5Q ^"Grant Puissance in (Ability)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init–2, Corpus"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init–2"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Bestows the faerie ability to feign prowess in an activity. For every Might point invested, ten men can be given a +1 to all rolls in a general situation (such as combat, or woodcraft); or 1 man can be given a +3 to a specific Total or Ability (such as Soak or Hunt). Might points spent on this power are only recovered when its effects are withdrawn. If a character has received the +3 bonus, other humans who have a score of 5 of more in the affected Ability can detect that the character is receiving supernatural aid by making a Perception + Awareness roll against an Ease Factor of 9. A faerie cannot use this power to grant aid to a second faerie unless the giver has a Pretense Score that exceeds the receiver’s Pretense by at least the value of the bonus.\n\nMuCo 20 (Base 2, +2 Voice, +2 Sun, +2 Group)"
+        }
+
+        #ttFgnjCN83ACXI1Msj0TZMVa ^"Guide" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Mentem"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Subtly influences a group of beings towards a specific course of action. Some creatures can use this power to direct the movement of a group, taking it to a desired location. Other creatures can guide humans towards rash or brave or wise actions. Each time this power is used, it can subtly influence the actions of a single person for up to a day. The storyguide should provide advice to the character in a similar way to the Common Sense Virtue, except that the advice serves the creature’s agenda, not that of the character. There is no compulsion to follow this advice.\n\nCosts 30 spell levels (ReMe Base 5, +2 Voice, +1 Conc, +2 Group)"
+            REFERENCES {
+                "Common Sense" -> #tSmfpmVQdvf6p6lQevHDQz9B ^"Common Sense"
+            }
+        }
+
+        #tps2mhe92zCPwmhkQ5aR6ImR ^"Hands of the Animal" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, constant, appropriate Form"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "constant"
+                ^"Form" STRING "appropriate Form"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This allows an animal to manipulate and carry an item as if it had human hands and a Strength of +5. The character must concentrate to do anything other than carry the object, and to drop it or take something else.\n\nCosts 15 spell levels (ReTe Base 3, +1 Touch, +2 Sun, +1 constant)"
+        }
+
+        #t8212cH2dmOVnFk7E6VuhNE2 ^"Hound" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Corpus"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the faerie to know the direction and distance to its human quarry.\n\nCosts 20 spell levels (InCo Base 3, +4 Arc, +1 Conc)"
+        }
+
+        #t2ylVsnbFHIKISmu9putDNxA ^"Illusionary Home" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "4 points, Init –4, Imaginem"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "Imaginem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This comprehensive use of glamour makes a place look, sound, smell, and feel like a suitable home for the role the fairie is playing. Not all faeries use this ability — it is usually restricted to faeries who travel within the Dominion, and cannot extend their glamour over their homes. Within the altered space, the sense of taste is also affected.\n\nCosts 40 spell levels (MuIm Base 5, +1 Touch, +4 Until, +2 Room) an alternative that also costs 40 spell levels is (MuIm Base 5, +1 Touch, +2 Sun, +1 Constant, +3 Structure)"
+        }
+
+        #tc59am9D4OTn7VLfwTlPb0YZ ^"Image Phantom" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Imaginem"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Imaginem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the non-principal faerie of an area to coat an object with illusion, making it seem to be some other thing of approximately the same size and shape.\n\nCosts 20 spell levels, as spell of the same name ArM5 page 146. (Base 5 +1 Touch +2 Sun)"
+        }
+
+        #tTdUv8rsbim7SKSu5DtMTW2h ^"Kiss of Forgetfulness" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "4 points, Init –4, Mentem"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Causes the person touched to forget his mortal life until he sees a particular object, or class of object, associated with his home.\n\nCosts 40 spell levels (Base 15 +1 Touch +4 Until)"
+        }
+
+        #tNRJ8EXo4F6Z0BrLjUKrYbGD ^"Kiss of Frost" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Ignem"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Ignem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the person touched to survive the cold above the snowline on mountains until he treads upon grass.\n\nCosts 15 spell levels. (Base 2 +1 Touch +4 Until)"
+        }
+
+        #tG7vzPI3lGkclU3bN3tu6psY ^"Kiss of the Mermaid" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Aquam"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Aquam"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the person kissed to breathe under water until he walks upon dry land.\n\nCosts 30 spell levels (Base 4 +1 Touch, +4 Until, +1 Part)"
+        }
+
+        #tNipLsgWpyY6TC3xe8uYQwOP ^"Loosely Material" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "Variable points, Init –5, appropriate Form (usually Corpus)"
+                ^"Initiative" STRING "Init –5"
+                ^"Form" STRING "appropriate Form (usually Corpus)"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This power allows a faerie that is generally immaterial to take on matter, over the length of a combat round, and produce a specific body of flesh, wood, or elemental matter. Some faeries have many versions of this power, and can form more than one physical shape, but can still only inhabit one at a time.\n\nEach body has defined physical Characteristics and a fixed Might cost. For each Might point spent on this power, 5 characteristic points are available to spend on the four physical Characteristics of Strength, Stamina, Dexterity, and Quickness. A faerie’s material body can have any Size up to a maximum of its Presence unless it spends additional Might points on Size. Every 5 extra points increases its Size by 1. Wound ranges for humanoid forms are as per the Size table.\n\nA faerie may maintain the material body indefinitely. If slain, the body contains pawns of vis equal to the faerie’s Might/5, of an appropriate Art. When the faerie returns to immateriality, which takes an uninterrupted combat round, it regains the Might points spent to activate this power. If it then takes on matter again, it does not carry over the wounds caused to its previous body.\n\nCosts 25 spell levels (special)"
+        }
+
+        #t0bXXL3syKsyO0K7zoTYJk2o ^"Pine Away" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init. –3, Corpus"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init. –3"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This ability causes the target to slowly lose both the will to live, and the vitality that permits life. This is treated as a major disease, with an Ease Factor of 9 that causes a Light Wound, but either Faerie Lore or Medicine may be used to treat the effects. Many versions of this power exist, with both weaker and stronger effects.\n\nCosts 30 spell levels (Base 20 (5 +15 for virulence), +2 Voice)"
+            REFERENCES {
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+            }
+        }
+
+        #tjtLuW3mlkwEmOtwm9iLNmlU ^"Repel Animals" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "1 point, Init –1, Animal"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "Init –1"
+                ^"Form" STRING "Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Like Circle of Beast Warding\n\nCosts 5 spell levels (Base 2, +1 Touch, +2 Ring)"
+        }
+
+        #t6TQ2lRdkPJXY4frF9yesm0u ^"Send Message" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Imaginem"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Imaginem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This power allows the faerie to send short verbal messages to beings to which it has Arcane Connections.\n\nCosts 15 spell levels. (CrMe Base 3, +4 Arcane)"
+            REFERENCES {
+                "Arcane Connections" -> ^"Arcane Connections"
+            }
+        }
+
+        #tb5io6GQnmuJWz3czvmoJ5Dn ^"Spirit Away" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "Variable points, n/a, Vim"
+                ^"Initiative" STRING "n/a"
+                ^"Form" STRING "Vim"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the faerie to act as a threshold guardian, as described in the Chapter 2: Faerie Realm.\n\nCosts 50 spell levels (Special)"
+        }
+
+        #tuNP1YRuzjEbdtKfdjEA4sma ^"Spreading a Mantle of Snow" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Auram"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Auram"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Covers an area a mile across in snow, much like Clouds of Summer Snow, ArM5 page 126.\n\nCosts 25 spell levels. (Base 2,+3 Sight, +1 Conc, +2 Group, +1 Size)"
+        }
+
+        #tjlIRPF2Mv5rtYAR2Pa01XdI ^"Steal Judgment" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Mentem"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Makes the target believe almost any lie that the faerie tells, by diminishing his capacity for doubt. An Intelligence roll against an Ease Factor of 6 is permitted to resist, with easier rolls for truly incredible lies.\n\nCosts 15 spell levels (Base 4, +1 Eye, +2 Sun)."
+        }
+
+        #t5sn1YjmJosRc4NjuVW4qxx3 ^"Torrent from the Lungs" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Aquam"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Aquam"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "As Curse of the Desert. Draws the water forth from the human body, causing +15 Damage that armor does not protect against. If the target does not drink within a few minutes, he dies. The name comes from the surprising quantity of water that pours out of the victim’s mouth.\n\nCosts 25 spell levels (PeAq Base 10, +2 Voice +1 Part) See ArM5 page 123."
+        }
+
+        #tvwu9gwVIbyuWNOT25ENsbME ^"Transform Victim into (Animal)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Animal"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Turns a target who can hear the voice of the faerie into a land animal for Sun duration. The animal’s type is nominated at character creation.\n\nCosts 30 spell levels (Base 10, +2 Voice, +2 Sun); although many faeries have a variation with Until Duration that costs 40 spell levels, 4 points per use and has an Init modifier of –4."
+        }
+
+        #tQ6XEOgTXPZn5Ddnvw2KcwlB ^"Transform Victim into (Bird or Fish)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "4 points, Init –4, Animal"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Turns a target who can hear the voice of the faerie into a bird or fish for Sun duration. The type of bird or fish is nominated a character creation.\n\nCosts 40 spell levels (Base 20, +2 Voice, +2 Sun)"
+        }
+
+        #t4u1i1P1gVmgOFiVLJQLwdtj ^"Transform Victim into (Object or Plant)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Greater and Lesser" FIXED
+                ^"Might Cost" STRING "5 points, Init –5, as per object"
+                ^"Might Cost Value" INTEGER 5
+                ^"Initiative" STRING "Init –5"
+                ^"Form" STRING "as per object"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Turns a target who can hear the voice of the faerie into a solid inanimate object or plant for Sun duration. The object is selected at character creation.\n\nCosts 45 spell levels (Base 25, +2 Voice, +2 Sun)\n\nMany faeries have a variation with Until Duration. It costs 5 Might per use and has an Init of –5. This more powerful version has Touch Range, to keep the level of effect at 50 — the highest a Greater Power may have without becoming a Ritual Power. Players should recall that the traditional objects of a faerie’s role extend the faerie’s power of touch.\n\nCosts 50 spell levels (Base 25, +1 Touch, +4 Until)."
+            REFERENCES {
+                "Greater Power" -> #tO5XFGkxH39d8IsuOBi2cXBp ^"Greater Power"
+                "Ritual Power" -> #tGhEx5niu51Fsp9n0z9acWgM ^"Ritual Power"
+            }
+        }
+
+        #tA4uSOM8aLCqWaxCaFSrc6Lw ^"Domestic Work" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Focus" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Performs household tasks from a distance. This focus allows some aggressive behavior. A domestic faerie can kindle fires, boil water, and move household objects not held or fastened down — all of which, with a little planning, can be used to hurt humans.\n\nThe most aggressive domestic faeries hurl objects. For 1 Might point up to five pounds can be moved, and every additional Might point doubles this. If the faerie has a thrown weapon Pretense, the object may be hurled with force. Blunt objects inflict +5 damage per Might point spent. If the faerie could use the object as a weapon, then it may use the object to strike foes while using this power. All physical attacks with this power must penetrate Magic Resistance. The power lasts until the faerie releases the object."
+            REFERENCES {
+                "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
+            }
+        }
+
+        #tpx5UCEkb7LhOMsw4YXyCRat ^"Father of Serpents" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Focus" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Duplicates any non-Ritual Creo, Intellego, Muto, or Rego spells pertaining to snakes at a cost of 1 Might point per magnitude of the effect. Like many focus powers, the limiting factor is the faerie’s motif. For instance, a lion who was the ruler of a woodland glade could define exactly the same Virtue as including the entire Hermetic Form of Animal, perhaps ignoring Intellego instead of Perdo. Troupes are cautioned to only allow Focus Powers broad enough to make their saga interesting."
+            REFERENCES {
+                "Hermetic Form" -> #tUEdmiz0IADMNt9MPAbcgRyn ^"Hermetic Form"
+            }
+        }
+
+        #tQWZvrLDXBsBG3zwjO7jStXD ^"Manifestation" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Focus" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Manifests the faerie’s consciousness among animal and plant life its glamour touches, temporarily controlling their actions. This power allows the character to simulate any Creo Animal, Rego Animal, Creo Herbam, or Rego Herbam effect with a value of 25 spell levels or less, targeted at the animals within its glamour and suiting its motif. A lord of a wild hunt, for example, may manifest through the wolves of a forest, but would not manifest through squirrels or trees."
+        }
+
+        #tE8zPDU43kJTZXvKNuwwpzKb ^"Shrinking" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Focus" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character can reconfigure the matter and magic in its body into a series of increasingly tiny frames. The character may choose any Size smaller than or equal to the basic form and use the modifiers for the new Size. Players desiring a small faerie who can grow massive should design the faerie as if its basic form was massive, and select this power. Players should generate a table with the appropriate combat statistics for each Size, so as not to slow the game during play.\n\nThis can simulate the effect of any size-changing spell of level 25 of less. This power simulates selecting a spell that shrinks the character by 1 Size, then another that shrinks the character by 2 Size, and so on, plus a spell that returns the character to normal size.\n\nUtterly changing the size of a person has a Base level of 3. If these are personal effects with Sun duration, then the maximum level of effect from this focus is 5. This allows the character to claim 20 spare levels as 4 intricacy points, which are explained in the Improved Powers Minor Virtue."
+            REFERENCES {
+                "Improved Powers" -> #toQvBVJ9B6LtAco1wna4ohts ^"Improved Powers"
+            }
+        }
+
+        #tpSy0zcrCnJIxnNMLEFQkIbA ^"Smithying" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Focus" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Duplicates any non-Ritual Creo, Muto, Rego, or Perdo spell pertaining to the Terram Form, at a cost of 1 Might point per magnitude of the effect, limited by the motif of the faerie."
+        }
+
+        #tbG8DGyHOVadyaYeoV5Y8tqZ ^"Miser’s Midas" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Focus" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This power turns any living thing the character touches, excepting himself, to stone. This power requires two Virtues to get enough levels. The most combat-worthy of these effects — turning a human into stone for more than a few minutes — is level 35 (Base 20, +1 Touch, +2 Sun). A player who selected the Virtue twice could trade 15 spell levels for another focus power or for 3 intricacy points, as described in the insert earlier."
+        }
+
+        #tSJFnzdEM5dedUINe2QjrAdD ^"Appear Human" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "1 point, constant"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "constant"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows a humanoid faerie of size –2 to +2 to look and feel human. This power is not required by humanoid faeries, only by shapeshifters who spend the majority of their time in a non-human form. This is an illusion, unlike Transform into Human, later, so a centaur that used it would still be unable to wander inconspicuously through a crowd, ride a horse, or avoid leaving hoof prints.\n\nCosts 5 spell levels (Base 2, +2 Sun, +1 constant)"
+            REFERENCES {
+                "Transform into Human" -> #tmqHc9LM5Z9UhKNqDO3ybfTk ^"Transform into Human"
+            }
+        }
+
+        #tjq2TCluCz6hVJpbgckLClzt ^"Extended Glamour" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "0 points, constant, Mentem"
+                ^"Might Cost Value" INTEGER 0
+                ^"Initiative" STRING "constant"
+                ^"Form" STRING "Mentem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Grants awareness of everything that happens within the bounds of a specific domain chosen by the faerie. In essence, the faerie is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. The faerie’s Might score determines the size of area possible: a Room (5–10 Might), a Structure (15–25 Might), or a standard Boundary (30+ Might).\n\nThe area controlled by the faerie can produce a yearly harvest of (Might/10) pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Removing this vis does not harm the faerie if it is bargained for. This is the power that allows faeries to extend auras about themselves, as described in Chapter 1: Nature of Faerie.\n\nCosts 25 spell levels: may be taken as a Lesser Power on its own, or as part of a package of Greater Powers. (Special)"
+            REFERENCES {
+                "Lesser Power" -> #trycp5AY4LCEmvmCP10xvgWb ^"Lesser Power"
+            }
+        }
+
+        #tV7rhdkhBf4JyIVq27jJetwE ^"Flight" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "2 points, constant, appropriate Form"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "constant"
+                ^"Form" STRING "appropriate Form"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character is capable of flight. The character may use the Athletics skill to simulate difficult maneuvers, but may not engage in combat while flying incredibly swiftly. The faerie may not fly when heavily encumbered, or with a passenger of its Size or more, unless assisted by another faerie that shares the load.\n\nCosts 15 spell levels: (ReFo Base 4, +2 Sun, +1 constant. This base is deliberately lower than Hermetic magic might suggest.)"
+            REFERENCES {
+                "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
+            }
+        }
+
+        #tgON2cYgRSQ0J5etHl8Cq60w ^"Immateriality" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "4 points, Init –4, as suits faerie’s body"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "as suits faerie’s body"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Makes a faerie immaterial until sunrise or until nightfall.\n\nCosts 40 spell levels. (Base 30, +2 Sun)"
+        }
+
+        #tt9aae4TBbkbfHNflx4sumKs ^"Invisibility" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "2 points, Init –2, Imaginem"
+                ^"Might Cost Value" INTEGER 2
+                ^"Initiative" STRING "Init –2"
+                ^"Form" STRING "Imaginem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "A personal version of Veil of Invisibility, as per ArM5 page 146.\n\nCosts 15 spell levels. (Base 4, +2 Sun, +1 for moving image)"
+        }
+
+        #tUH7AjeU8OdxcYqybasdhPvv ^"Shift Human Shapes" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "1 point, Init –1, Corpus"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "Init –1"
+                ^"Form" STRING "Corpus"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the character to change its appearance to any other human configuration, although this cannot be used to replicate the features of a specific person. If the human shape selected is related to a form other than Corpus in some way, the power costs 5 extra spell levels and an added point per use. As an example, some faerie knights use this power to don armor by transforming the outer layers of their bodies into layers of metal.\n\nCosts 5 spell levels (Base 3, +2 Sun)"
+        }
+
+        #tAtUpjFlfMWvF9wcRJOG6VjZ ^"Silent Motion" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "1 point, constant, Imaginem"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "constant"
+                ^"Form" STRING "Imaginem"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Allows the character to move without making a noise.\n\nCosts 10 spell levels (Base 3, +2 Sun, +1 constant)"
+        }
+
+        #tXcBNBA34DiWIodAwh9hvm2T ^"Sight Beyond Sight" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, appropriate Form"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "appropriate Form"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "All five senses of the creature operate at a distance, as far as the creature can see. This makes the creature supernaturally aware of everything that occurs; and it is exceptionally difficult to catch it by surprise.\n\nCosts 30 spell levels (InIm Base 5, +1 Conc, +4 Vision), so requires the Virtue to be selected more than once."
+        }
+
+        #tKx0T50TB3ITriHkAdobPj0K ^"Size Reduction" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "1 point, Init –1, Corpus or Animal"
+                ^"Might Cost Value" INTEGER 1
+                ^"Initiative" STRING "Init –1"
+                ^"Form" STRING "Corpus or Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "The character can reconfigure the matter and magic in its body into a far smaller frame. The player chooses a single alternative Size less than 0 on the Size Chart and, when in the smaller form, uses the modifiers for the new size. Players desiring a small faerie who can grow massive should design the faerie as if its basic form was massive, and select this power.\n\nCosts 10 spell levels (Base 3, +2 Sun, +1 Constant)"
+        }
+
+        #twILfaURfeWfbEXUk7wNG6AH ^"Supernatural Agility" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "3 points, constant"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "constant"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This power allows the character to perform minor supernatural feats when using its Athletics Pretense. These might include swiftly scaling walls, leaping from the ground onto the back of a galloping horse, and dropping great distances to the ground without harm.\n\nCosts 25 spell levels (Base 10, +2 Sun, +1 constant)"
+        }
+
+        #tU4xhPJG1gZBjJmLY6mcMiAn ^"Transform into Animal" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "2 or more points, Init –Might cost, Animal"
+                ^"Initiative" STRING "Init –Might cost"
+                ^"Form" STRING "Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Transforms the character into a specified land animal of human size or smaller. Faeries retain the power of speech in animal form.\n\nCosts 20 spell levels (Base 10, + 2 Sun) Costs 25 spell levels (Base 10, +2 Sun, +1 size) to turn into a larger animal, like a horse. This costs 3 Might per use.\n\nCosts 30 spell levels (Base 10, +4 Until) for a version with an Until Duration, which requires 3 Might per use."
+        }
+
+        #ttIax97MT7eZx67Dw4T98pcX ^"Transform into Bird or Fish" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "3 points, Init –3, Animal"
+                ^"Might Cost Value" INTEGER 3
+                ^"Initiative" STRING "Init –3"
+                ^"Form" STRING "Animal"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Transforms the character into a specified bird or fish. Faeries retain the power of speech in animal form.\n\nCosts 30 spell levels. (Base 20, +2 Sun) A version with an Until Duration requires 4 points per use, costs 40 spell levels, and has an Init of –4."
+        }
+
+        #tmqHc9LM5Z9UhKNqDO3ybfTk ^"Transform into Human" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "This power costs non-human faeries whatever it would cost a humanoid faerie to transform into the character’s native shape, using one of the other transform powers."
+        }
+
+        #ttqdMtGozHgc6DuPrg4gYlBN ^"Transform into (Solid Object)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "4 points, Init –4, as Form of object"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "as Form of object"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Transforms the character into a specified object. In object form, the character is capable of speech and limited movement.\n\nCosts 35 spell levels. (Base 25, +2 Sun) Some faeries prefer a version with an Until Duration, which requires 5 points per use, costs 45 spell levels, and has an Init of –5."
+        }
+
+        #tMUlECN5mQuhuQPlIMUzxCh2 ^"Transform into (Environmental Effect)" DEF {
+            EXTENDS ^"Faerie Power"
+            PROPERTIES {
+                ^"Group" STRING "Personal" FIXED
+                ^"Might Cost" STRING "4 points Init –4, as Form of effect"
+                ^"Might Cost Value" INTEGER 4
+                ^"Initiative" STRING "Init –4"
+                ^"Form" STRING "as Form of effect"
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Transforms the character into a wave, breeze, cloud, fire, or other nebulous thing.\n\nCosts 40 spell levels. (Base 30, +2 Sun) Some faeries prefer a version with an Until Duration, which requires 5 points per use, costs 50 spell levels, and has an Init of –5."
+        }}

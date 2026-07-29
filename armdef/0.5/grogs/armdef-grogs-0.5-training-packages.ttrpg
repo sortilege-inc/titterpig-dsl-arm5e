@@ -1,0 +1,1220 @@
+EXTENSION "ARMDef_Grogs_Training_Packages" {
+    NAME "Ars Magica Definitive Edition, Grogs - Training Packages"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ARMDef_Grogs_Core_Ext"
+
+        #tQXUN90wFGEBHxi7QlONQIUK ^"Advocate" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic", "None"]
+                ^"Printed Name" STRING "Advocate (Academic or None)"
+                ^"Page" INTEGER 68
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+40 Civil and Canon Law, +5 Leadership, +15 Artes Liberales, +15 Latin" {
+                    "Civil and Canon Law" XP 40
+                    "Leadership" XP 5
+                    "Artes Liberales" XP 15
+                    "Latin" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+30 Civil and Canon Law, +5 Leadership, +5 Artes Liberales, +5 Latin" {
+                    "Civil and Canon Law" XP 30
+                    "Leadership" XP 5
+                    "Artes Liberales" XP 5
+                    "Latin" XP 5
+                }
+            }
+            DESCRIPTION "An advocate has studied law, either at a university or through private tutors or a cathedral school. If the character has the Jurist Virtue (*Art & Academe*, page 91), then he need not have a Virtue permitting Academic Abilities, since this Virtue permits taking the key Abilities as a layman. If he has attended university, then he should take at least five years of Student and have a Virtue which grants extra experience in Academic Abilities. Characters in England need Common Law rather than Civil and Canon Law."
+            REFERENCES {
+                "Common Law" -> #tehTySyWEDQnhvxZkHHYdqwi ^"Common Law"
+                "Civil and Canon Law" -> #txJuBOkJKYiAR2cjuHhsZ79T ^"Civil and Canon Law"
+            }
+        }
+
+        #t2dHqe1p5Xx40AIMDqgaQIHf ^"Animal Trainer" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 68
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+30 Animal Handling, +30 Profession: Animal Trainer, +15 Ride" {
+                    "Animal Handling" XP 30
+                    "Profession: Animal Trainer" XP 30
+                    "Ride" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+30 Animal Handling, +15 Ride" {
+                    "Animal Handling" XP 30
+                    "Ride" XP 15
+                }
+            }
+            DESCRIPTION "The five-year package is suitable for a professional animal handler, such as a master of hounds or an ostler, and the Profession can vary accordingly. The three-year package is for those who have regular contact with animals but not as their principle job."
+        }
+
+        #ta4myQO0sqDkc1JBPbVYrGbz ^"Apothecary" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 68
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 (Area) Lore, +20 Chirurgy, +40 Profession: Apothecary" {
+                    "(Area) Lore" XP 15
+                    "Chirurgy" XP 20
+                    "Profession: Apothecary" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+5 (Area) Lore, +10 Chirurgy, +30 Profession: Apothecary" {
+                    "(Area) Lore" XP 5
+                    "Chirurgy" XP 10
+                    "Profession: Apothecary" XP 30
+                }
+            }
+        }
+
+        #tjWbOYxWoyWVbSvXF1WVlvGY ^"Archer" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Martial"]
+                ^"Printed Name" STRING "Archer (Martial)"
+                ^"Page" INTEGER 68
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+20 Awareness, +40 Bows, +15 Concentration" {
+                    "Awareness" XP 20
+                    "Bows" XP 40
+                    "Concentration" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Awareness, +30 Bows" {
+                    "Awareness" XP 15
+                    "Bows" XP 30
+                }
+            }
+        }
+
+        #tPOYixr3wKK9dKMUWGrZr0D7 ^"Churchman" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Churchman (Academic)"
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+10 Artes Liberales, +30 Organization Lore: Church, +5 Latin, +30 Civil & Canon Law" {
+                    "Artes Liberales" XP 10
+                    "Organization Lore: Church" XP 30
+                    "Latin" XP 5
+                    "Civil and Canon Law" XP 30 PRINTED "Civil & Canon Law"
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Artes Liberales, +20 Organization Lore: Church, +20 Civil & Canon Law" {
+                    "Artes Liberales" XP 5
+                    "Organization Lore: Church" XP 20
+                    "Civil and Canon Law" XP 20 PRINTED "Civil & Canon Law"
+                }
+            }
+            DESCRIPTION "Suitable for priests, friars, and nuns who have had some training within the church. Academic churchmen should also take the Theologian package. Parish priests probably have the Public Official or the Leader package, replacing some or all of the experience in Leadership with Profession: Preaching (see *Art & Academe*, page 13)."
+            REFERENCES {
+                "Public Official" -> #tGRsgzQPq0sR5lS8fR9Yyu2E ^"Public Official"
+            }
+        }
+
+        #tXwvbmHL1lSjP5Itne9dUkx9 ^"Conman" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Charm, +30 Guile, +30 Intrigue" {
+                    "Charm" XP 15
+                    "Guile" XP 30
+                    "Intrigue" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Charm, +15 Guile, +15 Intrigue" {
+                    "Charm" XP 15
+                    "Guile" XP 15
+                    "Intrigue" XP 15
+                }
+            }
+        }
+
+        #tR4sxfc3yom6Gb56elZCBomT ^"Courtier" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Charm, +30 Etiquette, +15 Folk Ken, +15 Intrigue" {
+                    "Charm" XP 15
+                    "Etiquette" XP 30
+                    "Folk Ken" XP 15
+                    "Intrigue" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Charm, +30 Etiquette, +5 Folk Ken, +5 Intrigue" {
+                    "Charm" XP 5
+                    "Etiquette" XP 30
+                    "Folk Ken" XP 5
+                    "Intrigue" XP 5
+                }
+            }
+        }
+
+        #tyiKq7DMZV4Txt8QAMtLzrQS ^"Craftsman" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+10 Bargain, +25 Craft: Type A, +15 Craft: Type B, +15 Organization Lore: Guild, +10 Folk Ken" {
+                    "Bargain" XP 10
+                    "Craft: Type A" XP 25
+                    "Craft: Type B" XP 15
+                    "Organization Lore: Guild" XP 15
+                    "Folk Ken" XP 10
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Bargain, +15 Craft: Type A, +10 Craft: Type B, +5 Organization Lore: Guild, +5 Folk Ken" {
+                    "Bargain" XP 10
+                    "Craft: Type A" XP 15
+                    "Craft: Type B" XP 10
+                    "Organization Lore: Guild" XP 5
+                    "Folk Ken" XP 5
+                }
+            }
+            DESCRIPTION "An apprenticeship in a craft typically takes eight years, at the end of which time the character should have a primary Craft Ability of 3 (see *City & Guild*, page 42). It is assumed that each craftsman learns more than a single Craft Ability during a typical apprenticeship, and picks up several related trades. Journeymen should take a Trader package to account for the other Abilities he will need, and Masters will need the Trainer package."
+        }
+
+        #tpQneDJG2RNpObLprUehbKuE ^"Cultist" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Arcane"]
+                ^"Printed Name" STRING "Cultist (Arcane)"
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Guile, +50 Infernal Lore, +10 Stealth" {
+                    "Guile" XP 15
+                    "Infernal Lore" XP 50
+                    "Stealth" XP 10
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Guile, +30 Infernal Lore" {
+                    "Guile" XP 15
+                    "Infernal Lore" XP 30
+                }
+            }
+            DESCRIPTION "A cultist has spent years worshiping an evil force in secret. If the character has the Ceremony Virtue, he can apply some of his experience points in Infernal Lore to that Ability instead. This package might also represent a pagan (in which case substitute Faerie Lore for Infernal Lore), or a devotee of a mystery cult (substitute Organization Lore: Cult and Magic Lore for Infernal Lore)."
+            REFERENCES {
+                "Infernal Lore" -> #t1ucA17wcHOi7vQvkL5qC4px ^"Infernal Lore"
+                "Faerie Lore" -> #tW23Ehurl0iOl4IPX98r7IlQ ^"Faerie Lore"
+                "Infernal Lore" -> #t1ucA17wcHOi7vQvkL5qC4px ^"Infernal Lore"
+                "Magic Lore" -> #tFQbQOWCWW5Dv32setj4ZUFy ^"Magic Lore"
+                "Infernal Lore" -> #t1ucA17wcHOi7vQvkL5qC4px ^"Infernal Lore"
+            }
+        }
+
+        #tzNdtC60n3FUnqNJdONEJhhk ^"Cunning Man" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Arcane"]
+                ^"Printed Name" STRING "Cunning Man (Arcane)"
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+10 (Area) Lore, +5 Bargain, +30 Faerie Lore" {
+                    "(Area) Lore" XP 10
+                    "Bargain" XP 5
+                    "Faerie Lore" XP 30
+                }
+            }
+            DESCRIPTION "Knows the local legends and the ways of the fae."
+        }
+
+        #tQIRPVeYqKpdCylKIBPAVHsE ^"Cutter" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+40 Chirurgy, +5 Folk Ken" {
+                    "Chirurgy" XP 40
+                    "Folk Ken" XP 5
+                }
+            }
+            DESCRIPTION "A cutter is trained in patching up the wounded and administering first aid; alternatively, he could be an empiricus, a traveling surgeon."
+        }
+
+        #tqL63LTFPE3EZnYQXSrMHV7m ^"Failed Apprentice" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+5 Artes Liberales, +5 Code of Hermes, +5 Concentration, +5 Finesse, +10 Latin, +25 Magic Theory, +15 Organization Lore: Order of Hermes, +5 Penetration" {
+                    "Artes Liberales" XP 5
+                    "Code of Hermes" XP 5
+                    "Concentration" XP 5
+                    "Finesse" XP 5
+                    "Latin" XP 10
+                    "Magic Theory" XP 25
+                    "Organization Lore: Order of Hermes" XP 15
+                    "Penetration" XP 5
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Concentration, +10 Latin, +20 Magic Theory, +5 Organization Lore: Order of Hermes, +5 Penetration" {
+                    "Concentration" XP 5
+                    "Latin" XP 10
+                    "Magic Theory" XP 20
+                    "Organization Lore: Order of Hermes" XP 5
+                    "Penetration" XP 5
+                }
+            }
+            DESCRIPTION "The character must have the Failed Apprentice Virtue to take this package, which permits her to take Arcane and Academic Abilities. She probably has several years of Student to account for her Academic Abilities. It is assumed that she has no Art scores; either she has not been Opened to the Arts, or else her ability to work Hermetic magic has been destroyed."
+            REFERENCES {
+                "Hermetic magic" -> #tzniJSGDpQXV7Gli6MypZqIu ^"Hermetic magic"
+            }
+        }
+
+        #tSf20WIba6C0Zta3EQypqkck ^"Farmer" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Animal Handling, +15 Area Lore, +5 Folk Ken, +40 Profession: Farmer" {
+                    "Animal Handling" XP 15
+                    "Area Lore" XP 15
+                    "Folk Ken" XP 5
+                    "Profession: Farmer" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Animal Handling, +5 Folk Ken, +30 Profession: Farmer" {
+                    "Animal Handling" XP 10
+                    "Folk Ken" XP 5
+                    "Profession: Farmer" XP 30
+                }
+            }
+        }
+
+        #tRXmtl8tW9JTcG2gIaIMIem8 ^"Fisherman" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Area Lore, +30 Profession: Fisherman, +15 Survival, +15 Swim" {
+                    "Area Lore" XP 15
+                    "Profession: Fisherman" XP 30
+                    "Survival" XP 15
+                    "Swim" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Area Lore, +20 Profession: Fisherman, +5 Survival, +15 Swim" {
+                    "Area Lore" XP 5
+                    "Profession: Fisherman" XP 20
+                    "Survival" XP 5
+                    "Swim" XP 15
+                }
+            }
+        }
+
+        #tQ0Jro9acqTtcGNihRc0LT6v ^"Footpad" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Athletics, +15 Guile, +15 Legerdemain, +30 Stealth" {
+                    "Athletics" XP 15
+                    "Guile" XP 15
+                    "Legerdemain" XP 15
+                    "Stealth" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Athletics, +5 Guile, +15 Legerdemain, +20 Stealth" {
+                    "Athletics" XP 5
+                    "Guile" XP 5
+                    "Legerdemain" XP 15
+                    "Stealth" XP 20
+                }
+            }
+        }
+
+        #tAfVggADlCpQg5vRFvkHo4Bw ^"Harlot" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 69
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+30 Charm, +30 Carouse or Etiquette, +15 Organization Lore" {
+                    "Charm" XP 30
+                    CHOICE [^"Carouse", ^"Etiquette"] XP 30
+                    "Organization Lore" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+20 Charm, +20 Carouse or Etiquette, +5 Organization Lore" {
+                    "Charm" XP 20
+                    CHOICE [^"Carouse", ^"Etiquette"] XP 20
+                    "Organization Lore" XP 5
+                }
+            }
+            DESCRIPTION "Carouse is most appropriate for an alehouse strumpet or street-corner\n\nworking girl, whereas Etiquette is more suited to a courtesan or mistress. They typically gain an Organization Lore appropriate to their clientele. The Trader package (taking Profession: Prostitute) is also appropriate."
+        }
+
+        #tt83hPTacCLE0Tp9EFFoQhF3 ^"Herbwife" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+10 (Area) Lore, +30 Chirurgy, +5 Folk Ken, +30 Profession: Apothecary" {
+                    "(Area) Lore" XP 10
+                    "Chirurgy" XP 30
+                    "Folk Ken" XP 5
+                    "Profession: Apothecary" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+5 (Area) Lore, +30 Chirurgy, +10 Profession: Apothecary" {
+                    "(Area) Lore" XP 5
+                    "Chirurgy" XP 30
+                    "Profession: Apothecary" XP 10
+                }
+            }
+        }
+
+        #tRAaW99csgfCJvHHNoem5Ndx ^"Javeliner" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Martial"]
+                ^"Printed Name" STRING "Javeliner (Martial)"
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+20 Athletics, +15 Awareness, +40 Thrown Weapon" {
+                    "Athletics" XP 20
+                    "Awareness" XP 15
+                    "Thrown Weapon" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Athletics, +5 Awareness, +30 Thrown Weapon" {
+                    "Athletics" XP 10
+                    "Awareness" XP 5
+                    "Thrown Weapon" XP 30
+                }
+            }
+            DESCRIPTION "This package can also be used for troops trained in the sling."
+        }
+
+        #tNwOQRNB55gq1zAv6V1wgbFJ ^"Laborer" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+20 Athletics, +15 Brawl, +40 Profession: Laborer" {
+                    "Athletics" XP 20
+                    "Brawl" XP 15
+                    "Profession: Laborer" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Athletics, +5 Brawl, +30 Profession: Laborer" {
+                    "Athletics" XP 10
+                    "Brawl" XP 5
+                    "Profession: Laborer" XP 30
+                }
+            }
+        }
+
+        #t6bpqocX6udCq7Rvy0NrVSdr ^"Lay Brother" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+50 Organization Lore: Church, +10 Folk Ken, +15 Profession (see earlier)" {
+                    "Organization Lore: Church" XP 50
+                    "Folk Ken" XP 10
+                    "Profession (see earlier)" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+30 Organization Lore: Church, +15 Profession (see earlier)" {
+                    "Organization Lore: Church" XP 30
+                    "Profession (see earlier)" XP 15
+                }
+            }
+            DESCRIPTION "A lay brother works at a monastery, but has not taken Holy Orders. This package is also suitable for novices preparing for ordination. In the latter case, some years of Student are appropriate. The Profession Ability could be Scribe, Gardener, Brewer, or any other suitable trade."
+        }
+
+        #thThA7PyednkfNGXDO0LuEg1 ^"Magician" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Arcane"]
+                ^"Printed Name" STRING "Magician (Arcane)"
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Concentration, +30 Magic Lore, +30 Penetration" {
+                    "Concentration" XP 15
+                    "Magic Lore" XP 30
+                    "Penetration" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Concentration, +15 Magic Lore, +15 Penetration" {
+                    "Concentration" XP 15
+                    "Magic Lore" XP 15
+                    "Penetration" XP 15
+                }
+            }
+            DESCRIPTION "Suitable for characters with Supernatural Abilities, although the scores in these Abilities are purchased with extra years, as detailed earlier. The wizard can also buy Enriched Objects of Virtue by sacrificing 5 experience points per object (see *Realms of Power:* *Magic*, page 124)."
+        }
+
+        #twSAPjDCPZdJgO5zhYfJNabd ^"Minstrel" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Carouse, +5 Charm, +5 Folk Ken, +50 Music" {
+                    "Carouse" XP 15
+                    "Charm" XP 5
+                    "Folk Ken" XP 5
+                    "Music" XP 50
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Carouse, +30 Music" {
+                    "Carouse" XP 15
+                    "Music" XP 30
+                }
+            }
+        }
+
+        #tEl9f52mweJDVTncOh8Psl7s ^"Mystic" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Arcane"]
+                ^"Printed Name" STRING "Mystic (Arcane)"
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+20 Concentration, +5 Organization Lore: Church, +30 Dominion Lore, +20 Survival" {
+                    "Concentration" XP 20
+                    "Organization Lore: Church" XP 5
+                    "Dominion Lore" XP 30
+                    "Survival" XP 20
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Concentration, +20 Dominion Lore, +15 Survival" {
+                    "Concentration" XP 10
+                    "Dominion Lore" XP 20
+                    "Survival" XP 15
+                }
+            }
+            DESCRIPTION "This hermit spends his days in contemplation of the Divine, but the same package could be used for a different Realm of Power."
+        }
+
+        #tUmx8AhUSO2A69MoFjpUZwNl ^"Natural Philosopher" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Natural Philosopher (Academic)"
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+40 Philosophiae, 7 formulae" {
+                    "Philosophiae" XP 40
+                    QUANTITY 7 ITEM "formulae"
+                }
+                "Three Years" YEARS 3 PRINTED "+30 Philosophiae, 3 formulae" {
+                    "Philosophiae" XP 30
+                    QUANTITY 3 ITEM "formulae"
+                }
+            }
+            DESCRIPTION "A natural philosopher seeks to uncover the wonders of the natural world through his studies. The focus\n\nof a natural philosopher could equally be Artes Liberales or Medicine. For rules on formulae, see *Art & Academe*, Chapter 5."
+            REFERENCES {
+                "Artes Liberales" -> #trziwPnyEqQoiEWqQBqtGPCH ^"Artes Liberales"
+            }
+        }
+
+        #tVO2NlwTrZJb6zjes7JCmwPn ^"Physician" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Physician (Academic)"
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Folk Ken, +40 Medicine, +20 Profession: Apothecary" {
+                    "Folk Ken" XP 15
+                    "Medicine" XP 40
+                    "Profession: Apothecary" XP 20
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Folk Ken, +30 Medicine, +10 Profession: Apothecary" {
+                    "Folk Ken" XP 5
+                    "Medicine" XP 30
+                    "Profession: Apothecary" XP 10
+                }
+            }
+            DESCRIPTION "A physician is assumed to have attended school or university to study Medicine, and so such a character should take at least five years of Student and have a Virtue that grants extra experience in Academic Abilities. Many physicians never learn Chirurgy; for those who do, take the Cutter package."
+        }
+
+        #tPlMaspCcKKUU1GFrU1lyw7e ^"Pikeman" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Martial"]
+                ^"Printed Name" STRING "Pikeman (Martial)"
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+20 Athletics, +15 Awareness, +40 Great Weapon" {
+                    "Athletics" XP 20
+                    "Awareness" XP 15
+                    "Great Weapon" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Athletics, +5 Awareness, +30 Great Weapon" {
+                    "Athletics" XP 10
+                    "Awareness" XP 5
+                    "Great Weapon" XP 30
+                }
+            }
+        }
+
+        #tGRsgzQPq0sR5lS8fR9Yyu2E ^"Public Official" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 70
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 (Area) Lore, +15 Intrigue, +15 Leadership, +30 (Organization) Lore" {
+                    "(Area) Lore" XP 15
+                    "Intrigue" XP 15
+                    "Leadership" XP 15
+                    "(Organization) Lore" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+10 (Area) Lore, +10 Intrigue, +10 Leadership, +15 (Organization) Lore" {
+                    "(Area) Lore" XP 10
+                    "Intrigue" XP 10
+                    "Leadership" XP 10
+                    "(Organization) Lore" XP 15
+                }
+            }
+            DESCRIPTION "Suitable for reeves, mayors, and so forth, but also priests who take an active role in local politics, and members of a craft guild."
+        }
+
+        #tF2UevOrT15VrVMs0ahQNtDV ^"Sailor" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Area Lore: Area A, +10 Area Lore: Area B, +30 Profession: Sailor, +5 Survival, +15 Swim" {
+                    "Area Lore: Area A" XP 15
+                    "Area Lore: Area B" XP 10
+                    "Profession: Sailor" XP 30
+                    "Survival" XP 5
+                    "Swim" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Area Lore, +20 Profession: Sailor, +5 Survival, +15 Swim" {
+                    "Area Lore" XP 5
+                    "Profession: Sailor" XP 20
+                    "Survival" XP 5
+                    "Swim" XP 15
+                }
+            }
+        }
+
+        #tW2cJTaWVJHOFZ0WvSz2mHQa ^"Scout" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Area Lore, +30 Awareness, +30 Stealth" {
+                    "Area Lore" XP 15
+                    "Awareness" XP 30
+                    "Stealth" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Area Lore, +15 Awareness, +15 Stealth" {
+                    "Area Lore" XP 15
+                    "Awareness" XP 15
+                    "Stealth" XP 15
+                }
+            }
+        }
+
+        #tWWRf75uZmqtetxzRBRgWkvF ^"Scribe" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Scribe (Academic)"
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+20 Artes Liberales, +15 Latin, +40 Profession: Scribe" {
+                    "Artes Liberales" XP 20
+                    "Latin" XP 15
+                    "Profession: Scribe" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Artes Liberales, +10 Latin, +25 Profession: Scribe" {
+                    "Artes Liberales" XP 10
+                    "Latin" XP 10
+                    "Profession: Scribe" XP 25
+                }
+            }
+            DESCRIPTION "You may replace Latin with any Living or Dead Language that the scribe might be using."
+        }
+
+        #tNXXQaSCIfJg6yzc1KxqnZbx ^"Sentry" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Martial"]
+                ^"Printed Name" STRING "Sentry (Martial)"
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+30 Awareness, +15 Concentration, +30 Single Weapon" {
+                    "Awareness" XP 30
+                    "Concentration" XP 15
+                    "Single Weapon" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+20 Awareness, +5 Concentration, +20 Single Weapon" {
+                    "Awareness" XP 20
+                    "Concentration" XP 5
+                    "Single Weapon" XP 20
+                }
+            }
+        }
+
+        #tr6YRuwoFFZ9NCbvtZMRtEN0 ^"Servant" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Folk Ken, +20 (Organization) Lore, +40 Profession: Servant" {
+                    "Folk Ken" XP 15
+                    "(Organization) Lore" XP 20
+                    "Profession: Servant" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+10 Folk Ken, +5 (Organization) Lore, +30 Profession: Servant" {
+                    "Folk Ken" XP 10
+                    "(Organization) Lore" XP 5
+                    "Profession: Servant" XP 30
+                }
+            }
+        }
+
+        #tfTuGctJHMnLwCGCTohUyFYx ^"Soldier" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Martial"]
+                ^"Printed Name" STRING "Soldier (Martial)"
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Athletics, +20 Brawl, +40 Single Weapon" {
+                    "Athletics" XP 15
+                    "Brawl" XP 20
+                    "Single Weapon" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Athletics, +10 Brawl, +30 Single Weapon" {
+                    "Athletics" XP 5
+                    "Brawl" XP 10
+                    "Single Weapon" XP 30
+                }
+            }
+        }
+
+        #tw1PsMKjmlv3yzNdSSWhA0kK ^"Storyteller" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Guile, +5 Carouse, +5 Folk Ken, +50 Profession: Storyteller" {
+                    "Guile" XP 15
+                    "Carouse" XP 5
+                    "Folk Ken" XP 5
+                    "Profession: Storyteller" XP 50
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Guile, +30 Profession: Storyteller" {
+                    "Guile" XP 15
+                    "Profession: Storyteller" XP 30
+                }
+            }
+        }
+
+        #t6fMGH2ou3CVz4GJ1Hf5jvVu ^"Student" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Student (Academic)"
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years (cathedral school)" YEARS 5 QUALIFIER "cathedral school" PRINTED "+15 Artes Liberales, +30 Latin, +15 Theology, +15 Civil and Canon Law OR Philosophiae" {
+                    "Artes Liberales" XP 15
+                    "Latin" XP 30
+                    "Theology" XP 15
+                    CHOICE [^"Civil and Canon Law", ^"Philosophiae"] XP 15
+                }
+                "Five Years (monastic school)" YEARS 5 QUALIFIER "monastic school" PRINTED "+15 Artes Liberales, +30 Latin, +15 Theology, +15 Medicine OR Philosophiae" {
+                    "Artes Liberales" XP 15
+                    "Latin" XP 30
+                    "Theology" XP 15
+                    CHOICE [^"Medicine", ^"Philosophiae"] XP 15
+                }
+                "Five years (private tutor or university)" YEARS 5 QUALIFIER "private tutor or university" PRINTED "+15 Artes Liberales, +30 Latin, +30 any Academic Ability" {
+                    "Artes Liberales" XP 15
+                    "Latin" XP 30
+                    "any Academic Ability" XP 30
+                }
+                "Three years (parish school)" YEARS 3 QUALIFIER "parish school" PRINTED "+15 Artes Liberales, +30 Latin" {
+                    "Artes Liberales" XP 15
+                    "Latin" XP 30
+                }
+            }
+            DESCRIPTION "This package assumes that the character has received academic teaching at a parish school, cathedral school, or monastic school, or from a private tutor. Characters who have attended a university receive additional experience points from their Social Status Virtues (see *Art & Academe*, pages 90–92). Characters attending a parish school can only take the threeyear package, since these schools only teach Artes Liberales and Latin."
+            REFERENCES {
+                "Artes Liberales" -> #trziwPnyEqQoiEWqQBqtGPCH ^"Artes Liberales"
+            }
+        }
+
+        #tUslQzr49udxjMSBA9wOlFUb ^"Teacher" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Teacher (Academic)"
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Artes Liberales, +5 Folk Ken, +15 Language, +40 Teaching" {
+                    "Artes Liberales" XP 15
+                    "Folk Ken" XP 5
+                    "Language" XP 15
+                    "Teaching" XP 40
+                }
+            }
+            DESCRIPTION "The Teacher package covers the academic life. The character receives experience points in whatever language he is speaking when he teaches, which is usually Latin."
+        }
+
+        #tceVGxrGi7lv1zFgXSU09WBk ^"Theologian" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Ability Types" LIST ["Academic"]
+                ^"Printed Name" STRING "Theologian (Academic)"
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Civil & Canon Law, +15 Organization Lore: Church, +5 Latin, +40 Theology" {
+                    "Civil and Canon Law" XP 15 PRINTED "Civil & Canon Law"
+                    "Organization Lore: Church" XP 15
+                    "Latin" XP 5
+                    "Theology" XP 40
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Civil & Canon Law, +5 Organization Lore: Church, +5 Latin, +30 Theology" {
+                    "Civil and Canon Law" XP 5 PRINTED "Civil & Canon Law"
+                    "Organization Lore: Church" XP 5
+                    "Latin" XP 5
+                    "Theology" XP 30
+                }
+            }
+            DESCRIPTION "Not necessarily a priest, a theologian is assumed to have attended school or university to study Theology, and so should take at least five years of\n\nStudent or have a Virtue which grants extra experience in Academic Abilities."
+        }
+
+        #t84VWp24YJzL017pfFxUxDD2 ^"Tinker" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 71
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Area Lore: Area A, +15 Area Lore: Area B, +15 Bargain, +15 Craft, +15 Survival" {
+                    "Area Lore: Area A" XP 15
+                    "Area Lore: Area B" XP 15
+                    "Bargain" XP 15
+                    "Craft" XP 15
+                    "Survival" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+15 Area Lore, +15 Craft, +15 Survival" {
+                    "Area Lore" XP 15
+                    "Craft" XP 15
+                    "Survival" XP 15
+                }
+            }
+        }
+
+        #tu41sOlCAOEKH9Hw6b1Q6i99 ^"Trader" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+30 Bargain, +15 Folk Ken, +30 Profession: Merchant" {
+                    "Bargain" XP 30
+                    "Folk Ken" XP 15
+                    "Profession: Merchant" XP 30
+                }
+                "Three Years" YEARS 3 PRINTED "+20 Bargain, +5 Folk Ken, +20 Profession: Merchant" {
+                    "Bargain" XP 20
+                    "Folk Ken" XP 5
+                    "Profession: Merchant" XP 20
+                }
+            }
+        }
+
+        #tm7UUL3gmghOdnuKMKBCNVND ^"Tumbler" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+50 Athletics, +10 Carouse, +15 Legerdemain" {
+                    "Athletics" XP 50
+                    "Carouse" XP 10
+                    "Legerdemain" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+30 Athletics, +5 Carouse, +10 Legerdemain" {
+                    "Athletics" XP 30
+                    "Carouse" XP 5
+                    "Legerdemain" XP 10
+                }
+            }
+            DESCRIPTION "This package can be used for any individual who makes a living from a profession rather than a craft, by changing the Profession Ability to something more appropriate."
+        }
+
+        #tr5QPQXrDDh3faVql4nWjcBL ^"Woodsman" DEF {
+            EXTENDS ^"Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Area Lore, +30 Hunt, +15 Stealth, +15 Survival" {
+                    "Area Lore" XP 15
+                    "Hunt" XP 30
+                    "Stealth" XP 15
+                    "Survival" XP 15
+                }
+                "Three Years" YEARS 3 PRINTED "+5 Area Lore, +20 Hunt, +5 Stealth, +15 Survival" {
+                    "Area Lore" XP 5
+                    "Hunt" XP 20
+                    "Stealth" XP 5
+                    "Survival" XP 15
+                }
+            }
+        }
+
+        #tzIOapMJZ1hdZyqL3jknxe4Y ^"Athletic Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Athletics, +15 Brawl, +75 Native Language, +15 Swim" {
+                    "Athletics" XP 15
+                    "Brawl" XP 15
+                    "Native Language" XP 75
+                    "Swim" XP 15
+                }
+            }
+        }
+
+        #to7sj5cWF5rvdGp8PwVKRZk1 ^"Covenant-bred Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+5 Athletics, +15 Area Lore: Covenant, +5 Folk Ken, +15 Latin, +75 Native Language, +5 Organization Lore: Order of Hermes" {
+                    "Athletics" XP 5
+                    "Area Lore: Covenant" XP 15
+                    "Folk Ken" XP 5
+                    "Latin" XP 15
+                    "Native Language" XP 75
+                    "Organization Lore: Order of Hermes" XP 5
+                }
+            }
+            DESCRIPTION "This childhood is only available to characters with the Covenant Upbringing Personality Flaw."
+            REFERENCES {
+                "Covenant Upbringing" -> #tzrxKtqpLZMgU4aqhhTQAiTe ^"Covenant Upbringing"
+            }
+        }
+
+        #t47p3wCeSrBFwJegaAka3m1V ^"Exploring Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Area Lore, +5 Athletics, +5 Awareness, +75 Native Language, +5 Stealth, +15 Survival" {
+                    "Area Lore" XP 15
+                    "Athletics" XP 5
+                    "Awareness" XP 5
+                    "Native Language" XP 75
+                    "Stealth" XP 5
+                    "Survival" XP 15
+                }
+            }
+        }
+
+        #tVNiiK3WELhwGbR22PjYJcDl ^"Feral Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+5 Animal Handling, +15 Area Lore, +15 Athletics, +15 Awareness, +15 Brawl, +15 Hunt, +5 Stealth, +30 Survival, +5 Swim" {
+                    "Animal Handling" XP 5
+                    "Area Lore" XP 15
+                    "Athletics" XP 15
+                    "Awareness" XP 15
+                    "Brawl" XP 15
+                    "Hunt" XP 15
+                    "Stealth" XP 5
+                    "Survival" XP 30
+                    "Swim" XP 5
+                }
+            }
+            DESCRIPTION "This childhood is only available to characters with the Feral Upbringing Flaw."
+            REFERENCES {
+                "Feral Upbringing" -> #t2a2HOyE9eawyNGbqY7cwQFE ^"Feral Upbringing"
+            }
+        }
+
+        #tMKuM6biOxw2le7oyv48PehQ ^"Mischievous Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Brawl, +15 Guile, +75 Native Language, +15 Stealth" {
+                    "Brawl" XP 15
+                    "Guile" XP 15
+                    "Native Language" XP 75
+                    "Stealth" XP 15
+                }
+            }
+        }
+
+        #ttBSzSrupLyHFfkBG5RDBq1K ^"Social Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+15 Charm, +15 Folk Ken, +15 Guile, +75 Native Language" {
+                    "Charm" XP 15
+                    "Folk Ken" XP 15
+                    "Guile" XP 15
+                    "Native Language" XP 75
+                }
+            }
+        }
+
+        #t2YaKg5GezGUb469tfJfkqVj ^"Traveling Childhood" DEF {
+            EXTENDS ^"Childhood Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 66
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Five Years" YEARS 5 PRINTED "+5 Area Lore: Area A, +5 Area Lore: Area B, +15 Folk Ken, +5 Living Language, +75 Native Language, +15 Survival" {
+                    "Area Lore: Area A" XP 5
+                    "Area Lore: Area B" XP 5
+                    "Folk Ken" XP 15
+                    "Living Language" XP 5
+                    "Native Language" XP 75
+                    "Survival" XP 15
+                }
+            }
+        }
+
+        #tOn1z7cM2sbD1zSyQLtBsyKB ^"Athlete" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+30 Athletics, +5 Brawl, +5 Ride, +5 Swim" {
+                    "Athletics" XP 30
+                    "Brawl" XP 5
+                    "Ride" XP 5
+                    "Swim" XP 5
+                }
+            }
+        }
+
+        #tEee3ROu5DMJ5yG7a7JV0qi8 ^"Brawler" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+15 Athletics, +30 Brawl" {
+                    "Athletics" XP 15
+                    "Brawl" XP 30
+                }
+            }
+            DESCRIPTION "This package is also good for a character taught the basics of self-defense."
+        }
+
+        #tNDrTCQ413Cj91w4JueOZQGE ^"Charmer" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+30 Charm, +5 Folk Ken, +5 Guile, +5 Intrigue" {
+                    "Charm" XP 30
+                    "Folk Ken" XP 5
+                    "Guile" XP 5
+                    "Intrigue" XP 5
+                }
+            }
+        }
+
+        #tzdoV8hOXuFv4fUqN2EBVhb4 ^"Covenfolk" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+5 Area Lore, +20 Area Lore: Covenant, +15 Latin, +5 Organization Lore: Order of Hermes" {
+                    "Area Lore" XP 5
+                    "Area Lore: Covenant" XP 20
+                    "Latin" XP 15
+                    "Organization Lore: Order of Hermes" XP 5
+                }
+            }
+            DESCRIPTION "Characters who have not had exposure to Latin must redistribute the experience points in that language to the other Abilities of this package."
+        }
+
+        #tkSQ4CkTcntxOJCKHelYmNBv ^"Forager" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 72
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+15 Area Lore, +15 Hunt, +15 Survival" {
+                    "Area Lore" XP 15
+                    "Hunt" XP 15
+                    "Survival" XP 15
+                }
+            }
+            DESCRIPTION "Someone used to relying on the land to supplement his diet would employ this package."
+        }
+
+        #tDK4BFRNh4iHbjBHve5Ighfv ^"Leader" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 73
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+10 Folk Ken, +5 Charm, +30 Leadership" {
+                    "Folk Ken" XP 10
+                    "Charm" XP 5
+                    "Leadership" XP 30
+                }
+            }
+            DESCRIPTION "This is suitable for anyone in a position of authority."
+        }
+
+        #tzNwKLVba6y0HRWzMIobq6JO ^"Local" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 73
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+15 Area Lore, +15 Folk Ken, +15 Organization Lore" {
+                    "Area Lore" XP 15
+                    "Folk Ken" XP 15
+                    "Organization Lore" XP 15
+                }
+            }
+            DESCRIPTION "A villager or townsman who has good local knowledge of the area and its institutions can claim this package."
+        }
+
+        #tP6tnxkViBRIL4T5OKeuF158 ^"Rider" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 73
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+15 Animal Handling, +30 Ride" {
+                    "Animal Handling" XP 15
+                    "Ride" XP 30
+                }
+            }
+        }
+
+        #tsceUlQLIy2m2tgzLUWMegO0 ^"Trainer" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 73
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+5 Folk Ken, +5 Language, +5 Leadership, +30 Teaching" {
+                    "Folk Ken" XP 5
+                    "Language" XP 5
+                    "Leadership" XP 5
+                    "Teaching" XP 30
+                }
+            }
+            DESCRIPTION "This package is suitable for drill sergeants, master craftsmen, and so forth."
+        }
+
+        #tLwxcAAcyG8KHj3grUnsifMq ^"Wastrel" DEF {
+            EXTENDS ^"Non-Career Training Package"
+            PROPERTIES {
+                ^"Page" INTEGER 73
+                ^"Source" STRING "Grogs"
+            }
+            DURATIONS {
+                "Three Years" YEARS 3 PRINTED "+5 Brawl, +30 Carouse, +5 Folk Ken, +5 Guile" {
+                    "Brawl" XP 5
+                    "Carouse" XP 30
+                    "Folk Ken" XP 5
+                    "Guile" XP 5
+                }
+            }
+            DESCRIPTION "Someone who has wasted years of his life in taverns gambling and drinking would acquire these skills."
+        }
+}

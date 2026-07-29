@@ -1,0 +1,340 @@
+EXTENSION "ARMDef_Covenants_Economics" {
+    NAME "Ars Magica Definitive Edition, Covenants - Finances"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-25"
+    DEPENDS_ON "ARMDef_Covenants_Core_Ext"
+
+    #t94EGPSBciqMFpboa4RjzSyD ^"Craftsmen" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "People with a Craft Ability, employed by the covenant to practice their craft and produce wares for the covenant, such as a smith, a carpenter, or a weaver. Craftsmen allow for cost savings in one or more categories of expenditure — the covenant does not need to spend so much buying wares from outside. The exceptions are book-binders and illuminators, who do not save costs, but instead allow the covenant to produce quality books."
+            }
+            #tJSlWg8XUVT7rEEYMSK5XGXF ^"Dependents" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Residents supported by the covenant who do no useful work, such as children, idle spouses, the infirm, and retirees. Children should only be counted from the age of five onwards (children younger than five consume negligible). Once they are old enough to work, children can be moved to another category."
+            }
+            #t9e6j2bKnGR88QDeU4CzlHLr ^"Grogs" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Full-time soldiers whose primary vocation is the martial defense of the covenant and its magi."
+            }
+            #tuIzFOSpmrtoK1bqyRHi8Bof ^"Laborers" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Workers who gather food for the covenant, such as farmhands, herders, fishermen, or hunters. Laborers allow for cost saving on Provisions, since the covenant does not need to buy so much food."
+            }
+            #txPPk9sVrFT9ayq6kLMzI96N ^"Servants" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Essential folk who prepare and serve the food, clean, and perform other household tasks, such as maids, cooks, bakers, errand-boys, stablehands, and the like."
+            }
+            #tdDOYDKsiSPtuj7dHm2h79TD ^"Specialists" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Individuals who occupy some important role in the hierarchy of running the covenant, such as an autocrat, a steward, a chamberlain, a turb captain, or a scribe. Hermetic apprentices also count as specialists."
+            }
+            #tpf1RfRwZnE3Gx5d1bmZIy9v ^"Teamsters" DEF {
+                EXTENDS ^"Covenfolk Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "People who are employed to procure provisions and supplies from elsewhere and transport them to the covenant, typically one or more market buyers and a team of wagoners or hauliers. Some covenants are served by traveling merchants, in which case the teamsters do not belong to the covenant. However, they still need to be paid and accounted for, since it is more expensive to buy wares on your doorstep than to travel to market and buy them there — either way, the covenant has to bear the haulage costs."
+            }
+            #tuPvDLVjSImBWhfEF160Fsf1 ^"Number of Servants Required" DEF {
+                APPLIES TO [^"Covenant"]
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Number of Servants Required" "2 for every 10 points of (all inhabitants, excluding laborers, servants, and teamsters)"
+                }
+                DESCRIPTION "Number of Servants Required: 2 for every 10 points of (all inhabitants, excluding laborers, servants, and teamsters)"
+            }
+            #tvhotrZ2t0qP6x8XkVtk0WxI ^"Number of Teamsters Required" DEF {
+                APPLIES TO [^"Covenant"]
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Number of Teamsters Required" "1 for every 10 points of (all inhabitants, excluding laborers and teamsters – [2 * number of laborers])"
+                }
+                DESCRIPTION "Number of Teamsters Required: 1 for every 10 points of (all inhabitants, excluding laborers and teamsters – [2 * number of laborers])"
+            }
+            #txiboUKEWiYD9YsgDOODgmYE ^"Points of Laboratories" DEF {
+                APPLIES TO [^"Covenant"]
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Upkeep –5" "1"
+                    "Upkeep –4" "2"
+                    "Upkeep –3" "3"
+                    "Upkeep –2" "5"
+                    "Upkeep –1" "7"
+                    "Upkeep 0" "10"
+                    "Upkeep +1" "15"
+                    "Upkeep +2" "30"
+                    "Upkeep +3" "60"
+                    "Upkeep +4" "100"
+                    "Upkeep +5" "150"
+                    "Light use (average of one season or less per year)" "x 0.5"
+                    "Typical use (average of about two seasons per year)" "x 1"
+                    "Heavy use (average of three seasons or more per year)" "x 1.5"
+                }
+                DESCRIPTION "Laboratory's Upkeep Score / Points: –5 = 1; –4 = 2; –3 = 3; –2 = 5; –1 = 7; 0 = 10; +1 = 15; +2 = 30; +3 = 60; +4 = 100; +5 = 150. These following multipliers apply to maintenance costs, but not construction costs: Light use (average of one season or less per year) x 0.5; Typical use (average of about two seasons per year) x 1; Heavy use (average of three seasons or more per year) x 1.5. A covenant's total in this area is the sum of the points for all the laboratories in the covenant. For an Upkeep score of between –5 (the lowest possible) and +2, the number of points per laboratory is as specified in the above table. For example, a standard laboratory (Upkeep 0) equates to ten points. Beyond +2, the number of extra points gained per level of Upkeep increase is equal to the new Upkeep score times ten. For example, increasing the Upkeep from +2 to +3 increases the number of points by 30 (+3 multiplied by ten), taking it from 30 to 60. Thus, for a laboratory with an Upkeep of +2 or greater, the number of points is equal to ten times the number of experience points needed to buy an Art score with the same value as the Upkeep, as specified in the Advancement Table of ArM5, page 32. For example, a lab with an Upkeep of +15 equates to 1200 points, ten times the cost of an Art score of 15 (120 experience points). There is no upper limit on an Upkeep score except the covenant's ability to pay for it!"
+                REFERENCES {
+                    "Advancement Table" -> #tFCy3xuSWH7AaSGlKvbLLWFt ^"Advancement Tables"
+                }
+            }
+            #tfiz6H4kZdUn0JFVaJ95WZyJ ^"Points of Weapons and Armor" DEF {
+                APPLIES TO [^"Covenant"]
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Weapon or shield (Inexpensive)" "1"
+                    "Weapon or shield (Standard)" "4"
+                    "Weapon or shield (Expensive)" "16"
+                    "Partial armor (Inexpensive)" "2"
+                    "Partial armor (Standard)" "8"
+                    "Partial armor (Expensive)" "32"
+                    "Full armour (Inexpensive)" "4"
+                    "Full armour (Standard)" "16"
+                    "Full armour (Expensive)" "64"
+                    "Ballista or light catapult (Inexpensive)" "n/a"
+                    "Ballista or light catapult (Standard)" "n/a"
+                    "Ballista or light catapult (Expensive)" "16"
+                    "Heavy catapult or trebuchet (Inexpensive)" "n/a"
+                    "Heavy catapult or trebuchet (Standard)" "n/a"
+                    "Heavy catapult or trebuchet (Expensive)" "32"
+                }
+                DESCRIPTION "Inexpensive / Standard / Expensive: Weapon or shield 1 / 4 / 16; Partial armor 2 / 8 / 32; Full armour 4 / 16 / 64; Ballista or light catapult n/a / n/a / 16; Heavy catapult or trebuchet n/a / n/a / 32. A covenant's total in this area is the sum of the points of the weapons and armor possessed by all the characters at the covenant, as well as any the covenant itself has stored. For the sake of simplicity, you may wish to simply estimate the average number of points per grog."
+            }
+
+    #tMdBMz982MMpm3iTujMhwny2 ^"Agriculture" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Farming is the staple activity of most peasants, and so it is a logical (if somewhat unglamorous) source of income for a covenant. Such a covenant's territory contains at least one village of peasants, who labor in the covenant's lands in exchange for tenancy on their own, making the covenant similar to most feudal overlords. Only a few crops are produced in quantity, with the surplus being traded for other foods and goods. Rarer (and more profitable) farms specialize in the production of agricultural luxuries, for example, vineyards, silk farms (sericulture is the art of growing silkworms on mulberry plants), and kermes plantations (insects found on some Mediterranean oak trees, used to make dye).\n\nPros: Provides a mostly stable and uncontroversial source of income; the farm is usually close at hand (and a local food supply offers greater protection against famine).\n\nCons: Farming is tedious and tiring work, suitable only for peasants and subject to vagaries of the weather and crop blights.\n\nMagical Options: Creo Animal to make silk; Herbam to nurture crops (for example, The Bountiful Feast); Auram to ensure favorable weather.\n\nExamples\nLesser: Two or three Scottish hamlets, with rye and field crops.\nTypical: A large tract of wheat fields in Westphalia, with a half-dozen villages.\nGreater: An estate of several famed Burgundian vineyards.\nLegendary: A silk-farming monopoly in Constantinople."
+            }
+            #toEYD6JfVr4icwf10QvYJqyR ^"Charity" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Some few covenants are lucky enough to benefit from the charity of others, receiving a regular monetary gratuity. The donor might be an individual, such as a noble, a merchant, or a wealthy widow (if a player character, she should have the Wealthy Virtue); or an institution, such as a gild, another covenant, or the Church. The reasons for such generosity might be simple gratitude or altruism; alternatively, the donor might expect some form of protection or favors, or anticipate some future benefit from his or its \"investment.\"\n\nPros: You get money for nothing! Cons: Charity continues only for so long as the donor(s) are alive, solvent, and well-disposed towards the covenant.\n\nMagical Options: Mentem magics in the form of charms or potions to make a potential donor feel more generously inclined.\n\nExamples\nLesser: The charitable income of a monastery.\nTypical: A tithe or donation from a powerful Autumn covenant.\nGreater: The sponsorship of the king of France.\nLegendary: The income of the Pope."
+            }
+            #tt6gdBRqWqaEwDZcyuw8ensb ^"Crime" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Some magi, living at the edges of mundane society and lacking a legitimate source of wealth, find themselves falling into criminal habits, in which their supernatural talents may be highly useful. In wild or lawless areas, options relying on the simple application or threat of force may be feasible. These include banditry, racketeering (demanding protection money), and piracy. Subtler possibilities include blackmail, smuggling, forgery, fencing, espionage, and assassination. It should be noted that several of the other sources of income listed in this section, if undertaken without a right or permission, may be considered criminal. Under these circumstances, hunting is poaching, toll-gathering is theft, and moneylending is usury.\n\nPros: Crime pays, offering rewards that are disproportionate to the effort invested.\n\nCons: The constant threat of capture and punishment (which is usually severe); imperilment of the soul and possible demonic interest.\n\nMagical Options: Imaginem spells for disguise (for example, Disguise of the Transformed Image); Mentem for deception; even minor magics can cause fear or give the impression of a significant threat.\n\nExamples\nLesser: A gang of highway bandits. Typical: An organized crime network in a large city.\nGreater: The pirate fleet of the Rhine covenant of Waddenzee.\nLegendary: Robin Hood, with demonic assistance."
+            }
+            #tru7m65KWhRED5epmdkG2h9T ^"Fishing" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "It is possible to make a living harvesting from seas and rivers, instead of the land. This requires ready access to a river, or (preferably) a lake or sea, and one or more crewed vessels, replete with nets. Fish supplements the diet of many folk, and is usually eaten on Friday. Whales may also be hunted, for their oil and meat, although this requires a larger and more skilled crew.\n\nPros: You are unlikely to ever run out of fish.\n\nCons: Storms may damage or wreck fishing vessels; fish smell.\n\nMagical Options: Enchanted boats, nets, sails, or oars; Rego Auram, Rego Aquam, or Rego Animal to control the winds, the waves, and the catch, respectively.\n\nExamples\nLesser: A dozen fishing boats in a lakeside village, employing 40 people.\nTypical: A sizeable fishing fleet in a port town.\nGreater: A large Basque whale fishery.\nLegendary: Lübeck's monopoly on the fertile herring grounds of southern Sweden."
+            }
+            #tf1PUtR534bbZ1g9XlDJnSkK ^"Forestry" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Many covenants have woodland nearby, in which skilled foresters can make a living. Timber can be cut, providing wood for construction, shipbuilding, and fuel. Alternatively, some creatures, including the bear, fox, ermine, sable, and hare, may be hunted for their fur. A third possibility is to hunt wild animals such as deer and boar, or foraging pigs, for their meat, although this is not usually a viable source of income — such game is usually destined to grace the tables of local lords, not for sale at the local market, since hunting is a privilege which noblemen like to reserve for themselves. Magi might also hunt for vis or supernatural beasts, although this is not (usually) a source of mundane wealth. Some forests have relatively few trees, consisting of hunting preserves rather than woodlands (see the Chase Boon, for example). A covenant is unlikely to possess both significant farmland and forest, unless their estates are large.\n\nPros: Forestry is a relatively discreet enterprise, free from most mundane interference.\n\nCons: Possible infringement on the domains and rights of mundane or faerie lords, earning their enmity.\n\nMagical Options: Ritual Herbam magics to enhance the productivity of a forest; enchanted bows or spears to assist huntsmen; Rego Animal to summon or control hunted creatures.\n\nExamples\nLesser: Several miles of woodland, worked by three dozen woodcutters.\nTypical: A smaller royal chase, with a few villages and hamlets of well-trained huntsmen.\nGreater: Sable and ermine from a Russian forest estate, employing a hundred trappers.\nLegendary: Sole preserve of the royal New Forest, in England."
+            }
+            #tzsfHRGAxkBypIOIweY8MQDq ^"Hospitality" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "A decent living can be made by providing food, drink, and shelter (and possibly other, more specialized facilities or comforts) to wealthy travelers. Inns and taverns, with their related breweries and butcheries, are an obvious choice, but hospitals, farriers, and brothels also do good business. Such enterprises are usually located in towns and cities, along trade or pilgrimage routes, or at sites of religious significance or natural beauty. Unless the covenant happens to be located in such a place, a hospitable business may therefore need to be placed some distance away.\n\nPros: Subtle magics may make such a business very profitable; Redcaps tend to favor hospitable covenants.\n\nCons: Magi, having The Gift, tend to be unwelcoming types who do not usually relish mundane visitors to their covenant. If the business is located elsewhere, it must be independently managed by a trusted companion.\n\nMagical Options: Mentem magics to bolster the spirits of visitors and loosen their purses; magically enhanced beverages or food.\n\nExamples\nLesser: A large town tavern. Typical: A luxurious Parisian brothel.\nGreater: The Bierhaus brewery and inn in Bamberg, Franconia.\nLegendary: The great hospital of St. John, in Jerusalem."
+                REFERENCES {
+                    "The Gift" -> #tl8PlKeRUtDRy1gIvS6afpp4 ^"The Gift"
+                }
+            }
+            #tefv9Rkx2KHG4N7NIgJaG9iC ^"Livestock" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Farmland owned by the covenant might be devoted mainly to animal pasture, instead of crops, and income gained from the sale of livestock, hides, or wool. Just as with arable farming, this is not the most glamorous source of income, and usually requires at least a small holding of peasants to tend the herds. A few covenants are known to breed sheep and calves in order to produce parchment and vellum.\n\nPros: Animal herding is less labor intensive than arable crops; use can be made of more marginal land (such as forest or heath).\n\nCons: Animals are often smelly and noisy; the risk of animal pestilence.\n\nMagical Options: Creo Animal to make cloth, hides, or parchment, or enhance fertility; Rego Animal to control herds; Herbam to nurture crops for grazing.\n\nExamples\nLesser: A village or two of Alpine goat-herders.\nTypical: A pig-herding operation (1,000 head) in extensive beech woodlands.\nGreater: One of the wealthiest East Anglian wool estates.\nLegendary: A famed Andalusian stud farm, breeding warhorses for princes and dukes."
+            }
+            #tUp8XJLWtTx3bWHBbUa89npj ^"Manufacturing" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "With a retinue of skilled craftsmen, a covenant lacking in natural resources can nevertheless provide for itself by manufacturing and selling goods. Buyers might include merchants, the nobility, the Church, or other covenants. The covenant could produce simple household manufactures, such as tools, cloth, or leather goods. More exotic possibilities, which would likely be traded further afield, include war materials (weapons, armor, siege equipment, and so on), luxury clothing, furniture, or ships. A handful of covenants are known for their manufacture of parchments, inks, glassware, and other laboratory exotica, which can be readily traded with other covenants.\n\nPros: Magic can often be successfully employed to improve the quality or quantity of goods, inflating profits handsomely.\n\nCons: The covenant's production may draw the ire of rival producers or infringe upon pre-existing monopolies; the Quaesitores take a dim view of blatantly magical manufacture.\n\nMagical Options: Magical tools, machines, or containers to help craftsmen with their trade; spells to purify or enhance either raw materials or the end product.\n\nExamples\nLesser: A few dozen town craftsmen. Typical: A busy shipyard in a port city.\nGreater: A famed swordsmithing workshop in Toledo, Castile.\nLegendary: A Venetian glassblowing monopoly."
+            }
+            #tPeN4ZoBTTXVEIliio8Euyzt ^"Mining" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "In the right location, a covenant may be able to hew its riches from the earth. Covenants have been known to be placed atop mines, extracting either metal ores (iron, tin, lead, copper), salt, or coal. More rarely, a lucky covenant may even be located near a source of silver, gold, or gemstones. Some other covenants are built near quarries, and export ashlar (blocks of dressed stone) or slate, which is used as a fireproof roofing material.\n\nPros: A relatively stable and solid source of income.\n\nCons: Mining is backbreaking, dirty, and dangerous work; a wealthy mine may arouse the envy of surrounding nobles.\n\nMagical Options: Enchanted tools to accelerate quarrying or mining; a fake mine where Creo Terram is used to create metal or stone from scratch (or Muto Terram employed to transform it from base rock).\n\nExamples\nLesser: An unremarkable coal mine. Typical: A large sandstone quarry. Greater: The salt mines of Wieliczka, in Poland.\nLegendary: The Penteli marble quarries, near Athens."
+            }
+            #tYeVAZkpwFmR6lki0R8NtNnX ^"Money" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "For those who already find themselves with a surplus of cash, it is possible to profit in a number of ways, including moneylending, banking, moneychanging, or pawnbroking. Since the Church regards usury (the charging of interest) as sin, moneylending is mostly undertaken by Jews, although some other moneylenders and moneychangers employ various tricks to hide their interest, such as demanding repayment in a more valuable currency. In the 13th century, banking is in its infancy, only existing to any extent in the urban centers of northern Italy.\n\nPros: No heavy lifting; money breeds money.\n\nCons: Usury is sin — moneylenders may be vilified or punished; the risk of bad debt; requires you to have money in the first place!\n\nMagical Options: Creo Terram to create coins from scratch; Muto Terram or Muto Imaginem to change the denomination of coins or their appearance; Mentem magics to influence customers.\n\nExamples\nLesser: The main pawnbroker in a sizable town.\nTypical: A large and wealthy Jewish family.\nGreater: A Mercer House specializing in moneylending.\nLegendary: The Genoese bank of Leccacorvo."
+                REFERENCES {
+                    "Mercer House" -> #tgjTuHFRLx7J3e7vmw5pnt13 ^"Mercer House"
+                }
+            }
+            #tzGuMopfC1k04eLwI3Aknuae ^"Service" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Although it is difficult to make a good living out of unskilled labor, since peasants are cheap to hire, covenants may be able to profit by hiring out their skilled covenfolk or companions, be they apothecaries, architects, artists, fortune-tellers, merchants, minstrels, or ship's captains. One or two individuals by themselves are unlikely to provide a sizable income, unless prodigiously talented; dozens of skilled workers may be needed. Such skilled service is likely to prove most profitable where there are rich people willing to pay for it, such as in a large city, or in the lands of a wealthy nobleman. Some covenants have even been known to hire out their turb as a band of mercenaries, although this stretches at the edges of the Code.\n\nPros: Puts the idle covenfolk to work, without needing to feed and house them.\n\nCons: Availability of work may vary considerably; the covenfolk may get a better offer and decide not to return.\n\nMagical Options: Any items which help the covenfolk in their work, such as enchanted musical instruments; Mentem magics to ensure their loyalty and return.\n\nExamples\nLesser: A wandering troupe of a dozen minstrels, modestly famed.\nTypical: A king's favored astronomer, paid handsomely for his astrological predictions.\nGreater: A Greek navy of several dozen ships, with expert crew, for hire.\nLegendary: Several hundred elite Ghulam bodyguards."
+            }
+            #tZu5VqkwYitkPbV5GKrki5Dl ^"Toll-Gathering" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Those who find themselves in a strategically important location, such as by a bridge, ford, ferry, mountain pass, city gate, or waystation, usually seek to profit from it, by imposing a toll on passing travelers and merchants. To do this legitimately requires either that one owns the facility in question, or has permission from the feudal overlord to collect tolls, although this is a privilege that the greater nobility like to reserve for themselves. In places where it is possible to easily bypass the toll station (such as on a road), it must be patrolled, and all toll stations require a certain measure of force, so that non-payers can be refused entry.\n\nPros: You ask people for money and they give it to you!\n\nCons: Typically infringes on the rights of nobles; requires enforcement and defense; threat of rival toll-collectors.\n\nMagical Options: Creo Terram to create a bridge; Rego Terram or Mentem to extract more coins from toll-payers.\n\nExamples\nLesser: The toll on a river ferry. Typical: The toll on the only bridge leading to a large town.\nGreater: A toll station in the Rhine gorge or an Alpine pass.\nLegendary: Customs duties at Venice or Constantinople."
+            }
+            #t1arXOiEVOyoxgDrEb4xYzwq ^"Trade" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "A covenant lacking resources can make money by transporting things from where they are cheaply available to where they are expensive. Some merchants travel great distances with precious items, while others prefer to follow short routes many times per year. Some covenants provide other services to traders, like warehouse space, repair facilities and lighterage, in exchange for fees.\n\nHouse Mercere is involved in many trading enterprises and is usually interested in exploring alliances with trading covenants.\n\nPros: Selling someone else's wares is easier and more profitable than producing them yourself.\n\nCons: Competition may be fierce; risks of banditry and piracy; supply and demand may vary. Cargoes are very expensive and are often purchased with credit, making shipwrecks ruinous.\n\nMagical Options: Items or spells to preserve goods or transport them safely and quickly, such as faster or more durable wagons or ships; Muto magics to change the size or amount of goods for storage or sale.\n\nExamples\nLesser: A local merchant with a dozen carts, or a small ship that trades locally.\nTypical: A large merchant ship chasing rumors of profit across Europe or trading manufactured goods to nearby regions. Alternatively, a small fleet of ships engaged in local trade of bulk goods like food, fuel, or salt.\nGreater: A merchant company with warehouses in at least two cites, ferrying consignments in many ships each year. Alternatively, a fleet of up to a dozen ships, of varying sizes, all plying profitable routes.\nLegendary: In Northern Europe, an annual fleet to Acre in the Levant, that returns laden with fine silk and aromatic spices. In Southern Europe, annual expeditions to the almost-fabled lands where gemstones are mined and spices grow, like India, Ethiopia, or Persia."
+            }
+            #t7hnl3FKcCwZFMIUyDmLchla ^"Wizardry" DEF {
+                EXTENDS ^"Income Source"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Some covenants take the straightforward approach of trying to profit directly from their magical talents. Magical items, potions, the casting of spells disguised as charms or fortune-telling, and so on, may be offered to wealthy nobles for the right price. This needs to be undertaken with considerable discretion, in order to avoid mundane meddlement and attracting unwanted attention to the Order of Hermes. An alternative possibility is to sell items of Hermetic value, such as books, lab texts, vis, items, longevity rituals, and even seasons of service to other covenants or magi. Although vis is the far more usual Hermetic currency, rich covenants and magi may sometimes be willing to pay in cash, or with other mundane wealth — even a single pawn of vis may be worth a dozen or more pounds to the right buyer. This avoids the problems of selling to mundanes, but it is rather demeaning to hawk away one's magics for mere silver.\n\nPros: Wealthy folk will pay handsomely for magic; needs very few covenfolk.\n\nCons: Most magi tend to view those who sell their magics with some measure of contempt; possible attention from the Quaesitores; loss of seasons and vis.\n\nMagical Options: This is the magical option!\n\nExamples\nLesser: Occasional minor charms or potions sold to the local nobility.\nTypical: A couple of smaller items or Longevity Rituals per year sold to the nearest Mercer House.\nGreater: Michael Scot, the court wizard of Frederick II, the Holy Roman Emperor.\nLegendary: Verdi, the domus magna of House Verditius."
+                REFERENCES {
+                    "Order of Hermes" -> #tARMDefConceptOrderOfHermes ^"Order of Hermes"
+                    "Longevity Rituals" -> #tExlPnQFFU4L9wpE5R5J52SL ^"Longevity Rituals"
+                    "Mercer House" -> #tgjTuHFRLx7J3e7vmw5pnt13 ^"Mercer House"
+                    "House Verditius" -> #tUvtxlbPq1iFLynWarDqAkiY ^"House Verditius"
+                }
+            }
+
+    #tQAn4cFGK1MXx7uoiHlp6ZJG ^"Yearly Expenditure Categories" DEF {
+                APPLIES TO [^"Covenant"]
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "The regular expenditure of the covenant can be divided into the following categories. It is worth noting that the Buildings, Consumables, Provisions, and Wages totals usually amount to exactly one pound per point of inhabitants, and form the bulk of the expenditure. Thus, a very rough rule of thumb is that a covenant can afford a number of points of inhabitants equal to its income in pounds, provided it has a moderate amount of cost saving."
+            }
+            #tHKlNMPoBX4pQ1dSjmTOjIMG ^"Buildings" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Buildings Cost" "1 pound for every 10 points of inhabitants"
+                }
+                DESCRIPTION "The covenant's buildings need to be properly maintained, decorated, and furnished to prevent them from falling into disrepair. For example, damaged roofing and stonework has to be patched up, old furniture needs to be replaced, and there are often plenty of minor repair jobs for a carpenter to do.\n\n**Buildings Cost:** 1 pound for every 10 points of inhabitants\n\nAdd two pounds for any relevant Minor Fortifications Boon, and five pounds for any relevant Major Fortifications Boon (see Chapter 2: Boons and Hooks, Fortification). Only Boons that add to the size, magnificence, or quantity of the covenant's buildings or fortifications count."
+            }
+            #t4KIPtkHHES9XnV5ysrqU6d2 ^"Consumables" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Consumables Cost" "2 pounds for every 10 points of inhabitants"
+                }
+                DESCRIPTION "There are a whole host of minor tools, equipment, and consumables that are necessary for the smooth running of a covenant, which need to be replenished and repaired, including candles, carts, clothing, fuel, kitchen utensils, barrels, brooms, and so on. Special materials required for books and laboratories are accounted for separately.\n\n**Consumables Cost:** 2 pounds for every 10 points of inhabitants"
+            }
+            #tVETRSku95SBiaQe8F5VrwiJ ^"Inflation" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Most covenants have a gradually corrosive effect on their local economy (see the Magical Improvement section above) and the magi would be wise to be careful how they spend their money, to avoid inflating the prices of the things they need to buy.\n\nThe effects of inflation can be crudely modeled by simply adding a flat cost in pounds to the yearly expenditure. In the covenant's first year, the inflation cost should be zero. As a rule of thumb, it is suggested that it increase by one pound per hundred pounds of expenditure every year, although in favorable years (if there is a good harvest, for example) the inflation may not rise, or in bad years (perhaps when the magi have spent profligately) it may increase by several pounds. Also, it is suggested that inflation not increase during a year in which the covenant's expenditure drops (for example, as a result of new cost saving measures)."
+            }
+            #tFKO8OVWEWG7303mmQGBrRpJ ^"Laboratories" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Laboratories Cost" "1 pound per 10 points of laboratories"
+                }
+                DESCRIPTION "Unsurprisingly, magi are willing to spend a significant portion of their money on their own laboratories. To maintain a laboratory at its existing level requires a steady supply of replacement equipment (especially glassware) and precious ingredients, as well as more basic items, such as fuel for heating and candles for lighting. The cost for each laboratory depends on its Upkeep score (see Chapter 9: Laboratory). For example, a standard laboratory (with an Upkeep of 0) costs one pound per year of typical use.\n\n**Laboratories Cost:** 1 pound per 10 points of laboratories"
+            }
+            #tN4vAEfSWhKnz5xTav4l7mTk ^"Provisions" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Provisions Cost" "5 pounds for every 10 points of inhabitants"
+                }
+                DESCRIPTION "With many dozens of mouths to feed, one of the covenant's major items of expenditure — often the largest of all — is the purchase of foodstuffs. A typical covenant consumes grains, meat, fish, vegetables, cheese, spices, salt, ale, and wines, and needs fodder for its horses.\n\n**Provisions Cost:** 5 pounds for every 10 points of inhabitants"
+            }
+            #tgipyJcYuRlDvoFXVTx1OAm9 ^"Tithes" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Some covenants need to regularly pay off their masters, just like many folk in medieval Europe. Such yearly payments might take the form of a tithe to another covenant, taxes to a feudal overlord or the Church, or debt repayments."
+            }
+            #t5t3MGTopyLC681A3Njps7gP ^"Wages" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Wages Cost" "2 pounds for every 10 points of inhabitants"
+                }
+                DESCRIPTION "Covenfolk are not usually paid a daily wage; they instead receive food and lodging in return for their service. Nevertheless, it is common for them to be given a modest weekly or monthly stipend so that they may occasionally buy things for themselves. For example, a grog in a typical Spring covenant might get one penny per week, enough to buy a dozen mugs of ale. Although magi do not get paid wages per se, they nevertheless often have some kind of allowance for discretionary personal spending. This caters for minor purchases such as clothing, jewelry, and the like, which need not be accounted for separately. The \"wages\" for horses can be assumed to be spent on the extra food that they require.\n\nYou may adjust these wage costs as appropriate for your covenant, but bear in mind that the more you pay them, the happier the covenfolk will be (and vice-versa). The standard wage costs listed here make no adjustment to Loyalty; if you increase (or reduce) them, you may gain the benefits (or penalties) to Loyalty outlined in Chapter 4: Governance, Prevailing Loyalty.\n\n**Wages Cost:** 2 pounds for every 10 points of inhabitants\n\nThe formula equates to one penny per point of inhabitants, per week. Add one pound per each penny that is paid daily to any professional soldiers in the covenant's service. For example, for the Veteran Fighters and Crossbowmen Boons, add one or nine pounds per soldier, respectively."
+                REFERENCES {
+                    "Veteran Fighters" -> #tUENAG0ymvvxZNAiLrLEZ6Il ^"Veteran Fighters"
+                }
+            }
+            #tFc9H8xqfdrXVG8IdivFx7Uj ^"Weapons and Armor" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Weapons and Armor Cost" "1 pound for every 320 points of weapons and armor"
+                }
+                DESCRIPTION "Almost all covenants have a turb of warriors, who are outfitted with weaponry and armor, and some have an additional store of weapons, or even an arsenal. This equipment needs to be regularly cleaned, repaired, and (every so often) replaced. However, for a small turb with modest outfitting, this cost is likely to amount to only a couple of pounds per year.\n\n**Weapons and Armor Cost:** 1 pound for every 320 points of weapons and armor"
+            }
+            #tbIeBFNCBkmDnr3sOimX9Jte ^"Writing Materials" DEF {
+                EXTENDS ^"Expenditure Category"
+                PROPERTIES {
+                    ^"Source" STRING "Core Rules"
+                }
+                FORMULAS {
+                    "Writing Materials Cost" "1 pound for every magus, scribe, bookbinder, and illuminator"
+                }
+                DESCRIPTION "Writing is a costly business, since parchment and inks are expensive. As a rule of thumb, one pound provides enough materials to write four books, without embellishment. Typically, a magus uses such a quantity in one year. For example, two seasons of lab work (in which a lab text is produced), one season of book writing, plus diaries, accounts, records, letters, and so on, would amount to this much. Writing costs can be reduced for magi who are absent from the covenant or undertake little lab work or scribing, however. Specialist craftsmen (scribes, binders, and illuminators) allow better quality books to be produced, but add to the production costs (see Chapter 7: Library). Precious materials used for resonant bonuses on books are more expensive still, but are counted as sundry expenses (see below), on a case-by-case basis.\n\n**Writing Materials Cost:** 1 pound for every magus, scribe, bookbinder, and illuminator"
+            }
+            #tMjSwshE0PgVgcXOeE34xPvY ^"Cost Saving Limits by Craft" DEF {
+                APPLIES TO [^"Covenant"]
+                PROPERTIES {
+                    ^"Table" LIST ["Category of Expenditure | Example Craftsmen | Cost Saving Limit (per Craft)", "Buildings | stonemason, carpenter, furniture maker, thatcher | 50%", "Consumables | blacksmith, carpenter, candlemaker, tinker, weaver, leatherworker, cooper, cobbler | 20%", "Laboratories | glass-blower, goldsmith, silversmith, lapidary, mechanic, toolmaker | 20%", "Provisions | brewer, vintner | 20%", "Weapons and Armor | swordsmith, armorer, bowyer | 50%", "Writing Materials | percamenarius, ink-maker | 50%"]
+                    ^"Source" STRING "Core Rules"
+                }
+                DESCRIPTION "Table of expenditure categories, example craftsmen, and cost saving limits (per Craft)."
+            }}

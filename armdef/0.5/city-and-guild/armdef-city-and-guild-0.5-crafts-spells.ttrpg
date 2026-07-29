@@ -1,0 +1,28 @@
+EXTENSION "ARMDef_CityAndGuild_Crafts_Spells" {
+    NAME "Ars Magica Definitive Edition, City & Guild - spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-28"
+    DEPENDS_ON "ARMDef_City_And_Guild_Core_Ext"
+
+    # The book's ONE spell. A section becomes a spell only if it actually prints a
+    # stat line (risk class R6), so this is found the same way the trilogy's are --
+    # and the five paragraphs the slicer had filed under it belong to `Damaged
+    # Goods` on p77, which is why the foreign-tail repair runs before this.
+
+    #t8b7afaa35696e79eef6350 ^"The Key of Theodorus" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "ReTe 10 R: Touch, D: Mom, T: Part"
+            ^"Source" STRING "City & Guild"
+        }
+        DESCRIPTION "ReTe 10 R: Touch, D: Mom, T: Part This spell magically opens any single lock. Regardless of the lock’s complexity or quality, it falls open at the end of this spell. Since the locking mechanism is designed to naturally move in a single direction to lock and unlock it, this is a base 1 effect. The sixth century Greek inventor, Theodorus of Samos, is credited with creating the first locks in Mythic Europe.\n\n(Base 1, +1 Touch, +2 Part, +2 for metal)"
+    }
+
+}

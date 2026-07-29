@@ -1,13 +1,15 @@
 EXTENSION "ArM5_CityAndGuild_Labor_Sidebars" {
-    NAME "Ars Magica Fifth Edition, City & Guild - Chapter Two sidebars"
+    NAME "Ars Magica Fifth Edition, City & Guild - Chapter Two: Labor sidebars"
     VERSION "0.5.0"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-28"
     DEPENDS_ON "ArM5_City_And_Guild_Core_Ext"
 
-    # Every Text Box the source's outline enumerates for Chapter Two. Prose
-    # sidebars become GUIDANCE with verbatim TEXT; sidebar units are never
-    # reordered (decision M-15).
+    # Every Text Box the source's outline enumerates for this chapter. Prose
+    # sidebars become GUIDANCE with verbatim TEXT; a box carrying a real table unit
+    # also emits a structured TABLE DEF. Sidebar units are never reordered
+    # (decision M-15): a box is one self-contained flow and the page-level reading
+    # oracle cannot tell its text from the main column's.
 
     GUIDANCE {
         ENTRY ^"Saving the Business of an Old Friend" #teb6bbb8781edb2cceba77e {

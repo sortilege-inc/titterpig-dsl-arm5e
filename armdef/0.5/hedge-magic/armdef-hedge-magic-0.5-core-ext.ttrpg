@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_Hedge_Magic_Core_Ext" {
     NAME "Ars Magica Fifth Edition, Hedge Magic [Revised Edition] - core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-26"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -26,7 +26,7 @@ EXTENSION "ARMDef_Hedge_Magic_Core_Ext" {
     # Gruagachan, Learned Magicians) each have their own Techniques and Forms,
     # parallel to (but distinct from) the Hermetic Arts. Twenty in all. Each is
     # a Technique or a Form of exactly one tradition.
-    #tHedgeArtHedgeMagicBaseXXX ^"Hedge Art" DEF {
+    #t7873812fa0422bdd45a168 ^"Hedge Art" DEF {
         PROPERTIES {
             ^"Tradition" STRING REQUIRED
             ^"Art Kind" ENUM ["Technique", "Form"] REQUIRED
@@ -46,7 +46,7 @@ EXTENSION "ARMDef_Hedge_Magic_Core_Ext" {
     # the Gruagachan use Give/Blessing), a level, and a Range/Duration/Target
     # line. Range/Duration/Target are STRING, not the Hermetic enum: Gruagach
     # spells use Ranges like "Conversation" and Durations like "Limit"/"Geas".
-    #tHedgeSpellHedgeMagicBaseXX ^"Hedge Spell" DEF {
+    #t0366dd9f2578b0f22f9bc5 ^"Hedge Spell" DEF {
         PROPERTIES {
             ^"Tradition" ENUM ["Hermetic", "Learned Magicians", "Gruagachan"] REQUIRED
             ^"Technique" STRING REQUIRED
@@ -66,7 +66,7 @@ EXTENSION "ARMDef_Hedge_Magic_Core_Ext" {
     # The Vitkir cast by carving rune scripts. Each rune spell is inscribed with
     # a primary rune (optionally a secondary rune), has a level (a number, or
     # "General"), and uses one of the casting Methods. 48 in all.
-    #tRuneSpellHedgeMagicBaseXXX ^"Rune Spell" DEF {
+    #t096cdf4e33c68fb634c969 ^"Rune Spell" DEF {
         PROPERTIES {
             ^"Rune" STRING REQUIRED
             ^"Secondary Rune" STRING
@@ -82,7 +82,7 @@ EXTENSION "ARMDef_Hedge_Magic_Core_Ext" {
     # The 24 runes of the Elder Futhark, each an h3 section of Chapter Seven with
     # its own letter, meaning, aett, and the kinds of effect it governs. The
     # rune's guideline write-up is its verbatim DESCRIPTION.
-    #tRuneHedgeMagicBaseXXXXXXXX ^"Rune" DEF {
+    #t52a8aa740f9b19b3496eb0 ^"Rune" DEF {
         PROPERTIES {
             ^"Letter" STRING REQUIRED
             ^"Meaning" STRING REQUIRED
@@ -99,7 +99,7 @@ EXTENSION "ARMDef_Hedge_Magic_Core_Ext" {
     # magic. 49 rows. These are pure alphabet-correspondence data — the book
     # gives no rules prose for them — so they are soft-statted from the table
     # (name, letter, pronunciation, meaning, Elder-Futhark equivalent).
-    #tModifiedRuneHedgeMagicBase ^"Modified Rune" DEF {
+    #tda5890a44fc8c7bf6e6533 ^"Modified Rune" DEF {
         PROPERTIES {
             ^"Table" STRING REQUIRED
             ^"Letter" STRING

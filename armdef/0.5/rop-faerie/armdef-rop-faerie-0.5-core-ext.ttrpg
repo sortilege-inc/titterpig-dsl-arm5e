@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     NAME "Ars Magica Fifth Edition, Realms of Power: Faerie - core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-26"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -28,7 +28,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     # cost is kept BOTH as the printed string ("2 or more points", "10 points")
     # and, when the book gives a determinate number, as an integer, so a
     # consumer can total a faerie's Might expenditure without re-parsing prose.
-    #tFaeriePowerRoPFaerieBaseXX ^"Faerie Power" DEF {
+    #t84d15c61569668f6f97c5a ^"Faerie Power" DEF {
         PROPERTIES {
             ^"Group" ENUM ["Ritual", "Greater and Lesser", "Focus", "Personal"] REQUIRED
             ^"Might Cost" STRING
@@ -49,7 +49,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     # descend from, with its own bonuses. Kept distinct from the core rulebook's
     # single parameterised ^"Faerie Blood" Virtue: these are the enumerated
     # stocks that Virtue's subject ranges over, each with a full write-up.
-    #tFaerieBloodRoPFaerieBaseXX ^"Faerie Blood" DEF {
+    #te111b4e360261e56d88f79 ^"Faerie Blood" DEF {
         PROPERTIES {
             ^"Stock" STRING REQUIRED
             ^"Source" STRING DEFAULT "Realms of Power: Faerie"
@@ -63,7 +63,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     # Path of Destiny, or a Forking Path. The three readings are first-class
     # STRING properties (not one packed blob) so a storyguide can pull the
     # reading they want.
-    #tStoryElementRoPFaerieBaseX ^"Story Element" DEF {
+    #t810e46640b34c455bb72f7 ^"Story Element" DEF {
         PROPERTIES {
             ^"Group" ENUM ["Actors", "Props", "Scenery"] REQUIRED
             ^"Path of Chance" STRING
@@ -78,7 +78,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     # Chapter Six's rules for mortal wizards who bargain with, mimic, or wield
     # faerie power. 22 rules topics filed under five sections (Rites of Faerie,
     # Faerie Methods, Faerie Powers, Faerie Bargaining, Pagan Traditions).
-    #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry" DEF {
+    #t46b0e8b651dcf1476aad19 ^"Faerie Wizardry" DEF {
         PROPERTIES {
             ^"Section" STRING REQUIRED
             ^"Source" STRING DEFAULT "Realms of Power: Faerie"
@@ -91,7 +91,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     # Hermetic spell guidelines: a level and the effects available at it. A
     # single level often lists several distinct effects, kept as a LIST so none
     # is merged away.
-    #tFaerieWizGuidelineRoPFaeri ^"Faerie Wizardry Guideline" DEF {
+    #tcdeb0b361edb7e888c3f31 ^"Faerie Wizardry Guideline" DEF {
         PROPERTIES {
             ^"Power" STRING REQUIRED
             ^"Level" STRING REQUIRED
@@ -100,7 +100,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
         }
         DESCRIPTION "A level guideline for one of the eight Faerie Wizardry powers: the level and the effects that can be achieved at it."
         REFERENCES {
-            "Faerie Wizardry" -> #tFaerieWizardryRoPFaerieBas ^"Faerie Wizardry"
+            "Faerie Wizardry" -> #t46b0e8b651dcf1476aad19 ^"Faerie Wizardry"
         }
     }
 
@@ -112,7 +112,7 @@ EXTENSION "ARMDef_RoP_Faerie_Core_Ext" {
     # enumerable bestiary content but the book gives them as prose, so they are
     # soft-statted here: a name, the verbatim passage, and — for a variant — the
     # base creature it varies. NEVER invented numbers.
-    #tFaerieCreatureNoteRoPFaeri ^"Faerie Creature Note" DEF {
+    #t65b42046008183271439be ^"Faerie Creature Note" DEF {
         PROPERTIES {
             ^"Relates To" STRING
             ^"Source" STRING DEFAULT "Realms of Power: Faerie"

@@ -1,6 +1,6 @@
 BASE "ArM5_Core_Base" {
     NAME "Ars Magica Fifth Edition - Foundation (actors and characteristics)"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
 
@@ -66,9 +66,18 @@ BASE "ArM5_Core_Base" {
             ^"Age" INTEGER MIN 0
             ^"Apparent Age" INTEGER MIN 0
             ^"Decrepitude" INTEGER MIN 0 DEFAULT 0
+            # Decrepitude Points accumulate toward each rise in Decrepitude.
+            ^"Decrepitude Points" INTEGER MIN 0 DEFAULT 0
             ^"Warping Score" INTEGER MIN 0 DEFAULT 0
+            # Warping Points accumulate toward each rise in Warping Score; a
+            # distinct stat the book tracks separately on the character sheet.
+            ^"Warping Points" INTEGER MIN 0 DEFAULT 0
             ^"Fatigue Levels" STRING
             ^"Wound Penalties" STRING
+            # Soak (Stamina + armor + Size) and the derived Encumbrance string,
+            # carried on every character sheet — shared by all human actor types.
+            ^"Soak" INTEGER DEFAULT 0
+            ^"Encumbrance" STRING
             ^"Personality Traits" LIST OF ^"Personality Trait"
             ^"Reputations" LIST OF ^"Reputation"
             ^"Abilities" LIST OF ^"Ability"

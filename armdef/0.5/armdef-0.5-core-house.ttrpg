@@ -1,6 +1,6 @@
 BASE "ARMDef_Core_House" {
     NAME "Ars Magica Definitive Edition - Hermetic House (core stub)"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
 
@@ -16,6 +16,9 @@ BASE "ARMDef_Core_House" {
             ^"Domus Magna" STRING
             ^"Benefit" STRING
             ^"Outer Mystery" STRING
+            # The free Virtue(s) this House grants its magi at creation. A magus
+            # records the one(s) they took in ^"Magus".^"Free Virtue".
+            ^"Free Virtue" LIST OF ^"Virtue"
             ^"Source" STRING DEFAULT "Core Rules"
         }
     }

@@ -1,6 +1,6 @@
 BASE "ARMDef_Core_Character_Creation" {
     NAME "Ars Magica Definitive Edition - Detailed Character Creation"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -84,14 +84,17 @@ BASE "ARMDef_Core_Character_Creation" {
         PROPERTIES {
             ^"Starting Points" INTEGER 7 FIXED
         }
+        # Each row: the characteristic SCORE bought and its point COST (a
+        # negative COST returns points). Labeled so the score/cost pairing is
+        # unambiguous for every row, including the negative scores.
         COSTS {
-            +3 6
-            +2 3
-            +1 1
-            0 0
-            -1 -1
-            -2 -3
-            -3 -6
+            SCORE +3 COST 6
+            SCORE +2 COST 3
+            SCORE +1 COST 1
+            SCORE 0 COST 0
+            SCORE -1 COST -1
+            SCORE -2 COST -3
+            SCORE -3 COST -6
         }
         DESCRIPTION "Characteristics are bought on the following table. You start with seven points to spend. All characters buy Characteristics in the same way.\nFor Hermetic magi, you should note that Intelligence is central to Hermetic laboratory work, and thus magi should seriously consider taking a positive score in it. Similarly, Stamina is very important for spellcasting, and so a negative score there is best avoided. Communication is vital if you want your character to write good books."
     }

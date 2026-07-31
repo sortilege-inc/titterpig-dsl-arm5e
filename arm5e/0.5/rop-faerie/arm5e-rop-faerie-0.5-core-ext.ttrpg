@@ -1,8 +1,8 @@
 EXTENSION "ArM5_RoP_Faerie_Core_Ext" {
     NAME "Ars Magica Fifth Edition, Realms of Power: Faerie - core type extensions"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
-    RELEASE_DATE "2026-07-26"
+    RELEASE_DATE "2026-07-31"
     DEPENDS_ON "ArM5_Core_Base"
 
     # Realms of Power: Faerie is an EXTENSION on the arm5e edition, loaded
@@ -118,5 +118,31 @@ EXTENSION "ArM5_RoP_Faerie_Core_Ext" {
             ^"Source" STRING DEFAULT "Realms of Power: Faerie"
         }
         DESCRIPTION "A prose bestiary passage without a stat block of its own: a creature variant, a thematic grouping, or a sub-location note. Soft-statted verbatim; no numbers are invented."
+    }
+
+    # ------------------------------------------ Faerie Character Creation
+    # Chapter Three's player-character build budget. The narrative procedure is
+    # captured verbatim in arm5e-rop-faerie-0.5-faerie-characters.lore; the
+    # determinate numbers are ALSO recorded here (double-capture, as with the
+    # Faerie Power Might costs) so a character-creation tool can read the budget
+    # without re-parsing prose. Owner decision, 2026-07-31. No numbers invented.
+    #tfae51c4ea70cre8budget001 ^"Faerie Character Creation" DEF {
+        APPLIES TO [^"Creature"]
+        PROPERTIES {
+            ^"Starting Might" INTEGER 5 FIXED
+            ^"Characteristic Points" INTEGER 7 FIXED
+            ^"Pretense Points Per Year" INTEGER 15 FIXED
+            ^"Pretense Reference Age" INTEGER 5 FIXED
+            ^"Pretense Points Base" INTEGER 120 FIXED
+            ^"Default Magus Age" INTEGER 21
+            ^"Default Pretense Points" INTEGER 360 NOTE "15 × (21 − 5) + 120"
+            ^"Companion Virtue Points" INTEGER 10 FIXED
+            ^"Magus Free Virtues" INTEGER 1 FIXED
+            ^"Magus Virtue Points" INTEGER 20 FIXED
+            ^"Magus Virtues Per Flaw" INTEGER 2 FIXED
+            ^"Source" STRING "Realms of Power: Faerie"
+            ^"Page" INTEGER 45
+        }
+        DESCRIPTION "Faeries designed as player characters use values from the following formula. Replacing a Companion: up to 10 points of Virtues balanced by Flaws. Replacing a Magus: 1 free, then up to 20 points of Virtues paid for with Flaws at 2 Virtues per Flaw. The character has a number of Pretense points figured as follows: Pretense Points = 15 × (average age of magus player characters – 5) + 120 points. This multiplier may be changed by the Pretentious or Ostentatious Virtues, or Aloof Flaw. If the character’s physical form has any inherent Abilities, you must purchase Pretenses for those first. In Chapter 4: Faerie Bestiary, faeries designed for use as player characters assume that the magi in the campaign are 21 years old, which gives 360 points of Pretences. Player characters begin with a Faerie Might score of 5, which may be varied by selecting appropriate Virtues or Flaws during character creation. A character must have a Might score, a physical form, a level of cognizance, a Social Interaction Virtue, and a taboo."
     }
 }

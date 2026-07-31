@@ -1,0 +1,26 @@
+EXTENSION "ArM5_Apprentices_Adolescentia_Spells" {
+    NAME "Ars Magica Fifth Edition, Apprentices - Chapter Five: Adolescentia spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-31"
+    DEPENDS_ON "ArM5_Apprentices_Core_Ext"
+
+    # The chapter's one new spell, structured as a ^"Formulaic Spell"; the TeCo
+    # line and effect text are the source's own, the description verbatim.
+
+    #tbb07bd791332535965e9f4 ^"Ager Belli" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Requisites" STRING "Rego"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "This illusion creates a Roman soldier. The soldier responds to the mental direction of the caster, who must maintain concentration as the soldier moves. The image contains only visual elements. This spell is used by Hermetic apprentices to play Bellum. Note that other spells can be designed that make different illusionary images. A Roman soldier is a standard image, but any Size 0 figure is allowed, including knights, club-wielding barbarians, and supernatural creatures like fauns and satyrs. (Base 1 (illusion affecting 1 sense), +1 Touch, +1 Conc, +2 coordinate complex movements of the illusion, +1 Rego requisite.)"
+    }
+
+}

@@ -1,0 +1,214 @@
+EXTENSION "ArM5_Apprentices_Creating_Young_Characters_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, Apprentices - Chapter Two: Creating Young Characters Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-31"
+    DEPENDS_ON "ArM5_Apprentices_Core_Ext"
+
+    # Found by evidence: an h4 small-caps NAME whose body opens with the source's own
+    # italic type line ('*Minor Virtue, Child*'). Size, kind and the category list are
+    # read off that line. A 'Child' category routes the record to ^"Child Virtue"/
+    # ^"Child Flaw"; every other record to core ^"Virtue"/^"Flaw". DESCRIPTIONs are
+    # verbatim (dslemit.verbatim token-subsequence gate).
+
+    #tff5f8f6a50dcc4f24317c8 ^"Apprentice" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character is an apprentice to an Hermetic magus."
+    }
+
+    #tcddd853cc136562e0b801e ^"Bastard" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character is an illegitimate child. The father may be known, by many or a few, but does not recognize the child as his."
+    }
+
+    #ta3307fa4bf6946d5c91736 ^"Orphan" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The child’s parents are unknown or deceased. Someone else serves as the child’s caretaker, either a relative, a kindly cleric, or an institution. If the character starts play as an apprentice, he has the Free Social Status Virtue: Apprentice. Apprentices"
+    }
+
+    #ta161c404ebb1cbec519a70 ^"Boundless Energy" DEF {
+        EXTENDS ^"Child Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "Youthful vigor surges through the character, giving him a +3 bonus to Fatigue rolls."
+    }
+
+    #t09668f6926728367e0f68c ^"Bully" DEF {
+        EXTENDS ^"Child Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child, Personality"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character feels compelled to pick on others who are smaller, weaker, or generally less confident. He is likely physically intimidating and relatively unpopular with his peer group because of this. The character has a Personality Trait: Bully +3."
+    }
+
+    #tcc9f8ff3990a9c584c56ea ^"Deft Characteristic" DEF {
+        EXTENDS ^"Child Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character has a natural affinity for a specific Characteristic and only suffers half the normal Characteristic Modifier penalty (rounded down) due to his age."
+    }
+
+    #t2fdafaf72292df25c4d89a ^"Dependence" DEF {
+        EXTENDS ^"Child Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child, Personality"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character does not feel comfortable without a mentor or someone he trusts watching over him, and is extremely shy of strangers. When completely alone, he suffers a –3 penalty to everything he tries to do, and feels intensely abandoned and fearful."
+    }
+
+    #t2f46234b6acc51e4928883 ^"Grows Quickly" DEF {
+        EXTENDS ^"Child Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character grows much more quickly than other children. Treat her as if she were one age category higher on the Aging Chart when determining her Size."
+    }
+
+    #td1424a5b339bc7f065a99b ^"Inconspicuous" DEF {
+        EXTENDS ^"Child Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "Due to demeanor, disposition, or supernatural meddling, the character is easily overlooked and unnoticed. She gains a +3 bonus on rolls that help her hide and avoid attention."
+    }
+
+    #t64056701d807e867a5382f ^"Infatuation" DEF {
+        EXTENDS ^"Child Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major or Minor"
+            ^"Category" STRING "Child, Story"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character is romantically attracted to someone (not a player character) with whom he has no chance of a relationship, whether because it would be inappropriate or simply because it is unrequited. As a Minor Flaw, the character is infatuated with someone who likes him, just not in that way, and is willing to assist him on occasion. As a Major Flaw, the character is infatuated with someone who doesn’t like him, and who uses this emotional advantage to order the character around."
+    }
+
+    #t302c528d642d2cd562f4fc ^"Know-It-All" DEF {
+        EXTENDS ^"Child Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major or Minor"
+            ^"Category" STRING "Child, Personality"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character has a deep-seated need to show off her experience and knowledge to others. She cannot resist demonstrating her superiority, and often fails to impress or convince because of her self-centered attitude."
+    }
+
+    #t19224759741ca31d43baef ^"Abandoned Apprentice" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character was abandoned by his master midway through his Hermetic training. He knows Hermetic magic and can cast spells and enchant items like other magi. He is not a member of the Order of Hermes, however. Some Tribunals rule that an apprentice has a year to find another parens before he is hunted down and slain like a Marched magus. Most Tribunals rule that abandoning an apprentice is a low crime, and if the character makes his situation known his parens may face legal action."
+    }
+
+    #t3410dbf791d8ffc8f1ef08 ^"Late Bloomer" DEF {
+        EXTENDS ^"Child Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Child"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character is slow to mature. Treat him as if he were one age category lower on the Aging Chart. For example, a child of 12 would have a Characteristics penalty of –2 and a of Size –2."
+    }
+
+    #t0c2a645116305b84e9f8f4 ^"Protection from Diseases" DEF {
+        EXTENDS ^"Child Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Child, Supernatural"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "Some supernatural agent — Divine, Infernal, Faerie, or Magic — has granted the character immunity from all diseases. The character can still suffer wounds and other damage, but diseases do not affect him. The reason for such protection could be benevolent, malicious, or accidental, depending on the creature bestowing the protection and its future plans."
+    }
+
+    #t497d5fc58bb55a05137ebd ^"Turbulence Prone" DEF {
+        EXTENDS ^"Child Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Child"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "This Flaw is only available for Gifted characters. Whenever you roll a potential botch on a magical activity, whether or not you actually botch, you must also check for turbulence (explained in the next chapter). The character cannot attempt to control this turbulence, as he focuses on preventing the potential calamity represented by the botch dice. The effects of turbulence are always bad. Decide at what age the character was abandoned. Create the character as a regular apprentice up until that age, and then give him experience points based on his age and other Virtues for his life past being abandoned. If the character knows the Parma Magica, he must join the Order or be slain. Even if the character joins the Order, his background continues to cause problems for him."
+    }
+
+    #tda89ba3ed1815b8aac596a ^"Frail" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character is weak of build and easily hurt when undertaking physical activities. He has a –3 penalty to his Soak score."
+    }
+
+    #t8d0e63b9e663e08a0fb43b ^"Low Tolerance" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character cannot easily withstand pain and fatigue. Increase the penalties for reduced Fatigue levels by one point, and increase the total penalty from wounds the character has received by one point. You also suffer a –3 penalty on rolls for the character to resist pain."
+    }
+
+    #t22eb8fe92e4ad1c4558270 ^"Short of Breath" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character cannot last as long as others when exerting himself and quickly tires during extended physical activity. He receives a – 3 penalty to all Stamina rolls to avoid fatigue, including rolls to maintain Concentration."
+    }
+
+    #tbf50c5c6ef79a2617071d8 ^"Slow Reflexes" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character does not react well to surprises. He receives a –3 to his Initiative total in situations warranting a quick response."
+    }
+
+    #t05f2731fee5e14bd1305a5 ^"Suppressed Gift" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Hermetic, Story"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "The character has The Gift but cannot access its power, having temporarily lost his magical ability through mishap or some other misfortune. While the Gift is suppressed, the character cannot perform Hermetic magic, improve his Arts, or perform the Parma Magica. His Arts do provide him with Magic Resistance and he continues to suffer the negative social penalties of The Gift. Such a character may still use Supernatural Virtues and Abilities. He may be a member of the Order of Hermes, depending on when his Gift was suppressed. How The Gift returns should be decided by the storyguide. Examples are surviving a laboratory disaster while assisting another magus (perhaps that was how Suppressed Gift was gained), comprehending a Temporary Twilight while in a powerful regio, visiting the Magic Realm and succeeding in some task, or undergoing a year’s instruction from an elder dragon. The troupe should consider carefully how the character will fit into the saga. If he replaces a player’s magus, he has a very serious Flaw. If he replaces a companion, he will become much more powerful when the Story Flaw is resolved. Either approach can work, with care."
+    }
+
+}

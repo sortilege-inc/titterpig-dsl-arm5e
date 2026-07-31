@@ -1,0 +1,32 @@
+EXTENSION "ArM5_Apprentices_Creating_Young_Characters_Tables" {
+    NAME "Ars Magica Fifth Edition, Apprentices - Chapter Two: Creating Young Characters tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-31"
+    DEPENDS_ON "ArM5_Apprentices_Core_Ext"
+
+    # The chapter's tables, structured (a table is never prose). Columns are read
+    # off the printed header, spacer columns dropped; every cell is cell_verbatim-gated.
+
+    #t2e93583ea040162b3c7cdc ^"Aging Chart" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Age", "Characteristic Modifier", "Size Modifier"]
+            ^"Source" STRING "Apprentices"
+        }
+        TABLE {
+            "<1 yr" "–10" "–3"
+            "1 yr" "–9" "–3"
+            "2 yrs" "–8" "–3"
+            "3 yrs" "–7" "–2"
+            "4 yrs" "–6" "–2"
+            "5 yrs" "–5" "–2"
+            "6–7 yrs" "–4" "–2"
+            "8–9 yrs" "–3" "–2"
+            "10–11 yrs" "–2" "–2"
+            "12–13 yrs" "–1" "–1"
+            "14+ yrs" "0" "0"
+        }
+        DESCRIPTION "In the chart below, apply the Characteristic Modifier to all of the character’s Characteristics."
+    }
+
+}

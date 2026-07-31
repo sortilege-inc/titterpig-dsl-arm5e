@@ -1,0 +1,22 @@
+EXTENSION "ARMDef_Apprentices_Adolescentia_Virtues_Flaws" {
+    NAME "Ars Magica Fifth Edition, Apprentices - Chapter Five: Adolescentia Virtues & Flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-31"
+    DEPENDS_ON "ARMDef_Apprentices_Core_Ext"
+
+    # The chapter's one new laboratory flaw. Shared Lab is a Free Outfitting Flaw
+    # (the source names Covenants' lab Virtue/Flaw system); modelled on Covenants'
+    # ^"Laboratory Flaw" type, description verbatim.
+
+    #t1a1d5e03ed11d0319bd5cf ^"Shared Lab" DEF {
+        EXTENDS ^"Laboratory Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Outfitting"
+            ^"Source" STRING "Apprentices"
+        }
+        DESCRIPTION "*Covenants* introduced lab Virtues and Flaws, which describe laboratory merits and defects. **Shared Lab **is a Free Outfitting Flaw. The lab is not large enough for the resident magi working on independent projects, each of whom needs at least 500 square feet of space. *–2 General Quality, * *–2 Safety*"
+    }
+
+}

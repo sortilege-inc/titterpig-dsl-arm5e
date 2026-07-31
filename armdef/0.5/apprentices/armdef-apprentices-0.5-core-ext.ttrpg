@@ -1,0 +1,26 @@
+EXTENSION "ARMDef_Apprentices_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Apprentices - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-07-31"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # Apprentices is an EXTENSION on the arm5e edition, loaded alongside the core
+    # rulebook (spec S13 composition). Most Virtues and Flaws fit the core
+    # ^"Virtue"/^"Flaw" unchanged; narrative goes to .lore and tables are structured
+    # TABLE DEFs. Only the two types below are new.
+
+    # Child Virtues and Flaws are, in the source's words, "a new type of Virtue and
+    # Flaw that reflects childhood boons and banes that are outgrown by adulthood." A
+    # Child Virtue or Flaw must CHANGE during one of the Transitions of Maturation
+    # (there is no set pattern for how it changes -- the troupe decides). Modeled as a
+    # subtype of the core type so the record set is queryable as its own kind (owner
+    # decision 2026-07-31); Size/Category/Source are inherited from the core type.
+    #t7e05ec135cc702a13f7d78 ^"Child Virtue" DEF {
+        EXTENDS ^"Virtue"
+    }
+
+    #t5386d466ee3d995fa32246 ^"Child Flaw" DEF {
+        EXTENDS ^"Flaw"
+    }
+}

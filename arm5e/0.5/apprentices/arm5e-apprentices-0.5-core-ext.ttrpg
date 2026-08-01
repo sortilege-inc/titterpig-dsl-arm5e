@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Apprentices_Core_Ext" {
     NAME "Ars Magica Fifth Edition, Apprentices - core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-31"
     DEPENDS_ON "ArM5_Core_Base"
@@ -22,5 +22,37 @@ EXTENSION "ArM5_Apprentices_Core_Ext" {
 
     #t5386d466ee3d995fa32246 ^"Child Flaw" DEF {
         EXTENDS ^"Flaw"
+    }
+
+    # ------------------------------------------ Young Character Creation
+    # Chapter Two's build budget for characters created younger than adult. The
+    # narrative procedure is verbatim in
+    # arm5e-apprentices-0.5-creating-young-characters.lore; the determinate numbers
+    # are ALSO recorded here (double-capture, as with Faerie Character Creation) so a
+    # character-creation tool reads the budget without re-parsing prose. The age-based
+    # Characteristic/Size penalties are the ^"Aging Chart" TABLE (…-tables.ttrpg).
+    # Owner decision 2026-07-31; no numbers invented.
+    #tyng5c4ch8crea70nbudg001 ^"Young Character Creation" DEF {
+        APPLIES TO [^"Character"]
+        PROPERTIES {
+            ^"Characteristic Points" INTEGER 7 FIXED
+            ^"XP Per Year" INTEGER 15 FIXED
+            ^"XP Per Year Wealthy" INTEGER 20 FIXED
+            ^"XP Per Year Poor" INTEGER 10 FIXED
+            ^"XP Start Age" INTEGER 5 FIXED
+            ^"Ability Max Score" INTEGER 5 FIXED
+            ^"Grog Virtue Flaw Points" INTEGER 3 FIXED
+            ^"Companion Virtue Flaw Points" INTEGER 10 FIXED
+            ^"Child Virtue Flaw Max Age" INTEGER 20 FIXED
+            ^"Apprenticeship Years" INTEGER 15 FIXED
+            ^"Apprenticeship XP" INTEGER 240 FIXED
+            ^"Apprenticeship Spell Levels" INTEGER 120 FIXED
+            ^"Apprenticeship XP Per Year Early" INTEGER 19 FIXED
+            ^"Apprenticeship XP Per Year Late" INTEGER 46 FIXED
+            ^"Transition Ages" STRING "8, 15, 21"
+            ^"Source" STRING "Apprentices"
+            ^"Page" INTEGER 7
+        }
+        DESCRIPTION "Younger characters have 7 points allocated toward Characteristics, with Virtues and Flaws adding or subtracting points from that total. A score of 0 represents an average Characteristic for the character’s age group. Characteristics for young characters are negatively adjusted because of age; use the Aging Chart to determine a character’s Characteristic Modifier and Size Modifier. Young grogs can have up to three points of Virtues and Flaws, and young companions and apprentices can have up to ten. At character generation, the number of Virtues must equal the number of Flaws (the exception is an apprentice who has acquired the Free House Virtue). Each character gains a number of experience points for Abilities depending on the character’s starting age. After 5 years of age, the character gains 15 experience points a year; those with the Wealthy Virtue receive 20 experience points per year, and a character with the Poor Flaw receives 10. Young characters have a maximum Ability score of 5; Hermetic Arts are not limited by age. For a standard apprenticeship, the player receives 240 experience points to spend on Abilities and Arts, and 120 levels of spells, over 15 years. There are three Transitions of Maturation — between ages 7 and 8, between 14 and 15, and at 21 — during which the player may change Virtues and Flaws of equal value; Child Virtues and Flaws must be changed by the final transition. Only magus and companion characters may take Inherited Virtues and Flaws."
     }
 }

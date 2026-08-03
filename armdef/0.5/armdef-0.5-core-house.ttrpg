@@ -1,6 +1,6 @@
 BASE "ARMDef_Core_House" {
     NAME "Ars Magica Definitive Edition - Hermetic House (core stub)"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
 
@@ -19,6 +19,14 @@ BASE "ARMDef_Core_House" {
             # The free Virtue(s) this House grants its magi at creation. A magus
             # records the one(s) they took in ^"Magus".^"Free Virtue".
             ^"Free Virtue" LIST OF ^"Virtue"
+            # How the Free Virtue list is applied at creation:
+            #   Fixed   - the single listed Virtue is granted (default).
+            #   Choice  - the magus picks ONE of the listed Virtues.
+            #   Open    - the magus picks a qualifying Virtue not enumerable here
+            #             (see ^"Benefit"); the list holds a representative example.
+            #   Package - ALL listed Virtues/Flaws are granted together (one
+            #             example tradition; e.g. House Ex Miscellanea).
+            ^"Free Virtue Mode" ENUM ["Fixed", "Choice", "Open", "Package"] DEFAULT "Fixed"
             ^"Source" STRING DEFAULT "Core Rules"
         }
     }

@@ -96,3 +96,86 @@ as blocked-on-dependency origins in Grogs templates and Master of Kennels).
 - `Houses of Hermes - True Lineages.pdf`
 - `Realms of Power - The Infernal.pdf`
 - `Realms of Power - The Divine [Revised].pdf`
+
+## 2026-09-15 — TABLED: the arm5e↔armdef edition seam (owner)
+
+**All arm5e/armdef sourcebook reference work is tabled** pending a decision on how
+the Definitive Edition should express absorbing a Fifth Edition sourcebook's
+types. The §5d reference migration (DECISION-13) was applied to both trees and
+filled everything unambiguous; **583 references are held** — arm5e 91, armdef 492
+— and are NOT to be resolved piecemeal. They are one architectural question.
+
+### What the seam is
+
+ArM5 core has no `^"Laboratory"` entity; **Covenants** introduced it. ArMDef
+**consolidated** it into its own core. So:
+
+```
+arm5e/0.5/arm5e-0.5-core-laboratory.ttrpg     3 DEFs, no ^"Laboratory"
+arm5e/0.5/covenants/…-core-ext.ttrpg          #taKk3J80C97U9JM8e8grpEvf ^"Laboratory"   ← the only one
+armdef/0.5/armdef-0.5-core-laboratory.ttrpg   #tkAcHrN5TUjI8v5f2bOaLGQj ^"Laboratory"   ← armdef's own
+armdef/0.5/covenants/…-core-ext.ttrpg         #taKk3J80C97U9JM8e8grpEvf ^"Laboratory"   ← mirrored, arm5e's hash
+```
+
+Inside armdef the name now has two anchors, so every by-name reference to it is
+ambiguous. Six names carry 351 of the 492: Laboratory, Laboratory Virtue,
+Laboratory Flaw, Income Source, Expenditure Category, Covenfolk Category — plus
+Grog/Companion (68) against `armdef-0.5-sourcebook-compat.ttrpg`.
+
+### Why it happens — and it is not a conversion defect
+
+`retarget_armdef.py`'s Rule 6 already handles stale cross-edition hashes: it
+**remaps** `#arm5e_hash ^"Name"` to ArMDef's own anchor for that name, and where
+**ArMDef has two anchors for one name it drops the hash instead**, on the stated
+reasoning that "guessing which one was meant is worse than a by-name reference."
+
+That was correct under the old rule. **DECISION-13 withdrew it**: a hashless
+reference whose name resolves to more than one distinct entity is now an ERROR.
+The retarget's deliberate fallback and the new spec rule are in direct conflict,
+and the conflict is exactly these 583 sites.
+
+### The larger finding
+
+§19 says hash identity is **stable within** an edition and carries **no identity
+across** it — "the same" entity in a newer edition is a *new* definition with a
+*new* hash. Measured across the eleven mirrored sourcebooks:
+
+| | anchors |
+|---|---:|
+| declared in arm5e sourcebooks | 3,144 |
+| declared in armdef sourcebooks | 3,149 |
+| **byte-identical across the edition boundary** | **2,788** |
+
+`spells` is the sole exception (356 / 360, **0 shared**) — worth checking whether
+that was deliberate, because it is the one book already doing what §19 describes.
+`grogs` has the single allow-listed armdef-only `^"Grog Aging"`.
+
+Separately: **266 armdef core type names are also defined in a mirrored
+sourcebook with no shared anchor** — the Laboratory pattern, 266 times, not 6.
+
+### The options (owner has not chosen)
+
+1. **Follow §19 as written.** Retarget mints armdef-namespace anchors for
+   mirrored DEFs and records each correspondence in a new
+   `arm5e-to-armdef.bridge` (§21 `MAP`, which already covers rename /
+   revision-in-place / merge / substitution with no new vocabulary). Fixes the
+   collision at its cause; no new spec construct. Touches the retarget and every
+   mirrored anchor.
+2. **A conditional / system-gated construct** (owner's sketch, 2026-09-15):
+   `CONDITION: system=arm5e { … } CONDITION: system=armdef { … }` in one source.
+   A genuine spec extension (would be DECISION-14). Attractive because the
+   sourcebooks really are meant to be compatible with both targets — but it
+   reverses §19's settled choice of *separate namespaces + a derived artifact*
+   over *automatic overlay*, and adopts the silent-divergence failure §19 names.
+3. **Bind per book.** A reference takes the type declared in its own book. All
+   583 resolve; changes nothing architecturally; leaves the seam undescribed.
+
+No `arm5e-to-armdef` bridge exists today — only `arm4-to-arm5e` and
+`dnd5e-to-dnd5.5e`.
+
+### State while tabled
+
+Both trees validate 0/0 and compose unchanged (`arm5e-0.5-full`: 3974 entities,
+2918 flattened, 0 missing parents, 0 cycles — before and after the migration).
+Only the new §5d references gate fails, by design. Held sites are listed with
+their candidates in `titterpig-mastra/worklogs/DECISION-13-holds.md`.

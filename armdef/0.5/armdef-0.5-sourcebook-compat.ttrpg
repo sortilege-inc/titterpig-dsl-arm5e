@@ -1,6 +1,6 @@
 BASE "ARMDef_Sourcebook_Compat" {
     NAME "Ars Magica Definitive Edition - sourcebook compatibility types"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-29"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -27,20 +27,20 @@ BASE "ARMDef_Sourcebook_Compat" {
 
     # ── Two that ArMDef already has under its own name ──────────────────────────
     # ArMDef declares ^"Boon" and ^"Hook" with exactly the shape arm5e gives
-    # ^"Covenant Boon" / ^"Covenant Hook": APPLIES TO [^"Covenant"], the same
+    # ^"Covenant Boon" / ^"Covenant Hook": APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"], the same
     # Magnitude ENUM, plus a ^"Requires" field of its own. So these are declared as
     # SUBTYPES rather than as parallel duplicates -- Covenants' 214 boons and hooks
     # resolve under the name the book uses, while ArMDef's own vocabulary stays
     # underneath them and a consumer querying ^"Boon" still sees the whole set.
     #tARMDefCompatCovenantBoon ^"Covenant Boon" DEF {
-        EXTENDS ^"Boon"
+        EXTENDS #te6NaMwV2LTJOs2GI64z5WYp ^"Boon"
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }
     }
 
     #tARMDefCompatCovenantHook ^"Covenant Hook" DEF {
-        EXTENDS ^"Hook"
+        EXTENDS #tPhoL2rnJvbItWypGngx8n2N ^"Hook"
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }
@@ -58,14 +58,14 @@ BASE "ARMDef_Sourcebook_Compat" {
     # should read a Fifth Edition grog template against ArMDef's covenfolk model is
     # an open question for the owner -- not something this file decides.
     #tARMDefCompatGrogType ^"Grog" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
     }
 
     #tARMDefCompatCompanionType ^"Companion" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
@@ -75,7 +75,7 @@ BASE "ARMDef_Sourcebook_Compat" {
     # (^"Creo Animal Guidelines" and so on) with no abstract type above them.
     # Societates' seven Flambeau guideline records EXTEND the abstract name.
     #tARMDefCompatSpellGuideline ^"Spell Guideline" DEF {
-        APPLIES TO [^"Formulaic Spell"]
+        APPLIES TO [#tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"]
         PROPERTIES {
             ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"]
             ^"Form" ENUM ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"]

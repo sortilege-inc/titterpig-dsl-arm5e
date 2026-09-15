@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_Laboratory" {
     NAME "Ars Magica Definitive Edition - Laboratory"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
     DEPENDS_ON "ARMDef_Core_Laboratory"
@@ -298,28 +298,28 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #tRzJdY8jTMKdsQe52eKTnDZk ^"Penetration (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "You have some options on how effects in an enchanted device operate. They are listed below. These modifications change the \"standards\" for enchanted devices. You may elect to give the effect nonzero Penetration. For every level you add to the effect's level, that effect gets +2 Penetration. If there are multiple effects in a device, each must be given a Penetration score separately."
         }
         #tLwr0M2C2LWPtUG5iaWUW5pv ^"Concentration (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "When investing an effect, you can arrange to have the device maintain concentration on the effect for the wielder. This option adds +5 to the effect's level. Note that the wielder still needs to concentrate to change how the effect is used. For instance, a levitation belt that does not require concentration can hold someone in the air, but to move up or down the wielder must concentrate. Effects left to their own concentration start to wear off at sunset and sunrise. At these times the wielder must concentrate on the effect for a few moments to perpetuate it until the next sunrise or sunset, whichever comes first. This effect is useful for things like invisibility rings, which have their effect when put on, and then maintain concentration and invisibility until removed. This allows the wearer to end the effect at will, and start it again if the device still has uses left.\n\nThe item can only maintain one instance of the effect at a time, unless the same effect is invested in the same item multiple times. For example, a wand of invisibility that can make a person invisible six times per day and maintain concentration can only make one person invisible at a time. However, if the wand were instead invested with six effects each of which could be used once per day, and maintained concentration, then it could make six people invisible at once. This would require more vis, more seasons, and a different trigger for each effect."
         }
         #tnVnNoxhjZ3UOpiMr9TGVMmQ ^"Effect Use (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "You can restrict the use of a device's effect to a specific list of people (for example, to you and all your current apprentices) by adding +3 to the level of the effect. You work the identities of these people into the enchantment itself, so the list can never be changed, nor can the restriction be bypassed.\n\nYou may also restrict the use of the device to an undefined group, such as 'only women', or 'only people in my direct magical lineage' by using a linked trigger (see below).\n\nOtherwise, invested devices can be activated by anyone who knows their trigger actions."
         }
         #tDVYtjGFZD6ZGUkcjbPGLjhu ^"Effect Expiry (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Table" LIST ["ITEM LASTS | EXCESS MODIFIER", "1 year | x10", "7 years | x5", "70 years | x2"]
                 ^"Source" STRING "Core Rules"
@@ -330,21 +330,21 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #tR1As5mIxKDsMhAs08gibonR ^"Environmental Trigger (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The effect is triggered by some feature of the item's environment, rather than a specific action. The item is only sensitive to major magical features of the environment. Thus, it can respond to the events that end spell durations (sunrise, sunset, phases of the moon, etc.), and to changes in the modifier applied to magical activities by the local aura. This adds +3 to the level of the effect."
         }
         #tQllTYrPmqpxeDGUilNekAT3 ^"Fast Trigger (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The effect gains a +3 Initiative modifier. This adds +5 to the level of the effect."
         }
         #tnOO1uLRYhe2ietw4hMrJtGS ^"Linked Trigger (Effect Modification)" DEF {
-            EXTENDS ^"Effect Modification"
+            EXTENDS #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -1116,14 +1116,14 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #tduSavBKmoHK0xUrl5QxgbOj ^"Size (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Size specifies broadly how much floor space is provided by the physical structure of the laboratory. The larger the laboratory is, the more benefits (Virtues) it can accommodate. Thus, each point of Size adds to the maximum permitted number of Virtue points minus Flaw points (see Virtues and Flaws, below).\n\nIt is sometimes necessary to use the occupied Size, which might be less than the Size. More often than not, the laboratory is filled to capacity (there is no more room for extra points of Virtues), in which case the occupied Size is simply equal to the Size. However, if the lab space is not fully used, then the occupied Size is equal to the Size minus the number of free points available for new Virtues. (We will see below that this is exactly the same as the number of points of Virtues minus Flaws, minus the Refinement.) For example, a lab with Size +4 and Refinement 0, and two points of Virtues minus Flaws, has an occupied Size of +2. In this case, the occupied Size is given in parentheses, so for this example, the Size would be written as +4 (+2).\n\nDespite the extra Virtues that they may accommodate, most magi do not opt to have a significantly above-average sized lab. This is because labs with positive Size have two drawbacks:\n\nFirstly, the more a laboratory is expanded, the more unmanageable and dangerous it becomes — it becomes harder to oversee it all, and it takes longer to get around it. Magi can only cope with a certain extent of equipment and outfittings, before they begin to lose track of it all. For this reason, and as stated above, the occupied Size (if positive) subtracts from the lab's base Safety. (Since Refinement has the opposite effect, however, this penalty may be offset by taking a Refinement at least as high as the Size.) There is no Safety benefit to an occupied Size less than zero.\n\nSecondly, it looks slightly ridiculous if a chamber is far larger than it needs to be to accommodate a laboratory. It is not aesthetically pleasing if, for example, all your furniture and equipment squats in the middle of a much larger room, surrounded by an echo chamber of unused space which merely gathers dust and cobwebs. For this reason, for every full two points by which the Size exceeds the occupied Size, you should take the Empty Flaw. For example, a lab with Size +5 (0) should take the Empty Flaw twice."
         }
         #t2m9JhAhlhdwtLMek39XglBQ ^"Refinement (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -1145,21 +1145,21 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #tkqZNA1cFJPwmQzngaWsV5Xx ^"General Quality (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "General Quality is simply an overall measure of the effectiveness of the lab in all areas. General Quality adds to all Lab Totals. This bonus (or penalty, if the General Quality is negative) applies in addition to any other Lab Total adjustments (such as from Specializations). This Characteristic has no effect on teaching (except for teaching spells, which uses a Lab Total) or the scribing of texts."
         }
         #twkRLt3uHNPZJmZXp1GVZFCo ^"Upkeep (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Upkeep specifies the monetary cost of building and maintaining the lab. For example, a lab with priceless ingredients may have a better General Quality, but it is also more expensive to maintain. A lab with an Upkeep of 0 costs 5 pounds to build and 1 pound per typical year of use to maintain. See Chapter 6: Covenants for the costs of labs with other Upkeep scores.\n\nThere may be insufficient money to maintain a lab at its current Upkeep. In this case, after two seasons of use with neglected maintenance, a new Flaw is gained automatically (or an existing Virtue lost), which reduces the Upkeep. This may need to be repeated (after another two seasons) until the Upkeep drops to an affordable level. For example, Semita Errabunda experiences a temporary financial crisis, and can only afford to spend one pound per year on Darius's Upkeep +2 laboratory (which normally needs three pounds per year). After two seasons, the lab gains a Flaw which reduces the Upkeep to +1, and after a further two seasons, another Flaw, taking the Upkeep to 0.\n\nIf a new Virtue or Flaw (or its removal) results in a increase to Upkeep, then the difference between the old and new build costs (which are 1 pound per 2 points of the lab; see Chapter 6: Covenants) must be paid. For example, raising the Upkeep from +2 to +4 (an increase of 70 points) costs 35 pounds. Thereafter, maintenance is paid at the new, higher rate. However if the Upkeep score should drop, there is no refund."
         }
         #tJMG1JIcKqz9u2MBtuES2svj ^"Safety (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -1169,7 +1169,7 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #tnxK2UkT7tozf8CJumbjTUVf ^"Warping (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -1182,14 +1182,14 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #t2KyBRIlzr3tUYAIzCF6e5Dv ^"Health (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The environment of a laboratory might be either beneficial or detrimental to the health of its owner. A lab with a positive Health score might be especially snug, comfortable, or clean, whereas a lab with a negative Health might be drafty, awkward to get around, or bear a foul stench. The Health score adds to any Wound Recovery rolls for inhabitants of the lab. Also, half of the Health score (rounded down) adds to the Living Conditions modifier (used for Aging rolls) for inhabitants, provided that they spend at least half of the year there. In this way, the Living Conditions modifier of a lab (or sanctum) might differ from that of the covenant as a whole.\n\nFor example, the lab of Igor Rastvan has a Health of +2, giving +1 to the Living Conditions modifier. His covenant of Roznov has a base Living Conditions modifier of +2 for magi, therefore his total Living Conditions modifier is +3."
         }
         #tdyaYy11UqF2rihN025intbm ^"Aesthetics (Lab Characteristic)" DEF {
-            EXTENDS ^"Laboratory Characteristic"
+            EXTENDS #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic"
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -1820,7 +1820,7 @@ EXTENSION "ARMDef_Laboratory" {
             }
         }
         #trmOzM1QpxNNDBN5EarSzymZ ^"Altar (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["any Technique", "Vi"]
                 ^"Source" STRING "Core Rules"
@@ -1828,7 +1828,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An ornamental place of ritual worship, such as a raised dais."
         }
         #tAyvDsPseFBtPr3woxIIA6ck ^"Animal Pen (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Familiar", "An"]
                 ^"Source" STRING "Core Rules"
@@ -1836,7 +1836,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An enclosure for one or more animals, often a familiar, to dwell."
         }
         #tn37fVP7zZu8LyMR9rBk9oM4 ^"Antechamber (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Experimentation", "Spells", "Re"]
                 ^"Source" STRING "Core Rules"
@@ -1844,7 +1844,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A separate enclosure or compartment. Spells may be cast here in a more secure environment."
         }
         #t6FIgL9Rzmiss2ADb5ELFg8a ^"Astronomical Device (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Vi"]
                 ^"Source" STRING "Core Rules"
@@ -1852,7 +1852,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A sophisticated tool for measuring the movements of the heavens, often placed near a window or skylight. The most common such item is an astrolabe; and example of a more advanced device is the armillary sphere."
         }
         #t7bNYlZCEJ6t1cRc7An3FDko ^"Balance (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Vis Extraction", "In", "Re"]
                 ^"Source" STRING "Core Rules"
@@ -1860,7 +1860,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An exact weighing device, such as a pair of scales."
         }
         #thhkM1FnIatjKR6MpCyB38cE ^"Balcony (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Spells", "Au"]
                 ^"Source" STRING "Core Rules"
@@ -1868,7 +1868,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An outdoors balcony, where the magus may cast spells into the open air."
         }
         #tLQo1juIQXP9C6Zt39p2SAxU ^"Cage (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Pe", "Re", "Co", "An"]
                 ^"Source" STRING "Core Rules"
@@ -1876,7 +1876,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A large cage, usually built of sturdy metal bars, for imprisoning or immobilizing a subject."
         }
         #tNZ9eUbGFoa86fIRh91sO6sB ^"Cauldron (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Experimentation", "Longevity Rituals", "Vis Extraction", "Mu", "Aq", "He", "Ig"]
                 ^"Source" STRING "Core Rules"
@@ -1884,7 +1884,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A heavy copper or brass cauldron, for the heating and mixing of large quantities of ingredients."
         }
         #tvyJ7nLiJT3m9m4smSJn4rD4 ^"Desk (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Texts", "In"]
                 ^"Source" STRING "Core Rules"
@@ -1892,7 +1892,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A comfortable and stout table, designed for reading and scribing."
         }
         #tOE3PMVwzxy4yQHIINRtuzSn ^"Fireplace (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Pe", "Ig", "Im"]
                 ^"Source" STRING "Core Rules"
@@ -1900,7 +1900,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A stone enclosure, where fuel is burnt for heating, but where substances may also be heated or immolated."
         }
         #tYdxorUDge6clHWGZSkIQd9C ^"Forge (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Items", "Ig", "Te"]
                 ^"Source" STRING "Core Rules"
@@ -1908,7 +1908,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A furnace — a more tightly enclosed and robust fireplace often operated by bellows, which yields heat sufficient for the smelting of metals — accompanied by an anvil and smithy."
         }
         #tBbo1hyc8VO5jVBGn3idRveC ^"Grave (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Pe", "Co"]
                 ^"Source" STRING "Core Rules"
@@ -1916,7 +1916,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "The burial place of one or more corpses. This may be either a simple earthen grave or something more elaborate, such as a stone sarcophagus."
         }
         #tl64OiAj7NBc5FNdEUNtF3d9 ^"Lofty Ceiling (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Au"]
                 ^"Source" STRING "Core Rules"
@@ -1924,7 +1924,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A light, airy space overhead, for which a tall chamber, perhaps with a vaulted ceiling, is required."
         }
         #tXVzrF1qY1qecMLNBvO5Bvef ^"Loom (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Re", "He"]
                 ^"Source" STRING "Core Rules"
@@ -1932,7 +1932,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A large wooden apparatus for the weaving of threads into a fabric."
         }
         #tOKNhmvr4YmKgIWG3fBMah11 ^"Map (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Te"]
                 ^"Source" STRING "Core Rules"
@@ -1940,7 +1940,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An elaborate and detailed plan or model, accurately illustrating surrounding lands or buildings, perhaps."
         }
         #tcBiPJuMgou9z13kcWBPuMBu ^"Mechanism (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Vis Extraction", "Re"]
                 ^"Source" STRING "Core Rules"
@@ -1948,7 +1948,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "Any kind of large mechanical device, consisting of many moving parts such as cogs and wheels, used for the basic automation of one or more tasks."
         }
         #tPjoxES0agpPv81SZJmRpu62 ^"Mirror (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Im", "Me"]
                 ^"Source" STRING "Core Rules"
@@ -1956,7 +1956,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A grand and ornamental silvered mirror, or other reflective surface."
         }
         #twgGM0qGrNjEhZT6wOWZTZka ^"Monolith (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Te", "Vi"]
                 ^"Source" STRING "Core Rules"
@@ -1964,7 +1964,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A huge slab of primal rock, possibly carved with mystical symbols."
         }
         #temPp2jUWrV23Ak6R9r2bhRo ^"Orb (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Im", "Me", "Vi"]
                 ^"Source" STRING "Core Rules"
@@ -1972,7 +1972,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A smooth sphere of precious stone, possibly opaque or semi-opaque, used in conjunction with divinatory effects."
         }
         #tnELXpd2kY38er3u308mQEhF ^"Pallet (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Longevity Rituals", "Cr", "Co"]
                 ^"Source" STRING "Core Rules"
@@ -1980,7 +1980,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A bed upon which a patient may be treated or examined, perhaps equipped with some surgeon's tools."
         }
         #tgRJ4NXV1TYoHxLmBtutK3ea ^"Pit (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Pe", "Te"]
                 ^"Source" STRING "Core Rules"
@@ -1988,7 +1988,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A deep hole dug in the floor. Things placed inside it cannot easily get out."
         }
         #tuWmyAx5QXAtezK6E54yglWl ^"Pool (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Aq"]
                 ^"Source" STRING "Core Rules"
@@ -1996,7 +1996,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A still body of water, or a well. It may be used when scrying."
         }
         #tpmw01G4cteF8C3Mh7TNBHKN ^"Portal (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Cr", "Re"]
                 ^"Source" STRING "Core Rules"
@@ -2004,7 +2004,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A gateway, through which things may be summoned or sent away."
         }
         #tblnog4ZtRaiFtOmgov2Yy8E ^"Rack (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Pe", "Co", "Me"]
                 ^"Source" STRING "Core Rules"
@@ -2012,7 +2012,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A rather unpleasant large mechanical construct, used for torturing persons placed inside it."
         }
         #tWk1Ca6ZhoU6WgwzCpGFsDzc ^"Running Water (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Items", "Aq"]
                 ^"Source" STRING "Core Rules"
@@ -2020,7 +2020,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "Any kind of water which runs through or around the lab, such as a stream or fountain."
         }
         #tLrH21eT49NfokOWOFFRwDu6 ^"Summoning Circle (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Experimentation", "Spells", "Cr", "Re", "An", "Vi"]
                 ^"Source" STRING "Core Rules"
@@ -2028,7 +2028,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An elaborate pentagram marked on the floor, into which things are summoned."
         }
         #tJJS82ow160TnNpVs5hgc6bA ^"Statue (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Re", "An", "Co", "Te"]
                 ^"Source" STRING "Core Rules"
@@ -2036,7 +2036,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A carved semblance of some person, creature, or thing, usually made of stone, metal, or porcelain."
         }
         #t6o5dhxpgf4Sv4GkeuJsGHRv ^"Still (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Vis Extraction", "Mu", "Re", "Aq"]
                 ^"Source" STRING "Core Rules"
@@ -2044,7 +2044,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A network of glass or metal tubing connecting delicate containers, such as retorts, designed for the distillation and refinement of compounds."
         }
         #t9uDudWRldMmAr6gh2AnVwj6 ^"Tablet (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Texts", "In", "Im"]
                 ^"Source" STRING "Core Rules"
@@ -2052,7 +2052,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A large framed slab of wax, for temporary scribing with a stylus."
         }
         #txxtErLD7ZqxkRkEMGVRBlVm ^"Tank (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Vis Extraction", "Re", "Aq"]
                 ^"Source" STRING "Core Rules"
@@ -2060,7 +2060,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A bulky container for storing fluids."
         }
         #t3XkMZrvaSVQdZfoJSNXC8xf ^"Throne (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Teaching", "Re", "Me"]
                 ^"Source" STRING "Core Rules"
@@ -2068,7 +2068,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "An opulent and raised seat for a ruler (or at least, the self-important) to sit in."
         }
         #tfgr9LVGJ34yCF53Asfg2zOo ^"Tree (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Cr", "He"]
                 ^"Source" STRING "Core Rules"
@@ -2076,7 +2076,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A live tree or a large plant, such as a vine."
         }
         #tSGoabVDGsgrEnjQfXyhzvpy ^"Void (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Pe", "Au"]
                 ^"Source" STRING "Core Rules"
@@ -2084,7 +2084,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A shaft, hole, or opening."
         }
         #tHGcHCMqpZZLFeF5lxz5yrTp ^"Wall (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Im"]
                 ^"Source" STRING "Core Rules"
@@ -2092,7 +2092,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A large blank wall, onto which images may be summoned."
         }
         #tN7YmI4vd4oSPU4LBPPlJr4c ^"Wheel (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["Items", "Re"]
                 ^"Source" STRING "Core Rules"
@@ -2100,7 +2100,7 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A wheel powered by water, wind, horse, slaves, or magic."
         }
         #tdoVRAnp7fHVrWjfJY0rulYu ^"Window (Lab Feature)" DEF {
-            EXTENDS ^"Laboratory Feature"
+            EXTENDS #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature"
             PROPERTIES {
                 ^"Specializations" LIST ["In", "Au", "Im"]
                 ^"Source" STRING "Core Rules"
@@ -2108,1701 +2108,1701 @@ EXTENSION "ARMDef_Laboratory" {
             DESCRIPTION "A portal to the outside world, which lets in the sun, moon, and stars."
         }
         #tyRL48Yoxuj1ha9jUru21L0X ^"Adze (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 beautify wood structures"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tipvBTfHwq7kFLf0dCNR04pC ^"Agate (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 air", "+5 protection from storms", "+7 protection from venom"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #twq4Qva5i1hnGv7RZvVOdP6b ^"Alabaster (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 forgiving", "+4 mental acuity"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tQZZN2cMDSgYdxjg8GecHlDk ^"Alder Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 resist decay", "+2 royalty"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tWDMIIs5Q0oIDPqJKhxeyRUd ^"Almond Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 Creo Herbam"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tzkUNIbppVt434s22WEhTBeD ^"Aloe (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 friendship"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tRfAtPK8n1rONsqkfsPx0v0g ^"Amber (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 controlling movement", "+3 Corpus"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t3aeBiSgafqmNGZW2VMnz64v ^"Amethyst (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 wealth", "+2 hearing", "+3 versus poison", "+3 dreams", "+4 temperance", "+7 versus drunkenness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tnKJp0cKfdrOwWjo2igdJYvh ^"Amulet Bearing the Sigils of Angels (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 ward against demons", "+7 banish demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #trTktpYLGQbtMFOyDiiaFM0W ^"Anchor (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 prevent movement"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tXyTwv5CUFfIhEW13v7ay5Cl ^"Animal Bone (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 harm or destroy animals"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t8vVSiMxAnOXKlhyoalUJxpp ^"Animal Hide (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 turn into appropriate animal"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t0YCHhPH3r0zqYT3SagzI2ku ^"Apple Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 longevity", "+1 Corpus"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tVFuBBIRlz4ywUyXbMGibphD ^"Aquamarine (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 water"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tu0B8DeFz3U9PoumtlDeS6fg ^"Armillary Sphere (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 display the heavens", "+5 celestial time"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2hXcRgFJS7lpPAXzTY9MuuE ^"Armor (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 protect wearer"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tBmnfxhL61ZCkdpf0cDyFybq ^"Arrow (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 aiming", "+3 direction"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tcsJydRzrO7HdHRxLSj9TOkh ^"Artifacts from Pompeii (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST []
                 ^"Source" STRING "Core Rules"
             }
         }
         #tDXdwxcHb5qra3JcAFsMOljQ ^"and Herculaneum (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 volcanoes"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUklFgjbJJFdl6vVHNQtHoYC ^"Ash (Burned Debris) (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 burning things", "+2 Ignem", "+5 affect things that have been burned"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tJHWxyVIw2ovhin0K13zfRSz ^"Ash Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 harm people"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tajEUuGJ90exQz3LKZdeXZ3L ^"Aspen Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 cure disease", "+5 cure fever"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tHORhkSK916dU3cqfqa3Tp7L ^"Astrolabe (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 astrology", "+5 measure the stars and heavens", "+5 navigation"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tka7cr0U4KcpOXiG3nr2yRPV ^"Auger (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 shape wood", "+2 puncture wood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tz2r6uByh8M8bdtjVTzsQG3C ^"Axe (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 destroy wood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tch7AkrJ2CwjPOaGsGORKBGG ^"Bag/Sack (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 moving things into or out of", "+5 trapping things within"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tbDfchHoiOFIElbMDvFtbprE ^"Bandage (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 healing wounds"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUJNfDQosvx0usNBdt6fqMHJ ^"Basalt (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 Ignem", "+3 Perdo"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUYqJEeRGXBvEahRJfndYDvk ^"Basilisk Eye (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 kill at a distance"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2t1QsR7a2aqbMt4i2Gw9Hay ^"Basket (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 collect items", "+3 create things within", "+4 preserve contents", "+5 create food within"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tStEl2g15h8ovkdegw8ugyOT ^"Bed (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 affect sleep and dreams"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tPYLdfsgaTrZAPUUquFne8Ce ^"Beech Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 knowledge"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tD0PD6L6eLSADZqYY4LBwReY ^"Bell (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 warning"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tY4ZMPSngvceUT6qyevMyDQI ^"Bellows (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 create wind", "+5 strengthen fire"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tYvynOuxpPBb3AzC0iguuTb4 ^"Belt or Girdle (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 affect strength"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tuNLMxBenNnbEC9MJJqvEqZz ^"Beryl (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 water"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tjQ8rks9ygJxpCShFPH9xtiK ^"Billhook (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 pruning"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tv4SBzPG9x97eGACFK9vCX6I ^"Birch Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 Creo", "+3 childbirth"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tLVqIqktPkFbS4iGPNWu9N9y ^"Blackthorn Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 dark fay", "+6 guardians"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t6ZWsk2GUk4XDi6kOfNbPCIu ^"Bloodstone (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 blood and wounds"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tDJAMwuILKqBWsbse9bnu0ah ^"Boat (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 sailing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tyEnT229El4g2NoRau0iGZvJ ^"Bookshelf (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 hide things within", "+4 protect things within"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #terXadosPXJYfM4CfXZqqq4y ^"Boots (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 affect walking"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tDSPXwQ54438eAd9n6oy2Q2Z ^"Bow (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 destroy things at a distance"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tscf8XPwHFkHZDjrG9zzv1Vn ^"Brass (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 music", "+3 Ignem", "+4 demons, devils, and angels"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tYGidMe2xNF4C4DgjZp1D7GP ^"Bronze (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 Terram", "+5 darkness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tFSH6S9LnfEW4TGLnURdmSb4 ^"Candle, Black (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 summon demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tMVQY5ohysgTs1tXk1mXXRWF ^"Candle Made of Goat Fat (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 summon demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tJFsWlg7m2yqlniscNE94DBH ^"Cappadocian Salt (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 purifying effects"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tlcnV648wkNN9Aq24ZOtQKK0 ^"Carving of Behemoth (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 great size"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tueVcAlP6g4D33fzYo68N9e4 ^"Cask (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 induce drunkenness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t3y65KzsWIldrSii8GMDRExz ^"Cat's Eye (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 versus malign Corpus"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tOx9ClFhA9Uwo3lltBQy2tHk ^"Catoblepas Esophagus (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 kill or harm humans"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tF0R7j8NqJY1pK2qR1BsaVE3 ^"Cedar Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 binding spirits", "+5 any effect with Mentem and Herbam requisites"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tuaRV6jIvHMAjG1Kei61F62P ^"Chalice (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 detect poison within", "+5 transform or create liquid in"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tg7gTP96qdofSEi4i9IQJcrF ^"Chalk, Blue (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 wards against demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tOBT5phpm7DNG2zFpK3dsMAT ^"Cherry Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 bloodshed"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tXYO5eFRSAbqhAtvsn0uRwST ^"Chestnut Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 justice", "+4 honesty"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tLkO5644t89FkN53ZUZKoqfN ^"Chimera Tongue (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 create fire"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t1jb46PcmFHAJ6FhOSlyawD1 ^"Cinnabar (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 long life", "+4 wealth", "+4 language", "+5 dragons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tigvItPLL2H0hTH1luefZX9g ^"Cinnamon (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 destroying ghosts"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #ttUlTS2oCI9Mgg9ZG0UnrVa1 ^"Cinquefoil (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 making amends", "+3 drive away demons", "+4 resist poison"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tQVDTAHOZlAEU1tVhACbFxGv ^"Clam Shell (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 protection"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tVP4g82HjhF0nnMjHIQOaGkO ^"Cleaver (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 butchery", "+3 Perdo Animal"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tuObH2q1epw6ueoyNWq3ue9q ^"Clear Glass (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 invisibility", "+5 seeing through something"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t1ZWIukWyQiA1LDsqTQGicNX ^"Cloak (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 flight", "+4 transform wearer", "+5 alter/suppress wearer's image"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tjYK8MV7LQHd0nLSXizqrgmX ^"Cloth Shears (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 shaping fabrics"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #txX9sV8w8kEO1T2botf6ekw7 ^"Coin (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 induce greed", "+4 wealth and mercantile"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tuJhtE8OSw0XhIRMNxF2Leh7 ^"Collar (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 control wearer"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tKfb8wC3vGi99VrCb77phhks ^"Comb (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 beauty", "+7 affect hair"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #trlTOXyrmZqKxwuEkGk4XbTf ^"Container (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 create or transform within"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tdPhfN4srLTnGNQr41SPaWBL ^"Copper (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 passion", "+2 sex magic", "+3 bloodshed", "+4 effects that change its own shape", "+4 deftness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tWz6WQmB2LjGsM1jAafNxUm8 ^"Coral, Red (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+10 versus demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tXRpz79e0KtkPTwbEBTYJzp7 ^"Cross (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 ward away supernatural", "+5 cause damage to Infernal", "creatures", "+5 banish demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tJF8veHSI0johrIslNR8NfOn ^"Crowbar (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 moving stone"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tR0BloZ8CCdqvpth9qHepowv ^"Crown (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 wisdom", "+3 control people", "+5 gain respect, authority"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2BcaWYSPfTj7eWfYyoFn6Sh ^"Crystal (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 water-related effect"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tCD0V51DjwfkjAEnP4E1TEMN ^"Cypress Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 spirits", "+3 necromancy"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t6mXkBzWxnO8UvwmOxIiOfww ^"Dagger/ Knife (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 precise destruction", "+3 betrayal, assassination", "+3 poisoning"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t3XW0VWRjULmHl2jQA0kQ1FE ^"Diamond (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 versus demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t9gvH5HQYBdoMXR8RsavEukS ^"Dividers (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 measuring"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tn71EvDXV1379GHePbrZJGZg ^"Dogwood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 pixies"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #toAA8usWPsLOf8ayzlWPpRhV ^"Door (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 warding"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t7d6RxfmBDYJOCDf06UY71dN ^"Doorway (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 magical transportation", "+7 affect movement through", "+7 magical gates and portals"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #ttXqRBqURIVmdJelEd2Xo3uC ^"Doum Palm Leaf (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 controlling instincts and", "base emotions"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t5Q3Z2qS2aPcd3LTJd2wbX7h ^"Down (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 silence"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tNTctaebob0avJwD6SzAwgBM ^"Dragon Eye (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 protection against ghosts"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tz5G8TUMQkZBbJtZsmPykZxT ^"Dragon Heart (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 Intellego"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tcqWJQqV3g8bWh94kKMbDolE ^"Dragon Teeth (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 invisibility"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tCoQKXJWGYkDhUApVykYApXP ^"Drum (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 cause fear", "+3 create storms and thunder", "+5 deafening"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tK097BUhVsy552ogkYsfkoHG ^"Earring (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 affect hearing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tH3EQytonqUztCVJ5iffCr5d ^"Elder Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 Vim", "+4 malicious magic"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t8tWxAMHj38fWVA5UyC1lJ3n ^"Electrum (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 scrying", "+3 deception", "+4 Muto Terram"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tmVG2zEPzOgHdxKBpjywdKuv ^"Elm Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 death and decay"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t5DIGMVpbdm1C8dXHo8IaSaI ^"Emerald (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 incite love or passion", "+7 snakes and dragonkind", "+2 calm"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tZ1Gsn0a1to4ybXZBfzSOoK5 ^"Fan (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 banish weather phenomena", "+4 create or control winds"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tp6MxqVRLvUt4JIL1op2Ymer ^"Fig Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 sex magic", "+3 gambling"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tzcHIn9OU442KIkDcoPRxn3N ^"Fir Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 darkness", "+1 malicious faeries"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tc3jDT444oKjRxWKNaVLTCgA ^"Fired Clay (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 contain or protect from fire"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #toNzX25a4jfP4q7Fnr5S2CQj ^"Flail (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 harvesting grain"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t3rcl1Kftr9IW0ShxkkUeL0g ^"Floor (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 affect movement across"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t6yiHKuvYMCyj0OY0qcLpYcj ^"Frankincense (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 Perdo Vim", "+3 dreams", "+4 cleanse a place of Infernal influence"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #twY8hiumah4pbmLuxgkMBvf8 ^"Garnet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 navigation", "+2 strengthen body and mind", "+2 vigor", "+3 bonds of commitment", "+4 repel insects"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2AeAfGpsHFI6Njwy85BplSi ^"Glove (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect things by touch", "+4 manipulation at a distance"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t5yUzEHg8IIP4WMJc5wDMBMT ^"Gold (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 health", "+4 induce greed", "+4 nobility", "+4 peace", "+4 affect wealth"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tU1lLUygLot2AN7RsMMEUhet ^"Granite (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 wealth", "+3 Terram"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUuXKJujwbQUqTPdpRk4ftg5 ^"Green Turquoise (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 necromancy"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tCZBRSY98VQcVPVeUK5hYN45 ^"Griffin Feather (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 strength", "+6 flying"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tnCk79TqTV3762WNeJ93nYEQ ^"Hall (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 magical transportation", "+6 affect movement through"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tCufJPPMDtYeHIYeSDRRDWMW ^"Handsaw (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 delicately shape wood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tpgCMY3jnUPn0xRaQ3nqmGnT ^"Hat (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect image of self"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tG9KhhXrhJR4fsn186qYxCLo ^"Hatchet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 destroy wood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t0WxcZOkFmurWHSCRjUfme2c ^"Hawthorn Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 wards"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tNoIqVvJT42xIECGw7Wq8lP6 ^"Hazel Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 good judgement", "+3 divination"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #taXcxLd6HV12Ngw6vtBT9D0W ^"Hearth (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 destroy things within", "+7 create fire and heat"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t6DJdij0wJfCKtyAWuqWWSLd ^"Helmet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect wearer's mind/emotions", "+6 affect wearer's sight"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUvl1n2APbK4B4o9rrvAdWV5 ^"Hippogriff Liver (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 freedom from restraints", "+6 flying"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #teD2KD2NrObSxp7vCYYLoZU4 ^"Holly Wood Hornbeam Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 inflict wounds", "+2 inflict pain", "+6 Vim against hostile magic"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tC5Dnsi9rtgQbkDGvToipilW ^"Horseshoe (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 warding", "+6 affect horse's movement"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2345TKDRY1XNLNpdeDXwXrV ^"Hourglass (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 increasing speed", "+7 timing and alarms"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tyT8JYZEI5ECr4Rvm6PZu5cM ^"Human Bone (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 destroy the human mind", "+4 destroy the human body"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t62yOrgPyD06bLZQhd4S7nVK ^"Human Skull (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 destroy human body", "+5 destroy human mind", "+5 destroy or control ghosts", "+10 destroy or control ghost of particular skull"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tSg8jLYCO17fEd7EoY3yMkyD ^"Hyacinth (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 healing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tDJYeqxWudHnItlUF1t2WE2k ^"Hydra Teeth (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 Creo", "+8 regeneration"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tpClMJaXjvOTARLR50iOVKYP ^"Ink of Hermes (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 Vim", "+5 books"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t9w0uK9lfAxjpb9hcsgXC2xr ^"Iron (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 harm or repel faeries"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tOcNHcNjIKkCb6n6lrI7eQaR ^"Iron Shackles (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 bind faeries"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tFoxtTtTWwiu3t8xBCjpzCrq ^"Ivory (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 healing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tXXyHaM0xSmh18hV29Yjv5wY ^"Jade (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 Aquam"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tmJHeI3tGPsDSYMXumWJ5KJx ^"Jasper (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 healing", "+2 versus demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #teGLivI8XGRSZukFHDAp174b ^"Jet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 protection", "+3 darkness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t4lM29NJmsfvo40GfAXRwEXJ ^"Jewelry/Clothing (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 move self", "+4 protect self", "+4 transform self"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #trEiD8P5tpMP8LRd1iHNH49k ^"Lamp (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 create fire", "+7 produce light"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tD29iiYamwAXYeLryQUBcfb2 ^"Linden Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 good fortune", "+2 protection against weapons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tqYpQRclkqWAzXOvAJ1DTT8g ^"Lead (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 summoning or binding", "ghosts and spirits", "+3 hatred", "+4 wards"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tq9JA0V0y91uQw5whKjqVBre ^"Lemon Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 hearing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tZ2EhmYnZQw260yLXBavmM0F ^"Leucrota Tongue (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 mimic human voices"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tBDzodREBRFp3r4OrzuGwy6Z ^"Lilac Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 travel"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tRWOWWNHAZfKma17xxWlCFVf ^"Lion’s Blood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 leadership", "+3 courage", "+4 protection from wild beasts"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t6qX0o2L63cNgvmkP1h6SvDO ^"Lion's Mane (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 strength, courage, pride"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tfbniglSApTMOntWLeuoZIlF ^"Living Tree (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["Triple the bonus for the type of", "wood (oak, ash, etc), but not for", "wood as such. This only applies if", "the whole living tree is enchanted."]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tmkX9Yu6VLpsA1NHsQIMQCXC ^"Lyre (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 create sounds", "+5 affect music"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t8EHCJFCIkorC6MzkNJHdVwO ^"Magnes Stone (Female) (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 invisibility", "+3 purification"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t9Y8gTVnd0J5ZkjiCAMcflG8 ^"Magnes Stone (Male) (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 divination", "+7 control iron"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tX6wrjCLJJdTt4yFdPCBPHBo ^"Magnet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 Rego", "+4 Rego Corpus", "+4 Rego Terram"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t8Fd3Oqe2I8jqvUd8h8FmhC9 ^"Magnetite (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 Animal"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tVyGtGKnYzKmeWJI8HwdjrxD ^"Mallet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 precision"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tDkaW6O0zv5LgbP0tJGRcya2 ^"Manacles (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 binding"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tD5iOpIJGZ1DaJ6Q5c0VlmZa ^"Marble (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 cold", "+3 beauty", "+5 wards"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tocKvvKUOxEPxVd6yYUIeqnY ^"Mask (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 affect wearer's sight", "+2 affect wearer’s breathing", "+3 hiding", "+7 disguise"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #trQz13y0bBGTq2hJigKLKknM ^"Mason Chisel (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 shape stone"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tbcDIDRuhJZnwJPHucpN4UMe ^"Mast (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 protection from temptation"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tngBL6Pt91FRwugyqaJFTsQ4 ^"Mercury (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 arts and sciences", "+3 Aquam", "+3 Terram", "+5 Muto"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tzFsbJoi2Q484mzfTUtJpzWB ^"Mirror (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 summon or bind ghosts", "+5 see the truth", "+6 display images", "+7 illusions"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tLPgnsNUd8uykGD6paQgtcv8 ^"Myrmecoleon Exoskeleton (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 deprivation and starvation"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tLqY20ilXvPF0zLk6FdYvUpL ^"Myrrh (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 spirits"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tdCHWYK09ibFKChjmo4oKoOU ^"Necklace (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect breathing and speaking"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tifv0VVjgJDtNZXPOaaOqS3Z ^"Net (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 immobilization"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tRtdw2jKLliZb4Qi3haNrDor ^"Oak Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 protection from storms"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tsqjCKg7OKGsr48jiLvpsob1 ^"Oar (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect currents"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tHSlVIJPctMhBuveyVmpZw7t ^"Obsidian (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 darkness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tqJN2WdwAMlXXDmuvw14cxPh ^"Onyx (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 darkness", "+4 death"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tjMKCIXLhMlAadfbHLfCQ4Tu ^"Opal (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 images", "+2 imagination", "+2 invisibility", "+4 travel", "+4 memory", "+6 eyes"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tHIJ4VzpOpL0tOVRV64YmZKZ ^"Orange Tree Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 sight"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tJOQV3DUPAmXN7YnlVE2m6Jd ^"Palm Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 animating wood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tr2loyWEOHH2VVvc7zN7XX38 ^"Panpipes (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 affect emotions", "+5 control children", "+5 revelry", "+6 affect faerie emotion"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t1jIDomVEFFePSiqOGZ2Nv3O ^"Panther of Virtue’s Hide (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 song and melodious sounds"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tujubRrAgR5hRqHIxwWhwD5s ^"Pearl (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 detect or eliminate poisons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tqJ1iEHiECM15D4eE00tqvTa ^"Pelican of Virtue’s Beak (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 healing and nurturing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tJ9Ho0nZVnv92hB8C6PSMpPB ^"Pepper (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 Perdo"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tdkpZ9TtBSH4BefLxRw53zAd ^"Peridot (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 protection against nightmares"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tLQa8W8qUXQ3SMJL0I4ZGfZG ^"Phoenix Ashes (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+11 rejuvenation and regeneration"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tlgTMsd2yKYh6JGgQd5xhuno ^"Phylactery (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 protect wearer"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tBlyZsMmdmTExDRHRn4E8VTX ^"Pick (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 destroy stone"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t3BeyE71kXPO4Zi2MXxxBKcA ^"Pin Feather (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 Auram", "+5 flight"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tw5Itb0s8GRMUS1RV8LiBfHB ^"Pine Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 friendly faeries", "+3 light"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tittaiw4Ijh2Fl35P9VeNabt ^"Pitchfork (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 gathering reaped grain"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t1yusXuRqetd7NvHihV4gTpg ^"Plum Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 blood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUQZP9emG5wRKehTGQKjmdvU ^"Pure Honey (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 preservation", "+5 spiritual travel"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tekfEBSFTw0LNR4r3h5FAHD4 ^"Quartz (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 invisibility"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t06eRf9WnWvLVzcmbY7qo4h2 ^"Quill (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 scribing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tPaY2rboE9f6E9rvJLcQWul4 ^"Rat Skull (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 cause disease"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tm9YA3VmQAgfQSuAR8yZ0oh7 ^"Red Gold (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 Perdo", "+4 war"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tEN4StmHG7BwJ3eXcftcjzkE ^"Rhodocrosite (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 memories", "+3 forgetfulness", "+3 binding wounds"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t9v1CBAyoyNY7mF06cC1KnxD ^"Ring (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 constant effect"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t4k4zcUoCej5rekN8syDV0cl ^"Rock Crystal (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 healing", "+3 ice", "+4 clarity", "+5 clairvoyance"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t7C4YaJF4dCQzqhvxLMjYQAN ^"Room (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 create things within", "+6 affect everything within at once"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tYq1uKZJjCdeYAiDq55dCg90 ^"Rope or Cord (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 strangulation", "+4 restraint or binding"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tg9rL96XckGUAGJSnnySNYR2 ^"Rowan Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 Vim", "+4 protection against malicious magic"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tiriElFHoRb4Hl9JlbqCu3y6 ^"Ruby (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 courage", "+3 battle wounds", "+3 affect blood", "+4 leadership in war", "+6 fire-related effect"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tgeeL2dek2VKDxHMiz9U4Wlw ^"Rug (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 affect those upon it"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2BxgJUKuyVO6iZMPq5jGt1c ^"Saddle (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect horse", "+7 affect riding"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #txf6iIPccwOmdofqi9klagkV ^"Saffron (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 physical strength"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #thWUEGO9BPHEB2FrP4lJtJkf ^"Sapphire (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 knowledge", "+2 versus malign Corpus", "+2 Perdo Vim against spirits", "+3 healing", "+3 reducing anger"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tJXe64RalN2WmEus8TFtiIDw ^"Sardonyx (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 versus malign Corpus"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tYXXg6U93p68bnF45LerR2se ^"Scales (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 weighing goods and money"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #teHRvamAtjeCPz4lreW4MTbX ^"Scythe (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 reaping", "+3 Year-Duration effects", "+4 effects expressly causing death"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tQ3kgFTfJxhh0Fw4q6wv63kw ^"Sea Shell (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 the sea", "+3 sea creatures"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tKFLX0CHWy8eHlyfsQ2zxkg6 ^"Serpentine (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 vs. infection and animal poison"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tSieUIFfcJawLPRT9RmYhyvY ^"Shackles (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 restraint or magical binding"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tKCEMwF1h1t9ul9vqj5OxLFA ^"Sharp Blade (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 shape leather"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tFpyoJFDLGEbuPKMRy5lIdQT ^"Shearing Shears (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 fleecing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #thZFmHp84vKQe2qlcCuEWdYb ^"Shield (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 protection"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tEnexmxFbV3KuPhAhnGXIfri ^"Ship (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 sailing"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #twKavKXl3n54HJJtsZBAJiV4 ^"Ship Sail (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 affect winds"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t2beDB7g5VjPQ72gFHY9ZDNW ^"Sickle (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 harvesting"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t3h5qVSNts5nY7X9NlLNig6o ^"Silver (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 Terram", "+2 Intellego", "+3 protect spirits", "+5 lycanthropes in general", "+10 harm lycanthropes"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tnVOCnDXDPu5O5lgQ7xJnFKO ^"Small Hammer (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 building"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tQZ1bJpa33VJmau5aKzaWBIp ^"Snake Tongue (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 deception", "+6 lying"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #txQGi9HSy5QXWi9VLWJuAnpw ^"Snip (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 shape metal"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t96jfIXbDa5tmxnwqxY8kVbr ^"Spade (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 move or destroy earth"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tSYMcno3JLWShNtVnruTx3Qb ^"Star Ruby (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 conjure/control occult entities"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t4IQGpy0fvb3P5yIJe8HtNpN ^"Sulfur (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 sowing discord", "+2 preserving or decaying", "+3 binding tongues", "+4 demons"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tlQy4GBrLs7fGaZiz6W6OFEc ^"Sun Scarab (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 detect magic"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tjUW0tlg97G7wOMbjZMlRd6G ^"Sword (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 block single attack", "+4 harm human and animal bodies"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tCtQfBirYwoK2Y5hC7rOS58s ^"Tablet (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 command spirits"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tjAmTqOUlm08YGoNKojFHTIW ^"Tin (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 law", "+3 weakness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t0oZW7qPpqOwLyYPhRGlDHhM ^"Tongs (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 controlling metal"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t61zKGKP7unev3BkqtQlmTVC ^"Topaz (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 leadership", "+4 strength, courage, pride", "+5 controlling wild beast"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #taGM8EKm8hVK9gJ2Utx1qrOQ ^"Toy (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 control children"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tXq8gcaSDjTAa9XKMlmhD7ZH ^"Trowel (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 building"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tOcn44jf9kt9pOw7LsAUo0Ot ^"True Purple (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 control people", "+7 rulership and authority", "+10 royalty"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tWpneL8nWTn2WI85vBNiaQK3 ^"Turquoise (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 necromancy"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t9m2oQB7Hdbs5XlZ3bnXcVtE ^"Unicorn Horn (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 healing", "+10 detect poison", "+11 fertility"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tBgsXehxib0s3srLLIXuxM90 ^"Vent (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 affect air passing through it"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tqDKn4nZjxymwAK5flu8UlOr ^"Violet Amethyst (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 ascendancy over masses", "+7 versus drunkenness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tnyK7NvV9szsoDvkVWBPsoQs ^"Walnut Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 mind"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #t1uTLLutsflnpWqaEvZwPQes ^"Wand/Staff (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 repel things", "+3 project bolt or other missile", "+4 control things at a distance", "+4 destroy things at a distance"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #ttu3ce1MTtroAbK4FabXPw8M ^"Waterskin (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+5 create liquid within"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #trIFY5yVrMjq7SWfTVqzf5NX ^"Whip (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 control human or animal body", "+5 induce fear in animals"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tdRGXlRNxZmjIo5UTw6CjpXc ^"White Poplar Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 mind"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tgtJ2ZJJ3II5Z4jrFF5XLsWr ^"Willow Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+1 cure wounds", "+4 restore limb"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tgFQIfvoPPXVyE6pdAwsd5jB ^"Wood (Dead) (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 affect living wood", "+4 affect dead wood"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tBkCRWdxIT8zBkhgaoRn49sP ^"Yellow Sandalwood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+3 binding people"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tEu0px8eYZtwLpBQiUo0Ti4w ^"Yew Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 corpses", "+2 visions"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tfCieYhlaXlwBbYZVOFDXUaq ^"Yoke (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 control wearer", "+5 enhance strength of wearer"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tUsyOWurwTzFFBnrSpis5TOF ^"Holly Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 inflict wounds", "+2 inflict pain"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tL89hKt8R0rLAnIetI8aHezw ^"Hornbeam Wood (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 strength", "+6 Vim against hostile magic"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #thpgHi4dkOzi1yx3q717HBqj ^"Remora of Virtue's Fins (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+7 slow or halt a moving object"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tYoP1oKygVVA2p62IVuTSdX4 ^"Salamander of Virtue's Skin (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+8 extinguish fire"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tC3dTYklDMKwRKhD2kybf1Ie ^"Siberian Six-Legged Antelope Hoof (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+6 speed and quickness"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tf5HtB7PAlYC4u205rVXNtu5 ^"Wood from a Tree Struck by Lightning (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+2 Auram"]
                 ^"Source" STRING "Core Rules"
             }
         }
         #tCiceh0RkqB6eAwE9pshhXzk ^"Wood from a Twisted Tree in a Field (Shape and Material)" DEF {
-            EXTENDS ^"Shape and Material"
+            EXTENDS #taJNAWU1upIafZxz0TGky60X ^"Shape and Material"
             PROPERTIES {
                 ^"Bonuses" LIST ["+4 disfigure"]
                 ^"Source" STRING "Core Rules"

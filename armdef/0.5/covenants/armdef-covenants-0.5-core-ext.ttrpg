@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_Covenants_Core_Ext" {
     NAME "Ars Magica Fifth Edition - Covenants: core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-25"
     DEPENDS_ON "ARMDef_Core_Covenant"
@@ -23,7 +23,7 @@ EXTENSION "ARMDef_Covenants_Core_Ext" {
     # rulebook's own field, widened here; Category, Requires and Fantasy Level
     # are new, so they are declared rather than SET.
 
-    MODIFY ^"Covenant Boon" {
+    MODIFY #tARMDefCompatCovenantBoon ^"Covenant Boon" {
         SET ^"Magnitude" ENUM ["Minor", "Major", "Free"]
         PROPERTIES {
             ^"Category" ENUM ["Site", "Buildings", "Resources", "Residents", "External", "Surroundings"]
@@ -32,7 +32,7 @@ EXTENSION "ARMDef_Covenants_Core_Ext" {
         }
     }
 
-    MODIFY ^"Covenant Hook" {
+    MODIFY #tARMDefCompatCovenantHook ^"Covenant Hook" {
         SET ^"Magnitude" ENUM ["Minor", "Major", "Free"]
         PROPERTIES {
             ^"Category" ENUM ["Site", "Buildings", "Resources", "Residents", "External", "Surroundings"]
@@ -118,7 +118,7 @@ EXTENSION "ARMDef_Covenants_Core_Ext" {
     # Art is a caret ref so a consumer can ask "what Creo vis can this covenant
     # draw?" rather than parsing a label.
     #tOyKnFGWkxgPeCHccUaG06R3 ^"Vis Source" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"]
         PROPERTIES {
             ^"Art" STRING REQUIRED
             ^"Source" STRING DEFAULT "Covenants"
@@ -142,7 +142,7 @@ EXTENSION "ARMDef_Covenants_Core_Ext" {
     # mechanics and stays VERBATIM in the entry's DESCRIPTION; an expenditure
     # category's labeled cost formula is also carried in a FORMULAS block.
     #tJLCOrGO5QuneInU5WPRuRMx ^"Income Source" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }
@@ -150,7 +150,7 @@ EXTENSION "ARMDef_Covenants_Core_Ext" {
     }
 
     #tZ5rXgVH6FkSaSXpwQ7lcruK ^"Covenfolk Category" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }
@@ -158,7 +158,7 @@ EXTENSION "ARMDef_Covenants_Core_Ext" {
     }
 
     #tnbzNOdDkW9kLaRSpRlbvy5T ^"Expenditure Category" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }

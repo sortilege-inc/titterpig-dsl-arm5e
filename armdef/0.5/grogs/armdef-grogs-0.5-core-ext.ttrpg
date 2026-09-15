@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_Grogs_Core_Ext" {
     NAME "Ars Magica Fifth Edition - Grogs: core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-25"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -21,7 +21,7 @@ EXTENSION "ARMDef_Grogs_Core_Ext" {
     # unusable to the thing it exists for.
 
     #tTK3Uy8WoyvPCqEGcaDrFSaF ^"Training Package" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Category" ENUM ["Childhood", "Career", "Non-Career"] REQUIRED
             # The parenthesised rider on a career name — Archer (Martial),
@@ -41,21 +41,21 @@ EXTENSION "ARMDef_Grogs_Core_Ext" {
     # "every career" by type. A character takes exactly one childhood and any
     # number of the other two.
     #t9mS1CvfTGx6ukTBhcEQXFZv ^"Childhood Training Package" DEF {
-        EXTENDS ^"Training Package"
+        EXTENDS #tTK3Uy8WoyvPCqEGcaDrFSaF ^"Training Package"
         PROPERTIES {
             ^"Category" STRING "Childhood" FIXED
         }
     }
 
     #tKrIfRvtw7LUSUR61o27b0Ie ^"Career Training Package" DEF {
-        EXTENDS ^"Training Package"
+        EXTENDS #tTK3Uy8WoyvPCqEGcaDrFSaF ^"Training Package"
         PROPERTIES {
             ^"Category" STRING "Career" FIXED
         }
     }
 
     #t9oh382Tr08Ls28rMCrBQ4vp ^"Non-Career Training Package" DEF {
-        EXTENDS ^"Training Package"
+        EXTENDS #tTK3Uy8WoyvPCqEGcaDrFSaF ^"Training Package"
         PROPERTIES {
             ^"Category" STRING "Non-Career" FIXED
         }

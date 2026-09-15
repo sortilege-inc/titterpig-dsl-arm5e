@@ -1,19 +1,19 @@
 EXTENSION "ARMDef_Long_Term_Events" {
     NAME "Ars Magica Definitive Edition - Long Term Events"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
     DEPENDS_ON "ARMDef_Core_Base"
 
         #tdbvTtCvbps6S89eOJ5N0eMW ^"Experience and Advancement" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "As time progresses, characters get better. In Ars Magica, experience points are awarded every season (three months), based on the character's activities during that season."
         }
         #tpuCRxJPBTxQHxqTWPtWBh0w ^"Using Experience Points" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -24,14 +24,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Experience points are used to increase Arts and Abilities. A character gains experience points in an Art or Ability when she spends seasons studying it. Once she has spent enough experience points, the Art or Ability increases by one. A character may, in general, raise an Art or Ability by more than one level per season."
         }
         #tzx6OKM8RPaWLmw3ii0GmCXt ^"Advancement" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Whenever a character spends a season in study, she gains a number of experience points based on her Advancement Total in the subject studied."
         }
         #tFCy3xuSWH7AaSGlKvbLLWFt ^"Advancement Tables" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["SCORE", "ART TO BUY", "ART TO RAISE TO", "ABILITY TO BUY", "ABILITY TO RAISE TO"]
                 ^"Source" STRING "Core Rules"
@@ -64,7 +64,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "To buy: The number of experience points required to raise a score from zero to that number. To raise to: The number of experience points required to raise a score by one point to that number.\n\nA character may only gain experience from one source (one book, one teacher, one set of adventures) in one season. In particular, a character may gain experience from exposure in all and only those seasons in which she does not gain experience points from any other form of advancement. The character may undertake other activities which do not result in experience point gain and still gain Exposure experience; this includes inventing spells in a Hermetic laboratory, or making tables for sale."
         }
         #t6HsIOPq9nFXKgknWPtF61lA ^"Calculating Experience Points" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -75,21 +75,21 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tKXpshd7EV2baTXT834ZCv01 ^"Assigning Seasons" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The assignment of seasons to activities is, in most cases, an abstraction. A normal character must work for two seasons, and gets two seasons 'free'. However, he cannot leave his job for two seasons, as the free time is spread over the year. Thus, he can only undertake study that he could do in and between his job. The two seasons spent working generate Exposure experience, as described later. Characters may have genuinely free seasons, but this is a matter of character background.\n\nHermetic magi are among the important exceptions. Hermetic laboratory work always takes an entire, actual season, and Hermetic magi have four genuinely free seasons per year, which they may apply to study or other activities as they wish. If a magus does something other than study, he is entitled to Exposure experience, just like anyone else."
         }
         #tOVqBd2rpOWVf1GOGRj5pBgY ^"Limits (Advancement)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Some study sources, notably teachers and summae, have a level themselves. The student may not gain a score in the Ability or Art higher than the level of the source, and may not gain any experience points towards the next level from that source. This limit is called the Gain Limit."
         }
         #tRE84wDTZ1aUQfFibr3QO79F ^"Exposure" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["ACTIVITY", "POSSIBLE EXPOSURE"]
                 ^"Source" STRING "Core Rules"
@@ -104,7 +104,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "A character can learn simply by being exposed to the thing to be studied. This is by far the least effective way to learn.\n\nThese experience points may be split between any two Abilities or Arts which were being used consistently during the season. If you split the experience points, calculate an Advancement Total for each Ability or Art separately based on a Source Quality of one. Exposure includes both doing something yourself (the normal way), or helping someone else to do it, without any feedback. In particular, Hermetic laboratory activities grant Exposure experience both to the lead magus and to any assistants."
         }
         #tqxWuP8Wc6Gak4th0ZWOPUyp ^"Adventure" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -114,7 +114,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "A character may gain experience by going on adventures. This takes a whole season, even if the adventure itself does not; the character spends the rest of the season consolidating what she learned under pressure. A character may choose not to take experience from an adventure if the adventure was short enough to allow other study. Note that the Source Quality is for the whole season, no matter how many adventures happen in a season. (Multiple adventures in one season would be a good reason to set a Source Quality of 10, however.) Similarly, an adventure that takes more than one season may serve as a source of experience in each of those seasons.\n\nThe Source Quality of an adventure is set by the storyguide, depending on how important the adventure was and how many opportunities for learning there were. Adventure experience may be added to any Abilities or Arts involved in the adventure, and may be split between any number of Abilities. Any Ability actually used as part of the adventure qualifies, as do Abilities used 'off stage', for example during travel. Experience points can only be applied to Arts which were used 'on stage', however.\n\nYou may apply a maximum of five points of adventure Source Quality to a single Ability or Art. Calculate an Advancement Total separately for each Ability or Art, based on the assigned Source Quality."
         }
         #tQ7gXpPChbNZjPBFE8JGgFRH ^"Practice" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -124,7 +124,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "A character can try to deliberately find out more about a subject, by her own efforts. This is more effective than exposure, but it is a full-time activity.\n\nIn almost all cases, the Source Quality for practice is four.\n\nThere are four cases which merit higher qualities.\n\n• First, practicing a language in a community where it is the native tongue merits a Source Quality of eight, until your score in the language reaches 5. At this point, the Source Quality drops to four.\n\n• Second, practicing Area Lore by traveling around or living in the area merits a Source Quality of five to seven, depending on how thoroughly the character can explore the area. A character living in a city while working in a trade could claim one of his nominal free seasons as a Source Quality five practice in Area Lore for the city, while a character with a genuinely free season in the city, or working as a messenger, could claim a Source Quality of seven.\n\n• Third, being forced to practice a trade or craft in an environment with immediate feedback as to how well you are doing has a Source Quality of five. An example would be someone forced to help on a ship.\n\n• Finally, practicing a spell for mastery by casting it repeatedly is worth a Source Quality of five. This can even be done for Rituals or destructive spells, without spending vis or devastating the area, as the magus can abort the spell before fully casting it and still get the practice.\n\nOtherwise the Source Quality is always four. Experience points from practice may be split between several Abilities. If the Source Quality would be different for the different Abilities, the total number of experience points gained is based on the lowest of the Source Qualities.\n\nHermetic Arts cannot be increased by simple practice; see Vis Study on page 378 for the equivalent."
         }
         #tD3Gw60Sl9WUr6PQfDQ5tQ6i ^"Training" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -135,7 +135,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Training is one-on-one training where the master shows the trainee what to do. A character must have a minimum score of two in an Ability before she can serve as a master, and at that level simply yelling at the apprentice when he does something wrong is equally helpful.\n\nThe master must have a higher score than the apprentice. However, the master may work at earning a living while training an apprentice. The apprentice may only be taught an Ability which the master is using to earn a living over the whole season. The apprentice may not earn a living or produce anything useful. Master and apprentice do not need a common language in most cases.\n\nThe master gains Exposure experience in the Ability being trained, just as for the normal use of an Ability to earn a living. However, the master only gains experience from Exposure in the seasons spent training the apprentice.\n\nHermetic Arts cannot be increased by training."
         }
         #t4XLuR4q8fAC9t9yhYSaqhbC ^"Worship" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -145,7 +145,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #t23foUX8grTBCnmKCj8C7472 ^"Teaching" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -156,7 +156,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Characters can be taught by other characters.\n\nA character must have a score of at least two in an Ability, or at least five in an Art, before she can teach anyone. The teacher and the students must share a common language. The teacher must have a higher score in the Ability or Art than the student.\n\nA character may teach several students. The maximum number of students is equal to the teacher's Teaching Ability times five, or one student if the teacher has a score of zero in Teaching. If a teacher has a single student, whether for an Art or an Ability, the Source Quality gets a +6 bonus. If she has two students, the bonus is +3. If there are more students, there is no bonus.\n\nA teacher may gain exposure to Teaching or the language of instruction, but cannot do anything else in a season when she is teaching.\n\nHermetic Arts can be taught, but only one-on-one. The normal +6 bonus for having only a single student applies."
         }
         #tWYvDXG2ByUdanFgUC31Rb38 ^"Books (Advancement)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -173,7 +173,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tipnK1muvXCg2or3X178GfAg ^"Vis (Study)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -187,7 +187,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #th6CSDguidgB3JbtjIWaJhTg ^"Distractions (Advancement)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["MONTHS LOST", "TOTAL", "EXAMPLE"]
                 ^"Source" STRING "Core Rules"
@@ -201,21 +201,21 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Sometimes characters are distracted from study by outside events, like a dragon attacking the covenant. In most cases, a distraction has no game impact, unless the distraction is an adventure and the character chooses to take Adventure experience.\n\nLong distractions, of more than a month, reduce Advancement or writing totals. For every full month lost, reduce the total by one third of its original amount. Round any fractions up."
         }
         #tBmUJFHBJJkhe3ayk9mocN8R ^"Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Books are of great importance to the Order of Hermes, as they are almost always the best and fastest way for a magus to increase his power and improve his knowledge."
         }
         #t1qbUfGDdRGPyIdZjlQOsZhh ^"Standard Texts" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "For nine of the Arts, there is a basic text that, over time, has come to be accepted as the preferred primer for a magus seeking the competence necessary to train an apprentice. These texts, called the Roots of the Arts, are widely and cheaply available. A Redcap can arrange the delivery of any of these texts, for a very small consideration. These texts vary, but all have a Level of at least 7, and a Quality of at least 21. Each troupe should decide which Arts have Roots based on the needs of their saga.\n\nIn eight of the Arts, there are summae that are widely accepted as the finest works yet produced. These works, called the Branches of the Arts, can be purchased by young covenants from those with established libraries, but this is unusual. In the ritual of the Order it is accepted that these, purest, expressions of the Art should be given as gifts, because the information they contain is of such great value that they cannot be met in kind. It is, however, a delicate matter for a younger covenant to convince an older one to patronize them with such a valuable gift and, surreptitiously, they often offer payments and services in exchange for the gift of one of the summae.\n\nMany magi seek to pen a standard text, but fail to produce a work that gains this highest level of acclaim. Many libraries contain these informative, but non-definitive, works. Some are excellent but lack the historical romance that has made foundational texts definitive in the minds of magi. Two Roots of the Arts have been superseded, each time by a magus of renown and intelligence. The Branches of the Arts have changed over time, as Hermetic magic gradually increases its reach. For example, the Branch of Terram in 1220 is De Lapii, by Jeremias filius Guernicus, a Summa on Terram, Level 17, Quality 14. Some of these titles hold such awe, however, that the works that replace them retain their titles and nominal authors.\n\nThere are no standard tractatus, but dedicated students of various subjects consider certain texts worthy of particular note. These books are far rarer than the Roots and Branches, but can be accessed in libraries that specialize in the book‘s theme.\n\nCertain magi consider the root and branch symbolism employed in the advertising of standard texts to be a vestigial druidical practice, and they refer to the Foundations and Pillars of the Arts."
         }
         #tZ3blYvWbSZM7k1g6th19MpH ^"Writing Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -227,7 +227,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "A character must have a score of at least five in an Art, or at least two in an Ability, before she can write a useful book. She must also have a score of at least five in the language she wants to write the book in.\n\nBooks may be written about any Ability, including the Mastery Ability of an individual spell. Learning from books about practical Abilities requires the reader to practice as well as read."
         }
         #tF5L17Hoj5D8rzOZkETeRAdW ^"Summae" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -244,7 +244,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Each summa is described by two factors: its Level, which represents how much knowledge is contained in it, and its Quality, representing how well it is written.\n\nWhen a summa is started, the Level of the finished book is determined. The Level may be chosen freely by the author, up to half of her score in the appropriate Art or Ability. The quality of the summa is equal to the author's Communication + 6.\n\nIf the author chooses to set the Level of the summa below half her score, there is a bonus to the Quality. For an Art, the bonus is one point for every Level by which the summa is dropped. For an Ability, the bonus is three points for every Level. This bonus cannot exceed the base Quality of the summa, so the final Quality cannot be more than twice the sum of the author's Communication + bonuses from Virtues + 6.\n\nOnce the level is determined, writing commences. For every season spent writing, the character accumulates a number of points equal to his Communication + Language. When the total of points equals or exceeds the Level of the summa, for Arts, or five times the Level of the summa, for Abilities, the summa is complete. The Level of the book may not be changed midway through the writing (if the character improves the Art or Ability, for example). Once begun, the book must be finished at the initial Level or not finished at all.\n\nFor example, Quintus, who has a score of 24 in Ignem, a Communication of –1 and a Language of 5, wants to write an Ignem summa. He decides that the Level of the summa will be 12, the maximum that he can select. During the first season of writing he accumulates 4 points (his Communication + Language). He accumulates another 4 in the second season, taking him to 8, and 4 more in the third, for a total of 12. This equals the Level, so the book is completed at the end of the third season. The Quality of the summa is 5. If he had chosen to write a summa at Level 6, it would have taken him 2 seasons, and the Quality of the summa would have been 10, because the bonus from dropping the Level by six points is capped at 5 by the base Quality of the book."
         }
         #tD6Cja8kTG5gH3tgXLlaigiN ^"Tractatus" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -256,7 +256,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "It takes one season to write a tractatus. The Quality of a tractatus is equal to the author's Communication + 6.\n\nA character may only write a total number of tractatus equal to half her score in an Ability or one fifth of her score in an Art, rounded up in both cases."
         }
         #tRXsqNf5sKSVCwWURkndtfPT ^"Copying Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -267,7 +267,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "A character may copy books carefully or quickly. Copying a tractatus carefully takes one season. Every season that a character spends copying a summa carefully, she accumulates points equal to 6 + her Profession: Scribe score. When she has accumulated points equal to the level of an Art summa, or five times the level of an Ability summa, it has been copied. A careful copy has the same quality as the original book.\n\nA character may copy books quickly at three times the rate. That is, she may make three copies of a tractatus (or one copy of each of three tractatus, and so on) in a season, or she gains 18 + 3 times her Profession: Scribe score points towards copying a summa. Books copied quickly have a quality one lower than the book copied."
         }
         #tbCDIqaTBoyNOY0ANEFOV3UM ^"Corrupted Copies" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -279,7 +279,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tNKzEtAnDUKelkSBF5ZwuHo8 ^"Hermetic Books: Categories of Value" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -298,14 +298,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "It is, theoretically, possible for a peerlessly capable Hermetic teacher, writing in the best of circumstances, to create a summa with a Quality score of approximately (41 – Level). In the history of the Order, this has never happened, but it might during your saga.\n\nA very few summae, those most prized in the Order, are those that have been created by exceptionally powerful magi, with excellent Reputations, later in life. These books can have a Quality of (35 – level), particularly when techniques described in Covenants are used to enhance a particular copy.\n\nMost of the summae traded within the Order are written by specialists in an Art, with no particular skill in teaching. These summae have a Quality somewhere between (31 – Level) and (28 – Level).\n\nA few books are written by magi with weaker skills than these authors. These books are called \"vain summae\", because immodest people do not understand why their book, poor and weak as it is, should not sit alongside better work. These Summae have a Quality of (25 – Level) or below.\n\nDiscarded summae are usually damaged versions of the books above. They are stripped of their resonant materials before sale and usually have a Quality of between (18 – Level) and (15 – Level).\n\nA tractatus written by a legendary teacher could, theoretically, have a Quality of around 17, but generally an excellent tractatus will have a Quality of around 14, a sound tractatus approximately 11, and a vain tractatus around 6. Damaged tractatus may have Quality scores as low as 1."
         }
         #tBaAjOSkpNlUptSQxQdrtP7F ^"Acquisition (Books)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The Order of Hermes supports a vibrant book trade with two main branches: sale of finished books, and scribal hospitality. Sale of books occurs through the Redcap system, supplemented by exchanges that occur at Tribunal meetings. The use of magic to support the Redcap network is considered more fully in Houses of Hermes: True Lineages, page 101. Scribal hospitality occurs when a magus is allowed to copy from the library of a covenant to which he does not belong. Hospitality is usually offered in exchange for a payment or service."
         }
         #tzKvEd3qfjGnUbGSbKbEwyD9 ^"The Sale of Hermetic Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -315,49 +315,49 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tIItoySa8G66Ye19VYbtv0vr ^"Mundane Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The mundane book market is a cash market. Any magus with a spare pound can obtain any standard text from a stationer in a large city. Less common books still cost a pound, but it takes a season for the stationer to arrange for a copy to be produced and delivered. Cheaper versions, unbound and written on paper, are also available, for half a pound. Commissioning books takes longer for covenants remarkably distant from civilization, or poorly served by the Redcaps."
         }
         #tqzgqJZp2FpP7sed3HYrmNAh ^"Books Concerning the Arts and Arcane Abilities" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The Hermetic book trade is essentially a barter market. Most covenants can create so much mortal money that it isn't valuable enough for them to use as a medium of exchange for rare items. This makes pricing books an art, subject to a lot of haggling. The value of the book for sale, and of the things that might be traded for it, can be disturbed by events. A second magus might offer a similar book at any time, lowering the first book's value. A covenant might decide it has too much vis for one Art, and seek to trade it for others. This lowers the value of all vis of that Art, which would make a book's seller ask for more."
         }
         #ttZA3eI2SwR4LNjV86TjOk2V ^"Prices for Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "example, a pawn of vis per subscriber. Other magi, performing more difficult and expensive research, sometimes encourage the formation of purchasing consortia by offering proportional payments. For example, a magus might agree to release his new Ritual in exchange for twenty-five pawns of vis. Covenants spread across Europe may form a buying cartel, splitting the costs in various ways. These consortia are maintained by side agreements. For example a vis rich covenant may pay a large proportion of the price, in exchange for a series of political concessions, acts of assistance with vexing problems, and payments in kind. This allows poor, Spring covenants to join purchasing consortia.\n\nBooks are often sold at Tribunal. Many of these sales are pre-arranged, by the methods that are described earlier, and completed at the Tribunal meeting, when each party has the opportunity to inspect the goods of their correspondent. Other covenants bring surplus copies to sell to whoever desires to buy. Many covenants, not wanting the possible expense of unsold stock, create exemplars and take orders during Tribunal for later delivery. These books are prepared to a series of informal standards, with the finer books, intended to be used for study, commanding higher prices than those intended as originals, from which working copies are to be made."
         }
         #tMj8rSQvMCwKPibnDcEMotg3 ^"Least Expensive Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "The cheapest books available are damaged and discarded surplus books from major libraries. Inexpensive Hermetic books are not systematically produced for sale. Any established covenant could theoretically make them, but no established covenant needs them. There are few buyers for cheap books, and no covenant wastes the effort of creating a book on something that might not sell for years. Characters wanting damaged and discarded books can often arrange for them to be added to other trades as sweeteners. A covenant wanting to purchase damaged summae with vis can usually find a seller for about a pawn of vis per book, but could arrange other services instead. It is unusual for a seller to have a pile of damaged tractatus to sell for a pawn of vis, but after a library flood or some similar calamity, a buyer might get somewhere between three and nine to the pawn, depending on the degree of damage."
         }
         #tYYwArjvX51g1q2xqwJKtb4F ^"Vain Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Books of the second-lowest level of Quality exist because their authors chose to publish them, despite their comparative lack of worth. Such authors are usually proud of their books, and some give them as gifts to their friends and allies. Characters can usually purchase vain summae for half their level in pawns of vis, less if the author is particularly susceptible to flattery. Vain tractatus cost about a pawn each.\n\nCharacters attempting to acquire a vanity book from someone other than its author often find that they must pay for it as if it were sound. The amount of labor and material involved in copying a book does not change simply because the buyer insists on a poor title, and the time taken to copy the poor book could instead be used to copy a good one for another buyer."
         }
         #tZeCjAdu09ZgnwuAOZf9Her1 ^"Sound Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Books of the level of Quality that make up most Hermetic libraries are the most difficult to price. There are many possible sellers, so buyers have some opportunity to compare prices and force competition. Generally, the lowest prices can be found at covenants that have staff permanently copying books. These charge a number of pawns of vis equal to the book's level, if the purchaser is willing to wait a season for the copy to be produced. A surcharge of up to 20% is added if there is a spare copy available for the impatient. Sound tractatus cost around 2 pawns to order, or 3 for the impatient, but trade of equivalent, sound tractatus remains very common."
         }
         #t6MJHwK1IE5F9PP6DH2MofZN ^"Excellent Books" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -367,7 +367,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tpcl8RAl5rDShfBk1isVgPCg ^"Learning Supernatural Abilities" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -385,14 +385,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tVKkOUzVNR8VWLagC3L3vREx ^"Training Creatures" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "With the approval of the storyguide, any magical beast with an animal intellect — that is, those that have a Cunning (Cun) characteristic — may be tamed, and then used by another character as a mount, guardian, or companion as appropriate. Taming an animal is a possible laboratory activity for a magus, but mundane animal handlers and some magical characters can also attempt to tame animals. Once an animal has been tamed, it can be further trained and taught a number of tricks."
         }
         #t5qJx3aklE5OwqU5AEeVYoCF ^"Taming Animals" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -405,7 +405,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #t8gZD8T0Ogi8ygAs5qBopXgB ^"A Hermetic Tamer" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -421,7 +421,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #ter90Y5hnPDNV7b8MCrUohE9 ^"Taming Mundane Beasts" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -435,7 +435,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #t5V3gooGi9BHoXviQgrIXO8l ^"A Magical Trainer" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -450,7 +450,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tG7O17BOYnSqLzVTiCirOmuv ^"A Mundane Trainer" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -460,7 +460,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "A mundane trainer can also attempt to tame a beast. He generates a number of points each consecutive season, equal to:\n\nGenerally, a mundane trainer will only be able to successfully tame beasts with a small Magic Might."
         }
         #tG9WX4ZUDceAsPhSrNqrS9Ux ^"Tricks, Stunts, and Tasks" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -470,7 +470,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tc6eO49D5eirwsC0eXDFbex3 ^"Loyalty (Creature Training)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Grants" LIST ["Loyal +0"]
                 ^"Source" STRING "Core Rules"
@@ -486,7 +486,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tKamFYAQ2dWoa1rOBVev4ff5 ^"Training Abilities" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -497,7 +497,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #t9HyrZYC4rzFWSI384tHIWKe ^"Trained Groups" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -510,7 +510,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tKSeN91BZUWCNzLumo4W9Okf ^"Commanding a Creature" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["EASE FACTOR", "TASK"]
                 ^"Source" STRING "Core Rules"
@@ -535,7 +535,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tr4ijeZWuJzKKvlTw04ffTSa ^"Animal Ken (Training)" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -547,14 +547,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tKqtPiAdKWdy9cB5PBE9rZq4 ^"Changing Reputations" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "A character gains a Reputation, with a score of 1, by doing something noteworthy in front of witnesses who will talk. A grog might fight a dragon and survive, or kill a demon with two blows of his dagger. A priest might preach a heretical sermon to a monastery. A magus might give the covenant's vis sources away at Tribunal. All of these generate a Reputation. Once a character has a Reputation, anything he does that draws attention to himself strengthens that Reputation, as long as it is not in direct contradiction. Treat the Reputation as an Ability, and give the character one 'experience point' in it for every noteworthy action he performs. Thus, performing ten noteworthy actions raises a Reputation from one to two.\n\nA character may wish to get rid of a bad Reputation. This is not easy. First, he must do something spectacular enough to start a Reputation, and gain a score of 1 in the new Reputation. Then he may count noteworthy actions that specifically support the new Reputation towards increasing it, rather than the bad Reputation. General noteworthy actions still increase the original Reputation. Once the new Reputation exceeds the old, general actions grant experience to the new Reputation instead. At this point, the character may choose to reduce the old Reputation by one point instead of raising the new Reputation when he gains enough experience points to raise it.\n\nIf a character has two Reputations, the storyguide should roll both to see whether a random person has heard of the character. A person may have heard both Reputations, in which case he may not know what to believe, or may amalgamate them. For simplicity's sake, most characters should have no more than two Reputations."
         }
         #thXqPUR18TXqb5vrS5W6T1FY ^"Mystery Initiation" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Condition", "Target Level", "Minor Ordeal", "Medium Ordeal", "Major Ordeal"]
                 ^"Source" STRING "Core Rules"
@@ -580,14 +580,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tg1lobyXWVSsNAIh22MTHk8y ^"The Initiation Script" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "This is a written text (similar to a Lab Text) which describes a successful Initiation and the process followed: the chants and methods, the places and times, and any sacrifices made. If this Script is followed exactly, the Script grants its bonus to the Initiation Total. Scripts usually detail the price of Initiation, which may take the form of an Initiation Ordeal (the acquisition of a Major or Minor Flaw, loss of a Major or Minor Virtue, or increasing a Minor Flaw to Major level), an Initiation Quest (a lengthy journey combined with a series of challenges), and/or an Initiation Sacrifice (of time, wealth, knowledge or power). The Scripts detailed in the Hermetic Magic chapter give the bonus contributed to the Initiation Total from each component of the Initiation Script involved. More details about Initiation Scripts can be found in *The Mysteries Revised Edition*, Chapter 2: Entering the Mysteries. That chapter includes details of the hazardous process of creating a new Script."
         }
         #tMLUKqPDO5nfGF1ELWjU1CX9 ^"Example Elements of an Initiation Script" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Bonus", "Element"]
                 ^"Source" STRING "Core Rules"
@@ -605,7 +605,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "*The Mysteries Revised Edition* has many examples of different Script Bonuses, but the ones below are most commonly employed."
         }
         #tErHb8NRHaB3xsq4R9VfL7yK ^"Varying a Script" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -619,14 +619,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tUGBip4DK1PQpeDYg6ZHHWbK ^"Warping" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Warping is the side effect of living in a strong supernatural aura, or being subject to supernatural effects over a long period of time. Every character has a Warping Score, which is increased like an Ability, but by Warping Points rather than experience points. To increase the Warping Score by one point, a character needs five times the new score extra Warping Points. Thus, to increase from a Warping Score of 2 to one of 3, a character must gain 15 Warping Points.\n\nWarping Points can be gained from exposure to any of the supernatural realms, Divine, Faerie, Infernal, or Magic. The points are not distinguished based on their source."
         }
         #t2ogRT5M4z9MmrsWh6MgFoDU ^"Warping Points and Score" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Warping Score", "Warping Points to Reach", "Warping Points to Increase To"]
                 ^"Table" LIST ["and so on…"]
@@ -642,21 +642,21 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION ""
         }
         #tUzY9sy5xpOeRN5DmanxdbfN ^"Warping and Non-Humans" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "Other mundane creatures and things are also warped by mystical effects. However, keeping track of the Warping Scores of every table in the covenant is unlikely to be fun. Instead, the storyguide should just describe interesting effects, as required. The rules for humans give an idea as to when the effects should be visible, and as to how serious they should be.\n\nCreatures with a Might score are absolutely immune to warping. They are already fully part of one of the supernatural realms."
         }
         #tpOUnXf3vVL0Q2RDDlxqBsXt ^"Gaining Warping Points" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "There are four main sources of Warping Points:\n\n1. Living in a strong (6 or higher) supernatural aura. 2. Being affected by a powerful supernatural effect, unless you created the effect, or it was designed especially for you. 3. Being continuously under the influence of a supernatural effect, whether powerful or not. 4. Botching a roll to use a supernatural ability. Note that these are separate sources of Warping Points. Thus, if a magus designs a powerful supernatural effect, such as a Longevity Ritual, for himself, he doesn't gain Warping Points for being under a powerful supernatural effect, but he does gain them from being under a continuous supernatural effect.\n\nAll sources of Warping Points stack. A character continuously affected by a strong supernatural effect that wasn't designed for him and that he didn't cast gains Warping Points both from being affected by a strong supernatural effect, and for being continuously under the influence of a supernatural effect."
         }
         #tIIJVNxKmREG1xPIOVi02dqv ^"Living in Strong Auras" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Aura Strength", "Always Within", "Half Time Within", "Frequent Visits"]
                 ^"Source" STRING "Core Rules"
@@ -671,7 +671,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Auras of over five points have an effect on anyone living within them, reflected in gaining Warping Points. The number of points gained depends on the strength of the aura and the length of time spent there.\n\nA character is 'always within' an aura if she lives, works, and sleeps there. Occasional visits outside the aura do not matter. 'Half time within' applies to someone who sleeps in the aura but works elsewhere, or vice-versa. It also covers someone who spends two weeks constantly in an aura, and two weeks outside. 'Frequent visits' means that the character spends about a quarter of her time in the aura.\n\nThis time refers to the total length of time spent in an aura, even if there are several different auras involved. Time spent in higher auras may be treated as time in a lower aura if this increases the number of Warping Points gained. For example, a character who spends half her time in a level 6 aura, with frequent visits to level 7 and 8 auras, should gain one Warping Point per year, because she is always in an aura of at least level 6.\n\nCharacters with supernatural abilities arising from the same realm as the aura (for example, Hermetic magi in a Magical aura) do not gain Warping Points from living in the aura. They may gain them from other sources."
         }
         #tPRmSeKNtQui5VFWrVlxW1di ^"Powerful Supernatural Effects" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -681,7 +681,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tMqaJTfK13qIL6JMhyh8APBy ^"Constant Supernatural Effects" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -692,14 +692,14 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tksY7jGUsGL3spKlKbNUrZd9 ^"Supernatural Botches" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "When a character botches the roll to invoke a supernatural effect (for example, a Hermetic spell or a Supernatural Ability), she gains one Warping Point for every zero on the botch dice."
         }
         #tdKokTSsIcIsFuafvPOPX4Nt ^"Warping Points and Constant Effects" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Effect", "Designed For/Cast By Subject", "Not Designed For or Cast By Subject"]
                 ^"Source" STRING "Core Rules"
@@ -713,7 +713,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION ""
         }
         #tq5mbV2h3QNpayrbZDpCXlZf ^"Effects of Warping" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Grants" LIST ["a Minor Flaw when they reach a Warping Score of one", "a second Minor Flaw when the Warping Score reaches 3", "a supernatural Minor Virtue attuned to the primary source of Warping Points at a Warping Score of 5", "a Major Flaw appropriate to the main sources of the warping at a Warping Score of 6, and every point thereafter"]
                 ^"Source" STRING "Core Rules"
@@ -724,7 +724,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             }
         }
         #tpv81sOZ9C982s422EKeSb2Y ^"Aging" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Source" STRING "Core Rules"
             }
@@ -734,7 +734,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "Characters begin aging in the Winter after they turn 35. Every year, a character must roll on the aging table.\n\nAs a high roll generally indicates more serious effects of age, a high Longevity Ritual modifier and a high Living Conditions modifier both indicate longer life.\n\nA Longevity Ritual is effective until the character suffers a crisis. When the crisis occurs, the ritual assures that the character survives, but its power is spent, and the focal ritual must be performed again (see page 261).\n\nA character under the influence of a Longevity Ritual should roll on the table no matter what his age, but treats all rolls of 10 or more as rolls of 9 until he reaches the age of 35. His apparent age may be younger than his actual age, but he is at no risk of actually aging before any other characters. At the player's and storyguide's discretion, this may also apply to characters with modifiers to the aging roll from other sources.\n\n**Apparent age increases:** Particularly low rolls on the table mean that the character appears no older. Otherwise, the character's apparent age increases by one year. The modifier to rolls depends on the character's actual, not apparent, age.\n\n**Aging points**: Aging points are accumulated in each Characteristic. Once a character has a number of Aging Points greater than the absolute value of the Characteristic, the Characteristic drops by one point and all Aging Points are lost.\n\nThus, a character with a Communication of +2 drops to +1 in the year when he gains his third Aging Point in that Characteristic. A character with a Stamina of –3 drops to –4 in the year when he gains his fourth Aging Point in that Characteristic.\n\nIf an Aging Point 'in any Characteristic' is gained, the player may choose the Characteristic."
         }
         #tFnwnJqaw9HArmV9X0KKl8g8 ^"Living Conditions Modifiers" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["LIVING CONDITIONS", "MODIFIER"]
                 ^"Source" STRING "Core Rules"
@@ -754,7 +754,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION "* Modifiers marked with an asterisk are cumulative with each other."
         }
         #tOBWbvlXp0aupsgO1lrsR5dn ^"Aging Table" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["AGING ROLL", "RESULT"]
                 ^"Source" STRING "Core Rules"
@@ -777,7 +777,7 @@ EXTENSION "ARMDef_Long_Term_Events" {
             DESCRIPTION ""
         }
         #tAxSPzdAT1Sz7oETC0uWDuSr ^"Aging Crisis" DEF {
-            APPLIES TO [^"Character"]
+            APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["CRISIS ROLL", "RESULT"]
                 ^"Source" STRING "Core Rules"

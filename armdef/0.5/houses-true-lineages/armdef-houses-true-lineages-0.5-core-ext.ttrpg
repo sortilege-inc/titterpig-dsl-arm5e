@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     NAME "Ars Magica Fifth Edition, Houses of Hermes: True Lineages - core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-27"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -9,7 +9,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     # loaded alongside the core rulebook (spec S13 composition). It details four
     # of the twelve Hermetic Houses — Bonisagus, Guernicus, Mercere, Tremere —
     # each already defined as a mechanical ^"House X" DEF in
-    # armdef-0.5-houses.ttrpg (EXTENDS ^"Hermetic House"). This book's records
+    # armdef-0.5-houses.ttrpg (EXTENDS #tlabSpgxsPGTTR2WePb65NMD ^"Hermetic House"). This book's records
     # EXTEND / point at those canonical House DEFs; it does not redefine them.
     #
     # What it does NOT declare, deliberately (matching the RoP:Faerie precedent):
@@ -35,7 +35,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     # type has no place for them. Instances live in the per-House .ttrpg files.
 
     #tHoHTL05HouseUtilityTypeAA ^"House Utility" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"House" STRING REQUIRED
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -43,7 +43,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05BreakthroughTypeAA ^"Breakthrough" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Scale" ENUM ["Minor", "Major", "Hermetic"] REQUIRED
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -51,7 +51,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05OrigResearchStepAA ^"Original Research Step" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Order" INTEGER REQUIRED
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -59,7 +59,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05ExampleDiscoveryAA ^"Example Discovery" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Breakthrough Scale" STRING REQUIRED
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -67,7 +67,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05ParmaMagicaFoldAAA ^"Parma Magica Fold" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Latin Name" STRING REQUIRED
             ^"Translation" STRING
@@ -76,7 +76,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05ExampleCharacterAA ^"Example Character" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"House" STRING
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -86,7 +86,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     # ── Types introduced by Chapter Two (House Guernicus) ──────────────────
 
     #tHoHTL05CodeClauseTypeAAA ^"Code Clause" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Oath Text" STRING
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -94,7 +94,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05TribunalStepTypeAA ^"Tribunal Procedure Step" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Stage" STRING REQUIRED
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -102,7 +102,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05HermeticPenaltyAAA ^"Hermetic Penalty" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Kind" ENUM ["Damages", "Fine", "Punishment"] REQUIRED
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -110,14 +110,14 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05QuaesitorPowerAAAA ^"Quaesitorial Duty" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
         }
     }
 
     #tHoHTL05FenicilRitualAAAAA ^"Fenicil Ritual" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Scale" ENUM ["Greater", "Lesser"] REQUIRED
             ^"Technique and Form" STRING
@@ -130,7 +130,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05SpellGuidelineAAAA ^"Spell Guideline Set" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Technique" STRING REQUIRED
             ^"Form" STRING REQUIRED
@@ -141,7 +141,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     # ── Types introduced by Chapter Three (House Mercere) ──────────────────
 
     #tHoHTL05MasteredAbilityAAA ^"Mastered Spell Special Ability" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Tradition" STRING
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -151,14 +151,14 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     # ── Types introduced by Chapter Four (House Tremere) ───────────────────
 
     #tHoHTL05CertamenStyleAAAAA ^"Certamen Style" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
         }
     }
 
     #tHoHTL05SpecialistRoleAAAA ^"House Specialist Role" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"House" STRING
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
@@ -166,7 +166,7 @@ EXTENSION "ARMDef_Houses_True_Lineages_Core_Ext" {
     }
 
     #tHoHTL05MagicCreatureAAAAA ^"Magic Creature" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Houses of Hermes: True Lineages"
         }

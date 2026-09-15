@@ -1,6 +1,6 @@
 BASE "ARMDef_Core_Concepts" {
     NAME "Ars Magica Definitive Edition - named concepts referenced across the corpus"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-29"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -67,7 +67,7 @@ BASE "ARMDef_Core_Concepts" {
     # on its own 12 times, so it gets its own record -- ArMDef's own words and
     # ArMDef's own formula, lifted from that record, not rewritten.
     #tARMDefConceptLabTotal ^"Lab Total" DEF {
-        APPLIES TO [^"Magus"]
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
@@ -94,7 +94,7 @@ BASE "ARMDef_Core_Concepts" {
     # and ^"Hermetic Form" separately; the sourcebooks reference the pair as one
     # concept when naming what a spell is built from.
     #tARMDefConceptTechniqueForm ^"Technique and Form" DEF {
-        APPLIES TO [^"Formulaic Spell"]
+        APPLIES TO [#tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
@@ -113,7 +113,7 @@ BASE "ARMDef_Core_Concepts" {
     # From the printed ArMDef core table the owner supplied (pp.178-180 / p405).
     # ArMDef's own content, not the sourcebooks'.
     #tARMDefConceptWoundRecovery ^"Wound Recovery Table" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Table Columns" LIST ["Wound Level", "Interval", "Stable Ease Factor", "Improvement Ease Factor"]
             ^"Source" STRING DEFAULT "Core Rules"
@@ -143,7 +143,7 @@ BASE "ARMDef_Core_Concepts" {
 
     # EXTENDS ArMDef's own ^"Animal Companion", at the owner's direction.
     #tARMDefConceptMagicalAnimalComp ^"Magical Animal Companion" DEF {
-        EXTENDS ^"Animal Companion"
+        EXTENDS #tkeQerSwhkGSrKCxwyTUJrIA ^"Animal Companion"
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
@@ -159,7 +159,7 @@ BASE "ARMDef_Core_Concepts" {
     # on a Personality Trait, so it EXTENDS ArMDef's ^"Personality Trait" rather
     # than standing as a bare ^"Character" anchor.
     #tARMDefConceptPersonalityRolls ^"Personality Rolls" DEF {
-        EXTENDS ^"Personality Trait"
+        EXTENDS #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
@@ -167,13 +167,13 @@ BASE "ARMDef_Core_Concepts" {
     }
 
     # A story genre ArMDef treats in armdef-0.5-stories.lore :: "Exploration".
-    # ArMDef declares no story-genre records, so House Grogs' `MODIFY ^"Exploration"`
+    # ArMDef declares no story-genre records, so House Grogs' `MODIFY #tARMDefConceptExploration ^"Exploration"`
     # (which adds its own Grogs Story Genre note) had nothing to resolve against --
     # the one remaining validator error. Declared here from ArMDef's OWN lore text,
     # the same concept-anchor pattern as ^"Mythic Europe"; the Grogs MODIFY then
     # augments it. Not taken from the Grogs sourcebook.
     #tARMDefConceptExploration ^"Exploration" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Treated In" STRING "armdef-0.5-stories.lore"
             ^"Source" STRING DEFAULT "Core Rules"

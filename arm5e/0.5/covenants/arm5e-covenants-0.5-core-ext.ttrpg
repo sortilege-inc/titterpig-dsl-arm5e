@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Covenants_Core_Ext" {
     NAME "Ars Magica Fifth Edition - Covenants: core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-25"
     DEPENDS_ON "ArM5_Core_Covenant"
@@ -23,7 +23,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     # rulebook's own field, widened here; Category, Requires and Fantasy Level
     # are new, so they are declared rather than SET.
 
-    MODIFY ^"Covenant Boon" {
+    MODIFY #tWz08H40XIFI8HYJLjvKVjxa ^"Covenant Boon" {
         SET ^"Magnitude" ENUM ["Minor", "Major", "Free"]
         PROPERTIES {
             ^"Category" ENUM ["Site", "Buildings", "Resources", "Residents", "External", "Surroundings"]
@@ -32,7 +32,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
         }
     }
 
-    MODIFY ^"Covenant Hook" {
+    MODIFY #t5zTycnLMd14Nt4eLJ965o2y ^"Covenant Hook" {
         SET ^"Magnitude" ENUM ["Minor", "Major", "Free"]
         PROPERTIES {
             ^"Category" ENUM ["Site", "Buildings", "Resources", "Residents", "External", "Surroundings"]
@@ -93,7 +93,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     }
 
     #tYwoQHJhsRianV3Iui1tcZOt ^"Laboratory Virtue" DEF {
-        APPLIES TO [^"Laboratory"]
+        APPLIES TO [#taKk3J80C97U9JM8e8grpEvf ^"Laboratory"]
         PROPERTIES {
             ^"Magnitude" ENUM ["Minor", "Major", "Free"] REQUIRED
             # The book files every one under exactly one of three groups.
@@ -105,7 +105,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     }
 
     #tnHWjNQB23uTkH5AHDfh2ZER ^"Laboratory Flaw" DEF {
-        APPLIES TO [^"Laboratory"]
+        APPLIES TO [#taKk3J80C97U9JM8e8grpEvf ^"Laboratory"]
         PROPERTIES {
             ^"Magnitude" ENUM ["Minor", "Major", "Free"] REQUIRED
             ^"Group" ENUM ["Structure", "Outfittings", "Supernatural"] REQUIRED
@@ -118,7 +118,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     # Art is a caret ref so a consumer can ask "what Creo vis can this covenant
     # draw?" rather than parsing a label.
     #tOyKnFGWkxgPeCHccUaG06R3 ^"Vis Source" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tMql8hzM4bv6ng0WYA6N9VrH ^"Covenant"]
         PROPERTIES {
             ^"Art" STRING REQUIRED
             ^"Source" STRING DEFAULT "Covenants"
@@ -142,7 +142,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     # mechanics and stays VERBATIM in the entry's DESCRIPTION; an expenditure
     # category's labeled cost formula is also carried in a FORMULAS block.
     #tJLCOrGO5QuneInU5WPRuRMx ^"Income Source" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tMql8hzM4bv6ng0WYA6N9VrH ^"Covenant"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }
@@ -150,7 +150,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     }
 
     #tZ5rXgVH6FkSaSXpwQ7lcruK ^"Covenfolk Category" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tMql8hzM4bv6ng0WYA6N9VrH ^"Covenant"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }
@@ -158,7 +158,7 @@ EXTENSION "ArM5_Covenants_Core_Ext" {
     }
 
     #tnbzNOdDkW9kLaRSpRlbvy5T ^"Expenditure Category" DEF {
-        APPLIES TO [^"Covenant"]
+        APPLIES TO [#tMql8hzM4bv6ng0WYA6N9VrH ^"Covenant"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Covenants"
         }

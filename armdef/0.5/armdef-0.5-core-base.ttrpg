@@ -1,6 +1,6 @@
 BASE "ARMDef_Core_Base" {
     NAME "Ars Magica Definitive Edition - Foundation (actors and characteristics)"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-14"
 
@@ -35,7 +35,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tiYphKxSMX51Rvn6XMQ6zFjs ^"Size" DEF {
-        APPLIES TO [^"Entity"]
+        APPLIES TO [#tUdLc53gmrQsHS7jftR3biiN ^"Entity"]
         DESCRIPTION "All Ars Magica characters have a Size score. However, almost all adult human characters have the same Size score, 0, as this represents an average adult human. Every three points of Size represents a ten-fold increase or decrease in mass, and adult humans can range from Size -2 to Size +2, if they take appropriate Virtues or Flaws. The effects of this are described in the Virtues chapter, page 61. Size is more important for non-human creatures, and is discussed in detail in the Bestiary chapter, page 426."
     }
 
@@ -74,14 +74,14 @@ BASE "ARMDef_Core_Base" {
             # carried on every character sheet — shared by all human actor types.
             ^"Soak" INTEGER DEFAULT 0
             ^"Encumbrance" STRING
-            ^"Personality Traits" LIST OF ^"Personality Trait"
-            ^"Reputations" LIST OF ^"Reputation"
-            ^"Abilities" LIST OF ^"Ability"
+            ^"Personality Traits" LIST OF #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait"
+            ^"Reputations" LIST OF #tUTf5Eg2xsP1VEyMc6IRvZYm ^"Reputation"
+            ^"Abilities" LIST OF #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
             # entries are as-printed names (qualifiers, multipliers and the
             # free-House-Virtue asterisk kept verbatim), resolvable by name
             # against the Virtue/Flaw DEFs — same shape the Creature type uses
-            ^"Virtues" LIST OF ^"Virtue"
-            ^"Flaws" LIST OF ^"Flaw"
+            ^"Virtues" LIST OF #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+            ^"Flaws" LIST OF #tgA0K9vGShU1WKTibhCc4jXz ^"Flaw"
             ^"Equipment" LIST OF STRING
         }
     }
@@ -110,7 +110,7 @@ BASE "ARMDef_Core_Base" {
                 ^"Terram" INTEGER MIN 0 DEFAULT 0
                 ^"Vim" INTEGER MIN 0 DEFAULT 0
             }
-            ^"Spells" LIST OF ^"Formulaic Spell"
+            ^"Spells" LIST OF #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
             ^"Wizard's Sigil" STRING
             ^"Voting Sigil" STRING
             # Twilight Scars (Hermetic Twilight is a magus-only phenomenon) and
@@ -118,7 +118,7 @@ BASE "ARMDef_Core_Base" {
             # (the roster is declared on ^"Hermetic House"; this records the
             # one(s) this magus actually took).
             ^"Twilight Scars" STRING
-            ^"Free Virtue" LIST OF ^"Virtue"
+            ^"Free Virtue" LIST OF #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
         ^"Confidence Score" INTEGER MIN 0 DEFAULT 1
         ^"Confidence Points" INTEGER MIN 0 DEFAULT 3
         }
@@ -179,12 +179,12 @@ BASE "ARMDef_Core_Base" {
     # ===========================
 
     #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         DESCRIPTION "There are eight Characteristics in Ars Magica, each representing one of a given character's inborn attributes. Each Characteristic has a score that describes the degree of the character's aptitude. A score of 0 is completely average, and therefore positive numbers denote higher-than-average ability and negative numbers below-average ability. All but the most exceptional of individuals have Characteristics that fall between –3 and +3.\nSince Characteristics represent your character's inborn potential, they cannot be increased by normal means. In rare circumstances, the storyguide may decide that drastic events warrant some sort of permanent change to a Characteristic, and powerful magic can also raise them, but for most characters, they are fixed."
     }
 
     #tyMdAUF1iUhNNoSjxQYGnVfa ^"Intelligence" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Int" FIXED
         }
@@ -195,7 +195,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tkBLGOn4QaoWYNUCR1shCX5e ^"Perception" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Per" FIXED
         }
@@ -206,7 +206,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tqIOnw2Fz07fS3bsC6n3tIiU ^"Strength" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Str" FIXED
         }
@@ -214,7 +214,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tBOcZcx08wwRgvUBaszTRfHp ^"Stamina" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Sta" FIXED
         }
@@ -222,7 +222,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #t5tJ6DqjqQy67oBcCA1bz7Ha ^"Presence" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Pre" FIXED
         }
@@ -230,7 +230,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tJhbvfLVqcYozTTIYmRJAT76 ^"Communication" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Com" FIXED
         }
@@ -238,7 +238,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #t8cpELkJR7Vhrocyg44MDSLi ^"Dexterity" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Dex" FIXED
         }
@@ -246,7 +246,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tFz4v5z6dRehClZnkLp2z535 ^"Quickness" DEF {
-        EXTENDS ^"Characteristic"
+        EXTENDS #tLo0f91bfXGhHLKxv5M2tnzw ^"Characteristic"
         PROPERTIES {
             ^"Abbreviation" STRING "Qik" FIXED
         }
@@ -258,7 +258,7 @@ BASE "ARMDef_Core_Base" {
     # ===========================
 
     #tcBZnRedWJ5vEcmMkio8kULU ^"Personality Trait" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Name" STRING REQUIRED
             ^"Score" INTEGER
@@ -267,7 +267,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tUTf5Eg2xsP1VEyMc6IRvZYm ^"Reputation" DEF {
-        APPLIES TO [^"Character"]
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
         PROPERTIES {
             ^"Content" STRING REQUIRED
             # Main types: "Local", "Ecclesiastical", "Hermetic"; supplements and
@@ -283,7 +283,7 @@ BASE "ARMDef_Core_Base" {
     }
 
     #tPsx2E5mK0WupbqPcfMTNEti ^"Confidence" DEF {
-        APPLIES TO [^"Magus", ^"Companion", ^"Mythic Companion"]
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus", ^"Companion", #tzAlvpwe3TBnheCalmuigW0j ^"Mythic Companion"]
 
         RULES {
             #tH8GFLZAjZlhV4fxXbWvp3eV: important_characters_start_with_confidence_score_1_and_3_points

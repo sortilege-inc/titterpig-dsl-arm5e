@@ -1,6 +1,6 @@
 BASE "ARMDef_Core_Magic_Spell" {
     NAME "Ars Magica Definitive Edition - Formulaic Spell (core stub)"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-13"
 
@@ -18,7 +18,7 @@ BASE "ARMDef_Core_Magic_Spell" {
     # to a spell whose text does). Verified for all 33 such entries.
 
     #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell" DEF {
-        APPLIES TO [^"Magus"]
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus"]
 
         PROPERTIES {
             ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"] REQUIRED
@@ -39,7 +39,7 @@ BASE "ARMDef_Core_Magic_Spell" {
     # Magic, and the mastered-spell special abilities.
 
     #tqFpQUNqm9O5z6MRPStCS5lz ^"Art" DEF {
-        APPLIES TO [^"Magus"]
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus"]
         PROPERTIES {
             ^"Abbreviation" STRING
             ^"Source" STRING DEFAULT "Core Rules"
@@ -47,8 +47,8 @@ BASE "ARMDef_Core_Magic_Spell" {
     }
 
     #tRgVo1ja4K0oM5BwXFMt8dFK ^"Hermetic Technique" DEF {
-        EXTENDS ^"Art"
-        APPLIES TO [^"Magus"]
+        EXTENDS #tqFpQUNqm9O5z6MRPStCS5lz ^"Art"
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus"]
         PROPERTIES {
             ^"Abbreviation" STRING REQUIRED
             ^"Translation" STRING
@@ -57,8 +57,8 @@ BASE "ARMDef_Core_Magic_Spell" {
     }
 
     #tUEdmiz0IADMNt9MPAbcgRyn ^"Hermetic Form" DEF {
-        EXTENDS ^"Art"
-        APPLIES TO [^"Magus"]
+        EXTENDS #tqFpQUNqm9O5z6MRPStCS5lz ^"Art"
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus"]
         PROPERTIES {
             ^"Abbreviation" STRING REQUIRED
             ^"Translation" STRING
@@ -67,14 +67,14 @@ BASE "ARMDef_Core_Magic_Spell" {
     }
 
     #t3vdWl9TWhxG4S0waItLmRoZ ^"Limit of Magic" DEF {
-        APPLIES TO [^"Formulaic Spell"]
+        APPLIES TO [#tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
     }
 
     #tiDWDjMUHSOKAO2CeCPlgNU7 ^"Spell Mastery Ability" DEF {
-        APPLIES TO [^"Magus"]
+        APPLIES TO [#t9M2MUBwsZfdFqGgeXfkdR9f ^"Magus"]
         PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }

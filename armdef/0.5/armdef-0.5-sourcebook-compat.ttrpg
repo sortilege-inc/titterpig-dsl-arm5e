@@ -1,6 +1,6 @@
 BASE "ARMDef_Sourcebook_Compat" {
     NAME "Ars Magica Definitive Edition - sourcebook compatibility types"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-29"
     DEPENDS_ON "ARMDef_Core_Base"
@@ -79,6 +79,28 @@ BASE "ARMDef_Sourcebook_Compat" {
         PROPERTIES {
             ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"]
             ^"Form" ENUM ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"]
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    # arm5e core declares ^"Enchantment" in its Laboratory chapter and
+    # ^"Virtues and Flaws" in Character Creation; ArMDef declares neither, so
+    # Societates' ^"Verditius Enchantment" and the Grogs sidebar on changing
+    # Social Status were left pointing at a name ArMDef only has as a
+    # sourcebook record (RoP:Faerie's two Enchantments) or a House chapter's
+    # section heading (Tremere's and Mercere's ^"Virtues and Flaws"). Declared
+    # here for the same reason as the five above, and on the same terms: the
+    # schema the books need, and not one sentence of either edition's prose.
+    #tARMDefCompatEnchantment ^"Enchantment" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tARMDefCompatVirtuesAndFlaws ^"Virtues and Flaws" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
             ^"Source" STRING DEFAULT "Core Rules"
         }
     }

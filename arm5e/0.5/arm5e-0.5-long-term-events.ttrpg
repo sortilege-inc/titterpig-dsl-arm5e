@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Long_Term_Events" {
     NAME "Ars Magica Fifth Edition - Long-Term Events"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
@@ -393,6 +393,7 @@ EXTENSION "ArM5_Long_Term_Events" {
             PROPERTIES {
                 ^"Table Columns" LIST ["Living Conditions", "Modifier"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #t6d4SWNJLfybVZert1zKUkqW ^"Aging Rolls"
             }
             TABLE {
                 "Wealthy, or healthy location" "+2"
@@ -402,15 +403,13 @@ EXTENSION "ArM5_Long_Term_Events" {
                 "Average peasant" "0"
                 "Poor, or unhealthy location; typical town" "–2"
             }
-            REFERENCES {
-                "Aging Rolls" -> #t6d4SWNJLfybVZert1zKUkqW ^"Aging Rolls"
-            }
         }
         #t6d4SWNJLfybVZert1zKUkqW ^"Aging Rolls" DEF {
             APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Aging Roll", "Result"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #t2xVjL3gIWQYimh7d7yWJFTt ^"Aging Table"
             }
             TABLE {
                 "2 or less" "No apparent aging"
@@ -427,15 +426,13 @@ EXTENSION "ArM5_Long_Term_Events" {
                 "21" "1 Aging Point in Int and Per"
                 "22+" "Gain sufficient Aging Points (in any Characteristics) to reach the next level in Decrepitude, and Crisis"
             }
-            REFERENCES {
-                "Aging Table" -> #t2xVjL3gIWQYimh7d7yWJFTt ^"Aging Table"
-            }
         }
         #tJa6Wvg65yH0CZ9wt2E2g8lp ^"Crisis Table" DEF {
             APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
             PROPERTIES {
                 ^"Table Columns" LIST ["Crisis Roll", "Result"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #t2xVjL3gIWQYimh7d7yWJFTt ^"Aging Table"
             }
             TABLE {
                 "8 or less" "Bedridden for a week."
@@ -445,9 +442,6 @@ EXTENSION "ArM5_Long_Term_Events" {
                 "17" "Major illness. Stamina roll of 9+ or CrCo30 to survive."
                 "18" "Critical illness. Stamina roll of 12+ or CrCo35 to survive."
                 "19+" "Terminal illness. CrCo40 required to survive."
-            }
-            REFERENCES {
-                "Aging Table" -> #t2xVjL3gIWQYimh7d7yWJFTt ^"Aging Table"
             }
         }
         #tU8D79WJklbP6C083p5rdFhD ^"Decrepitude" DEF {

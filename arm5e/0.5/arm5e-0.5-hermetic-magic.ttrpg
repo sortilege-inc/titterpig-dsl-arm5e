@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Hermetic_Magic" {
     NAME "Ars Magica Fifth Edition - Hermetic Magic"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Base"
@@ -379,14 +379,12 @@ EXTENSION "ArM5_Hermetic_Magic" {
             PROPERTIES {
                 ^"Table Columns" LIST ["Casting Total – Spell Level", "Spell Cast?", "Fatigue Levels Lost"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #tfzSMqY4TstmYok7pFi4qLiu ^"Formulaic Magic"
             }
             TABLE {
                 "0 or higher" "Yes" "0"
                 "–1 to –10" "Yes" "1"
                 "–11 or lower" "No" "1"
-            }
-            REFERENCES {
-                "Formulaic Magic" -> #tfzSMqY4TstmYok7pFi4qLiu ^"Formulaic Magic"
             }
         }
         #tpC3MKgq1B55vN8JALyjaFnC ^"Ritual Magic (table)" DEF {
@@ -394,6 +392,7 @@ EXTENSION "ArM5_Hermetic_Magic" {
             PROPERTIES {
                 ^"Table Columns" LIST ["Casting Total – Spell Level", "Spell Cast?", "Fatigue Levels Lost"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #t4FJXRSYdrnY1S5bwLumQ659 ^"Ritual Magic"
             }
             TABLE {
                 "0 or higher" "Yes" "One"
@@ -401,9 +400,6 @@ EXTENSION "ArM5_Hermetic_Magic" {
                 "–6 to –10" "Yes" "Three"
                 "–11 to –15" "No" "Four"
                 "–16 or more" "No" "Five"
-            }
-            REFERENCES {
-                "Ritual Magic" -> #t4FJXRSYdrnY1S5bwLumQ659 ^"Ritual Magic"
             }
         }
         #t4FJXRSYdrnY1S5bwLumQ659 ^"Ritual Magic" DEF {
@@ -435,6 +431,7 @@ EXTENSION "ArM5_Hermetic_Magic" {
             PROPERTIES {
                 ^"Table Columns" LIST ["Situation", "Ease Factor"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #t0PAqERchG5FLBBh2eeqBcMW ^"Ease Factors"
             }
             TABLE {
                 "Still" "Trivial (0)"
@@ -450,9 +447,6 @@ EXTENSION "ArM5_Hermetic_Magic" {
                 "Casting another spell (Continuing Situation)" "Very Hard (15)"
                 "Maintaining another spell (Continuing Situation)" "Hard (12), +3 for each spell beyond the second"
                 "Injured (Continuing Situation)" "3 times wound penalty to Concentration rolls (this is instead of the normal penalty)"
-            }
-            REFERENCES {
-                "Ease Factors" -> #t0PAqERchG5FLBBh2eeqBcMW ^"Ease Factors"
             }
         }
         #t7LUfBdTD2CcXWAvA1edqseF ^"Penetration Total" DEF {
@@ -506,15 +500,13 @@ EXTENSION "ArM5_Hermetic_Magic" {
             PROPERTIES {
                 ^"Table Columns" LIST ["Words", "Modifier", "Gestures", "Modifier", "Voice Range"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #t7AW5Vp6vIoqvyrzuzW9RJTc ^"Words and Gestures"
             }
             TABLE {
                 "Loud" "+1" "Exaggerated" "+1" "50 paces"
                 "Firm" "0" "Bold" "0" "15 paces"
                 "Quiet" "–5" "Subtle" "–2" "5 paces"
                 "None" "–10" "None" "–5" "0 paces (caster only)"
-            }
-            REFERENCES {
-                "Words and Gestures" -> #t7AW5Vp6vIoqvyrzuzW9RJTc ^"Words and Gestures"
             }
         }
         #tl6Xr4vY3phcjUvE9OM2SiKW ^"Fast Casting" DEF {
@@ -572,6 +564,7 @@ EXTENSION "ArM5_Hermetic_Magic" {
             PROPERTIES {
                 ^"Table Columns" LIST ["Sympathetic Connection", "Bonus to Multiplier"]
                 ^"Source" STRING "Core Rules"
+                ^"See Also" #tNZxeYWtf9dM0sP5zizyQuMi ^"Artes Liberales"
             }
             TABLE {
                 "Caster is blood relative of target" "+1"
@@ -581,10 +574,6 @@ EXTENSION "ArM5_Hermetic_Magic" {
                 "Target's horoscope for today**" "+1"
                 "Target's nativity horoscope***" "+2"
                 "Symbolic representation of target****" "+2"
-            }
-            REFERENCES {
-                "Artes Liberales" -> #tNZxeYWtf9dM0sP5zizyQuMi ^"Artes Liberales"
-                "Artes Liberales" -> #tNZxeYWtf9dM0sP5zizyQuMi ^"Artes Liberales"
             }
         }
         #t8o1ZHePzysruZvQvuLh8Vae ^"Arcane Connections" DEF {

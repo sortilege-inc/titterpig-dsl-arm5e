@@ -1,5 +1,97 @@
 # titterpig-dsl-arm5e — TODO
 
+## 2026-09-21 — `check_references.py` now passes on both editions
+
+Both gate parts, both editions, from `titterpig-dsl/check_references.py`:
+
+| | §5c REFERENCES | §5d reference sites | validator |
+|---|---|---|---|
+| `arm5e/0.5` | 1,773 refs, **0 errors** (was 30) | 4,169 sites, **0 errors** (was 91) | 204 files 0/0 |
+| `armdef/0.5` | 2,540 refs, 0 errors | 4,936 sites, **0 errors** (was 492) | 204 files 0/0 |
+
+`verify_armdef.py`: **PASS — only the five structural forms differ.**
+
+### The 29 §5c surface forms (owner ruling, 2026-09-21)
+
+A `REFERENCES` entry is a stand-off annotation of printed prose (§5c): the surface form has to be
+in the text it marks. Twenty-nine were not — they had been minted by matching entity NAMES into
+text rather than read off the page, and the gate never caught it because its drift check had been
+vacuous for all 4,626 entries corpus-wide until 2026-09-20.
+
+- **Twelve on the Houses are dropped.** The 2026-07-27 restructure moved each House's narrative to
+  `arm5e-0.5-houses.lore`; the annotations stayed on the mechanical DEF, pointing at text that is
+  no longer in the file. All seven surfaces (`Hermetic magic`, `The Gift`, `House Tremere`, …) are
+  in that `.lore`, which is Markdown and has nowhere to carry a stand-off annotation.
+- **Seventeen on TABLE records are re-typed** as `^"See Also" #hash ^"Target"` — a §5d reference
+  site, which the gate does check, rather than a §5c annotation of prose that was never printed
+  there. `^"Aging Table"` is a table of living conditions and modifiers; the words `Aging Rolls`
+  are nowhere in it. The property is `^"See Also"` and not `^"Tabulates"` because only eight of
+  the seventeen tabulate their target — `^"Aging Rolls" → ^"Aging Table"` and
+  `^"Crisis Table" → ^"Aging Table"` are one table pointing at another, and the six covenant
+  situations ARE situations rather than tables of them.
+- **One was case drift**: `"Aging"` where the page prints `aging rolls`.
+
+### The 583 ambiguous §5d sites
+
+A hashless reference whose caret name resolves to more than one entity is an ERROR under §5d
+(DECISION-13). Resolution rule, applied throughout: **the nearest declaring scope — the same file,
+else the same book, else the edition core.** It is not a guess: Covenants and ArMDef core each
+declare `^"Laboratory Virtue"` and `^"Laboratory Flaw"`, and all 183 records that extend them say
+which they mean in their own shape (Covenants' carry `^"Group"`, core's carry `^"Category"`). The
+rule agrees with every one.
+
+**arm5e (91):** `^"Magus"` ×31 → core-base's `ACTOR "Magus"`, not character-creation's prose record
+of the character kind — `APPLIES TO` names an actor type, and the 13 `EXTENDS` are all character
+TEMPLATEs, which *are* a Magus with a stat block. `^"Hermetic Practice"` ×58 → the societates type;
+every site is in that book. `^"Animal Ken"` → the Virtue: the Grogs book's two other references to
+the name use the Virtue's hash. `^"Failed Apprentice"` → the core Virtue: the ten other Failed
+Apprentice story-seed records in the same file all use it.
+
+**armdef (492)** was almost entirely the retarget's doing, and is fixed in
+`arm5e-sourcebook-conversions/scripts/retarget_armdef.py` so it does not come back:
+
+- **`ACTOR "Name" DEF` was invisible to the anchor index** (it matched `^"Name" DEF` and
+  `TEMPLATE "Name" DEF`, not `ACTOR`), so ArMDef's `^"Character"`, `^"Entity"`, `^"Covenant"`,
+  `^"Magus"`, `^"Grog"` and `^"Companion"` could not be found, and **340 references to them were
+  left addressing arm5e's anchors**. A later hand pass had repaired those in `armdef/`, where the
+  next retarget would have undone the repair — the clobber trap, in a new place.
+- **An ambiguous name used to have its hash DROPPED**, on the reasoning that by-name is safer than
+  a guess. §5d post-dates that reasoning and makes by-name an error. The script now resolves such a
+  hash to **the ArMDef counterpart of the arm5e FILE that declared it** (132 sites: `#t42wf…
+  ^"Faerie Blood"` is declared in `arm5e-0.5-virtues.ttrpg`, so it means
+  `armdef-0.5-virtues.ttrpg`'s, not RoP:Faerie's two, which sit nearer), then by nearest scope (43).
+- **`^"Grog"` / `^"Companion"` exist twice in ArMDef core** — as core-base ACTORs and as the plain
+  types `armdef-0.5-sourcebook-compat.ttrpg` declares expressly so the re-targeted books' records
+  can extend them "exactly as converted". A book means the shim; ArMDef's own files mean the ACTOR.
+- **`^"Enchantment"` and `^"Virtues and Flaws"` are a real ArMDef core gap** — arm5e declares both
+  (Laboratory chapter, Character Creation) and ArMDef declares neither, so Societates' Verditius
+  Enchantment and the Grogs sidebar on Social Status were pointing at a RoP:Faerie record and a
+  House chapter's section heading. Declared in the compat file on its own stated terms: the schema
+  the books need, and not one sentence of either edition's prose.
+- The retarget's `ROOT` still pointed at `~/Working`, dissolved 2026-09-13. It reads
+  `ARM5E_DSL_ROOT` now and defaults to `~/Sortilege`.
+
+### A gate script, and what it found  *(2026-09-21)*
+
+There was no `gates.sh` in this repo, which is how the above accumulated unseen. There is one now —
+validator, references and constructs for both editions, `verify_armdef.py`, and all 22 coverage
+manifests — and it reports honestly:
+
+**`arm5e-hedge-magic` and `armdef-hedge-magic` FAIL the coverage gate.** Two source units, the same
+entity twice: `[Text Box] Elisavet ("Psychorrhax")` and `[Heading] Elisavet ("Psychorrhax")`. The
+name appears **nowhere in either corpus** — this is a genuine content omission, not a key mismatch,
+and it needs the Hedge Magic PDF and a conversion pass. Everything else passes: 872/921 covered,
+47 excluded-with-reason, 0 deferred. **Owner's call.**
+
+(The first version of that script piped each audit through `tail -1`, so a failing gate reported the
+PIPE's status and read as passing — the trap the `titterpig-dsl` skill warns about. Fixed before
+this was written; the FAIL above is what it says once the audit's own exit code survives.)
+
+One site was settled by reading rather than by rule: `^"Sin-Eating" APPLIES TO ^"Curse-Throwing"`
+in `armdef-0.5-mythic-companions.ttrpg` → the Supernatural **Ability**, not the Virtue that grants
+it — "the supernatural power of Curse-Throwing is called Sin-Eating. A sin-eater uses this power."
+
+
 Status as of 2026-07-26 (evening). Corpus validates **arm5e 100 files 0/0, armdef 40 files
 0/0**; MENTIONS arm5e 2167 / armdef 1431 (both 0 unresolved / 0 surface-mismatch);
 MODIFY/no-armdef-type gates clean; sources.json fully synced (146/146).

@@ -1,6 +1,6 @@
 EXTENSION "ARMDef_RoP_Magic_Core_Ext" {
     NAME "Ars Magica Fifth Edition - Realms of Power: Magic: core type extensions"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-26"
     DEPENDS_ON "ARMDef_Core_Ability"
@@ -159,6 +159,64 @@ EXTENSION "ARMDef_RoP_Magic_Core_Ext" {
         DESCRIPTION "A mundane beast stat block from the Appendix (no Magic Might); soft, verbatim stats."
         REFERENCES {
             "Magic Might" -> #trg0A2ZR9HigaSPcNrgeDYXp ^"Magic Might"
+        }
+    }
+
+    #tRoPMagCharCreateBudget01aa ^"Magic Character Creation" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Characteristic Points" INTEGER 7 FIXED
+            ^"Characteristic Max" INTEGER 3 FIXED
+            ^"Spring Experience" INTEGER 120 FIXED
+            ^"Summer Experience" INTEGER 360 FIXED
+            ^"Autumn Experience" INTEGER 720 FIXED
+            ^"Winter Experience" INTEGER 1200 FIXED
+            ^"Quality Points" STRING "equal to Might Score"
+            ^"Minor Quality Points" INTEGER 1 FIXED
+            ^"Major Quality Points" INTEGER 3 FIXED
+            ^"Grog Majors Allowed" STRING "No"
+            ^"Source" STRING "Realms of Power: Magic"
+            ^"Page" INTEGER 30
+        }
+        DESCRIPTION "Characteristics: 7 points assigned as in standard Detailed Character Creation (see ArM5 page 29), no Characteristic more than +3 or less than -3. Virtues and Flaws: Assign the character's Virtues and Flaws as in standard Detailed Character Creation, including a Social Status Virtue or Flaw. Size: Assign Size, with 0 indicating an average adult human. Add twice this value to the character's Strength, and subtract it from Quickness. Season determines the magic character's starting experience points, which are used to assign it scores in any Abilities the character can learn, based on its Virtues and Flaws. A spring character receives 120 experience points, a summer character receives 360, an autumn character receives 720, and a winter character receives 1200. Magic Might Score depends upon the power level of the saga and the character's role within it. Then choose Magic Qualities, magical powers, and other advantages, taking a number of Quality points equal to the character's Might Score. Magic Inferiorities give the character additional points to spend on Magic Qualities; like Virtues and Flaws, Minor Qualities and Inferiorities are worth 1 point, Major Qualities and Inferiorities are worth 3 points. Grog characters cannot take Major Inferiorities or Qualities."
+    }
+    #tRoPMagMinSizeTable01bbccdd ^"Magic Might Minimum Size Table" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Might Score", "Minimum Size"]
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "There are some magic characters made up of otherwise stationary matter from any Form made animate by the raw power of nature and the influence of the Magic Realm. This can include living things such as a magical tree or a statue of an animal made flesh, or nonliving things made up of nothing but raw material held together by magic. In either case, it is dependent upon its Size for its Magic Might — to gain more Might, its true form must somehow become larger. The following chart shows the minimum Size required for each level of Might Score."
+        TABLE {
+            "0" "–21"
+            "1" "–18"
+            "2" "–15"
+            "3" "–12"
+            "4" "–9"
+            "5" "–6"
+            "10" "–3"
+            "15" "0"
+            "(+5)" "(+3)"
+        }
+    }
+    #tRoPMagAuraRecoverTable01ee ^"Aura Might Recovery Table" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Subtotal", "Recovery Time"]
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "Magic characters can recover Might Points more quickly when they rest in a Magic aura, though like mundane characters recovering Fatigue, the magic character cannot engage in strenuous activity while resting. The time in which the character's entire Might Pool replenishes depends on the strength of the aura modified by the magnitude of the character's Might Score, as shown below. Entire Recovery Time: Subtotal = Aura - (Might Score / 5), then refer to chart."
+        TABLE {
+            "0" "24 hours"
+            "1" "12 hours"
+            "2" "6 hours"
+            "3" "3 hours"
+            "4" "90 minutes"
+            "5" "45 minutes"
+            "6" "22 minutes"
+            "7" "10 minutes"
+            "8" "5 minutes"
+            "9" "2 minutes"
         }
     }
 }

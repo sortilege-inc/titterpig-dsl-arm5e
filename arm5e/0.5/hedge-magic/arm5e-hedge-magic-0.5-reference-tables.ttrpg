@@ -1,0 +1,103 @@
+EXTENSION "ArM5_Hedge_Magic_Tables" {
+    NAME "Ars Magica Fifth Edition, Hedge Magic (Revised Edition) - Tables"
+    VERSION "0.5.1"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-09-27"
+    DEPENDS_ON "ArM5_Hedge_Magic_Core_Ext"
+
+    #thedgerefvitkiduration01 ^"Vitki Náttthél Duration" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Duration Roll", "Base Duration"]
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        TABLE {
+            "0" "Moments"
+            "3" "Diameters"
+            "6" "Suns"
+            "9" "Moons"
+            "12" "Years"
+            "15" "Unknown*"
+        }
+        DESCRIPTION "Base Duration of a nightfarer's náttthél workings, by Duration Roll (simple die + Warping Score)."
+    }
+    #thedgerefelemsummon0002 ^"Elemental Summoning Totals" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Total", "Might", "Size", "Note"]
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        TABLE {
+            "0" "0" "–21" "nonexistent"
+            "1" "1" "–18" "too small to perceive"
+            "2" "2" "–15" "insect, kernel of grain"
+            "3" "3" "–12" "baby mouse, 10 insects"
+            "4" "4" "–9" "bat, frog"
+            "5" "5" "–6" "lizard, stoat"
+            "10" "10" "–3" "badger, cat"
+            "15" "15" "0" "adult, ten cats"
+            "20" "20" "+3" "war horse, ten adults"
+            "25" "25" "+6" "killer whale, 100 adults"
+            "30" "30" "+9" "humpbacked whale, 100 horses"
+            "35" "35" "+12" "tower, castle"
+            "40" "40" "+15" "village, storm"
+            "45" "45" "+18" "city, river"
+            "50" "50" "+21" "mountain, sea"
+        }
+        DESCRIPTION "The Might and Size an elementalist can summon or create for a given Summoning Total."
+    }
+    #thedgerefelemphysic0003 ^"Elemental Physician Characteristic Boosts" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Element", "Characteristic Increased"]
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        TABLE {
+            "Air" "Intelligence, Perception, Presence, or Communication"
+            "Earth" "Strength, Stamina, Dexterity, or Quickness"
+            "Fire" "Presence, Communication, Dexterity, or Quickness"
+            "Water" "Intelligence, Perception, Strength, or Stamina"
+        }
+        DESCRIPTION "Which Characteristics an elemental physician's potions can increase, by element."
+    }
+    #thedgerefelemgrades0004 ^"Elementalist Student Grades" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Grade", "Ability Scores"]
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        TABLE {
+            "2nd Grade" "Arabic 5, Artes Liberales 4"
+            "3rd Grade" "Philosophiae 4"
+            "4th Grade" "Theology (Islam) 4"
+        }
+        DESCRIPTION "Ability scores associated with the grades of an elementalist student's education."
+    }
+    #thedgerefnightquest0006 ^"Nightwalker Questioning the Dead" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease", "Circumstances"]
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        TABLE {
+            "3" "Question may be answered with a yes or no."
+            "6" "Question requires an answer a sentence long."
+            "9" "Question requires an answer up to six sentences long."
+        }
+        DESCRIPTION "Ease Factor for a nightwalker questioning the unquiet dead, by the answer's complexity."
+    }
+    #thedgereffolkheal00007 ^"Folk Witch Healing" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease", "Wound (vis)", "Fatigue (vis)"]
+            ^"Source" STRING "Hedge Magic [Revised Edition]"
+        }
+        TABLE {
+            "6" "Light Wound (3 p)" "Winded (1 p)"
+            "9" "Medium Wound (4 p)" "Weary (2 p)"
+            "12" "Heavy Wound (5 p)" "Tired (3 p)"
+            "15" "Incapacitating (6 p)" "Dazed (4 p)"
+        }
+        DESCRIPTION "Ease Factor and vis cost for a folk witch to heal a Wound or restore Fatigue."
+    }
+}

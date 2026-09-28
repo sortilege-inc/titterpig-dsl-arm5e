@@ -1,0 +1,127 @@
+EXTENSION "ARMDef_RoP_Faerie_Tables" {
+    NAME "Ars Magica Fifth Edition - Realms of Power: Faerie - Tables"
+    VERSION "0.5.1"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-09-27"
+    DEPENDS_ON "ARMDef_RoP_Faerie_Core_Ext"
+
+    #tfaerierefpresence0001 ^"Faerie Presence Range" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Presence", "Distance"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "+4/+5" "100 paces"
+            "+2/+3" "50 paces"
+            "–1/0/+1" "15 paces"
+            "–2/–3" "5 paces"
+        }
+        DESCRIPTION "The distance a faerie's Presence (its faerie aura) radiates, by Presence score."
+    }
+    #tfaerierefweapons0002 ^"Faerie Natural Weapons" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Weapon", "Init", "Atk", "Dfn", "Dmg"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "Teeth" "0" "+3" "+1" "+1"
+            "Large Teeth" "0" "+4" "+1" "+3"
+            "Tusks" "0" "+4" "+2" "+5"
+            "Claws" "–1" "+2" "+3" "+2"
+            "Large Claws" "0" "+5" "+3" "+4"
+            "Horns" "+1" "+3" "–1" "+2"
+            "Large Horns or Antlers" "+2" "+3" "+2" "+3"
+            "Hooves" "+2" "+2" "+2" "+1"
+        }
+        DESCRIPTION "Combat statistics for the natural weapons some faeries use."
+    }
+    #tfaerierefpowercompare03 ^"Faerie Power Virtue Comparison" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Virtue Name", "Spell Levels", "Value", "Effect Type", "Might Cost", "Initiative"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "Focus Power" "25" "Major Virtue" "Spontaneous" "magnitude" "Qik – maximum magnitude"
+            "Greater Power" "50" "Major Virtue" "Formulaic" "(magnitude / 2)" "Qik – (magnitude / 2)"
+            "Lesser Power" "25" "Minor Virtue" "Formulaic" "magnitude" "Qik – (magnitude × 2)"
+            "Personal Power" "25" "Minor Virtue" "Limited" "(magnitude / 2)" "Qik – (magnitude / 2)"
+            "Ritual Power" "25" "Major Virtue" "Ritual" "magnitude" "Qik – (magnitude × 2)"
+        }
+        DESCRIPTION "Comparison of the faerie Power Virtues, with spell levels, value, effect type, Might cost, and Initiative."
+    }
+    #tfaerierefsympathetic04 ^"Sympathetic Influence" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Trait Value"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "9" "+1 or –1"
+            "15" "+2 or –2"
+        }
+        DESCRIPTION "Ease Factor for using Sympathy Traits to influence a faerie."
+    }
+    #tfaerierefcastingmod05 ^"Faerie Casting Total Modifiers" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Casting Total Modifier", "Example Situation"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "0" "Recipient present in person"
+            "–1" "Recipient represented by Arcane Connection lasting decades or more"
+            "–3" "Recipient represented by Arcane Connection lasting months or years"
+            "–6" "Recipient represented by Arcane Connection lasting weeks or less"
+            "–3" "Recipient is different species to target"
+        }
+        DESCRIPTION "Casting Total modifiers for reaching a recipient who is not present in person."
+    }
+    #tfaerierefthreshold06 ^"Faerie Threshold Points" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Time", "Threshold Points"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "New Moon" "1"
+            "Full Moon" "3"
+            "Pagan Holiday*" "3"
+            "Solstice" "6"
+        }
+        DESCRIPTION "Threshold Points granted by temporal thresholds for entering Faerie."
+    }
+    #tfaerierefdaylength07 ^"Faerie Day Length" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Fable Score", "1 Faerie Day Lasts"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "0" "1 hour"
+            "1" "12 hours"
+            "2" "1 day"
+            "3" "3 days"
+            "4" "1 week"
+            "5" "1 month"
+            "6" "1 season"
+        }
+        DESCRIPTION "How long a single Faerie day lasts in the mundane world, by Fable Score."
+    }
+    #tfaerierefelysium08 ^"Elysium Reward Levels" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Table Columns" LIST ["Fable Points Earned", "Reward Level"]
+            ^"Source" STRING "Realms of Power: Faerie"
+        }
+        TABLE {
+            "0 – 3" "Failure"
+            "4 – 6" "Mediocre Success"
+            "7 – 9" "Accomplished Success"
+            "10+" "Unmitigated Success"
+        }
+        DESCRIPTION "The reward level from an Elysium quest, by Fable Points earned."
+    }
+}

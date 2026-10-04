@@ -1,0 +1,159 @@
+EXTENSION "ARMDef_Art_Academe_Medicine_Rules" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Four: Medicine rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf008b3d7af42576f04cee3 ^"Disease Avoidance roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING "Stable Ease Factor of the disease"
+            ^"Rules Section" STRING "Contracting a Disease"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Disease Avoidance roll" "Stamina + Living Conditions Modifier + (Corpus/5) + Wound Penalty + stress die"
+        }
+    }
+
+    #t9224301811eb25919a52a6 ^"Disease Recovery Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING "as determined by the disease"
+            ^"Rules Section" STRING "Disease Progression and Recovery"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Disease Recovery Roll" "Stamina + Medicine* + (Corpus/5) + Wound Penalty + Recovery Modifiers (see below) + stress die"
+        }
+    }
+
+    #t0dc3f3db5e2045ae9d61e9 ^"Prognosis Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING "Severity of Disease"
+            ^"Rules Section" STRING "Diagnosis and Prognosis"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 57
+        }
+        FORMULAS {
+            "Prognosis Total" "Intelligence + Medicine + Diet modifier + Medication modifier + Surgery modifier"
+        }
+    }
+
+    #t2df730a8b37dd25c9e739e ^"Modifiers to Prognosis Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Diagnosis and Prognosis"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 57
+        }
+        FORMULAS {
+            "Diet modifier" "+ Living Conditions Modifier"
+            "Medication modifier" "+ Profession: Apothecary (maximum 3)"
+            "Surgery modifier" "+ Chirurgy (maximum 3)"
+        }
+    }
+
+    #te91344485d857438879b15 ^"Disease Recovery Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Therapy"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 58
+        }
+        FORMULAS {
+            "Disease Recovery Total" "Stamina + Medicine* + Recovery Modifiers + Magical Aid + stress die"
+        }
+    }
+
+    #taa370340d0af8b88d33ad6 ^"Surgery Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Surgery"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 61
+        }
+        FORMULAS {
+            "Surgery Roll" "Dexterity + Chirurgy + Recovery Modifiers + stress die"
+        }
+    }
+
+    #t48676551bf3f3b749e0061 ^"Wound Recovery Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Treatment of Wounds"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 61
+        }
+        FORMULAS {
+            "Wound Recovery Total" "Stamina + First Aid Bonus + Palliative Care Bonus + Recovery Modifiers + Magical Aid + stress die"
+        }
+    }
+
+    #tf3c624e5bf32224b15b9c7 ^"First Aid Bonus to Wound Recovery" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "First Aid"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 61
+        }
+        FORMULAS {
+            "First Aid Bonus to Wound Recovery" "(Chirurgy / 2)"
+        }
+    }
+
+    #t1d3c90db468dcfc33d1a08 ^"First Aid Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "First Aid"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 61
+        }
+        FORMULAS {
+            "First Aid Roll" "Dexterity + Chirurgy + Recovery Modifiers + Magical Aid + stress die vs Improvement Ease Factor"
+        }
+    }
+
+    #t480889607ae42d0fe10b32 ^"Palliative Care Bonus to Wound Recovery" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Palliative Care"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 62
+        }
+        FORMULAS {
+            "Palliative Care Bonus to Wound Recovery" "(Chirurgy / 2)"
+        }
+    }
+
+    #t3210c66c1d075999b99948 ^"Labor Points per Eligible Season" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Apothecary’s Store"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 65
+        }
+        FORMULAS {
+            "Labor Points per Eligible Season" "(Intelligence + Profession: Apothecary) x Wealth Multiplier"
+        }
+    }
+
+    #te552f397d43c798c57f57b ^"Search for Ingredients" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Apothecary’s Store"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 65
+        }
+        FORMULAS {
+            "Search for Ingredients" "Per + Profession: Apothecary, against Ease Factor of 9"
+        }
+    }
+
+}

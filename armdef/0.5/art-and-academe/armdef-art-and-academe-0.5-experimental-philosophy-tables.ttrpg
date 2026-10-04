@@ -1,0 +1,73 @@
+EXTENSION "ARMDef_Art_Academe_ExperimentalPhilosophy_Tables" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Five: Experimental Philosophy tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tabd2c87481c1ed4b9e4c12 ^"Ligature Bonus Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor Achieved", "Bonus"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 69
+        }
+        TABLE {
+            "9" "+1"
+            "15" "+2"
+            "24" "+3 (max)"
+        }
+    }
+
+    #t8b45c222ddacfe38064c42 ^"Volume Conversion Guide" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Volume", "Equivalents"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        TABLE {
+            "50 cubic inches" "2 pints, 4-inch-diameter sphere, five base Individuals of Aquam (poison), a Small object on the Material and Size table (**ArM5**, page 97)."
+            "500 cubic inches" "2 gallons, 1-foot-diameter sphere, three base Individuals of Terram (precious metal), a Medium object on the Material and Size table."
+            "3 cubic feet" "20 gallons, 2-foot-diameter sphere, three base Individuals of Terram (base metal), five base Individuals of Aquam (corrosive), a Large object on the Material and Size table"
+            "1 cubic pace" "200 gallons, 4-foot-diameter sphere, base Individual of Ignem, base Individual of Terram (stone), five base Individuals of Aquam (processed liquid), a Huge object on the Material and Size table."
+            "10 cubic paces" "2, 000 gallons, 8-foot-diameter sphere, base Individual of Terram (dirt), five base Individuals of Aquam (natural liquid)."
+            "100 cubic paces" "6-pace-diameter sphere, five base Individuals of Aquam (water)."
+            "1000 cubic paces" "12-pace-diameter sphere, cylinder 20 paces high and half as wide, cylinder 8 paces high and twice as wide, pool 16 paces in diameter and half as deep."
+        }
+        DESCRIPTION "Each increase in size on this chart indicates approximately a ten-fold increase in volume."
+    }
+
+    #taf3ec82069a4d72adc9805 ^"Reagent Volume (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Magnitude", "Volume of Simple Matter", "Volume of Complex Matter"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 75
+        }
+        TABLE {
+            "+0" "1 pace³" "50 inches³"
+            "+1" "10 paces³" "500 inches³"
+            "+2" "100 paces³" "3 feet³"
+            "+3" "1000 paces³" "1 pace³"
+        }
+    }
+
+    #tae39706388cc362360097a ^"Alchemical Purification’s Shape & Material Bonuses" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Bonus"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        TABLE {
+            "Mercury" "+2 alter complex matter"
+            "White Arsenic" "+1 enhance primary or secondary quality"
+            "Sal Ammoniac" "+1 diminish primary or secondary quality"
+            "Sulfur" "+2 purify matter"
+            "Green Vitriol" "+1 alter simple matter"
+        }
+        DESCRIPTION "Purification of substances with alchemy can enhance Shape & Material bonuses that derive from the material rather than the shape. For example, silver’s bonus to harm lycanthropes can be enhanced, but not a wand’s bonus to repel things. A Minor Alteration can add a +1 to the bonus, a Substantial Alteration adds +2, and a Major Alteration adds +3. An alchemist preparing a difficult formula might spend time to enhance the ingredients he intends to employ. For example, by improving the purification bonus of sulfur before attempting the Lapis Minor. Members\n\nof the Lyceum have also discovered this effect, and employed it in Hermetic Enchantments. Some new Shape & Material bonuses are given below; these can be employed by philosophers and magi alike:"
+    }
+
+}

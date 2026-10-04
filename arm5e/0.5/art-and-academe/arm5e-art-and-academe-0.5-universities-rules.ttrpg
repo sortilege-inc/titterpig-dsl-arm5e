@@ -1,0 +1,142 @@
+EXTENSION "ArM5_Art_Academe_Universities_Rules" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Seven: Universities rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Art_Academe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf2c6281a7a36b4c677c364 ^"Baccalaureus License Exam Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Passing Examinations"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 100
+        }
+        FORMULAS {
+            "Baccalaureus License Exam Total" "Communication + Artes Liberales + Good Academic Reputation – Bad Academic Reputation + Stress Die vs. 6"
+        }
+    }
+
+    #ta1cb10729571e423f1b4fd ^"Magister in Artibus License Exam Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Passing Examinations"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 100
+        }
+        FORMULAS {
+            "Magister in Artibus License Exam Total" "Communication + Artes Liberales + Good Academic Reputation – Bad Academic Reputation + Stress Die vs. 12"
+        }
+    }
+
+    #t9509ea39e7c806c8ac3e47 ^"Doctor in (Faculty) License Exam Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Passing Examinations"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 100
+        }
+        FORMULAS {
+            "Doctor in (Faculty) License Exam Total" "Communication + Faculty’s Academic Ability (Theology, Medicine, or Canon or Civil Law) + Good Academic Reputation – Bad Academic Reputation + Stress Die vs. 12"
+        }
+    }
+
+    #te79d2427a9cd6197a2bbb2 ^"Lecture Commentary Quality" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Lecture Commentaries"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 102
+        }
+        FORMULAS {
+            "Lecture Commentary Quality" "Teacher’s Communication + scribe’s Profession: Scribe/2"
+        }
+    }
+
+    #t7577ef12456ec253dfed5e ^"Edited Lecture Commentary Quality" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Lecture Commentaries"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 102
+        }
+        FORMULAS {
+            "Edited Lecture Commentary Quality" "Original Quality + 1 + bonuses from Virtues"
+        }
+    }
+
+    #tfe572f63cdbbb28c9dcd70 ^"Attack Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Basic Disputatio"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Attack Total" "Communication + Ability + stress die"
+        }
+    }
+
+    #t4bd4606e367c7a90ac202f ^"Defense Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Basic Disputatio"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Defense Total" "Perception + Ability + stress die"
+        }
+    }
+
+    #t2e2e534d36c6c264901e15 ^"Attack Advantage" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Basic Disputatio"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Attack Advantage" "Attack Total – Defense Total (if Attack Total is higher)"
+        }
+    }
+
+    #t783d7e9e6bae4b3cc6cef2 ^"Weakening Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Basic Disputatio"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Weakening Total" "Intelligence + Attack Advantage"
+        }
+    }
+
+    #t346bf686f28853191d1bb4 ^"Resistance Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Basic Disputatio"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Resistance Total" "Presence + Highest Positive Academic Reputation"
+        }
+    }
+
+    #tfa2e6d91f7eca268298589 ^"Disputatio Over-Exertion Check" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Basic Disputatio"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Disputatio Over-Exertion Check" "Stamina + stress die vs. Ease Factor equal to the number of rounds of the disputatio"
+        }
+    }
+
+}

@@ -1,0 +1,210 @@
+EXTENSION "ArM5_Art_Academe_Medicine_Tables" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Four: Medicine tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Art_Academe_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t232dc4f2fed7a12ea825c2 ^"Correspondences of the Humors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Humor", "Force", "Age", "Season", "Element", "Quality", "Opposition"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 38
+        }
+        TABLE {
+            "Blood" "Digestive" "Childhood" "Spring" "Air" "Moisture with Heat" "Melancholy"
+            "Choler" "Appetitive" "Adolescence" "Summer" "Fire" "Heat with Dryness" "Phlegm"
+            "Melancholy" "Retentive" "Adulthood" "Autumn" "Earth" "Dryness with Cold" "Blood"
+            "Phlegm" "Expulsive" "Old Age" "Winter" "Water" "Cold with Moisture" "Choler"
+        }
+    }
+
+    #tbf895757b35f19335ae0be ^"Physical Qualities of the Four Complexions" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Characteristic", "Sanguine", "Choleric", "Melancholic", "Phlegmatic"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 40
+        }
+        TABLE {
+            "Stature" "tall" "tall" "short" "short"
+            "Build" "fleshy" "lean" "lean" "fat"
+            "Hair" "plentiful, dark" "plentiful, curly, red or blond" "sparse, straight, brown" "sparse, flaxen"
+            "Pulse" "great & full" "swift & strong" "slow & strong" "slow & shallow"
+            "Appetite" "good" "weak" "good" "weak"
+            "Digestion" "quick" "quick" "slow" "slow"
+            "Urine" "thick & yellow" "thin & yellow" "thin & pale" "thick & pale"
+            "Skin Temperature" "hot & moist" "hot & dry" "cold & dry" "cold & moist"
+            "Skin Texture" "smooth & soft" "rough" "rough & hard" "smooth"
+            "Dreams" "childish" "warlike" "emotional" "fearful"
+        }
+    }
+
+    #tcef64f69b7a06548e88bd0 ^"Personality Traits for the Four Complexions" DEF {
+        PROPERTIES {
+            ^"Sanguine" LIST OF STRING ["Hopeful", "Friendly", "Amorous", "Compassionate", "Temperate", "Restless", "Weak-Willed", "Obnoxious", "Insecure", "Self-Obsessed", "Lustful", "Gluttonous"]
+            ^"Melancholic" LIST OF STRING ["Caring", "Loyal", "Sensitive", "Altruistic", "Creative", "Idealistic", "Generous", "Just", "Pessimistic", "Pompous", "Vengeful", "Touchy", "Unsociable", "Envious"]
+            ^"Choleric" LIST OF STRING ["Self-Reliant", "Optimistic", "Courageous", "Decisive", "Determined", "Domineering", "Proud", "Hot-Tempered", "Angry", "Prejudiced", "Cruel"]
+            ^"Phlegmatic" LIST OF STRING ["Calm", "Dependable", "Contemplative", "Easy Going", "Peaceful", "Loyal", "Prudent", "Lazy", "Fearful", "Stubborn", "Paranoid", "Selfish", "Avaricious"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 40
+        }
+    }
+
+    #te2ea66e559c450abee6e3d ^"Disease Table (Art & Academe)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Disease", "Base Severity", "Disease Penalty"]
+            ^"Printed Name" STRING "Disease Table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 46
+        }
+        TABLE {
+            "Minor" "6" "–1"
+            "Serious" "9" "–3, or a Minor Flaw"
+            "Major" "12" "–5, or a Major Flaw"
+            "Critical" "15" "May not take any action"
+        }
+    }
+
+    #tfe6c5a1df69db5bf3bb2e5 ^"Modifiers to Severity" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Circumstance", "Modifier"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 46
+        }
+        TABLE {
+            "Interval: Week" "0"
+            "Interval: Month" "+1"
+            "Interval: Season" "+3"
+            "Interval: Lifelong" "+10"
+            "Stable Ease Factor: 4" "–1"
+            "Stable Ease Factor: 6" "0"
+            "Stable Ease Factor: 9" "+1"
+            "Stable Ease Factor: 12" "+3"
+            "Improvement Ease Factor: 10" "–1"
+            "Improvement Ease Factor: 12" "0"
+            "Improvement Ease Factor: 15" "+1"
+            "Improvement Ease Factor: 18" "+3"
+        }
+    }
+
+    #te2c3ffe60bac5d4966e127 ^"Recovery Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Condition", "Mod"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 54
+        }
+        TABLE {
+            "Poor or unsanitary living conditions, e.g. barn or typical town house" "–1"
+            "Average conditions, e.g. a clean, warm room" "0"
+            "Wealthy conditions or dedicated infirmary" "+1"
+            "Diet of a typical peasant" "–1"
+            "Diet of typical town person or covenfolk" "0"
+            "Diet of typical noble or magus" "+1"
+            "Routinely active throughout healing period*" "–1"
+            "No chirurgical instruments (Chirurgy rolls only)" "–3"
+            "No medicinal herbs (Medicine rolls only)" "–3"
+            "Chirurgy or Medicine performed on self" "–3"
+        }
+        DESCRIPTION "**Ars Magica Fifth Edition**, pages 179180, covers the basics of recovery from wounds and diseases. The rules presented in this chapter make the assumption that these rules apply to recovery in relatively healthy environments for the patient. However, it is not always possible to meet the ideal conditions of cleanliness, diet, and rest demanded for speedy recovery. For example, the inclusion of red meat in the diet and taking time to rest are luxuries that cannot be afforded by most peasants. The modifiers in the following table apply to all Chirurgy and Medicine rolls and totals, including Wound and Disease Recovery rolls. All modifiers are cumulative, and for each modifier that applies from this list the Chirurgy or Medicine roll receives one extra botch die. For example, a person who serves as his own chirurgeon while residing in a townhouse has a total of three botch dice for all his Wound Recovery rolls.\n\n* As much as the wounds or disease will allow without incurring extra Recovery rolls, e.g. traveling with a Light Wound."
+    }
+
+    #t1eed10721ade31e0c0c6d6 ^"Regimens and Covenants" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Change in Living Conditions Modifier", "Multiplier to Inhabitant Pts."]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 58
+        }
+        TABLE {
+            "Increased to +1" "x1.5"
+            "Increased to +2" "x2"
+            "Increased to +3 or more" "x2.5"
+        }
+        DESCRIPTION "Because a large component of a regimen is diet, promoting eucrasia can be expensive for the leaders of a community. In return for the general health of themselves and their people, the cost of living can double. In general, only wealthy covenants can afford to institute a regimen among its covenfolk. The *Covenants* book for **Ars Magica Fifth Edition** contains rules for the management of a covenant’s wealth; if employing these rules, the Inhabitant points (*Covenants*, page 63) for characters under a regimen are increased. Add up all the Inhabitant points\n\nfor the characters under each regimen, and apply the following modifier, rounding all fractions up.\n\nThe cost applies to each step of improvement. For example, two companions of a covenant normally each have Living\n\nConditions Modifier of 0, but they benefit from a regimen that raises this to +2. The companions now cost 18 Inhabitant points: a +1 bonus raised their combined cost from 6 to 9, and raising it further to +2 doubled this to 18. A magus who is part of the same regimen goes from +1 to +3, costing 25 Inhabitant points (5 Inhabitant points at +1, 10 Inhabitant points at +2, 25 Inhabitant points at +3).\n\nA regimen cannot be instituted if the covenant is applying Emergency Savings to their food budget (*Covenants*, page 69)."
+    }
+
+    #ta81aee1027f55ebb342985 ^"Pharmacy" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Duration", "Ease Factor"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 64
+        }
+        TABLE {
+            "Weeks" "3"
+            "Months" "6"
+            "Seasons" "9"
+            "Years" "12"
+            "Decades" "15"
+            "Indefinitely" "18"
+        }
+        DESCRIPTION "Medicinals are administered in a number of forms. **Simples** are made from a single ingredient, whereas **compounds** combine the effects of a number of ingredients in a single preparation. The easiest of all medicines consists of herbs infused in hot water to make a **tisane** or tea, or else boiled with the water and then strained to make a **decoction**. A handful of a herbs in a pint of water is sufficient for four or five doses. **Simple waters** are produced by steeping the herbs in wine. **Syrups** are made from the juice of herbs heated with sugar or honey to make a thick liquid. **Conserves** and **preserves** are made from whole flowers or fruit respectively, preserved in honey. **Pills** are prepared for the administering of bitter medicines; they are made from powdered ingredients added to a syrup and then rolled into balls. **Simple oils** are made by gently boiling ingredients in oil or adding herbs steeped in wine to oil, which is then heated to evaporate the wine. **Ointments** are made in a similar way but using pig grease rather than oil, and then mixing the product with turpentine and wax.\n\nThe labor rules deal with the day-to-day preservation and preparation of ingredients, and a physician with access to an apothecary can reduce the Recovery Modifier for not having medicinal ingredients by the Profession: Apothecary Ability of his supplier (although the penalty cannot become a bonus). It is not normally necessary to detail the contents of an apothecary’s\n\nstores or to determine the longevity of each ingredient. However, in exceptional cases this may be useful. Make an Dexterity + Profession: Apothecary roll. The Ease Factor for this roll is determined by the length of time that the preparation lasts until its medicinal qualities fade. It typically takes a week or more to prepare an ingredient from the initial harvest to the stored product, although this is not usually continuous work. Mineral ingredients normally do not need this preservation.\n\nIf the preserved item is also an Arcane Connection, and it is preserved for a duration longer than the duration of the Arcane Connection, then the Duration of the Arcane Connection is increased by one category.\n\n*For example, an apothecary preserves the scale of a dragon, and achieves an Ease Factor of 15. Not only does the scale retain its medical benefits for decades, but its duration as an Arcane Connection is extended from Months to Years. *\n\nOnly Arcane Connections that are plants or animal body parts can be extended in this manner by an apothecary."
+    }
+
+    #t68125c683e090327639116 ^"Surgery (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Surgical Procedure", "Ease Factor", "Wound Inflicted"]
+            ^"Printed Name" STRING "Surgery"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 61
+        }
+        TABLE {
+            "Phlebotomy" "3" "1 FL"
+            "Cautery and cupping" "4" "1 FL"
+            "Removing a rotten tooth" "6" "1 LW"
+            "Opening tonsils to cure quinsy" "9" "1 LW"
+            "Couching a cataract" "9" "1 LW"
+            "Trepanation" "12" "1 LW"
+            "Caesarian delivery (see Midwifery, below)" "9" "1 MW"
+            "Removing a gall stone or fistula" "9" "1 MW"
+            "Removing a cold or hot tumor" "12" "1 MW"
+            "Removing a consumptive tumor" "15" "1 MW"
+        }
+    }
+
+    #tb4ff53bb98178d28d96329 ^"Surgical Intervention (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Wound", "Consequences of Surgical Intervention"]
+            ^"Printed Name" STRING "Surgical Intervention"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 62
+        }
+        TABLE {
+            "Light" "Make an immediate Aging roll"
+            "Medium" "Acquire two aging points in a Characteristic appropriate to the type of wound"
+            "Heavy" "Gain a Minor Flaw appropriate to the type of wound"
+            "Incapacitating" "Gain a Major Flaw appropriate to the type of wound"
+        }
+    }
+
+    #t9c1a865bd69d3102b7d63c ^"Regimens (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Regimen", "Bonus to Living Conditions Modifier", "Minimum Medicine"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 59
+        }
+        TABLE {
+            "Clients = Physician’s (Medicine x 5)" "+1" "1"
+            "Clients = Physician’s Medicine" "+2" "4"
+            "Single Client" "+3" "7"
+        }
+    }
+
+    #t5f2385c071f2fe312e2067 ^"Modifiers to Ease Factor for searching" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Modifier"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 66
+        }
+        TABLE {
+            "Apothecary Familiar with Area" "– Local Area Lore*"
+            "Assistants" "–1 per assistant**"
+            "Inhospitable Terrain (eg. heavy snow)" "+1"
+            "Barren Terrain (eg. desert, bare rock)" "+3"
+            "Winter" "+2 (in addition to terrain)"
+        }
+        DESCRIPTION "* No broader than a region of a country (Kent, Lower Lorraine), or a specific terrain feature (Black Forest, Pyrenees)\n\n** An apothecary can have one assistant for each point of his Leadership Score. Each assistant must have at least either Profession: Apothecary 1 or Local Area Lore 2."
+    }
+
+}

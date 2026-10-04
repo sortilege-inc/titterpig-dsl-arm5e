@@ -1,0 +1,22 @@
+EXTENSION "ARMDef_Art_Academe_Medicine_Abilities" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Four: Medicine abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t914c7347dc1b3b6d88da0d ^"Profession: Apothecary" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Profession Apothecary"
+            ^"Ability Type" STRING "General" FIXED
+            ^"Specialties" LIST OF STRING ["finding ingredients", "treating diseases", "preparing poisons"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 54
+        }
+        DESCRIPTION "This Ability allows the character to identify, cultivate, and prepare common herbs, plants, and other ingredients for use in medicinal remedies. Any character without access to proper medicinal supplies makes all Medicine rolls at a penalty of –3, but with access to an apothecary this penalty is reduced (see Pharmacy, below)."
+    }
+
+}

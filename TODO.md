@@ -1,5 +1,19 @@
 # titterpig-dsl-arm5e — TODO
 
+## 2026-10-04 — Art & Academe converted, both editions (uncommitted)
+
+`arm5e/0.5/art-and-academe/` (49 files, source of truth) + `armdef/0.5/art-and-academe/` (retarget mirror). One
+command rebuilds and gates it: `Temp/arm5e-sourcebook-conversions/scripts/build_art_and_academe.sh`. Last run: verbatim gate
+PASS on all 12 generators; pagecheck 0 missing on every page range; validator 245 files 0 errors both editions;
+references 0 errors; verify_armdef PASS; coverage 660 units, 0 uncovered, 3 excluded with reasons (both editions);
+synthesist 0 missing parents; rebuild byte-identical. Records (counted from the files by EXTENDS): 27 diseases, 33
+formulae (11 inceptions, 12 reagents, 10 theriacs), 30 Virtues/Flaws, 23 spells, 7 spell guidelines + 3 formula
+guidelines, 21 tables, 40 rules formulas, 27 glossary terms, 5 characters, 1 Ability, 6 figures (read by eye), 102
+GUIDANCE.
+Full state + decision log: `Temp/arm5e-sourcebook-conversions/art-and-academe/PROGRESS.md`. Adds 19 armdef
+implicit overrides of the tabled edition-seam kind (below) — not patched per book. (Hedge Magic's coverage failure,
+pre-existing since 2026-09-22, was fixed separately in 937739e.)
+
 ## 2026-09-21 — `check_references.py` now passes on both editions
 
 Both gate parts, both editions, from `titterpig-dsl/check_references.py`:

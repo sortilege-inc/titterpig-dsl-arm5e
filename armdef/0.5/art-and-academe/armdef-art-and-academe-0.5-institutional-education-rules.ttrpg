@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_Art_Academe_InstitutionalEducation_Rules" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Six: Institutional Education rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t3c77c67f0846625d46866f ^"Attending a Parish School" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Parish Schools"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 79
+        }
+        FORMULAS {
+            "Attending a Parish School" "Presence + Bargain or Charm or Guile + stress die vs. 6 (rural parish) or 9 (urban parish)"
+        }
+    }
+
+    #t8dab5f80828397b7b786bc ^"Attending a Cathedral School" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Cathedral Schools"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 81
+        }
+        FORMULAS {
+            "Attending a Cathedral School" "Presence + Bargain, Charm, Guile or Intrigue + stress die – highest Bad Reputation vs. 12"
+        }
+    }
+
+    #t10b2ec77a19df583293a4d ^"Gaining a Clerkly Position" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Acquiring a Teaching Position"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 89
+        }
+        FORMULAS {
+            "Gaining a Clerkly Position" "Presence + appropriate Ability + Good Academic Reputation + bonus for Virtues – Bad Academic Reputation + stress die vs. Variable Ease Factor"
+        }
+    }
+
+}

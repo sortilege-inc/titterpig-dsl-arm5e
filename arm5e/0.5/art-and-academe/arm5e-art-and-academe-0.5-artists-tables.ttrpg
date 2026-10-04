@@ -1,0 +1,66 @@
+EXTENSION "ArM5_Art_Academe_Artists_Tables" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Eight: Artists tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Art_Academe_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf16eccd95875c2c883c5ba ^"Animal Trainers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Task"]
+            ^"Printed Name" STRING "Animal Trainers"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 119
+        }
+        TABLE {
+            "0" "The animal regularly does this task (“sit,” “jump,” “lay down”)"
+            "3" "The task is complex (“stand up,” “prance,” “jump up a series of platforms”)"
+            "6" "The task is a series of complex tasks (“dance”)"
+            "9" "The task involves possible harm (“attack”)"
+            "12" "The task involves a life-threatening act (“jump through a burning hoop”)"
+        }
+    }
+
+    #t76ab5273366dc833f36dea ^"Artist Experimentation Results" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Roll", "Result"]
+            ^"Disaster" STRING "Something untold and terrible happens, that destroys the work in progress and damages the artist. The character’s (Artist) Reputation score drops by 1 whole point. For multiple botches, the character could also receive a minor General Flaw from this disaster. A wall could fall on an architect and make him Lame, an angry patron could jab a quill into an illuminator’s eye and give him a Missing Eye, or a painter could become Disfigured by spilled lime."
+            ^"Artwork Ruined" STRING "The creation is ruined through the artist’s experimentation."
+            ^"Reputation Disparaged" STRING "The artwork is judged improper, rude, or debasing. It loses 1 point of Quality. The character’s (Artist) Reputation slips by 1 whole point."
+            ^"No Ill Effects" STRING "Nothing bad happens. The player receives the benefit of the simple die roll divided by 2 for the item’s Aesthetic Quality."
+            ^"Artwork Praised" STRING "The artist’s creation is so admired that his Reputation increases. The character gains experience points in his (Artist) Reputation equal to the Aesthetic Quality of the piece."
+            ^"Artist Praised" STRING "The art is so excellent that the artist gains enough experience points to raise his (Artist) Reputation score one whole level."
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 124
+        }
+        TABLE {
+            "Botch" "Disaster"
+            "0–4" "Artwork ruined"
+            "5–6" "Reputation disparaged"
+            "7–8" "No ill effects"
+            "9–10" "Artwork praised"
+            "11+" "Artist praised"
+        }
+    }
+
+    #t3e437aaa41dcc0cfc537b9 ^"Finding a Sponsor Modifiers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Modifier", "Situation"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 131
+        }
+        TABLE {
+            "–3" "Finding a benefactor"
+            "+3" "Asking a benefactor to commission a second piece"
+            "+6" "Asking a benefactor to commission additional pieces past two"
+            "+9" "Asking a benefactor to become a patron"
+            "0" "A sponsor with a free Social Virtue"
+            "+3" "A sponsor with a minor Social Virtue"
+            "+6" "A sponsor with a major Social Virtue"
+            "+x" "The sponsor’s highest business or social Reputation"
+        }
+    }
+
+}

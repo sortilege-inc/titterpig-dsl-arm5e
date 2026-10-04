@@ -1,0 +1,98 @@
+EXTENSION "ArM5_Art_Academe_ExperimentalPhilosophy_FormulaGuidelines" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Five: Experimental Philosophy formula guidelines"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Art_Academe_Core_Ext"
+
+    # The chapter's formula guidelines, structured; each DESCRIPTION the source's text, verbatim.
+
+    #teb4dbff12a98fe264ba627 ^"Inception Guidelines" DEF {
+        EXTENDS #tb83df696391a863c628945 ^"Formula Guideline"
+        PROPERTIES {
+            ^"Formula Type" STRING "Inception" FIXED
+            ^"Parameter" STRING "Detail" FIXED
+            ^"Table Columns" LIST ["Detail", "Description", "Magnitude"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 72
+        }
+        TABLE {
+            "Binary" "A one-word answer between two choices" "+0 magnitudes"
+            "Basic" "Provides the equivalent of a three-word answer" "+1 magnitude"
+            "Brief" "Provides a single sentence of information" "+2 magnitudes"
+            "Thorough" "Reveals all relevant information associated with the target of the inception" "+3 magnitudes"
+        }
+        GUIDELINES {
+            "Level 2" "Learn one visible property of a person or object (e.g. location)."
+            "Level 3" "Sense one mundane property of a person or object, which can be determined from close examination (state of consciousness, age)."
+            "Level 4" "Sense a specific piece of information about a person or object, which cannot normally be determined without an appropriate Ability (an emotion, the maker of an object)."
+            "Level 5" "Sense complex information about a person or object, which would normally require extended use of an Ability (the truth of a statement, all properties of an object)."
+        }
+        DESCRIPTION "An Inception shares characteristics with Magical Sense spells, in that the information gleaned is imparted directly to the philosopher through the medium of his calculations. Inceptions have a single parameter called Detail, which describes the quality of information imparted:\n\nAn inception that inquires about events in the distant future (more than an astrological month away) adds 1 magnitude, as do questions about the past. Queries about the\n\nnear future (within an astrological month) add 2 magnitudes. Predicted future events are subject to the actions of beings with free will, and may not come to pass. Queries about the present add no magnitudes."
+    }
+
+    #tafab4bf0108cd51fae687a ^"Reagent Guidelines" DEF {
+        EXTENDS #tb83df696391a863c628945 ^"Formula Guideline"
+        PROPERTIES {
+            ^"Formula Type" STRING "Reagent" FIXED
+            ^"Parameter" STRING "Alteration" FIXED
+            ^"Table Columns" LIST ["Alteration", "Description", "Magnitude"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 75
+        }
+        TABLE {
+            "Slight" "The matter undergoes a subtle change in appearance or property, within the usual range for examples of the matter. E.g. a yellow or orange flame, as salty as seawater. A Slight change cannot affect the amount of damage caused by the matter" "+0 magnitudes"
+            "Minor" "The matter undergoes a noticeable change in appearance or property. The change must be commonly found in nature, and of a general sort. E.g. as hard as rock (but not a specific type of rock), as acidic as vinegar, as cold as ice. A Minor change can add or subtract 5 to or from the damage caused by the matter" "+1 magnitude"
+            "Substantial" "The matter undergoes a significant change in appearance or property. The change is to a degree uncommon in nature. E.g. as hard as marble, as hot as a volcanic spring, as shiny as silver. A Substantial change can add or subtract 10 to or from the damage caused by the matter" "+2 magnitudes"
+            "Major" "The matter undergoes a total change in appearance or property. The change must be no more than the extremes found in nature. E.g. as bright as the sun, as dry as the desert, as pure as possible. A Major change can add or subtract 15 to or from the damage caused by the matter" "+3 magnitudes"
+        }
+        GUIDELINES {
+            "Level 3" "Enhance or diminish secondary quality of simple matter"
+            "Level 3" "Purify simple matter"
+            "Level 4" "Enhance or diminish principle quality of simple matter"
+            "Level 5" "Enhance or diminish secondary quality of complex matter"
+            "Level 5" "Purify complex matter"
+            "Level 10" "Enhance or diminish principle quality of complex matter"
+        }
+        DESCRIPTION "A Reagent is an alchemical preparation that is the product of a season’s work. When used, it is consumed — each dose has a single use. Once concocted, Reagents have an indefinite shelf-life, but many must be stored carefully due to their potentially volatile nature.\n\nReagents are described by one parameter, Alteration, which determines the magnitude of natural change that the Reagent imposes on the matter. Thus, altering dirt to be as hard as granite (a very hard rock) is more difficult than making it as hard as chalk (which is a soft rock, but still harder than dirt). The parameter of Alteration has one of the following values:\n\nA Reagent can affect one cubic pace of simple matter, or else fifty cubic inches of complex matter. It can, however, be designed with a size modifier. Each additional magnitude multiplies the base amount of matter by ten.\n\nProperties of matter can be changed without apparently changing the object; these include primary qualities such as hot, cold, dry, or moist, as well as secondary qualities such as acidity, density, weight and color."
+    }
+
+    #t614b262a742b78bd56cff9 ^"Theriac Guidelines" DEF {
+        EXTENDS #tb83df696391a863c628945 ^"Formula Guideline"
+        PROPERTIES {
+            ^"Formula Type" STRING "Theriac" FIXED
+            ^"Parameter" STRING "Potency" FIXED
+            ^"Table Columns" LIST ["Potency", "Description", "Magnitude"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 77
+        }
+        TABLE {
+            "Weak" "Affect pain or other symptoms of injury or disease, or Winded Fatigue level" "+0 magnitudes"
+            "Mild" "Affect a Light Wound, a Minor Disease, or Weary Fatigue level" "+1 magnitude"
+            "Moderate" "Affect a Medium Wound, a Serious Disease, or Tired Fatigue level" "+2 magnitudes"
+            "Strong" "Affect a Heavy Wound, a Major Disease, or Dazed Fatigue level" "+3 magnitudes"
+            "Mighty" "Affect an Incapacitating Wound, a Critical Disease, or Unconscious Fatigue level" "+4 magnitudes"
+        }
+        GUIDELINES {
+            "Level 2" "Grant a +1 to the patient’s next Wound Recovery roll."
+            "Level 2" "Grant a +1 to the patient’s next Disease Recovery roll against diseases of a certain humor."
+            "Level 3" "Relieve pain. The patient loses Fatigue levels equivalent to the Potency, but the Fatigue penalty induced reduces the Wound and Disease penalties."
+            "Level 3" "Grant a +3 to the patient’s next Wound Recovery roll."
+            "Level 3" "Grant a +3 to the patient’s next Disease Recovery roll against diseases of a certain humor."
+            "Level 3" "Reduce the potency of a poison by one step."
+            "Level 4" "Grant a +6 to the patient’s next Wound Recovery roll."
+            "Level 4" "Grant a +6 to the patient’s next Disease Recovery roll against diseases of a certain humor."
+            "Level 4" "Cause a wound if a Stamina roll against an Ease Factor of 6 is failed."
+            "Level 5" "Cause a wound if a Stamina roll against an Ease Factor of 9 is failed."
+            "Level 5" "Cure a specific disease, in a time equal to the interval parameter of the disease."
+            "Level 5" "Restore fatigue."
+            "Level 10" "Cause a wound if a Stamina roll against an Ease Factor of 12 is failed."
+            "Level 10" "Cure a wound from a specific source (e.g. poison, crushing damage, piercing damage). The wound entirely heals over the course of a normal interval for the wound."
+        }
+        DESCRIPTION "Theriacs can affect the human body, the humors and the faculties, although they cannot directly affect any of the inner wits, just the sensitive faculty as a whole. A Theriac can also be invented that affects animals rather than humans, but a Theriac designed for a human will not work on an animal, and vice versa. Once concocted Theriacs have an indefinite shelf-life, but they are easily ruined if stored in the damp, or where vermin can get to them. Theriacs must either be applied externally or be consumed by the patient. Different formulae are needed to affect Wound Recovery and Disease Recovery rolls. If affecting Disease Recovery rolls, then each Theriac is specific to a humor but not a disease, and is ineffectual against diseases of the wrong humor.\n\nThe strength of a Theriac is governed by a parameter called Potency, which describes the seriousness of a wound or ailment it can help or hinder.\n\nA Theriac that grants a bonus to a Recovery roll can only affect those wounds indicated by the Potency. Thus, a character with two Light Wounds and one Medium Wound needs a Theriac with Potency: Moderate to grant the recovery bonus to\n\nall three of these wounds; if the Potency is only Mild, then only the Light Wounds receive the bonus. Weak Theriacs have a therapeutic effect; by mimicking a symptom they can purge a humor, granting the patient a chance to reroll a failed Disease Recovery roll, although the patient cannot Improve as a result of this second roll."
+    }
+
+}

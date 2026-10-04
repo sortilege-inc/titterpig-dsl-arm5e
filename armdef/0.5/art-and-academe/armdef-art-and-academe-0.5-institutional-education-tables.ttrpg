@@ -1,0 +1,43 @@
+EXTENSION "ARMDef_Art_Academe_InstitutionalEducation_Tables" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Six: Institutional Education tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb61778c21340e563f36efd ^"The Limits of Education" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Institution", "Limit", "Major Subjects", "Minor Subjects"]
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 79
+        }
+        TABLE {
+            "Rural Parish School" "2" "Artes Liberales, Latin" ""
+            "Urban Parish School" "3" "Artes Liberales, Latin" "Theology"
+            "Cathedral School" "6" "Artes Liberales, Latin, Theology" "Canon Law, Philosophiae"
+            "Monastic School" "4" "Artes Liberales, Latin, Theology" "Medicine, Philosophiae"
+            "Municipal School (Italy)" "5" "Artes Liberales, Latin, Medicine or Civil Law" "Philosophiae, Theology"
+            "Imperial School (Spain)" "5" "Artes Liberales, Latin, Greek, Hebrew" "Medicine, Philosophiae"
+            "Private Tutor" "6" "Artes Liberales, Latin (usually)" "Any Academic Ability"
+            "Royal Court" "4" "Artes Liberales, Latin" "Philosophiae, Theology"
+        }
+        DESCRIPTION "Most learned men follow a path of education, from humble beginnings to the great heights of university instruction. Non-university institutions are not set up to provide all the academic nourishment a scholar requires. Only certain types of instruction are taught in specific institutions. To reflect this, starting characters are limited in how high their Academic Abilities can be, depending on the type of institution they attended. Attending any of these schools demands that the character have the Virtue: Educated.\n\nSome Academic Abilities are completely excluded from some institutions. For example, Philosophiae is not taught in\n\nparish schools. The following table shows how high the Academic Ability scores of a typical instructor are, which is the limit of a student’s score, as well as the Academic subjects allowed him based on his character background. Each institution has a major and a minor course of academic subjects. Major subjects are those that the institution focuses on teaching, while minor subjects are those taught peripherally. Minor subjects are limited to half the regular score limit listed below, rounded up. Besides these score limits, beginning characters’ scores are also limited by their age (**ArM5**, page 31)."
+    }
+
+    #t85f549b1cfc87b1ea8d315 ^"Acquiring a Teaching Position (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Position"]
+            ^"Printed Name" STRING "Acquiring a Teaching Position"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 89
+        }
+        TABLE {
+            "12" "Secular jurist, copyist"
+            "15" "Municipal, monastic, or royal court teacher"
+            "18" "Magister in artibus, doctor in (faculty), or cathedral school teacher"
+        }
+    }
+
+}

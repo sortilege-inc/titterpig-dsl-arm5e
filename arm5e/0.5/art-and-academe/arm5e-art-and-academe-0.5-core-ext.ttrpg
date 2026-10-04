@@ -1,0 +1,100 @@
+EXTENSION "ArM5_Art_Academe_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Art & Academe is an EXTENSION on the arm5e edition, loaded alongside the core rulebook (spec S13
+    # composition). Virtues and Flaws fit the core ^"Virtue"/^"Flaw"; spells fit ^"Formulaic Spell"; statted
+    # characters ^"Example Character"; narrative goes to .lore. The types below are the ones it adds.
+
+    #t52385d670620f6b4d70ab1 ^"Disease" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Disease Penalty" ENUM ["Minor", "Serious", "Major", "Critical"] REQUIRED
+            ^"Humor" STRING REQUIRED
+            ^"Severity" INTEGER MIN 1 REQUIRED
+            ^"Stable Ease Factor" STRING REQUIRED
+            ^"Improvement Ease Factor" STRING REQUIRED
+            ^"Interval" ENUM ["Week", "Month", "Season", "Lifelong"] REQUIRED
+            ^"Cause" ENUM ["Non-Natural", "Contra-Natural"]
+            ^"Symptoms" STRING
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Art & Academe"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "The game statistics of a disease are presented in a fashion similar to a spell. Each disease has a **Severity **that describes the type of wound suffered, and this Severity is modified by adding magnitudes for the **interval**, **stable Ease Factor**, and **improvement Ease Factor**."
+    }
+
+    #t2a7a02bf1a6f7598bcb212 ^"Formula" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Level" INTEGER MIN 1 REQUIRED
+            ^"Formula Ability" ENUM ["Artes Liberales", "Philosophiae", "Medicine"] REQUIRED
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Art & Academe"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "The most powerful expressions of the empiricus’ study are created through the use of formulae. A philosopher may encounter these formulae during his studies of the Academic Abilities, or else he may develop them himself through practical experimentation with the theoretical knowledge he has gained. A formula is a recipe, similar to a Laboratory Text, which describes how to make one of three products: **astrological inceptions** (which are learned as part of Artes Liberales), **alchemical reagents** (which are learned as part of Philosophiae), and **pharmaceutical theriacs** (which form part of the corpus of Medicine).\n\nThe Lab Total is compared against the level of the formula. Each formula has a base level, which is then increased in magnitudes by the formula’s guidelines given below. The final level of a formula is calculated in exactly the same manner as a Hermetic spell; except that a formula has a single parameter (either Detail, Alteration, or Potency depending upon whether it is an Inception, Reagent, or Theriac, respectively), rather than the Range, Duration, and Target of a Hermetic spell."
+    }
+
+    #tdc069168846265c2f9406e ^"Inception" DEF {
+        EXTENDS #t2a7a02bf1a6f7598bcb212 ^"Formula"
+        PROPERTIES {
+            ^"Formula Ability" STRING "Artes Liberales" FIXED
+            ^"Detail" ENUM ["Binary", "Basic", "Brief", "Thorough"] REQUIRED
+        }
+        DESCRIPTION "An astrological formula is known as an inception, and is learned as part of Artes Liberales. An inception is an astrological chart designed to answer a specific question about a person, object, or future event. These charts take one or more season of observations of the stars and lengthy calculations to create, but once drawn up, it is a relatively easy task to use them. The astrologer completes the table with the horoscope of the person, object, or event that is the target of the inception, performs the last few calculations, and the answer is revealed to him. Thus each formula is generic in nature when created, and is made specific when used."
+    }
+
+    #t9c4621db9d8d06021e07a4 ^"Reagent" DEF {
+        EXTENDS #t2a7a02bf1a6f7598bcb212 ^"Formula"
+        PROPERTIES {
+            ^"Formula Ability" STRING "Philosophiae" FIXED
+            ^"Alteration" ENUM ["Slight", "Minor", "Substantial", "Major"] REQUIRED
+        }
+        DESCRIPTION "Alchemical Formulae or Reagents are discovered during researches into Philosophiae. A Reagent is a natural substance made in the laboratory through the combination of minerals, botanicals, and animal components. The substance created may have unusual properties, but not unnatural ones. Thus an alchemical preparation can corrode metal or turn water to ice, but these alterations are simply speeded-up natural processes; a reagent could not turn water into metal, for example. Because the changes caused by Reagents are natural, they have the equivalent of a Momentary Duration, after which time the substance reacts normally according to its type: ice will melt back into water, but compacted dirt remains hard until it is weathered by the elements."
+    }
+
+    #tb762af23638142159648b5 ^"Theriac" DEF {
+        EXTENDS #t2a7a02bf1a6f7598bcb212 ^"Formula"
+        PROPERTIES {
+            ^"Formula Ability" STRING "Medicine" FIXED
+            ^"Potency" ENUM ["Weak", "Mild", "Moderate", "Strong", "Mighty"] REQUIRED
+        }
+        DESCRIPTION "The term “theriac” is used by commoners and ill-trained medici alike to refer to a cure-all; a sovereign remedy to all diseases, wounds, and poisons. Charlatans claim to have found, or alternatively made, the theriac, which they sell to their trusting victims. These ignoramuses are simply confounding the products of numerous medicinal formulae that have apparently miraculous healing ability. In reality, God’s hand is only involved in granting various herbs and stones the ability to heal, and in granting man the knowledge to unlock these hidden properties for therapeutic use. Formulae for Theriacs are learned as part of the Medicine Ability. Recipes can be found in many text books and instruction manuals on the healing arts. Despite the fact that Medicine is not used in the healing of wounds, formulae for Theriacs exist that can cure (or even cause) wounds."
+    }
+
+    #tb83df696391a863c628945 ^"Formula Guideline" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Formula Type" ENUM ["Inception", "Reagent", "Theriac"] REQUIRED
+            ^"Parameter" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Art & Academe"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tb6e69a70fb15d7d9c6b592 ^"Glossary Entry" DEF {
+        PROPERTIES {
+            ^"Term" STRING REQUIRED
+            ^"Definition" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Art & Academe"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tc349347caf3213a90237bd ^"Figure" DEF {
+        PROPERTIES {
+            ^"Title" STRING REQUIRED
+            ^"Lettering" LIST OF STRING
+            ^"Shows" STRING
+            ^"Depicts" LIST OF STRING
+            ^"Lettering Source" STRING
+            ^"Source" STRING DEFAULT "Art & Academe"
+            ^"Page" INTEGER
+        }
+    }
+
+}

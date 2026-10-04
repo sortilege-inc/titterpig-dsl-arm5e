@@ -1,0 +1,132 @@
+EXTENSION "ARMDef_Art_Academe_Artists_Rules" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Eight: Artists rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #taaf087c7ae7314dfc59c99 ^"Training Points Accumulated Each Season" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Animal Trainers"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 119
+        }
+        FORMULAS {
+            "Training Points Accumulated Each Season" "Intelligence + Animal Handling – Creature’s Might"
+        }
+    }
+
+    #tbf0687d6f86f483c7415e4 ^"Required Number of Points" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Animal Trainers"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 119
+        }
+        FORMULAS {
+            "Required Number of Points" "Creature’s Might"
+        }
+    }
+
+    #t2c37119c3b7745f3a11e90 ^"Mundane Animal Might" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Animal Trainers"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 119
+        }
+        FORMULAS {
+            "Mundane Animal Might" "1 + Confidence Score"
+        }
+    }
+
+    #t7ecfd30e1014414dd9aeac ^"Commanding Beasts" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Animal Trainers"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 119
+        }
+        FORMULAS {
+            "Commanding Beasts" "Presence + Animal Handling + stress die vs. variable Ease Factor"
+        }
+    }
+
+    #t24616264394d604098b6ca ^"Aesthetic Quality (The Piece of Artwork)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Aesthetic Quality"
+            ^"Rules Section" STRING "The Piece of Artwork"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 123
+        }
+        FORMULAS {
+            "Aesthetic Quality" "Dexterity + Craft Ability + bonuses OR Communication + Profession Ability + bonuses"
+        }
+    }
+
+    #t1c49cdc01d54b3bf09af1d ^"Performing a Performance" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Producers vs. Performers"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 125
+        }
+        FORMULAS {
+            "Performing a Performance" "Communication or Dexterity + Profession Ability + stress die vs. Aesthetic Quality/2"
+        }
+    }
+
+    #t68bce6ec72b63c85310c40 ^"Art Advancement Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Pieces of Art as Advancement Sources"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 126
+        }
+        FORMULAS {
+            "Art Advancement Total" "Aesthetic Quality/2"
+        }
+    }
+
+    #t84c2d560686d5547ce9919 ^"Finding a Sponsor" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Sponsors: Patrons and Benefactors"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 130
+        }
+        FORMULAS {
+            "Finding a Sponsor" "Communication + Bargain + Artist Reputation + stress die vs. 12 + modifiers"
+        }
+    }
+
+    #t2a055fd3e325a6caa7bbbb ^"Cost to Sponsor an Artwork (Completed in One Season)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Cost to Sponsor an Artwork"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 132
+        }
+        FORMULAS {
+            "Cost to Sponsor an Artwork (Completed in One Season)" "At least 1 Mythic Pound per point of Artist Reputation"
+        }
+    }
+
+    #t29e28cd57771376cdb4d33 ^"Aesthetic Quality (Magically Created Art)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Aesthetic Quality"
+            ^"Rules Section" STRING "Magically Created Art"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 132
+        }
+        FORMULAS {
+            "Aesthetic Quality" "Intelligence + Finesse, –6, –9, –12, or –15"
+        }
+    }
+
+}

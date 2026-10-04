@@ -1,0 +1,59 @@
+EXTENSION "ARMDef_Art_Academe_ExperimentalPhilosophy_Rules" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Five: Experimental Philosophy rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #td7e380d3fe1fb8d448edfb ^"Creating a Ligature" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ligatures"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 68
+        }
+        FORMULAS {
+            "Creating a Ligature" "Int + Academic Ability + stress die"
+        }
+    }
+
+    #t7991a74838910daa45122a ^"Lab Total (Art & Academe)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Lab Total"
+            ^"Rules Section" STRING "The Lab Total"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 70
+        }
+        FORMULAS {
+            "Lab Total" "Intelligence + Academic Ability + Philosophic Bonuses"
+        }
+    }
+
+    #ta1957d1ebbbe719f930253 ^"Doses of Formulae using Laboratory Text" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Laboratory Texts"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 71
+        }
+        FORMULAS {
+            "Doses of Formulae using Laboratory Text" "(Lab Total) / 5 (round up)"
+        }
+    }
+
+    #ta231c0020acd593b85de37 ^"Calculating a Nativity Horoscope" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Astrological Inceptions"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 72
+        }
+        FORMULAS {
+            "Calculating a Nativity Horoscope" "Int + Artes Liberales + die roll, against Ease Factor 9"
+        }
+    }
+
+}

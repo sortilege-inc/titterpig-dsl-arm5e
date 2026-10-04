@@ -1,0 +1,407 @@
+EXTENSION "ARMDef_Art_Academe_ExperimentalPhilosophy_Formulae" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Five: Experimental Philosophy formulae"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's formulae, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t9d33ce811988f472887592 ^"Is N in good health?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 3
+            ^"Detail" STRING "Binary"
+            ^"Printed Stat Line" STRING "Inception Level 3 Detail: Binary"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "By consulting the relative positions of Saturn (the planet of death) and the Sun (the planet of life) in the horoscope, this inception reveals which planet’s influence is strongest in the chart of the named person.\n\n(base 3)"
+    }
+
+    #ta1cb4c32c3b94d2fe10e49 ^"Is N inclined to love NA?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 4
+            ^"Detail" STRING "Binary"
+            ^"Printed Stat Line" STRING "Inception Level 4 Detail: Binary"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "This requires two horoscopes, one for each target. The astrological houses occupied by Venus in each horoscope are either compatible or inauspicious. It does not reveal the feelings of the targets, only whether they have compatible astrological charts.\n\n(base 4)"
+    }
+
+    #t2761d7685c98e7951b6302 ^"Has N told the truth?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Detail" STRING "Binary"
+            ^"Printed Stat Line" STRING "Inception Level 5 Detail: Binary"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "The attitude of Mercury to Scorpio in the horoscope of the target determines whether he is the sort of person who is prone to deception, and whether today (that is, the last 12 hours) is negatively aspected against truth. Together, these pieces of information reveal whether truth or falsehood is dominant.\n\n(base 5)"
+    }
+
+    #t4d56958307f5be6024734e ^"What will the weather be like tomorrow at N?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Detail" STRING "Basic"
+            ^"Printed Stat Line" STRING "Inception Level 5 Detail: Basic"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "The angle between the Moon and Mercury, and which stars they bisect in the horoscope of an event occurring on the morrow (such as a fair), reveals the likely weather in that location on the coming day.\n\n(base 2, +1 Basic, +2 near future)"
+    }
+
+    #t53e4d4f0b573085a6a66cc ^"Will N wage war?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Detail" STRING "Binary"
+            ^"Printed Stat Line" STRING "Inception Level 10 Detail: Binary"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "This inception requires the horoscope of a person likely to initiate a war. The aspect of Mars in the horoscope indicates whether war should be expected or not. This is an open-ended inception, and it is often more informative if it is restricted to the near future since much can change in the intervening time.\n\n(base 5, +1 distant future)"
+    }
+
+    #t7a0d722827d7aad3988572 ^"What are the real feelings of N?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Detail" STRING "Basic"
+            ^"Printed Stat Line" STRING "Inception Level 10 Detail: Basic"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "Venus is the planet of feelings and emotions in general, and its attitude to the other moveable stars reveals the dominant emotion of the target in his horoscope, as determined by his complexion.\n\n(base 5, +1 Basic)"
+    }
+
+    #ted6cdd1123c694e9c8926c ^"How are the people of N reacting to NA?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Detail" STRING "Brief"
+            ^"Printed Stat Line" STRING "Inception Level 10 Detail: Brief"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "Given the horoscope of a group of people (such as a town), this inception interrogates Mercury and Virgo — stars most closely related to the community and news — to reveal a brief summary of how they are likely to react as a group to the event or person represented by the second horoscope. It does not reveal what people *think* about the target, just what they are doing.\n\n(base 4, +2 Brief)"
+    }
+
+    #t2930b5e13928ed8c03712f ^"Where is the person N?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Detail" STRING "Brief"
+            ^"Printed Stat Line" STRING "Inception Level 10 Detail: Brief"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "This inception reveals the current location of the named person, within a region of about 30 miles across, and in relation to a particular feature; for example “In the County of Hainault, next to still water” or “north of here, in a building connected to religion in some way.” A different inception is required to discover the location of an object.\n\n(base 4, +2 Brief)"
+    }
+
+    #t2ee6d738e3828575f02fe1 ^"How fares the battle N?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Detail" STRING "Thorough"
+            ^"Printed Stat Line" STRING "Inception Level 10 Detail: Thorough"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "By charting the motion of Mars, the astrologer can track the vicissitudes of a battle for which he has the horoscope of the day it starts. The inception reveals the state of the combatants at the moment of inquiry in terms of relative numbers of casualties.\n\n(base 3, +3 Thorough)"
+    }
+
+    #ta3a6de1410045242a685a6 ^"Who is the maker of the object N?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 15
+            ^"Detail" STRING "Thorough"
+            ^"Printed Stat Line" STRING "Inception Level 15 Detail: Thorough"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "The North node of the Moon is the significator of beginnings, and Mercury represents craft. The position of these two in the horoscope of an object will reveal identifying information about its maker — his complexion (and thus his approximate appearance), occupation, interests, and present location. This is not a question about the past, since the maker is a present property of the object interrogated.\n\n(Base 4, +3 Thorough)"
+    }
+
+    #t6a7c4aa73ced039a2cac4c ^"Who was the cause of the death of N?" DEF {
+        EXTENDS #tdc069168846265c2f9406e ^"Inception"
+        PROPERTIES {
+            ^"Level" INTEGER 20
+            ^"Detail" STRING "Brief"
+            ^"Printed Stat Line" STRING "Inception Level 20 Detail: Brief"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "From the horoscope of a dead man, the astrologer can determine a single characteristics of the person most closely associated with the cause of death, such as his complexion (and thus give a good clue to physical appearance) or approximate location relative to his position at the time of the murder. The nature of the information is determined at the time of using the inception, and while it pertains to a person other than the target, that person’s information is still present in the celestial figure of the deceased. The inception is never infallible. For example, the maker of a poison may be more intimately connected with the death than the poisoner, and the perpetrator of a weakened saddle strap that leads to a fatal fall might be miles away from the site of death. If no murder actually occurred, then the answer can be misleading; a spurned lover who committed suicide did so on account of his lover, but she did not willingly cause his death.\n\n(base 5, +2 Brief, +1 Past)"
+    }
+
+    #t9ba82f43fcf099abfcd2d7 ^"Chromatic Flames" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 4
+            ^"Alteration" STRING "Minor"
+            ^"Printed Stat Line" STRING "Reagent Level 4 Alteration: Minor"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 75
+        }
+        DESCRIPTION "When sprinkled over flames or mixed with fuel, this Reagent causes the flames to burn a different hue, a minor alteration of the color of simple fire. The color is determined by the alchemist when he concocts the formula. One dose of the Reagent is enough to change the color of a medium-sized fire (such as a camp fire), and the flames remain colored until the fire is extinguished.\n\n(base 3, +1 Minor)"
+    }
+
+    #t30661c8aee347d4822d7b4 ^"Tinderdry" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Alteration" STRING "Slight"
+            ^"Printed Stat Line" STRING "Reagent Level 5 Alteration: Slight"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 75
+        }
+        DESCRIPTION "When this wool-like substance is rubbed over damp wood, the wood dries sufficiently to be easily lit with flint and steel. Each application is sufficient only to dry a handful of twigs, but this is sufficient to start a fire.\n\n(base 5)"
+    }
+
+    #tf9950e5b007bd87f3431a1 ^"Cement" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Alteration" STRING "Substantial"
+            ^"Printed Stat Line" STRING "Reagent Level 5 Alteration: Substantial"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 75
+        }
+        DESCRIPTION "When sprinkled over loose earth or sand, this dry powder enhances the hardness and cohesiveness of the matter, causing it to bind together and become as solid as granite. Each dose of cement can cover an area about three paces in diameter to a depth of about six inches.\n\n(base 3, +2 Substantial)"
+    }
+
+    #t07d743de934fab850c6749 ^"Preservative" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Alteration" STRING "Slight"
+            ^"Printed Stat Line" STRING "Reagent Level 10 Alteration: Slight"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 75
+        }
+        DESCRIPTION "When painted onto wood, this tarry Reagent proofs it against rot and mold, and makes it unpalatable to pests. About two gallons of preservative are made, enough to coat a small hut or boat.\n\n(base 5, + 1 Size)"
+    }
+
+    #ta8e0aeb42d194e9a4a4368 ^"Refrigerant Salt" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Alteration" STRING "Minor"
+            ^"Printed Stat Line" STRING "Reagent Level 10 Alteration: Minor"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "When the salt-like crystals of this Reagent are scattered onto the surface of water, that water freezes. Up to six-paces diameter of ice can be created at a thickness of about six inches (strong enough to stand on), although unless anchored on one shore, the sheet of ice is unstable. This reagent is ineffective on moving water, where the ice is just washed away. The ice melts normally, according to the weather conditions.\n\n(base 4, +1 Minor, +1 Size)"
+    }
+
+    #t4b969c49135d6d004f7b4e ^"Calorific Stone" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Alteration" STRING "Substantial"
+            ^"Printed Stat Line" STRING "Reagent Level 10 Alteration: Substantial"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "When dropped into water, this pebble-like Reagent causes the water to digest into hot particles, and come to a boil in a matter of seconds. A single dose can affect a bathtub full of water.\n\n(base 4, +2 Substantial)"
+    }
+
+    #t2faf8f7288ecae13634e96 ^"Fire Damp" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Alteration" STRING "Substantial"
+            ^"Printed Stat Line" STRING "Reagent Level 10 Alteration: Substantial"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "This Reagent must be kept within a stoppered flask. When opened, a gas is released that will dampen the intensity of flames. The flames will lose 10 points of damage due to the cooling effect of the gas; if reduced to 0 damage they are extinguished. The gas is heavy and remains low to the ground, and in an open area can spread out to cover a 15-foot diameter to the height of two feet.\n\n(base 3, +2 Substantial, +1 Size)"
+    }
+
+    #t44c8e974f8d7b61663ec54 ^"Smoke Oil" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Alteration" STRING "Minor"
+            ^"Printed Stat Line" STRING "Reagent Level 10 Alteration: Minor"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "This Reagent must be kept in a sealed container, for when opened the oily liquid evaporates into a thick gray fog. When fully evaporated, the fog fills about a hundred cubic paces, the size of a large room. In still air this fog is impenetrably dark, but its effect is lessened by wind.\n\n(base 3, +1 Minor, +2 Size)"
+    }
+
+    #tf34d67197ac311104ebf72 ^"Greek Fire (Reagent)" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Printed Name" STRING "Greek Fire"
+            ^"Level" INTEGER 15
+            ^"Alteration" STRING "Substantial"
+            ^"Printed Stat Line" STRING "Reagent Level 15 Alteration: Substantial"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "This Reagent is typically placed into a clay ball with two compartments to contain each of the two parts of the formula. When mixed (such as when the clay is broken by an impact), these components combust into a eight-foot-diameter sphere of very hot fire that inflicts +15 damage should it hit someone (such fire would normally inflict +5 damage). This fire cannot be extinguished with water, but must be beaten out.\n\n(base 4, +2 Substantial, +1 Size)"
+    }
+
+    #t98c915741478a822abb8cf ^"Vitriol" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 15
+            ^"Alteration" STRING "Substantial"
+            ^"Printed Stat Line" STRING "Reagent Level 15 Alteration: Substantial"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "This formula creates two pints of strong acid from a weaker acid such as vinegar, and a number of mineral components. This acid is enough to cover an arm-sized object. If it is poured on a single person, it will inflict +10 damage. This acid will also dissolve stone and base metal, and rot wood in an instant; an object the size of a wand, lock, or small bottle can be affected. The acid will dissolve precious metal in about two minutes. The only substance proof against the acid is glass.\n\n(base 5, +2 Substantial)"
+    }
+
+    #tec96f57c325146a75a8c0a ^"Alchemical Steel" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 20
+            ^"Alteration" STRING "Substantial"
+            ^"Printed Stat Line" STRING "Reagent Level 20 Alteration: Substantial"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 76
+        }
+        DESCRIPTION "This metal is a purified form of iron created in the alchemist’s laboratory. It can then be forged by any smith capable of working steel. Objects made of this steel are harder and more resilient to damage without affecting its weight. A blade of alchemical steel need not be sharpened so frequently and has a +2 to damage. Metal armor gains a +2 to its Protection. The formula creates enough Reagent to make a dagger; three doses would make a sword, and six doses would make a suit of partial armor.\n\n(base 10, +2 Substantial)"
+    }
+
+    #t01d33736a7f9913cb3e4c2 ^"Lapis Minor" DEF {
+        EXTENDS #t9c4621db9d8d06021e07a4 ^"Reagent"
+        PROPERTIES {
+            ^"Level" INTEGER 20
+            ^"Alteration" STRING "Major"
+            ^"Printed Stat Line" STRING "Reagent Level 20 Alteration: Major"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 77
+        }
+        DESCRIPTION "This formula creates a reddish stone, waxy in texture, the touch of which purifies a precious metal from its alloy. For example, gold that has been adulterated with brass separates into pure gold, pure copper, and pure tin. Only a small object can be altered; no larger than a dagger.\n\nThis is called the “Lesser Stone;” alchemists have long sought the Greater Stone (Lapis Maior) which will convert pure base metals into gold. In the meantime, they can extract the tiny amounts of gold that are often present in other metals.\n\n(base 5, +3 Major)"
+    }
+
+    #t02898e96b177634c271615 ^"Tonic of Gold" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Potency" STRING "Weak"
+            ^"Printed Stat Line" STRING "Theriac Level 5 Potency: Weak"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 77
+        }
+        DESCRIPTION "This tonic, made with minute quantities of gold, restores a Winded character to a non-fatigued state. It cannot affect a character who has lost more than one Fatigue level.\n\n(base 5)"
+    }
+
+    #tdf79ee63a083f734bd75f9 ^"Troche of Colocynth" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Potency" STRING "Weak"
+            ^"Printed Stat Line" STRING "Theriac Level 5 Potency: Weak"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 77
+        }
+        DESCRIPTION "This hard pill of compressed powder mixed with gum will cause immediate and violent evacuations of the bowel if the target fails a Stamina roll against an Ease Factor of 9. A patient suffering from a melancholic disease who is affected by this theriac is purged of retained humors, and can reroll a failed Disease Recovery roll, but a successful second roll can only have a Stable result, not an Improvement.\n\n(base 5)"
+    }
+
+    #t366f2a5a46d4bdc46aee19 ^"Cataplasm of Mandrake" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Potency" STRING "Moderate"
+            ^"Printed Stat Line" STRING "Theriac Level 5 Potency: Moderate"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "This thick paste, or cataplasm, is a secret of the School of Salerno, employing chiefly mandrake and hyoscyamus. When applied to a body part it causes the character to become Tired (loss of three Fatigue levels), but reduces any Wound and Disease Penalty by 3. The body part remains numb until the lost Fatigue levels are recovered.\n\n(base 3, +2 Moderate)"
+    }
+
+    #tecd1b219a9519f0f711cde ^"Mustard Plaster" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 5
+            ^"Potency" STRING "Moderate"
+            ^"Printed Stat Line" STRING "Theriac Level 5 Potency: Moderate"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "When applied to a wound, this linen cloth smeared with ointment containing ground mustard seeds (among other things) grants a +3 to the patient’s next Wound Recovery rolls for all Medium and Light Wounds by drawing out accumulated choler, which causes inflammation.\n\n(base 3, +2 Moderate)"
+    }
+
+    #t7d5aa8a105a29bf4d8f24c ^"Tincture of Parsley" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 10
+            ^"Potency" STRING "Strong"
+            ^"Printed Stat Line" STRING "Theriac Level 10 Potency: Strong"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "This concentrated herbal infusion is an antidote to the bite of any serpent. If consumed immediately following the bite, then the wound (which must be a Heavy wound or less) inflicted by the venom is treated as one category lower. Thus if bitten by an adder (**ArM5**, page 180), no wound is suffered.\n\n(base 3, +3 Strong)"
+    }
+
+    #tac9fd46802a10709e8112a ^"Compress of Mallow" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 15
+            ^"Potency" STRING "Mild"
+            ^"Printed Stat Line" STRING "Theriac Level 15 Potency: Mild"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "This cool bandage made of mallow and cucumber soothes burn wounds, and will heal any Light Wound caused by fire over the course of a week.\n\n(base 10, +1 Mild)"
+    }
+
+    #t903fa5d727e025f7be379c ^"Concoction of Litharge and Henbane" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 15
+            ^"Potency" STRING "Strong"
+            ^"Printed Stat Line" STRING "Theriac Level 15 Potency: Strong"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "Combining litharge and henbane with many other unpleasant ingredients such as cinnabar and a mouse stung to death by vipers, this poison inflicts a Heavy Wound on its imbiber, unless he succeeds in a Stamina roll against an Ease Factor of 6.\n\n(base 4, +3 Strong)"
+    }
+
+    #t29a0e1267ae32fa2a7ca74 ^"Soporific Sponge" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 15
+            ^"Potency" STRING "Mighty"
+            ^"Printed Stat Line" STRING "Theriac Level 15 Potency: Mighty"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "This Theriac is one of the most precious secrets of the School of Salerno. It combines opium, mandrake, hemlock and hyoscyamus (all horrible poisons if used wrongly) into a hypnotic aid that is soaked into a sponge. This, when held against the mouth and nose for a few minutes, causes deep slumber. The patient is reduced to the Unconscious Fatigue Level, and will remain that way for two hours. When the patient comes around, the Fatigue Penalty he suffers is subtracted from any Wound or Disease Penalty. A surgeon who operates on a patient who has been stupefied with this theriac has a +2 to his surgery roll and rolls 2 fewer botch dice (this can reduce botch dice to zero).\n\n(base 3, +4 Mighty)"
+    }
+
+    #tb20e9cbe3af562170a7e7b ^"Ointment for Congealing Blood" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 20
+            ^"Potency" STRING "Moderate"
+            ^"Printed Stat Line" STRING "Theriac Level 20 Potency: Moderate"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "This compress of tormentil and comfrey stays the flow of blood and causes flesh to knit back together; it cures a Medium Wound caused by a slashing weapon over the course of a month.\n\n(base 10, +2 Moderate)"
+    }
+
+    #t1b347095a8da57ecc78480 ^"Lochoch of Fox Lungs" DEF {
+        EXTENDS #tb762af23638142159648b5 ^"Theriac"
+        PROPERTIES {
+            ^"Level" INTEGER 20
+            ^"Potency" STRING "Strong"
+            ^"Printed Stat Line" STRING "Theriac Level 20 Potency: Strong"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "This lochoch — a thick syrupy medicine made from boiled honey — will cure phthisis, a Major phlegmatic disease, over the course of a month.\n\n(base 5, +3 Strong)"
+    }
+
+}

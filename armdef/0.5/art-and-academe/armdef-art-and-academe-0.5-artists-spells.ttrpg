@@ -1,0 +1,61 @@
+EXTENSION "ARMDef_Art_Academe_Artists_Spells" {
+    NAME "Ars Magica Fifth Edition, Art & Academe - Chapter Eight: Artists spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_Art_Academe_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t0f7752015aed06f60609ce ^"The Poet’s Bust" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReTe Level 5 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 133
+        }
+        DESCRIPTION "This spell changes a block of stone into a carved bust. The caster must touch both the targeted stone block and the person who is the subject of the bust.\n\n(Base 3, +1 for stone, +1 Touch)"
+    }
+
+    #tf8e38ec1264c6313e4d8f4 ^"The Miniature of Immortality" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Animal, Terram"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrHe(An)(Te) Level 20 R: Voice, D: Mom, T: Ind, Ritual"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 133
+        }
+        DESCRIPTION "This spell creates a painted miniature of a person or scene within voice range of the caster. The picture is painted on a wooden panel, and the spell’s requisites include the required mineral-based pigments and the egg yolk necessary for binding the paint.\n\n(Base 2, +2 Voice, + 2 requisites, +1 complexity: minimum level for ritual spell)"
+    }
+
+    #t705e75e9cd029e85bcd032 ^"Conjuring the House of God" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrTe Level 45 R: Touch, D: Mom, T: Ind, Ritual"
+            ^"Source" STRING "Art & Academe"
+            ^"Page" INTEGER 133
+        }
+        DESCRIPTION "This spell creates a church that towers overhead with either barrel or groin vault ceilings, impressive tower facades, and stained glass windows. Its footprint covers 19,000 square feet, and its towers can be up to 140 feet high. The caster determines the exact design of the church, based on contemporary styles. This church has not been consecrated, and is a church only in the architectural style of the building. Spontaneously appearing churches, particularly those larger than many cathedrals, will certainly raise a population’s suspicions.\n\n(Base 3 +1 Touch, +6 size, +3 elaborate design)"
+    }
+
+}

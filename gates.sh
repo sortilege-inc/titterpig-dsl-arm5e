@@ -28,6 +28,19 @@ if [ -f "$RETARGET/scripts/verify_armdef.py" ]; then
     run "armdef re-target is byte-faithful" python3 "$RETARGET/scripts/verify_armdef.py"
 fi
 
+# Sidebar TEXT, not just titles. The coverage gate below credits a Text Box by its
+# NAME, so 81 sidebars whose text never reached the corpus passed it at 100%
+# (2026-10-04). This checks every paragraph of every sidebar div, letters and digits.
+# arm5e only: armdef is proven a faithful re-target above. The corebook is held out
+# until the owner rules on its LLM-paraphrased sidebars (39 fail; see TODO.md).
+if [ -f "$RETARGET/scripts/sidebars_text_gate.py" ]; then
+    sidebar_manifests=()
+    for m in "$MASTRA"/coverage/arm5e-*.manifest.json; do
+        [[ "$m" == *arm5e-corebook.manifest.json ]] || sidebar_manifests+=("$m")
+    done
+    run "sidebar text (arm5e sourcebooks + Sub Rosa)" python3 "$RETARGET/scripts/sidebars_text_gate.py" "${sidebar_manifests[@]}"
+fi
+
 for m in "$MASTRA"/coverage/arm5e-*.manifest.json "$MASTRA"/coverage/armdef-*.manifest.json; do
     [ -f "$m" ] || continue
     # NOT `... | tail -1`: a pipe reports the PIPE's exit status, so the audit's

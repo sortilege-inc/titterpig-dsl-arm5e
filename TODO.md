@@ -1,6 +1,25 @@
 # titterpig-dsl-arm5e — TODO
 
-## 2026-10-04 — sidebar TEXT completed across the sourcebooks (uncommitted)
+## 2026-10-04 — sidebar TEXT is now a gate (`gates.sh`: "sidebar text")
+
+`Temp/arm5e-sourcebook-conversions/scripts/sidebars_text_gate.py` checks every paragraph and row of every sidebar div
+(letters AND digits) against each arm5e manifest's corpus. A unit passes if it is in the corpus, or held as fields (every
+4-word shingle in the corpus's strings), or listed in `sidebars_text_allow.json`. That list has 27 reviewed entries, each
+with a reason: wrapped table headers, spell `(Base …)` lines, Virtue/item lead-ins, the futhark rows. An entry that stops
+matching FAILS, so the list cannot rot. Proven by planting each defect in a scratch copy: a deleted sidebar, a sidebar
+truncated after its first sub-heading, one dropped stat line, one changed table number, and a stale allow entry all FAIL;
+the unmodified copy PASSES.
+
+- **Digits found one more gap:** Grogs p48 "Weight of Common Materials" prints a second grid (Size → Weight, 9 rows).
+  It was absent; it is now `^"Weight of Common Materials: Size"` (systems.ttrpg 0.5.3). Letters-only could not see it:
+  every row is numbers, and every stat line reads alike without them.
+- **OPEN — owner call: the corebook is held out of the gate.** 39 of its 137 sidebars fail, 29 with whole sentences.
+  The core was built by the Stage-B LLM pipeline, so its sidebars are paraphrased ("Pick three words … assign a number
+  between +3 and –3" → "Choose three words … attach a value between –3 and +3"), or absent ("A Virtue or Flaw may be
+  taken more than once only if the description explicitly allows it" is nowhere). The fix is a verbatim sidebar pass
+  over the core, like the sourcebooks' 2026-07-27 backfill. Once that is done, drop the corebook exclusion in `gates.sh`.
+
+## 2026-10-04 — sidebar TEXT completed across the sourcebooks (pushed 363c509)
 
 The coverage gate credits a Text Box by name. A per-sidebar-div text audit of every sourcebook
 (`Temp/arm5e-sourcebook-conversions/scripts/sidebars_text_audit.py`) found 20 sidebars whose text was absent although

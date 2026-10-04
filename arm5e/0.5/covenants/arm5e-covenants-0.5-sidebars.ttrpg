@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Covenants_Sidebars" {
     NAME "Ars Magica Fifth Edition, Covenants - Sidebars & Story Seeds"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-27"
     DEPENDS_ON "ArM5_Covenants_Core_Ext"
@@ -13,7 +13,20 @@ EXTENSION "ArM5_Covenants_Sidebars" {
 
     GUIDANCE {
         ENTRY ^"Customized Covenant Creation Summary" #taf5bfbb766fd82fd633468 {
-            TEXT "This is a summary of the existing rules for covenant creation (see ArM5, page 70), with some minor additions. Starting from the baseline below, choose a power level, and once you have a basic concept, proceed to select Boons and Hooks, and buy Resources."
+            TEXT "This is a summary of the existing rules for covenant creation (see ArM5, page 70), with some minor additions. Starting from the baseline below, choose a power level, and once you have a basic concept, proceed to select Boons and Hooks, and buy Resources.\n\n**Baseline**\n\nThe base for covenant creation is a stone building with enough room to accommodate the magi and covenfolk. It is located in a level 3 magic aura in a place somewhat removed from mundane society, and has basic defenses. The base covenant has no magical resources. It has sufficient mundane resources for day-today upkeep, with a single Typical source of income. For every magus, there is one standard laboratory, and approximately one grog and two other covenfolk, such as servants, laborers, teamsters, and craftsmen. The craftsmen are of common types, such as blacksmiths or carpenters. Apart from possibly a bookbinder and illuminator, there are no exotic specialists. The covenant has a Living Conditions modifier of +1 for magi and 0 for everybody else.\n\n**Power Level**\n\nThe first choice is the level of power within the covenant that is accessible to the player character magi. This depends on what sort of saga the players want; it is suggested that novice players start with a medium or low power level. See the Power Levels Table for details about the four possible power levels: low, medium, high, and legendary.\n\n**Boons and Hooks**\n\nBoons are things that make the covenant better, whereas Hooks are features of the covenant that lead to stories. Boons and Hooks come in three kinds: Major (which cost three points), Minor (which cost one point), and Free Choices (which do not cost any points). A covenant may have as many Hooks as the players want; they provide points that can be spent to buy Boons. Thus, a covenant cannot start with more points of Boons than points of Hooks. A greatly expanded list of Boons and Hooks may be found in Chapter 2: Boons and Hooks.\n\n**Resources**\n\nThe chosen power level grants a number of Build Points, which are used to buy resources. The costs are:\n\n**Enchanted Items**\n\n• 2 per five levels of effects\n\n**Laboratories**\n\n• Extra labs: 50 each\n• Non-standard lab: Size x 20; Major Virtue: 20; Minor Virtue: 10\n\n**Laboratory Texts**\n\n• 1 per five levels\n\n**Library**\n\n• Art Summae: Level + Quality (Level limit: 20; Quality limit: 11 + (20 – level), or 22, whichever is lower)\n• Ability Summae: 3 x Level + Quality (Level limit: 8; Quality limit: 11 + 3 x (8 – level), or 22, whichever is lower)\n• Tractatus: Quality (Quality limit: 11)\n\n**Money**\n\n• Stocks: 1 per 10 pounds\n\n**Specialists**\n\n• Teacher: Communication + Teaching + Highest Ability Score (Score limit: by age)\n• Other: Highest Ability Score (Score limit: by age)\n\n**Vis**\n\n• Sources: 5 per pawn of vis per year\n• Stocks: 1 per 5 pawns of vis"
+        }
+    }
+
+    #t52c02eeb2464126860a920 ^"Power Levels Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Power Level", "Build Points", "Maximum Level of Lab Text / Effect in Enchanted Device", "Minimum Age of Covenant"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "Low" "0–300" "25" "None"
+            "Medium" "300–1250" "40" "10 years"
+            "High" "1250–2500" "No limit" "50 years"
+            "Legendary" "2500+" "No limit" "100 years"
         }
     }
 
@@ -49,7 +62,7 @@ EXTENSION "ArM5_Covenants_Sidebars" {
 
     GUIDANCE {
         ENTRY ^"Examples of Vote-Taking" #t5ac293b66f488b76e855e7 {
-            TEXT "• • A quorum of a particular proportion\n• of the magi must be present.\n• • The leader must be present.\n• • A certain number of officers must\n• be present.\n• • A certain number of votes must be\n• present."
+            TEXT "**Example Criteria for a Legal Meeting**\n\n• A quorum of a particular proportion of the magi must be present.\n• The leader must be present.\n• A certain number of officers must be present.\n• A certain number of votes must be present.\n\n**Example Methods of Casting Votes**\n\n• A show of hands\n• A show of sigils, which may be deputized for magi who do not wish to attend\n• A ballot (tokens placed into boxes or jars)\n• Any of the above, but any member also has the option of demanding a secret ballot\n\n**Example Methods of Vote Allocation**\n\n• Every magus gets one vote.\n• Every magus gets a number of votes dependent on her status.\n• The covenant leader can break ties with a casting vote.\n• Each officer gets an extra vote when the issue covers her purview.\n• Each officer gets the casting vote when the issue covers her purview.\n\n**Example Methods of Adjudicating a Result**\n\n• Majority by Vote: Votes for (”aye” votes) and against (”nay” votes) the issue in question are counted. If the ayes exceed the nays the motion is carried, if not, it is rejected. Absentees and abstention votes are ignored.\n• Majority by Magus: As above, but more than half of the magi present at the meeting must vote aye for a motion to be carried; that is, abstentions are treated as nay votes. Absentees are ignored.\n• Majority by Member: As above, but more than half of the magi who are members of the covenant must vote aye for the motion to be carried; that is, absentees *and* abstentions are treated as nay votes.\n• Threshold Vote: A motion needs a predetermined number of aye votes to be carried.\n• Unanimity by Magus: All magi present need to vote aye to carry the motion.\n• Unanimity by Member: All members of the council need to vote aye to carry the motion.\n\n**Example Types of Voting**\n\n• All issues use the same adjudication method.\n• Some issues require more relaxed or more stringent adjudication methods than others.\n• Members may request that a stringent adjudication method be used for specific issues."
         }
     }
 
@@ -119,6 +132,25 @@ EXTENSION "ArM5_Covenants_Sidebars" {
         }
     }
 
+    #t48aa9e3cd2ddd6707865d8 ^"Rego Craft Magic" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Craft Task", "Craft Ease Factor", "Minimum Rego Craft Ease Factor"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "Trivial" "0" "3"
+            "Simple" "3" "6"
+            "Easy" "6" "9"
+            "Average" "9" "12"
+            "Hard" "12" "15"
+            "Very Hard" "15" "18"
+            "Impressive" "18" "21"
+            "Remarkable" "21" "24"
+            "Almost Impossible" "24+" "27+"
+        }
+        DESCRIPTION "Rego magic can make any change a mundane craftsman can effect, even when the magus is limited by lack of tools, time, or skill. However, Rego cannot create matter, so whatever is in the final product must be supplied as source material: to turn iron into steel a magus needs both iron and carbon; to dye cloth or leather she must have a supply of dye. Materials that a craftsman would use and then remove from the product, are not needed for craft magic. For example, magic can bleach skins to make parchment without the lye that a percamenarius must use.\n\nRego craft magic works by rearranging existing material, and requires a Finesse roll to control this rearrangement. (Creo magic draws on the realm of Forms to produce things, which are always at least roughly right.) As a baseline, this has an Ease Factor *at least* 3 higher than the Ease Factor for doing the same thing by normal craft. Failure means that the spell produces a mess rather than a useful item; a botch means that the failure is overlooked (that is, the object is seemingly normal) but will let the user down treacherously, usually when he least expects it. For example, a botched woven cloth might not unravel until a garment made from it is worn in public; a botched parchment might accept the ink, but flake it off when left undisturbed.\n\nFactors which might increase the Ease Factor of the Finesse roll include drastic shortening of time. While a day’s work in an instant is “just normal magic,” a month’s or longer effort would increase the Ease Factor by +3 for a month’s work, +6 for a season’s work, or +9 for a year’s work. If the mundane craft would use many temporary substances to process the work, consider adding +3 or more to the Ease Factor.\n\nRego craft as rearrangement of materials means that some functions of the mundane craftsman are outside the province of craft magic. For instance, a butcher can kill an animal with a knife, but craft magic cannot do this, as lifeinto-death is not a rearrangement but a destruction (which falls in the realm of Perdo magic). (Non-craft Rego could, however,, with enough Finesse, wield a knife to similar effect.) Similarly, a skilled craftsman can examine and interpret an object’s manufacture and guess at its history or function, but this is not rearrangement of materials either, it is Intellego magic.\n\nExtending the duration of a Rego craft spell makes the spell perform the same action over and over on the same starting materials — it is almost always inappropriate."
+    }
+
     GUIDANCE {
         ENTRY ^"Beasts as Characters" #tdc76be93b64be400babe99 {
             TEXT "A number of beasts of Mythic Europe are described in *The Book of Mundane Beasts*, a free download from the Atlas Games website. The hound and cat (and the skinchanger’s raven form) are based on that supplement. Each species of beast has certain Virtues and Flaws common to all members of the species, which are not balanced in game terms (as the normal balance reflects costs for humans), but rather indicate the unique strengths and weaknesses of beasts. Exceptional beasts may take individual Virtues and Flaws, on top of their species types, but these must balance as normal.\n\nNormal Beasts cannot learn new Abilities unless Trained, but can improve existing Abilities; intelligent beasts can improve as normal. Beasts usually have a number of Abilities, which represent what members of their species can perform instinctually, rather than things they have learned. (Beasts are usually “too young” to have learned anything by the normal process of character generation.)"
@@ -132,14 +164,70 @@ EXTENSION "ArM5_Covenants_Sidebars" {
     }
 
     GUIDANCE {
+        ENTRY ^"Option: Extremely Complex Wealth Management" #tda54988ebe48335e3a688a {
+            TEXT "If you wish, you may keep track of the covenant’s finances exactly, recording income and expenditure down to the level of shillings and pence. For example, instead of simply noting the total cost of an expedition as one pound, say, you would account for individual purchases of basic provisions or trinkets. Most troupes prefer not to enter this level of detail for their saga, since it usually entails an excessive amount of bookkeeping, although it may be appropriate for a very poor covenant, or a saga with a focus on the mundane world or trade."
+        }
+    }
+
+    GUIDANCE {
+        ENTRY ^"Option: No Wealth Management" #t8fafad9d94ff8c8985f266 {
+            TEXT "Not every troupe may want to bother to keep track of their covenant’s finances. If you prefer, you can simply neglect the bookkeeping altogether, instead introducing any monetary surpluses or shortfalls at the storyguide’s discretion. This requires some careful judgment to avoid giving the impression either that the characters have unlimited funds, or that they have no control over their own finances, but this style of play may be especially appropriate for a very rich covenant or a high fantasy saga."
+        }
+    }
+
+    GUIDANCE {
+        ENTRY ^"Story Seeds: Wealth and Poverty" #t59c5d7c6a98ae40301de93 {
+            TEXT "• The covenant starts to experience a slow but steady leak of funds, as the corrupt autocrat embezzles money away. How has this person managed to get away with this for so long, and who else might be profiting from this corruption?\n• The covenant’s debts begin to mount, until one day a powerful creditor comes calling. She agrees to write off a large portion of the money owed, in exchange for some service from the magi, which skirts at the edge of the Code of Hermes.\n• A mysterious character arrives at the covenant and offers a seemingly generous loan of money. What is the catch?\n• The nearby townsfolk begin to complain of fake silver coinage, and the blame falls on the covenant. This might be due to a faerie curse or some other malign influence, such as a traveling magus passing off fool’s silver.\n• A rival nobleman starts collecting swingeing tolls on the nearby trade route, causing difficulties for the covenant as they either fall foul of the tolls themselves, or as the local economy threatens to collapse. How can the magi persuade him to cease?\n• A criminal band begins to prey on the covenant’s trade interests, interrupting their income or supplies. These leeches will need to be hunted down, or else the covenant’s finances will be crippled.\n• The covenant runs out of money. Will the magi borrow to cover the shortfall, lay off some of the covenfolk, try to skimp on provisions and lab equipment, or instead pursue a magical solution?"
+        }
+    }
+
+    #t81ccd5ec6ddb61ac174cc5 ^"The Riches That are Rightfully Mine(d)" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Terram" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Covenants"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +2 "size"
+            +1 "complexity"
+            }
+        }
+        DESCRIPTION "This spell fills a large chest or other sturdy container with up to ten cubic feet of silver pennies, an amount equivalent to about 2000 Mythic Pounds. The magus may choose the imprint on the coins, but this mark always bears some trace of the magus’s sigil, which does tend to make them traceable.\n\nA copy of this spell resides at the Great Library of Durenmar, but it is infamous for causing inflationary troubles. Given the recent rulings in many Tribunals, a covenant of ten magi would only be permitted to distribute 20 pounds of such silver per year, so that it would take 100 years to exhaust the silver created by even a single casting of the spell. Therefore, while there is nothing to stop a magus from learning this spell in the Great Library, he would surely earn the instant suspicion and attention of the Quaesitores if he did so."
+    }
+
+    GUIDANCE {
         ENTRY ^"The Twice-Gifted Coin" #ta25988ef930de69b67799d {
             TEXT "PeMe 15 R: Touch, D: Mom, T: Ind This spell is usually cast when the target deposits a coin into the caster’s hand. The victim immediately loses his memory of having paid. Assuming that he had a legitimate reason for paying in the first place, he then usually reaches for his purse to hand over another coin.\n\nSome sneaky covenants have been known to enchant this effect into a toll-gate, for example. Travelers are asked to pay a toll before the gate, then allowed to proceed, whereupon they touch the gate and promptly forget having paid. Upon request, they then pay again, after the gate. The income from a toll station can thus be doubled.\n\n(Base 10, +1 Touch)"
         }
     }
 
+    #t3c42792dfd6c621bcf77a4 ^"Points of Inhabitants" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Inhabitant", "Typical Spring or Winter covenant: Points", "Typical Spring or Winter covenant: Living Conditions Modifier", "Typical Summer or Autumn covenant: Points", "Typical Summer or Autumn covenant: Living Conditions Modifier"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "Magus, Noble" "5" "+1" "10" "+2"
+            "Companion" "3" "0" "5" "+1"
+            "Specialist, Craftsman" "2" "0" "3" "+1"
+            "Other Covenfolk" "1" "0" "2" "+1"
+            "Horse" "1" "n/a" "1" "n/a"
+        }
+        DESCRIPTION "When calculating a covenant’s sum of points in this area, do not include characters of independent means who pay for their own upkeep, nor any characters who work for one of the covenant’s sources of income. By sacrificing their privileged lifestyle (and the better Living Conditions Modifier), impoverished magi may reduce their point cost to 3. By adopting the same privileges as standard covenfolk (the same food, wages, and living quarters), magi and companions may even reduce their point cost to 2. However a covenant with such pauper magi will likely develop a negative Reputation as the Redcaps quickly spread word of their lamentable standard of living!"
+    }
+
     GUIDANCE {
         ENTRY ^"Yearly Expenditure Summary" #t445f8de06c61519e8e554d {
-            TEXT "• • 1 pound per point of inhabitants\n• • Extra buildings and fortifications:\n• 2 pounds per each relevant Minor\n• Fortifications Boon; 5 pounds per\n• each relevant major Fortifications\n• Boon\n• • Paid soldiers: 1 pound per penny\n• paid daily"
+            TEXT "**Buildings + Consumables + Provisions + Wages**\n\n• 1 pound per point of inhabitants\n• Extra buildings and fortifications: 2 pounds per each relevant Minor Fortifications Boon; 5 pounds per each relevant major Fortifications Boon\n• Paid soldiers: 1 pound per penny paid daily\n\n**Inflation**\n\n• Starts at 0; increases by an average of 1 pound per 100 pounds of expenditure per year\n\n**Laboratories**\n\n• 1 pound per 10 points of laboratories\n\n**Weapons and Armor**\n\n• 1 pound per 320 points of weapons and armor\n\n**Writing Materials**\n\n• 1 pound per magus, scribe, bookbinder, or illuminator\n\n**Cost Saving**\n\n• Laborers: For each, subtract 1 pound\n• Craftsmen (common): For each, subtract 1 + (Ability / 2) pounds (rounding down)\n• Craftsmen (rare): For each, subtract (Ability) pounds\n• Magic items: For each magnitude of effect, subtract 1 pound\n• Ritual spells: For each magnitude of effect, subtract 5 pounds\n• Cost Saving limits: For laborers, 50% of the Provisions total; for craftsmen, either 50% or 20% of each total per relevant craft (see above insert)\n\n**Tithes and Sundry Expenses**\n\n• Per specific amounts"
         }
     }
 
@@ -153,6 +241,19 @@ EXTENSION "ArM5_Covenants_Sidebars" {
         ENTRY ^"The Price of Vis" #t7235f001e821039dde46ed {
             TEXT "It is almost impossible to put a fixed monetary price on a pawn of vis. Magi prize vis, their currency of choice, far more highly than silver. Most consider that mundane things should be bought with silver, and magical things with vis, and that is indeed usually what happens. There are many wealthy covenants that would not even consider selling a pawn of vis for less than a hundred pounds, since vis can be employed effectively in various magical wealth-creation schemes. Yet at the same time, plenty of covenants would not be able to spare more than a few pounds to actually *buy* vis, since their silver is needed to run their covenants. For this reason, the trading of vis for silver is rarely\n\nundertaken, although it is not unheard of, especially amongst House Mercere, who have a more practical sense of the relative worth of vis and silver (see *Houses of Hermes: True Lineages*, page 87). In the cases where vis is sold for silver, the price varies wildly between a couple of pounds to a hundred or more pounds per pawn, depending on such factors as geographical location, the particular Art of the vis, the wealth and whims of local covenants and magi, and the availability of vis relative to other Hermetic commodities in your saga. Having said that, a base guideline of roughly ten pounds per pawn is a reasonable rule of thumb for a typical saga."
         }
+    }
+
+    #t5febb40ac7d6592c1cf63f ^"Vis Source Yields" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Saga Vis Level", "Low", "Moderate", "High"]
+            ^"Source" STRING "Covenants"
+        }
+        TABLE {
+            "Low" "1" "2" "4"
+            "Moderate" "2" "4" "8"
+            "High" "4" "8" "16"
+        }
+        DESCRIPTION "Numbers indicate a given source’s yield in pawns per year."
     }
 
     GUIDANCE {
@@ -175,7 +276,7 @@ EXTENSION "ArM5_Covenants_Sidebars" {
 
     GUIDANCE {
         ENTRY ^"Summary of Quality Rules" #tb8513464b054514afe5a1b {
-            TEXT "**Summa Source Quality:** Author’s Communication + 6 + bonuses due to Virtues + bonus for writing to level less than half of Art score.\n\nQuality may not exceed 2 x (Communication + Virtue bonuses + 6).\n\nA summae’s level may not exceed half its author’s score in an Art at the time of writing. It may instruct a magus until his Art equals the book’s level.\n\n**Tractatus Source Quality:** Author’s Communication + 6 + bonuses due to Virtues.\n\nA tractatus can only be read once for benefit."
+            TEXT "**Core Rules**\n\n**Summa Source Quality:** Author’s Communication + 6 + bonuses due to Virtues + bonus for writing to level less than half of Art score.\n\nQuality may not exceed 2 x (Communication + Virtue bonuses + 6).\n\nA summae’s level may not exceed half its author’s score in an Art at the time of writing. It may instruct a magus until his Art equals the book’s level.\n\n**Tractatus Source Quality:** Author’s Communication + 6 + bonuses due to Virtues.\n\nA tractatus can only be read once for benefit.\n\n**Extended Rules**\n\n**Maximum Summa Quality:** Author’s Communication + 3 +1 for skilled scribe +1 for skilled binder + 1 for skilled illuminator + 3 (or less) due to mystical resonance + bonuses due to Virtues + bonus for writing to level less than half of Art score + 3 for non-magical subjects.\n\nA summa may instruct a magus until his Art equals the book’s level. The effective maximum quality for Art summae is (35 – level), and most books have scores below this.\n\nThe quality bonus due to reducing a book’s level may not exceed 2 x (Communication + Virtue bonuses + bonuses due to skilled artisans + 3).\n\n**Maximum Tractatus Quality:** Author’s Communication + 1 for skilled scribe +1 for skilled binder + 1 for skilled illuminator + 3 (or less) due to mystical resonance + bonuses due to Virtues + 3 for non-magical subjects.\n\nThe effective maximum quality for Art tractatus is 17, and most books have scores below this.\n\nA professional is considered to be skilled if she has a Profession score of 6 or more. Mystically resonant materials add to quality in books on Arcane Abilities or Arts. A material is resonant if it appears on the Shape and Material Bonus Table (see ArM5, page 110) with a bonus appropriate to the text. Troupes may also judge other materials to be resonant.\n\nResonant materials add +1 to quality if they are purchased items, +2 if they are rare items only to be gained from stories. Clarification of a book using resonant materials (see below) adds a further +1, for a maximum possible bonus of +3.\n\nBooks about non-magical subjects (that is, subjects other than Arcane Abilities and Arts) are easier to make than mystical books, so they have an automatic +3 quality bonus. They may not have resonant materials."
         }
     }
 
@@ -194,6 +295,12 @@ EXTENSION "ArM5_Covenants_Sidebars" {
     GUIDANCE {
         ENTRY ^"Hermetic Books: Definition of Categories of Value" #t873abab5501b6337f41b46 {
             TEXT "It is theoretically possible for a peerlessly capable Hermetic teacher, writing in the best of circumstances, to create a summa with a quality score of approximately (41 – level). In the history of the Order, this has never happened, but it might during your saga.\n\nA very few summae, those most prized in the Order, have been created by exceptionally powerful magi, with excellent Reputations, later in life. Perfect, clarified copies of these books have qualities of (35 – level).\n\nMost of the summae traded within the Order are written by specialists in an Art, but with no particular skill in teaching. These summae have qualities somewhere between (31 – level) and (28 – level).\n\nA few books are written by magi with weaker skills than these authors.\n\nThese books are called “vain summae,” because these immodest people do not understand why their books, poor and weak as they are, should not sit alongside better work. These summae have qualities of (25 – level) or below.\n\nDiscarded summae are usually damaged versions of the types above. They are stripped of their resonant materials before sale and usually have qualities between (18 – level) and (15 – level).\n\nA tractatus written by a legendary teacher could, theoretically, have a quality of around 17. Generally, however, an excellent tractatus has a quality of around 14, a sound tractatus approximately 11, and a vain tractatus around six. Damaged tractatus may have quality scores as low as one."
+        }
+    }
+
+    GUIDANCE {
+        ENTRY ^"Scribal Magic" #tf8fd6410a7dd88d9fb6a1e {
+            TEXT "This brief grimoire is intended for magi acting as scribe-artisans or librarians within their covenants. There are a handful of Hermetic scribe-artisans, found predominantly in House Verditius, and most have copies of these spells, which they share readily. The scribe-artisans of House Verditius also frequently sell small magic items that incorporate many of these low-level spells. The usual form for enchantment is a leather stamp, used to place the library’s mark of ownership on the leather covers of books."
         }
     }
 
@@ -222,8 +329,20 @@ EXTENSION "ArM5_Covenants_Sidebars" {
     }
 
     GUIDANCE {
+        ENTRY ^"Second Laboratories" #te35944d907c05c8dd2521f {
+            TEXT "The vast majority of magi have only one laboratory. The expense and effort of maintaining a second lab is usually not worthwhile, and most magi prefer to have one really good lab, rather than two mediocre ones. Also, the Peripheral Code only allows a magus to maintain one sanctum, which means that a magus with two labs will only have one that is legally protected, unless both labs are sufficiently close together so as to fit inside the same sanctum.\n\nNevertheless, some elderly and rich magi do maintain second laboratories. This might be to cater to several conflicting preferences, because the magus regularly travels to some remote location, or out of sheer vanity. It is somewhat common for covenants to maintain some additional labs, either for communal work, for guests, or for the extraction of vis from some remote magical aura. It should also be noted that a laboratory must occupy a single chamber. Installing lab equipment onto two separate floors of a tower, for example, counts as two separate labs."
+        }
+    }
+
+    GUIDANCE {
         ENTRY ^"Size and Refinement Summary" #ta7178c7b03002f66371c80 {
             TEXT "**points: Size + Refinement Occupied Size: current Virtue points minus Flaw points – Refinement Base Safety of lab: Refinement – occupied Size (if greater than zero)**"
+        }
+    }
+
+    GUIDANCE {
+        ENTRY ^"Laboratory Specializations and Appearance" #t11af029e90ddab1dce6b55 {
+            TEXT "**Experimentation**: The lab might be equipped with bizarre custom outfittings, or have a non-standard configuration that appears confusing or even dangerous to the uninitiated.\n\n**Familiar**: Such a lab often resembles one with a specialization in Animal. It likely features a prominent pen or dwelling for a familiar.\n\n**Items**: The lab usually resembles a kind of workshop, with a great variety of tools, and is likely to be smelly, dirty, or noisy.\n\n**Longevity Rituals**: The lab often closely resembles one with a specialization in Creo or Corpus. It might feature a pallet where a live subject can be examined.\n\n**Spells**: This Specialization is not usually immediately obvious, as the lab differs in only subtle ways from the norm. It may feature a large empty space, such as a summoning circle, where spells are tested.\n\n**Teaching**: The lab is usually comfortable, with a preordained position for both master and pupil, such as a desk before a teaching pulpit.\n\n**Texts**: The lab usually features a prominent desk or bookstand, contains a wide variety of writing materials, and is well lit.\n\n**Vis Extraction**: Such a lab often features some kind of measuring or refining contraption, such as an elaborate still, and numerous containers for vis.\n\n**Creo**: The lab is often brightly lit, clean, or contains many growing things. It is usually a pleasant environment.\n\n**Intellego**: Such an esoteric lab might contain many books or astronomical devices, as well as viewing objects such as orbs or a scrying pool.\n\n**Muto**: The lab might appear chaotic or in a state of constant change. Perhaps the owner is continually rearranging things.\n\n**Perdo**: The lab might be dark or dirty, possibly containing decaying or dead things. It is often an unpleasant place.\n\n**Rego**: Such a lab is tidy and well ordered, with everything neatly arranged.\n\n**Animal**: This Specialization is usually evident from the lab’s feral smell. It may contain numerous fauna specimens, dead or alive, and the floor may be littered with straw, fur, or droppings.\n\n**Aquam**: The lab almost always features some kind of water, either still or flowing, and may be damp.\n\n**Auram**: Such a lab is often spacious, with a high ceiling, and might feature a window or balcony, or even be exposed to the elements.\n\n**Corpus**: The lab might contain human corpses and body parts, such as blood, bones, and skin, or even live subjects. Perhaps it resembles a surgery, with the tools of a chirurgeon present.\n\n**Herbam**: Such a lab predictably features plants, either in pots, or growing out of the floor or walls, or the lab itself might be built of living wood. It may have a smell of foliage, blossom, or wood.\n\n**Ignem**: The lab is usually very well heated, with multiple fireplaces or a furnace, or it may be lit by many hundreds of candles. It may smell of smoke or sulfur.\n\n**Imaginem**: The lab may be extravagantly decorated, or even partly illusory. Alternately or additionally, it may give the impression of having some other Specialization, since it is not all it seems.\n\n**Mentem**: Such a lab is often puzzling and elaborate, and may feature esoteric toys or ornate mirrors.\n\n**Terram**: The lab is often subterranean, and is usually solidly built, with an earthy or mineral smell. Many samples of metals, gems, or crystals may be present.\n\n**Vim**: Such a Specialization is usually hard to spot, as there is no characteristic appearance, apart perhaps from an increased overall complexity."
         }
     }
 

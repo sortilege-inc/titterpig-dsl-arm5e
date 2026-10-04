@@ -1,6 +1,6 @@
 EXTENSION "ArM5_RoP_Faerie_Story_Elements" {
     NAME "Ars Magica Fifth Edition, Realms of Power: Faerie - Story Elements"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-26"
     DEPENDS_ON "ArM5_RoP_Faerie_Core_Ext"
@@ -462,6 +462,14 @@ EXTENSION "ArM5_RoP_Faerie_Story_Elements" {
             DESCRIPTION "A tiny mouse, easily overlooked. He can talk, and takes a fancy to a female character, courting her with gifts and poetry. Alternatively, the mouse could be a different animal (such as a cat or frog), or a monster. Or the mouse could be a bride rather than a groom."
         }
 
+        #t4723906f1fa52c2ed944b4 ^"Further Ideas for Actor Story Elements" DEF {
+            APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Other ideas include:\n\n• The Cruel Stepmother\n• The Queen of Otters\n• The Green Knight\n• The Boy Made from Iron\n• The Evil Twin (or the Foolish Twin)"
+        }
+
         #tBqxCrtxZRpHGQ6OTOPTLecI ^"The Ferryman" DEF {
             EXTENDS #t810e46640b34c455bb72f7 ^"Story Element"
             PROPERTIES {
@@ -516,6 +524,14 @@ EXTENSION "ArM5_RoP_Faerie_Story_Elements" {
                 ^"Source" STRING "Realms of Power: Faerie"
             }
             DESCRIPTION "The hammer of the mighty Thor — a thunderbolt imprisoned in iron. It was designed as a war hammer but its handle is a little short, subtracting 2 from both Attack and Defense scores. A successful hit inflicts +30 damage from the lightning imprisoned within it, as well as normal weapon damage. The penetration of the lightning is equal to the Might of the wielder; for a magus, use his Auram score."
+        }
+
+        #tdebeace61465f007d97d8f ^"Further Ideas for Prop Story Elements" DEF {
+            APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Some more ideas include:\n\n• The Soul in the Egg\n• The Magic Ring\n• The Self-Filling Purse\n• The Horn that Furnishes Soldiers\n• The Helm of Invisibility\n• The Word That Opens All Locks"
         }
 
         #tHSqm4xbeng79MfNuk8Zs1gc ^"The Dragon’s Tongue" DEF {
@@ -664,4 +680,53 @@ EXTENSION "ArM5_RoP_Faerie_Story_Elements" {
                 ^"Source" STRING "Realms of Power: Faerie"
             }
             DESCRIPTION "In the midst of a tangle of undergrowth, a single standing stone is found, carved with strange glyphs and leering faces. Circles carved into the ground hold traces of dried blood. Alternatively, the shrine could be found in a deep pit, or in a deserted town."
-        }}
+        }
+
+        #taa9bf5a8fd398d98d197e3 ^"Ten Thousand More Story Elements" DEF {
+            APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+            PROPERTIES {
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            DESCRIPTION "Choose a descriptor and an object from the following two lists; or else roll two simple dice, once for each list."
+        }
+
+        #taa526081d585151d70b4f5 ^"Ten Thousand More Story Elements: Descriptors" DEF {
+            APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Second Die", "1 on First Die", "2 on First Die", "3 on First Die", "4 on First Die", "5 on First Die", "6 on First Die", "7 on First Die", "8 on First Die", "9 on First Die", "10 on First Die"]
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            TABLE {
+                "1" "Green" "Iron" "Twin" "Howling" "Maker of" "Winged" "Sharp" "Farthest" "Fatal" "Sleepy"
+                "2" "Shiny" "Glass" "Huge" "Fiery" "King of" "Spiny" "Dull" "Best" "Straight" "Obnoxious"
+                "3" "Dirty" "Golden" "Minute" "Singing" "Servant of" "Leafy" "Icy" "Darkest" "Wrong" "Naughty"
+                "4" "White" "Ruby" "Newborn" "Furious" "Slayer of" "Donkey-eared" "Warm" "Brightest" "Blind" "Grieving"
+                "5" "Striped" "Fur" "Ancient" "Sleeping" "Eater of" "Wounded" "Unyielding" "Highest" "Final" "Obedient"
+                "6" "Variegated" "Woven" "Flawed" "Drunken" "Child of" "Hairy" "Soft" "Deepest" "Eldest" "Curious"
+                "7" "Black" "Emerald" "Perfect" "Smelly" "Sibling of" "Slimy" "Harsh" "Tallest" "Youngest" "Cunning"
+                "8" "Murky" "Wooden" "Broken" "Dreaded" "Parent of" "Strange" "Gentle" "Smallest" "Beautiful" "Impossible"
+                "9" "Blue" "Stone" "Empty" "Passionate" "Cousin of" "Scrawny" "Sour" "Fiercest" "Repulsive" "Motionless"
+                "10" "Invisible" "Makeshift" "Flat" "Dying" "Protector of" "Corpulent" "Floral" "Bravest" "Terrible" "Stormy"
+            }
+        }
+
+        #te1e7634fde351b79411f5d ^"Ten Thousand More Story Elements: Objects" DEF {
+            APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Second Die", "1 on First Die", "2 on First Die", "3 on First Die", "4 on First Die", "5 on First Die", "6 on First Die", "7 on First Die", "8 on First Die", "9 on First Die", "10 on First Die"]
+                ^"Source" STRING "Realms of Power: Faerie"
+            }
+            TABLE {
+                "1" "Queen" "Fox" "Eagle" "Drum" "Knife" "Acorn" "Child" "Mason" "Summer" "Fort"
+                "2" "Serf" "Mouse" "Salmon" "Bed" "Loaf" "Apple" "Page" "Weaver" "Autumn" "Wall"
+                "3" "Lady" "Weasel" "Robin" "Lute" "Key" "Willow" "Maiden" "Magistrate" "Lake" "Shack"
+                "4" "King" "Lion" "Frog" "Mirror" "Book" "Rose" "Soldier" "Counselor" "Sea" "Manor"
+                "5" "Prince" "Bear" "Ant" "Cauldron" "Sword" "May Blossom" "Hermit" "Orchard-Keeper" "River" "Bridge"
+                "6" "Beggar" "Wolf" "Swan" "Shawm" "Shield" "Hazelnut" "Crone" "Smith" "Dawn" "Ditch"
+                "7" "Scholar" "Stag" "Bull" "Bottle" "Hammer" "Water Lily" "Holy Woman" "Dancer" "Shore" "Hill"
+                "8" "Priest" "Goat" "Bat" "Coin" "Chalice" "Seaweed" "Infant" "Flautist" "Battlefield" "Forest"
+                "9" "Merchant" "Ox" "Owl" "Gaming Piece" "Needle" "Thistle" "Father" "Shepherdess" "Harbor" "Desert"
+                "10" "Death" "Badger" "Partridge" "Candle" "Cloak" "Burdock" "Waif" "Knight" "Crossroads" "Marsh"
+            }
+        }
+}

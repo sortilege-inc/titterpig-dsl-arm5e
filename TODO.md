@@ -1,5 +1,15 @@
 # titterpig-dsl-arm5e — TODO
 
+## 2026-10-04 — sidebar TEXT completed across the sourcebooks (uncommitted)
+
+The coverage gate credits a Text Box by name. A per-sidebar-div text audit of every sourcebook
+(`Temp/arm5e-sourcebook-conversions/scripts/sidebars_text_audit.py`) found 20 sidebars whose text was absent although
+the gate passed: Covenants 14, RoP:Faerie 3, City & Guild 2, RoP:Magic 1. All 20 converted (owner, 2026-10-04) by
+`scripts/sidebars_complete.py` into 4 arm5e files, then a full `retarget_armdef.py` run, which changed exactly the 4
+mirrors. Covenants' 19 unexcluded blank worksheet boxes and A&A's list of inserts are now page-keyed exclusions in
+their manifests. `gates.sh` → ALL GATES PASS. Full write-up + decision log:
+`Temp/arm5e-sourcebook-conversions/SIDEBARS-AUDIT-2026-10-04.md`.
+
 ## 2026-10-04 — Art & Academe converted, both editions (uncommitted)
 
 `arm5e/0.5/art-and-academe/` (49 files, source of truth) + `armdef/0.5/art-and-academe/` (retarget mirror). One

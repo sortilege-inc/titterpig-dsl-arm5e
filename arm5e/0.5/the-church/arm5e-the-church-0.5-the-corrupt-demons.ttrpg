@@ -1,0 +1,381 @@
+EXTENSION "ArM5_The_Church_TheCorrupt_Demons" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Six: The Corrupt demons"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_The_Church_Core_Ext"
+
+    # The chapter's demons, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t3b76a3289f681a4c02eddf ^"BaalBaruth" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Spirits of Deceit"
+            ^"Might" INTEGER 25
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Reputations" LIST ["Creator of Heresies 7"]
+            ^"Hierarchy" INTEGER 7
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "(Vulnerability) A cross causes a light wound by being presented towards this demon, or a medium wound if he is struck with it, so powerful is BaalBaruth’s hatred of the symbol. A relic of the True Cross could banish him back to hell for centuries."
+            ^"Vis" STRING "5 pawns Mentem"
+            ^"Appearance" STRING "In his natural form, and if perceived by Second Sight, BaalBaruth appears as a great black serpent. If he manifests physically he always takes another form, though — a creature with the legs and wings of a very scruffy blackbird, the torso of a muscular man, and the head of a beautiful woman with long flowing black hair, but with a crocodile-like snout. Needless to say, BaalBaruth rarely manifests in this particular form unless he intends to destroy his enemies."
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 90
+        }
+        PERSONALITY_TRAITS {
+            "Trustworthy" -5
+            "Deceitful" +6
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 6
+            " Fist" INIT 2 ATTACK 6 DEFENSE 5 DAMAGE 3
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Charm" SCORE 4 SPECIALTY "flatter monks"
+            "Civil & Canon Law" SCORE 6 SPECIALTY "heresy"
+            "Ceremony" SCORE 5 SPECIALTY "leading"
+            "Church Lore" SCORE 5 SPECIALTY "politics"
+            "Guile" SCORE 9 SPECIALTY "heresy"
+            "Organization Lore: Cluniacs" SCORE 8 SPECIALTY "personalities"
+            "Teaching" SCORE 5 SPECIALTY "false doctrine"
+        }
+        POWERS {
+            #t58eb819d12759467095b73 ^"Change Form (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Change Form"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Can take on the form of a human between Size –2 and Size +2. Through long familiarity can adopt the form of the Abbot of Cluny almost perfectly."
+            }
+            #tf14fa642ddb663fdc580b1 ^"Trust of the Innocent (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Trust of the Innocent"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target of this effect loses all judgment and believes a specific lie (as long as it is passable) until presented with evidence to the contrary. An Intelligence roll against an Ease Factor of 6 is allowed to resist the effect."
+            }
+            #td57b1f2d6e89da7ce05c81 ^"Obsession (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Blasphemy, Sacrilege."
+            }
+            #t623e887696e03733f5c038 ^"Coagulation (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "BaalBaruth may take on a physical body in 25 rounds of manifestation, or may dissolve with a round of concentration."
+            }
+            #ta69023202d1a8d60d334e2 ^"Forked Tongue of the Serpent (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Forked Tongue of the Serpent"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target believes any lie, no matter how preposterous, until he relates that lie to someone else. At this point he realizes how ridiculous the falsehood sounds, and the demonic Power is broken. An Intelligence roll against an Ease Factor of 9 also reveals the lie to be false, with the first roll allowed an hour after the effect was used, and further rolls permitted every subsequent hour."
+            }
+            #td681df25842a28390a4fa2 ^"The Serpent’s Oracle (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Serpent’s Oracle"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can duplicate the effect of any non-ritual Intellego spell for the cost of 2 Might Points. It may also gain a morsel of future knowledge, understanding the most immediate consequences of any one future action."
+            }
+            #t4daa2029a6b2e8656942f8 ^"Confound the Truth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power allows the demon to create a perfectly convincing theological and scriptural argument for whatever point he is trying to prove. After reasoned consideration, a successful Intelligence + Theology roll against an Ease Factor of 9 reveals the doctrine to be false, with the first roll allowed a day after the effect was used, and further rolls permitted every subsequent month. It is also possible for someone else to explain the error to the victim, effectively making the roll on the victim’s behalf."
+            }
+        }
+    }
+
+    #t7b8ba9bf05ecff9604b234 ^"Patarus" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Accusers"
+            ^"Might" INTEGER 15
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Reputations" LIST ["Servant of BaalBaruth 1"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group: those personally dedicated to Saint Benedict of Nursia, Saint Bernard of Clairvaux, or Saint Basil the Great, with a positive score in Devotion, are immune to all Patarus’ powers."
+            ^"Vis" STRING "3 pawns Mentem"
+            ^"Appearance" STRING "If materialized, he appears as a thin monk dressed in Cluniac garb, with pale features drawn tight as if consumed by a secret guilt. Two lumps on his head mark his small goat-like horns, and his tongue is that of a serpent, his voice a whining wail. Patarus, like all of BaalBaruth’s servants, hates his master and plots to replace him at the first opportunity, but his fear of his demonic master is too great at the moment. He serves his abbot unwillingly, and only through fear of punishment from BaalBaruth."
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 92
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +6
+            "Cowardly" +3
+            "Rebellious" +2
+        }
+        COMBAT {
+            "Dodge" INIT 5 DEFENSE 9
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Church Lore" SCORE 2 SPECIALTY "politics"
+            "Guile" SCORE 4 SPECIALTY "gossip"
+            "Intrigue (Church)" SCORE 2
+        }
+        POWERS {
+            #tc61a2147e959f7edbba504 ^"To Sin in Dreams" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Changes the victim’s memories of a period of up to two hours, always in a destructive and unpleasant way, to lead the victim to believe he committed a mortal sin or similar. The effect disappears at daybreak or sunset, revealing the memory as false, but may leave the victim wondering if he is going mad."
+            }
+            #tfcdeffea38f3b61afe8e49 ^"Obsession (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Obedience, Masochism."
+            }
+            #tec21ac344e4de3164db84b ^"Betrayal of the Heart (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Betrayal of the Heart"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Patarus can see into the hearts of mankind and draw forth their most secret thoughts — people’s fears and sins. Each use of this Power reveals to the demon one fact about the target that the target would never admit. Truly holy people may be immune to this power if they have no secrets, no matter how petty."
+            }
+            #t755a0bce03036edbd1b740 ^"Whispers Behind the Back (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Whispers Behind the Back"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Just as the spell *Pains of the Perpetual Worry*, this power gives the victim a nagging, painful emotion linked to his secret sins — a recurrent sense of anxiety that his secret will be uncovered and a suspicion that everyone already knows it, and is talking about the target behind his back. This Power lasts for a month."
+            }
+            #tf18b46f79587d5fc107dc3 ^"Coagulation (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "May take on a physical body in 25 rounds of manifestation, or may dissolve with a round of concentration. *Your One True Friend**"
+            }
+            #t8a8ea59ad6eb7e0ccf8663 ^"," DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "*3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Causes the victim to trust one authority figure and everything he says, regarding him as a true and sincere friend, for the duration of one month. An Intelligence stress roll against an Ease Factor of 9 is allowed if the friend asks the target to act against his best interests, or commit a mortal sin, and this breaks the Power’s effect if successful, though the victim may still not realize he was under a Power’s influence before."
+            }
+        }
+    }
+
+    #t775949664e45ebe95d0c6d ^"Jaevert" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Duke of the Deluders (Watchers)"
+            ^"Might" INTEGER 40
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "2 (6)"
+            ^"Reputations" LIST ["Duke of False Millenniums 7"]
+            ^"Hierarchy" INTEGER 7
+            ^"Virtues and Flaws" STRING "Corruption, Good Teacher, Noncombatant, Puissant Guile, Puissant Church Lore."
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–13), –5 (14–18), Incapacitated (19–23), Dead (24+)"
+            ^"Abilities" STRING "Brawl 3 (dodge), Church Lore (eschatology) 8 +2, Ceremony 6, Debauchery 8, Guile 7+2 (prophecies), Incantation 7, Infernal Lore 6 (politics), Intrigue 4 (Church), Magic Lore 4 (prophecy), Psychomachia 6, Theology (end times) 8, Teaching, (corrupt abilities) 6"
+            ^"Weakness" STRING "Protected Group (those who can actually see the future, such as those with premonitions)."
+            ^"Vis" STRING "8 pawns Imaginem"
+            ^"Appearance" STRING "Jaevert, if somehow perceived, appears as a featureless black giant torn out of space, the darkness pierced only by hundreds of burning eyes staring out from the eerie silhouette."
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 98
+        }
+        PERSONALITY_TRAITS {
+            "Credible" +3
+            "Sly" +2
+        }
+        COMBAT {
+            "Dodge" INIT 5 DEFENSE 9
+        }
+        POWERS {
+            #tf64f99992807705568e315 ^"Angel of Light" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Jaevert may appear as a shining angel of light, radiating peace and goodwill. He often appears in this form to impart false prophecies."
+            }
+            #t21dcd63b1d5604387db2e3 ^"The Wordless Conversation (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Wordless Conversation"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Jaevert may speak directly in to the mind of any creature who he can see (assuming Magic Resistance is penetrated), and may choose to hear any verbal or mental response that the target may make."
+            }
+            #t53e0f4615985b82bb36528 ^"Coagulation (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Jaevert may take on a physical body in 25 rounds of manifestation, or may dissolve with a round of concentration."
+            }
+            #t60d7cf9835669941129a9e ^"Duplicate the Magi’s Transmutation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "Jaevert can duplicate any Hermetic Muto spell, at the cost of one point of Might per Magnitude, up to level 40. He may not duplicate Ritual effects."
+            }
+            #t3ce250eb28748db8e7b463 ^"Duplicate the Magi’s Control" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "Jaevert can duplicate any Hermetic Rego spell, at the cost of one point of Might per Magnitude, up to level 40. He may not duplicate Ritual effects."
+            }
+            #ta143f8d6431b300cb67d19 ^"Duplicate the Magi’s Perception (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Duplicate the Magi’s Perception"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "Jaevert can duplicate any Hermetic Intellego spell, at the cost of one point of Might per Magnitude, up to level 40. He may not duplicate Ritual effects."
+            }
+            #t030232c7ec9e059e6a02f2 ^"Obsession (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Spiritual Pride, Enthusiasm"
+            }
+            #ta2af4c5b7a79d2627f45b1 ^"Delusion (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Delusion"
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Jaevert can create elaborate illusions. A minor illusion that affects an Individual amount of material (such as the demon himself) costs 1 point, a larger illusion that fills a room costs 5 points. These visions always have a flaw, however (they smell wrong, can only be seen by one target, etc.)."
+            }
+            #t1f169f37e89499da788465 ^"Corrupted Knowledge (The Church)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Corrupted Knowledge"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "When Jaevert spends a season teaching an Ability (of any kind, including Supernatural), he uses this Power to corrupt the knowledge he teaches so he grants the Flaw Corrupted. The Power only inflicts the Flaw if the character being schooled acquires an increase in an Ability score because of the teaching of the demon. Those affected by this Power soon learn they get greater rewards if they use their Ability for selfish or sinful purposes."
+            }
+        }
+    }
+
+    #t89f245b95ec35d6d9fc1f2 ^"Varriar" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Lord of the Avengers of Evil"
+            ^"Might" INTEGER 35
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 4
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Reputations" LIST ["Torturer of Monks 5", "Pact Signer 4."]
+            ^"Hierarchy" INTEGER 6
+            ^"Virtues and Flaws" STRING "Piercing Gaze, Tough."
+            ^"Combat" STRING "Whip: Init +5, Attack +10 Defense +9, Damage +4"
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–9), –3 (10–18), –5 (19–27), Incapacitated (28–36), Dead (37+)"
+            ^"Abilities" STRING "Awareness 4 (guilt), Brawl 5 (whip), Civil & Canon Law 5 (The Rule of Saint Benedict), Infernal Lore 6 (politics), Philosophiae 4 (ethics), Theology 6 (sin) Powers: Obsession, 1 to 3 points, Init –5, Vim: Obedience, Masochism Coagulation, 3 points, Init –1, Corpus: Varriar may take on a physical body in 25 rounds of manifestation, or may dissolve with a round of concentration. Stealing the Cowl, 3 points, Init 0, Corpus: May take on the appearance, once physical (see Coagulation earlier), of a person whom Varriar has authority over, such as a monk or abbot. Note that Varriar never directly lies, so he will never claim to be this person outright. Being a demon, Varriar lies all the time — it is just that his lies are subtle and indirect, not blatant. The corrupt Vallumbrosan abbots have all sworn fealty to Varriar, so he has authority over their monks for the purposes of this Power. Punish the Sinner, 5 points, Init +3, Corpus: Varriar can inflict wounds upon a target that are commensurate with the victim’s level of sin. If the target has committed a mortal sin for which he has not atoned, then he suffers a Heavy wound. If he has an unrepented venal sin on his conscience, then he suffers a Medium wound. A victim with no outstanding sin on his conscience suffers a number of points of damage equal to a simple die plus the sum total of all his sinful Personality Traits, ignoring negative signs as necessary. The Soak Total for this damage is a stress die + Stamina. The physical manifestation of this power is a lash from the demon’s whip, and he must be materialized to perform this, but no Combat Total is required."
+            ^"Weakness" STRING "The demon suffers from the Weakness: Compulsive; he must count objects scattered in his path. More than one monk has been saved by a broken string of prayer beads forcing Varriar to collect each and every fallen bead, while the monk made good his escape."
+            ^"Vim" STRING "7 pawns of Mentem, in whip."
+            ^"Appearance" STRING "Varriar appears in his true form as a huge angel fifteen feet tall, made of burning blue flame and red-hot chains, with immense fiery wings and piercing black eyes. He carries a whip and is accompanied by an overpowering smell of strong church incense, but tinged with an exotic scent that somehow brings up associations of guilty scenes from the past."
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 100
+        }
+        PERSONALITY_TRAITS {
+            "Merciful" -3
+            "Relentless" +5
+            "Passionless" +4
+        }
+    }
+
+}

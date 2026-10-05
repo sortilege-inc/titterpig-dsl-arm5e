@@ -1,0 +1,272 @@
+EXTENSION "ArM5_The_Church_Diocese_Church" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Three: The Diocese church"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_The_Church_Core_Ext"
+
+    # The chapter's church, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t5135a54523776abed28546 ^"Military Order" DEF {
+        EXTENDS #t7a8fce6b8225edf59f7216 ^"Church Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Church Boon: Military Order"
+            ^"Magnitude" STRING "Major" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The church is an outpost of one of the military orders, with barracks for a number of knights and men-at-arms."
+    }
+
+    #t1f23d01c37e53fb7474ba2 ^"Anchorite/Anchoress" DEF {
+        EXTENDS #t7a8fce6b8225edf59f7216 ^"Church Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Boon: Anchorite/Anchoress"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The church has a small cell built in it, in which an anchorite (male) or anchoress (female) lives, devoting his or her life to worship (see Chapter 5: Women for details). The presence of the anchorite/anchoress increases the Divine aura in the church by 1."
+    }
+
+    #t447ee69b98f240d7e81e21 ^"Burial Rights" DEF {
+        EXTENDS #t7a8fce6b8225edf59f7216 ^"Church Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Boon: Burial Rights"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The church or monastery has a large cemetery, and it collects a fee for conducting burials. This is worth a Typical Source of Income. Some urban parishes have no cemetery due to lack of space."
+    }
+
+    #t6c177d303a3dd32526b889 ^"Chantry" DEF {
+        EXTENDS #t7a8fce6b8225edf59f7216 ^"Church Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Boon: Chantry"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The church or monastery collects a substantial income for reciting Masses for the dead. Masses are held for the dead when a person is buried, one month later, and one year later. Wealthy characters often leave substantial endowments for hundreds or even thousands of additional Masses to be said, for the good of their soul. Reciting the chantry Masses requires four seasons of work each year by a priest — for example, four priests could each perform for one season in the year. The chantry is worth a Typical Source of Income, and this Boon may be taken multiple times."
+    }
+
+    #t942a016eed75a5a04e3ab7 ^"Chapter of Canons" DEF {
+        EXTENDS #t7a8fce6b8225edf59f7216 ^"Church Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Boon: Chapter of Canons"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The church priests form a chapter of canons, and there are always at least half a dozen priests within the church. They collectively hold a number of benefices. This is worth a Typical Income Source."
+    }
+
+    #t09a05ff0ac87ec5b588f37 ^"Church School" DEF {
+        EXTENDS #t7a8fce6b8225edf59f7216 ^"Church Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Boon: Church School"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The church (usually a cathedral) has a school attached. There are many characters in minor orders attached to the church as either pupils or teachers."
+    }
+
+    #t417ad37dd527d3e6e269b2 ^"Corrupt" DEF {
+        EXTENDS #t95916dbc86b1e636888f6d ^"Church Hook"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Church Hook: Corrupt"
+            ^"Magnitude" STRING "Major" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "The church priests are corrupt. The church has an Infernal aura instead of a Divine one. If the corruption is discovered by the archdeacon or bishop, the priests will be excommunicated and replaced."
+    }
+
+    #tcd3f37694a832bcddcec86 ^"Heretics (The Church)" DEF {
+        EXTENDS #t95916dbc86b1e636888f6d ^"Church Hook"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Church Hook: Heretics"
+            ^"Magnitude" STRING "Major" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "The church priests have heretical beliefs. If discovered, the church is likely to be frequently visited by the archdeacon, bishop, or even a papal legate. The priests run the risk of excommunication and even crusade."
+    }
+
+    #tee37acc32d8f04fb973001 ^"Jurisdiction" DEF {
+        EXTENDS #t95916dbc86b1e636888f6d ^"Church Hook"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Church Hook: Jurisdiction"
+            ^"Magnitude" STRING "Major" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "The church is a cathedral, archdeaconry, or deanery, and has jurisdiction over dozens or even hundreds of subordinate churches. Regional synods are held at the church at least once a year."
+    }
+
+    #t79e05f81824057708a01a4 ^"Absent Rector" DEF {
+        EXTENDS #t95916dbc86b1e636888f6d ^"Church Hook"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Hook: Absent Rector"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "The priest who collects the benefice does not live in the parish. The priest’s duties are undertaken by a curate."
+    }
+
+    #t867de2d2ae8d290bc34ac4 ^"Incompetent Curate" DEF {
+        EXTENDS #t95916dbc86b1e636888f6d ^"Church Hook"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Hook: Incompetent Curate"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "The church curate is incompetent. If discovered, the curate may be removed and the church will be subject to many visitations. This cannot be taken for a major church."
+    }
+
+    #t22c8aaae07735213131bfa ^"Vast Sanctuary" DEF {
+        EXTENDS #t95916dbc86b1e636888f6d ^"Church Hook"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Church Hook: Vast Sanctuary"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "By custom, anyone may seek sanctuary within a vast area of land several miles around the church (this may be the entire parish). This means that the priest is often in conflict with the sheriff."
+    }
+
+    #tf9ac35405fa61ee2736698 ^"Archdeacon Agent" DEF {
+        EXTENDS #tWz08H40XIFI8HYJLjvKVjxa ^"Covenant Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Covenant Boon: Archdeacon Agent"
+            ^"Magnitude" STRING "Major" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The local archdeacon is an agent of the covenant. He ensures that the Church does not pry too closely into the covenant’s affairs, and he keeps the covenant informed on changes among the local priests."
+    }
+
+    #t45bd4dbbd8456c4cb1909d ^"Holder of Benefices" DEF {
+        EXTENDS #tWz08H40XIFI8HYJLjvKVjxa ^"Covenant Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minor Covenant Boon: Holder of Benefices"
+            ^"Magnitude" STRING "Minor" FIXED
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 42
+        }
+        DESCRIPTION "The covenant is an institutional holder of several parish benefices. The covenant collects the benefice incomes (a Typical Source of income) and is responsible for assigning curates to perform Mass. The parishes need not necessarily be geographically close to the covenant, and could even be in a different diocese. On the other hand, if the covenant is built within one of its parishes, then the congregation may be mostly covenfolk. This Boon may be taken multiple times."
+    }
+
+    #tc4af1256ee2b89628893eb ^"Covenant Chapel" DEF {
+        EXTENDS #tWz08H40XIFI8HYJLjvKVjxa ^"Covenant Boon"
+        PROPERTIES {
+            ^"Printed Name" STRING "Covenant Boon: Covenant Chapel"
+            ^"Magnitude" STRING "unspecified" FIAT "The Church prints this Boon with no Major or Minor (box, p43)"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 43
+        }
+        DESCRIPTION "A private chapel is built within (or very near) the covenant for the covenfolk and magi to worship at. It may be a room in a tower, or a separate building. The chapel has a Divine aura of 3, which will overwhelm auras of 3 or less aligned to other realms. However, unless the chapel has bells, the aura in the rest of the covenant is unaffected. The covenant must pay the salary of the chaplain, who counts as a specialist for covenant expenses.\n\nThe chapel is worth a +20 situational modifier to Loyalty, assuming that the covenfolk are normal, Christian humans (see *Covenants*, page 38)."
+    }
+
+    #t20f64204a8555939095358 ^"Cathedral (Church Kind)" DEF {
+        EXTENDS #t8b3adcea59fb51087614ab ^"Church Kind"
+        PROPERTIES {
+            ^"Printed Name" STRING "Cathedral"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        DESCRIPTION "The cathedral is the seat of a bishop or archbishop. If that of an archbishop, it has a base Divine aura of 5 and 1000 Build Points. If that of a bishop, it has a base Divine aura of 5 and 500 Build Points."
+    }
+
+    #t18fb5e4cbe4d08d1e46e8c ^"Monastery/Nunnery (Church Kind)" DEF {
+        EXTENDS #t8b3adcea59fb51087614ab ^"Church Kind"
+        PROPERTIES {
+            ^"Printed Name" STRING "Monastery/Nunnery"
+            ^"Base Divine Aura" INTEGER 5
+            ^"Build Points" INTEGER 500
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        DESCRIPTION "A monastery/nunnery has a base Divine Aura of 5, and 500 build points."
+    }
+
+    #t51b5617913d1b8c94683c7 ^"Large Urban Church (Church Kind)" DEF {
+        EXTENDS #t8b3adcea59fb51087614ab ^"Church Kind"
+        PROPERTIES {
+            ^"Printed Name" STRING "Large Urban Church"
+            ^"Base Divine Aura" INTEGER 5
+            ^"Build Points" INTEGER 500
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        DESCRIPTION "This church has a base Divine Aura of 5, and 500 build points."
+    }
+
+    #tf1db86d80fa7324bca9f58 ^"Parish Church (Church Kind)" DEF {
+        EXTENDS #t8b3adcea59fb51087614ab ^"Church Kind"
+        PROPERTIES {
+            ^"Printed Name" STRING "Parish Church"
+            ^"Base Divine Aura" INTEGER 4
+            ^"Build Points" INTEGER 250
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        DESCRIPTION "A parish church has a base Divine Aura of 4, and 250 build points."
+    }
+
+    #t19f194a9806a1523a61d67 ^"Chapel (Church Kind)" DEF {
+        EXTENDS #t8b3adcea59fb51087614ab ^"Church Kind"
+        PROPERTIES {
+            ^"Printed Name" STRING "Chapel"
+            ^"Base Divine Aura" INTEGER 3
+            ^"Build Points" INTEGER 50
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        DESCRIPTION "A chapel has a base Divine Aura of 3, and 50 build points."
+    }
+
+    #tf22c18e22e63ccf9f67108 ^"Urban Parish (Example Church)" DEF {
+        EXTENDS #tceb1c0a5b1d4b13f09698d ^"Example Church"
+        PROPERTIES {
+            ^"Printed Name" STRING "Urban Parish"
+            ^"Hooks" STRING "Urban; Protector (Jews)"
+            ^"Boons" STRING "Chapter of Canons, Edifice (church tower), Local Ally (guild master), Minority (Jews)."
+            ^"Resources" STRING "Divine aura 5. Books: 150 Build Points. Relics: Two relics (Faith Score 3; each with two powers), ten minor relics (Faith Score 1). Vis Sources: 5 pawns Creo (sound of the pealing bells at Easter Mass). Specialists: 6 Canons (Church Lore 5), 2 Notaries (Profession: Scribe 5), 1 Master Stonemason (Profession: Mason 6), 8 Churchwardens (Brawl 4). (295 Build Points)"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "This parish is in one of the larger towns in the diocese. The town also has a substantial minority of Jews who the church canons must sometimes protect from persecution. The town guild master is a close ally of the dean, and the guild has sponsored its own altar in the church."
+    }
+
+    #t557eddbd92c1adbde39a9c ^"Village Parish (Example Church)" DEF {
+        EXTENDS #tceb1c0a5b1d4b13f09698d ^"Example Church"
+        PROPERTIES {
+            ^"Printed Name" STRING "Village Parish"
+            ^"Hooks" STRING "Absent Rector, Crumbling, Faerie Court, Flickering Aura."
+            ^"Boons" STRING "Powerful Ally (bishop); Chase."
+            ^"Resources" STRING "Divine aura 4. Books: Bible, Missal, Parish Register (Level 7). Relics: one relic (Faith Score 2; with two powers), three minor relics (Faith Score 1). Vis Sources: 3 pawns Animal (first boar of the hunt), 5 pawns Imaginem (mid-summer dawn light penetrating the bell tower). (141 Build Points)"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "This church serves three small villages constructed on the edge of a forest, which was once a nobleman’s hunting estate and is now used as a resource by the peasants. The church is very old and in a bad state of repair, which makes climbing the bell tower perilous. The decay is caused by spells cast by the lords of a faerie court, who haunt the dark places in the forest. In addition, perhaps due to the presence of the faerie court, unless the church relics are carried on the perambulation the Divine aura reduces to 3 for the following year. The curate’s cousin is the bishop of the diocese."
+    }
+
+    #tf3cb0c5ff8f220f96c9c22 ^"Covenant Chapel (Example Church)" DEF {
+        EXTENDS #tceb1c0a5b1d4b13f09698d ^"Example Church"
+        PROPERTIES {
+            ^"Printed Name" STRING "Covenant Chapel"
+            ^"Hooks" STRING "Fallen Temple, Spies."
+            ^"Boons" STRING "Burial Rights, Seclusion."
+            ^"Resources" STRING "Divine Aura 3. Books: Breviary (Quality 6), Missal. Relics: Saint’s Thigh Bone (Faith Score 3; Cure Blindness power). (29 Build Points)"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The chapel is a separate building built in a shaded glen a few minutes’ walk from the covenant tower. It was once the site of a pagan temple. The parish clerk secretly reports to the bishop on the affairs of the priest."
+    }
+
+}

@@ -1,0 +1,133 @@
+EXTENSION "ARMDef_The_Church_Diocese_Tables" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Three: The Diocese tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_The_Church_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t216eeaea60ef0bdf6a050b ^"Church Auras" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Area", "Aura Level"]
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 39
+        }
+        TABLE {
+            "Large church/cathedral" "5"
+            "Typical parish church" "4"
+            "Chapel" "3"
+            "Within city walls" "3"
+            "Within town walls" "2"
+            "Fields of a rural parish" "1"
+        }
+        DESCRIPTION "Divine auras radiate from the church altar for as far as the church bells can be heard, or to the edge of the parish boundary, whichever is closer. A small parish might be entirely covered by a Divine aura. The strength of the aura depends upon the distance from the altar and the size of the church:"
+    }
+
+    #tb9da93415b9d71cce23295 ^"Relic Cost Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Faith Score", "Build Point Cost"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 49
+        }
+        TABLE {
+            "1" "1"
+            "2" "3"
+            "3" "6"
+            "4" "10"
+            "5" "15"
+        }
+    }
+
+    #tbf0a313b94e2fb73ae213b ^"Ordination Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Rank", "Ability", "Ease Factor"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Table Columns Source" STRING "editorial: column 2 (\"Ability\") has no printed head; the book labels each row's value"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 33
+        }
+        TABLE {
+            "Doorkeeper" "Church Lore" "3"
+            "Lector" "Church Lore" "6"
+            "Exorcist:" "Civil & Canon Law" "3"
+            "Acolyte" "Civil & Canon Law" "6"
+            "Sub-deacon" "Church Lore" "9"
+            "Deacon" "Civil & Canon Law" "9"
+            "Priest" "Church Lore" "12"
+            "Bishop" "" "None; bishops are elected."
+        }
+    }
+
+    #tb39f7afce69a31c148b710 ^"Visitation Retinue Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Rank", "Retinue"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Table Columns Source" STRING "editorial: column 1 (\"Rank\") has no printed head; the book labels each row's value"
+            ^"Table Columns Source" STRING "editorial: column 2 (\"Retinue\") has no printed head; the book labels each row's value"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 45
+        }
+        TABLE {
+            "Archbishop" "40 to 50 horses."
+            "Bishop" "20 to 30 horses."
+            "Archdeacon" "5 to 7 horses."
+            "Dean" "2 horses."
+        }
+    }
+
+    #t423b7c6be8d891b2b26aeb ^"Petition Ease Factors Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Petition"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 47
+        }
+        TABLE {
+            "3" "A marriage blessing."
+            "6" "Access to the parish crypt; access to the parish library (possibly just a single book, the missal); convince a priest to travel two days to administer last rites; enroll a child in a parish school; grant pilgrims a letter of safe passage."
+            "9" "Access to the bishop’s chambers; access to the cathedral library; act to protect a local minority (such as Jews) from persecution; annul a marriage between common folk (given appropriate grounds); appeal an ordination exam; appoint a character to a vacant benefice; assist in a Quaesitorial investigation; attempt to interfere in secular justice to show leniency to a person sentenced to death; commission an extension to a cathedral; dispensation to reach a clerical grade despite not meeting one of the grade’s criteria; establish a chapel; excommunicate a freeman or a clergyman of a lower rank than priest; exhume a corpse; license for absence from a clergyman’s benefice; move a parish’s celebration of a saint’s feast day; swap benefices with another priest."
+            "12" "Excommunicate a magus or a priest; move a church to a new location; rent land to a Hermetic covenant."
+            "15" "Consecrate a parish church; excommunicate a nobleman; interdict a town."
+            "18" "Appeal the election of a bishop; establish a monastery."
+            "21" "Create a new diocese; crown a king; excommunicate a bishop."
+            "24" "Change or reform canon law (priests can marry, for example); interdict an entire kingdom."
+            "30" "Declare a deceased person a saint."
+            "42" "Call a crusade; found a religious order."
+        }
+    }
+
+    #td78c16428e4879cf08203b ^"Modifiers to the Petition Total" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Modifier", "Support"]
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 46
+        }
+        TABLE {
+            "+1" "The testimony of a significant number of individuals, a priest or deacon*, a knight**, magical evidence***"
+            "+1 to +3" "A significant donation to the Church, an argument based on Civil and Canon Law, an argument based on Artes Liberales (Logic), an argument based on Intrigue"
+            "+3" "A holy vision, a senior clergyman (bishop, abbot, abbess, archdeacon, etc.)*, a nobleman (baron, count, etc.)**"
+            "+6" "One or more miracles, an archbishop or higher ranked official*, a king (duke, earl, or emperor)**"
+            "Variable Bonus" "The character has a positive reputation with the Church, spell effects that make the petition more persuasive***"
+            "Variable Penalty" "The character has a negative reputation with the Church"
+        }
+        DESCRIPTION "Modifiers are as follows, if the petition is supported by certain people or circumstances.\n\n* These modifiers are not cumulative with each other; use the highest that applies, once only. ** These modifiers are not cumulative with each other; use the highest that applies, once only. *** Magical evidence includes the results of scrying effects that are intended to show the Church it should act in a particular way (for example, InMe effects that show a character is innocent of a crime is magical evidence). Spell effects to make a petition more persuasive are spell effects (successfully) cast on the clergy who are making decisions concerning the petition (for example, ReMe effects to cause the bishop to look favorably on a petition)."
+    }
+
+    #t07ce95c4c4f84e5162bfff ^"Recommended and Required Virtues, Flaws, and Abilities" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Rank", "Required Virtues and Flaws", "Recommended Virtues and Flaws", "Recommended Minimum Ability Scores"]
+            ^"Table Columns Source" STRING "editorial: the book prints no head over column 1 (here \"Rank\"); the other heads are the labels each rank prints"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 28
+        }
+        TABLE {
+            "The Pope, Cardinals, & Archbishops" "Senior Clergy; Commanding Aura, Temporal Influence." "Monastic Vows; Vow." "Artes Liberales 1, Church Lore 5, Civil and Canon Law 5, Dead Language: Latin 5, Theology 3."
+            "Bishops, Abbots, Archdeacons, Deans, & Senior Curia Officials" "Senior Clergy." "Monastic Vows; Regular (for abbots), Temporal Influence, Vow." "Artes Liberales 1, Church Lore 3, Civil and Canon Law 3, Dead Language: Latin 5, Theology 1."
+            "Clergy" "Priest or Clerk." "Monastic Vows; Regular (especially for canons and monks), Vow." "Artes Liberales 1*, Church Lore 3, Civil and Canon Law 3, Dead Language: Latin 5*, Theology 1."
+        }
+        DESCRIPTION "* There is no requirement for clergy to be literate, but many are."
+    }
+
+}

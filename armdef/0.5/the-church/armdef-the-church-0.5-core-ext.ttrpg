@@ -1,0 +1,50 @@
+EXTENSION "ARMDef_The_Church_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, The Church - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # The Church is an EXTENSION on the arm5e edition (spec S13 composition). Its game statistics for a
+    # church -- Build Points, Hooks and Boons 'in the same way that a covenant can be described' (p48) -- are the types
+    # below.
+
+    #t7a8fce6b8225edf59f7216 ^"Church Boon" DEF {
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Source" STRING DEFAULT "The Church"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Each church has a number of Hooks. Hooks create stories and also provide points that may be spent on Boons for the church. Boons make the church better. Hooks and Boons can be either major (provides or costs 3 points), or minor (provides or costs 1 point). Some Hooks and Boons can be Unknown, which means that the characters living in the church are not currently aware of them. Some Hooks and Boons are about the church and its priests, while others are about the congregation and the surrounding diocese."
+    }
+
+    #t95916dbc86b1e636888f6d ^"Church Hook" DEF {
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Source" STRING DEFAULT "The Church"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Each church has a number of Hooks. Hooks create stories and also provide points that may be spent on Boons for the church. Boons make the church better. Hooks and Boons can be either major (provides or costs 3 points), or minor (provides or costs 1 point). Some Hooks and Boons can be Unknown, which means that the characters living in the church are not currently aware of them. Some Hooks and Boons are about the church and its priests, while others are about the congregation and the surrounding diocese."
+    }
+
+    #t8b3adcea59fb51087614ab ^"Church Kind" DEF {
+        PROPERTIES {
+            ^"Base Divine Aura" INTEGER
+            ^"Build Points" INTEGER
+            ^"Source" STRING DEFAULT "The Church"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "These rules allow the troupe to describe a church using Build Points, Hooks, and Boons in the same way that a covenant can be described using these terms (see **ArM5**, page 68-74). Describing the churches near the covenant helps indicate how the Church may have an impact on your saga."
+    }
+
+    #tceb1c0a5b1d4b13f09698d ^"Example Church" DEF {
+        PROPERTIES {
+            ^"Hooks" STRING
+            ^"Boons" STRING
+            ^"Resources" STRING
+            ^"Source" STRING DEFAULT "The Church"
+            ^"Page" INTEGER
+        }
+    }
+
+}

@@ -1,0 +1,130 @@
+EXTENSION "ArM5_The_Church_Diocese_Rules" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Three: The Diocese rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_The_Church_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t58b5735ced20ef9e48f4d4 ^"Ordination Examination Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ordination"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 33
+        }
+        FORMULAS {
+            "Ordination Examination Total" "Intelligence + (Church Lore or Civil and Canon Law) + stress die"
+        }
+    }
+
+    #t450faca4a31bd522a58f61 ^"Petition Church" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Petition Total"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Petition Church" "Petition Total vs Petition Ease Factor"
+        }
+    }
+
+    #t033c82e3efb1eeb84d2382 ^"Written Petition Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Petition Total"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Written Petition Total" "Com + Church Lore + Modifiers"
+        }
+    }
+
+    #t67081ef85e43713710425a ^"Audience Petition Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Petition Total"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Audience Petition Total" "Pre + Church Lore + Modifiers"
+        }
+    }
+
+    #tacf5a1c88d9b459045440a ^"Ease Factor to Overturn a Petition" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Appealing a Petition"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        FORMULAS {
+            "Ease Factor to Overturn a Petition" "Original Petition Total + 3"
+        }
+    }
+
+    #tfac32f4964932fb7e9045e ^"Enchanted Item Cost" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Enchanted Items"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 49
+        }
+        FORMULAS {
+            "Enchanted Item Cost" "1 Build Point per Level of Effect"
+        }
+    }
+
+    #tdf8f580edeedb944eac1ff ^"Relic Cost" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Relics"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 49
+        }
+        FORMULAS {
+            "Relic Cost" "Cost for Faith Score + 5 Build Points per Power"
+        }
+    }
+
+    #tbaa320470befd43a9da6ee ^"Exorcism Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Possession and Exorcism"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 34
+        }
+        FORMULAS {
+            "Exorcism Total" "Stress Die + Bonuses"
+        }
+    }
+
+    #t886982fc00872012a1efc8 ^"Argument Success" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Modifiers to the Petition Total"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Argument Success" "Int + Ability Score + stress die vs Ease Factor of 9"
+        }
+    }
+
+    #t675f638feb457de067085b ^"Ease Factor to Open Negotiations for Compromise" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ease Factor to Open Negotiations for Compromise"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 48
+        }
+        FORMULAS {
+            "Ease Factor to Open Negotiations for Compromise" "Original Petition Total – 3"
+        }
+    }
+
+}

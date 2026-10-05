@@ -1,0 +1,102 @@
+EXTENSION "ARMDef_The_Church_Diocese_VirtuesFlaws" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Three: The Diocese virtues flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_The_Church_Core_Ext"
+
+    # The chapter's virtues flaws, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t90b2d9d1c6710a8be3bcd2 ^"Senior Clergy (The Church)" DEF {
+        EXTENDS #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+        PROPERTIES {
+            ^"Printed Name" STRING "Senior Clergy"
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 25
+        }
+        DESCRIPTION "The character is an archbishop, bishop, abbot, abbess, or another senior member of the Church. He has access to the resources of the Church and may have additional duties and powers according to his office.\n\nYou may make take either the Wealthy or Poor Virtue/Flaw for the character. This does *not* necessarily represent the status of the character’s diocese, instead it represents the personal wealth of the character. Senior clergy can amass wealth by receiving the benefice of several offices. Indeed, it is not unusual for a character to receive the benefice from various parishes scattered throughout Mythic Europe. He may never even visit some of the dioceses in which his parishes are located, although obviously the character needs to employ a curate to discharge the actual priestly duties in these remote parishes.\n\nThe character has a Reputation of level 4, either good or bad, in both the local community and the Church.\n\nYou may purchase Academic Abilities for the character during character generation.\n\nSenior clergy are subject to canon law, and must be celibate and tonsured (if male). Note whether the character has been ordained as a deacon, priest, bishop, etc.\n\nThis replaces the version of this Social Status that was printed in *Realms of Power: The Divine*, page 93."
+    }
+
+    #t1dc5ad0c5bdaa6e889137c ^"Priest (The Church)" DEF {
+        EXTENDS #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+        PROPERTIES {
+            ^"Printed Name" STRING "Priest"
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "The character has been ordained as a priest of the Church; he can conduct Mass, and is subject to canon law. Priest is a major order and the character must be male, tonsured, and celibate. See **ArM5** page 47 for details, however, the character need not take the Minor Personality Flaw Vow as stated there (see Vows, later).\n\nYou may take the Wealthy Virtue or Poor Flaw for the character. A Wealthy priest is probably wealthy because he is a pluralist (see The Benefice, later). A Poor priest probably works as a curate or chaplain."
+    }
+
+    #t6c7b79af9c048fd2c86b03 ^"Clerk (The Church)" DEF {
+        EXTENDS #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+        PROPERTIES {
+            ^"Printed Name" STRING "Clerk"
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "The character has been ordained as a member of the clergy. Note whether your character is in major or minor orders. Characters in major orders must be celibate. See **ArM5**, page 40, for details.\n\nYou may take Academic Abilities for the character during character generation."
+    }
+
+    #t2f2238d0dd5c7089a91da9 ^"Religious" DEF {
+        EXTENDS #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Social Status"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "The character is a monk, a nun, a beguine, an anchoress or anchorite, a holy hermit, or similar. You may take Academic Abilities for the character during character generation. The Wealthy Virtue and Poor Flaw are unlikely to be appropriate.\n\nNote that for a friar character you should take the Mendicant Friar Virtue instead (see **ArM5**, page 46). Monks ordained as priests should instead take the Priest Social Status. Senior monks and nuns should instead have the Senior Clergy Social Status."
+    }
+
+    #t4ad8be083a21a664abbe4c ^"License of Absence" DEF {
+        EXTENDS #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "General"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "This priest character has a license of absence that relieves him from some duties. The license might be valid for only a few years or it could be valid indefinitely. The character has an extra free season each year, but sometimes it is expected that the extra season is used for study. This Virtue is compatible with the Wealthy Virtue and Poor Flaw. A Wealthy priest with a license of absence thus has the whole year free; a character can never have more than four free seasons in a year. A license of absence may only be taken by a character with the Priest Social Status. It may not be taken by Senior Clergy."
+    }
+
+    #tce1b232da1040dbbaded58 ^"Commanding Aura" DEF {
+        EXTENDS #tT28cb9EpHcSa3Joedekm2A3 ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Free"
+            ^"Category" STRING "Supernatural"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "This supernatural power is granted to characters by either the pope, or the Divine directly. It is an inherent benefit of Church office.\n\nThe character has a power equivalent to the Hermetic spell *Aura of Rightful Authority* (see **ArM5**, page 151), but with Voice Range; this power has no cost, and no penetration. The character also has a Magic Resistance and a Soak bonus that depend upon his rank in the Church. If the character carries a relic, this Magic Resistance is *added* to that of the relic.\n\n**Pope:** Magic Resistance 25, Soak bonus +5. **Cardinal, or legatus a latere:** Magic Resistance 20, Soak Bonus +4. **Legatus missus:** Magic Resistance 15,\n\nSoak Bonus +3. **Archbishop:** Magic Resistance 10, Soak\n\nBonus +2.\n\nPapal legates are the representatives of the pope (see Papal Legates, later in this chapter). If the legatus missus — a lower grade with limited powers — delays or deviates from his mission, then his Commanding Aura ceases to work until he completes penance. The Commanding Aura is also lost when a legatus missus completes his mission.\n\nSome lay rulers ordained by the pope (mostly kings and emperors) also have a Commanding Aura. See *Realms of Power: The Divine*, page 42."
+    }
+
+    #t7baa64093da3c8600da35c ^"Dark Secret (The Church)" DEF {
+        EXTENDS #tgA0K9vGShU1WKTibhCc4jXz ^"Flaw"
+        PROPERTIES {
+            ^"Printed Name" STRING "Dark Secret"
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Story"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 27
+        }
+        DESCRIPTION "This Flaw (see **ArM5**, page 52) is appropriate for a clergyman who secretly violates canon law. If his secret is discovered he can be fined, removed from office, or excommunicated. Some examples of secrets include:\n\n**False Presbyter:** This character works as a parish priest despite not being ordained as one. The parishioners may not know (or realize the significance) of their “priest’s” lack of qualifications. The character must have the Priest Social Status, too. **Heretic:** The character is a heretic. If a priest, then he must be careful that his beliefs are not discovered when his parish is visited. If he is a bishop, and does not repent if discovered, then the pope will excommunicate him and replace him with someone else. **Secret Wife/Husband:** Despite taking a vow of celibacy, the character has a secret wife, husband, or concubine. The wife of rural priest may live with him as a “housekeeper.” The wife of a monk or canon probably lives in a nearby town or village. **Simony:** The character has bought or sold spiritual things, such as the administering of the Sacraments or an appointment to a holy office. Note which of the character’s Virtues represents this thing; for example, a benefice (Wealthy), an ordination (Priest), or a relic (Relic). If the character’s secret is discovered he will lose the Virtue."
+    }
+
+    #t0865eec2f669f961ae401d ^"Regular" DEF {
+        EXTENDS #tgA0K9vGShU1WKTibhCc4jXz ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 27
+        }
+        DESCRIPTION "The character lives according to a strict religious rule, which leaves little time for other activities. The character must spend one of his free seasons on the seasonal activity of worship (see later in this chapter). This is particularly suitable for monk and canon characters, but it is not compulsory. The Regular Flaw is compatible with Wealthy/Poor, but a Poor Regular character effectively has no free seasons and may be unsuitable as a player character. Magi can be Regular."
+    }
+
+}

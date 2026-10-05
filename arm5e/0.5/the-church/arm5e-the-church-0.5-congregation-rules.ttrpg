@@ -1,0 +1,95 @@
+EXTENSION "ArM5_The_Church_Congregation_Rules" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Two: The Congregation rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_The_Church_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t6875c0945d45315ae1e069 ^"Invoking a Saint (The Church)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Invoking a Saint"
+            ^"Rules Section" STRING "The Benefits of Devotion"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 13
+        }
+        FORMULAS {
+            "Invoking a Saint" "Communication + Charm + modifiers * + a simple die vs. 15 + a simple die"
+        }
+    }
+
+    #t84d90ec696cdbbe70a7d81 ^"Relic Bonus" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Relics & Devotion"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 13
+        }
+        FORMULAS {
+            "Relic Bonus" "(Faith Points in relic) x 2 bonus to Devotion Total"
+        }
+    }
+
+    #teb19e06b454ddbf8de4b56 ^"Monistic Revelation Integration" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Advantages of Pursuing Monistic Mysticism"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 23
+        }
+        FORMULAS {
+            "Monistic Revelation Integration" "Intelligence + Concentration + stress die vs. Warping Score + stress die (no botch)"
+        }
+    }
+
+    #ta26112c763abbb7f5c61f9 ^"Divine Ascent" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Experiencing Divine Ascent"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 20
+        }
+        FORMULAS {
+            "Divine Ascent" "Presence + Concentration (or Meditation) + Stress die vs. Warping Score + Warping Points gained + True Faith Score local aura + stress die (no botch)"
+        }
+    }
+
+    #t7c819761a9242fd58d5c99 ^"Total of Oppositional Elements Values" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Total of Oppositional Elements Values"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 17
+        }
+        FORMULAS {
+            "Total of Oppositional Elements Values" "Pilgrimage Target Level"
+        }
+    }
+
+    #t4ea23e718ac75dd092fd4a ^"Path Target" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Path Target"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 22
+        }
+        FORMULAS {
+            "Path Target" "Path Total – score in Personality Trait Pious"
+        }
+    }
+
+    #t349cd745caa72bf99a8668 ^"Total Quest Component Values" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Total Quest Component Values"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 22
+        }
+        FORMULAS {
+            "Total Quest Component Values" "Path Total"
+        }
+    }
+
+}

@@ -1,0 +1,81 @@
+EXTENSION "ARMDef_The_Church_TheFranciscans_Tradition" {
+    NAME "Ars Magica Fifth Edition, The Church - Chapter Eight: The Franciscans tradition"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_The_Church_Core_Ext"
+
+    # The chapter's tradition, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t9502bb32fcffb05cd42a00 ^"Holy Tradition: Franciscans" DEF {
+        EXTENDS #t65baa1ab8c36743313d1ce ^"Holy Tradition"
+        PROPERTIES {
+            ^"Tradition Kind" STRING "Holy Tradition" FIXED
+            ^"Favored Abilities" LIST OF STRING ["Intervention", "Meditation", "Purity", "Understanding"]
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 137
+        }
+        DESCRIPTION "For a minority of Franciscans, their lives as religious allow them to develop supernatural Abilities when under the spiritual guidance of more-experienced fellow Franciscans. Although no Franciscan or other member of the Church would consider it as such, certain outsiders may recognize elements that make the Franciscans look like a Mystery Cult or Holy Tradition, and it is convenient to treat it as such. This Holy Tradition is only open to a character who adopts the life of a Franciscan friar, or joins the Poor Sisters. See *Realms of Power: The Divine*, page 47 for more information on Holy Traditions."
+    }
+
+    #t0ed7e72c67dd04a65115e7 ^"Initiation: Meditation" DEF {
+        EXTENDS #tMCInitiationScriptTypeAAAA ^"Initiation Script"
+        PROPERTIES {
+            ^"Mystery" STRING "Meditation"
+            ^"Tradition" STRING "Holy Tradition: Franciscans"
+            ^"Initiation Total" STRING "21"
+            ^"Script Bonus" STRING "15: Major Ordeal (9) + Quest (3) + Sympathy bonus: Path of the Founder (3)"
+            ^"Script Requirement" STRING "a Presence + Franciscan Lore total of 6"
+            ^"Printed Script Line" STRING "[Initiation Total 21, Script Bonus 15: Major Ordeal (9) + Quest (3) + Sympathy bonus: Path of the Founder (3). The Script requires a Presence + Franciscan Lore total of 6.]"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 138
+        }
+        DESCRIPTION "The Initiate spends a season in the cave where Francis himself lived, high on the side of the valley close to Assisi. During the first week, the Mystagogue visits frequently to instruct him and act as a spiritual guide. The pair engage in discussions of the scriptures, emphasizing the effect they have on the feelings of the Initiate and the implications of the word of God on the Franciscan’s life of service and preaching. Matters of academic theology are hardly ever dwelt upon.\n\nFor the rest of the season, the Initiate’s time is spent in solitary prayer and meditation on the matters discussed with the Mystagogue. Sufficient food and water is brought every day by either one of the friars from the original Franciscan settlement close to the little chapel of Saint Mary of the Angels, which is situated in Francis’ valley, by another potential candidate waiting for the cave to be available, or by a close friend of the Initiate; this person should not disturb the Initiate.\n\nThe situations that the Initiate reflects upon may be acted out with the player character by members of the troupe. Such stories should test the commitment of the Initiate to a lifetime of selfless service lived in total poverty and simplicity, and be complex enough to represent a Quest. See *Houses of Hermes: Mystery Cults*, page 59 on the use of Psychodrama.\n\nAt the end of the season, the successful Initiate obtains the Major Supernatural Virtue Meditation, with the associated Ability 1, plus the Major Flaw: Driven that makes him strive always to live in apostolic poverty and simplicity.\n\nNote: The location and experience of prayer and meditation closely match a period in the life of Francis, so the Sympathy bonus is 3."
+    }
+
+    #tf1046d091c3828e156c86c ^"Initiation: Understanding" DEF {
+        EXTENDS #tMCInitiationScriptTypeAAAA ^"Initiation Script"
+        PROPERTIES {
+            ^"Mystery" STRING "Understanding"
+            ^"Tradition" STRING "Holy Tradition: Franciscans"
+            ^"Initiation Total" STRING "12 (21 - 9 for previous Major Ordeal)"
+            ^"Script Bonus" STRING "7: Minor Ordeal (3) + Quest (3) + Sympathy bonus: Path of the Founder (1)"
+            ^"Script Requirement" STRING "a Presence + Franciscan Lore total of 5"
+            ^"Printed Script Line" STRING "[Initiation Total 12 (21 - 9 for previous Major Ordeal), Script Bonus 7: Minor Ordeal (3) + Quest (3) + Sympathy bonus: Path of the Founder (1). The Script requires a Presence + Franciscan Lore total of 5.]"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 138
+        }
+        DESCRIPTION "After finding a suitable Mystagogue and spending at least a few days with him in prayer and spiritual guidance, the Initiate must undertake a Quest, alone or with others, to obtain a suitable crucifix. This must be of Byzantine style and at least 200 years old. It must be obtained without committing any sin. Since the Initiate must own nothing, she cannot exchange something she owns or pay money for it, and must find a way of acquiring it that allows her to use it in any way she wishes, without it being her own property.\n\nHaving obtained it, she must travel to the chapel of Saint Damien and arrange with the nuns there, through the Mystagogue, to have the chapel of Saint Damien to herself for several days at least. There she must watch and pray on her knees before the crucifix, and endure at least one intense and confusing vision. Members of the troupe may be invited to contribute to this, which counts as a minor Ordeal.\n\nIf the Initiate has confessed all her sins and done penance for them, and has fulfilled the demands of the Quest, she is rewarded by a mystical vision during which the crucifix is consumed in a blaze of light radiating from the figure on the cross. The most blessed may also hear a voice, as Francis did. This vision happens in one to ten days.\n\nIf successful, the Initiate gains the Major Supernatural Virtue of Understanding, and its associated Ability 1, along with the Minor Flaw Visions. A person who attempts this ceremony while unworthy fails to gain the Virtue and instead is likely to attract the attention of an angel intent on improving her or a demon determined to win her soul for hell; she gains the Flaw Plagued by Supernatural Entity.\n\nNote: The location matches that where Francis had his vision, but he did not have to go on a Quest and there is no guarantee that the vision the Initiate receives will be the same so the Sympathy bonus is 1. Since the Franciscan character may not own the item, loss of the crucifix does not count as a Sacrifice; it is simply the object obtained in the Quest."
+    }
+
+    #td3d4a8277f62e973a2201a ^"Initiation: Intervention" DEF {
+        EXTENDS #tMCInitiationScriptTypeAAAA ^"Initiation Script"
+        PROPERTIES {
+            ^"Mystery" STRING "Intervention"
+            ^"Tradition" STRING "Holy Tradition: Franciscans"
+            ^"Initiation Total" STRING "15 (21 - 6 for previous Major Ordeal"
+            ^"Script Bonus" STRING "9: Time and place (1) + Initiate’s time (1) + Mystagogue’s time (3) + Quest (3) + Sympathy bonus: Path of the Founder (1)"
+            ^"Script Requirement" STRING "a Presence + Franciscan Lore total of 6"
+            ^"Printed Script Line" STRING "[Initiation Total 15 (21 - 6 for previous Major Ordeal; Script Bonus 9: Time and place (1) + Initiate’s time (1) + Mystagogue’s time (3) + Quest (3) + Sympathy bonus: Path of the Founder (1). The Script requires a Presence + Franciscan Lore total of 6.]"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 139
+        }
+        DESCRIPTION "The Initiate lives with the Mystagogue from the autumn equinox until mid-winter, during which time the pair discuss and meditate upon the miracles Jesus worked during his life on earth, as recorded in the gospels. At the end of the season, just after the winter solstice, the Initiate travels to the mountainous country around Assisi. In imitation of Francis, during the coldest days of winter the Initiate journeys alone, on foot and in rags, through the snows to a suitable monastery or nunnery where he or she must work as a scullion until the spring equinox. At the end of this period, clad again as a friar or nun, the Initiate must travel to Rome. There the Initiate must obtain a papal blessing while remaining at all times too humble to actually request one.\n\nIf successful, the Initiate gains the Major Supernatural Virtue of Intervention, and its associated Ability at a score of 1.\n\nNote: Unlike Francis, the Initiate is not set upon by robbers, beaten, and stripped naked before crawling through the snow, so the Sympathy bonus is only 1."
+    }
+
+    #tb1b4c9084eed05ba39c648 ^"Initiation: Purity" DEF {
+        EXTENDS #tMCInitiationScriptTypeAAAA ^"Initiation Script"
+        PROPERTIES {
+            ^"Mystery" STRING "Purity"
+            ^"Tradition" STRING "Holy Tradition: Franciscans"
+            ^"Initiation Total" STRING "18 (21 - 3 for previous Major Ordeal)"
+            ^"Script Bonus" STRING "9: Quest (3) + Minor Ordeal (3) + Sympathy bonus: Path of the Founder (3)"
+            ^"Script Requirement" STRING "a Presence + Franciscan Lore total of 9"
+            ^"Printed Script Line" STRING "[Initiation Total 18 (21 - 3 for previous Major Ordeal), Script Bonus 9: Quest (3) + Minor Ordeal (3) + Sympathy bonus: Path of the Founder (3). The script requires a Presence + Franciscan Lore total of 9.]"
+            ^"Source" STRING "The Church"
+            ^"Page" INTEGER 139
+        }
+        DESCRIPTION "For this Initiation, the character must return to the small cave in the valley close to Assisi, where Francis spent his time meditating, fasting, and praying in the early days of his vocation. The Initiate must live there wearing only coarse rags fit for a beggar, and go without all but the smallest quantity of simple food and water for a season. This must be considerably less than the friars nearby have to live on, and barely enough to keep the character alive. One small meal each day of bread with gruel or porridge is allowed, except on Friday when only water may be taken, and on Sunday when a little of some other foodstuff is permitted. If the local friars are wanting, the character gets only water. This counts as an Ordeal that damages the character’s constitution permanently.\n\nMembers of the troupe may act out the temptations that the Initiate is subjected to with the player character. Such stories should test the commitment of the Initiate to self-discipline, and be complex enough to represent a Quest.\n\nIf successful, the Initiate gains the Major Supernatural Virtue Purity, and its associated Ability 1, along with the Minor Flaw Fragile Constitution.\n\nNote: The location and experience of fasting closely match a period in the life of Francis, so the Sympathy bonus is 3."
+    }
+
+}

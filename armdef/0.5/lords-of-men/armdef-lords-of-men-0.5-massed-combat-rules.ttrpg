@@ -1,0 +1,121 @@
+EXTENSION "ARMDef_Lords_Of_Men_MassedCombat_Rules" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Eight: Massed Combat rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #te2b9a188d1f11de7ded18c ^"Deployment Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Territorial Advantage"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Deployment Total" "Intelligence + Area Lore + Stress Die"
+        }
+    }
+
+    #t0a52fed716c5030cf43b42 ^"Territorial Advantage" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Territorial Advantage"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Territorial Advantage" "Deployment Total – Enemy Deployment Total"
+        }
+    }
+
+    #t917cc62d573d515f1dca8f ^"Event Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Factor"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Event Total" "Stamina + Leadership + Territorial Advantage + Weight of Numbers Bonus + Event Bonus"
+        }
+    }
+
+    #t057de74e0de5720e2fd630 ^"Event Bonus" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Factor"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Event Bonus" "Maneuver + Enemy + Size"
+        }
+    }
+
+    #tfc97c37e3d477a9ab434a8 ^"Supplies Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING "3 + Garrison Weight of Numbers Modifiers + Number of Years Under Siege"
+            ^"Rules Section" STRING "Stockade"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 112
+        }
+        FORMULAS {
+            "Supplies Roll" "Siege Conditions Bonus + stress die"
+        }
+    }
+
+    #t7225389e193c00e39eca36 ^"Mine Attack Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Undermining"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 113
+        }
+        FORMULAS {
+            "Mine Attack Total" "Intelligence + Profession Sapper + Stress Die"
+        }
+    }
+
+    #t29ddc04cc25defa35f2c3b ^"Castle Defense (Undermining)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Castle Defense"
+            ^"Rules Section" STRING "Undermining"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 113
+        }
+        FORMULAS {
+            "Castle Defense" "Intelligence + Profession Sapper + Defense Bonus + Stress Die"
+        }
+    }
+
+    #tdc7633374260cdc477cc99 ^"Artillery Attack" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Artillery"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Artillery Attack" "Intelligence + Siege Weapon Ability + Engine Attack Bonus + Stress Die"
+        }
+    }
+
+    #t09ded44700bb8c1938958a ^"Castle Defense (Artillery)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Castle Defense"
+            ^"Rules Section" STRING "Artillery"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Castle Defense" "Intelligence + Profession Siege Engineer + Defense Bonus + Stress Die"
+        }
+    }
+
+}

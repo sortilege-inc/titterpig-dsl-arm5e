@@ -1,0 +1,57 @@
+EXTENSION "ARMDef_Lords_Of_Men_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # Lords of Men is an EXTENSION on the arm5e edition (spec S13 composition). Its hounds, horses, hawks and
+    # pets are set as the core bestiary sets its creatures (^"Creature", with PERSONALITY_TRAITS / COMBAT / ABILITIES
+    # blocks; mundane, so no Might); the types below are the ones the book adds.
+
+    #t057f16eb28fce5bb0b5d9a ^"Animal Variant" DEF {
+        APPLIES TO [#taDz3ITq9fRoE374AgiL8VE4 ^"Creature"]
+        PROPERTIES {
+            ^"Template" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Lords of Men"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Rather than provide characteristics for each type of hawk and falcon, the gyrfalcon template can be modified to represent better quality birds and different breeds as appropriate and as described below. The Size characteristic reflects a female bird, the gender primarily used in hawking. Many male birds are a Size smaller, usually weighing one-half to two-thirds the body weight of a female."
+    }
+
+    #td7200103e7554f9c5380cc ^"Battlefield Event" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Event Kind" ENUM ["Battlefield Event", "Siege Event"] REQUIRED
+            ^"Event Bonus" INTEGER REQUIRED
+            ^"Maneuver" STRING
+            ^"Size" STRING
+            ^"Enemy" STRING
+            ^"Printed Event Line" STRING
+            ^"Bonus Breakdown" STRING
+            ^"Source" STRING DEFAULT "Lords of Men"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Battlefield events represent the pivotal action points during the battle. They are the heroic moments that veterans and chroniclers will recount when the battle is over.\n\nThe storyguide decides how these battlefield events are spaced. Different events may take place a few minutes apart or on consecutive days. Events do not even have to take place on the same battlefield. You could play one event describing how enemy reinforcements are delayed from reaching the battle, and others to describe the overrunning of the smaller, and now unsupported, main force."
+    }
+
+    #t9a849435d76530f6eb84fd ^"Battlefield Event Option" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Option Of" ENUM ["Maneuver", "Size", "Enemy"] REQUIRED
+            ^"Bonus" INTEGER REQUIRED
+            ^"Source" STRING DEFAULT "Lords of Men"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "The Event Total is based substantially on an Event Bonus, which the character generates by freely choosing and summing a Maneuver, an Enemy, and a Size. These chosen factors in turn define the specifics of the event that the character must overcome or endure in order to win the event."
+    }
+
+    #ted45fb602406678bb67615 ^"Armor Term" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Lords of Men"
+            ^"Page" INTEGER
+        }
+    }
+
+}

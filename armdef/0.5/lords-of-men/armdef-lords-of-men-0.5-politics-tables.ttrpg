@@ -1,0 +1,188 @@
+EXTENSION "ARMDef_Lords_Of_Men_Politics_Tables" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Two: Politics tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #td62a82d3db1895b2d35a14 ^"Advancement Requirements Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Change", "Requires", "Cost to Granter"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 8
+        }
+        TABLE {
+            "serf to freeman" "5 Gratitude" "Cost of serf"
+            "warrior to knight" "5 Gratitude" "Cost of gear (5 pounds minimum)"
+            "knight to bacheler" "Must have the basic Abilities of a Knight, and the Abilities and Personality traits suited to this particular mesnie. Gratitude 5." "Ongoing support"
+            "bacheler to carissimus" "Must be a bacheler, Gratitude 5, story event." "No cost"
+            "bacheler to lord of the manor" "Gratitude 10, marriage to suitable heiress, or claiming land during war, or being offered land that has returned to the lord." "The revenues of the manor"
+            "Added manors" "Gratitude 10, Reputation for loyalty to the lord, land must be available due to the extinction of a line, or war, or assart, or appanage." "The revenues of the additional manor or manors"
+            "lord of the manor to banneret" "Sufficient money to hire knights – usually from 5 manors." "Nothing"
+            "banneret to baron of a minor lord" "Gaining by any means at least 15 more manors. Reputation of loyalty toward the lord, 10 Gratitude" "Nothing, except if the manors are the lord’s."
+            "minor baron to a lord to baron of the king" "Must be noticed by the king or his advisors, must be in the service of a lord the king doesn’t mind offending, like a rebel or an heir that owes the king. Gratitude 20 and, usually, successful treason against the lord." "Nothing."
+            "admiral" "Access to ships, Leadership 2" ""
+            "butler" "Profession: Steward 2" ""
+            "chancellor" "Must be highly literate in the local languages of business and diplomacy, usually has Church Lore." ""
+            "marshal" "Leadership 5, Reputation for skill at warfare." ""
+            "steward" "Profession: Steward 2" ""
+            "treasurer" "Profession: Steward 2" ""
+            "appointment as baron" "Gratitude 10, a suitable marriage, any officer role" ""
+            "appointment as justiciar" "Story event, substantial baronial role, or church equivalent, plus Loyalty to the dead person and a Reputation of 5 or more." ""
+        }
+        DESCRIPTION "See Chapter Three: A Comparison of Titles for more on those positions mentioned here.\n\nAppointment as an officer to Greater Baron or higher requires Gratitude 10, Landed Noble (at minimum), Reputation for loyalty to the lord, vacancy in the office, and office-specific traits. Abilities below 2 assume the noble has an oversight role and is aided by a skilled deputy in the practical functions of the office. A noble wishing to skillfully administer the daily business of the office should develop an appropriate Ability score of 5. Making a vassal an officer costs the granter nothing. It does, however, cost the previous holder of the office his status and income, which may lead to a story.\n\nIn brief, to move from serf to freeman, or warrior to knight, or knight to bacheler, requires a single story in which the character provides heroic service to his lord, or the gradual accumulation of merit equivalent to this. To move through the middle ranks of knighthood requires two heroic services, five exceptional services, or ten stories with the magi that can be tied to the interest of the lord. These payments, again, require that the lord wishes to reward merit, that he has the desired reward available, and that there is no better claimant in his affinity."
+    }
+
+    #tb369aa9b84559dd1e4b50a ^"Type of Sabotage" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type of Sabotage", "Sentry’s Awareness Bonus", "Examples"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 13
+        }
+        TABLE {
+            "Defacement" "+0" "Throwing a bladder of ink at a monument."
+            "Rendezvous" "+3" "Meeting a spy inside the enemy’s area of control for a brief time. This is also the modifier for seducing an enemy’s relatives in his own house."
+            "Arson" "+6" "Lighting a large fire within a fortress or private residence. Prompt attention by sentries can mitigate damage caused by fires."
+            "Burglary" "+9" "Removing documents, which the agent must search a room for."
+        }
+    }
+
+    #tb4553524454e8ed63f1072 ^"Agent Recruitment Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Social Status", "Resistance", "Examples"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 23
+        }
+        TABLE {
+            "Major Social Virtue" "3" "Landed Noble*, Magister in Artibus, Redcap"
+            "Minor Social Virtue" "1" "Clerk, Custos, Failed Apprentice, Gentleman/woman, Knight, Mendicant Friar, Mercenary Captain*, Priest, Wise One"
+            "Free Social Virtue (except Hermetic Magus)" "0" "Covenfolk, Craftsman, Merchant, Peasant, Wanderer"
+            "Minor Social Flaw" "–1" "Branded Criminal, Outcast, Outlaw Leader*"
+            "Major Social Flaw" "–3" "Outlaw, Outsider"
+        }
+        DESCRIPTION "*A potential agent always has a minimum resistance score of 1.*\n\n* Must take underlings, see below."
+    }
+
+    #t43dfe106fbd84e942e691a ^"Agent Recruitment Table: Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Circumstance", "Modifier", "Examples"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 23
+        }
+        TABLE {
+            "Major Flaws likely to inconvenience principal" "–3" "Enemies, Feud, Lycanthrope, Plagued By Supernatural Entity"
+            "Minor Flaws likely to inconvenience principal" "–1" "Black Sheep, Dark Secret, Dependant, Diabolic Past, Favors, Infamous"
+            "Minor Flaw used by player character to dominate agent" "–6" "Hostage (Dependent or True Love), is Blackmailing using Dark Secret, Diabolic Past, or other leverage (Blackmail)*"
+        }
+        DESCRIPTION "* Agent hates principal, which inflicts the Difficult Underlings Flaw for this agent only."
+    }
+
+    #t4a5a0f4fdc5ffdfb14311e ^"Agent Recruitment Table: Resources" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Resource", "Modifier", "Examples"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 23
+        }
+        TABLE {
+            "Extraordinary Skill: Main Ability 6 or more" "+1" "n/a"
+            "Exceptional Ability: Main Ability 8 or more" "+3" "n/a"
+            "Minor General or Supernatural Virtue" "+1" "Gossip, Magic Sensitivity, Protection, Skinchanger, Social Contacts, Temporal Influence"
+            "Major General or Supernatural Virtue" "+3" "Entrancement, True Faith, Wealthy"
+            "Serves Rival" "+9" "Covenant, nobleman of equal social standing"
+            "Underlings" "+1" "Up to half a dozen people, including agents and hirelings"
+            "Many underlings" "+3" "Up to two dozen people, including agents and hirelings"
+            "Useful Minor Flaw" "+1" "Busybody, Faerie Friend, Magical Animal Companion, Mentor"
+            "Has more than three selections from this list" "+6" ""
+            "Has more than six selections from this list" "+9" ""
+        }
+    }
+
+    #t6c2b65123da4c6de581f30 ^"Tasks For Agents Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Task", "Persuasion Roll Ease Factor", "Example"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 24
+        }
+        TABLE {
+            "Provide common information that is easily obtained." "3" "Relay the theories of gossips concerning the unusual events in the town square."
+            "Provide sensitive information that is difficult to obtain." "6" "Discover the address of the bishop’s mistress."
+            "Provide secret information known to a select few." "9" "Uncover which nobles are members of the Duke’s diabolic cabal."
+            "Perform an Easy task (Ease Factor 6 or less)." "3" "Persuade a merchant to give passage to a magus with the Blatant Gift."
+            "Perform a Hard task (Ease Factor 12 or less)." "6" "Steal a ring from a lady’s finger, unnoticed."
+            "Perform an Impressive Task (Ease Factor 18 or less)." "9" "Arrange a fatal accident for the prince."
+        }
+    }
+
+    #t3665d03f87a0ef3cc7551f ^"Tasks For Agents Table: Timeframe" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Timeframe", "Modifier"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 24
+        }
+        TABLE {
+            "Within a few weeks" "0"
+            "Within a few days" "+1"
+            "Within one day" "+3"
+        }
+    }
+
+    #t18bdde670dd71ea700eb2e ^"Tasks For Agents Table: Personal Risk" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Personal Risk", "Modifier", "Example"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 24
+        }
+        TABLE {
+            "None at all (simple die)." "+0" "Deliver a package to a merchant."
+            "Risk of embarrassment or reputation (stress die, 1 botch die)." "+1" "Deliver a prostitute to a merchant."
+            "Risk of injury or imprisonment (stress die, 3 botch dice)." "+3" "Deliver a threat to a rich merchant."
+            "Risk of death (stress die, 5 botch dice)." "+6" "Deliver a threat to a count in his own palace."
+        }
+    }
+
+    #t998150f6e5858287eb7278 ^"Reputation Roll Adjustments" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Distance"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "3" "Same shire, county, or equivalent"
+            "6" "Adjoining counties"
+            "9" "Same kingdom"
+            "12" "Rival kingdom"
+        }
+    }
+
+    #tf8ceee2a0c9a69c8431ffb ^"Reputation Roll Adjustments: Status modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Modifier", "Circumstance"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "+6" "A commoner in the service of a noble."
+            "+3" "A landholder of status lower than the character making the roll."
+            "0" "A landholder of status equivalent to the character making the roll."
+            "–3" "A landholder of status superior to the character making the roll."
+            "–6" "A vassal of the character making the roll."
+        }
+        DESCRIPTION "Status modifiers – select only one"
+    }
+
+    #te1cc503add626faac44e75 ^"Reputation Roll Adjustments: Miscellaneous modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Modifier", "Circumstance"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "+3" "A widow who does not hold in her own right, or an heir of a noble."
+            "+6" "An acknowledged lover or bastard."
+        }
+        DESCRIPTION "Miscellaneous modifiers – select all appropriate"
+    }
+
+}

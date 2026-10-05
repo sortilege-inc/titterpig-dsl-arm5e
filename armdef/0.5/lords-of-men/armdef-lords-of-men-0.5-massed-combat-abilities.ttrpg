@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_Lords_Of_Men_MassedCombat_Abilities" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Eight: Massed Combat abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #teff4f185098f492c1b5e71 ^"Profession Sapper" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "General" FIXED
+            ^"Specialties" LIST OF STRING ["specific types of wall"]
+            ^"Printed Specialities" STRING "Specialities: specific types of wall. (General)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "The planning and execution of tunneling operations to undermine castle walls is governed by the Ability Profession Sapper. It includes the siting of mines, the coordination of laborers, and the eventual firing of the tunnels. It also covers counter-mining activities, which are used to defend against the sapper’s art. This Ability may not be used untrained, though characters with Profession Miner may conduct mining operations with three botch dice."
+    }
+
+    #t3af28770de608a18dc65cb ^"Profession Siege Engineer" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Academic" FIXED
+            ^"Specialties" LIST OF STRING ["ballistae", "mangonels", "trebuchets", "siege towers", "castle walls"]
+            ^"Printed Specialities" STRING "Specialities: ballistae, mangonels, trebuchets, siege towers, castle walls. (Academic)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "The Ability Profession Siege Engineer describes the ability to design and construct siege engines, as well as the understanding of defensive engineering. Most siege engineers oversee construction rather than construct the devices themselves. Siege engineers are in high demand from wealthy clients needing defenses against siege, and from armies needing to breach those defenses."
+    }
+
+    #t7ce70a44cf65e4f7b62434 ^"Siege Weapon" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Martial" FIXED
+            ^"Specialties" LIST OF STRING ["ballistae", "mangonels", "trebuchets"]
+            ^"Printed Specialities" STRING "Specialities: ballistae, mangonels, trebuchets. (Martial)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "The Siege Weapon ability governs the operation of siege weapons, either individually for small engines, or as the leader of a crew for larger engines."
+    }
+
+}

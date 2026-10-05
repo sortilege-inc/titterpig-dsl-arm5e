@@ -1,0 +1,27 @@
+EXTENSION "ARMDef_Lords_Of_Men_Interference_Tables" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Four: Interference tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t32573f19da1b17bc9251b3 ^"Magic Resistance For Church Officers and Sovereigns" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Office", "Magic Resistance"]
+            ^"Table Columns Source" STRING "editorial: the book prints no head over column 1 (here \"Office\")"
+            ^"Table Columns Source" STRING "editorial: the book prints no head over column 2 (here \"Magic Resistance\")"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 41
+        }
+        TABLE {
+            "Pope" "25"
+            "Cardinal" "20"
+            "Archbishop" "10"
+            "King (once crowned)" "10"
+        }
+        DESCRIPTION "The religious and secular leaders listed below receive a Magic Resistance score as listed here, and a Soak bonus equal to Resistance / 5. Excommunication cancels these benefits (but only if the excommunication is God’s will). Those listed here also have a Penetration 0 *Aura of Rightful Authority* extending to Voice Range.\n\n• Wives gain Magic Resistance equal to their husbands. • Magic Resistance from relics is added to the above, but does not affect Soak."
+    }
+
+}

@@ -1,0 +1,401 @@
+EXTENSION "ARMDef_Lords_Of_Men_MassedCombat_Events" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Eight: Massed Combat events"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's events, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t35ce68e9b0412ba22b7746 ^"Skirmish" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 0
+            ^"Maneuver" STRING "Defend"
+            ^"Size" STRING "Lesser"
+            ^"Enemy" STRING "Inexpensive"
+            ^"Printed Event Line" STRING "Event Bonus +0 Maneuver: Defend, Size: Lesser, Enemy: Inexpensive"
+            ^"Bonus Breakdown" STRING "(+0 Defend, +0 Lesser, +0 Inexpensive)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The character must defend against an ambush of enemy scouts, attempt to disengage, and get back to his troop. Enemy reinforcements will arrive in five rounds at which point the weight of their troops becomes overwhelming. If the character(s) defend and disengage within five rounds, or the overwhelming troops are defeated, the event is won. The event is lost if the lead character dies."
+    }
+
+    #tcd71daeb834a37e54947c4 ^"Hold the Line" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 2
+            ^"Maneuver" STRING "Defend"
+            ^"Size" STRING "Even"
+            ^"Enemy" STRING "Standard"
+            ^"Printed Event Line" STRING "Event Bonus +2 Maneuver: Defend, Size: Even, Enemy: Standard"
+            ^"Bonus Breakdown" STRING "(+0 Defend, +1 Even, +1 Standard)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The character must receive the enemy charge and hold the line. The enemy group exerts itself on the attack. The event is lost if the character is pushed backwards, forced to disengage, or dies under the onslaught."
+    }
+
+    #t448f6310ad8b6d4d73d8c0 ^"Rescue" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 5
+            ^"Maneuver" STRING "Run the Gauntlet"
+            ^"Size" STRING "Lesser"
+            ^"Enemy" STRING "Special"
+            ^"Printed Event Line" STRING "Event Bonus +5 Maneuver: Run the Gauntlet, Size: Lesser, Enemy: Special"
+            ^"Bonus Breakdown" STRING "(+2 Run the Gauntlet, +0 Lesser, +3 Special)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "One of the character’s knights is thrown from his horse and rolls into the river. The character must rescue the knight before he drowns. Storyguides may require Athletics rolls to reach the river, Swim rolls to find the sinking knight, and further Athletics rolls to drag him to the side. Once the knight has been brought to the bank, there are be enemy troops to fight off. All rolls during this event are made with stress dice and have two botch dice. The event is lost if the knight drowns or the character is swept away in the rescue attempt. Use the deprivation rules on ArM5, page 180 to provide the maximum duration for this event."
+    }
+
+    #tb0b608fba82f88e6eea861 ^"Loose" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 5
+            ^"Maneuver" STRING "Attack"
+            ^"Size" STRING "Outnumbered"
+            ^"Enemy" STRING "Expensive"
+            ^"Printed Event Line" STRING "Event Bonus +5 Maneuver: Attack, Size: Outnumbered, Enemy: Expensive"
+            ^"Bonus Breakdown" STRING "(+1 Attack, +2 Outnumbered, +2 Expensive)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 107
+        }
+        DESCRIPTION "The enemy cavalry round for a charge. The character’s archer group must loose arrows into them to slow their advance. The cavalry start thirty paces away. Each round in which a light wound is inflicted on them prevents them advancing, otherwise they advance 15 paces each round. The event is won if the cavalry are held at bay, unable to attack. If they reach the character’s line, their attack may form part of the next event."
+    }
+
+    #t278f049cbef28074e882ad ^"On All Sides" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 5
+            ^"Maneuver" STRING "Defend"
+            ^"Size" STRING "Overwhelmed"
+            ^"Enemy" STRING "Expensive"
+            ^"Printed Event Line" STRING "Event Bonus +5 Maneuver: Defend, Size: Overwhelmed, Enemy: Expensive"
+            ^"Bonus Breakdown" STRING "(+0 Defend, +3 Overwhelmed, +2 Expensive)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 107
+        }
+        DESCRIPTION "The character and his combat group become separated from their unit and the enemy bears down. The group must defend themselves from an overwhelming enemy force for five combat rounds while help arrives. If the enemy groups are killed or driven off, or the character survives until the reinforcements arrive, the event is won. The event is lost if the character dies."
+    }
+
+    #t8ab97420145ca561be63f9 ^"Ransom" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 6
+            ^"Maneuver" STRING "Take"
+            ^"Size" STRING "Lesser"
+            ^"Enemy" STRING "Special"
+            ^"Printed Event Line" STRING "Event Bonus +6 Maneuver: Take, Size: Lesser, Enemy: Special"
+            ^"Bonus Breakdown" STRING "(+3 Take, +0 Lesser, +3 Special)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 107
+        }
+        DESCRIPTION "The enemy captain is separated from his own formation. A single Expensive enemy combat group stands between the character and the stray captain. The character must rush through the defending group and engage the captain, forcing his surrender."
+    }
+
+    #t289ffba09a4aa4350e73af ^"Feint" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 7
+            ^"Maneuver" STRING "Run the Gauntlet"
+            ^"Size" STRING "Overwhelmed"
+            ^"Enemy" STRING "Expensive"
+            ^"Printed Event Line" STRING "Event Bonus +7 Maneuver: Run the Gauntlet, Size: Overwhelmed, Enemy: Expensive"
+            ^"Bonus Breakdown" STRING "(+2 Run the Gauntlet, +3 Overwhelmed, +2 Expensive)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 107
+        }
+        DESCRIPTION "The character must take a small force and offer the enemy flank a target. He must engage them however he can in the first round, then disengage and draw them away from the main army. The disengaging rules can be found in ArM5, page 173. Each enemy combat group attempts to attack each round. Once disengaged, the enemy pursues.\n\nIf the lead character disengages and survives for five rounds, the enemy has been drawn away and the flank opened up. If the character is unable to disengage or is killed in the action, the event fails."
+    }
+
+    #t381200f47d64e5c3ce4b42 ^"Seize the Colors" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 8
+            ^"Maneuver" STRING "Take"
+            ^"Size" STRING "Outnumbered"
+            ^"Enemy" STRING "Special"
+            ^"Printed Event Line" STRING "Event Bonus +8 Maneuver: Take, Size: Outnumbered, Enemy: Special"
+            ^"Bonus Breakdown" STRING "(+3 Take, +2 Outnumbered, +3 Special)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 107
+        }
+        DESCRIPTION "The enemy continually rally to their standard. If that can be taken, morale will falter. The character must engage the mounted enemy standard bearer and his man-at-arms defenders. The standard contains a supernatural artifact that seems to urge the defenders on and redoubles their efforts despite their wounds. The event only succeeds if the standard is captured."
+    }
+
+    #t1c518a6040656d5a709ab0 ^"A “Heroic” Maneuver" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 9
+            ^"Maneuver" STRING "Run the Gauntlet"
+            ^"Size" STRING "Overwhelmed"
+            ^"Enemy" STRING "Baggage"
+            ^"Printed Event Line" STRING "Event Bonus +9 Maneuver: Run the Gauntlet, Size: Overwhelmed, Enemy: Baggage"
+            ^"Bonus Breakdown" STRING "(+2 Run the Gauntlet, +3 Overwhelmed, +4 Baggage)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 107
+        }
+        DESCRIPTION "The character must take his unit through the woods covering his left flank, dispatching enemy scouts before they can raise the alarm. Once in position, he must break cover and attack the enemy baggage.\n\nThe lead character must first take the three sentries in turn without alerting the others. He must then lead an attack on the enemy baggage area. There is no time limit against this part of the event. Destroying or routing three combat groups forces the remainder to rout, and forces the enemy to make a Discipline roll (Ease Factor 9) to prevent their flank from being pulled into disarray as they return to protect the baggage."
+    }
+
+    #t3c73b920af662af87a84e5 ^"Alone Against the Many" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Event Kind" STRING "Battlefield Event"
+            ^"Event Bonus" INTEGER 11
+            ^"Maneuver" STRING "Heroic Gesture"
+            ^"Size" STRING "I Stand Alone"
+            ^"Enemy" STRING "Special"
+            ^"Printed Event Line" STRING "Event Bonus +11 Maneuver: Heroic Gesture, Size: I Stand Alone, Enemy: Special"
+            ^"Bonus Breakdown" STRING "(+4 Heroic Gesture, +4 I Stand Alone, +3 Special)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 108
+        }
+        DESCRIPTION "The character, alone, must defend the burning gatehouse for five rounds, prevent the enemy (standard troops) from surging through, and cover his men as they retreat. The character is considered to be defending the way through the gatehouse so cannot be passed by the attacking troops. If the character dies before the five rounds are up, or manages to hold the enemy at bay, the gatehouse collapses, sealing the way."
+    }
+
+    #tcd74b266c47e4883d818ac ^"Scale the Ladders" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Printed Name" STRING "scale the ladders"
+            ^"Event Kind" STRING "Siege Event"
+            ^"Event Bonus" INTEGER 7
+            ^"Maneuver" STRING "Run the Gauntlet"
+            ^"Size" STRING "Overwhelmed"
+            ^"Enemy" STRING "Standard"
+            ^"Printed Event Line" STRING "Event Bonus +7 Man: Run the Gauntlet, Size: Overwhelmed, Enemy: Standard"
+            ^"Bonus Breakdown" STRING "(+2 Run the Gauntlet, +3 Overwhelmed, +2 Standard)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "The character must scale the ladders while the defenders assault him with archery and boiling oil. The character is third on the ladder, gaining partial cover from the two soldiers ahead of him. It takes three rounds to reach the top of the ladder, each of which requires a Dexterity + Climb stress roll against Ease Factor 6. Once at the top, the character must stand his ground against a combat group of standard troops for two more rounds while the rest of his men arrive."
+    }
+
+    #te0054fc8a2d7707113662e ^"Open the Gates" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Printed Name" STRING "open the gates"
+            ^"Event Kind" STRING "Siege Event"
+            ^"Event Bonus" INTEGER 8
+            ^"Maneuver" STRING "Run the Gauntlet"
+            ^"Size" STRING "I Stand Alone"
+            ^"Enemy" STRING "Expensive"
+            ^"Printed Event Line" STRING "Event Bonus +8 Man: Run the Gauntlet, Size: I Stand Alone, Enemy: Expensive"
+            ^"Bonus Breakdown" STRING "(+2 Run the Gauntlet, +4 I Stand Alone, +2 Expensive)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "Inside the castle (such as in the wake of the Scale the Ladders event described previously), the character spots a group of defenders shoring up the gates, which are under pressure from the attacking force on the outside. The character must tip boiling water onto them before the men-at-arms defending them scale the stairs and attack the character. Tipping the water takes a Strength + Athletics stress roll against Ease Factor 9. There are three botch dice. On a botch the character douses himself with the boiling water. The attacking force will arrive in three rounds. If the defenders are scattered by then, the attackers will be able to breach the gate."
+    }
+
+    #t1f314e864cfbb23a062151 ^"Take the Marshal" DEF {
+        EXTENDS #td7200103e7554f9c5380cc ^"Battlefield Event"
+        PROPERTIES {
+            ^"Printed Name" STRING "take t he Marshal"
+            ^"Event Kind" STRING "Siege Event"
+            ^"Event Bonus" INTEGER 9
+            ^"Maneuver" STRING "Take"
+            ^"Size" STRING "Overwhelmed"
+            ^"Enemy" STRING "Special"
+            ^"Printed Event Line" STRING "Event Bonus +9 Man: Take, Size: Overwhelmed, Enemy: Special"
+            ^"Bonus Breakdown" STRING "(+3 Take, +3 Overwhelmed, +3 Special)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "The knight marshal controlling the castle rides at the head of three groups of knights attempting to charge down the character and his group. The character must bring the marshal down and either kill him or force his surrender. To complicate matters, the character’s escape route is blocked."
+    }
+
+    #tbeb207ed049d40896839a7 ^"Defend (Maneuver)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Defend"
+            ^"Option Of" STRING "Maneuver"
+            ^"Bonus" INTEGER 0
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters receive an enemy assault or must defend a place, item, or person under attack. Success is decided by defeating the attackers or by defending for a number of turns decided by the storyguide. If the characters withdraw or are killed, the defended location, item, or character is taken by the enemy and the event is lost. Defending characters typically have some defenses, such as stakes, walls, or even complete buildings which provide combat bonuses."
+    }
+
+    #t076f1aae8f4c9373ef4888 ^"Attack (Maneuver)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Attack"
+            ^"Option Of" STRING "Maneuver"
+            ^"Bonus" INTEGER 1
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters attack the enemy line or location. Success is decided by defeating or routing the opponents."
+    }
+
+    #tb82978fca409def7a252f0 ^"Run the Gauntlet (Maneuver)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Run the Gauntlet"
+            ^"Option Of" STRING "Maneuver"
+            ^"Bonus" INTEGER 2
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "This maneuver is a catch-all for events that include activities other than direct combat, such as climbing a tower while under attack to light a beacon, swimming across a river, or reaching a hill to safely load and launch a trebuchet."
+    }
+
+    #t67196840471550032b022d ^"Take (Maneuver)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Take"
+            ^"Option Of" STRING "Maneuver"
+            ^"Bonus" INTEGER 3
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters must attack the enemy line or location as a precursor to defeating or taking a given place, item, or character, which must then be defended against counter-attack. The target of the attack may be also defended by an additional group of opponents. Expect these events to last longer than five rounds."
+    }
+
+    #tfad5958e2dcbefd44b1c80 ^"Heroic Gesture (Maneuver)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Heroic Gesture"
+            ^"Option Of" STRING "Maneuver"
+            ^"Bonus" INTEGER 4
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "This is a daring feat of foolhardy bravery. If the leading character dies during a Heroic Gesture, the event is won and the player should describe how that death secures victory. The event is lost if any other player character is killed. The storyguide should set additional win conditions to ensure the leading character has a chance to make it out alive."
+    }
+
+    #t3c6eabbe054cde4563a931 ^"Lesser (Size)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Lesser"
+            ^"Option Of" STRING "Size"
+            ^"Bonus" INTEGER 0
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters face a standard combat group about half the size of their own."
+    }
+
+    #tec098c253d8df611d67e91 ^"Even (Size)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Even"
+            ^"Option Of" STRING "Size"
+            ^"Bonus" INTEGER 1
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters face a single combat group."
+    }
+
+    #t50f2c2c969927bbcef6133 ^"Outnumbered (Size)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Outnumbered"
+            ^"Option Of" STRING "Size"
+            ^"Bonus" INTEGER 2
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters face two combat groups."
+    }
+
+    #t113f9dde711362408eb964 ^"Overwhelmed (Size)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Overwhelmed"
+            ^"Option Of" STRING "Size"
+            ^"Bonus" INTEGER 3
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters face three combat groups."
+    }
+
+    #tf9847df4366ea194af0d17 ^"I Stand Alone (Size)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "I Stand Alone"
+            ^"Option Of" STRING "Size"
+            ^"Bonus" INTEGER 4
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "A single character steps forward to meet the enemy, or undertakes the challenge singlehandedly, against overwhelming odds, typically a full-strength combat group."
+    }
+
+    #tad251125dedd5e4a977639 ^"Inexpensive (Enemy)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Inexpensive"
+            ^"Option Of" STRING "Enemy"
+            ^"Bonus" INTEGER 0
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters’ opponents are inexpensive troops in the form of levies."
+    }
+
+    #t004d5b079893d28dd8198b ^"Standard (Enemy)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Standard"
+            ^"Option Of" STRING "Enemy"
+            ^"Bonus" INTEGER 1
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters face standard-cost troops such as infantry or archers."
+    }
+
+    #tbee2d043df4502658bddf2 ^"Expensive (Enemy)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Expensive"
+            ^"Option Of" STRING "Enemy"
+            ^"Bonus" INTEGER 2
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters face expensive individuals or groups such as knights or serjeants."
+    }
+
+    #t47a7f90a61feb1cc573d90 ^"Special (Enemy)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Special"
+            ^"Option Of" STRING "Enemy"
+            ^"Bonus" INTEGER 3
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "The characters must face leading enemy characters (who will likely be defended), supernatural troops, or other dangerous phenomena such as fire, a collapsing building, etc."
+    }
+
+    #tb44fceed37915e58bfd599 ^"Baggage (Enemy)" DEF {
+        EXTENDS #t9a849435d76530f6eb84fd ^"Battlefield Event Option"
+        PROPERTIES {
+            ^"Printed Name" STRING "Baggage"
+            ^"Option Of" STRING "Enemy"
+            ^"Bonus" INTEGER 4
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "Attacking the baggage may swing the battle either way. It can stave off defeat by drawing troops or can seal victory by crushing morale. Characters choosing this Enemy option gain 1 experience point towards a bad Reputation. The baggage is normally guarded by inexpensive troops."
+    }
+
+}

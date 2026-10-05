@@ -1,0 +1,113 @@
+EXTENSION "ARMDef_Lords_Of_Men_Leisure_Tables" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Five: Leisure tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t10304eb8c6382ddb6e0a89 ^"Hawking Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Roll", "Result"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 58
+        }
+        TABLE {
+            "0 or less" "Make a Loyalty check for the animal. On a failure, the animal leaves, never to be seen again."
+            "1–3" "The hawk flies off to a nearby tree and looks at the hawker quizzically."
+            "4–6" "The hawk disregards its intended target and merely circles before returning."
+            "7–9" "The hawk conducts a single attack against its prey, which may result in a kill."
+            "10–12" "The hawk attacks with a +1 bonus to its attack roll."
+            "13–15" "The hawk attacks with a +2 bonus to its attack roll."
+            "16–20" "The hawk attacks with a +3 bonus to its attack roll."
+            "21+" "The hawk attacks with a +5 bonus to both its attack and initiative rolls, and continues launching additional attacks after the first."
+        }
+    }
+
+    #tdd2402936517ba81c537de ^"Some Typical Prey Animals" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type", "Size", "Str", "Sta", "Dex", "Qik", "Init", "Atk", "Def", "Dam", "Soak"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 58
+        }
+        TABLE {
+            "Partridge" "–5" "–10" "0" "+3" "+6" "+6" "+5" "+9" "–9" "0"
+            "Hare" "–6" "–6" "+1" "+3" "+4" "+4" "n/a" "+4" "n/a" "+1"
+            "Duck" "–3" "-6" "0" "+3" "+4" "+4" "+5" "+7" "–5" "0"
+            "Goose" "–2" "-4" "+1" "+3" "+3" "+3" "+5" "+6" "–3" "+1"
+            "Pheasant" "–2" "–4" "0" "+3" "+4" "+4" "n/a" "+7" "n/a" "0"
+            "Heron" "–2" "–4" "–1" "+4" "+4" "+2" "+3" "+7" "–5" "–1"
+            "Crane" "–1" "–2" "0" "+3" "+3" "+2" "+5" "+5" "–1" "0"
+        }
+    }
+
+    #t00c2752d5b5ca4423cea3e ^"Kennels, Mews, and Stables Tables: Kennels" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quality", "Capacity (hounds)", "Maintenance (pounds/year)", "Staff", "Living Conditions Modifier"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 60
+        }
+        TABLE {
+            "Shoddy (Inn/Farm)" "8" "0" "0" "–1"
+            "Standard (Knight)" "16" "1" "2" "0"
+            "Superior (Noble)" "48" "5" "6" "+1"
+            "Excellent (Great Noble)" "80" "20" "12" "+2"
+            "Royal" "150+" "100" "36" "+3"
+        }
+    }
+
+    #t069167415910a99da77b12 ^"Kennels, Mews, and Stables Tables: Mews" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quality", "Capacity (birds)", "Maintenance (pounds/year)", "Staff", "Living Conditions Modifier"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 60
+        }
+        TABLE {
+            "Shoddy (Loft)" "3" "0" "0" "–1"
+            "Standard (Knight)" "6" "0" "1" "0"
+            "Superior (Noble)" "15" "5" "3" "+1"
+            "Excellent (Great Noble)" "30" "10" "5" "+2"
+            "Royal" "100" "100" "10" "+3"
+        }
+    }
+
+    #t8ceba81b4984d7fbb8033a ^"Kennels, Mews, and Stables Tables: Stables" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quality", "Capacity (horses)", "Maintenance (pounds/year)", "Staff", "Living Conditions Modifier"]
+            ^"Row Note" STRING "The book prints this row one column to the left: \"40\" after \"Excellent (Great Noble)\" in the Quality column, \"3 per horse\" under Capacity, \"12\" under Maintenance, \"+2\" under Staff. It is set here in the columns its values evidently belong to (Capacity 40, Maintenance 3 per horse, Staff 12, Living Conditions Modifier +2), as every other row of the three tables reads."
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 60
+        }
+        TABLE {
+            "Shoddy (Inn/Farm)" "3" "0" "0" "–1"
+            "Standard (Knight)" "6" "1 per horse*" "2" "0"
+            "Superior (Noble)" "18" "2 per horse" "6" "+1"
+            "Excellent (Great Noble)" "40" "3 per horse" "12" "+2"
+            "Royal" "250" "5 per horse" "36" "+3"
+        }
+        DESCRIPTION "*Knights do not need to pay this maintenance, however, as it is already calculated in their expenditure."
+    }
+
+    #tf820864e143c05a1be65c5 ^"Melee Events Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Roll", "Result"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 68
+        }
+        TABLE {
+            "0–2" "An inexperienced knight presents as a target."
+            "3–4" "A lone Poor knight presents as a target."
+            "5–6" "A lone average knight presents as a target."
+            "7–8" "A Poor knight protected by a company presents as a target."
+            "9–10" "An average knight protected by a company presents as a target."
+            "11–12" "A Wealthy knight protected by a company presents as a target."
+            "13–14" "The character’s company is targeted by a group of equal size."
+            "15–16" "The character’s company is targeted by a large company of two combat groups."
+            "17+" "The character’s company is targeted by a large company of three combat groups."
+        }
+        DESCRIPTION "Rolls on this table have a modifier equal to the character’s Prudhomme Reputation. The character may also spend Confidence Points on the roll, which can be used to modify the roll in either direction. Botch dice on the roll are equal to 1 + (1 per melee event rolled so far). Botches generally cause accidents, such as falling from a mount, breaking equipment, or seriously injuring an opponent."
+    }
+
+}

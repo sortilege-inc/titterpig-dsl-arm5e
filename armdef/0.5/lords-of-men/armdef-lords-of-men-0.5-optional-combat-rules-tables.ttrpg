@@ -1,0 +1,183 @@
+EXTENSION "ARMDef_Lords_Of_Men_OptionalCombatRules_Tables" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Nine: Optional Combat Rules tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t87e86b156ace0b71024205 ^"Terrain Examples: Obstacles" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Action", "Action Type", "Stress Roll", "Ease Factor"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 120
+        }
+        TABLE {
+            "Force open a normal door" "Ext." "Str" "9"
+            "Force open a reinforced door" "Ext." "Str" "12"
+            "Open a door or window" "Std." "none needed" "n/a"
+            "Pick a lock" "5-rd. Ext." "Dex + Legerdemain" "12*"
+        }
+        DESCRIPTION "* See *City & Guild*, page 78, for more information."
+    }
+
+    #t8e726be05230b58fd8e01e ^"Mounted Movement Rates" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Gait", "–3 or less", "–2 to –1", "0", "+1 to +2", "+3 to +4", "+5"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 127
+        }
+        TABLE {
+            "Walk/Amble" "7" "8" "10" "12" "15" "18"
+            "Trot" "12" "15" "20" "25" "30" "35"
+            "Canter" "20" "25" "30" "35" "45" "50"
+            "Gallop" "30" "40" "50" "60" "70" "80"
+        }
+        DESCRIPTION "Horses have four gaits, each of which has a different movement rate."
+    }
+
+    #t837060ee8da60eeece3b04 ^"Mounted Movement Rates: Effects of Mounted Movement" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Gait", "Penalty to Missile Attacks", "Falling Damage", "Extended Action Ease Factor", "Defensive Bonus (Optional)"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 127
+        }
+        TABLE {
+            "None (stationary)" "0" "Horse’s Size* + stress die" "0" "0"
+            "Walk/Amble or Trot" "−1" "(Horse’s Size + 2)* + stress die" "6" "+1"
+            "Canter" "−3" "(Horse’s Size + 4)* + stress die" "9" "+3"
+            "Gallop −6" "–6" "(Horse’s Size + 6)* + stress die" "12" "+6"
+        }
+        DESCRIPTION "A horse’s gait affects a rider’s ability to shoot missiles from horseback, the amount of damage taken for falling off the horse, the Ease Factor for the Dexterity + Ride roll needed to carry out extended actions, and, optionally, his Defense score against ranged attacks.\n\nA horse must make a Fatigue test every round it moves at a gallop.\n\n* The bonus (but not the die result) is doubled if the character falls on a hard surface, and halved if he lands on a soft surface like plowed earth."
+    }
+
+    #t891e5a5dad888c85a87f3b ^"Cover Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Amount of Cover", "Defense Bonus", "Example"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 130
+        }
+        TABLE {
+            "One-quarter" "+3" "Standing behind a slender tree"
+            "One-half" "+6" "Standing behind a corner or in an open doorway"
+            "Three-quarters" "+9" "Standing behind a chest-high wall"
+            "Near total" "+12" "Standing behind a loophole or a door that is ajar"
+        }
+    }
+
+    #tc4d17b276e637d1a163888 ^"Concealment, Darkness, and Invisibility Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Concealment", "Examples", "Melee Attack Bonus", "Defense Bonus"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 130
+        }
+        TABLE {
+            "Light" "Fog, shadows, moonlight, underbrush, half of body concealed" "+1" "+3"
+            "Medium" "Smoke, faint moonlight, dense foliage, three-quarters of body concealed" "+3" "+6"
+            "Heavy" "Typical dark night" "+6" "+9"
+            "Total" "Lightless underground cave" "+9" "+9"
+        }
+    }
+
+    #t4755ed559db4f1c2d171e9 ^"Light Sources and Range of Visibility" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Conditions", "None", "Light", "Medium", "Heavy", "Total"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 130
+        }
+        TABLE {
+            "Moonlight" "n/a" "0" "20" "50" "100"
+            "Torchlight" "3" "5" "10" "15" "25"
+            "Heavy Rain" "10" "20" "30" "50" "100"
+            "Fog" "n/a" "0" "20" "40" "80"
+            "Heavy Smoke or Fog" "n/a" "0" "2" "4" "10"
+        }
+        DESCRIPTION "How well a character can see an opponent, and at what distance, can make a difference for missile combat. Poor visibility grants increasing levels of concealment to characters at greater distances. At the storyguide’s discretion, a Perception roll of 9+ can sometimes reduce (by one step) the level of concealment due to poor visibility.\n\nThe table below gives the longest range in paces at which a given level of concealment applies. For example, in moonlight a character would have medium concealment at a range of twenty paces, and heavy concealment between 21 and 50 paces (though the storyguide shouldn’t feel compelled to calculate distances to the exact pace!)."
+    }
+
+    #t1ae0f707353b147f5184db ^"Bruise Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Bruise Level", "Penalty", "Recovery Interval", "Improvement Ease Factor", "Residual Wound"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 131
+        }
+        TABLE {
+            "Light" "–1" "Quarter Hour" "10" "None"
+            "Medium" "–3" "One Hour" "12" "None"
+            "Heavy" "–5" "Two Hours" "15" "Light Wound"
+            "Incapacitating" "Unconscious" "Two Hours" "15" "Medium Wound"
+            "Fatal" "Unconscious" "Two Hours" "15" "Incapacitating"
+        }
+    }
+
+    #t69b50891d941957153915e ^"Example Maneuvers Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Example Maneuver", "Attack Total", "Defense Choices", "Advantage Required"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 133
+        }
+        TABLE {
+            "Trip or Throw" "Brawl Attack Defense, die" "Evasion, or stress + Dex + Brawl + Size" "3"
+            "Grapple" "Brawl Attack Defense, die" "Evasion, or stress + Str + Brawl + Size" "1"
+            "Pin" "Brawl Attack Brawl, stress" "Defense, Evasion, or die + Str + Brawl + Size" "6"
+            "Tackle" "Brawl Attack Defense, die" "Evasion, or stress + Dex + Brawl + Size" "1"
+            "Disarm" "Any Attack" "Defense or Evasion" "9"
+            "Grab Worn Item" "Brawl Attack Defense, die" "Evasion, or stress + Str + Brawl + Size" "6"
+            "Unseat Rider" "Brawl or Defense, Weapon Attack" "Evasion, or stress die + Dex + Ride" "6"
+            "Wrest Weapon" "Brawl Attack" "Defense, Evasion, or Melee Attack" "12"
+        }
+    }
+
+    #t9bd302ae3a6f3e4a85a384 ^"Example Discipline Ease Factors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Event", "Ease Factor"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 134
+        }
+        TABLE {
+            "Group moves across difficult terrain" "3"
+            "Group runs (without charging)" "6"
+            "Enemy disengages (without routing)" "6"
+            "Enemy routs" "9"
+            "Group disengages" "9"
+            "Group changes between melee and missile combat" "6"
+        }
+    }
+
+    #te374ca99fe75a4890ced84 ^"Example Morale Ease Factors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Event", "Ease Factor"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 134
+        }
+        TABLE {
+            "Taking wounds from missile fire when having no missiles of its own" "6"
+            "Charged by an approximately equal force" "6"
+            "Charged by an obviously superior force" "9"
+            "Ambushed or attacked from the rear" "9"
+            "All members of the group reach Wound Penalty of −3 or worse" "9"
+            "The vanguard or leader killed, Incapacitated, or disabled by magic" "9"
+        }
+    }
+
+    #tbfa24c0cf41e1203097b78 ^"Rallying a Group Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Rally Ease Factor"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 135
+        }
+        TABLE {
+            "Not engaged in combat" "3"
+            "Taking enemy missile fire" "6"
+            "Engaged in melee" "9"
+            "Routed and being hotly pursued" "12"
+            "Group has sustained casualties" "+1 to Ease Factor"
+            "Group has sustained 50% casualties or more" "+3 to Ease Factor"
+        }
+    }
+
+}

@@ -1,0 +1,226 @@
+EXTENSION "ArM5_Lords_Of_Men_MassedCombat_Tables" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Eight: Massed Combat tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Lords_Of_Men_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb7487a617b32b85629abcf ^"Vassals Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Title", "Knights", "Serjeants", "Infantry & Archers", "Levies (when on home ground)"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 102
+        }
+        TABLE {
+            "Poor/Average Landed Noble" "0" "1" "2" "2"
+            "Wealthy Landed Noble" "1" "1" "10" "10"
+            "Greater Baron" "4" "4" "40" "40"
+            "Earl or Count" "10" "10" "100" "100"
+            "Duke" "25" "25" "150" "150"
+        }
+    }
+
+    #t402b44e8ffe4077cb05447 ^"Mercenary Budget Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Title", "Poor", "Average", "Wealthy"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 103
+        }
+        TABLE {
+            "Landed Noble" "0" "2" "5"
+            "Baron" "0" "40" "100"
+            "Earl (Count)" "0" "100" "250"
+            "Duke" "0" "250" "500+"
+        }
+    }
+
+    #t28d873e732165b1c4f9de9 ^"Allied Troops Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Total", "Proportion"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 103
+        }
+        TABLE {
+            "6" "Half"
+            "12" "Equal"
+            "18" "Double"
+            "24" "Treble"
+        }
+        DESCRIPTION "The proportion in the table below is applied as a modifier to the size of the noble’s own vassal army. To be clear, a character must roll better than 12 to raise additional allied forces past his own core force."
+    }
+
+    #t2e7cfb98d5b7f5eb2c8df3 ^"Allied Troops Table: Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Modifier"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 103
+        }
+        TABLE {
+            "Raising an army in winter" "–3"
+            "Raising an army around harvest" "–1"
+            "The same lord raised an army the previous season" "–3"
+            "The same lord raised an army earlier in the same year (not cumulative with previous season, above)" "–1"
+            "Raising an army during an active crusade" "–3"
+            "The lord has the Wealthy Virtue" "+1"
+            "The lord has the Poor Flaw" "–1"
+            "The lord has the Inspirational Virtue" "+3"
+            "The lord has the Difficult Underlings Flaw" "–2"
+            "The lands of the affinity are under threat" "+1"
+            "The lord is in revolt against his own liege" "–2"
+            "The lord has a Major social Virtue" "+3"
+            "The lord has a Minor social Virtue" "+1"
+            "The lord has a Minor social Flaw" "–1"
+            "The lord has a Major social Flaw" "–3"
+            "The promise of wealth and/or title (the spoils from a city, for instance)" "+3"
+        }
+        DESCRIPTION "The following table suggests modifiers to this roll."
+    }
+
+    #t5334e7542ee78fc5fe3655 ^"Mercenary Units" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type", "Mythic Pounds", "Value"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 104
+        }
+        TABLE {
+            "Knights" "15" "Exp."
+            "Serjeants" "5" "Exp."
+            "Infantry" "2" "Std."
+            "Archers" "2" "Std."
+            "Levies" "1" "Inexp."
+        }
+        DESCRIPTION "The table below lists the costs of typical mercenary combat groups."
+    }
+
+    #t1e60eb495cf4346ac8ccf8 ^"Weight of Numbers Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ratio of Army Sizes (rounded down)", "Bonus/Penalty"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 105
+        }
+        TABLE {
+            "1:1" "none"
+            "3:2" "±1"
+            "2:1" "±2"
+            "3:1" "±3"
+            "4:1" "±4"
+        }
+    }
+
+    #tdbabc7b205852fa5b2c602 ^"Battlefield Events Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Description", "Battle Ease Factor"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 105
+        }
+        TABLE {
+            "Engaged" "9"
+            "Advantage or Setback" "12"
+            "Imminent Victory or Defeat" "15"
+        }
+    }
+
+    #t7bba399dd065e079211661 ^"Standard Combat Groups" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Unit", "Weapon", "Init", "Atk", "Def", "Dam", "Soak", "Group Bonus"]
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 108
+        }
+        TABLE {
+            "Knight" "Lance, Heater Shield (M)" "+1" "+17" "+16" "+6" "+10" "+15"
+            "" "Long sword, Heater Shield (M)" "+2" "+16" "+16" "+7" "+10" "+15"
+            "Serjeant" "Spear, Round Shield (M)" "+2" "+12" "+9" "+8" "+7" "+12"
+            "" "Long sword, Round Shield (M)" "+1" "+10" "+8" "+7" "+7" "+12"
+            "Infantry" "Poleaxe" "+1" "+13" "+7" "+13" "+5" "+9"
+            "" "Mace, Round Shield" "+1" "+11" "+9" "+10" "+5" "+9"
+            "Archer" "Bow" "+0" "+10" "+6" "+8" "+1" "+0"
+            "" "Bow, Long" "–1" "+11" "+6" "+10" "+1" "+0"
+            "" "Crossbow" "+6" "+12" "+11" "+8" "+1" "+0"
+            "" "Hatchet, Buckler" "+1" "+9" "+6" "+6" "+1" "+0"
+            "Levy" "Spear, Round Shield" "+3" "+6" "+6" "+7" "+2" "+0"
+            "" "Knife" "+1" "+5" "+6" "+4" "+2" "+0"
+            "Baggage" "Bludgeon" "–2" "+5" "+1" "+5" "+3" "+0"
+        }
+        DESCRIPTION "Groups of knights, serjeants, and infantry are treated as trained groups, while archer, levy, and baggage units are untrained, However, a group that serves together for a season is treated as trained thereafter. Each group is assumed to be five individuals."
+    }
+
+    #t31b590bd30b28f4d9d5778 ^"Garrison Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Units", "Interval", "Weight of Numbers", "Example"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 111
+        }
+        TABLE {
+            "10 or less" "Day" "+1" "motteand-bailey castle"
+            "11 to 20" "Week" "+2" "small castle"
+            "21 to 40" "Month" "+3" "large castle or walled town"
+            "41 or more" "Season" "+4" "city"
+        }
+    }
+
+    #tde611cb7c5e942cb4a5bb6 ^"Defenses Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Defense Quality", "Interval", "Defense Bonus", "Example"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 111
+        }
+        TABLE {
+            "Shoddy" "Day" "+1" "Makeshift defenses"
+            "Standard" "Week" "+2" "Any free castle choice"
+            "Superior" "Month" "+3" "Any minor castle choice"
+            "Excellent" "Season" "+4" "Any great castle choice"
+        }
+    }
+
+    #t861f67bf9e5e689a7df319 ^"Defenses Table: Damage Levels" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Size", "Example", "Damage Level Modifier"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 112
+        }
+        TABLE {
+            "+5 to +8" "A house, watch tower, barbican, or shell keep" "3"
+            "+9 and larger" "A fortified castle, town, or city" "4"
+        }
+    }
+
+    #t8cb836a666e0f9c89ee92b ^"Supplies Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Supply Quality", "Interval", "Siege Conditions Bonus", "Example"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 112
+        }
+        TABLE {
+            "Shoddy" "Week" "+1" "Easily surrounded"
+            "Standard" "Month" "+3" "Large reserves"
+            "Superior" "Season" "+5" "Situated on a river"
+            "Excellent" "Year" "+7" "Situated on the sea"
+        }
+    }
+
+    #tb553d0c80844f0c98202c0 ^"Siege Engines" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Siege Engine", "Init", "Atk", "Def", "Dam", "Crew", "Range", "Mythic Pounds", "Cost"]
+            ^"Table Columns Source" STRING "editorial: the book prints no head over column 1 (here \"Siege Engine\")"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 113
+        }
+        TABLE {
+            "Ballista" "+5" "+5" "6*" "+15**" "3" "50" "5" "Exp."
+            "Mangonel" "–3" "+3" "6*" "+20**" "5" "20–150" "10" "Exp."
+            "Trebuchet" "–4" "+1" "6*" "+25**" "5" "50–200" "15" "Exp."
+        }
+        DESCRIPTION "* As these engines are essentially static, the Defense is not rolled but is instead an Ease Factor. ** Treated as non-combat damage (see ArM5, page 181).\n\n**Ballista: **Reloading a ballista is a two-round Extended Action (as per the combat actions in Chapter Eight, Optional Combat Rules) that takes the full crew.\n\n**Mangonel and Trebuchet: **When used against castle walls, a mangonel or trebuchet use the rules described in the Artillery section. In standard combat, both of these weapons target combat groups rather than individuals. Reloading these weapons takes two minutes and requires the whole crew.\n\nThe cost of these weapons in Mythic Pounds represents either the cost of building of them on-site or transporting them from a central armory. It also represents the cost of provisioning sufficient ammunition, which for the catapult devices, involves teams of quarrymen and an army of carts to transport stone to the engines."
+    }
+
+}

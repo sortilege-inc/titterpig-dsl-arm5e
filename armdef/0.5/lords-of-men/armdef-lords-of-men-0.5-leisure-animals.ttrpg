@@ -1,0 +1,568 @@
+EXTENSION "ARMDef_Lords_Of_Men_Leisure_Animals" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Five: Leisure animals"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's animals, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tbafe2c208dea0259d21fbc ^"Magpie" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -8
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER -4
+            ^"Qualities" STRING "Crafty, Mimicry, Timid, Vocal"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 45
+        }
+        PERSONALITY_TRAITS {
+            "Mischievous" +2
+        }
+        COMBAT {
+            "Bite" INIT 4 ATTACK 9 DEFENSE 9 DAMAGE -7
+            " Dodge" INIT 4 DEFENSE 9
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "flying"
+            "Awareness" SCORE 4 SPECIALTY "predators"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Music" SCORE 3 SPECIALTY "mimicry"
+            "Stealth" SCORE 4 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "foraging"
+        }
+    }
+
+    #t188f42381dcd87c4f354b4 ^"Monkey" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER -6
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -3
+            ^"Qualities" STRING "Crafty, Defensive Fighter, Skilled Climber, Timid +3 to all climb rolls."
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 45
+        }
+        PERSONALITY_TRAITS {
+            "Mischievous" +2
+        }
+        COMBAT {
+            "Bite" INIT 3 ATTACK 9 DEFENSE 8 DAMAGE -5
+            " Dodge" INIT 3 DEFENSE 8
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "climbing"
+            "Awareness" SCORE 4 SPECIALTY "food"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Stealth" SCORE 4 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "foraging"
+        }
+    }
+
+    #t96dd33967d20088431e494 ^"Squirrel" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER -12
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER -7
+            ^"Qualities" STRING "Crafty, Defensive Fighter, Skilled Climber, Timid +3 to all climb rolls."
+            ^"Virtues & Flaws" STRING "Lightning Reflexes"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 45
+        }
+        PERSONALITY_TRAITS {
+            "Timid" +3
+            "Acquisitive" +2
+            "Inquisitive" +1
+        }
+        COMBAT {
+            "Dodge" INIT 5 DEFENSE 10
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "climbing"
+            "Awareness" SCORE 4 SPECIALTY "food"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Stealth" SCORE 4 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "foraging"
+        }
+    }
+
+    #tcedc8a6196483ec2b6e80e ^"Lymer" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -2
+            ^"Qualities" STRING "Domesticated, Keen Sense of Smell, Pursuit Predator, Timid, Vocal (silent) +2 to all Hunt rolls."
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0,–1, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Obedient" +3
+            "Placid" +1
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 9 DEFENSE 7 DAMAGE -3
+            " Dodge" INIT 2 DEFENSE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 4 SPECIALTY "deer"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "deer"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+        }
+    }
+
+    #tfbad032686559b60681eb5 ^"Alaunt" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues & Flaws" STRING "Ferocity (Boar)"
+            ^"Qualities" STRING "Aggressive, Domesticated, Grapple, Keen Sense of Smell, Pursuit Predator +2 to all Hunt rolls."
+            ^"Combat" STRING "Bite: Init +0, Attack +9, Defense +7, Damage +3 Dodge: Init +0, Attack n/a, Defense 0, Damage n/a Grapple: Init +0, Attack +5, Defense +5, Damage special (see ArM5, page 174)"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0,–1, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Aggressive" +3
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "deer"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "boar"
+        }
+    }
+
+    #t5ac1aa8c36a4d1dd1b134f ^"Greyhound" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER -2
+            ^"Qualities" STRING "Domesticated, Fast Runner, Grappler, Keen Eyesight, Pursuit Predator +3 to all running rolls, +3 to all sight rolls."
+            ^"Combat" STRING "Bite: Init +5, Attack +8, Defense +10, Damage –3 Dodge: Init +5, Attack n/a, Defense +8, Damage n/a Grapple: Init +5, Attack +4, Defense +8, Damage special (see ArM5, page 174)"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0,–1, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Persistent" +3
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "deer"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "deer"
+        }
+    }
+
+    #tbbdebcb951a244161b60cf ^"Running Dog" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -2
+            ^"Qualities" STRING "Domesticated, Fast Runner, Keen Sense of Smell, Pack Animal, Pursuit Predator, Tireless +3 to all running rolls, +2 to all Hunt rolls. The Pack leader has Com –3, Leadership 5."
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0,–1, –1, –1, –3, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Cooperative" +3
+            "Loyal" +3
+        }
+        COMBAT {
+            "Bite" INIT 4 ATTACK 7 DEFENSE 9 DAMAGE -3
+            " Dodge" INIT 4 DEFENSE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "deer"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "deer"
+        }
+    }
+
+    #t769b0ea6338763ded6c059 ^"Mastiff" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues & Flaws" STRING "Ferocity (defending owner)"
+            ^"Qualities" STRING "Aggressive, Domesticated, Keen Sense of Smell, Large Teeth +3 to all rolls using scent, +2 to all Hunt rolls."
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0,–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Vicious" +1
+        }
+        COMBAT {
+            "Bite" INIT 1 ATTACK 11 DEFENSE 8 DAMAGE 4
+            " Dodge" INIT 1 DEFENSE 6
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "intruders"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+        }
+    }
+
+    #tb05aa1c59832552aa5e107 ^"Noble Warhorse (Destrier)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues & Flaws" STRING "Ferocity (when ridden in battle), Improved Characteristics x 2, Long-Winded, Proud (minor)"
+            ^"Qualities" STRING "Domesticated, Fast Runner, Herd Animal, Imposing Appearance, Tireless"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 55
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+            "Loyal" +2
+            "Brave" +1
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "in battle"
+            "Awareness" SCORE 2 SPECIALTY "bad footing"
+            "Brawl" SCORE 3 SPECIALTY "hooves"
+        }
+        COMBAT {
+            "Hooves" INIT 2 ATTACK 7 DEFENSE 7 DAMAGE 7
+        }
+        DESCRIPTION "Destriers are the highest-status horses in Mythic Europe. Often from Spain, these fine animals may stand fifteen hands (sixty inches) high, and are superb warhorses. Extremely rare, they can command prices from 50 to 140 pounds, and for an exceptional horse far more. A disproportionate number are aligned with the Magic, Faerie, Divine, or Infernal realm in some way, and these often possess Might and powers appropriate to that realm. The best tournament horses are destriers. Only major nobility and the extremely wealthy are ever likely to possess such a fine animal, unless found through a story, granted as a gift, or won as a prize in a tournament. Owning such a beast is worth at least a single experience point in Reputation: Prudhomme."
+    }
+
+    #tdbc40716dfdf788ec5fe47 ^"Warhorse (Courser or Rouncey)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues & Flaws" STRING "Ferocity (when ridden in battle), Improved Characteristics, Long-Winded, Proud (minor)"
+            ^"Qualities" STRING "Domesticated, Fast Runner, Herd Animal, Imposing Appearance, Tireless"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 55
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+            "Loyal" +2
+            "Brave" +1
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "in battle"
+            "Awareness" SCORE 2 SPECIALTY "bad footing"
+            "Brawl" SCORE 3 SPECIALTY "hooves"
+        }
+        COMBAT {
+            "Hooves" INIT 2 ATTACK 7 DEFENSE 7 DAMAGE 5
+        }
+        DESCRIPTION "Coursers are the most common combat-trained warhorses of the era. Like most horses in Mythic Europe, they are between fourteen and fifteen hands in height. A courser usually costs around 10 to 20 pounds, varying based on the horse’s quality, with 16 pounds being the average price for most sagas (see *Covenants,* page 71). Coursers are completed unsuited as pack animals and workhorses, and are temperamentally unsuited as general riding horses for travel. A rouncey, often favored by squires, can be used as a general utility horse, but retains the combat training of the courser; such horses lack Ferocity and Confidence, and gain the Flaw Proud. A rouncey costs between five and ten pounds, though some fine specimens cost many times that sum. A commoner or squire who rides a particularly fine rouncey may attract a Reputation as having ideas above his station, and the scorn of his betters."
+    }
+
+    #t33657b0c07c3360e4d2df0 ^"Riding Horse (Palfrey or Jennet)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 2
+            ^"Virtues & Flaws" STRING "Improved Characteristics, Long-Winded"
+            ^"Qualities" STRING "Domesticated, Fast Runner, Herd Animal, Imposing Appearance, Tireless"
+            ^"Personality Trait" STRING "Skittish +3, Brave –2 (Jennet: Docile +1, Brave –3)"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 56
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "distance riding"
+            "Awareness" SCORE 2 SPECIALTY "escape routes"
+            "Brawl" SCORE 1 SPECIALTY "hooves"
+        }
+        COMBAT {
+            "Hooves" INIT 3 ATTACK 5 DEFENSE 6 DAMAGE 5
+        }
+        DESCRIPTION "Palfreys are the standard riding horse favored for general usage, capable of being ridden in a hunt, being controlled in combat by anyone with a Ride Ability of 3 or more, and suitable for long-distance travel, being able to make thirty miles a day or more on good roads if ridden hard. Most palfreys are mares rather than stallions. They lack the aggression of coursers. The palfrey, if ridden by a lady, is often referred to as a jennet, which is always a mare. It is extremely uncommon for ladies to ride side-saddle in Mythic Europe, though a few might if their gowns are particularly unsuited to riding and the need is urgent. (Riding side-saddle is not a feature of etiquette in this period, simply something forced upon ladies in some circumstances. Riding astride a horse is entirely normal and provokes no unfavorable comment.) A palfrey or jennet stands a little over fourteen hands, and can be purchased for around two pounds."
+    }
+
+    #t5635775ee1dc11f913cbc6 ^"Draught Horse (Hackney)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -3
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 3
+            ^"Virtues & Flaws" STRING "Long-Winded, Noncombatant"
+            ^"Qualities" STRING "Domesticated, Herd Animal, Imposing Appearance, Tireless"
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 56
+        }
+        PERSONALITY_TRAITS {
+            "Placid" +2
+            "Stubborn" +1
+            "Brave" -2
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "stamina"
+            "Awareness" SCORE 2 SPECIALTY "commands"
+            "Brawl" SCORE 1 SPECIALTY "hooves"
+        }
+        DESCRIPTION "The hackney is a large horse of up to sixteen hands used for general riding, and as a workhorse. With the new horse collar, and teamed either one in front of the other or in parallel pairs, they are half again as efficient as a similar number of oxen. Hackneys are slow and ponderous beasts not suited for combat or hunting, but they can be ridden for long journeys, or by those not bothered about appearances or speed. Primarily they are used for farm work. A pair of hackneys can be bought for as little as a pound, but no noble would ever be seen riding such a beast. A hackney with a horse collar can easily pull a heavily laden cart, which might otherwise require two oxen."
+    }
+
+    #t38741b82560ec079ca6441 ^"Working Pony (Fell or Icelandic)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 1
+            ^"Virtues & Flaws" STRING "Improved Characteristics, Long-Winded, Perfect Balance, Noncombatant"
+            ^"Qualities" STRING "Domesticated, Herd Animal, Imposing Appearance, Tireless"
+            ^"Personality Trait" STRING "Brave+2, Resilient +1"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 56
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "footing"
+        }
+        DESCRIPTION "This sturdy pony is suited for use on the roughest terrain. These statistics may be used to represent animals from the north of England and Scotland, or Iceland, and such beasts are greatly prized for their ability to cross mountain trails and treacherous moors. A working pony costs about one pound in Northern Europe, but far more in southern regions. Superb pack animals, sure footed and sturdy, they are used to carry supplies over long distances where no cart can go, and across country. The Perfect Balance Virtue represents their abilities on treacherous mountain paths."
+    }
+
+    #tba38d12fecda312d9cab62 ^"Gyrfalcon (Falco)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -6
+                ^"Stamina" INTEGER -2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 6
+            }
+            ^"Size" INTEGER -3
+            ^"Qualities" STRING "Accomplished Flier, Fast Flier, Keen Eyesight, Pursuit Predator, Extra Natural Weapons"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Ferocity (swooping attack), Keen Vision, Fragile Constitution"
+            ^"Combat" STRING "Talons: Init +8, Attack +6, Defense +12, Damage –4 Beak: Init +9, Attack +6, Defense +9, Damage –5 Includes +3 bonus for Fast Flyer Quality."
+            ^"Soak" INTEGER -2
+            ^"Fatigue levels" STRING "OK, 0/0, –1, –3, –5, Unc."
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Natural Weapons" STRING "The unmodified weapon statistics for a falcon’s talons are Init –1, Attack +2, Defense +3, Damage +2. The statistics for its beak are Init 0, Attack +3, Defense +1, Damage +1."
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 59
+        }
+        PERSONALITY_TRAITS {
+            "Fierce" +3
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "swift flight"
+            "Awareness" SCORE 4 SPECIALTY "spotting prey"
+            "Brawl" SCORE 2 SPECIALTY "talons"
+            "Hunt" SCORE 4 SPECIALTY "game birds"
+            "Survival" SCORE 3 SPECIALTY "cold climates"
+        }
+        DESCRIPTION "These statistics are for a gyrfalcon, the largest and most prized of falcons. Its wingspan can exceed four feet. It has a short, hooked beak and dark eyes. Its plumage may be white, grey, or dark brown and has a banded pattern. The gyrfalcon is among the swiftest of birds and hunts on the wing, overtaking its prey in flight. Nobles use falcons to hunt game birds such as partridge. In the wild, the gyrfalcon can kill prey as large as a goose, and usually hunts birds and small rodents. It lives in cold northern lands including Scandinavia, Iceland, and Russia. An untrained bird costs about three to four pounds, and they are greatly prized."
+    }
+
+    #t6904cc8f833e9a8851899c ^"Peregrine Falcon" DEF {
+        EXTENDS #t057f16eb28fce5bb0b5d9a ^"Animal Variant"
+        PROPERTIES {
+            ^"Template" STRING "Gyrfalcon (Falco)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "Smaller than the gyrfalcon, with Size –4, the peregrine attacks from flight, hovering overhead and then falling like a stone to grab its prey in outstretched talons in a swooping attack. The peregrine is an Ambush Predator, not a Pursuit Predator, and has Str –8, Qik +7, and Talons with Init +7, Attack +6, Defense +14, Damage –6. It has Stealth 3 (ambush prey) but only Athletics 3 (climbing flight). If it makes a stealthy attack on unsuspecting prey it automatically gains +3 to its attack total and wins initiative. A peregrine falcon costs around one pound untrained."
+    }
+
+    #t2263242c0f30cbb645c0a5 ^"Goshawk" DEF {
+        EXTENDS #t057f16eb28fce5bb0b5d9a ^"Animal Variant"
+        PROPERTIES {
+            ^"Template" STRING "Gyrfalcon (Falco)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "The female goshawk is the same size as a gyrfalcon, but the goshawk is flown from the fist, with a distinctive graceful flight style. Remove the Quality Fast Flyer and add Aggressive for a +3 bonus to Attack. Despite this aggression, goshawks do not attack prey larger than Size –2 unless specifically trained to hunt that particular type of prey. An untrained goshawk can be purchased for a pound."
+    }
+
+    #t98b1643fe4ce83154d4556 ^"Merlin" DEF {
+        EXTENDS #t057f16eb28fce5bb0b5d9a ^"Animal Variant"
+        PROPERTIES {
+            ^"Template" STRING "Gyrfalcon (Falco)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "A small but very fast falcon. Modify the gyrfalcon statistics to Size –5, Str –10, Qik +8, and Beak Init +11*, Attack +6, Defense +11, Damage –9. Merlins are useful for hunting small prey up to partridge size (–6). Four untrained birds can be purchased for a pound."
+    }
+
+    #t74ac0e22f60bc6c069afec ^"Lanner" DEF {
+        EXTENDS #t057f16eb28fce5bb0b5d9a ^"Animal Variant"
+        PROPERTIES {
+            ^"Template" STRING "Gyrfalcon (Falco)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "Found mainly in North Africa and Mediterranean climes, the lanner is often used to teach falconry. A Size –4 falcon, it lacks the Ferocity virtue and Confidence Score and is therefore easy to train. Lanners are, uniquely, usually taught to hunt in pairs. The lanner has Str –8, Qik+7, and Talons with Init +7, Attack +6, Defense +14, Damage –6, but a pair can be taught to fight as a trained group, and a lanner has Leadership 1. A trained pair therefore attacks with Str –8, Qik +7, and Talons with Init +7, Attack +12, Defense +14, Damage –6. A pair of untrained birds can be purchased for a pound."
+    }
+
+    #tb3ce05cfbdc15f09845b78 ^"Sparrowhawk" DEF {
+        EXTENDS #t057f16eb28fce5bb0b5d9a ^"Animal Variant"
+        PROPERTIES {
+            ^"Template" STRING "Gyrfalcon (Falco)"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "The most commonly found hawk in Mythic Europe, and hence the most widely flown, sparrowhawks are often captured in the wild. If purchased, six untrained bird can be bought for a pound. Remove the Quality Fast Flyer, reduce Size to –4, and add Beak Init +8, Attack +6, Defense +13, Damage –7. Sparrowhawks are notoriously difficult to raise, with an Aging rolls modifier of –3 and a Stamina of –3, giving them Soak –3 to reflect their extreme fragility. They are naturally perverse, sometimes dying just to spite their owners."
+    }
+
+}

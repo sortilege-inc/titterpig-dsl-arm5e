@@ -1,0 +1,226 @@
+EXTENSION "ARMDef_Lords_Of_Men_OptionalCombatRules_Rules" {
+    NAME "Ars Magica Fifth Edition, Lords of Men - Chapter Nine: Optional Combat Rules rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Lords_Of_Men_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t39157ef62bce96864f44de ^"Action Priority Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Option: Interrupting Actions"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 119
+        }
+        FORMULAS {
+            "Action Priority Total" "Quickness + Ability – Encumbrance + stress die"
+        }
+    }
+
+    #t9c447e88346be3a3bc4c7c ^"Walk" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Moving in Combat"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 120
+        }
+        FORMULAS {
+            "Walk" "10 + Quickness − Encumbrance paces per round"
+        }
+    }
+
+    #tb5b46c7c9144f2e151b2d4 ^"Hurry" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Moving in Combat"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 120
+        }
+        FORMULAS {
+            "Hurry" "2 x (10 + Quickness – Encumbrance) paces per round"
+        }
+    }
+
+    #t2a9718e18758f94c1d5042 ^"Run" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Moving in Combat"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 120
+        }
+        FORMULAS {
+            "Run" "4 x (10 + Quickness – Encumbrance) paces per round"
+        }
+    }
+
+    #ta789c94778a3bdf265d41d ^"Evasion Total on Foot" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Option: Evasion"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 125
+        }
+        FORMULAS {
+            "Evasion Total on Foot" "Quickness + Brawl − Size − Encumbrance + Shield Defense Modifier + stress die"
+        }
+    }
+
+    #t11b4d7a7c320bb40a46f16 ^"Evasion Total While Mounted" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Option: Evasion"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 125
+        }
+        FORMULAS {
+            "Evasion Total While Mounted" "Quickness + Ride − Size − Encumbrance + Shield Defense Modifier + stress die"
+        }
+    }
+
+    #t407829c98bfd008923fee5 ^"Resist Charge While Mounted" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Option: Shock of the Charge"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 127
+        }
+        FORMULAS {
+            "Resist Charge While Mounted" "Dexterity + Ride + saddle modifier + stress die vs. Damage Total (before Soak) + Size of attacker’s horse"
+        }
+    }
+
+    #t080d8bdd2d44ebae7cb053 ^"Resist Charge While on Foot" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Option: Shock of the Charge"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 127
+        }
+        FORMULAS {
+            "Resist Charge While on Foot" "Str + Size + Combat Ability + stress die vs. Damage Total (before Soak) + Size of attacker’s horse"
+        }
+    }
+
+    #t621eeb750d26b12e1887b1 ^"Maintain or Regain Control of Panicked Horse" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Maintain or Regain Control of Panicked"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Maintain or Regain Control of Panicked Horse" "Presence + Ride vs. Ease Factor 6 – horse’s total Wound Penalties"
+        }
+    }
+
+    #t818cea163bca0a4bcc7817 ^"Leap from the Saddle" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Leaping from the Saddle"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Leap from the Saddle" "Dexterity + Athletics – Encumbrance + stress die vs. Ease Factor 9"
+        }
+    }
+
+    #tabdd46324bdddb3546903e ^"Vault Into the Saddle" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Option: Vaulting Into the Saddle"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 129
+        }
+        FORMULAS {
+            "Vault Into the Saddle" "Strength + Athletics – Encumbrance + stress die vs. Ease Factor 6"
+        }
+    }
+
+    #t69b1ecc418f68f3d7128e5 ^"Recovery Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Recovering from Bruises"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 131
+        }
+        FORMULAS {
+            "Recovery Total" "Stamina + Medic’s Medicine or Chirurgy score + magical aid + stress die"
+        }
+    }
+
+    #t4378ffd237d93ff355d24b ^"Shorten Training Time" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Accelerated Group Training"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 133
+        }
+        FORMULAS {
+            "Shorten Training Time" "Communication + Leadership + stress die"
+        }
+    }
+
+    #tfe656c28e31fd979a25552 ^"Group Discipline" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Discipline"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 134
+        }
+        FORMULAS {
+            "Group Discipline" "leader’s Presence + leader’s Leadership + stress die"
+        }
+    }
+
+    #t76ca8dc01913935b9bd3f6 ^"Group Morale" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Morale"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 134
+        }
+        FORMULAS {
+            "Group Morale" "leader’s Presence + leader’s Leadership + stress die"
+        }
+    }
+
+    #t1a71adc0e6e1b41cb595b8 ^"Rally a Group" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Rallying a Group"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Rally a Group" "Presence + Leadership + stress die"
+        }
+    }
+
+    #t11c6082277cf0904a7c96e ^"Replace a Vanguard in Combat" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Groups With No Leader"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Replace a Vanguard in Combat" "leader’s Presence + leader’s Leadership + stress die vs. Ease Factor 9"
+        }
+    }
+
+    #te0b6cd544ab693a5b048b2 ^"Assume Leadership in Combat" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Groups With No Leader"
+            ^"Source" STRING "Lords of Men"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Assume Leadership in Combat" "Presence + Leadership + stress die vs. Ease Factor 9"
+        }
+    }
+
+}

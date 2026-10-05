@@ -1,0 +1,52 @@
+EXTENSION "ArM5_RoP_Infernal_Maleficia_Parameters" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Ten: The Maleficia parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Infernal_Core_Ext"
+
+    # The chapter's parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t856fa9794a9c3d3ab1474f ^"Crossroads (Range) (Realms of Power: The Infernal)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Crossroads (Range)"
+            ^"Parameter" STRING "Range" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "The Devil is known to favor places where one road crosses another, perhaps because they represent a choice between two paths. This Range allows the character to affect a target that is on a road, from another road that intersects it, and is otherwise like the Faerie Magic Range: Road (ArM5, page 92) save that any number of roads can cross each other with this Range. Note that the Infernal caster cannot affect targets on the same road as him. It is most effective when cast at an intersection, since there it can affect targets on either road. Range Crossroads is considered the same level as Range Voice."
+    }
+
+    #t471af9d251fa3eb56abfae ^"Cursed (condition) (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "Instead of causing an effect to take place immediately, the infernalist can cast it as a conditional effect using this Duration. This ensures that the effect only manifests in response to an uncommon circumstance that is clearly outlined for the victim as part of the spell. For example, a set of curses might specify that a curious maid will suffer horrible pain if she ever tells anyone about a particular ceremony she witnessed, or says the caster’s name, or sets foot in a church. The effect of the curse can also target something other than the person affected by the condition, as long as both targets are within range of the effect when it is cast. For example, a nobleman might be cursed that his daughter will die if he ever confesses his sins. If either the target or the victim has Magic Resistance, the effect must penetrate at the time of casting to have any effect, and it may be dispelled through Powers that undo other Powers before the effect comes to pass. Duration (condition) is the same level as Duration Sun, but also requires a second Duration to describe the triggered effect."
+    }
+
+    #t2866dfc2ad34a2c84c64ab ^"Forsaken (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "The effect comes into being instantly and is essentially permanent, lasting for as long as the target remains tainted with the power of the Infernal. Repentance on the part of the target cancels the effect immediately, and may sometimes make it as if the effect had never happened. Duration Forsaken is the same level as Duration Year, though like a Momentary ritual it cannot be dispelled."
+    }
+
+    #t37f1621f83974849da1b9f ^"Passion (Target) (Realms of Power: The Infernal)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Passion (Target)"
+            ^"Parameter" STRING "Target" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "An effect with this Target acts on a group of people through their passions, affecting only those inclined towards a particular virtue or vice, which is integrated into the spell. Each character within the targeted area must roll a simple die and add or subtract any appropriate Personality Traits. Anyone with a total of 6 or higher is affected. Target Passion is the same level as Target Group, and is similarly modified by the size of the affected area."
+    }
+
+}

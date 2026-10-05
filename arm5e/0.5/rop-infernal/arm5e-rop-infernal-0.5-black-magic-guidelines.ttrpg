@@ -1,0 +1,109 @@
+EXTENSION "ArM5_RoP_Infernal_BlackMagic_Guidelines" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Twelve: Black Magic guidelines"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Infernal_Core_Ext"
+
+    # The chapter's guidelines, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t5170d849fde7acee94aad1 ^"Creo Vim Guidelines (Realms of Power: The Infernal, Apotropaic Guidelines)" DEF {
+        EXTENDS #tIHnYX4FF4IJ6Zh8Wh2D5gBk ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Printed Name" STRING "Creo Vim"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 121
+        }
+        GUIDELINES {
+            "General" "Restore a demon’s Might Pool by (the level of the spell + 10), as long as the spell penetrates its Magic Resistance."
+            "Level 4" "Create a temporary Arcane Connection to a demon within range."
+        }
+    }
+
+    #t207966ca77468249c0b9c9 ^"Intellego Vim Guidelines (Realms of Power: The Infernal, Apotropaic Guidelines)" DEF {
+        EXTENDS #tIHnYX4FF4IJ6Zh8Wh2D5gBk ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Printed Name" STRING "Intellego Vim"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 121
+        }
+        GUIDELINES {
+            "Level 5" "Speak with a demon."
+        }
+    }
+
+    #ta3148a4b928a582d695657 ^"Muto Vim Guidelines (Realms of Power: The Infernal, Apotropaic Guidelines)" DEF {
+        EXTENDS #tIHnYX4FF4IJ6Zh8Wh2D5gBk ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Printed Name" STRING "Muto Vim"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 121
+        }
+        GUIDELINES {
+            "General" "Bind a demon with Might equal to (the level of the spell + 10) to a person or object."
+        }
+    }
+
+    #t6c27340964f3cd01fd39c2 ^"Perdo Vim Guidelines (Realms of Power: The Infernal, Apotropaic Guidelines)" DEF {
+        EXTENDS #tIHnYX4FF4IJ6Zh8Wh2D5gBk ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Printed Name" STRING "Perdo Vim"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 121
+        }
+        GUIDELINES {
+            "General" "Reduce the Casting Total for a specific type of magic (such as Infernal Powers) cast by the target by the (level + 2 magnitudes) of the spell. (Note that Voice Range adds two magnitudes to a spell level, so that this is a penalty equal to spell level for a Voice Range spell.)If two or more such spells affect one target, only the highest has any effect; the penalties do not add. The spell must penetrate the target’s Magic Resistance in order to have any effect. • Reduce a target’s Might Pool by (the level of the spell + 10), as long as the spell penetrates the creature’s Magic Resistance."
+        }
+    }
+
+    #t6b598aa678eccf34926ef6 ^"Rego Vim Guidelines (Realms of Power: The Infernal, Apotropaic Guidelines)" DEF {
+        EXTENDS #tIHnYX4FF4IJ6Zh8Wh2D5gBk ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Printed Name" STRING "Rego Vim"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 121
+        }
+        GUIDELINES {
+            "General" "Summon a demon with Infernal Might less than (the level of the spell + 20), as a Ritual effect."
+            "Level 5" "Command a demon to do the caster’s will."
+        }
+    }
+
+    #t2801b37d6661fa21d51c5a ^"Shape and Material Bonuses (Realms of Power: The Infernal)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Bonus"]
+            ^"Printed Name" STRING "Shape and Material Bonuses"
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 123
+        }
+        TABLE {
+            "Amulet bearing the sigils of angels*" "+7 ward against demons" "+7 banish demons"
+            "Brass" "+4 demons, devils, and angels"
+            "Candle made of goat fat" "+3 summon demons"
+            "Candle, black" "+2 summon demons"
+            "Chalk, blue" "+2 wards against demons"
+            "Cinquefoil" "+3 drive away demons"
+            "Cross" "+5 ward away supernatural" "+5 cause damage to Infernal creatures" "+5 banish demons"
+            "Frankincense" "+4 cleanse a place of Infernal influence" "+3 Perdo Vim"
+            "Lead" "+3 summon or bind spirits"
+            "Phylactery" "+5 protect wearer"
+            "Sapphire" "+2 Perdo Vim against spirits"
+            "Silver" "+3 protect spirits"
+            "Sulphur" "+4 demons"
+            "Tablet" "+2 command spirits"
+        }
+        DESCRIPTION "*An Intelligence + Infernal or Divine Lore roll against an Ease Factor of 12 is required to make such an amulet, or an Ease Factor of 6 if the character has the Craft Amulets Supernatural Ability (see *Realms of Power: The Divine*, page 137)."
+    }
+
+}

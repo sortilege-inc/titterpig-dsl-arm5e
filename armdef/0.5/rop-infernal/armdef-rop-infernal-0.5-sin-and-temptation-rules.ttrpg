@@ -1,0 +1,34 @@
+EXTENSION "ARMDef_RoP_Infernal_SinAndTemptation_Rules" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Two: Sin and Temptation rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t6af305c1f6db7d955be3ae ^"Infernal Influence" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Infernal Influence"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 22
+        }
+        FORMULAS {
+            "Infernal Influence" "simple die + Presence + Leadership"
+        }
+    }
+
+    #t5237fda47be000b37c2beb ^"Tarnishing an aura" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Tarnish"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 24
+        }
+        FORMULAS {
+            "Tarnishing an aura" "stress die + Presence + Leadership"
+        }
+    }
+
+}

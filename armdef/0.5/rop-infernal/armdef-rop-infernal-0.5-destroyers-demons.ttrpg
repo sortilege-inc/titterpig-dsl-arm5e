@@ -1,0 +1,1331 @@
+EXTENSION "ARMDef_RoP_Infernal_Destroyers_Demons" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Seven: Demons as Destroyers demons"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's demons, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t2d05d64a68e7ab75dcd4b0 ^"Architectus, Demon Builder" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Master of the Furies"
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Virtues and Flaws" STRING "Berserk, Lesser Malediction (discomfort from sunlight)"
+            ^"Reputations" LIST ["Easily Tricked 3 (local)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Weakness" STRING "Architectus must always fulfill any agreement he makes."
+            ^"Vis" STRING "5 pawns of Rego, in whip hand"
+            ^"Appearance" STRING "Architectus’s natural form is a large, bat-winged man, with goat’s horns, hooves, and beard. In this form he carries an enormous, oily whip, which he cracks thunderously toward each of the four directions before commanding his host of servants. The whip’s four thongs end in flaming weights. His most commonly used human shape looks like a powerfully built man. He uses this form when making initial contact with his victims. In this form, he has sometimes claimed that his family comes from Sicily, and one entrance to the regio in which he makes is home is found there."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 66
+        }
+        PERSONALITY_TRAITS {
+            "Wrathful" +4
+            "Self-controlled" +2
+        }
+        COMBAT {
+            "Whip" INIT 7 ATTACK 10 DEFENSE 12 DAMAGE 14
+            " Claws" INIT 9 ATTACK 7 DEFENSE 9 DAMAGE 4
+        }
+        ABILITIES {
+            "Brawl" SCORE 1 SPECIALTY "claws"
+            "Charm" SCORE 6 SPECIALTY "those he intends to trick into deals"
+            "Craft" SCORE 2 SPECIALTY "masonry"
+            "Guile" SCORE 3 SPECIALTY "daughters"
+            "Infernal Lore" SCORE 6 SPECIALTY "great physical works of demons"
+            "Intrigue" SCORE 5 SPECIALTY "geopolitics"
+            "Leadership" SCORE 3 SPECIALTY "laborers"
+            "Profession" SCORE 9 SPECIALTY "architecture"
+            "Single Weapon" SCORE 7 SPECIALTY "mace and chain — weighted whip"
+        }
+        POWERS {
+            #t22ec3a12a71418434a560f ^"Command the Four Hosts of Builders" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This demon can command a swarm of lesser creatures. These are usually ordered to seek out materials and then construct buildings under his direction, but they may be given many other tasks. These tiny demons work with extraordinary speed, and are able to create complicated structures within a single evening. Architectus cracks his whip to the four directions to summon his swarms, but this is an affectation rather than a requirement — the whip is merely a prop."
+            }
+            #tfd9402547b40671bcfdab1 ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Architectus can assume the shape of any human being."
+            }
+            #t82e1f6adbb1ee220afaa8e ^"Eyes of Stone Demons" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Architectus’s minor demons act as spies and messengers. Flocks of tiny demons, visible as decorative gargoyles to Second Sight, nest in his constructions and monitor the surrounding area, informing him of opportunities for mischief."
+            }
+            #tc9c92ded2134e3c56cafa2 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t1846346d405672e10fc964 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Vainglory. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t4fa4e868332333162c649e ^"Waxing Tide of Humors" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t8e32974904017fbfe136f5 ^"Berserker Rage" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t8800619d78933d1657c7e9 ^"Endurance of the Enraged" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+        }
+        DESCRIPTION "Architectus commands a host of lesser creatures, and uses them to build roads and bridges overnight. Architectus often builds a structure after making a deal with a mortal. As an example, he often agrees that in exchange for his labor, he will take the first being to cross a bridge. He is usually cheated of his fee by mortal cunning. Architectus welcomes this process, for over time, each bridge or road harms those who live near it. Villages previously separated by ravines are able to raid each other’s flocks. Traders develop routes through the area, and bring wealth and vice. Generals use them to move their armies, and their foraging soldiers ravage the countryside. This harm usually consumes the person who made the initial agreement with Architectus. Myths about how Architectus was tricked into building a road or bridge never include this detail.\n\nArchitectus seems, to his victims, to be a Fury. He has the ability to halt his Berserker Rage at will, and his preference for schemes requiring decades to develop makes him difficult to classify. He often pretends that daylight, or the cock’s crow, repels him, but they do not. He finds sunlight unpleasant, but can tolerate it if necessary. His servants find sunlight painful, but are more frightened of his whip than the sun, and so can be forced to work during the day in exceptional cases."
+    }
+
+    #t2c495765f11dd310841863 ^"Bael, Destroyer of Nations" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Lord of the Furies"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Berserk"
+            ^"Reputations" LIST ["Destroyer of Nations 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 5
+            ^"Combat" STRING "Claws: Init –2, Attack +15, Defense +4, Damage +10 Long sword: Init 0, Attack +14, Defense +5, Damage +12 when using his Form of Man Power"
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Weakness" STRING "Vulnerability (stale bread)"
+            ^"Vis" STRING "2 pawns of Animal, in the cat’s head; 2 pawns of Vim, in the human head; 2 pawns of Perdo, in the toad’s head."
+            ^"Appearance" STRING "Bael appears as a creature who has three heads, those of a toad, a cat, and a man. His body is like that of a lion, but hairless and tailless."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 67
+        }
+        PERSONALITY_TRAITS {
+            "Rebellious" +6
+            "Wrathful" +4
+            "Self–Controlled" -6
+        }
+        ABILITIES {
+            "Brawl" SCORE 5 SPECIALTY "claws"
+            "Folk Ken" SCORE 6 SPECIALTY "nobility"
+            "Leadership" SCORE 9 SPECIALTY "slaves"
+            "Profession: Battle Tactician" SCORE 5 SPECIALTY "assault"
+            "Single Weapon" SCORE 5 SPECIALTY "long sword"
+        }
+        POWERS {
+            #t728de7837f48b065af41a7 ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Bael can assume the shape of any human being. He often takes the form of a military adviser to the Crown."
+            }
+            #tf46c0a10a21667d8152fce ^"Seething Resentment" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Bael can magnify any feelings of annoyance, or resentment towards a particular person, into an all-consuming hatred which threatens to boil over in a fit of rage. The victim must make appropriate Personality Trait rolls against an Ease Factor of 9 to avoid lashing out at the object of his hatred, whether this is a physical attack, a vicious verbal assault, or even a declaration of war. The effect lasts until the victim succumbs to the passions, although the hatred takes an hour to dissipate. If the victim manages to control his hatred until Sunday morning, the hatred vanishes."
+            }
+            #t8dbe76568f55c5a390510f ^"Worm of the Mind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Bael’s toad head can spit a venom into the mouth of a sleeping victim, which burrows into his mind and destroys all volition. The victim becomes a mindless automaton, obedient to Bael’s mental commands, but unable to otherwise think for himself. Bael can control a number of these slaves at any one time equal to his Leadership Ability, but can create many more than this if he wishes."
+            }
+            #t2cf1eb2a7c70a89ad0d2c6 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t6089a1be25e7e0dfce3d82 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Resentment. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t3fc80434abce1d1609611f ^"Waxing Tide of Humors" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t72d0eb8cd9953e818d9e0f ^"Berserker Rage" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t524cc53b884faae8ce1b75 ^"Endurance of the Enraged" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+        }
+        DESCRIPTION "Bael is one of the most terrible of his demonic order. He claims the title of King, which is clearly ironic, for he seeks to provoke wars between nations and destroy kingdoms. Under his direction, lesser demons cause petty troubles to flare up between adjoining territories, while Bael lurks in the court of one or other of the rulers and uses his power to prompt his victim into rash actions. He prefers not to turn his royal targets into slaves (see his Worm of the Mind Power), for by bypassing free will, it wins no souls for Hell."
+    }
+
+    #t7c9356dc908f7a5e704110 ^"Fimus, Warrior Demon" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Aerial Powers"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -4
+            }
+            ^"Size" INTEGER 2
+            ^"Virtues and Flaws" STRING "Puissant Great Weapon; Poor Eyesight, Simple-Minded"
+            ^"Reputations" LIST ["Champion of Hell 1 (Infernal)"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Weakness" STRING "Abhorrent Material (cinnamon)"
+            ^"Vis" STRING "2 pawns of Terram, in eye"
+            ^"Appearance" STRING "Fimus appears as an immense man apparently put together out of boulders. He has but one eye, in the center of his forehead. He carries an immense cudgel made out of a stalagmite."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 68
+        }
+        PERSONALITY_TRAITS {
+            "Untamable" +5
+            "Intimidating" +3
+        }
+        COMBAT {
+            "Cudgel" INIT -3 ATTACK 13 DEFENSE 6 DAMAGE 11
+            " Fist" INIT -4 ATTACK 6 DEFENSE 2 DAMAGE 4
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "pursuit"
+            "Awareness" SCORE 4 SPECIALTY "foes"
+            "Brawl" SCORE 5 SPECIALTY "fist"
+            "Great Weapon" SCORE 6 BONUS 2 SPECIALTY "cudgel"
+        }
+        POWERS {
+            #tec18e55beae12eaa58d2df ^"Elemental Control of Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Aerial Powers. He prefers effects such as *Wielding the Invisible Sling* and *Rusted Decay of Ten-Score Years*."
+            }
+            #t4bb51f36fc13a109af3188 ^"Born of Rock" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The body of this demon is made from solid rock. This makes it exceedingly heavy and almost impossible to harm by mundane means."
+            }
+            #tf1e22d310345ea433052f1 ^"Death’s Vengeance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Upon death, this demon’s body explodes, sending shards of debris up to 20 paces in all directions. Treat this as a physical attack against all within range, which can be dodged but not otherwise defended against. The Attack Bonus is +12, and the Damage is +15."
+            }
+            #t38238a047164841db02d92 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t1c5e237d85908bcfff47f9 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Cowardice. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tda4872a87479d1eaa6345f ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION ". See Chapter 4: Infernal Legions, Aerial Powers."
+            }
+        }
+        DESCRIPTION "Fimus is but one of many brother-demons (all with the same name); their mother produces more every time she evacuates her bowels. He and his brothers are popular footsoldiers and shock troops used by other demons, because they are effective warriors, and too stupid to effectively entertain rebellious thoughts. Each of the brothers has a different Abhorrent Material, depending upon what their mother had been eating prior to their birth."
+    }
+
+    #t94bae8babc0f4a9aff833b ^"Gavi, a Dibbuk" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Furies (Dibbukim)"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" STRING "Int +1, Per +2, Pre 0, Com +1, Str n/a, Sta n/a, Dex n/a, Qik n/a"
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Berserk"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Weakness" STRING "Compulsiveness"
+            ^"Vis" STRING "None — Gavi has no ability to form a body, thus cannot leave behind a corpse."
+            ^"Appearance" STRING "None; if seen with Second Sight, Gavi appears as he did in life, a wealthy Jew, but with feral eyes containing a glint of madness. His hands are hooked into claws and his mouth contains sharp, dagger-like teeth."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 69
+        }
+        PERSONALITY_TRAITS {
+            "Profigate with Money" +8
+            "Wrathful" +4
+            "Frantic" +3
+            "Self-Controlled" -6
+        }
+        ABILITIES {
+            "Awareness" SCORE 3 SPECIALTY "sinners"
+            "Bargain" SCORE 3 SPECIALTY "possessions"
+            "Profession: Merchant" SCORE 5 SPECIALTY "wool"
+        }
+        POWERS {
+            #t94701dc3eca91b8c46787e ^"Possession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t7d596dfac3e0a2cd6728b5 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Generosity. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t41a7f22cc77c1210e021e1 ^"Waxing Tide of Humors" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t23adf2f23797fe8899b68e ^"Berserker Rage" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t99675ce30defc3590634aa ^"Endurance of the Enraged" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+        }
+        DESCRIPTION "Gavi was a greedy merchant in life who went to Hell for his sins. Desperate to rid himself of the sin of greed, thinking this will allow him to enter Heaven, Gavi forces his victims to carry out mad acts of charity. He gives all their money away, forces others to take their greatest possessions, and even force-feeds beggars."
+    }
+
+    #ta8e1f6d0a1b11d8df8232b ^"Golab, Foe of the Seraphim" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Vessels of Iniquity"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Reputations" LIST ["Foe of the Seraphim 3 (Infernal)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Weakness" STRING "Abhorrent Material (blessed objects)"
+            ^"Vis" STRING "6 pawns of Vim, in genitalia"
+            ^"Appearance" STRING "In common with all Vessels of Iniquity, his natural form is indescribable; it is hatred given solid form. Any who see it are driven to indulge in the desecration of those things they hold most sacred and spiritual. When appearing as a human, Golab takes the form of an obese member of the clergy, usually one from a group known in the region for hypocrisy or other moral failings."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 70
+        }
+        PERSONALITY_TRAITS {
+            "Depraved" +6
+            "Hateful" +6
+            "Pious" -6
+        }
+        COMBAT {
+            "Club" INIT 1 ATTACK 13 DEFENSE 7 DAMAGE 7
+        }
+        ABILITIES {
+            "Church Lore" SCORE 5 SPECIALTY "sects"
+            "Divine Lore" SCORE 5 SPECIALTY "heresy"
+            "Islamic Lore" SCORE 5 SPECIALTY "sects"
+            "Jewish Lore" SCORE 5 SPECIALTY "sects"
+            "Leadership" SCORE 6 SPECIALTY "mobs"
+            "Single Weapon" SCORE 6 SPECIALTY "club"
+            "Theology" SCORE 6 SPECIALTY "errors in reasoning"
+        }
+        POWERS {
+            #tb98ae851ced4163a3b521c ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Religious Intolerance. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t6a327cb5248318a0f27265 ^"Form of Wickedness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #t71760532a61797cda28424 ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #t7b931e5652c057f1409c1d ^"Contagious Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+        }
+        DESCRIPTION "Golab is the self-declared adversary of the seraphim. He specializes in sedition against God, which he achieves through the emotion of hatred. He delights in causing riots on holy days, causing pilgrims to stampede innocents, and inciting his victims to murder the clergy."
+    }
+
+    #tfdb879361570f9984f9c25 ^"Gourmand the Sweet-Toothed" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Vessel of Iniquity"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Imaginem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Appears to have the Obese Flaw, but does not suffer any penalties."
+            ^"Reputations" LIST ["Spice Trader 1 (Infernal)"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Weakness" STRING "Vulnerability (salt) — He finds this extremely embarrassing."
+            ^"Vis" STRING "3 pawns of Imaginem, in the stains on his clothing"
+            ^"Appearance" STRING "Gourmand manifests the human form of a fleshy man of middle age. Food of vivid colors stains his sumptuous clothes, chubby fingers, and the corners of his mouth. His smell, of rotting fruit, is transmitted to anything he touches, and does not fade until sunrise. Gourmand looks unfit and flabby, but is surprisingly swift and strong if forced to engage in combat. He uses a double-handed, basalt pestle as his preferred weapon."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 70
+        }
+        PERSONALITY_TRAITS {
+            "Depraved" +6
+            "Hateful" +6
+            "Gluttony" +3
+        }
+        COMBAT {
+            "Pestle (Cudgel)" INIT 3 ATTACK 10 DEFENSE 6 DAMAGE 10
+        }
+        ABILITIES {
+            "Bargain" SCORE 6 SPECIALTY "spices"
+            "Craft: Confectionery" SCORE 5 SPECIALTY "sugar"
+            "Great weapon" SCORE 3 SPECIALTY "cudgel"
+            "Guile" SCORE 3 SPECIALTY "merchants"
+        }
+        POWERS {
+            #t1bce12bd91adbf8d60bfba ^"Cloud of Pepper" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "This Power fills a room — or in unwalled areas, a circle 100 yards across — with a choking cloud of pepper dust, for one round. This irritates the lungs and eyes of humans, but does not cause any lasting damage. Characters within the cloud must make a Stamina roll against an Ease Factor of 9. Successful characters are unaffected by the dust. Those with lower totals are blinded for a round, and suffer a Fatigue level of choking damage. They may make a fresh Stamina roll each round, with the Ease Factor being reduced by one for each round since they were affected by the pepper. The pepper does not remove more than one Fatigue level form any victim. Gourmand uses this Power to inconvenience foes, either to make combat easier or to allow him to flee."
+            }
+            #t2065e9d67d41da612bba5c ^"Conjure Spices" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Gourmand may summon a measure of spices, of any type, from another place so swiftly it appears he has created it. Most spices are extremely valuable, and are given to his servants as rewards. Gourmand can also summon herbs and plant-based poisons using this Power."
+            }
+            #tde8f41f0a728d22ae5f113 ^"Hide Flavor" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The demon may alter the flavor and texture of one handful of any substance. These substances are usually used in poisoning, since Gourmand can make ground glass taste sweet and iron filings seem soft. This Power does not affect the appearance or smell of its target, which may give alter characters an opportunity to detect the adulteration."
+            }
+            #te7f91871d52fe3654ce1a3 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Craving Sweet things. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t1c33e84d799beb373cdb9d ^"Form of Wickedness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #t232c30d858b85c4fa4c99d ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #tcb8a67cb63535c52f262cb ^"Contagious Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+        }
+        DESCRIPTION "Gourmand seeks additional power over men through their sense of taste, and their greed for valuable spices. Gourmand favors many schemes, but those most dear to him are the propagation of trade along the Silk Road, and the introduction of sugar into the cuisines of Europe. He is not a particularly powerful demon, so he often works with others who are more suited to physical conflict."
+    }
+
+    #tccd951aa74f83df1d7172c ^"Hulikang, a Rabble Rouser" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Vessels of Iniquity (Merry Devil)"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Virtues and Flaws" STRING "Improved Characteristics, Puissant Athletics"
+            ^"Reputations" LIST ["Captain of the Red Devils 2 (Infernal)"]
+            ^"Hierarchy" INTEGER 2
+            ^"Combat" STRING "Punch: Init +3, Attack +4, Defense +4, Damage n/a Dodge: Init +3, Attack n/a, Defense +5, Damage n/a Hulikang never causes damage to people himself, he only appears to, to goad others on to sin."
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Weakness" STRING "Protected Group (solemn people)"
+            ^"Vis" STRING "2 pawns of Corpus, in each hand (4 pawns total)"
+            ^"Appearance" STRING "In human form, Hulikang takes the appearance of a hulking man with a bruised face and broken nose. He always wears a knitted cap and scarf, as a tribute to his greatest mischief ever."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 71
+        }
+        PERSONALITY_TRAITS {
+            "Depraved" +6
+            "Hateful" +6
+            "Jolly" +6
+        }
+        ABILITIES {
+            "Athletics" SCORE 6 BONUS 2 SPECIALTY "sport"
+            "Brawl" SCORE 1 SPECIALTY "dodge"
+            "Carouse" SCORE 6 SPECIALTY "quantity"
+            "Folk Ken" SCORE 6 SPECIALTY "rivalries"
+            "Intrigue" SCORE 4 SPECIALTY "encouraging fights"
+        }
+        POWERS {
+            #t5513f3f47668fcbe851af0 ^"Shout" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Allows the demon to say a short sentence that is perfectly audible to every person in a crowd, although they cannot determine its source."
+            }
+            #t88820e5527e36aaac9a74b ^"Pleasant Clouds in the Mind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Merry Devils."
+            }
+            #t40eff0c117805acec2118b ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Tribal Violence. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tecc82061fae96991245e21 ^"Form of Wickedness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #te672cbabcbf2c89dc2361b ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #ta2e3eef4c1361930fa5d6b ^"Contagious Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+        }
+        DESCRIPTION "Hulikang is a Merry Devil who specializes in destroying public celebrations, particularly those involving athletic contests. During the early part of the celebration, he encourages intoxication and rivalries in the crowd. Once the crowd has been prepared, he frightens them, in the hope that they will become a violent mob. He is particularly skilled at disrupting sporting events between rival villages. Hulikang often works with a partner, a female demon who names herself Nike after the ancient Greek goddess of victory. When operating as a pair, each claims the portion of the crowd supporting one team in a competition, and tries to outdo the violence the other provokes. He is also the captain of a sports team consisting entirely of demons, called the Red Devils."
+    }
+
+    #t7f0b82151e960eca307e64 ^"Mahonin" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (Maggots)"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -10
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 10
+            }
+            ^"Size" INTEGER -15
+            ^"Virtues and Flaws" STRING "Weak Willed"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4)"
+            ^"Weakness" STRING "Abhorrent Material (fennel)"
+            ^"Vis" STRING "1 pawn of Vim vis, in wings"
+            ^"Appearance" STRING "Indistinguishable from other Maggots, Mahonin appears as a twisted mockery of a tailless monkey, with the iridescent wings of a greenbottle."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 72
+        }
+        PERSONALITY_TRAITS {
+            "Selfish" +5
+        }
+        COMBAT {
+            "Dodge" INIT 10 DEFENSE 21
+        }
+        ABILITIES {
+            "Athletics" SCORE 10 SPECIALTY "flying"
+            "Brawl" SCORE 10 SPECIALTY "dodge"
+        }
+        POWERS {
+            #td15f05fb6111f447e21f62 ^"Endurance of the Gluttonous" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Any creature possessed by Mahonin is oblivious to pain caused while eating, or discomfort or damage caused by what they consume. They still suffer any Wound or Fatigue penalties caused by these injuries or malaises, but they are not aware of them."
+            }
+            #tcc3ae1821f2a4e0bd73784 ^"Possession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t5c9d37676ff469b42bce04 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #td9a679c2313818b2e4dd35 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Gluttony. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+        }
+        DESCRIPTION "Mahonin is a demon who deludes his victims into believing that all kinds of inedible objects are luxurious food items. His hosts may be seen consuming filth from the night soil like it is the most delicious soup, or eating broken glass with relish while blood pours down their faces. Forcing his energumen to consume fennel seeds usually drives this demon away."
+    }
+
+    #t24ab53f1051a20458c7a60 ^"Morrighu, the Screech-Hag" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Aerial Powers"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER -2
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Enchanting Music"
+            ^"Reputations" LIST ["Bringer of Victory 2 (Infernal)"]
+            ^"Hierarchy" INTEGER 2
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Weakness" STRING "Protected Group (virgins)"
+            ^"Vis" STRING "2 pawns of Perdo, in wings"
+            ^"Appearance" STRING "Morrighu appears with the body of a carrion crow, but the upper parts of an ancient woman. Huge black wings extend from her shoulders. She has long, pointed ears and is always accompanied by a strong wind."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 72
+        }
+        PERSONALITY_TRAITS {
+            "Untameable" +5
+            "Boastful" +4
+            "Vindictive" +4
+            "Peaceful" -6
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 10 DEFENSE 8 DAMAGE 2
+            " Dodge" INIT 3 DEFENSE 8
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "flying"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Enchanting Music" SCORE 4 SPECIALTY "lulling to sleep"
+            "Stealth" SCORE 5 SPECIALTY "sleeping enemies"
+        }
+        POWERS {
+            #t015cfa2a42b4fee5ec1c60 ^"Elemental Control of Air" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Aerial Powers. She often employs effects similar to *Stench of Twenty Corpses* and *Charge of the Angry Winds*."
+            }
+            #t2d78e985ffc6fa9a24e603 ^"Grant Victory" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Morrighu can grant a character a +3 bonus to all Attack and Damage totals for the duration of a single battle. She rarely does this without demanding some payment."
+            }
+            #t0dccdea2471300e0e6eea5 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t744e9e8a785fc0ad09a24e ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Mercilessness. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t03fe394c649695e4081778 ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION ". See Chapter 4: Infernal Legions, Aerial Powers."
+            }
+        }
+        DESCRIPTION "Morrighu is a demon of warfare. In former times she was more powerful, and she claims she was a mighty goddess of Faerie who received worship in return for victory. Now she is forced to perform her services for those infernalists who know about her, for she is a useful spirit to have on one’s side, even though she is no great warrior herself. Note that Morrighu may not actually be the remnant of a pagan goddess, as she claims."
+    }
+
+    #t9fca24cc9fd686407ebda1 ^"Naonhaithya" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Lord of the Vessels of Iniquity"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 6
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Reputations" LIST ["Foe of Mankind 4 (Infernal)", "Lord of the Seraphim 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 5
+            ^"Soak" INTEGER 11
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Weakness" STRING "Light"
+            ^"Vis" STRING "8 pawns of Perdo, in the vermin that fill its body cavity"
+            ^"Appearance" STRING "Naonhaithya’s true form is the indescribable visual embodiment of rebellion, which provokes those who witness its unveiling to react violently against civic restraint and perform acts of rebellion and anarchy. Naonhaithya can also take the form of an immense man, with the head of an eagle and two pairs of wings."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 73
+        }
+        PERSONALITY_TRAITS {
+            "Depraved" +6
+            "Hateful" +6
+            "Rebellious" +6
+        }
+        COMBAT {
+            "Claws" INIT 4 ATTACK 14 DEFENSE 11 DAMAGE 10
+        }
+        ABILITIES {
+            "Brawl" SCORE 7 SPECIALTY "claws"
+            "Europe Lore" SCORE 6 SPECIALTY "rulers"
+            "Holy Land Lore" SCORE 8 SPECIALTY "rulers"
+            "Persian Lore" SCORE 8 SPECIALTY "rulers"
+            "Russian Lore" SCORE 4 SPECIALTY "rulers"
+            "Theology" SCORE 6 SPECIALTY "dualism"
+        }
+        POWERS {
+            #t784367cb4623b9bf927df5 ^"The Tempest’s Fury" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "8 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "This Power summons a huge storm out of pre-existing clouds. The storm covers the entire visible sky. The storm consists of rain, hail, powerful winds, thunder, and lightning, all under the direction of Naonhaithya."
+            }
+            #tdece8a0d359bf657ddd056 ^"Calling the Khrafstar" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "By invoking this Power, Naonhaithya rips apart his body cavity and swarms of biting, poisonous, repulsive, and noxious creatures (called *khrafstar *in Persian) burst forth from within him. Up to ten targets are attacked by the swarms of scorpions, spiders, lizards, and snakes, who engulf them. Every round, a Stamina roll against an Ease Factor of 9 is required to avoid taking a Medium Wound. It is impossible to concentrate while being bitten and stung by the *khrafstar*."
+            }
+            #te17de0d3ff8879cbb164d8 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Rebellion, Anarchy. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t0e4d495399f08eea58fcb6 ^"Form of Wickedness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #tabdce12257869462d99866 ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+            #te03c9d0b3af2b65dd30148 ^"Contagious Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Vessels of Iniquity."
+            }
+        }
+        DESCRIPTION "Naonhaithya represents rebellion and irreverence in Zoroastrian belief; he is one of the seven *daevas* who oppose the seven *spentas* (Zoroastrian spirits of goodness). Wherever he goes, this filthy spirit spreads anarchy and the corruption of good rulership."
+    }
+
+    #tb21731749b754eb87431f6 ^"Rahab, Prince of the Primordial Sea" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Lord of the Aerial Powers"
+            ^"Might" INTEGER 35
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Virtues and Flaws" STRING "Lesser Immunity to Drowning, Ways of the Ocean"
+            ^"Reputations" LIST ["Prince of the Primordial Sea 9 (Infernal)", "Foe of the Jews 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 9
+            ^"Soak" INTEGER 13
+            ^"Fatigue Levels" STRING "OK, 0, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32)"
+            ^"Weakness" STRING "Running water"
+            ^"Vis" STRING "6 pawns of Aquam, in beard"
+            ^"Appearance" STRING "Rahab appears as a mighty king, bare-chested and with skin of a blue-green hue. His hair and beard are curled with seaweed. His lower quarters — which rarely protrude above the surface of the sea — are similar to that of a fish or whale, but with stubby legs like those of a walrus."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 74
+        }
+        PERSONALITY_TRAITS {
+            "Hatred for Jews" +6
+            "Proud" +6
+            "Untameable" +5
+        }
+        COMBAT {
+            "Punch" INIT 0 ATTACK 14 DEFENSE 13 DAMAGE 10
+        }
+        ABILITIES {
+            "Brawl" SCORE 10 SPECIALTY "punch"
+            "Ocean Lore" SCORE 8 SPECIALTY "the Red Sea"
+            "Survival" SCORE 8 SPECIALTY "in water"
+            "Swim" SCORE 10 SPECIALTY "oceans"
+            "Wilderness Sense" SCORE 9 SPECIALTY "oceans"
+        }
+        POWERS {
+            #t23cc0ac52356d784ba1175 ^"Mastery of the Oceans" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Rahab can create any Aquam-based effect, at a cost of 1 Might per two magnitudes. Ritual effects cost him twice as much, and an hour to summon up."
+            }
+            #tab7b31c84233c73990dfce ^"Wrath of the Oceans" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Rahab can duplicate the effects of the ritual spell *Wrath of Whirling Winds and Water*, but the storm must begin at sea and head inland. It takes him two hours to summon up this Power."
+            }
+            #t1b7576dc0941ffc6fe270a ^"Waxing Size of the Swelling Ocean" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "While immersed in water, Rahab can swell his size to monstrous proportions. Every use of this Power increases his Size by 1 point, increasing his wound range by one as well as increasing his Strength (and therefore Damage) by two points and reducing his Quickness (and therefore Initiative and Defense) by one point for every point of increase in Size. This increase in Size lasts until the next low tide."
+            }
+            #t01ad942197b71c9312ddd9 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tb8f7a1a414c2547010000e ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Insolence. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t9bc4f4474f652d611085f1 ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION ". See Chapter 4: Infernal Legions, Aerial Powers."
+            }
+        }
+        DESCRIPTION "Rahab is known as *sar shel yam* (“prince of the primordial sea”) to the Hebrews. As an angel he was the authority of the world’s oceans, but had a nature that was as wild and rebellious as the element he represented. He refused to separate the upper and lower waters at the time of Creation, and was thus cast down by God and became a demon. When Moses was leading the Hebrew people from the tyranny of the Pharaoh of Egypt, it was Rahab whom Moses commanded to part the Red Sea. However, the power of Moses was insufficient for the mighty demon, so God struck down Rahab again and parted the sea himself. Rahab’s Infernal Might has never recovered from this miracle, which effectively demoted him from a Prince to a Lord, although he retains his former reputation."
+    }
+
+    #tabceb3888f361c99f9a41c ^"Sabaoth" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Furies"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 5
+            }
+            ^"Printed Size" STRING "–2 naturally, –4 in raven form"
+            ^"Virtues and Flaws" STRING "Gossip"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Claws: Init +5, Attack +13, Defense +5, Damage 0 Claws: Init +6, Attack +10, Defense +5, Damage –2 in splintered form"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "Natural form: –1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12) Splintered form: –1 (1), –3 (2), –5 (3), Incapacitated (4)"
+            ^"Weakness" STRING "Compulsiveness"
+            ^"Vis" STRING "2 pawns of Perdo, in the red eye (or eyes); 2 pawns of Mentem, in the blue eye (or eyes)"
+            ^"Appearance" STRING "In their natural form, Sabaoth appear as a single raven, the size of an eagle. Their eyes are always of different colors, the left one red, the right one blue. This feature is preserved when the demon exercises their Murder of Crows Power."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 75
+        }
+        PERSONALITY_TRAITS {
+            "Wrathful" +4
+            "Self- Controlled" -6
+        }
+        ABILITIES {
+            "Awareness" SCORE 6 SPECIALTY "feuders"
+            "Brawl" SCORE 2 SPECIALTY "claws"
+            "Folk Ken" SCORE 4 SPECIALTY "gossip"
+        }
+        POWERS {
+            #t7c5991d5df1b0b2ca99f46 ^"A Murder of Crows" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "When in their gross physical form, Sabaoth is able to shatter this form into up to twenty ravens. Each bird carries a portion of the demon’s Might and every bird must have at least 1 Might Point. Each bird can act independently of each other and be an unlimited distance apart, and yet each is aware instantly of the actions of the others. Each raven has its own Might Pool equal to its Might; it cannot use any of its Powers that it has insufficient Might Pool to pay for. Individual ravens, if they meet, can combine together into a single bird with a Might equal to the sum of their Mights, and Sabaoth must recombine all living bodies before they can assume their natural discorporate form again. If a raven is killed, Sabaoth loses whatever Infernal Might was invested into that body."
+            }
+            #t19342da9291b43ef3c2a0a ^"Piercing Eye" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Sabaoth’s vision is not impeded by stone, wood, or metal."
+            }
+            #tc201d795fceeaf15704302 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t1a08c317edd87135b076f5 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Revenge. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t7ce56e226998aaeace14d7 ^"Waxing Tide of Humors" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #t5154f667bc80eadd0d62ea ^"Berserker Rage" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+            #te511fe40306ce7303cbd9f ^"Endurance of the Enraged" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Furies."
+            }
+        }
+        DESCRIPTION "Sabaoth is always referred to in the plural, even when there is only one of them. They have the ability to break into a score of smaller birds, in which forms they cause all sorts of mischief. Their main purpose is to ensure that long-standing feuds are continued, and they ensure that key members of the feud are aware of the actions of the other side. Sabaoth uses their Envisioning Power to impart information to their intended victims."
+    }
+
+    #td69954430a8cedf2b4b3c9 ^"Thaphaboath" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (Mazzikim)"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Puissant Great Weapon, Tough; Weak Willed"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Cudgel: Init +2, Attack +13, Defense +10. Damage +11 Teeth: Init +1, Attack +13, Defense +11, Damage +7 Grapple: Init +1, Attack +10, Defense +8, Damage n/a"
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0, 0, –1, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (21–28)"
+            ^"Weakness" STRING "Protected Group (members of the clergy)"
+            ^"Vis" STRING "3 pawns of Animal, in heart"
+            ^"Appearance" STRING "Thaphaboath appears as a huge man, with the head and hindquarters of a bear. The skin of his arms and torso, devoid of hair, is blotched and sun-burnt, while the coarse brown hair which clothes his body from the neck up and the waist down is matted with filth. He carries an immense cudgel."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 75
+        }
+        PERSONALITY_TRAITS {
+            "Angry" +3
+            "Sadistic +3; Peaceful" -5
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "sprinting"
+            "Awareness" SCORE 3 SPECIALTY "prey"
+            "Brawl" SCORE 5 SPECIALTY "teeth"
+            "Great Weapon" SCORE 5 BONUS 2 SPECIALTY "cudgel"
+            "Hunt" SCORE 4 SPECIALTY "men"
+            "Survival" SCORE 5 SPECIALTY "foraging"
+            "Swim" SCORE 3 SPECIALTY "against the current"
+        }
+        POWERS {
+            #t86231abf49264de494f396 ^"Fear of the Wilderness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Mazzikim."
+            }
+            #t787cd46bbc3bd851cb8093 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #ta7718df6a7bf20d61004b6 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Brutality. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+        }
+        DESCRIPTION "Thaphaboath is typical of the sort of demon drafted to act as “muscle” in the plans of more powerful demons. He has few motives or ambitions other than a love of violence, and spends much of his time in his gross physical form enjoying the pleasures of the hunt and the kill. He attempts to use his Obsession Power on stronger-looking opponents before a fight; if they survive (and succumb to its power) then they are driven to oppress others with their clear superiority of strength."
+    }
+
+    #t003712e73a67ed1bb3e26c ^"Xaphan, Forge-man of Hell" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Aerial Powers"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Greater Immunity to Fire and Heat, Obsession (lighting fires)"
+            ^"Reputations" LIST ["Chief Stoker of Hell’s Fires 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 5
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Inc. (13–16)"
+            ^"Weakness" STRING "Abhorrent Material (horseshoes)"
+            ^"Vis" STRING "3 pawns of Ignem, in bellows"
+            ^"Appearance" STRING "Unusually for the Aerial Powers, Xaphan is of small stature. He appears as a sprightly man apparently made of polished brass, with swollen cheeks. A huge pair of horns, each almost a complete circle, spring from his temples. He carries an enormous set of brass bellows. When he speaks, sparks escape from his mouth."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 76
+        }
+        PERSONALITY_TRAITS {
+            "Untameable" +5
+        }
+        COMBAT {
+            "Claws" INIT 5 ATTACK 5 DEFENSE 6 DAMAGE 3
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "jumping"
+            "Brawl" SCORE 1 SPECIALTY "Claws"
+            "Craft: Blacksmithing" SCORE 8 SPECIALTY "copper"
+            "Craft: Weaponsmithing" SCORE 8 SPECIALTY "swords"
+            "Craft: Whitesmithing" SCORE 6 SPECIALTY "silver"
+        }
+        POWERS {
+            #t7e3d4172b871d876aa8174 ^"Elemental Control of Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Aerial Powers. He prefers to employ effects similar to *Show of Flames and Light* and *Blade of the Virulent Flame*."
+            }
+            #t9b3dddab964fb505fe1331 ^"Breath of the Desert" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Xaphan can blow hot, dry smoke over an area a pace wide and 500 paces long. Everything on this line becomes tinder dry, and all flames struck by his breath triple in size. This makes fires more severe, and sets secondary fires. The smoke obscures sight and smells terrible. *Breath of the Bellows, *3 points, Init +3, Ignem. Xaphan’s breath can make a single metal item glow white-hot. These items do +9 damage per round to any exposed flesh they touch, and usually melt. *Burning Curse, *5 points, Init 0, Ignem. By placing his bellows in the mouth of a servant and pumping them once, Xaphan can grant the diabolist the ability to ignite a building with sulfurous flames. The diabolist sets fire to whichever building he is facing when he opens his mouth. The diabolist has the Tainted with Evil Flaw while he carries the curse on his tongue."
+            }
+            #td1e17c41fd82a13ad0b9d5 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t8cbac5f2e118fcd01d8281 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Arson. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t494eb5abe4dcbe574a6495 ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION ". See Chapter 4: Infernal Legions, Aerial Powers."
+            }
+        }
+        DESCRIPTION "Xaphan claims he suggested to Satan that, given the rebellion had failed, he should burn Heaven to cover his escape. Although Xaphan was unable to incinerate Heaven, he is now chief stoker of the fires of Hell. Xaphan cannot burn churches himself, but it is the sin he most prizes in humans.\n\nXaphan avoids combat where possible, evading his enemies, and incinerate their homes while they sleep. Xaphan hates and fears smiths, who have stolen his invention, the bellows, and turned it to human use."
+    }
+
+}

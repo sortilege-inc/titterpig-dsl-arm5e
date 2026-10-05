@@ -1,0 +1,971 @@
+EXTENSION "ARMDef_RoP_Infernal_Corrupters_Demons" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Five: Demons as Corrupters demons"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's demons, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t187d89acfedc11a54c4815 ^"Adramelech, King of Fire" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Prince of the False Gods"
+            ^"Might" INTEGER 50
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 4
+            }
+            ^"Printed Size" STRING "0 (human), +2 (peacock)"
+            ^"Confidence Score" STRING "3 (9 points)"
+            ^"Virtues and Flaws" STRING "Greater Immunity to Flame and Heat, Puissant Leadership, Piercing Gaze"
+            ^"Reputations" LIST ["King of Hell 8 (Infernal)", "Kindler of the Hell Fires 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 9
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Protected Group (Infants)"
+            ^"Vis" STRING "10 pawns of Ignem, in feathers of the peacock"
+            ^"Appearance" STRING "As a king, crowned in gold and robed in scarlet. His hair is made of living flames, his beard is made of smoke, and his eyes are glowing coals. He carries an immense sword. His constant companion and mount is a huge peacock, whose tail eyespots are glowing eyes of fire."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+            "Regal" +6
+            "Condescending" +3
+        }
+        COMBAT {
+            "Great sword" INIT 6 ATTACK 18 DEFENSE 15 DAMAGE 14
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 7 SPECIALTY "geometry"
+            "Awareness" SCORE 4 SPECIALTY "sinners"
+            "Bargain" SCORE 8 SPECIALTY "pacts"
+            "Brawl" SCORE 4 SPECIALTY "kick"
+            "Charm" SCORE 5 SPECIALTY "innocent"
+            "Folk Ken" SCORE 7 SPECIALTY "diabolists"
+            "Great Weapon" SCORE 8 SPECIALTY "great sword"
+            "Guile" SCORE 10 SPECIALTY "the proud"
+            "Infernal Lore" SCORE 8 SPECIALTY "fire demons"
+            "Intrigue" SCORE 8 SPECIALTY "the Pit"
+            "Leadership" SCORE 12 BONUS 2 SPECIALTY "humans"
+            "Philosophiae" SCORE 7 SPECIALTY "metaphysics"
+            "Teaching" SCORE 6 SPECIALTY "academic abilities"
+            "Theology" SCORE 8 SPECIALTY "nature of evil"
+        }
+        POWERS {
+            #te40a2611516544b0965ac8 ^"King of Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Adramelech can create any Ignem-based effect, at a cost of 1 Might per two magnitudes. Ritual effects cost him twice as much, and an hour to summon up."
+            }
+            #t69b4dd6a26b998805089be ^"Regal Countenance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "When Adramelech issues an order, those succumbing to this Power are forced to obey it. The order must be terse, unambiguous, and involve a single, immediate action. For every additional point of Might expended on this Power, the demon can affect two more targets with the same order."
+            }
+            #tb934d2991c679e9492375f ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t68d52a127ceff3b308b2c0 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Pride, Envy, Cruelty. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t3a96a55645c2f03be52087 ^"Shroud the Stench of the Pit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #td875763a42478e6d58c5f3 ^"The Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #tb80c4c464a7a3665f5bf29 ^"His Master’s Voice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+        }
+        DESCRIPTION "Adramelech is a mighty demon, one of the most powerful in Hell. He is of ancient origin; he was among those who fell with Satan, and first lit the fires of Hell in an attempt to mimic the glorious light of Heaven. In olden times he was worshiped by the men of Tyre and Carthage as a god called Moloch. His devout worshipers sacrificed babies to him, for he has a special hatred of children. The infants were killed by placing them on the outstretched hands of Adramelech’s immense bronze idols, so that they fell into the fire which was lit below the statues. In modern times, he is seen on earth only upon the instigation of some diabolist. If anyone has the temerity to attack him physically, he can produce fire hot enough to melt steel and scorch flesh. He is not a particularly subtle demon, but he is not to be taken lightly."
+    }
+
+    #t4b13c39cf1eefec3bfeb51 ^"Baal-Peor, Lord of Filth" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "False Gods"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "3 (9 points)"
+            ^"Virtues and Flaws" STRING "Oversensitive (coitus), Obese"
+            ^"Reputations" LIST ["Treasurer of Hell 6 (Infernal)", "Demon of Filth 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 6
+            ^"Combat" STRING "Noxious Vomit: Init +9, Attack +12, Defense n/a, Damage +12 Claws: Init +4, Attack +5, Defense +6, Damage +6 See Power description Claws are coated in excrement. Unless injuries are cleaned carefully, they fester and never heal. A roll on the Recovery Table that results in an Improvement indicates stability, while a Stable result indicates that the wound worsens. Once the infection has set in, only Divine aid in healing cleanses the wounds."
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Weakness" STRING "Running water"
+            ^"Vis" STRING "6 pawns of Perdo, in tongue"
+            ^"Appearance" STRING "Baal-Peor appears as an immensely fat naked man, with rolls of flab cascading down his body. He is completely hairless, and has a repulsive, snake-like tongue. He wears a serpent wrapped around his girth like a belt, and its head is usually draped over his shoulder."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+            "Hungry" +3
+            "Shame" -3
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 4 SPECIALTY "arithmetic"
+            "Brawl" SCORE 4 SPECIALTY "claws"
+            "Civil and Canon Law" SCORE 4 SPECIALTY "trade"
+            "Folk Ken" SCORE 6 SPECIALTY "fornication"
+            "Infernal Lore" SCORE 5 SPECIALTY "wealth"
+            "Intrigue" SCORE 7 SPECIALTY "envy"
+            "Medicine" SCORE 4 SPECIALTY "poisons"
+            "Profession: Merchant" SCORE 7 SPECIALTY "unfair deals"
+        }
+        POWERS {
+            #tc49962d4fbd5f324a847cb ^"Form of Woman" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Baal-Peor can take the form of a woman, although he cannot use this Power to mimic a specific woman. He always chooses a form that will be considered beautiful by the target audience of his schemes."
+            }
+            #tab56d7973d85131d2d7666 ^"Noxious Vomit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This Power allows Baal-Peor to spray vast amounts of vomit (or, facing the other way, even less pleasant substances) through an area. His vomit is an expression of his spiritual vileness, and does the damage indicated in his combat statistic through corrosion, except to characters with True Faith, whom it cannot touch. The target must make a Strength + Size stress roll against an Ease Factor of 9 or be sent flying backwards. Anyone successfully struck by this vileness continues to suffer +3 damage in each round until it is washed off. This damage does not stack for multiple successful attacks."
+            }
+            #tb982219288861ea9a59453 ^"Swallow Assault" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Baal-Peor may avoid injury from mundane objects by opening his maw so wide that the attack slides harmlessly down his throat."
+            }
+            #t09af1abc6de60fdb0c58fb ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t62d0f20be9935a4fd40f3a ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Shamelessness, Gluttony. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t3180028219dfff5c7143c1 ^"Shroud the Stench of the Pit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #t74f83a6adce40664a180ba ^"The Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #t65a7c74877aba6e2a027c8 ^"His Master’s Voice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+        }
+        DESCRIPTION "Baal-Peor (or Belphegor) is a demon of wealth. He creates discord by moving mortal riches in disruptive ways (using the Wealth of Nations Power). He gives money to the vulnerable, so that the strong are tempted to take it. He gives the possessions of the powerful to others. This tempts the recipients to keep their stolen treasures, and rouses the powerful to recover them by force.\n\nBaal-Peor was worshipped, in ancient times, less as a wealth-god than as an embodiment of the desire to consume everything and transform it into vileness. His title, “Lord of the Openings” describes him: an unfillable mouth leading to a ceaseless defecation. Priests and pilgrims used the space before his statue as a latrine, as a form of worship. Baal-Peor, it is said, was sent by his masters to seek the truth of rumors that humans lived in marital bliss. He tried to live as a woman, but was so disgusted by marital relations that he fled back to Hell."
+    }
+
+    #t04effd5d55b9c2a5831fe2 ^"Bomburkhan" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (Ruchin)"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -9
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 6
+                ^"Quickness" INTEGER 7
+            }
+            ^"Size" INTEGER -9
+            ^"Virtues and Flaws" STRING "Weak-Willed, Short Attention Span"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4)"
+            ^"Weakness" STRING "Vulnerability (salt)"
+            ^"Vis" STRING "1 pawn of Vim, in wings"
+            ^"Appearance" STRING "Bomburkhan appears as a jet–black bat, no bigger than a person’s hand, but with a pinched and twisted human face protruding from the black fur."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 51
+        }
+        PERSONALITY_TRAITS {
+            "Resentment of Being Controlled" +5
+            "Selfish" +5
+            "Brave" -6
+        }
+        COMBAT {
+            "Dodge" INIT 7 DEFENSE 14
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "flying"
+            "Brawl" SCORE 6 SPECIALTY "dodge"
+            "Guile" SCORE 6 SPECIALTY "boasts"
+        }
+        POWERS {
+            #t10870eb223d13f4e17bc26 ^"Make a Liar of the Boastful" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "If this imp hears a boast and expends all of his Might Points, he can immediately grant someone nearby an Ability or Power that contradicts that boast, and cause them to use it immediately. Thus, if someone proclaims that she is the most beautiful woman in France, Bomburkhan can immediately make someone more beautiful than the boaster. This Power must penetrate Magic Resistance to grant the Ability or Power to the person, and that talent lasts for 1–10 rounds only (roll a simple die). A physical change, such as the example given above, lasts until the boaster and the target can no longer see each other."
+            }
+            #tf2e4b5a6479df5a7cab448 ^"Insignificance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "No Magic, Infernal or Faerie Power can force Bomburkhan to use any of his Powers."
+            }
+            #t84a1c81f91f707bdb5416a ^"Misfortune" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Ruchin."
+            }
+            #t142131f8eaf9fc6c020fe2 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t44785abc0a83ffe9866162 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Boastful. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+        }
+        DESCRIPTION "Bomburkhan was released from Hell after the false bravado of a crusader led to the capture of Jerusalem. Since then he has taken great delight in puncturing the over-inflated egos of the prideful. This ruach has an ability that could be exceedingly powerful, depending upon the magnitude of a speaker’s self-importance. For example, should a magus declaim “no one can breach my Parma Magica!”, a nearby grog might suddenly hurl a *Pilum of Fire* which slices straight through it! Fortunately for all concerned, this Power uses all of Bomburkhan’s Might Pool, and he grows bored very easily, wandering off once his mischief is done."
+    }
+
+    #t4da5f02a436c8ebbf1c52a ^"Druia the Seducer" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (Incubus/Succubus)"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER -1
+            ^"Virtues and Flaws" STRING "Improved Characteristics, Enduring Constitution, Small Frame; Weak-willed"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Dodge: Init: 0 Attack: n/a Defense: 0 Damage: n/a"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0/0, –2, –4, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Weakness" STRING "Abhorrent Material (light)"
+            ^"Vis" STRING "1 pawn of Corpus, in hair"
+            ^"Appearance" STRING "Druia appears to be a young, fit woman with particularly beautiful, long hair."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 52
+        }
+        PERSONALITY_TRAITS {
+            "Selfish" +6
+            "Lustful" +5
+            "Deceitful" +4
+        }
+        ABILITIES {
+            "Charm" SCORE 6 SPECIALTY "men"
+            "Folk Ken" SCORE 6 SPECIALTY "rumors"
+            "Intrigue" SCORE 3 SPECIALTY "merchants"
+            "Profession: Prostitute" SCORE 3 SPECIALTY "male clients"
+        }
+        POWERS {
+            #t89beedc80185b065779efc ^"Mutable Gender" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Incubi and Succubae."
+            }
+            #t86ab0bfb0040bad0b983cc ^"Harness the Wind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Incubi and Succubae."
+            }
+            #t9bf8bd75b10d9c6ef210ce ^"Hag Ride" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Incubi and Succubae."
+            }
+            #t8888e9c0dd296272fc4a8c ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t8bb5a248325e457eab9006 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Rape. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+        }
+        DESCRIPTION "Between missions for senior demons, Druia often works in the sex trade. She haunts her clients, who rarely seek help to dispel her. Many do not realize she is more than an exhausting dream, while those who do are unwilling to discuss the circumstances of their meeting."
+    }
+
+    #t1f1c8c5db24b17991a8437 ^"Gaap, a Prince of Hell" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "False Gods"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Overconfident"
+            ^"Reputations" LIST ["Mighty Prince of Hell 7 (Infernal)"]
+            ^"Hierarchy" INTEGER 7
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Weakness" STRING "Abhorrent Material (borax, burnt as incense)"
+            ^"Vis" STRING "2 pawn, in bat-wings"
+            ^"Appearance" STRING "Gaap appears as a handsome, regal man, with black eyes and hair. He is clothed only in a loose toga. An immense bat perches on his back, its claws on his shoulders, so that its wings appear at first to belong to the demon."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 52
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+            "Self- Important" +6
+            "Brave" -2
+        }
+        COMBAT {
+            "Claws" INIT 4 ATTACK 4 DEFENSE 4 DAMAGE 4
+        }
+        ABILITIES {
+            "Brawl" SCORE 1 SPECIALTY "claws"
+            "Charm" SCORE 5 SPECIALTY "persuasion"
+            "Guile" SCORE 5 SPECIALTY "own self-importance"
+            "Infernal Lore" SCORE 6 SPECIALTY "superiors"
+            "Intrigue" SCORE 5 SPECIALTY "demonic plots"
+        }
+        POWERS {
+            #t37cfa25ab52a637e372280 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tf0eebbcd060bc1d65633fe ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Overconfidence. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tdd3f299acfe7e8fa01c466 ^"Shroud the Stench of the Pit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #t95f7812e187cba88a54862 ^"The Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #tffd23e0ff5e568259879ba ^"His Master’s Voice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+        }
+        DESCRIPTION "Gaap claims to be a great president and a mighty prince of Hell, in command of 66 legions of infernal spirits. What he claims and what is true are hard to distinguish, but his supposed rank has been recorded in infernal grimoires copied and disseminated across Europe, so he is a popular choice for summoning. In actual fact, Gaap is ineffectual, with only weak capabilities, yet he is a great speaker and highly persuasive. He is of use to those infernalists who wish to learn about Hell’s plots, as Gaap is usually well-aware of the various intrigues of his superiors."
+    }
+
+    #t5284b785f9afb4eeaae2bf ^"Guazzo, a Personal Punisher" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Avengers of Evil"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Great sword: Init +3, Attack +10, Defense +7, Damage +18 wreathed perpetually in flames."
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Ordering"
+            ^"Vis" STRING "2 pawns of Vim, in wings"
+            ^"Appearance" STRING "Clothed in a white robe and shining with white fire, Guazzo’s white-feathered wings are usually wrapped around his comely frame. He carries a sword of fire."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 53
+        }
+        PERSONALITY_TRAITS {
+            "Relentless" +5
+            "Passionless" +4
+            "Merciful" -3
+        }
+        ABILITIES {
+            "Charm" SCORE 3 SPECIALTY "persuasion"
+            "Divine Lore" SCORE 3 SPECIALTY "guardian angels"
+            "Folk Ken" SCORE 4 SPECIALTY "his “charge”"
+            "Great Weapon" SCORE 4 SPECIALTY "great sword"
+            "Infernal Lore" SCORE 2 SPECIALTY "plots"
+            "Intrigue" SCORE 4 SPECIALTY "his “charge”"
+        }
+        POWERS {
+            #tc1332e286c87eb8e907d78 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tef560fd1b9cc4e8cc52b85 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Pride. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t7f75ea3c7b17407d95d0e9 ^"Punish the Sinner" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Avengers of Evil."
+            }
+        }
+        DESCRIPTION "Guazzo is an angel of punishment who targets an individual for his particular attention (that is, an unfortunate with the Plagued by a Demon Flaw). However, his victim is unaware of the Infernal status of his “guardian angel,” and has instead been told that he is destined for great things, so God has sent an angel to watch over him. Guazzo encourages his charge to do things that work towards his destiny (but which actually work towards a more dubious goal), while punishing him at every opportunity for any character flaws he might display. Guazzo is only appropriate for a character whose player is comfortable with the difference between player and character knowledge."
+    }
+
+    #t39627687353719d4f4ba50 ^"Hutriel, the Rod of God" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Avengers of Evil"
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Reputations" LIST ["Scourge of the Indulgent 1 (Infernal)", "Angel of Punishment 1 (Infernal)"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Weakness" STRING "Compulsiveness"
+            ^"Vis" STRING "5 pawns of Perdo, in rod"
+            ^"Appearance" STRING "Hutriel, like other Malakhe Habbalah, is forged from chains of fire, gold and black in his case. He carries a rod of iron, bound in chains, with which he strikes wrongdoers."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 54
+        }
+        PERSONALITY_TRAITS {
+            "Relentless" +5
+            "Passionless" +4
+            "Good Judge of Character" -3
+            "Merciful" -3
+        }
+        COMBAT {
+            "Rod" INIT 4 ATTACK 13 DEFENSE 10 DAMAGE 10
+        }
+        ABILITIES {
+            "Awareness" SCORE 4 SPECIALTY "sinners"
+            "Civil & Canon Law" SCORE 4 SPECIALTY "wrongdoing"
+            "Philosophiae" SCORE 5 SPECIALTY "ethics"
+            "Single Weapon" SCORE 5 SPECIALTY "rod"
+            "Theology" SCORE 6 SPECIALTY "sin"
+        }
+        POWERS {
+            #t4cbaf6eef38bccc85c0e84 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t7f8b4ac04f84f69bf9e300 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Frugality, Wastefulness. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t26d51ea052f4d2262c7325 ^"Punish the Sinner" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Avengers of Evil."
+            }
+        }
+        DESCRIPTION "Hutriel (the “Rod of God”) punishes the profligate, particularly those who are extravagant with their wealth. He despises those who use their wealth as a display of status, and those who use it as a means to other sins, such as gluttony and lust. Unfortunately, Hutriel’s zeal in pursuing squanderers often spills over onto those who are merely generous, and the “angel” seems unaware of the difference. While understanding the virtue of charity, Hutriel believes that only “professionals” such as the clergy are qualified to identity the needy and distribute alms with impartiality; others exercising charity are (in his view) doing it for reasons of self-importance. He uses his Obsession of Wastefulness to tempt mortals into profligacy; those who fail his test are doomed to suffer his punishments, for they clearly need to learn the error of their ways and reform. Those undergoing re-education by Hutriel often become misers (thanks to his second Obsession of Frugality). This modus operandi is typical of the Avengers of Evil."
+    }
+
+    #ta8687082edc5b298de2acc ^"Lickspitten, a Famulus" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "False Gods (Famuli)"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Perfect Balance, Puissant Awareness, Sharp Ears; Nocturnal"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8)"
+            ^"Weakness" STRING "Running Water"
+            ^"Vis" STRING "2 pawn of Vim, in his tail"
+            ^"Appearance" STRING "Lickspitten is a cat, com- pletely back except for ten white hairs on his belly, which form a five pointed star."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 54
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+            "Complacent" +5
+            "Lazy" +3
+            "Courageous" -4
+        }
+        COMBAT {
+            "Claws" INIT 2 ATTACK 9 DEFENSE 9 DAMAGE -1
+            " Bite" INIT 3 ATTACK 9 DEFENSE 6 DAMAGE -2
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "jumping"
+            "Awareness" SCORE 4 SPECIALTY "at night"
+            "Brawl" SCORE 2 SPECIALTY "claws"
+            "Hunt" SCORE 4 SPECIALTY "mice"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+            "Survival" SCORE 3 SPECIALTY "villages"
+        }
+        POWERS {
+            #t1a26cc14126e4f634b3329 ^"Lend Senses" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Famuli."
+            }
+            #t34be105146888b17a9eff8 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t26a56a721119c4d78bad01 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Complaisance. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tf91af323c5a38686553225 ^"Shroud the Stench of the Pit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #ta6434ee6cdc06af1903e7d ^"The Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+            #t24757557a553b9bdba0ed5 ^"His Master’s Voice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, False Gods."
+            }
+        }
+        DESCRIPTION "Lickspitten is a typical famulus in service to a witch. He demands to be fed blood from the witch’s own body, and in return performs minor chores such as hiding the taint of her unclean Powers, and allowing her to eavesdrop on the plans of her rivals."
+    }
+
+    #tec06385fe07b298eb23cdd ^"Metathiax, Decanus of Kidney Diseases" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Master of the Avengers of Evil (Decani)"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Virtues and Flaws" STRING "Greater Immunity (disease), Lesser Purifying Touch (kidney diseases), Puissant Medicine"
+            ^"Reputations" LIST ["Master of the Choir of Archangels 3 (Infernal)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Weakness" STRING "Abhorrent Material (amulet inscribed with the sigil of Adonael)"
+            ^"Vis" STRING "8 pawns of Corpus, in water jug"
+            ^"Appearance" STRING "Metathiax appears as an emaciated angelic figure composed of black fire and clothed in a robe of red with a blue hood. He carries a jug of water. Like all Avengers of Evil, his face is expressionless. He rarely assumes a gross physical form, instead attacking his chosen victim using his Powers."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 55
+        }
+        PERSONALITY_TRAITS {
+            "Relentless" +5
+            "Passionless" +4
+            "Merciful" -3
+        }
+        COMBAT {
+            "Bludgeon" INIT 4 ATTACK 9 DEFENSE 7 DAMAGE 6
+        }
+        ABILITIES {
+            "Awareness" SCORE 4 SPECIALTY "sinners"
+            "Brawl" SCORE 2 SPECIALTY "bludgeon"
+            "Chirurgy" SCORE 6 SPECIALTY "infection"
+            "Medicine" SCORE 10 BONUS 2 SPECIALTY "kidney diseases"
+        }
+        POWERS {
+            #t507178fa15b6cc08f14d23 ^"Ride the Diseased Body" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Decani."
+            }
+            #t5d1ea7d9dc6688296fa727 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t2076ed92cc9792520f6cac ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Repentance. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t4137a3b2c6ac919976c39c ^"Punish the Sinner" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Avengers of Evil."
+            }
+        }
+        DESCRIPTION "Metathiax is the decanus who inflicts diseases of the kidneys. When he uses his Punish the Sinner Power, stabbing abdominal pains are inflicted on the victim. The diseases he inflicts rot the kidneys and the bladder, causing extreme pain when urinating and the passing of blood. He rules the first third of Cancer’s reign, and always commences his attacks during the full moon. A knowledgeable exorcist knows that the attacks of Metathiax may be calmed by the reading of poetry, and those who attempt such therapy may gain a bonus to recovery rolls equal to one=half of the poet’s Ability score. Metathiax is thwarted by the angel Adonael."
+    }
+
+    #td4be043615f17234c83de4 ^"Nitibus, a Personal Corrupter" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempter (Shedim)"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Weak–Willed"
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unc."
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Protected Group (victims who willingly and totally reject him, fueling such rejection with a Confidence or Faith Point)"
+            ^"Vis" STRING "2 pawns of Vim, in each of his two tongues"
+            ^"Appearance" STRING "His true appearance is as a pointy-nosed man with a face on both sides of his head. One face flatters his victim, the other criticizes others. He wears the same clothes as his victim, but does not look quite as good in them. When clothed in his Apparition Power, only one of his faces can be seen at a time, but his neck spins to interchange between the two."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 56
+        }
+        PERSONALITY_TRAITS {
+            "Selfish" +5
+            "Obsequious" +4
+            "Scathing" +2
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 7 DEFENSE 6 DAMAGE 5
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "claws"
+            "Charm" SCORE 4 SPECIALTY "chosen victim"
+            "Folk Ken" SCORE 6 SPECIALTY "character faults"
+            "Guile" SCORE 6 SPECIALTY "imaginary faults"
+        }
+        POWERS {
+            #t7ab4c6f86fce96ddba90f8 ^"Apparition" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "See Shedim."
+            }
+            #t02e6c323e39ced4196bb0c ^"Protection of the Close Friend" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Shedim."
+            }
+            #tfd8019a0687fbafa81c430 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tc42ce34514f84cb3b7bd99 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Overconfident. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+        }
+        DESCRIPTION "Nitibus attaches himself to those who have a natural inclination towards criticism. He then encourages this vice at every opportunity, whispering into the ear of his victim to indicate any opportunities that he might have otherwise missed to put others down and belittle their efforts. Nitibus panders to the vanity of his chosen victim (who suffers from the Story Flaw Plagued by a Demon), always pointing out how much better he is than his peers."
+    }
+
+    #t7bca74d57769c4b05a6521 ^"Valefar, the Thief’s Demon" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Improved characteristics (x2), Piercing Gaze, Puissant Brawl, Tough, Weak-willed"
+            ^"Reputations" LIST ["Master Thief 3 (Infernal)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" INTEGER 11
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3/–3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Powers" STRING "Honor Among Thieves, 3 point, Init 0, Corpus: Each use of this Power prevents a single thief from revealing a specified secret. If the thief tries to speak the secret, his tongue does not move, and he attracts Valefar’s attention. Valefar then typically ensures that he dies, preferably by being hanged for a theft he did not commit. Itching Thumbs, 1 point, Init +5, Corpus: Each use of this Power grants a thief a +3 bonus on a single roll that allows him to steal. It only aids actual theft, so it aids a pickpocket or window fisherman, but not a housebreaker climbing a wall or a lock picker opening a chest. The Sleep of the Hand of the Thief, 5 points, Init 0, Mentem: This Power makes all people within a building who are asleep unwakable until dawn. Coagulation, 2 points, Init –1, Corpus: See Chapter 4: Infernal Legions, Demonic Powers. Obsession, 1 to 3 points, Init –5, Vim: Larceny. See Chapter 4: Infernal Legions, Demonic Powers."
+            ^"Weakness" STRING "Protected Group (those who venerate thieves)"
+            ^"Vis" STRING "3 pawns of Corpus, in his left thumb"
+            ^"Appearance" STRING "Valefar appears as a large hairless lion with the head of a man."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 56
+        }
+        PERSONALITY_TRAITS {
+            "Gloating" +3
+        }
+        COMBAT {
+            "Claws" INIT 1 ATTACK 15 DEFENSE 13 DAMAGE 8
+        }
+        ABILITIES {
+            "Awareness" SCORE 3 SPECIALTY "legal authorities"
+            "Brawl" SCORE 5 BONUS 2 SPECIALTY "claws"
+            "Folk Ken" SCORE 5 SPECIALTY "thieves"
+            "Infernal Lore" SCORE 3 SPECIALTY "necromantic objects"
+            "Intrigue" SCORE 3 SPECIALTY "Hell’s politics"
+            "Legerdemain" SCORE 5 SPECIALTY "filching"
+            "Stealth" SCORE 5 SPECIALTY "night"
+        }
+        DESCRIPTION "Diabolists have many uses for Valefar. His Powers assist conspiracy, and he is one of the demons that teaches how to manufacture magical items out of the remains of hanged criminals. Valefar can also find mandrakes for his masters. His imposing physical presence and knowledge of thievery make him a skilled guard. Because he is of relatively low intelligence, he is easily dominated by a quick-witted master. However, Valefar is not as dim-witted as one might think. He always leads his masters to the gallows before they can repent. He is aware that he is not a skilled schemer, but he knows many demons that are, and he is willing to work under their direction, so long as it always appears that he works alone. His limitation includes members of the Order of Hermes, who venerate Hermes. He therefore hates Hermetic magi and sets his people against them."
+    }
+
+}

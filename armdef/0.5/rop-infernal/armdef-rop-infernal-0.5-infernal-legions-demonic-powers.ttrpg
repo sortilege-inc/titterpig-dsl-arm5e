@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_RoP_Infernal_InfernalLegions_DemonicPowers" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Four: The Infernal Legions demonic powers"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's demonic powers, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t305eab7f384ac02629cef4 ^"Coagulation" DEF {
+        EXTENDS #t7e933d858e4491e59a7a68 ^"Demonic Power"
+        PROPERTIES {
+            ^"Cost" STRING "1 point per 10 Might (or fraction)"
+            ^"Initiative" STRING "–1"
+            ^"Form" STRING "Corpus"
+            ^"Held By" STRING "All demons have the following Powers:"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "This Power allows demons manufacture a solid body from the ambient, unformed matter of the universe. They may only take a single specific form with this Power (the one described under Appearance in the demon’s statistics) unless they have another Power that allows them to alter it. Manifesting a physical form takes a round for every point of Infernal Might possessed by the demon; those with a high Infernal Might have more power to collect and force into solid form. The demon can end this effect at any time, allowing its body to become finer and more rarefied, and return to its natural state. Dissolution of the solid form is almost instantaneous, taking only a round of concentration from the demon, although this concentration may be disrupted (use the rules for Concentration, ArM5, page 82).\n\nThe game statistics of a demon do not change regardless of whether it is in its physical or spiritual form, although a demon in spiritual form may not use its physical Characteristics. This Power may not be a Corpus effect if the demon’s body is naturally of a different substance, such as composed of elemental matter, or in the shape of an animal. Demons in Christian lands are forced to abandon their coagulated form on Holy Saturday (see Religious Limitations on Demons, below)."
+    }
+
+    #t79c31babf3b690c24911d0 ^"Obsession" DEF {
+        EXTENDS #t7e933d858e4491e59a7a68 ^"Demonic Power"
+        PROPERTIES {
+            ^"Cost" STRING "1–3 points"
+            ^"Initiative" STRING "–5"
+            ^"Form" STRING "Vim"
+            ^"Held By" STRING "All demons have the following Powers:"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "Every demon possesses a particular sin — called its Obsession Trait — which it may attempt to impose upon a mortal whenever the mortal indulges in a venial sin. A demon can only use this Power when there is a chink in the armor of virtue; that is, when a person is indulging in sinful thoughts or deeds. At such moments, the demon can impose its Obsession Trait, if it penetrates Magic Resistance. The victim is assailed with sinful thoughts, and acquires a Personality Trait to represent these thoughts, with a score equal to the number of Might Points spent by the demon (maximum of 3). When the victim is next presented with the opportunity to act on the Obsession Trait, the victim’s player must make a simple roll and add the Obsession Trait; the result must be lower than a simple roll + any other suitable opposed Personality Trait to successfully resist the impulses. (A second trait which is similar to the imposed trait may act as a penalty instead). If the Obsession roll fails, then the demon’s Power has failed and the Obsession Trait is lost. If the Obsession roll is higher, the victim gives in to sin, permanently acquiring the Obsession Trait at +1 (or increases it by one if he already possesses it). Any further succumbing to this trait counts as sinful, rather than as an action forced by a demon.\n\nEach demon can inflict only certain traits, representing its particular role in the corruption of mankind; these are listed under the creature’s Powers. Due to its low initiative, it is unusual for demons to use this Power when in physical combat."
+    }
+
+    #t5401c127da5c746520962f ^"Envisioning" DEF {
+        EXTENDS #t7e933d858e4491e59a7a68 ^"Demonic Power"
+        PROPERTIES {
+            ^"Cost" STRING "1 or 5 points"
+            ^"Initiative" STRING "+0"
+            ^"Form" STRING "Mentem"
+            ^"Held By" STRING "All demons have the following Powers:"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "This Power allows a demon to appear in the dreams of a sleeping target (in which case it costs 1 point), or make the target experience a waking dream or vision (in which case it costs 5 points). A demon cannot instantly make substantial changes to a dream, but instead gradually twists it to take on a darker and frightening tone, and can speak through any figure from the victim’s subconscious. A waking dream is more obvious; the victim suffers an immediate and powerful hallucination of whatever the demon desires. This may be so frightening that the victim is stunned for a round, and must make a Brave Personality roll against an Ease Factor of 9 or have an extreme reaction, such as retching, convulsions, or abject terror. This is the only way in which a spiritual demon can communicate with mortals."
+    }
+
+    #t89a17110380d9dbf2e8c05 ^"Possession (Demonic Power)" DEF {
+        EXTENDS #t7e933d858e4491e59a7a68 ^"Demonic Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Possession"
+            ^"Cost" STRING "variable points"
+            ^"Initiative" STRING "+2"
+            ^"Form" STRING "Mentem"
+            ^"Held By" STRING "Many (but not all) demons also have the following Power:"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "To possess a human, the demon may expend any number of points from its Might Pool to create a Possession Might Pool; these points actually enter the possessed creature and are not be regenerated by the demon until the possession is ended. The more of its Might it expends to use this Power, the more the demon can do with its host (also called an **energumen**), but the weaker the Penetration. If the target’s resistance is overcome by this Power, the victim is possessed by the demon, and falls under its direct control. If the demon uses all of its current Might Pool in a possession then its spiritual form effectively enters the victim and resides within (forcing the loss of any physical form). Alternatively, a demon may divide its consciousness by only placing a portion of its Might within a victim, allowing the possessing part of it act independently from the rest (which remains in spiritual or physical form). In this situation, the separate parts of the demon’s consciousness may only communicate information learned since the split when they are within sight of each other; otherwise, they should be considered independent copies of the demon’s mind.\n\nThe demon may use any of its Powers that it has sufficient points in its Possession\n\nMight Pool to use, but these points do not regenerate until the possession ends. The demon may choose to extend its power over its host to give it Magic Resistance equal to the Possession Might; if it does so, then the host is excluded from wards against supernatural beings just as if it were the demon itself. The same is true if the host is currently under the effects of one of the demon’s Powers. In all other situations, the demon can “hide” within the host, and walk through such wards with impunity.\n\nIf the demon attempts to force the victim to act contrary to his nature, or to use any of the energumen’s own Supernatural Powers, the demon must spend points from its Possession Might Pool. A Supernatural Power (including spellcasting) requires 1 Might Point per magnitude (for a spell or similar effect); 1 Might Point per point of a Supernatural Ability (such as Entrancement); or Might Points equal to the Might Points expended by the energumen. A questionable action which is contrary to the nature of the host requires the demon to exceed the possessed being’s Personality Trait roll on a stress die + Might Points spent. The storyguide may give a modifier to the Personality Trait roll based on the nature of the command. Over time, exercise of the demon’s Obsession Power on the host may result in a reduced resistance to such questionable actions. Note that use of a Supernatural Power might also be contrary to the victim’s nature, in which case both costs must be met.\n\nOnce the Possession Might Pool placed into the victim reaches zero, the possession ends. Note that a being can be possessed with as little as 1 Might Point, as long as the demon does not wish to do too much with its host. Furthermore, a demon may possess more than one host simultaneously, and can direct each independently. Vim spells may be used on the energumen to target the demon rather than the host; these must overcome the demon’s Infernal Might in the usual way, but drain the Possession Might Pool, not the Infernal Might (see Chapter 12: Black Magic, Demon Hunting)."
+    }
+
+}

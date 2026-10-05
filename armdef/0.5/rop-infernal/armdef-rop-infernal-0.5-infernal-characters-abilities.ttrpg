@@ -1,0 +1,189 @@
+EXTENSION "ARMDef_RoP_Infernal_InfernalCharacters_Abilities" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Nine: Infernal Characters abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #td5a70f1cdee08f0c0ba9cb ^"Ceremony (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Ceremony*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["with a certain Power or Ability", "in particular circumstances", "with a specific group or leader"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 91
+        }
+        DESCRIPTION "This Ability is used in conjunction with another Infernal Supernatural Ability or an Infernal Method and Power to produce a greater effect. The character must gather a group together and determine what effect they are going to enact. Since Ceremony increases the potency of Infernal power, at least one of the participants must possess the required Supernatural Ability (this character is called the **focus character**), and if it is a Power, whatever Method the character would normally use to activate it must be performed by each member of the group. Because of this, all of the participants are considered to be the caster when evaluating the effect.\n\nThe group may appoint a character to be their leader. The leader’s Ceremony score determines how many others may contribute to the effect. Additional characters may still participate, but their scores are not counted in the total and they are not treated as the caster. Characters with a Hierarchy Score greater than that of all the others in the group must always lead; they cannot participate unless led by a character with still higher rank.\n\nAlternatively, a group may gather without a leader. In this case, the group generates a **group modifier** by determining the sum of all their Ceremony scores and subtracting the total number of participants, which for Infernal ceremonies must always number 13 (12 participants and the focus character). This group modifier is applied to the focus character’s total, and might be positive or negative depending upon how skilled the members of this group are at working together.\n\n**Group Modifier: Total Ceremony scores – 13**\n\nWhether or not there is a leader, all participants then add their scores in the appropriate (Characteristic + Ability) or (Characteristic + Method) to the focus character’s total. If a participating character does not have the relevant Ability or Method, only his score in the Characteristic is added. After this bonus has been applied, the focus character resolves the effect as normal.\n\nNote that if every character in a coven has a score of at least 1 in Ceremony, it is always better for them to gather without a leader, but that since Ceremony is a Supernatural Ability, a group of thirteen who all possess it is very rare. More commonly, two or three infernalists with the Ability trick others into joining them in the unholy ritual."
+    }
+
+    #tad3682afd95ad49df361c9 ^"Chthonic Magic (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Chthonic Magic*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular sort of lab activity", "using infernal vis"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 91
+        }
+        DESCRIPTION "This Supernatural Ability may only be learned by magi.\n\nThe character has the ability to draw upon the power of the Infernal with his magic, giving him many benefits, described in Chapter 12: Black Magic. You can substitute this Ability for Magic Theory when he is performing dark or sinister magic in the lab, and you can also add his score in this Ability to his Magic Theory or Arts when determining how much vis he may use, so long as all of that vis comes from an Infernal source."
+    }
+
+    #t83935e2cb6b9b99c9b80d9 ^"Consumption (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Consumption*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a specific target", "a particular effect", "in certain circumstances"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 91
+        }
+        DESCRIPTION "Through dark rites the character can manipulate the energy of living things, channeling it through himself or another (see Chapter 10: The Maleficia)."
+    }
+
+    #ta5b60393fe696ed0a4cbeb ^"Corruption (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Corruption*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 91
+        }
+        DESCRIPTION "The character is skilled at leading others to evil, without their being aware of it. This allows her to communicate in ways that subvert her audience, teaching corrupted knowledge and influencing those who heed her message. These practices rely on ceremonial and personal influence (see Chapter 2: Sin and Temptation), and have three effects.\n\nFirstly, she can exert ceremonial influence on anyone who listens to her, including strangers and player characters. By spending a Confidence Point, she can invoke a particular Personality Trait\n\nin anyone who listens to her speak or watches her perform some sort of original work.\n\nSecondly, she can exert personal influence through the written word. Her influence is so insidious that those who spend a season studying what she writes may acquire an appropriate Personality Trait, just as if she had spent a season corrupting them in person.\n\nThirdly, she can teach corrupted versions of Abilities or Arts, which gives her students the Corrupted Abilities or Corrupted Arts Flaws if they do not resist her instruction. You can apply this to any books she writes, or to Arts and Abilities in which she teaches or trains others in person.\n\nWhen she uses Corruption, roll a die (stress or simple, depending on the situation) and add her Communication and Corruption scores. You should note this total somewhere in the description of a corrupted text. If another character suspects that he is being corrupted or tries to resist the effect, he may make a Perception + Infernal Lore roll against this total to avoid gaining the Flaw or Personality Trait while still gaining the experience. If he fails, the season is wasted. If he botches, he might gain the Flaw anyway.\n\n**Specialties: **ceremonial influence, personal influence, teaching"
+    }
+
+    #t6aa4ab0e62c22ac4b554f7 ^"Debauchery (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Debauchery*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["affecting a certain person", "a particular form of debauchery", "over long periods of time"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 91
+        }
+        DESCRIPTION "The character focuses her will through a physical act, usually ceremonial in some way. This activity is strenuous enough to cause her to lose a long-term Fatigue level or suffer a Light Wound, and calls upon her Stamina for the maleficium roll (see Chapter 10: The Maleficia)."
+    }
+
+    #t23736156e45e86a2cc9696 ^"Diablerie (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Diablerie*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["type of beings affected", "a specific effect", "in particular circumstances"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 92
+        }
+        DESCRIPTION "The character can exert control over spirits, demons, and the Infernal realm (see Chapter 10: The Maleficia)."
+    }
+
+    #t7ba9ca938db11c7d875ef5 ^"Effusion (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Effusion*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["causing a specific effect", "a particular kind of material or phenomenon", "in specific circumstances"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 92
+        }
+        DESCRIPTION "The character wields power over the physical world through strife and malice, changing the properties of inorganic materials and controlling powerful forces of nature (see Chapter 10: The Maleficia)."
+    }
+
+    #t1ca694152776e87a3ec7c1 ^"Hex (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Hex*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 92
+        }
+        DESCRIPTION "The character can bring injury or ruin upon her enemies. There are three ways for her to activate this Power: by making eye contact with her victim and proclaiming her purpose loud enough for him to hear, by tracing temporary occult signs and symbols on her target that indicate the dark fate she intends, or by acquiring an Arcane Connection to her target and fashioning a recognizable representation that can channel the effect through sympathetic magic.\n\nTo hex a target, the character must make clear her will for it: she must declare her wishes to the victim aloud, or indicate the specifics of the hex in writing on or very near the target, or do something to the representation that is similar to what she intends to happen to the target. There is always a physical component to the hex (common practices include tying knots in a line, spitting, or giving the target the “evil eye”).\n\nYou must also state a time frame for the hex, anywhere from an effect that occurs immediately to a hex that will affect the third generation of the victim’s descendants. Generally speaking, the sooner the effect manifests, the less potent it will be, and the longer the hex delays, the more powerful it will eventually become. For this reason you must always apply the delay modifier to the Hex total."
+    }
+
+    #tea4200cda739c67bd1c29a ^"Incantation (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Incantation*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["when invoking names", "in writing", "affecting a particular kind of target"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 92
+        }
+        DESCRIPTION "Through blasphemous words, phrases, and prayers, the character invokes the power of the Infernal. He must chant his ritual in a loud voice, or detail the terms of the maleficium in writing (see Chapter 10: The Maleficia). This adds his Communication to your roll, and requires that he spend a point of Confidence to call the effect into being."
+    }
+
+    #td5ffd9d525fb4d57ee920a ^"Malediction (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Malediction*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular effect", "punishing a specific kind of sinner", "a particular kind of target"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "The character knows how to punish his enemies with diabolical curses that hinder and even destroy them using the power of the Infernal."
+    }
+
+    #t2338af15ccb2cc374e30f3 ^"Phantasm (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Phantasm*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["causing a specific effect", "a particular image", "in specific circumstances"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "The character can create and control demonic illusions that appear to be quite substantial."
+    }
+
+    #t0c9ceb8b7cfb3d3f8850d7 ^"Psychomachia (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Psychomachia*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["affecting a particular type of person", "in particular circumstances", "a specific emotion"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "The character can possess and distort the mind, causing people to see things that are not there, act on their base desires, and obey his commands."
+    }
+
+    #tc58a2ed5187d8378679450 ^"Sense Passions (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Sense Passions*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["auras", "emotions", "Personality Traits", "in a general area"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "The character can sense the personality and desires of an intelligent being by recognizing and identifying the different shades of tarnish on its soul. A Perception + Sense Passions roll against an Ease Factor of 9 lets her sense the most powerful emotion currently being experienced by the person, and a roll against an Ease Factor of 15 allows her to identify the character’s most dominant Personality Trait. The effect must penetrate the target’s Magic Resistance if it has any kind of supernatural protection, and since this is a Supernatural Ability, it is affected by auras.\n\n**Sense Passions: stress die + Perception **\n\n**+ Sense Passions + aura**\n\nThrough careful examination, the character can also recognize passions in people within the general area, allowing her to hone in on the most powerful source of emotion within sight, usually the character with the highest (or lowest) Personality Trait. This requires a 12 or better on the Sense Passions roll.\n\nThe character can also tell when an aura has a tarnish (or temper, see *Realms *\n\n*of Power: The Divine*, page 38) and its type or types by overcoming an Ease Factor of 6.\n\nBy sensing passions, the character can often recognize incorporeal spirits. You may treat Sense Passions as Second Sight when attempting to recognize the presence of invisible or bodiless beings. However, this does not allow her to see through illusions, even illusions of strong emotions, and she cannot actually see the spirits, merely sense their proximity.\n\nIn addition, this Ability allows the character to Sense Holiness and Unholiness in a limited fashion, much like the Sense Holiness and Unholiness Virtue (ArM5, page 67). She can tell that something is either holy or unholy, but she cannot distinguish between the two. She feels the emotional presence associated with the Divine or the Infernal, but cannot pinpoint its supernatural origin. Thus, she might mistake a demon with a fair shape for an angel, or a fearsome-looking angel for a demon. By identifying the target’s primary emotions or desires, however, you can usually get a good idea of which realm the target is associated with, assuming the character can penetrate its Magic Resistance.\n\nSense Passions is either a False Power (see False Powers, above), or is associated with the Infernal. The presence of Infernal taint allows the Sense Holiness and Unholiness aspect to work. If the troupe allows Divine Powers to be false, this may be the false version of Sense Holiness and Unholiness."
+    }
+
+    #t1e4c880b9a128f2c6a408f ^"True Name of (Being) (Ability)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "True Name of (Being)*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "This is not an actual Ability, but rather a placeholder for knowledge gained from studying Infernal Lore. By learning a being’s True Name, the character can affect it as if she had a permanent Arcane Connection to it. She learns this by studying the appropriate (Realm) Lore, which teaches her the True Name once she has gained 5 experience points, and also gives her a free experience point in that Arcane Ability. See Chapter 4: Infernal Legions, True Names for more information. (Special)"
+    }
+
+}

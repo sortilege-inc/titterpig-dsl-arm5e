@@ -1,0 +1,116 @@
+EXTENSION "ArM5_RoP_Infernal_CorruptedBeasts_Beasts" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Eight: Corrupted Beasts beasts"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Infernal_Core_Ext"
+
+    # The chapter's beasts, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t4df99c0c8f6f10e2505ccd ^"Two-Headed Hound" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Ferocity Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Greater Infernal Power; Ferocity (against intruders), Improved Characteristics, Long Winded, Sharp Ears; Horrifying Appearance, Reckless; Corrupted Beast These Virtues and Flaws are a result of its corruption."
+            ^"Soak" INTEGER 2
+            ^"Fatigue levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "2 pawns of Vim, 1 in each head"
+            ^"Appearance" STRING "This huge dog has two slavering heads protruding from its massive shoulders. The two heads are cursed with independent minds that hate each other, and each would like nothing more than to bite the other; it is only because the hound’s necks are too short that it cannot. The dog is covered in gray fur in the few areas that are not affected by mange, which has left patches of puffy, purulent red flesh."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 79
+        }
+        PERSONALITY_TRAITS {
+            "Hatred of Owner" +6
+            "Hatred of Humans" +5
+            "Hatred of Self" +3
+            "Reckless" +3
+            "Vigilant" +1
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 11 DEFENSE 10 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "pursuit"
+            "Awareness" SCORE 4 SPECIALTY "keeping watch"
+            "Brawl" SCORE 6 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "track by scent"
+        }
+        POWERS {
+            #td1072571d67af31ca4e0f1 ^"Spit Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The hound may spit a bolt of fire at its opponents; it does +15 damage to the individual it hits. The creature may bite one opponent and spit fire at another in the same round."
+            }
+        }
+        DESCRIPTION "This corrupted beast was created by a diabolist to be a guard for his sanctum. He controls it with an Infernal charm, but is fearful of the day that this charm fails, for he knows that the dog hates him."
+    }
+
+    #t718eb6e3101402137d50d5 ^"Demonic Steed" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 7
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 3
+            ^"Virtues and Flaws" STRING "Enduring Constitution, Improved Characteristics, Lesser Infernal Power, Long Winded; Proud; Corrupted Beast These Virtues and Flaws are a result of its corruption."
+            ^"Soak" INTEGER 4
+            ^"Fatigue levels" STRING "OK, 0, 0, 0, 0, –2, –4, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32)"
+            ^"Vis" STRING "2 pawns of Animal, in hooves"
+            ^"Appearance" STRING "A fearsome black stallion with bloodshot eyes, fangs in its mouth, and hooves of iron."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 79
+        }
+        PERSONALITY_TRAITS {
+            "Vain" +6
+            "Brave" +1
+        }
+        COMBAT {
+            "Kick" INIT 1 ATTACK 13 DEFENSE 5 DAMAGE 12
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "long-distance running"
+            "Brawl" SCORE 3 SPECIALTY "hooves"
+        }
+        POWERS {
+            #t1f461a9b127044bba723b0 ^"The Unimpeded Traveler" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "This steed is not impeded by poor terrain and may move at maximum speed along even the poorest of roads, achieving 30 miles a day. It may even cross open water and chasms, unsupported by ground, but can do this only at a trotting pace."
+            }
+        }
+        DESCRIPTION "This horse is one of three created by an Infernalist magus in a tribunal at the fringes of the Order by repeated applications of a tainted version of *Steed of Vengeance* (MuAn 35). There were many failures before he successfully created these three corrupted beasts. Because the untainted version of the spell is well-known, he is able to use the steeds in front of other magi with impunity."
+    }
+
+}

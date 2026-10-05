@@ -1,0 +1,142 @@
+EXTENSION "ARMDef_RoP_Infernal_ArsGoetia_Rules" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Eleven: Ars Goetia rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t44b9922a5ec5892623d69f ^"Summoning Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Summoning"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Summoning Total" "stress die + Presence + Summoning + (Realm) Lore + aura + (Penetration x Penetration Modifier)"
+        }
+    }
+
+    #t59969436c59a97ab08778d ^"Demon Summoning" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Summoning"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Demon Summoning" "Summoning Total + (sorcerer’s Hierarchy Score x 5) vs. Target Level + (demon’s Hierarchy Score x 5)"
+        }
+    }
+
+    #t6468f5d23272a750524e2a ^"Scouring Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Summoning"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Scouring Total" "stress die + Presence + Summoning + (Area) Lore + aura + Penetration"
+        }
+    }
+
+    #tba4f53c74ef5ceade21ade ^"Summoning or Scouring Target Level" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Summoning"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Summoning or Scouring Target Level" "spirit’s Might x 2"
+        }
+    }
+
+    #t72591914a9fc34c9ad9808 ^"Ablation Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ablating"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 115
+        }
+        FORMULAS {
+            "Ablation Total" "stress die + Stamina + Ablating + (Realm) Lore + aura + (Penetration x Penetration Multiplier)"
+        }
+    }
+
+    #tb2cbb44629c7281b93fbd1 ^"Ablation Target Level" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ablating"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 115
+        }
+        FORMULAS {
+            "Ablation Target Level" "spirit’s Might, or spirit’s Might x 2"
+        }
+    }
+
+    #t384cd629d0596e18074067 ^"Ablation Points" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ablating"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 115
+        }
+        FORMULAS {
+            "Ablation Points" "(Ablation Total – Ablation Target Level) / 5, or spirit’s Might / 5"
+        }
+    }
+
+    #t5f52772ecc178e2a66969b ^"Binding Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Binding"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 117
+        }
+        FORMULAS {
+            "Binding Total" "stress die + Intelligence + Binding + (Realm) Lore + aura + (Penetration x Penetration Multiplier)"
+        }
+    }
+
+    #tb375c628a09ec121fbec51 ^"Binding Target Level" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Binding"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 117
+        }
+        FORMULAS {
+            "Binding Target Level" "spirit’s Might"
+        }
+    }
+
+    #t79e108abfef6e6c4bcfad7 ^"Commanding Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Commanding"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 117
+        }
+        FORMULAS {
+            "Commanding Total" "stress die + Communication + Commanding + (Realm) Lore + aura + (Penetration x Penetration Modifier)"
+        }
+    }
+
+    #tdd0c1b3c836a3e0ce6858a ^"Commanding Target Level" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Commanding"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 117
+        }
+        FORMULAS {
+            "Commanding Target Level" "spirit’s Might"
+        }
+    }
+
+}

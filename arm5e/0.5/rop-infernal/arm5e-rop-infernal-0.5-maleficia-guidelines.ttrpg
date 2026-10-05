@@ -1,0 +1,329 @@
+EXTENSION "ArM5_RoP_Infernal_Maleficia_Guidelines" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Ten: The Maleficia guidelines"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Infernal_Core_Ext"
+
+    # The chapter's guidelines, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tcc72e84b5a49baff3fef5e ^"Debauchery/Consumption Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Debauchery" FIXED
+            ^"Power" STRING "Consumption" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 105
+        }
+        GUIDELINES {
+            "General" "Add the magnitude of the effect to the target’s Damage and Soak, and also add it to his Load."
+            "General" "Subtract the magnitude of the effect from Load, and also from his Damage and Soak."
+            "General" "Add the magnitude of the effect to the target’s Initiative, Attack, and Defense, but subtract it from all of his Fatigue rolls."
+            "General" "Add the magnitude of the effect to all Fatigue rolls, but subtract it from Initiative, Attack, and Defense."
+            "General" "Give a target a bonus to Recovery rolls, and a victim a penalty, equal to ([the magnitude of the effect + 2] x 3)."
+            "Level 1" "Temporarily increase one of a target’s Characteristics by 1, to a maximum of 0, reducing a victim’s score in that same Characteristic by 1, to no less than –1. Additional magnitudes may add 1 to the amount by which you increase and decrease these Characteristics, or increase and decrease the maximum scores by 1 (though this can never exceed +6/–6)."
+            "Level 2" "Give a target a +1 bonus to Recovery rolls, and a victim a –1 penalty."
+            "Level 3" "Give a target a +3 bonus to Recovery rolls, and a victim a –3 penalty."
+            "Level 4" "Give a target a +6 bonus to Recovery rolls, and a victim a –6 penalty."
+            "Level 5" "Permanently increase one of a target’s Characteristics by 1, to a maximum of 0, reducing a victim’s score in that same Characteristic by 1, to no less than –1. Additional magnitudes may add 1 to the amount by which you increase and decrease these Characteristics, or increase and decrease the maximum scores by 1 (though this can never exceed +6/–6)."
+            "Level 10" "Transfer pain to a victim, temporarily giving it the target’s Fatigue and Wound penalties."
+            "Level 10" "Exchange a target’s Fatigue levels with a victim."
+            "Level 15" "Cause a target and a victim to temporarily exchange bodies."
+            "Level 15" "Cause a woman to become pregnant by a man."
+            "Level 15" "Bring a plant to maturity overnight, causing another plant to wither."
+            "Level 20" "Bring an animal to maturity overnight, aging another animal by the same amount."
+            "Level 20" "Bring a person to maturity overnight, aging another person by the same number of years."
+        }
+    }
+
+    #tda1e254ce99046012cd5cb ^"Incantation/Consumption Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Incantation" FIXED
+            ^"Power" STRING "Consumption" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 105
+        }
+        GUIDELINES {
+            "General" "Give a target a bonus to rolls for a particular Ability equal to the magnitude of the effect. This also penalizes a victim’s rolls by the same amount."
+            "General" "Give a target a bonus and a victim a penalty to Aging rolls equal to (the magnitude of the effect – 5); this must be cast with either Year or Forsaken duration."
+            "Level 5" "Animate a corpse."
+            "Level 5" "Permanently restore a target’s Fatigue level by causing a victim to lose a Fatigue level."
+            "Level 10" "Permanently transfer an illness or disease from a target to a victim."
+            "Level 10" "Permanently restore a long-term Fatigue level of a target by causing a victim to lose a long-term Fatigue level."
+            "Level 15" "Permanently heal a target’s Light Wound, and cause a Light Wound to a victim."
+            "Level 15" "Permanently transfer a minor aging crisis from a target to a victim."
+            "Level 20" "Permanently heal a target’s Medium Wound, and cause a Medium Wound to a victim."
+            "Level 20" "Permanently transfer the debilitating aftereffects of a disease, poison, or an injury from a target to a victim."
+            "Level 20" "Permanently transfer a serious aging crisis from a target to a victim."
+            "Level 25" "Permanently heal a target’s Heavy Wound, and cause a Heavy Wound to a victim."
+            "Level 25" "Permanently replace a target’s lost limb or sense with one from a victim’s body."
+            "Level 25" "Permanently transfer a major aging crisis from a target to a victim."
+            "Level 30" "Permanently heal a target’s Incapacitating Wound, and cause an Incapacitating Wound to a victim."
+            "Level 30" "Permanently transfer a critical aging crisis from a target to a victim."
+            "Level 35" "Permanently heal all of a target’s wounds, killing a victim."
+            "Level 35" "Permanently transfer a terminal aging crisis from a target to a victim."
+            "Level 40" "Permanently transfer a Decrepitude Point from a target to a victim."
+            "Level 40" "Permanently transfer the caster’s soul into a specially prepared object within range, protecting him from death."
+        }
+    }
+
+    #te3b6cd20027a530c484c21 ^"Debauchery/Diablerie Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Debauchery" FIXED
+            ^"Power" STRING "Diablerie" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 106
+        }
+        GUIDELINES {
+            "General" "Dispel magic, infernal, or faerie effects of level less than (this effect level – 10)."
+            "General" "Prevent a supernatural creature with Might less than (the level of the effect – 10) from crossing a clearly defined circle or affecting those on the other side of the boundary with its Powers, unless the caster explicitly allows the effect to pass."
+            "General" "Protect a target against all supernatural creatures with Might of (the level of the effect – 10) and their Powers."
+            "Level 3" "See through a supernatural creature’s eyes, so long as that creature is within range of the effect."
+            "Level 4" "Make an object a temporary Arcane Connection to a person or thing within range of this effect, including a demon."
+            "Level 5" "Perceive all creatures with Might within range of the effect."
+            "Level 10" "Open a spiritual portal between the character and a supernatural being within range, allowing them to see and hear each other for the duration of the effect."
+            "Level 15" "Release an Infernal being from imprisonment: a demon that has been banished or bound in some way is temporarily freed for the duration."
+            "Level 20" "Create an Infernal aura at level 1. Each additional magnitude increases it by one, to a maximum of 5."
+            "Level 25" "Create an Infernal regio at level 1. Each additional magnitude increases it by one, to a maximum of 5."
+        }
+    }
+
+    #td48b94d28af6f8cd9e7e8a ^"Incantation/Diablerie Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Incantation" FIXED
+            ^"Power" STRING "Diablerie" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 106
+        }
+        GUIDELINES {
+            "General" "Give a person, object, or area Magic Resistance equal to the level of the effect + 5, which does not add to other forms of resistance."
+            "General" "Restore a demon’s Might Pool by the level of the effect + 10, as long as it penetrates its Magic Resistance."
+            "Level 3" "Force an invisible supernatural creature to become visible."
+            "Level 4" "Bind a supernatural creature to the terms of a contract."
+            "Level 5" "Compel a supernatural creature within range to manifest in the character’s presence."
+            "Level 10" "Compel a supernatural creature to answer a question."
+            "Level 15" "Gain a False Power that duplicates the effects of a Minor Virtue."
+            "Level 15" "Compel a supernatural creature to do the caster’s bidding; he may give it one command, which it must follow exactly for the duration of the effect."
+            "Level 15" "Move raw vis from one object to another."
+            "Level 20" "Dominate a supernatural creature; it must obey the caster’s every command for the duration of the effect."
+            "Level 20" "Permanently taint vis with the power of the Infernal, producing vis infesta."
+            "Level 25" "Permanently taint vis with the power of the Infernal, producing vis sordida."
+            "Level 30" "Permanently taint vis with the power of the Infernal, producing vis prava."
+            "Level 35" "Gain a False Power that duplicates the effects of a Major Virtue."
+            "Level 35" "Gain a False Power that duplicates The Gift."
+        }
+    }
+
+    #t23796834b51fb9db83cbe4 ^"Debauchery/Effusion Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Debauchery" FIXED
+            ^"Power" STRING "Effusion" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 108
+        }
+        GUIDELINES {
+            "General" "Soften an object, giving it a penalty to Damage or Protection equal to the effect’s magnitude."
+            "General" "Make flames hotter or smoke more corrosive, adding the level of this effect to its Damage rating."
+            "Level 1" "Ignite something extremely flammable, like oil."
+            "Level 1" "Heat an object so that it is warm to the touch."
+            "Level 1" "Increase the severity of a natural phenomenon, turning rain clouds into a thunderstorm or mist into fog."
+            "Level 2" "Control minor natural phenomena, such as mist, moonlight, a breeze, or a drizzle."
+            "Level 2" "Ignite something very flammable, like dry leaves."
+            "Level 2" "Heat an object to be hot to the touch."
+            "Level 3" "Control normal natural phenomena, such as wind, rain, smoke, or fog."
+            "Level 3" "Ignite something flammable, like wood."
+            "Level 3" "Heat an object enough to boil water."
+            "Level 4" "Control severe natural phenomena, such as thunder, gales, a monsoon, or open flames."
+            "Level 4" "Completely dry something wet."
+            "Level 4" "Heat an object enough to glow red-hot."
+            "Level 5" "Control very severe natural phenomena, such as lightning, an explosion, a hurricane, or a tornado."
+            "Level 5" "Ignite something slightly flammable, like leather."
+            "Level 5" "Heat an object enough to melt steel."
+            "Level 5" "Ward a target against a single type of natural phenomena (fire, wind, rain, lightning)."
+            "Level 10" "Ignite something barely flammable, like flesh."
+            "Level 15" "Ward a target against all forms of natural phenomena (fire, wind, rain, lightning)."
+        }
+    }
+
+    #t2f6ce9257138a87834b3e5 ^"Incantation/Effusion Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Incantation" FIXED
+            ^"Power" STRING "Effusion" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 108
+        }
+        GUIDELINES {
+            "General" "Harden an object, giving it a bonus to Damage or Protection equal to the effect’s magnitude."
+            "General" "Prepare an object to accept a maleficium of this effect’s level or lower; the infernalist casts the maleficium at the object, and it holds the effect in stasis for the duration, activating it when the object is destroyed."
+            "General" "Move an object quickly in any direction the caster pleases, with enough force to cause damage equal to the effect’s level."
+            "Level 1" "Decrease the severity of natural phenomena, causing rain to cease or winds to calm."
+            "Level 2" "Chill an object to be cold to the touch."
+            "Level 2" "Control a substance in a natural fashion, or change it into something of similar shape and substance."
+            "Level 3" "Chill an object enough to freeze water."
+            "Level 3" "Control a substance in a slightly unnatural fashion, or change it into something of a different but related shape and substance."
+            "Level 3" "Move an object slowly in one direction, as long as the surface can support its weight."
+            "Level 4" "Chill an object enough to extinguish flames."
+            "Level 4" "Move an object slowly in any direction the caster pleases."
+            "Level 4" "Control a substance in a very unnatural fashion, or change it into something of a very different shape and substance."
+            "Level 5" "Chill an object enough to burn flesh (frostbite)."
+            "Level 5" "Transport an object to the character’s touch."
+            "Level 5" "Ward a target against a single form of natural, non-living material (stone, wood, bone, metal, water)."
+            "Level 10" "Control a substance in a very unnatural fashion."
+            "Level 10" "Transport an object instantly to a point up to five paces from the caster."
+            "Level 15" "Move an object quickly any direction the caster pleases."
+            "Level 15" "Ward a target against all natural, non-living materials (stone, wood, bone, metal, water)."
+            "Level 15" "Transport an object instantly up to 50 paces."
+            "Level 20" "Transport an object instantly up to 500 paces."
+            "Level 25" "Transport an object instantly up to a league."
+            "Level 30" "Transport an object instantly up to seven leagues."
+            "Level 35" "Instantly transport an object to anywhere the caster has been before, or to which he has an Arcane Connection."
+        }
+    }
+
+    #tc02876ea5b2b8bf3095ba9 ^"Debauchery/Malediction Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Debauchery" FIXED
+            ^"Power" STRING "Malediction" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 109
+        }
+        GUIDELINES {
+            "Level 3" "Hamper targets without actually injuring them, making them walk badly or blurring their senses for the duration."
+            "Level 3" "Cause a target the loss of a Fatigue level."
+            "Level 4" "Inflict a Light Wound, also causing great pain."
+            "Level 4" "Destroy a single non-living target."
+            "Level 5" "Inflict a Medium Wound, also crippling a limb."
+            "Level 5" "Destroy a living but inanimate target, like a plant."
+            "Level 10" "Inflict a Heavy Wound, also destroying a major sense such as sight or hearing."
+            "Level 10" "Give a person or animal a major disease."
+            "Level 15" "Inflict an Incapacitating Wound, also causing grievous harm to a body and a Decrepitude Point."
+            "Level 20" "Strike a person or animal dead."
+        }
+    }
+
+    #tf4da14fc2edee7f55ae1a7 ^"Incantation/Malediction Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Incantation" FIXED
+            ^"Power" STRING "Malediction" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 109
+        }
+        GUIDELINES {
+            "General" "Give a target a penalty on all die rolls equal to the magnitude of the effect, as well as that many additional botch dice any time the target rolls a 0."
+            "General" "Give a target a penalty equal to twice the magnitude of the effect to all rolls of a specific type (an Ability, Aging rolls, Recovery rolls, Personality Traits, etc.), and the same number of additional botch dice whenever the target gets a 0 on that type of roll."
+            "General" "Curse an object so that when used, it gives the wielder a penalty to rolls and a number of additional botch dice equal to the magnitude of the effect, –3 maximum."
+            "Level 5" "Decrease one of a target’s Characteristics by 1, to no less than 0. Each additional step of decrease is an additional magnitude, and the maximum penalty may be similarly decreased, but to no less than –6."
+            "Level 10" "Suppress the effects of a Minor Virtue."
+            "Level 15" "Give a target the effects of a Minor Flaw."
+            "Level 30" "Suppress the effects of a Major Virtue."
+            "Level 35" "Give a target the effects of a Major Flaw."
+        }
+    }
+
+    #t7ee6eedd2e9ba658579da1 ^"Debauchery/Phantasm Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Debauchery" FIXED
+            ^"Power" STRING "Phantasm" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 110
+        }
+        GUIDELINES {
+            "General" "Create a dangerous phantasm, like fire or poison, that does +(base level of the spell) Damage upon contact."
+            "Level 2" "Change a target to give it a minor ability, such as claws or cat’s eyes."
+            "Level 2" "Mask the target’s scent or taste."
+            "Level 3" "Change a target to give it a major ability, such as wings or an additional limb."
+            "Level 3" "Hide all sounds made by the target."
+            "Level 4" "Change a target to give it a supernatural ability, such as flaming breath or a poisonous touch."
+            "Level 4" "Make a target completely invisible."
+            "Level 5" "Create a phantasm, or change a target into a phantasm."
+            "Level 5" "Make a target completely undetectable."
+            "Level 10" "Create a phantasm with Infernal Might 5, or change a target into a phantasm with Infernal Might 5. Each 5 points of additional Might increases the effect magnitude by one."
+            "Level 10" "Separate a target’s spirit from his body, as if he were in a waking dream."
+        }
+    }
+
+    #t94c6ed390404f4a179ee9a ^"Incantation/Phantasm Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Incantation" FIXED
+            ^"Power" STRING "Phantasm" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 110
+        }
+        GUIDELINES {
+            "Level 2" "Smell or taste at a distance."
+            "Level 3" "Become able to perceive spirits."
+            "Level 3" "Hear sounds at a distance."
+            "Level 4" "See at a distance."
+            "Level 5" "See through Infernal illusions."
+            "Level 20" "Gain an ominous vision of an event that happened within a day in the past, or that is likely to happen within a day in the future."
+            "Level 25" "Gain an ominous vision of an event that happened within a week in the past, or that is likely to happen within a week in the future."
+            "Level 30" "Gain an ominous vision of an event that happened within a month in the past, or that is likely to happen within a month in the future."
+            "Level 35" "Gain an ominous vision of an event that happened within the infernalist’s own lifetime, or that is likely to happen within his remaining lifetime."
+        }
+    }
+
+    #t4d32e6e4c74fcf980cc6bd ^"Debauchery/Psychomachia Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Debauchery" FIXED
+            ^"Power" STRING "Psychomachia" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 112
+        }
+        GUIDELINES {
+            "General" "Tarnish an Infernal aura with a value equal to (the magnitude of the effect + 3), +6 maximum."
+            "Level 2" "Make a minor change to a target’s emotions (transforming sadness to despair, for example)."
+            "Level 3" "Make a major change to a target’s emotions (transforming resolve into paranoia, for example)."
+            "Level 4" "Increase or decrease a character’s Personality Trait by one step, to a maximum of +3 or –3."
+            "Level 4" "Completely change a target’s emotions (transforming anger into euphoria, for example)."
+            "Level 5" "Increase or decrease a character’s Personality Trait by one step, to a maximum of +4 or –4."
+            "Level 5" "Give a target a temporary Personality Trait at +1."
+            "Level 5" "Give a target a Warping Point."
+            "Level 10" "Increase or decrease a character’s Personality Trait by one step, to a maximum of +5 or –5."
+            "Level 10" "Give a target a temporary Personality Trait at +2."
+            "Level 10" "Give a target 2 Warping Points, possibly triggering Vituperation or Twilight."
+            "Level 10" "Drive a target insane for the duration of the effect."
+            "Level 15" "Increase or decrease a character’s Personality Trait by one step, to a maximum of +6 or –6."
+            "Level 15" "Give a target a temporary Personality Trait at +3."
+            "Level 15" "Cause a target to gain a Confidence Point, so long as he has fewer than his (Confidence Score x 5)."
+            "Level 15" "Give a target 3 Warping Points."
+            "Level 20" "Give a target 4 Warping Points."
+            "Level 25" "Give a target 5 Warping Points."
+        }
+    }
+
+    #t231e30a3f4680ff434289e ^"Incantation/Psychomachia Guidelines" DEF {
+        EXTENDS #td20062d276493da57e1ed3 ^"Unholy Guideline"
+        PROPERTIES {
+            ^"Method" STRING "Incantation" FIXED
+            ^"Power" STRING "Psychomachia" FIXED
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 112
+        }
+        GUIDELINES {
+            "Level 2" "Sense whether a supernatural effect is Divine or Infernal, but without distinguishing between them."
+            "Level 3" "Form words in a target’s mind."
+            "Level 3" "Sense if an aura is tarnished, and identify it."
+            "Level 4" "Put a thought or desire into a target’s mind."
+            "Level 4" "Sense a powerful emotion."
+            "Level 5" "Compel a target to act on his immediate desires."
+            "Level 5" "Twist the target’s senses, making them perceive only what the caster directs."
+            "Level 10" "Imbue all of a target’s responses with a particular desire."
+            "Level 10" "Compel a target to lie as the caster commands, and to believe it has told the truth."
+            "Level 15" "Control a target’s behavior as long as it is within range."
+            "Level 20" "Give a target a simple command, which it obeys to the best of its ability."
+            "Level 25" "Give a target a complex command, which it obeys to the best of its ability."
+            "Level 30" "Completely control a target’s mind and emotions."
+        }
+    }
+
+}

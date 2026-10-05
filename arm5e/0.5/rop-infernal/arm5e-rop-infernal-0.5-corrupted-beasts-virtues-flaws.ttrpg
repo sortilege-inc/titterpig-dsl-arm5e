@@ -1,0 +1,83 @@
+EXTENSION "ArM5_RoP_Infernal_CorruptedBeasts_VirtuesFlaws" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Eight: Corrupted Beasts virtues flaws"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Infernal_Core_Ext"
+
+    # The chapter's virtues flaws, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t27bd0ed6aa6108fd951ecc ^"Corrupted Beast" DEF {
+        EXTENDS #t2f8QXAkXHom00jIOzQvjyu0 ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Supernatural"
+            ^"Restriction" STRING "animals only"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 77
+        }
+        DESCRIPTION "The creature has been corrupted by Infernal power, and acquires an Infernal Might of 5. The negative side of its character is brought to the fore and it receives one sinful Personality Trait at +6, such as Violent, Gluttonous, or Lustful. As part of the corruption, the beast takes on some sort of disgusting or repellent appearance, decreasing its Presence to –6. However, should the animal make any attempt to scare or intimidate an opponent, this should be treated as a Presence of +6. Despite the creature’s deformity, it is possible (although difficult) to pass the animal off as a natural member of its species. Finally, the creature is afflicted with the Tainted with Evil Flaw, which affects the reactions of both humans and other animals towards it. Corrupted beasts do not react negatively to The Gift."
+    }
+
+    #te21b3eb1aac230d8592377 ^"Demonic Weakness" DEF {
+        EXTENDS #t2f8QXAkXHom00jIOzQvjyu0 ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Supernatural"
+            ^"Restriction" STRING "corrupted beasts only"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 77
+        }
+        DESCRIPTION "The beast has a weakness similar to those of demons. Choose an appropriate limitation from the list given in Chapter 4: The Infernal Legions, Demonic Weaknesses. Corrupted beasts cannot, however, have the Ordering or Compulsion weaknesses."
+    }
+
+    #tbc3cd857513ef9c34a38a3 ^"Ferocity (Realms of Power: The Infernal)" DEF {
+        EXTENDS #tdtcsFn2Qhvmm6rPadswict8 ^"Virtue"
+        PROPERTIES {
+            ^"Printed Name" STRING "Ferocity"
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "General"
+            ^"Restriction" STRING "animals only"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "Like companion and magus characters, the animal has a Confidence score of 1. However, it can only use Confidence in situations where its corrupt nature is triggered, such as when hunting children or attacking a priest. Describe a situation which activates the Confidence of the creature; in such circumstances the creature has 3 Confidence Points. Some creatures have this Virtue without it being derived from an Infernal source."
+    }
+
+    #tb5e4068536bc785f2101e2 ^"Horrifying Appearance" DEF {
+        EXTENDS #t2f8QXAkXHom00jIOzQvjyu0 ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Supernatural"
+            ^"Restriction" STRING "corrupted beasts only"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "The creature is hideously deformed in some waythat is a major hindrance in its life. Such a deformity may have some minor side benefit (a creature without a skeleton can seep through cracks, for example), but prevents the animal from ever being passed off as a member of its original species."
+    }
+
+    #t864aaf13eccafc895c2fa9 ^"Greater Infernal Power" DEF {
+        EXTENDS #tdtcsFn2Qhvmm6rPadswict8 ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Major"
+            ^"Category" STRING "Supernatural"
+            ^"Restriction" STRING "corrupted beasts only"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "Choosing this Virtue adds 5 to the Infernal Might of the corrupted beast and gives the creature an Infernal Power, which it may activate by spending points from its Might Pool. Design the effect as an Infernal Power (see Chapter 10: Maleficia), with a level of effect that cannot exceed the corrupted beast’s (Infernal\n\nMight + 10). Such a Power typically costs its magnitude in Might Points to activate, and has an Initiative bonus equal to Quickness + magnitude. A given Power is appropriate for this Virtue only if it requires a Penetration Total to work. (Otherwise, it is a Lesser Infernal Power.) To calculate a Penetration Total, see ArM5, page 191. Corrupted beasts may have this Virtue more than once, each for a different Power, and Infernal Might increases for each Power acquired."
+    }
+
+    #ta1c38fc46f3c6bbc3e3a3d ^"Lesser Infernal Power" DEF {
+        EXTENDS #tdtcsFn2Qhvmm6rPadswict8 ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor"
+            ^"Category" STRING "Supernatural"
+            ^"Restriction" STRING "corrupted beasts only"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "Choosing this Virtue adds 2 to the Infernal Might of the corrupted beast and gives the creature an Infernal Power, which either affects it constantly or may be activated by spending points from its Might Pool. Design the effect as an Infernal Power (see Chapter 10: Maleficia, making sure to adjust the level for constant effect or maintaining concentration if appropriate (and ignoring other effect modifications). The level of effect cannot exceed the corrupted beast’s Infernal Might. A Power granted by this Virtue typically costs 0–2 Might Points to activate and has an Initiative\n\nbonus equal to magnitude. A given Power is only appropriate for this Virtue if it does not require a Penetration Total; if the Power would have to exceed the Magic Resistance of a target to operate (even if a given target might lack such), then it must be a Greater Infernal Power instead. Corrupted beasts may have this Virtue more than once, each for a different Power, and Infernal Might increases for each Power acquired."
+    }
+
+}

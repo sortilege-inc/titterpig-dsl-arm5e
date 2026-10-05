@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_RoP_Infernal_InfernalRealm_Rules" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter One: The Infernal Realm rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf97eb731592deaefbfeeb6 ^"Corruption Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Formation of an Infernal Aura"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 11
+        }
+        FORMULAS {
+            "Corruption Roll" "stress die + temporary Infernal aura strength"
+        }
+    }
+
+    #t2de4168b02bda507f79f57 ^"Ease Factor (to maintain Infernal aura)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Formation of an Infernal Aura"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 11
+        }
+        FORMULAS {
+            "Ease Factor (to maintain Infernal aura)" "3 + dominant aura strength"
+        }
+    }
+
+    #ta180ea968fbb2fe1fdcd17 ^"Ease Factor (to increase Infernal aura)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Formation of an Infernal Aura"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 11
+        }
+        FORMULAS {
+            "Ease Factor (to increase Infernal aura)" "6 + dominant aura strength"
+        }
+    }
+
+}

@@ -1,0 +1,896 @@
+EXTENSION "ARMDef_RoP_Infernal_Deceivers_Demons" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Six: Demons as Deceivers demons"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's demons, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t5616d0351cfc8957d60333 ^"Andrew, an Infernal Ghost" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Accusers"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" STRING "Int 0, Per +2, Pre –2, Com 0, Str n/a, Sta n/a, Dex n/a, Qik n/a"
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Ability Block (Social Abilities)"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Weakness" STRING "Protected Group (children)"
+            ^"Vis" STRING "None — Andrew has no ability to form a body, and thus cannot leave behind a corpse."
+            ^"Appearance" STRING "Andrew can only be seen by those with Second Sight (and those whom he targets with his Envisioning Power). He appears as he did in life, a husky peasant with a misshapen nose, except that he has a pair of horns, and bat wings protrude from his shoulders. He carries a mallet and a handful of rusty nails, each eight inches long."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 58
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +6
+            "Hatred for Women" +4
+            "Lustful" +2
+        }
+        ABILITIES {
+            "Area Lore" SCORE 4 SPECIALTY "adulterers"
+            "Awareness" SCORE 3 SPECIALTY "searching"
+            "Carouse" SCORE 3 SPECIALTY "ale"
+            "Profession: Carpenter" SCORE 5 SPECIALTY "coffins"
+        }
+        POWERS {
+            #t2f17379916be937e0d707d ^"Nails of the Cuckold’s Vengeance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Each use of this Power causes a stabbing pain in a part of the body, as if a nail had been driven into it. This disrupts concentration, and, if a Stamina roll against an Ease Factor of 6 is failed, the loss of a Fatigue level. The puncture wounds caused by this attack are clearly visible."
+            }
+            #tfbd33c20a81cc5b1d4b700 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Misogyny. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t1a106d6533b8c3e1166c78 ^"Betrayal of the Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+            #td9749e4fcf12ef74119bd0 ^"Whispers Behind the Back" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+        }
+        DESCRIPTION "Andrew was hanged eight years ago for murdering his wife and her lover. This crime, while motivated by passion, was not a crime of the moment: Andrew carefully staged the situation which would cause the most torment to the adulterers, poisoning them with a slow-acting toxin and then driving nails into their writhing bodies as they died. Andrew now walks the earth uncovering the crimes of unfaithful lovers."
+    }
+
+    #t5850cae2391d360fda3dbb ^"Aqrab the Conjurer" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Deluders"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Commanding, Diablerie, Incantation, Summoning; Puissant Guile, Puissant Teaching"
+            ^"Reputations" LIST ["Powerful Sorceress 3 (Infernal)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Goetic Arts" STRING "Summoning 10, Commanding 10"
+            ^"Weakness" STRING "Vulnerability (gold)"
+            ^"Vis" STRING "2 pawns of Imaginem, in eyes (all one hundred of them!)"
+            ^"Appearance" STRING "In her natural form, Aqrab is a cloud of midnight-blue smoke filled with eyes and gaping maws. She usually cloaks herself in illusion so that she appears as an Arabic woman with blue skin and dark blue hair, wearing only a loincloth. She may also appear as the same woman, but without the blue coloring; in this form she dresses in blue."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 58
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +4
+            "Credible" +3
+            "Charming" +3
+            "Sly" +2
+        }
+        COMBAT {
+            "Short sword" INIT 3 ATTACK 10 DEFENSE 8 DAMAGE 6
+        }
+        ABILITIES {
+            "Charm" SCORE 5 SPECIALTY "seduction"
+            "Diablerie" SCORE 8 SPECIALTY "mazzikim"
+            "Faerie Lore" SCORE 6 SPECIALTY "djinni"
+            "Guile" SCORE 6 BONUS 2 SPECIALTY "about magic"
+            "Incantation" SCORE 5 SPECIALTY "when invoking names"
+            "Infernal Lore" SCORE 6 SPECIALTY "mazzikim"
+            "Magic Lore" SCORE 6 SPECIALTY "spirits"
+            "Single Weapon" SCORE 4 SPECIALTY "short sword"
+            "Teaching" SCORE 6 BONUS 2 SPECIALTY "Summoning"
+        }
+        POWERS {
+            #t1e9daa621b7ccaa4840c03 ^"Duplicate the Magi’s Creation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Deluders. Aqrab can only duplicate Creo spells."
+            }
+            #t7197de27ab4c26cc7a83d1 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t0b02908b87dde9f11ff1fd ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Thirst for Knowledge. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #ta4f1ab196c2886c72d6212 ^"Delusion" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Deluders. *Duplicate the Magi’s (Technique) Spell*, variable points, Init +1, variable Form."
+            }
+        }
+        DESCRIPTION "Aqrab is a Deluder who is most active in Islamic lands. She masquerades as either a sorceress or a djinnja who is willing to teach others her magic, which, along with other Powers, includes knowledge of how to summon magical creatures. What she actually does is places them on the road towards becoming diabolists. She is capable of teaching the Infernal Abilities of Incantation and Diablerie (see Chapter 10: Maleficia), and the Goetic Arts of Summoning and Commanding (see Chapter 11: Ars Goetia) to Gifted students. Anyone learning from her subtracts her Might from the penalty applied to Study Totals when learning Supernatural Abilities (ArM5, page 166)."
+    }
+
+    #tdd65bb52499cc3fbf3a865 ^"Ataf the Separator" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Spirits of Deceit"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Hatred (True Lovers)"
+            ^"Reputations" LIST ["Sower of Discord 1 (Infernal)"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unc."
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Protected Group (True Lovers)"
+            ^"Vis" STRING "4 pawns of Mentem, in tongue"
+            ^"Appearance" STRING "Ataf’s natural form is of a human male with the head of a serpent. However, as a shapechanging demon he can adopt the form of any man or woman he meets. When he changes shape, he adopts the clothing of his new form."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 59
+        }
+        PERSONALITY_TRAITS {
+            "Deceitful" +6
+            "Vengeful" +4
+            "Trustworthy" -5
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 6
+            " Fist" INIT 2 ATTACK 6 DEFENSE 5 DAMAGE 2
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Charm" SCORE 4 SPECIALTY "sex opposite to current form"
+            "Folk Ken" SCORE 6 SPECIALTY "married couples"
+            "Intrigue" SCORE 5 SPECIALTY "marital disharmony"
+        }
+        POWERS {
+            #tbff56012a251ff342ac008 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t5e86b5fe4257d36e567cfa ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Jealousy, Suspicion. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t0315afd32761f2b6398dac ^"Change Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t627eac0448ab91fa172503 ^"Trust of the Innocent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t811178d9ad4b53051bd322 ^"Forked Tongue of the Serpent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #tc3909eddb5b8dfb1fce147 ^"The Serpent’s Oracle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+        }
+        DESCRIPTION "Ataf’s special province is in separating a husband from his wife. He does not target those whose marriages are already on shaky ground; instead he victimizes those couples who have an apparently happy marriage. His usual modus operandi is to impersonate one half of the couple and be seen conspicuously by neighbors and friends acting in an inappropriate manner. Ataf prefers to allow suspicion, jealousy, and recrimination to drive husband and wife apart, feelings that he reinforces with his Obsessions. To his eternal frustration, his Powers do not work on those with True Love; they never mistake his shapechanged form for their beloved (but merely see someone who looks vaguely similar to them), and his other Powers are similarly affected. However, he is unable to recognize True Love until his Powers fail; more than one of his “projects” has been brought low by True Lovers, and when he encounters them, he often abandons his usual subtlety and lashes out against them with uncharacteristic violence."
+    }
+
+    #t0aef5fccca103c5adca3af ^"Berith the Ennobler" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Spirits of Deceit"
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER -3
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Virtues and Flaws" STRING "Landed Noble, Long–Winded Not a true title, but he is treated as such."
+            ^"Reputations" LIST ["Ennobler of Riches 3 (Infernal)", "Teacher of Alchemists 1 (Infernal)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Combat" STRING "Great sword: Init +2, Attack +11, Defense +11, Damage +14 Hooves: Init +2, Attack +5, Defense +8, Damage +6 Includes a +3 bonus for being mounted."
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0/0/0, –1/–1, –3/–3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32)"
+            ^"Weakness" STRING "Protected Group (noblemen who meet all of their obligations)"
+            ^"Vis" STRING "5 pawns of Imaginem, in tin crown."
+            ^"Appearance" STRING "Berith appears as a soldier, dressed completely in red, and riding a red horse. He always wears a crown. Berith may look like a mounted man, but his humanoid portion does not detach from his equine portion."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 59
+        }
+        PERSONALITY_TRAITS {
+            "Arrogant" +6
+            "Deceitful" +6
+            "Trustworthy" -5
+        }
+        ABILITIES {
+            "Athletics" SCORE 6 SPECIALTY "galloping"
+            "Brawl" SCORE 6 SPECIALTY "hooves"
+            "Folk Ken" SCORE 6 SPECIALTY "noble land claims"
+            "Great Weapon" SCORE 6 SPECIALTY "great sword"
+            "Guile" SCORE 6 SPECIALTY "ennobling things"
+            "Intrigue" SCORE 8 SPECIALTY "mortal nobles"
+        }
+        POWERS {
+            #t80b29edc7ec58f9edff798 ^"Ennoble the Base" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Makes any one target see a situation, argument, idea, or object as more noble than it is. *Face of the Count*, 5 points, Init 0, Corpus*: * Transforms a volunteer into a facsimile of a particular nobleman. This transformation does not change the memories or personality of the target, and is dispelled by participation in any sacrament."
+            }
+            #tfa08fc607c78488a5bf2b4 ^"Seven Leagues in One Night" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "This Power allows Berith to travel at tremendous speed, three times faster than any normal horse. He can cross water as if it were dry land. He can carry anyone who voluntarily sits upon his back."
+            }
+            #t527b7fa11412eb43282899 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t0d8c25280f708002876eba ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Pretensions to Greatness. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t495086801a5c7a5e706226 ^"Change Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #tc0bbbda461352e9d8d435f ^"Trust of the Innocent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t6d960116c2246a7201f092 ^"Forked Tongue of the Serpent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t62c32625571c2c16a53218 ^"The Serpent’s Oracle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+        }
+        DESCRIPTION "Berith can transform the way that things seem, so that they appear nobler than they are. Berith is a consummate liar because he can make ideas seem noble. He is popular with alchemists, because he can make base metals seem valuable, and offers valueless instruction that seems wise. Berith’s arrogance prevents him from transforming himself: his demonic nature is always apparent, and he never chooses to manifest in any other shape.\n\nBerith’s favorite ploy is the production of unworthy noblemen. Sometimes, he arranges for a landowner to be slain, and then substitutes a magically altered servant. Such imposters do not have the memories or personalities of the people they replace and must work diligently to forestall discovery. Berith’s illusion cannot survive the sacraments, so his servants usually pretend to take communion privately. Berith also often helps usurpers to claim honors. His greatest success, helping Abimelech to rule over Israel of three years as if he were its king, is recorded in the Book of Judges."
+    }
+
+    #t5699cbfc60932092c2a47c ^"Bordelon, a Personal Tormentor" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Accusers"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Piercing Gaze, Puissant Leadership"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Protected Group (red-haired women)"
+            ^"Vis" STRING "3 pawns of Mentem, in hair"
+            ^"Appearance" STRING "Bordelon appears as a stern-faced old woman, with hair tied back in such a tight bun that it distorts her face. Her small horns are hidden within this hair. Her skin is mottled with liver-spots, and she wears an austere gown which covers her cloven hooves and forked tail. She affects the demeanor of a stern governess. She carries a switch of willow bound with leather, which she wields with expert ability to inflict the most pain."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 60
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +6
+            "Stern" +5
+            "Implacable" +3
+        }
+        COMBAT {
+            "Switch" INIT 6 ATTACK 11 DEFENSE 10 DAMAGE 4
+        }
+        ABILITIES {
+            "Leadership" SCORE 6 BONUS 2 SPECIALTY "children"
+            "Single Weapon" SCORE 5 SPECIALTY "switch"
+        }
+        POWERS {
+            #tf06b784452afe22dfc3ac7 ^"Crushing the Will" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This Power saps the will and vitality of its target, leaving him listless, less energetic, and withdrawn. All Personality Trait rolls suffer a –3 modifier, and the target may not spend Confidence Points to increase other rolls. Each use of this Power lasts until the victim has slept for at least six hours."
+            }
+            #te7ea1756c12dd4fb9b8898 ^"Chastise the Disobedient" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Every strike of Bordelon’s switch inflicts a fearsome sting. Double the Wound Penalties inflicted by the weapon, although these extra penalties vanish after an hour. Wound Penalties caused by any actual wounds she inflicts are healed as normal."
+            }
+            #t5d641fcba43fd128e810cd ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t498a58a213b495cdba88e6 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Shame. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t7ff1c2fa8aeeeae092818f ^"Betrayal of the Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+            #t6d614b4d65cb5c3d9401bc ^"Whispers Behind the Back" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+        }
+        DESCRIPTION "Bordelon believes that meekness is a virtue, and that those who strive to better themselves are victims of pride. Her goal is to crush all ambition and prevent those whom she watches from committing the very sin of Satan himself. Bordelon chooses a child early on in his life and becomes his personal tormentor (granting the Story Flaw Plagued by a Demon). The child soon learns that the demon’s periodic appearances are more frequent whenever he tries to distinguish himself from his peers, so her victims tend to become withdrawn, unambitious, and meek. Whenever her victim acts in a way that would grant a Confidence Point due to increased self-worth, he can expect a visit from Bordelon to punish the presumption."
+    }
+
+    #t636d39acf88f80c95ddd94 ^"Forcas" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Duke of the Deluders (Watchers)"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 6
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "2 (6 points)"
+            ^"Virtues and Flaws" STRING "Debauchery, Effusion, Phantasm; Good Teacher, Puissant Artes Liberales, Puissant Guile; Noncombatant"
+            ^"Reputations" LIST ["Duke of Rhetoric 7 (Infernal)"]
+            ^"Hierarchy" INTEGER 7
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32)"
+            ^"Weakness" STRING "Ordering"
+            ^"Vis" STRING "7 pawns of Mentem"
+            ^"Appearance" STRING "His natural form is that of a Watcher, although by using his Unholy Power of Phantasm (see Chapter 10: The Maleficia: Phantasm) he usually takes the form of an aged man who leans on a gnarled staff carved with many watching eyes. Like all Watchers he is mute, but communicates directly with the minds of his targets while pretending to speak by moving his mouth in the appropriate manner."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 61
+        }
+        PERSONALITY_TRAITS {
+            "Arrogant" +4
+            "Credible" +3
+            "Sly" +2
+            "Wise Demeanor" +2
+        }
+        COMBAT {
+            "Dodge" INIT 6 DEFENSE 10
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 8 BONUS 2 SPECIALTY "mathematics"
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Debauchery" SCORE 10 SPECIALTY "Phantasm"
+            "Effusion" SCORE 12
+            "Guile" SCORE 7 BONUS 2 SPECIALTY "hedge wizards"
+            "Infernal Lore" SCORE 6 SPECIALTY "hierarchies"
+            "Intrigue" SCORE 4 SPECIALTY "academic"
+            "Magic Lore" SCORE 4 SPECIALTY "herbalism"
+            "Phantasm" SCORE 8 SPECIALTY "changing appearance"
+            "Philosophiae" SCORE 6 SPECIALTY "natural sciences"
+            "Profession: Actor" SCORE 4 SPECIALTY "lip movements"
+            "Teaching" SCORE 6 SPECIALTY "Artes Liberales"
+            "Theology" SCORE 4 SPECIALTY "heresy disguised as doctrine"
+        }
+        POWERS {
+            #t413821245418043128a0d5 ^"Hide from Mortal Sight" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Forcas can render anyone he can see invisible, although they are never hidden from his sight. This is true invisibility, as it cannot be revealed with Hermetic magic, due to its Infernal nature. The invisibility lasts until the next Sunday, or until Forcas decides to cancel it."
+            }
+            #t582ead44202f3773d16b67 ^"Retrieve That Which is Lost" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Forcas can locate any object to which he has an Arcane Connection, or a sympathetic connection such as its true owner. Once located, he can cause the item to disappear from its current location and appear in close proximity to himself. This Power must penetrate the Magic Resistance of anyone holding or wearing the summoned object."
+            }
+            #t27d83f942c8fae9447e2e2 ^"The Wordless Conversation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Watchers."
+            }
+            #tde9b15ec3ac64cc2bba777 ^"Corrupted Knowledge" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Watchers."
+            }
+            #tb9839f0f94e6331709f998 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t7e133288e75f28c533c855 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Arrogance. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t5c56df9cdf84c3c66fcd37 ^"Delusion" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Deluders."
+            }
+            #te5a482315a17d52b8ec49e ^"Duplicate the Magi’s Perception" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Deluders."
+            }
+            #te1e02059567b5f46998b59 ^"Duplicate the Magi’s Transformation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Deluders."
+            }
+        }
+        DESCRIPTION "Forcas is well known among natural magicians and other educated hedge wizards; he devotes his time to teaching them rhetoric, logic, and mathematics, as well as the Unholy Powers he knows. Like many Deluders, he claims to be an airy spirit (aligned to the Magic realm, rather than the Infernal realm), and seemingly teaches his lore out of goodwill. He usually acquires a famulus (see Chapter 5: Demons as Corrupters, Famuli) for any of his students who have magical abilities, so that the famulus can hide his Infernal nature. He can render people invisible, and can restore lost property. However, he claims to his students that he teaches them to become invisible, whereas in reality it is Forcas who enacts the illusion, hidden from sight in his discorporate form."
+    }
+
+    #t41241b205725f0390bedf0 ^"Miser’s Pot, Bane of the Hoarder" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Accusers"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Terram"
+            ^"Characteristics" STRING "Int +1, Per +1, Pre n/a, Com 0, Str +1, Sta 0, Dex +1, Qik +2"
+            ^"Size" INTEGER -2
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" STRING "+18 (made of solid brass, no vital organs)"
+            ^"Fatigue Levels" STRING "Tireless"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12)"
+            ^"Weakness" STRING "Protected group (poor people)"
+            ^"Vis" STRING "1 pawn of Terram, in body"
+            ^"Appearance" STRING "The Miser’s Pot looks like a small, three–legged cooking cauldron made of brass. Its outer surface is usually shiny and smooth, but it is able to tarnish itself or scribe designs on its face at will. When it speaks, its voice is hollow and tinny."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 62
+        }
+        PERSONALITY_TRAITS {
+            "Loquacious" +3
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "when pursued"
+            "Brawl" SCORE 2 SPECIALTY "dodge"
+            "Charm" SCORE 4 SPECIALTY "misers"
+            "Folk Ken" SCORE 4 SPECIALTY "rich people"
+        }
+        POWERS {
+            #te0855512ebb80bbced24dd ^"Body of Brass" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The Pot does not have a living body, and thus it is immune to fatigue, disease, deprivation, and some spells. The Pot moves on jointless, boneless legs, and can sprint at the pace of a running horse. It usually does this just after a rich person places treasure inside it."
+            }
+            #t3d0638d2818add1c2b4f3a ^"Seize the Miser’s Hoard" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "This Power allows the demon to reshape its inner surface, so that it flows around any object inside the lip of the cauldron, creating an unbreakable grip. This includes the hand of a rich person whom the pot wishes to drag away to Hell."
+            }
+            #t8a5641706bfd145a2cf38e ^"Idea" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The Pot can silently suggest, to its victim, that it would be a good place to store valuables. The victim can resist this suggestion with a Personality Trait roll against an Ease Factor of 9, modified by circumstances. For example, if the rich person already owns a strongbox, he is unlikely to want to store his valuables in a cauldron, and so might gain a 3-point bonus on the roll. If this Power fails, the Pot usually tries again, but with a different target commodity. For example, a rich person refusing to fill it with gold might be encouraged to fill it with coal, or flour, or cook a meal in it. This Power is often used in conjunction with the pot’s Obsession Power."
+            }
+            #td565988d378a3e71ffc538 ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tf14b4c8b168b0254d419d6 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Hoarding. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t4221dad97608371214ec1b ^"Betrayal of the Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+            #t163898a102435e462d6b4e ^"Whispers Behind the Back" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+        }
+        DESCRIPTION "The Miser’s Pot claims its mission is to punish the greedy rich. It does this by removing some of their wealth and then, if they do not demonstrate a suitable change of attitude, inflicts them with its Obsession Power to ensure that they arrive in Hell. The Pot is able to speak, and it tells both the rich person from whom it steals, and the poor person whom it patronizes, that its acts are a punishment for greed and mistreatment of the poor."
+    }
+
+    #tcf395b799a7c59dc5a4b05 ^"Nithael, the Great Leveller" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Master of the Accusers"
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Reputations" LIST ["Captain of a Legion of Corrupt Priests 3 (Infernal)"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Abhorrent Material (topaz)"
+            ^"Vis" STRING "5 pawns of Rego, in fingers"
+            ^"Appearance" STRING "Nithael takes the appearance of an emaciated man, with blue-green skin and a face that looks like it has been drawn outwards from the head with a pair of pliers. His legs end with the claws of a bird. He is hairless and eschews clothing."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 63
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +6
+        }
+        COMBAT {
+            "Punch" INIT 1 ATTACK 7 DEFENSE 7 DAMAGE 6
+        }
+        ABILITIES {
+            "Brawl" SCORE 5 SPECIALTY "punch"
+            "Charm" SCORE 6 SPECIALTY "pandering"
+            "Folk Ken" SCORE 8 SPECIALTY "worthlessness"
+            "Guile" SCORE 6 SPECIALTY "removing self-worth"
+            "Leadership" SCORE 5 SPECIALTY "weak willed"
+            "Profession: Actor" SCORE 6 SPECIALTY "petitioner"
+        }
+        POWERS {
+            #t747bfb2804588ee5eb8954 ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The demon can assume the shape of any human being."
+            }
+            #t3d4f286cd04a057472ed2b ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tf74bba04feeade6ae94691 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Self-loathing. See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t89889ee9831e54510a2f48 ^"Betrayal of the Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+            #tde4a9822329b5ee53955c7 ^"Whispers Behind the Back" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Accusers."
+            }
+        }
+        DESCRIPTION "Nithael’s interests are in those who abuse their positions of power. He takes great delight in visiting both secular and ecclesiastical princes who govern for the love of power, but he does not restrict himself to such luminaries. All who use the power of their offices — whether granted by birth, by man, or by God — are his prey.\n\nHe tests those whom he accuses, going to them with a legitimate complaint, and woe betide those to whom he takes a dislike. His main weapons are his obsessions: he spends weeks or months working on increasing the self-importance of his victim, inflating her own opinion of herself and causing her to abuse her power even more. He then switches to self-loathing, and crushes her ego. She is tormented in her sleep though the use of his Envisioning until she is a different woman altogether, stripped of confidence and weakly trembling. Once he is done with her, suicide seems the only way out."
+    }
+
+    #t390b6a15f5b5ba494efef7 ^"Premnenosyne, False Prophetess" DEF {
+        EXTENDS #t167900677b9e928b0cb39f ^"Demon"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Spirits of Deceit (Men of Good Intent)"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Premonitions, Puissant Guile, Social Contacts"
+            ^"Reputations" LIST ["Prophetess 1 (Infernal)"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Protected Group (those who can actually see the future, for example, those with the Premonitions Virtue, or those trained in Astrological Mysteries)"
+            ^"Vis" STRING "1 pawns of Intellego, in eyes"
+            ^"Appearance" STRING "This demoness always looks like a Wise One, but as is common to her demon family, her actual appearance varies to suit the preconceptions of the viewer."
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 64
+        }
+        PERSONALITY_TRAITS {
+            "Deceitful" +6
+            "Acedia" +1
+            "Trustworthy" -5
+        }
+        COMBAT {
+            "Dodge" INIT 1 DEFENSE 1
+        }
+        ABILITIES {
+            "Charm" SCORE 4 SPECIALTY "the gullible"
+            "Europe Lore" SCORE 3 SPECIALTY "superstitions"
+            "Folk Ken" SCORE 6 SPECIALTY "fortune-telling"
+            "Guile" SCORE 5 BONUS 2 SPECIALTY "about future events"
+            "Premonitions" SCORE 4 SPECIALTY "non-urgent events"
+            "Survival" SCORE 2 SPECIALTY "on the road"
+        }
+        POWERS {
+            #t922a30a061b92287a8fa09 ^"The Abandoned Corpse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Premnemosyne can create a corpse as she converts to spiritual form, appearing to leave a body behind. This body rots quicker than a real human cadaver, disappearing entirely within a month."
+            }
+            #t6788d29188e428acf2b14c ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #tb17953d82ac6cfc29b5dd4 ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Acedia (spiritual sloth). See Chapter 4: Infernal Legions, Demonic Powers."
+            }
+            #t751684465350f74aee01c3 ^"Change Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t67274444d87a90afb42ddb ^"Trust of the Innocent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t7b72e094353d0b444d70cb ^"Forked Tongue of the Serpent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+            #t9c257cc081b5f16d732cd8 ^"The Serpent’s Oracle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See Chapter 4: Infernal Legions, Spirits of Deceit."
+            }
+        }
+        DESCRIPTION "Premnemosyne is a demon of acedia, the spiritual version of the sin of sloth. She harms by spreading false prophecies. The events she predicts are always precipitous: they encourage characters to avoid involvement in situations that they might correct, since, she assures them, everything will turn out alright in the end. Premnemosyne encourages people to trust in Providence, beyond all limits of caution. She often serves other demons. Her skill at predicting the pattern of future events is highly developed, and she advises diabolists concerning the future. She is not a warrior and never fights, but she occasionally maneuvers people into appearing to kill her, so that she can have them charged with murder.\n\nPremnemosyne is currently active in a small town in the Rhineland, ruled by a nobleman under diabolic influence. She spreads folktales about a hero who will come to cast him down, so that people are tempted to wait for a savior who will never come."
+    }
+
+}

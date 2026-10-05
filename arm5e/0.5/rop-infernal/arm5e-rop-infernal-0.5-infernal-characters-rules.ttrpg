@@ -1,0 +1,60 @@
+EXTENSION "ArM5_RoP_Infernal_InfernalCharacters_Rules" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Nine: Infernal Characters rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Infernal_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #ted57357ea0ca38245e9530 ^"Group Modifier" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ceremony*"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 91
+        }
+        FORMULAS {
+            "Group Modifier" "Total Ceremony scores – 13"
+        }
+    }
+
+    #tcbb4457809ad29d3f85d40 ^"Hex (formula)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Hex"
+            ^"Rules Section" STRING "Delay Modifier"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 92
+        }
+        FORMULAS {
+            "Hex" "stress die + Intelligence + Hex + aura bonus + modifiers"
+        }
+    }
+
+    #te5a60c22f26350c1a462cf ^"Sense Passions (formula)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Sense Passions"
+            ^"Rules Section" STRING "Sense Passions*"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Sense Passions" "stress die + Perception + Sense Passions + aura"
+        }
+    }
+
+    #t0a896b116957fddf8de755 ^"Aging Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vituperation"
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 95
+        }
+        FORMULAS {
+            "Aging Roll" "stress die (no botch) + (age / 10, rounded up) – living conditions modifier + Warping Score"
+        }
+    }
+
+}

@@ -1,0 +1,315 @@
+EXTENSION "ARMDef_RoP_Infernal_InfernalLegions_Orders" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - Chapter Four: The Infernal Legions orders"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Infernal_Core_Ext"
+
+    # The chapter's orders, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf9447cfad909b625f68657 ^"False Gods" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 30"
+            ^"Ranks" STRING "Master, Lord, and Duke are commonplace; Prince is uncommon"
+            ^"Personality Trait" STRING "Proud +6"
+            ^"Other Names" STRING "Pseudothei (singular pseudotheus, Latinized Greek); Teraphim (singular teraph, Hebrew for “Obscenities”)"
+            ^"Stories" LIST OF STRING ["False Gods love to gather cults about them, particularly when they consist of worshipers who are not aware of the true corrupt nature of their religion. A False God without a worshiper is like a dog without a tail. So when the characters discover one of these demons haunting a deserted locality, devoid of humans, let alone cultists, they should become suspicious — and rightly so!", "The characters come into possession of some material wealth created using a False God’s Wealth of Nations Power. How can they explain this away when the original owner of the goods recognizes his own possessions?"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 37
+        }
+        POWERS {
+            #t4499bc2d7c735bdf2c6905 ^"Shroud the Stench of the Pit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This Power may be used in two manners, both of which affect the expression of other Supernatural Powers. First, the demon can conceal the Infernal nature of any other Supernatural Power, making it appear to be magical or faerie instead. This Power is used on an overt expression of a Power, to prevent spells from recognizing it as Infernal in origin. Secondly, it may be used on more subtle Powers to remove all stench of the supernatural, making them appear wholly mundane. This Power costs Might Points equal to the original cost of the Power being concealed, or Might Points equal to the magnitude of the Infernal effect if it does not cost Might to use. This power lasts for as long as the Power it is masking."
+            }
+            #t66f8590fd905713b4182a7 ^"The Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The demon can summon riches; each use of this Power can create wealth equivalent to up to pound of gold for every point of Infernal Might possessed by the demon. This wealth can be of any form — gold, gems, rich tapestries, ivory, etc. — but it always has intrinsic value, rather than being valuable because of its utility (a roomful of grain, for example). This wealth is not created, it is instead summoned from somewhere else, chosen by the demon, usually for the greatest corrupting effect. This might be a royal treasury on the other side of Europe or the purse of a man standing nearby."
+            }
+            #t05807a802a6157a0180177 ^"His Master’s Voice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can summon other demons or corrupt beasts to its current location. This costs one Might Point for every point of Infernal Might of the being summoned, so is used sparingly. The demon has no control over the demon he has summoned."
+            }
+        }
+        DESCRIPTION "*Then the Devil took Jesus to a very high mountain and showed him all the kingdoms of the world in all their greatness, “All this I will give you,” the Devil said, “if you will kneel down and worship me.”*\n\n— Gospel of Matthew 4:8–9\n\nThe False Gods usurp the name of God by requiring worship, sacrifice, and adoration. They encourage mankind to break the basic and most important tenet of the Christians, Jews, and the Muslims — Thou shalt have no other god but Me. It is a hotly contested point among magi just how many of the pagan gods were actually demons of this order, and for that mater, which ones.\n\nThese demons appear in a physical form that is pleasing to the eye, in human shapes designed to put their viewers at ease; thus they are often handsome, beautiful, or kingly. They are always accompanied with an animal when they manifest; this is not a separate being, but actually part of the physical form."
+    }
+
+    #t4f22d6605d66a861a40150 ^"Spirits of Deceit" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 30"
+            ^"Ranks" STRING "Master and Lord are commonplace, Duke is uncommon, Prince is unusual"
+            ^"Personality Trait" STRING "Trustworthy –5, Deceitful +6"
+            ^"Other Names" STRING "Spiritus mendaciorum (singular and plural, Latin); Sheqerim (singular sheqer, Hebrew for “speakers of falsehoods”)"
+            ^"Stories" LIST OF STRING ["The youngest son of a nobleman begins to spout prophecies that presage evil things for his father’s enemies. As these prophecies come true, people begin to consider the child a miracle worker, and the Spirit of Deceit that is the cause of his foresight (and the success of those predictions) rubs its hands in glee.", "A member of this Order has convinced a faerie court that it owes a tithe (called the *teind*) of one mortal soul to Hell every seven years. Six years have passed since the *teind* was last paid, and the faeries are seeking a victim."]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 38
+        }
+        POWERS {
+            #t6c24d45e680b214083653f ^"Change Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "These demons can change the shape of their manifestation at will, to whatever human or animal form they desire. Weak demons (Might 1–20) are limited to changing form into one type of creature (any human male form, any bird form, or any hoofed animal form, for example), but more powerful demons may adopt any shape. The Size of the altered form is limited to whatever is natural for the species, so a demon taking adult human form must be between Size –2 and +2. This transformation is not akin to a magical spell; it is a direct manipulation of the matter that makes up the demon’s body, and, consequently, physical attacks from a shapechanged demon are not stopped by Magic Resistance."
+            }
+            #taeee1909db1973b3f87e5b ^"Trust of the Innocent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target of this effect loses all judgment and believes a specific lie (as long as it is passable) until presented with evidence to the contrary. An Intelligence roll against an Ease Factor of 6 is allowed to resist the effect."
+            }
+            #td4617506e8f2b0cb8e7c12 ^"Forked Tongue of the Serpent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target believes any lie, no matter how preposterous, until he relates that lie to someone else. At this point he realizes how ridiculous the falsehood sounds, and the demonic Power is broken. An Intelligence roll against an Ease Factor of 9 also reveals the lie to be false, with the first roll allowed an hour after the effect was used, and further rolls permitted once every subsequent hour."
+            }
+            #t43d8fd687f0455112c95aa ^"The Serpent’s Oracle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can duplicate the effects of any Intellego spell for the cost of 2 Might Points. It may also gain a morsel of future knowledge, understanding the most immediate consequences of any one specific action."
+            }
+        }
+        DESCRIPTION "*... And the spirit said, “I will go forth, and I will be a lying spirit in the mouth of all his prophets.” The Lord said, “Go and deceive him. You will succeed.”*\n\n— I Kings 22:22\n\nThe Spirits of Deceit are the embodiment of lies. Although all demons are liars, this order is the source of all lies. More particularly, they propagate the sins of the wolf, the malicious sins which all involve the abuse of the specifically human faculty of reason. These include the socalled “simple frauds,” which betray the confidence of humanity in general, and the “complex frauds,” which betray the confidence of those who had special reason to trust. Thus, these demons promote thievery, hypocrisy, forgery, seduction, and evil counsel (all simple frauds) as well as treason, oath-breaking, heresy, and willful treachery (complex frauds). They have been accused of deluding men through divinations and predictions, and being the voices of pagan oracles. It is certainly true that they are more gifted at prophecy than other demons; however, they are also the most gifted liars, to the eternal frustration of those who would compel them.\n\nThe Spirits of Deceit take the forms of serpents or dragons, often with human features, such as faces or arms. However, they are also the most skilled shapeshifters among all the demons, and few see them in their true forms."
+    }
+
+    #tac59524241ec164af19997 ^"Vessels of Iniquity" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 30"
+            ^"Ranks" STRING "Master is commonplace, Lord is uncommon, Duke and Prince are unusual"
+            ^"Personality Trait" STRING "Hateful +6, Depraved +6"
+            ^"Other Names" STRING "Vasa iniquitatis (singular vas iniquitatis, Latin); Rephaim (singular rephah, Hebrew for “weakeners”)"
+            ^"Stories" LIST OF STRING ["An outbreak of apparent religious hysteria is caused by a Vessel of Iniquity, both to presage and conceal the birth of a child who is fated to be a powerful force of evil. If the characters recognize the outbreak of Obsession for what it is, they have a chance to stop the evil before it is too powerful."]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 39
+        }
+        POWERS {
+            #te634bd797bd75d6c68eabb ^"Form of Wickedness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point per 10 Might"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This Power is a special variety of the Coagulation Power, and it replaces that Power for this order of demons. The demon assumes a physical form that has no shape or dimension, or other accidents of form; even though it is composed of matter, it is pure sin made visible to mankind. This form is indescribable, and provokes an extreme response in viewers, who indulge in the sin until they drop from exhaustion. The ten closest people to the demon when it uses this Power, should they have insufficient Magic Resistance, succumb to the sin that the demon represents. A Stamina stress roll against an Ease Factor of 6 is needed every hour; a failure means the loss of a Fatigue level, while a success ends the Power’s hold. The Power also ends if the victim falls unconscious. A botch indicates temporary insanity, and imposes a Minor Personality Flaw appropriate to the sin. This form can be maintained for only one round, after which time the demon must take spiritual form or human form (using the Form of Man Power, below)."
+            }
+            #t1806b6788a4ebfe31add46 ^"Form of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "After assuming physical form (see Form of Wickedness, above), the demon can shapeshift to the form of any human being. If it chooses a specific human being, the demon must have seen that person to mimic her successfully. The demon can assume spiritual form directly from human form, dissolving the matter in the same manner as described under Coagulation."
+            }
+            #t12d716dc744da302eca08b ^"Contagious Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Any human who succumbs to the Obsession Power of a Vessel of Iniquity becomes a carrier of that Power, and can pass it on to anyone who becomes a victim of their sin. Obsession is resolved in the usual way, except that if the target fails his personality roll, he becomes contagious. Any other person who suffers as a result of his new personality trait must himself make a resistance roll against the initial Obsession Personality Trait, or succumb himself (and become a carrier himself). Thus, a man inflicted with Wrath by a demon infects his wife when he lashes out at her for burning his dinner; she then inflicts her neighbors with Wrath when they come to complain about the noise, and so on. For every victim who comes under the sway of the Obsession, the demon loses a point from its Might Pool, no matter how far away it is from the victim. When the demon has no Might Pool left, the obsession ceases to be contagious, although those who have suffered it remain inflicted with the Personality Trait, as usual. The contagion also ends if a day passes without a new victim succumbing to the Obsession. Powerful Obsessions can quickly go out of control, as the rate of infection of new victims exceeds the regeneration rate of the demon’s Might Pool."
+            }
+        }
+        DESCRIPTION "*Simeon and Levi are brethren; Vessels of iniquity are in their habitations. I will not join in their secret talks, nor will I take part in their meetings, for they killed men in anger and he crippled bulls for sport. A curse be on their anger, because it is so fierce, and on their fury, because it is so cruel... *\n\n— Genesis 49:5–7\n\nThe Vessels of Iniquity are the inventors of all evil things and all wicked arts; all malice and deformity proceed from them. They have little interest in the petty sin or the minor crime; they are the embodiments of the vices considered the most heinous by man — hatred, cruelty, debauchery, and every negative emotion extrapolated to its most extreme. For example, the vice of lust is too simple for one of these mighty powers, which instead might represent the all-embracing, obsessive lust that consumes the soul and destroys lives. Similarly, anger is too narrow in its scope; instead, a Vessel of Iniquity might embody the mass hysteria which produces riots of destruction. Their natural forms have no true shape, but are inchoate matter bearing the substantial form of their chosen sin. The appearance of such forms has been known to drive men insane (thus they have a special variety of the Coagulate Power, see insert). However, they can cloak themselves in human form as they wish.\n\nEvery Vessel has a particular emotion or vice which is their specific province, and their appearances on earth are targeted at promulgating that sin in mortal beings."
+    }
+
+    #t377d8916cfca9abb2b5e30 ^"Avengers of Evil" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 25"
+            ^"Ranks" STRING "Master is commonplace, Lord is uncommon, Duke is unusual, Prince is very unusual"
+            ^"Personality Trait" STRING "Merciful –3, Relentless +5, Passionless +4"
+            ^"Other Names" STRING "Ultores scelorum (singular ultor scelorum, Latin); Malakim Habbalah (singular malakhe habbalah, Hebrew for “angels of punishment”)"
+            ^"Stories" LIST OF STRING ["A character is singled out for the attentions of an Angel of Punishment, although he believes that he has done nothing to merit such attention. Even confession of the minor sins he knows he has committed does not cause the demon to leave him alone. All authorities on these demons state that they only punish wrongdoers — why then is this demon pursuing an innocent?"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 40
+        }
+        POWERS {
+            #t4f72fe949a01e737f58252 ^"Punish the Sinner" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "An Angel of Punishment can inflict wounds upon a victim that are commensurate to their level of sin. If the target has committed a mortal sin for which he has not atoned, then he suffers a Heavy wound if this Power penetrates his Magic Resistance. If he has an unrepented venial sin on his conscience, then he suffers a Medium wound. A victim with no outstanding sin on his conscience suffers a number of points of damage equal to a simple die plus the sum total of all his sinful Personality Traits, ignoring negative signs as necessary. For example, a character with Lewd +2, Greedy –1, and Peaceful –3 suffers +5 damage, +2 for the Lewd trait and +3 for the negative Peaceful trait. Greedy is a sinful behavior, but this character is not greedy. The soak total for this damage is a stress die plus Stamina. The physical manifestation of this Power varies from demon to demon; it may be a blast of fire, a rotting disease, or a strike from a weapon."
+            }
+        }
+        DESCRIPTION "*No doom is ever executed on the world, whether of annihilation or any other chastisement, without the destroying angel in the midst of the visitation. *\n\n— Zohar I, 63a\n\nThe Avengers of Evil also call themselves the Angels of Punishment, and it is their task (or so they say) to inflict punishment on sinners in both this world and the next. They claim that they work for God; the rabbinical writers claim that they are truly angels rather than demons, and serve the Devil in the punishment of the wicked with the permission of God. They fulfill their duties with a grim determination, showing no pleasure in the punishment and torture of mortal souls. The danger is that those who have suffered by their hand before mortal death may not seek redemption, feeling that their penance is done — which surely damns them to Hell to be punished for the same sin again. The Avengers of Evil appear as immense angels, perfectly-formed human forms with massive outspread wings, but their bodies are forged out of chains of solid fire. They reinforce their self-declared roles as agents of God by adopting names that resemble those of angels — for example, Kushiel (Rigid One of God), Shofiel (Judge of God), Makatiel (Plague of God), Pusiel (Fire of God), and Rogziel (Wrath of God). Each of the Angels of Punishment has a particular evil that it revenges, or a particular mode of punishment."
+    }
+
+    #t1f705b23e18fe08088fa24 ^"Deluders" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 25"
+            ^"Ranks" STRING "Master and Lord are uncommon, Duke is unusual, Prince is very unusual"
+            ^"Virtues and Flaws" STRING "Puissant Guile"
+            ^"Personality Trait" STRING "Credible +3, Sly +2"
+            ^"Other Names" STRING "Praestigiatores (singular praestigiator, Latin); Memunim (singular memuneh, Hebrew for “appointed ones”); also called the Juggling Impostors"
+            ^"Stories" LIST OF STRING ["A Deluder is revealed as having posed as a member of the Order of Hermes for over eight years. Every action that magus has taken must now be re-examined to discover the intent of the demon. The “magus’s” apprentice is in great peril of being slain by hoplites. And what of the *real* magus? What was his fate? Does he still live, and was he really an unwilling participant?"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 41
+        }
+        POWERS {
+            #tca5e6e46a6d490dd1787c3 ^"Delusion" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The Deluders are the consummate deceivers, and they can create elaborate illusions. A minor illusion which affects an Individual amount of material (such as the demon itself) costs one point; a larger illusion which fills a room costs five points. These visions always have a flaw, however (they smell wrong, can only be seen by one target, etc.)."
+            }
+            #t96eeb773b1dfd7342c0811 ^"Duplicate the Magi’s Creation / Perception / Transmutation / Destruction / Control" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "Each Deluder has one or more of these Powers, of which there is one for each Technique of Hermetic magic. The demon may duplicate any Hermetic spell of the appropriate Technique. This costs the demon 1 point of Might per magnitude. It cannot create any effect with a level greater than its Infernal Might, or duplicate Ritual effects."
+            }
+        }
+        DESCRIPTION "*This second beast performed great miracles; it made fire come down out of heaven to earth in the sight of everyone. And it deceived all the people living on the earth by means of the miracles which it was allowed to perform in the presence of the first beast. The beast told them to build an image in honor of the beast that had been wounded by the sword and yet lived. *\n\n— Revelation 13:13–14\n\nThe Deluders (unlike the Spirits of Deceit) trick and deceive mankind in very specific ways: by imitating the miracles of God, granting false visions, and serving conjurers and witches as familiars. Some scholars, Rabbi Eleazor for one, who lives in the city of Worms, insist that the memunim (as they are known to the Jews) are deputy angels and the dispensers of dreams. This is a testament to their ability to deceive. The natural form of a deluder is a jagged rent of darkness, filled with eyes, teeth, and pulsating organs, although they are able to fashion cloaks of delusion to allow them to appear in any form. They make extensive use of the Envisioning Power to grant false visions and dreams to their victims."
+    }
+
+    #tbc3ff59d4f13d647beee08 ^"Aerial Powers" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 25"
+            ^"Ranks" STRING "Master and Lord are uncommon, Duke is unusual, Prince is very unusual"
+            ^"Personality Trait" STRING "Untamable +5"
+            ^"Other Names" STRING "Potestates aeriae (singular potestas aeriae, Latin); Gibborim (singular gibboreh, Hebrew for “mighty ones”)"
+            ^"Stories" LIST OF STRING ["As a massive storm threatens to devastate a coastal village, the characters rush to banish the demon that lies at its heart.", "A diabolist master of Aerial Powers can be a mighty foe to the Order. At first, magi may be unaware of the demonic presence, for natural disasters, while unfortunate, do occur. However, when the third magus from the same covenant meets with an unfortunate accident while away from home, even the most cynical become suspicious."]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 42
+        }
+        POWERS {
+            #t270e571179aa691226fae7 ^"Elemental Control" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Aquam, Auram, Ignem, or Terram"
+                }
+                DESCRIPTION "Each Aerial Power has control over one aspect of the elemental forces of nature, which it uses to wreak destruction on the earth. It may create any Creo, Muto, or Rego effect appropriate to its chosen elemental Form (Aquam, Auram, Ignem, or Terram), at a cost of 1 Might Point per magnitude of effect. The demon cannot create any effect with a level greater than its Infernal Might, nor duplicate Ritual effects."
+            }
+            #t1d1b366acbbc64228550bf ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Any attempt to control (but not destroy) an Aerial Power with any form of Supernatural Power (magical, Divine, or otherwise) treats the demon’s Might as if it were one-and-a-half times its actual Might, or otherwise has its Ease Factor increased by 50%. For example, a *Circular Ward Against Demons* of 30th level is needed to stop an Aerial Power of Might 20."
+            }
+        }
+        DESCRIPTION "*And after these things I saw four angels standing on the four corners of the earth, holding the four winds of the earth so that no wind should blow on the earth, or on the sea, or against any tree. And I saw another angel ascending from the east with the seal of the living God: and he called out in a loud voice to the four angels, to whom it was given to hurt the earth and the sea. *\n\n— Revelation 7:1–2\n\nAerial Powers take the form of huge human figures, often composed of or surrounded by elemental matter. They cause thunder and lightning, corrupt the air, and cause pestilences. They are responsible for storms at sea, earthquakes and avalanches, blizzards and firestorms; in short, all natural disasters that can beset mankind. These demons are notoriously hard to control, and indiscriminate in their destruction.\n\nDespite their name, the Aerial Powers are not confined to tempests, winds, and other weather phenomena. Each Aerial Power has command over one particular natural calamity; thus their ranks include the demon of landslides, the demon of wildfire, the demon of hail, and so forth."
+    }
+
+    #t65d8d5f286bf02ec177915 ^"Furies" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 20"
+            ^"Ranks" STRING "Master is uncommon, Lord is unusual, Duke is very unusual"
+            ^"Personality Trait" STRING "Wrathful +4, Self-Controlled –6"
+            ^"Virtues and Flaws" STRING "Berserk"
+            ^"Other Names" STRING "Furiae (singular furia, Latin); Enim (singular eneh, Hebrew for “terrors”)"
+            ^"Stories" LIST OF STRING ["A child who is Gifted but severely abused by his family and peers finds a way to unconsciously summon up Furies that enact his deepest desires for revenge. To begin with, his victims are those who have done him the most evil, but the satisfaction of revenge is too great, and he soon runs out of targets who have victimized him. By the time that the characters meet him, bumping into him in the street may well be a death sentence."]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 42
+        }
+        POWERS {
+            #t62b97cf8fed33292ba1857 ^"Waxing Tide of Humors" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The Fury causes passion to overcome sense, and the victim must make a stress roll against an Ease Factor of 9, modified by appropriate Personality Traits (such as Calm or Level-Headed) to keep the emotion in check. This Power can affect emotions such as anger, lust, wantonness, maliciousness, and the like. It is often employed immediately following a successful use of the demon’s Obsession Power."
+            }
+            #t24f93d852ff09c94f7d0ee ^"Beserker Rage" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The demon can grant anyone the Berserk Virtue, which persists until the target calms down."
+            }
+            #t21f144eb53180100f14ac4 ^"Endurance of the Enraged" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The Furies do not suffer from wound penalties, except on Defense totals."
+            }
+        }
+        DESCRIPTION "*Frowardness is in his heart, he devises mischief continually; he sows discord. *\n\n— Proverbs 6:14\n\nThe seventh order of demons consists of the disseminators of strife, discord, war, and devastation. They represent the sins of the lion, that is, human reason subdued by animal passion. These flaws are also called sins of violence or bestiality, consisting of perverted appetite. The Furies embody those who submit to their impulses; not anger itself, but anger taken to an extreme, anger directed against one’s self, one’s belongings, against nature, or against God. The profligate who dissipate their goods for the sheer wanton lust of wreckage and disorder, the gossip who destroys another’s reputation, the cruel child who tortures animals, the suicide who inflicts his anger on himself, the heretic who rails against God; all these are inspired by the Furies.\n\nFitting their nature, the Furies take the form of mixtures of brute and human. They delight in pushing mankind to the limit, driving them to the crisis point where passions take control and their victims lash out at those innocent of crime, such as those whom they love. To the rabbis, they are called the enim — the terrors — for nothing is more terrible than the passion that lies beneath the surface of every rational person."
+    }
+
+    #t073febc4f1fd1be0f13651 ^"Accusers" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 20"
+            ^"Ranks" STRING "Master and Lord are unusual"
+            ^"Personality Trait" STRING "Cruel +6"
+            ^"Other Names" STRING "Criminatores (singular criminator, Latin); Mastinim (singular mastin, Hebrew for “accusers”)"
+            ^"Stories" LIST OF STRING ["The sinful acts of a magus attracts the attention of an Accuser that torments the character with misfortune and evil until he sets right the evil he has done. However, among so many sinful acts, how does the magus know which one he must set right?"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 43
+        }
+        POWERS {
+            #t51911d84f74e7088d65a3d ^"Betrayal of the Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The accusing angels can see into the hearts of mankind and draw forth the most secret thoughts — people’s fears and sins. Each use of this Power reveals to the demon one fact about the target to which he would never admit. Truly holy people may be immune to this Power, if they have no secrets, no matter how petty."
+            }
+            #t889f35892b0a7208ff9fe2 ^"Whispers Behind the Back" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Just as the spell *Pains of the Perpetual Worry*, this Power gives the victim a nagging, taunting, painful emotion linked to his secret sins — a recurrent sense of anxiety that his secret will be uncovered and a suspicion that everyone already knows it and is taking about the target behind his back. This Power lasts for a month."
+            }
+        }
+        DESCRIPTION "*And I heard a loud voice saying in heaven, “Now God’s salvation has come! Now God has shown his power as King! Now his Messiah has shown his authority! For the accuser of our brethren has been thrown from heaven, he whom accused them before our God day and night.” *\n\n— Revelation 12:10\n\nLike the Avengers of Evil, these creatures claim that they are angels, doing God’s work in Hell. The “accusing angels” confront mortals with the consequences of their sins, but, unlike their more powerful brethren, they seem to take delight in tormenting sinners. They often work with other demons, using their unique Powers to uncover the sins of mortals. The Accusers take the appearance of traditional fiends, human-shaped but naked, with skin of an unnatural color (scarlet, green, blue, and so forth), a beak-like face, horns on the head, and a pair of bat-like wings."
+    }
+
+    #t709032caec372876c0c37a ^"Tempters & Evil Spirits" DEF {
+        EXTENDS #t0b9e60548bf8fd2e0447f3 ^"Demonic Order"
+        PROPERTIES {
+            ^"Infernal Might" STRING "not more than 20"
+            ^"Ranks" STRING "Master is unusual, Lord is very unusual"
+            ^"Personality Trait" STRING "Selfish +5"
+            ^"Virtues and Flaws" STRING "Weak-Willed Powers None specific to the order as a whole"
+            ^"Other Names" STRING "Tentatores (singular tentator, Latin); Maligenii (singular maligenius, Latin for “evil spirits”); Shedim (singular shedeh, Hebrew for “demonic spirits”); Kakodaemones (singular kakodaemon, Greek for “filthy spirits”)"
+            ^"Stories" LIST OF STRING ["A personal Tempter may feign friendship towards her mark in order to lure her into sin. The very jealousy engendered by the demon might be its downfall when her victim sees her “best friend” talking to another.", "A terrible disease affects a village, but all physicians and herb-wives who try to approach are waylaid by evil spirits. Why should these demons want to prevent the disease being cured? How does this win more souls for Hell?"]
+            ^"Source" STRING "Realms of Power: The Infernal"
+            ^"Page" INTEGER 43
+        }
+        DESCRIPTION "*And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen. *\n\n— The Lord’s Prayer\n\nThe ninth order is the largest of all, populated as it is with the evil spirits who are able to propagate themselves through intercourse with mortals. Consequently, they are the demons with which mankind is most likely to interact, and form much of the “rank-and-file” of Hell’s legions.\n\nThey hover around sinners like flies around rotting meat, but even good men can be assailed by them. Their natural home is in the lower reaches of the air; ancient Greek sorcerers referred to them as *kakodaemones*, to distinguish them from the *kalodaemones*, which was their name for the good spirits they used in their magical practices. Many superstitions among all peoples — Christians, Jews, and Muslims alike — are targeted at avoiding the harm that these myriads of demons can cause to man.\n\nThe Tempters as a whole most often appear as twisted mockeries of human beings, often black in color or daubed in filth. Many have a deformity, such as being blind, having the feet of a cockerel, or having their head at the bottom of their torso rather than the top. Those involved in the temptation of man usually have a deformity that can be concealed with clothing. Tempters are responsible for the propagation of sins of incontinence (that is, uncontrolled appetite). These are sins less of deliberate evil than of failure to resolutely choose good. They are the sins of self-indulgence, weakness of will, and easy yielding to appetite — the sins of the leopard. They provoke lust (that is, selfish indulgence of lust — usually mutual — rather than rape, which is a sin of violence), gluttony, avarice, sloth, and wrath (both ferocious and sullen).\n\nThe Tempters may be broadly divided into two groups, each fulfilling different roles. Those demons known as the *tentatores* are the Tempters who try to ensnare mankind in sin, whereas the *maligenii* are evil spirits who work against mankind by making life more perilous."
+    }
+
+}

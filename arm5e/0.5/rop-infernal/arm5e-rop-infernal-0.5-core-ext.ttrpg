@@ -1,0 +1,158 @@
+EXTENSION "ArM5_RoP_Infernal_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Infernal - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Realms of Power: The Infernal is an EXTENSION on the arm5e edition (spec S13 composition). Demons are
+    # set as the core bestiary sets its own (^"Creature", Might Realm Infernal, with PERSONALITY_TRAITS / COMBAT /
+    # ABILITIES / POWERS blocks); the types below are the ones the book adds.
+
+    #t167900677b9e928b0cb39f ^"Demon" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Order" STRING
+            ^"Hierarchy" INTEGER
+            ^"Confidence Score" STRING
+            ^"Weakness" STRING
+            ^"Printed Size" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "All demons possess at least 1 point of Infernal Might and may not be affiliated with or belong to any realm other than the Infernal realm."
+    }
+
+    #t0b9e60548bf8fd2e0447f3 ^"Demonic Order" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Infernal Might" STRING
+            ^"Ranks" STRING
+            ^"Personality Traits" STRING
+            ^"Virtues and Flaws" STRING
+            ^"Other Names" STRING
+            ^"Stories" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t8ab0f71b78642f7ff10696 ^"Demon Family" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Order" STRING
+            ^"Might" INTEGER
+            ^"Form" STRING
+            ^"Weakness" STRING
+            ^"Virtues and Flaws" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t7e933d858e4491e59a7a68 ^"Demonic Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Cost" STRING REQUIRED
+            ^"Initiative" STRING REQUIRED
+            ^"Form" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t0fa5697338cf5051460713 ^"Demon Weakness" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Weaknesses should be chosen from the following list:"
+    }
+
+    #t3bb049d785ee4bab039575 ^"Unholy Effect" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Method" STRING
+            ^"Power" STRING
+            ^"Level" INTEGER
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t1abe0d5b4f1eefa8aac52e ^"Unholy Method" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t31db11f5bd420aacc541c7 ^"Unholy Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #td20062d276493da57e1ed3 ^"Unholy Guideline" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Method" STRING REQUIRED
+            ^"Power" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tcff0104e131e6468aca4da ^"Spell Parameter" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Parameter" ENUM ["Range", "Duration", "Target"] REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t0ed046a2eabb7b59dba68e ^"Goetic Art" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #te8f1e0179f37909bfcaa42 ^"Ablation Use" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t33b0e344591d7c88db88ee ^"Goetic Command" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t21a9628ed8906277a5c1c0 ^"Infernal Tradition" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Tradition Kind" ENUM ["Infernal Tradition", "Infernal Societas"] REQUIRED
+            ^"Tradition Group" STRING
+            ^"Favored Abilities" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Infernal"
+            ^"Page" INTEGER
+        }
+    }
+
+}

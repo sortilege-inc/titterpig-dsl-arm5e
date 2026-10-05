@@ -1,0 +1,279 @@
+EXTENSION "ARMDef_RoP_Divine_HeavenAndEarth_Choirs" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Two: Heaven and Earth choirs"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Divine_Core_Ext"
+
+    # The chapter's choirs, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t99612b9f89abe81a026cb7 ^"Seraphim" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 35"
+            ^"Personality Trait" STRING "Honest +4, Tireless +4"
+            ^"Story Hook" STRING "The name of Gadiel the seraph is discovered in an old book in the covenant’s library and has the power to ward against devils with less than Infernal Might ten, if inscribed on an amulet or circle. This discovery by the magi makes Gadiel aware of the covenant, and he descends to earth in the form of an old woman to see if the magi of the covenant will use his name wisely or not. If the characters treat Gadiel well, he may aid the covenant, or punish them if they abuse him."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 21
+        }
+        POWERS {
+            #t338aadda9b12a391dfd72b ^"Heavenly Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+15"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "As *Pilum of Fire*, although it does +30 damage."
+            }
+            #t026eaeb7161a9b598630fd ^"Smite Evil" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "one or more points"
+                    ^"Initiative" STRING "+15"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "As per *Demon’s Eternal Oblivion*, with the level of the effect determined by the number of Might Points spent multiplied by 10. This also affects Faeries."
+            }
+        }
+        DESCRIPTION "I saw the Lord seated on a throne, high and exalted, and the train of his robe filled the temple. Above Him were seraphs, each with six wings: With two wings they covered their faces, with two they covered their feet, and with two they were flying. And they were calling to one another: “Holy, holy, holy is the Lord Almighty; the whole earth is full of his glory.” At the sound of their voices the doorposts and thresholds shook and the temple was filled with smoke.\n\n*Isaiah 6:1-4*\n\nThe name “Seraphim” means “to kindle” or “make hot”. For this reason they are often known as the Glowing Ones. As well as having six wings, seraphim also have sixteen faces, four for each cardinal direction (north, south, east and west). Their ceaseless revolution around the Divine wholly purifies them. They are unchangeable and radiant, and emanate an enlightening power. Their mere presence dispels and destroys evil. The Seraphim’s role in Heaven, as the most holy and exalted of all angels, is to give constant and unending praise to God."
+    }
+
+    #t211d159cf6f1603234cfed ^"Cherubim" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 25"
+            ^"Personality Trait" STRING "Contemplative +4, Wise +4"
+            ^"Story Hook" STRING "A character with True Faith, a high godly Personality Trait, or potent holy power is visited by the cherub Lawidh as a test of faith. This may be a chance for the character to increase his True Faith, or even gain it. The cherub takes the character to the Gates of Heaven and there offers him a mighty kingdom to rule over as absolute sovereign (or some other tempting offer). If the character refuses the temptation, then Lawidh may use the Chariot on the character."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 22
+        }
+        POWERS {
+            #t845ca8670d703057d66a8c ^"Divine Insight" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "May temporarily grant the target the equivalent of the Clear Thinker, Free Expression, or Inspirational Minor Virtues that lasts until the target next sins."
+            }
+            #t9369451dfb38ebfd29467d ^"The Chariot" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "30 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Four Cherubim must use this power (and each must pay for it), which “bows the heavens” and actually allows a direct emanation of the Divine realm to enter into the mundane world, enfolding the target. In so doing, the target is entirely purified, restored to a state of sinless perfection and nearness to God such as was enjoyed by Adam and Eve before the Fall. This removes all Warping, Decrepitude, and Aging Points; increases the target’s Intelligence, Perception, Presence, and Communication to +3 (if it is lesser); or increases the character’s True Faith Score by 1. Cherubim rarely use this power and only upon the holiest and most pious of mortals."
+            }
+        }
+        DESCRIPTION "Their entire bodies, including their backs, their hands and their wings, were completely full of eyes, as were their four wheels. I heard the wheels being called “the whirling wheels.” Each of the cherubim had four faces: One face was that of a cherub, the second the face of a man, the third the face of a lion, and the fourth the face of an eagle. Then the cherubim rose upward.\n\n*Ezekiel 10:12-15*\n\nCherubim are the receptors of the highest Divine Wisdom, living in ceaseless contemplation of the beauty and magnificence of God. Their name denotes an abundance or outpouring of wisdom, as well as “nearness”, and they are therefore known as the Streams of Wisdom. The cherubim were the guardians of the Ark of the Covenant, of the holiest of holies in Solomon’s Temple, and stood guard over the body of Christ during the three days he lay in his tomb."
+    }
+
+    #t912ed78d103377c4e63c78 ^"Thrones" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 25"
+            ^"Personality Trait" STRING "Knowledgeable +4, Stern +4"
+            ^"Story Hook" STRING "Two immensely powerful dragons are locked in a bitter dispute over the ownership of a regio located near to the covenant that appears once every century, and which is required by the dragons to lay their eggs in. They threaten to destroy (or severely damage) the covenant in their fight unless a higher power can be brought in to conciliate. Investigation into the covenant’s past reveals that the only being powerful enough to settle this dispute would be a Throne, but finding a way to involve the Throne who intervened last time involved petitioning a saint. How will the characters stop the dragons from running amok?"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 22
+        }
+        POWERS {
+            #t25ef19d9a0127e79f3db97 ^"Deliverance of the Righteous" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Instantly transports a group of worshippers to safety. This power is only used to benefit a group of faithful who are in mortal danger from their enemies."
+            }
+            #t0d0d8c86738d9470e09616 ^"Divine Justice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The Throne learns the truth and most just judgment of any case brought before it. Thrones often use this power before using Radiant Mirror."
+            }
+            #t26962fb9ac4d35910a18e0 ^"Radiant Mirror" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "30 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The Throne may reflect a part of the Primal Divine Light to some part of creation, which increases the Divine aura by two points and infuses it with a Just Temper. This aura acts like other created, unattended Divine auras, and fades after some time. The Holy Influence Total of a Throne using this power is equal to his Divine Might ÷ 2 (see Divine Auras and Blessed by God, Holy Influence)."
+            }
+        }
+        DESCRIPTION "I lift up my eyes to you, to you whose Throne is in Heaven.\n\n*Psalm 123:1*\n\nUntainted by any base or earthly thing, the Thrones dwell most fully in the highest parts of the Divine realm, where they receive the holy radiance of God. Of all angels, the Thrones have the most intimate and immediate knowledge of the Divine, being holy mirrors of God’s sacred brilliance, appearing as gleaming crystal spheres. Because of this, they are responsible for judgment and justice within the Divine realm. Some traditions also have the Thrones as the literal bearers of God’s majesty and glory in Heaven, while others have them as the perfect arbiters of divine justice, dispensing God’s verdicts with absolute objectivity and without fear or favor."
+    }
+
+    #tc5b1604415337e611e12f4 ^"Dominations" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 10"
+            ^"Personality Trait" STRING "Commanding +4, Servile –4"
+            ^"Story Hook" STRING "A stream that supplies a village near the covenant with water stops flowing, after a diabolist traps the Domination in a powerful infernal cage. This angel measured the stream’s course, and without it the village may be driven into desperation and famine. The local lord asks the magi of the covenant to somehow get the stream to flow again."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 23
+        }
+        POWERS {
+            #ta49c62d1e0fb2f6c8537bb ^"Divine Direction" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 or 5 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "A Domination may command any being with Divine Might equal to or less than its own to perform any task, use any of its powers, or reveal any information that it may possess. A Domination may also command any being aligned to the Divine Realm (such as someone with True Faith or Holy Powers) to do likewise by spending five Might. This power must overcome any magic resistance."
+            }
+            #tee0f678b84e120fb6c7f5c ^"Liberate the Sinful" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power permanently removes a Personality Trait from the target. Dominations only use this power to remove sinful or destructive Personality Traits. The target may never possess that Personality Trait again, even through magic. (If your troupe is not using Personality Traits, this power acts like the sacrament of Baptism.)"
+            }
+        }
+        DESCRIPTION "I saw there a very great light, and fiery troops of great archangels, incorporeal forces, and Dominations, orders and governments, Cherubim and Seraphim, Thrones and many-eyed ones, nine regiments, the Ioanit stations of light, and I became afraid …\n\n*2 Enoch 20:1*\n\nAngelic Dominations represent freedom from tyranny, vice, and sin. The Dominations are unrestrained by inconstancy or discord. Governance of the Divine realm is their duty: they direct the course of the stars, sun, moon, and seasons, measure all life in Heaven and earth, and order the lesser angels in their holy tasks."
+    }
+
+    #t9742715215caa67ee989af ^"Potentates" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 10"
+            ^"Personality Trait" STRING "Harmonious +4, Loving +4"
+            ^"Story Hook" STRING "When struggling against some diabolical enemy and facing immanent defeat, the characters are rescued by an unknown warrior garbed as a knight. The knight offers to help the covenant in the future against infernal attacks, and slowly encourages more-pious behavior in the covenant’s companions and grogs."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 23
+        }
+        POWERS {
+            #t6670691743dfb6754dfba6 ^"Divine Balance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Varies"
+                }
+                DESCRIPTION "Through this power, the Potentate is able to intervene in a diabolical plot to cause someone to sin. If a devil creates a sinful desire in someone’s mind, this power allows the Potentate to create a virtuous thought in his mind. The cost of the power is equal to the cost of the diabolical power it is opposing."
+            }
+            #tb7e8ce5680e4f7dc27b737 ^"Mysterious Path" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Varies"
+                }
+                DESCRIPTION "The Potentate may create a path between any two locations that may be instantaneously traversed by a non-angelic being, such as a human or animal. The two locations may be as far apart or close together as the Potentate desires."
+            }
+        }
+        DESCRIPTION "Whosoever therefore resists the Powers, resists the ordinance of God, and those who resist shall receive for themselves damnation.\n\n*Romans 13:2*\n\nBefore the Fall, Lucifer numbered among the Potentates (albeit of Archangel rank), who are also known as “Powers”. Many fallen angels were once Potentates, and the remaining Potentates have since taken up the most active role in combating diabolical presence in creation. They do this through strengthening the resolve and piety of humans and helping them resist sinful thoughts. Potentates keep the divine paths safe, and maintain cosmic balance and form, along with the archangels, the chief contingent of the Divine Host that will be fielded on Judgment Day. If they do not reside in Heaven, Potentates can be found in celestial regiones, from where they assist mortals in resisting evil."
+    }
+
+    #ta195accf2c695f34ac32f1 ^"Authorities" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 5 Personality Traits: Principled +4, Unwavering +4"
+            ^"Story Hook" STRING "The local lord plans to start logging a grove near one of his villages to make room for more fields, but unbeknownst to the lord, the grove is guarded by the Authority Horobael. Horobael’s attempts at Envisioning have failed to change the lord’s mind, so now the Authority seeks the help of a pious character from the covenant in saving the grove. This could include the many other Authorities who protect other parts of the grove becoming involved."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 23
+        }
+        POWERS {
+            #t484c7e1494fd8be3c57ea4 ^"Divine Authority" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Varies"
+                }
+                DESCRIPTION "An Authority has absolute knowledge and command over a single aspect of creation, which defines his divine office. This can be as small as a single blade of grass or insignificant pebble, to a river, meadow, mountain, cloud or storm, a beam of light, a thunder clap, or even stars, planets, the sun, or the entire sky. All distinct things in a Divine Aura have an Authority; things in other auras have other supernatural creatures to govern and protect them, such as elementals or minor faeries. This power is used to ensure the natural function of the Authority’s charge; were the Authority not to use this power, the thing would wither or even cease to exist. *The Divine Might score of an Authority should reflect its office. An Authority responsible for a flower may have Divine Might 5, while an Authority responsible for a thunder storm or a mountain has a Might of 15 or 20. The Authority who oversees the sun, Galgilliel, has a Divine Might of 70, and the Authority responsible for winter, Amabael, has a Divine Might of 40."
+            }
+        }
+        DESCRIPTION "Let every person be subject to the governing Authorities …\n\n*Romans 13:1*\n\nAuthorities are cosmic angels, who order and regulate all of creation, and are themselves governed by the Dominations. They are the unshakable potency of God\n\nwelling forth throughout existence. Authorities are blessed by Divine Illumination, allowing them to flawlessly undertake their tasks. From the smallest flower and gossamer breeze, to the sun, the planetary spheres, and the changing of the seasons, the Authorities work through God’s resplendent ordinance. Authorities also instill the mundane intellectual, moral, and theological virtues into human hearts; for this reason, these angels are also known as “Virtues”. Due to their role of regulating creation, it is the Authorities who most often are God’s miraculous agents, and so they are closely connected to saints. Since they sustain and watch over the natural world, they are likely to take note of significant Hermetic meddling with the weather or other natural phenomena in areas covered by the Dominion, although their reactions need not necessarily be hostile. Authorities (and Potentates) often reside in Divine Celestial regiones (see Divine Regiones)."
+    }
+
+    #ta7a22656a4ece87707779c ^"Principalities" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "Not less than 5"
+            ^"Personality Trait" STRING "Bureaucratic + 4, Regal +4"
+            ^"Story Hook" STRING "In their dealings with the local townsfolk, the characters notice a significant change of attitude towards the covenant. Has the town’s Principality turned the people against them, and what can they do to make amends?"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 24
+        }
+        POWERS {
+            #t27feeed4eda8a4a853543f ^"Incalculable Strength of Heaven" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 or more points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Invested with Godlike authority, a Principality can command lesser powers to flee from those under God’s protection for a day (sunrise to sunrise). Principalities may banish all non-Divine creatures who are in the angel’s domain, which prevents them from entering the area or remaining in it for the duration of the power. This affects any creature with a Might score that is not Divine Might, but not creatures merely aligned with particular Realm. The number of Might points spent is determined by the size of the area being affected. A family costs 5 Might points, a hamlet or village costs 10, a town or city costs 15, a duchy costs 20, a kingdom or nation costs 30, and an empire, such as Byzantium or the Islamic Caliphate, costs 40 points. The Penetration score for this power is doubled against beings with Infernal Might."
+            }
+            #t60ecc84c04befd74f3694e ^"Sway the Hearts of Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 or more points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Principalities inculcate spiritual and holy thoughts in hundreds and even thousands of minds. This operates in a similar fashion to Tempering a Divine Aura (see Blessed By God, Holy Influence), except the temper created by the Principality is additional to any invoked by another party. The temper is chosen by the Principality and has a value of +2. The number of Might points spent is the same as for *Incalculable Strength of Heaven*. Spending an additional 5 Might increases the temper by one. This power can only affect areas and people under a Divine Aura."
+            }
+        }
+        DESCRIPTION "In the heavenly places, far above all Principalities, and Powers, and Authorities, and Dominions, and every name that is named, not only in this world, but also in that which is to come.\n\n*Ephesians 1:20-21*\n\nPrincipalities watch over human affairs, chiefly mortal nations, kingdoms, cities, and geographical regions. Every social unit, from a family to a village, duchy, and empire has a Principality empowered to protect, guide, and care for it. They are the guardian angels of groups of people, moving many hearts and minds towards divine ends, rather than merely individuals. They do so by encouraging prayer and devout behavior, and respect for the law and for religious leaders. Once upon a time each nation of the world, from Rome to Babylon, had a Principality as its guardian, but when the Fall came all but the Principality of Israel sided with the Devil. There are Principalities for all nations, even those not yet created, and only the Principalities with authority over nations during the heyday of the kingdom of Israel Fell. The remaining Principalities now largely concentrate on mortal leaders, guiding kings and sheriffs towards godliness."
+    }
+
+    #t0922d693c7572b6b49af55 ^"Archangels" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "No less than 50"
+            ^"Personality Trait" STRING "Radiant +4, Rational +4"
+            ^"Story Hook" STRING "During the Grand Tribunal, the Archangel Seferiel (see Ars Magica 5th Edition, Chapter 13, Bestiary), watcher of the Order of Hermes, appears before the assembled magi to warn them of a dire threat that could devastate Europe (this could be a purely magical threat, a mundane one such as the imminent invasion of the Mongols, or the potential threat to the Order posed by the recently formed Dominicans and emerging Papal Inquisition)."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 25
+        }
+        POWERS {
+            #t57cca795db90cb9722a4bd ^"Irresistible Light" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "20 points"
+                    ^"Initiative" STRING "+20"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Through this power, the Archangels do battle against all the forces of darkness. When invoking this power, the Archangel is filled with the Power of God and radiates a portion of unrestrained Light from the Divine Realm, blasting away sin and searing evil. This beam of light strikes everyone who can sense the Archangel, doing +40 damage to all non-Divine beings (doubled against creatures with Infernal Might), and stripping non-Divine beings of 10 points of Might. Beings reduced to negative Might points are permanently destroyed. This power may affect any or all beings the Archangel is aware of, and has a Penetration equal to the Archangel’s full Might Score, not reduced in the normal way."
+            }
+            #t7455a8933a90eaefbcec6f ^"Infinite Divisibility" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "With this power an Archangel may simultaneously be anywhere and everywhere it is needed without decreasing its power in the slightest, by allowing the Archangel to divide itself into as many perfect and self-aware copies as it desires, each with its own independent Divine Might Score, permitting it to attend to all of its many duties at once. The copies are self-aware and independent, are constantly aware of what every other copy is doing and sensing, never argue with each other, and each will re-merge with its other copies without hesitation when its task is fulfilled. In this way, Michael can stand before the Gates of Heaven, protect the body of Moses, bear God’s Throne, and personally watch over his innumerable mountain shrines."
+            }
+        }
+        DESCRIPTION "Yet Michael the Archangel, when contending with the Devil he disputed about the body of Moses, dared not bring against him a railing accusation, but said, “The Lord rebuke thee”.\n\n*Jude 1:9*\n\nAlthough the eighth Choir, Archangels are among the holiest and most princely of all angels. Some of Heaven’s most majestic figures are archangels, such as Michael and Gabriel. More so than the other angelic hierarchies, the role of archangel is titular rather than being tied to the angel’s essence, so a cherub or seraph may hold the office of archangel, while some archangels were created and exist entirely within the Choir. Archangels are Heaven’s leaders. Majestic Divinity is mystically joined to the archangels; each one is illuminated by God’s sovereignty over all of creation. For\n\nthis reason, archangels are of a higher rank in Heaven than even the Seraphim or Dominations."
+    }
+
+    #tb2b07012c25e33d1923d1f ^"Angels" DEF {
+        EXTENDS #t0166bf1545d3822d2a101a ^"Angelic Choir"
+        PROPERTIES {
+            ^"Divine Might" STRING "At least 1"
+            ^"Personality Trait" STRING "Loving +4, Compassionate +4"
+            ^"Story Hook" STRING "An angel disguised as a scholar asks for help in tracking down the tears of the Sandalphon, which fell to earth when the prophet Muhammad died. The two tears are powerful divine relics and are also being hunted by a diabolical coven, which wants to use the tears as arcane connections to Sandalphon and prevent him from carrying the prayers of the faithful to Heaven."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 26
+        }
+        POWERS {
+            #t8dd76c4d4b3059403d67eb ^"Divine Guidance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "With this power, the angel may modify by 3 (plus or minus) any Personality Trait roll that could result in the target acting virtuously or piously."
+            }
+            #t4e70e3673239d5554f85fa ^"Heavenly Servant" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Through this power, the angel may double all of its traits when opposing or battling against a being with Infernal Might. This does not include the angel’s Might point total, but does include the angel’s Magic Resistance. This power lasts for the duration of the conflict."
+            }
+        }
+        DESCRIPTION "Angels, the messengers of God, are the most omnipresent servants of the Divine. Theologians have calculated the number of angels to exceed some two hundred and sixty-six million, although the exact number can never be known and may be even more, since every living soul has its own guardian angel. Angels are the caretakers of humanity and the world. They are made in imitation of God and far surpass humans as intellectual and virtuous beings. They are radiant and exist in abundant communication with Him. It is the role of the ninth Angelic Hierarchy to turn humans towards the Divine, to elevate their spirits, and care for their souls. When their charge dies, they comfort him and lead the soul to its reward (or punishment)."
+    }
+
+}

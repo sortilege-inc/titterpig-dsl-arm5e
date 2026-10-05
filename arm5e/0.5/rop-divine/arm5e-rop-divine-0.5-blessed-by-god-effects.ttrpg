@@ -1,0 +1,330 @@
+EXTENSION "ArM5_RoP_Divine_BlessedByGod_Effects" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Three: Blessed By God effects"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Divine_Core_Ext"
+
+    # The chapter's effects, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t11bd4ce11ee368c69ed46e ^"My covenant will I not break, nor alter the thing that is gone out of my lips" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Adjuration"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Adjuration, Level 20) R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "If this effect is invoked immediately before concluding an agreement with a supernatural being, neither of you is able to act against the terms of the bargain. This does not force either of you to do anything, but it does prevent you from taking actions that would invalidate the contract. For example, “you will protect this church” would prevent the creature from harming the building or fleeing when it comes under attack, but it would not be forced to take any particular action to defend it. The effect can be dissolved at any time so long as both of you agree to it.\n\n(Base 4, +4 ritual effect)"
+    }
+
+    #t5fa5a5437ff4f9f2e9002b ^"Give unto the LORD the glory due unto his name: bring an offering, and come into his courts" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Adjuration"
+            ^"Level" INTEGER 50
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Adjuration, Level 50) R: Arc, D: Conc, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "Using a holy connection, you force a supernatural being to appear before you, summoning it from wherever it may be, though you must penetrate its resistance to succeed. The being is not compelled to do anything more than attend you with this effect, though it will probably be curious to know what you want. When the effect ends, the being is released from your control, and may try to exact revenge upon you for summoning it if it is so inclined.\n\n(Base 5, +4 Arc, +1 Conc)"
+    }
+
+    #tcf6c309f9f1b138e9e2765 ^"The angel of the LORD encampeth round about them that fear him, and delivereth them" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Purity"
+            ^"Power" STRING "Adjuration"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Purity, Adjuration, Level 25) R: Voice, D: Sun, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "This effect causes a magical, faerie, or infernal being to perceive you as surrounded by holiness for the duration of the effect, assuming you penetrate its resistance. This feeling is so powerful that demons must flee your presence completely, and beings from other realms may not look at you directly without being blinded, or touch you.\n\n(Base 5, +2 Voice, +2 Sun)"
+    }
+
+    #tb4bbd61d4d3cce8bdce983 ^"The LORD shall preserve thee from all evil: he shall preserve thy soul" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Blessing"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Blessing, General) R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "This blessing bestows Magic Resistance from the Divine realm, equal to the effect’s level. It has no effect when called at a lower level. This resistance is not cumulative with resistance from other sources, such as the Parma Magica or True Faith.\n\n(Base effect, +1 Touch, +2 Sun)"
+    }
+
+    #t1790e24d199644c3b6f1be ^"Thou wilt prolong the king’s life: and his years as many generations" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Blessing"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Blessing, General) R: Touch, D: Year, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "The target receives a bonus to all aging rolls that year equal to (the magnitude of the effect – 5); this is a +1 bonus at Level 30, +3 at Level 40, +5 at Level 50, and so on.\n\n(Base effect, +1 Touch, +4 Year)"
+    }
+
+    #t291ccfa4d1679420186d71 ^"My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue is the pen of a ready writer" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Blessing"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Blessing, Level 20) R: Per, D: Sun, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "Until the sun passes through the heavens, you are inspired with the creative essence of the Divine. You essentially have the Free Expression Virtue for the duration of the effect.\n\n(Base 10, +2 Sun)"
+    }
+
+    #tea2cd987005ca6f65f96cb ^"As he loved cursing, so let it come unto him: as he delighted not in blessing, so let it be far from him" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Cursing"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Cursing, General) R: Voice, D: Sun, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "This effect causes the target to suffer a penalty equal to half (the effect’s magnitude – 3) to all actions for the duration of the effect. This is a –1 penalty at Level 20, –2 at Level 30, –3 at Level 40, and so on.\n\n(Base effect, +2 Voice, +2 Sun)"
+    }
+
+    #tb42efdeb916b34eeccd767 ^"God shall likewise destroy thee for ever, he shall take thee away, and pluck thee out of thy dwelling place, and root thee out of the land of the living" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Purity"
+            ^"Power" STRING "Cursing"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Purity, Cursing, Level 40) R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "Your target is instantly stricken dead, with no visible wounds or injury. Beware: unless you are serving God’s justice by punishing one who cannot be redeemed, or defending yourself against a deadly threat, this is a grievous sin. Murder in God’s name never goes unpunished in the hereafter, but there may be consequences in this world as well.\n\n(Base 30, +2 Voice)"
+    }
+
+    #td0a80862b18d242131532f ^"Let death seize upon them, and let them go down quick into hell: for wickedness is in their dwellings, and among them" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Purity"
+            ^"Power" STRING "Cursing"
+            ^"Level" INTEGER 85
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "(Purity, Cursing, Level 85) R: Sight, D: Mom, T: Bound"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "Cause utter waste to an area, leveling buildings, trees, and slaying every person within the boundary. Few acts merit this sort of destruction, but it is certainly within the power of those who follow God to call this curse upon His enemies.\n\n(Base 30, +3 Sight, +4 Bound, +4 ritual effect)"
+    }
+
+    #t270549e92d71907d852ebd ^"Man is like to vanity: his days are as a shadow that passeth away" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Intervention"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Intervention, Level 20) R: Voice, D: Conc, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "You create the appearance of a human being that lasts for as long as you concentrate. It has a voice but no substance, and cannot travel in a realistic fashion from where it is summoned, though you can move it within range if you wish. It may behave in unexpected ways, as it is not completely under your control.\n\n(Base 4, +2 Voice, +1 Conc, +1 additional sense)"
+    }
+
+    #t8cfa7ef7ebef43ee77e693 ^"That he should still live for ever, and not see corruption" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Intervention"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Vision"
+            ^"Printed Stat Line" STRING "(Meditation, Intervention, Level 25) R: Per, D: Conc, T: Vision"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "You can perceive the stain of sin upon human beings, twisting and deforming them to your sight in a manner appropriate to their transgressions. For example, a glutton might appear distended and obese, a murderer’s hands would drip blood, and a liar’s tongue would seem forked. This may allow you to recognize demons masquerading as angels, for true angels are without sin.\n\n(Base 4, +1 Conc, +4 Vision)"
+    }
+
+    #t1ad1d523fc7de664e2b6b4 ^"Have mercy upon me, O LORD for I am weak: O LORD, heal me; for my bones are vexed" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Purity"
+            ^"Power" STRING "Intervention"
+            ^"Level" INTEGER 50
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Purity, Intervention, Level 50) R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 52
+        }
+        DESCRIPTION "This miracle heals the target of a Heavy Wound, instantly mending the body where it has been damaged or broken.\n\n(Base 45, +1 Touch)"
+    }
+
+    #tcfaa8fa968a45c1851f96a ^"For they intended evil against thee: they imagined a mischievous device, which they are not able to perform" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Transcendence"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Transcendence, General) R: Per, D: Conc, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 53
+        }
+        DESCRIPTION "For as long as you concentrate, you cannot be the target of supernatural effects of less than the level of this miracle. Spells that would affect you directly simply do nothing, as if they were cast on a target that is not there. This is not Magic Resistance; a magically created stone that is thrown at you can still hit you, for example. Once they realize how you are protected, your enemies may begin to aim their spells and powers (**Ars**\n\n**Magica** 5th Edition, page 86), which easily overcomes this effect.\n\n(Base effect, +1 Conc)"
+    }
+
+    #t0c0bb39ec3931f0abed536 ^"Surely every man walketh in a vain shew: surely they are disquieted in vain: he heapeth up riches, and knoweth not who shall gather them" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Transcendence"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Transcendence, Level 30) R: Per, D: Conc, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 53
+        }
+        DESCRIPTION "You may push yourself through nonliving physical obstacles for the duration of the effect, as if wading through mud. This does not cause you to sink into the floor or fall through bridges or the like, as natural buoyancy causes you to float on solid objects like wood on water, though you can still dive down through them if you wish.\n\n(Base 25, +1 Conc)"
+    }
+
+    #tbe331e1c8b7f1d036d0b8f ^"Behold, he that keepeth Israel shall neither slumber nor sleep" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Purity"
+            ^"Power" STRING "Transcendence"
+            ^"Level" INTEGER 50
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Purity, Transcendence, Level 50) R: Per, D: Year, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 53
+        }
+        DESCRIPTION "This miraculous effect allows you to go an entire year without needing sleep. This effectively gives you two additional seasons of study, though each is spread over two other seasons and thus the experience you gain must be spent on things that you can do while engaged in other activities, such as Practice or Adventure. You can also hurry a seasonal activity by devoting all your focus to it, finishing it in two months instead of three.\n\n(Base 30, +4 Year)"
+    }
+
+    #tf7b37cd2e42ea1489a10c7 ^"Teach me thy way, O LORD, and lead me in a plain path, because of mine enemies" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Understanding"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Understanding, Level 15) R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 54
+        }
+        DESCRIPTION "You receive an inspirational vision that highlights information of which you are aware but have perhaps overlooked, in the manner of the Common Sense Virtue. In a dream emphasizing events in your past, the storyguide tells you something you already know that is applicable to your current situation.\n\n(Base 15)"
+    }
+
+    #t82fd25eb2d9cf079154c82 ^"Thou shalt guide me with thy counsel, and afterward receive me to glory" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Understanding"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Understanding, Level 20) R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 54
+        }
+        DESCRIPTION "You receive a holy vision that advises you what you should do in your current situation to more closely follow God’s purpose. The storyguide describes this to you, designing it to be cryptic and full of symbolism, so that it may not be easily understood. There should be some sort of useful clue to be gleaned from the vision if you interpret it correctly.\n\n(Base 20)"
+    }
+
+    #tb92408d808c0bfb56e43a3 ^"I delight to do thy will, O my God; yea, thy law is within my heart" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Meditation"
+            ^"Power" STRING "Understanding"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Meditation, Understanding, Level 35) R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 54
+        }
+        DESCRIPTION "This effect reveals to you if it is God’s will that you pursue a particular course of action: protecting a synagogue, for example, or chasing after a criminal. If it is, then for as long as you are engaged in that activity, you cannot botch a stress roll. Treat all 0s on stress dice as 0, but do not roll botch dice.\n\n(Base 35)"
+    }
+
+    #t25b664d81b3211c5bd2c0a ^"Fire, and hail; snow, and vapour; stormy wind fulfilling his word" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Wonders"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Wonders, Level 35) R: Sight, D: Conc, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 55
+        }
+        DESCRIPTION "You summon a powerful force of nature: a column of flame, a cloud of icy rain and fog, or a great gale. The effects of this miracle are unpredictable, and the storyguide should judge exactly how they manifest. You control this force for the duration of the effect, and may guide it to move under its own power to anywhere within range (steering a fire towards a particular field, for example, or causing a cloud to pass over a certain village).\n\n(Base 15, +3 Sight, +1 Conc)"
+    }
+
+    #tb8841f536e092d8e15da32 ^"For every beast of the forest is mine, and the cattle upon a thousand hills" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Wonders"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "(Invocation, Wonders, Level 40) R: Touch, D: Moon, T: Ind"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 55
+        }
+        DESCRIPTION "You create any kind of mammal you choose, which appears at your touch and obeys your commands to the best of its ability for the duration of the effect.\n\n(Base 20, +1 Touch, +3 Moon)"
+    }
+
+}

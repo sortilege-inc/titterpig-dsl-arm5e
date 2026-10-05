@@ -1,0 +1,127 @@
+EXTENSION "ARMDef_RoP_Divine_BlessedByGod_Rules" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Three: Blessed By God rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Divine_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t79be294e401d572d6696b7 ^"Group Modifier (Realms of Power: The Divine)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "GROUP MODIFIER"
+            ^"Rules Section" STRING "CEREMONY*"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 36
+        }
+        FORMULAS {
+            "GROUP MODIFIER" "total Ceremony scores – number of participants"
+        }
+    }
+
+    #t9ebb17a4c67adec23fdb78 ^"Tempering an Aura" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "TEMPERING AN AURA"
+            ^"Rules Section" STRING "Tempers"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "TEMPERING AN AURA" "stress die + Presence + Leadership"
+        }
+    }
+
+    #t47b67b4d6e1ef7ae62d947 ^"Invoking God’s Aid" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "INVOKING GOD’S AID"
+            ^"Rules Section" STRING "Invoking God’s Aid"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 41
+        }
+        FORMULAS {
+            "INVOKING GOD’S AID" "stress die + Communication + Dominion Lore"
+        }
+    }
+
+    #t2b8be201cc560eec31ae2a ^"Effect Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "EFFECT TOTAL"
+            ^"Rules Section" STRING "Miraculous Effects"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "EFFECT TOTAL" "simple die + (Characteristic) + (Method) + (Power) + Aura Bonus"
+        }
+    }
+
+    #t211a071e28062d07dd8c35 ^"True Faith Magic Resistance" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "TRUE FAITH MAGIC RESISTANCE"
+            ^"Rules Section" STRING "Taking the True Faith Virtue"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 57
+        }
+        FORMULAS {
+            "TRUE FAITH MAGIC RESISTANCE" "True Faith Score x 10"
+        }
+    }
+
+    #tf2e073e5c2dd40a2056283 ^"Praying for a Miracle" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "PRAYING FOR A MIRACLE"
+            ^"Rules Section" STRING "PRAYING FOR MIRACLES"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 60
+        }
+        FORMULAS {
+            "PRAYING FOR A MIRACLE" "True Faith Score + Concentration + Aura + Stress Die"
+        }
+    }
+
+    #td47cf097debb9927aa268f ^"Level (Praying for Miracles)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "LEVEL"
+            ^"Rules Section" STRING "PRAYING FOR MIRACLES"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 60
+        }
+        FORMULAS {
+            "LEVEL" "level of holy power"
+        }
+    }
+
+    #t88e87b19a8615180c91769 ^"Divine Ascension" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "DIVINE ASCENSION"
+            ^"Rules Section" STRING "Ascension"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 63
+        }
+        FORMULAS {
+            "DIVINE ASCENSION" "Presence + Concentration (or Meditation) + stress die vs. Warping Score + Number of Warping Points Gained + True Faith Score + local aura + stress die (no botch)"
+        }
+    }
+
+    #t9539529850a5ea85df10e6 ^"Base Ascent Time" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "BASE ASCENT TIME"
+            ^"Rules Section" STRING "EXPERIENCING THE ASCENT"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 63
+        }
+        FORMULAS {
+            "BASE ASCENT TIME" "(Warping Score + Warping Points gained) in days"
+        }
+    }
+
+}

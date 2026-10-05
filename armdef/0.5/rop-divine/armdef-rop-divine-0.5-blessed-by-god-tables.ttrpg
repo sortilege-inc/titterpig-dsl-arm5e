@@ -1,0 +1,71 @@
+EXTENSION "ARMDef_RoP_Divine_BlessedByGod_Tables" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Three: Blessed By God tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Divine_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf00bad28b5110882e614be ^"Holy Influence (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["EASE FACTOR", "VALUE"]
+            ^"Printed Name" STRING "Holy Influence"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 38
+        }
+        TABLE {
+            "9+" "+1"
+            "15+" "+2"
+            "24+" "+3 (max)"
+        }
+        DESCRIPTION "EASE FACTOR VALUE 9+ +1 15+ +2 24+ +3 (max)"
+    }
+
+    #t6a6a160b6a9cc5f0e741ae ^"Holy Influence" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "HOLY INFLUENCE"
+            ^"Rules Section" STRING "Holy Influence"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "HOLY INFLUENCE" "simple die + Presence + Leadership"
+        }
+    }
+
+    #t6531f194ebafe735a7ef08 ^"Personality Traits (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["TEMPER", "POSITIVE TRAITS", "OPPOSES", "NEGATIVE TRAITS"]
+            ^"Printed Name" STRING "Personality Traits"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 40
+        }
+        TABLE {
+            "Loyal" "Dedicated, Faithful, Humble, Reliable, Trusting" "Proud" "Arrogant, Haughty, Rebellious, Suspicious, Vain"
+            "Calm" "Cheerful, Hopeful, Optimistic, Patient, Peaceful" "Wrathful" "Angry, Desperate, Spiteful, Vengeful, Violent"
+            "Kind" "Charitable, Compassionate, Forgiving, Generous, Merciful" "Envious" "Cruel, Gossipy, Gruff, Jealous, Meddlesome"
+            "Brave" "Bold, Courageous, Determined, Ready, Zealous" "Slothful" "Cowardly, Cynical, Indecisive, Lazy, Shy"
+            "Wise" "Careful, Cautious, Chaste, Practical, Prudent" "Lustful" "Fanatical, Lecherous, Naïve, Overconfident, Reckless"
+            "Strong" "Healthy, Pious, Selfless, Temperate, Vigilant" "Greedy" "Gluttonous, Indulgent, Selfish, Sickly, Weak"
+            "Just" "Even-handed, Fair, Honest, Honorable, Straightforward" "Avaricious" "Ambitious, Corrupt, Cunning, Devious, Manipulative"
+        }
+        DESCRIPTION "In order to play holy characters, you must already have some idea of how they behave virtuously, and these tendencies are probably described as part of your character’s Personality Traits. This makes it easy for you to tell at a glance how your characters act in any given situation by comparing the values of traits that seem applicable. It also gives you some idea of how your characters *don’t* act, especially when they are tempted or manipulated by outside forces. By determining which traits are similar enough to lead to the same sorts of behavior, and how these traits directly oppose other traits, you can better understand and play your characters.\n\nTo this end, you might wish to associate each of your character’s Personality traits with a particular virtue or vice. The tempers listed here are a good model, as it is convenient if they correspond to the various tempers that holy characters might invoke; they are each listed below with their opposing vices, and each has several related Personality traits.\n\nTEMPER POSITIVE TRAITS OPPOSES NEGATIVE TRAITS Loyal Dedicated, Faithful, Humble, Proud Arrogant, Haughty, Reliable, Trusting Rebellious, Suspicious, Vain Calm Cheerful, Hopeful, Wrathful Angry, Desperate, Optimistic, Patient, Peaceful Spiteful, Vengeful, Violent Kind Charitable, Compassionate, Envious Cruel, Gossipy, Gruff, Forgiving, Generous, Merciful Jealous, Meddlesome Brave Bold, Courageous, Slothful Cowardly, Cynical, Determined, Ready, Zealous Indecisive, Lazy, Shy Wise Careful, Cautious, Chaste, Lustful Fanatical, Lecherous, Naïve, Practical, Prudent Overconfident, Reckless Strong Healthy, Pious, Selfless, Greedy Gluttonous, Indulgent, Temperate, Vigilant Selfish, Sickly, Weak Just Even-handed, Fair, Honest, Avaricious Ambitious, Corrupt, Honorable, Straightforward Cunning, Devious, Manipulative\n\nTo indicate which temper or sin a Personality trait is associated with, you can simply note it afterward: e.g. Dedicated +3 (Loyal) or Cruel +3 (Envious). When dealing with opposing tempers or sins, treat the trait’s value as negative. For example, Dedicated +3 (Loyal) also means a character is Proud\n\n–3, and Cruel +3 (Envious) is the same as Kind –3.\n\nAll Personality traits do not need to fit perfectly into this model, but those that do can be applied to greater effect when combined with holy influence and other aspects of the game that deal with human behavior."
+    }
+
+    #tf18ca6cefa7d50f5271533 ^"Divine Aid Bonus Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["EASE FACTOR", "BONUS"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 41
+        }
+        TABLE {
+            "9+" "+1"
+            "15+" "+2"
+            "24+" "+3 (maximum bonus)"
+        }
+        DESCRIPTION "EASE FACTOR BONUS 9+ +1 15+ +2 24+ +3 (maximum bonus)"
+    }
+
+}

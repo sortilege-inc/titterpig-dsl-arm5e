@@ -1,0 +1,165 @@
+EXTENSION "ArM5_RoP_Divine_BlessedByGod_Abilities" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Three: Blessed By God abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Divine_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t55a972b6edb97ba6ddd9f8 ^"Adjuration (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "ADJURATION*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["type of creatures (angels, demons, ghosts, faeries)", "causing a specific effect."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 36
+        }
+        DESCRIPTION "You are skilled in controlling and banishing supernatural creatures and their powers (see Miraculous Effects, later in this chapter)."
+    }
+
+    #t31fdec2ccc8d9ad5de2ecd ^"Blessing (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "BLESSING*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular effect", "specific targets", "in special circumstances."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 36
+        }
+        DESCRIPTION "You bring about beneficial or protective effects associated with the divine (see Miraculous Effects)."
+    }
+
+    #t155bf3719ad624c642aa65 ^"Ceremony (Ability) (Realms of Power: The Divine)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "CEREMONY*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["with a certain Power or Ability", "in particular circumstances", "with a specific group or leader."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 36
+        }
+        DESCRIPTION "This Ability is used in conjunction with another Divine Supernatural Ability or a holy Method and Power to produce a greater effect. You must gather a group together and determine what you are going to do. Since it increases the potency of divine effects, at least one of the participants must possess the Ability (this character is called the **focus character**), and if it is a Power, whatever Method the character would normally use must be used by each member of the group. Because of this, all of the participants are considered to be the caster when evaluating the effect.\n\nThe group may appoint a character to be their leader. The leader’s Ceremony score determines how many others may contribute to the effect. Additional characters may still participate in the ceremony, but their scores are not counted in the total and they are not treated as the caster. Characters with spiritual authority over others in the group must always lead; they cannot join a group unless led by a character with spiritual authority over them all.\n\nAlternatively, any number of people can participate in a ceremony without a leader. In this case, the group generates a **group modifier** by adding up all of their Ceremony scores and subtracting the total number of participants. This group modifier is applied to the focus character’s total, and might be positive or negative, depending on how many people have joined the ceremony and how skilled they are at praying together.\n\n**GROUP MODIFIER:**\n\n**total Ceremony scores – number of participants**\n\nWhether or not there is a leader, all participants then add their scores in the appropriate (Characteristic + Ability) or (Characteristic + Method) to the focus character’s total. If a character does not have the relevant Ability or Method, only the Characteristic is added. After this bonus has been applied, the focus character rolls the die and resolves the effect as normal.\n\nNote that if every participating character has a score of at least 1 in Ceremony, it is better not to have a leader, but since Ceremony is a supernatural ability such groups will be very rare."
+    }
+
+    #t32b878cbbf43ec9d0e60d7 ^"Cursing (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "CURSING*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["a particular effect", "punishing a specific kind of sin", "a particular kind of target."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 36
+        }
+        DESCRIPTION "You can bring about negative effects associated with God’s wrath (see Miraculous Effects)."
+    }
+
+    #t7b346f1bf74aa1106dc126 ^"Holy Magic (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "HOLY MAGIC*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 36
+        }
+        DESCRIPTION "You have translated your Hermetic Arts into a form of magic that is compatible with the Dominion and holy powers. **Specialties: **inventing spells, enchanting items, with a particular Power or Art. (Supernatural, Arcane)"
+    }
+
+    #ta1ea314f77845c938bb0cf ^"Intervention (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "INTERVENTION*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["causing a specific effect", "a particular image", "in specific circumstances."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "You cause the divine to manifest in the physical world, often with startling effects (see Miraculous Effects)."
+    }
+
+    #t6de134001b82ce2fc016b6 ^"Invocation (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "INVOCATION*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["using holy names", "in writing", "affecting a particular kind of target."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "Using holy words, phrases, and prayers, you can invoke God’s power. You must either cry out your prayer in a loud voice, or somehow inscribe your prayer in writing. This adds Communication to your roll, and requires that you spend a point of Confidence (or Faith) to bring the effect into being.\n\nYou may also roll a stress die instead of a simple die when calling a holy effect if you wish. By doing so, you essentially command rather than entreat God’s aid, summoning more potential power but risking giving greater offense should you prove unworthy."
+    }
+
+    #t80b31163904f14b33453cf ^"Meditation (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "MEDITATION*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["type of meditation", "a particular performance", "affecting a certain person."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "You can achieve an ecstatic state by chanting or focusing your mind on a performance. This takes approximately an hour, and you must make a Stamina roll every ten minutes against an Ease Factor of 6. A failed roll results in a lost Fatigue level, and a botch disrupts the ritual. If you or the performer is distracted, you must make a Concentration roll to keep your focus. When the ritual is complete, if you are still conscious, you add your Intelligence + Meditation to your effect total.\n\nYour Meditation score also increases your chances of temporarily becoming part of the Divine Realm, but reduces the penalty for doing so. You may subtract your score in Meditation from your roll to avoid Divine Ascent, and this does not increase the number of additional Warping points you receive from the experience."
+    }
+
+    #t421f8636984b4825f8afc4 ^"Purity (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "PURITY*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["affecting a certain person", "a particular form of deprivation", "over long periods of time."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "Through intense physical effort and will, you can bring about miraculous effects. You must engage in an activity that is strenuous enough to cause you to lose a long-term Fatigue level or suffer a Light Wound, and you use your Stamina for your effect roll.\n\nYou may also perform holy rituals that last longer than usual, potentially increasing your effect total over time — usually several hours, days, or even weeks. This can be done with any Method, not just Purity effects. When you have finished the activation activity associated with your effect’s Method, you do not have to roll the die, but may instead begin the ritual again, paying all the same costs as before. This allows you to spend additional Confidence (or Faith) on an effect — normally, a character can only spend as many Confidence points on a single action as his Confidence Score. Each time you extend a ritual by performing the activity associated with the Method again, you may treat it as a new action, allowing you to spend additional Confidence (or Faith) points to boost the effect. You do not roll the die until you declare the ritual is finished."
+    }
+
+    #tcb68ce46e173a69f3378d3 ^"Transcendence (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "TRANSCENDENCE*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["causing a specific effect", "in particular circumstances", "affecting a specific part of the body."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "You can overcome the limitations of the physical world and thus bring about miraculous changes to your mind and body (see Miraculous Effects)."
+    }
+
+    #ta8230687685fe45b8e2900 ^"Understanding (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "UNDERSTANDING*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["concerning a specific person", "in particular circumstances", "a certain kind of information."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "You receive holy visions that can provide guidance and information directly from the divine (see Miraculous Effects)."
+    }
+
+    #t73abdba069f02d9d1cad4b ^"Wonders (Ability)" DEF {
+        EXTENDS #tWPnyoi9rSMWyMo7Njlo9XM2 ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "WONDERS*"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Specialties" LIST OF STRING ["causing a specific effect", "a particular kind of material", "in specific circumstances."]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "You can cause living creatures, nonliving objects, and forces of nature to manifest through God’s power (see Miraculous Effects, below)."
+    }
+
+}

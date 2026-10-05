@@ -1,0 +1,101 @@
+EXTENSION "ArM5_RoP_Divine_HeavenAndEarth_Rules" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Two: Heaven and Earth rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Divine_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t2ea0deca481f4b3c370ef0 ^"Dominion Rite" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "DOMINION RITE"
+            ^"Rules Section" STRING "CREATING A DOMINION AURA"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 11
+        }
+        FORMULAS {
+            "DOMINION RITE" "Communication + Theology (or Dominion Lore) + stress die vs. Ease Factor 6"
+        }
+    }
+
+    #tb7ced5e58a9a965bef9f39 ^"Overcome Celestial Disorientation" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "OVERCOME CELESTIAL DISORIENTATION"
+            ^"Rules Section" STRING "OVERCOME CELESTIAL DISORIENTATION: Stamina +"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 14
+        }
+        FORMULAS {
+            "OVERCOME CELESTIAL DISORIENTATION" "Stamina + Dominion Lore + stress dice"
+        }
+    }
+
+    #td183f9a0ba8dd262061928 ^"Celestial Disorientation Ease Factor" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "CELESTIAL DISORIENTATION EASE FACTOR"
+            ^"Rules Section" STRING "CELESTIAL DISORIENTATION EASE FACTOR: Regio Rating x3"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 14
+        }
+        FORMULAS {
+            "CELESTIAL DISORIENTATION EASE FACTOR" "Regio Rating x3"
+        }
+    }
+
+    #t19b288f3a3212af9b854f9 ^"Celestial Disorientation Penalty" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "CELESTIAL DISORIENTATION PENALTY"
+            ^"Rules Section" STRING "CELESTIAL DISORIENTATION"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 15
+        }
+        FORMULAS {
+            "CELESTIAL DISORIENTATION PENALTY" "regio rating x3"
+        }
+    }
+
+    #ta25813d08ad6fa3bdda76f ^"Prolonged Exposure Limit" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "PROLONGED EXPOSURE LIMIT"
+            ^"Rules Section" STRING "CELESTIAL DISORIENTATION"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 15
+        }
+        FORMULAS {
+            "PROLONGED EXPOSURE LIMIT" "Stamina + Parma Magica (or similar Ability) + 3"
+        }
+    }
+
+    #t74c5270471dcfd2d3c8944 ^"Fatigue Loss After Exposure Limit" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "FATIGUE LOSS AFTER EXPOSURE LIMIT"
+            ^"Rules Section" STRING "FATIGUE LOSS AFTER EXPOSURE"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 15
+        }
+        FORMULAS {
+            "FATIGUE LOSS AFTER EXPOSURE LIMIT" "1 per hour (days for characters with True Faith)"
+        }
+    }
+
+    #t5e0e5f1943f7915b278690 ^"Warping Point Gain After Unconsciousness" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "WARPING POINT GAIN AFTER UNCONSCIOUSNESS"
+            ^"Rules Section" STRING "WARPING POINT GAIN AFTER UNCONSCIOUSNESS: regio level"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 15
+        }
+        FORMULAS {
+            "WARPING POINT GAIN AFTER UNCONSCIOUSNESS" "regio level per hour (days for characters with True Faith)"
+        }
+    }
+
+}

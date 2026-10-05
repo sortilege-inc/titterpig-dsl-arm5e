@@ -1,0 +1,139 @@
+EXTENSION "ARMDef_RoP_Divine_BlessedByGod_Parameters" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Three: Blessed By God parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Divine_Core_Ext"
+
+    # The chapter's parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tda680a894c7fc92986622d ^"Presence (Range) (Realms of Power: The Divine)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Presence (Range)"
+            ^"Parameter" STRING "Range" FIXED
+            ^"Table Columns" LIST ["PRESENCE", "DISTANCE"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        TABLE {
+            "+4/+5" "100 paces"
+            "+2/+3" "50 paces"
+            "–1/0/+1" "15 paces"
+            "–2/–3" "5 paces"
+            "–4/–5" "0 paces (caster only)"
+        }
+        DESCRIPTION "You radiate a sort of divine aura, which is not visible and has no effect on others except that it allows you to affect targets within this area through a holy extension of yourself; you do not have to speak as with Voice Range. The size of your aura depends upon your Presence, as shown below.\n\nFor the purposes of calculating spell levels, this range is the same as Voice."
+    }
+
+    #t19129d4e18b5b9f8977172 ^"Communion (Range)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Range" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "You can affect those things over which you have been invested holy authority or have been joined with by a holy ceremony. For example, a priest can affect his parish, a wife can affect her husband, a godparent can affect his child, and a host may affect his guests. There is a mystical connection between you, and so this is the same range as Arcane Connection."
+    }
+
+    #t59b46f085299af38e34e2a ^"Recitation (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "This is the same level as Concentration, and very similar in effect. The spell lasts for as long as the caster recites scripture or an established prayer. This can be read from a book, although if it is done from memory, an Intelligence + Theology roll may be needed to see how much the caster remembers."
+    }
+
+    #te7c0786caa0ad8ec1ceff7 ^"Office (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "The spell lasts until the hour of the next formal prayer in the caster’s tradition. This is usually about three hours. The spell has no effect at all when cast during a time of prayer, which usually includes dawn and dusk, or if the tradition does not have daily prayer hours. The duration is the same level as Diameter."
+    }
+
+    #tb3d1f47cdc65d6f1e88376 ^"Devotion (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "The spell lasts for as long as a religious observance or devotional ceremony continues. Different members of the congregation can take over the service, essentially allowing it to continue indefinitely, but the spell ends if those tending it somehow fail in their duties. It is equivalent to Sun."
+    }
+
+    #tb43a0cc16308c7ed54d28f ^"Sabbath (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "The spell lasts until dawn of the next day of rest in the character’s tradition, which for Christians in the Middle Ages is Sunday. Thus, a spell cast on Monday morning with this Duration will last six full days. However, this spell has no effect at all when cast on the Sabbath day; it may only be cast on the day following. The duration is the same level as Sun."
+    }
+
+    #t3a80fb1e506edb79613299 ^"40 (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "The spell lasts for forty days and forty nights, a duration that God seems to particularly favor and which thus has mystical significance. It is equivalent in level to Moon, and ends when the forty-first dawn or the fortyfirst dusk has passed."
+    }
+
+    #td903d44309bf849640561e ^"Fast (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "The spell continues for as long as the character fasts, according to the terms of his faith. This usually means going without meat and taking only one meal a day. The duration can potentially last forever, though it ends if the caster dies or otherwise leaves the physical world. The caster can also end the effect at will. This is equivalent to the Moon duration."
+    }
+
+    #t0a2f556d9ffa6dfe83daef ^"Grace (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "The spell lasts for as long as the caster remains in a state of grace, meaning without mortal sin. Acts that cancel this duration might include homicide, perjury, theft, adultery, or sacrilege. It is the same level as Year, though it can theoretically last forever if a character never sins, as then it only ends if the caster dies or goes into Twilight."
+    }
+
+    #tcc630e58f6b285e982097a ^"Sin (Target)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Target" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "You affect an individual who is spiritually impure, stained with mortal sin. This also affects demons and objects that have somehow become unholy. The spell has no effect on divine beings or targets who are in a state of grace. It is the same level as Individual."
+    }
+
+    #t56e9ee4b6736d1c4a8ebe9 ^"Faith (Target)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Target" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "This spell only affects those people who worship God, or else those who do not worship God. Most people do; only pagans, avowed nonbelievers, and diabolists are separated from the rest. The caster can choose to target only adherents of a particular faith with a Finesse roll, assuming he has some way to tell them apart. This target is equivalent to Group."
+    }
+
+    #t072fc441a5482102688b4b ^"Dominion (Target)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Parameter" STRING "Target" FIXED
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "This is the same level as Boundary; it affects everything within a divine aura, as long as the source of the aura is within range. For example, at Voice range the caster can affect everything within an aura that originates at a church, so long as he can hear the church bells. Likewise, if he can see the church, he can affect everything in the Dominion that surrounds it."
+    }
+
+}

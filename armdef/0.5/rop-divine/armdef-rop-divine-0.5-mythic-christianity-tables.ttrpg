@@ -1,0 +1,102 @@
+EXTENSION "ARMDef_RoP_Divine_MythicChristianity_Tables" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Four: Mythic Christianity tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ARMDef_RoP_Divine_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #td262a5698cddce771086a5 ^"Invocation Modifiers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["SITUATION", "MODIFIER"]
+            ^"Printed Name" STRING "Invocation Modifiers"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 87
+        }
+        TABLE {
+            "At saint’s tomb" "+1"
+            "In a Divine Aura" "+ Divine Aura"
+            "During the saint’s feast day" "+3"
+            "Pilgrimage in honor of the saint within a year" "+2"
+            "Touching saint’s relic" "+1"
+            "Making a monetary donation" "+1 to +3"
+            "Imminent peril" "+2"
+            "True Faith" "+1 per point of Faith Score"
+            "Unchristian act in the last month" "–1 to –3"
+            "No donation within a year" "–3"
+            "Received a miracle within a month" "–20"
+            "Invoking a saint other than a patron saint" "–15"
+        }
+    }
+
+    #tb3c12e89f8d6ca288cab37 ^"Threat Modifiers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["SITUATION", "MODIFIER"]
+            ^"Printed Name" STRING "Threat Modifiers"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 88
+        }
+        TABLE {
+            "Exposing the saint’s bones" "+1"
+            "Whipping or defiling the saint’s relics" "+2"
+            "Berating the saint in front of others" "+1"
+            "Barring others from venerating the saint" "+3"
+            "Imminent peril" "+1"
+            "Received a miracle within the past month" "–20"
+            "Threatening an unfamiliar saint" "–15"
+        }
+    }
+
+    #te0d5cf51ccf56f1e9efc2d ^"Ars Notoria Modifiers (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Modifier", "Bonus"]
+            ^"Printed Name" STRING "Ars Notoria Modifiers"
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 98
+        }
+        TABLE {
+            "Fasting" "+1/season"
+            "Chastity" "+1"
+            "Honorable Minor Personality Flaw" "+1"
+            "Honorable Major Personality Flaw" "+3"
+            "Dishonorable Minor Personality Flaw" "–1"
+            "Dishonorable Major Virtue or Flaw" "–3"
+            "Performing a Venial Sin" "–3"
+            "Performing a Mortal Sin" "–9"
+            "Supernatural Ability" "– score in ability"
+            "True Faith" "+Faith Score"
+            "Variable" "(–3 to +3)"
+        }
+        DESCRIPTION "**EXPLANATIONS:**\n\n**Fasting **is maintaining a strict diet of bread and water. Characters wishing to fast for a season must make a Stamina + stress die roll against an Ease Factor of 6 to succeed. For each consecutive season of the fast, the Ease Factor increases by 1. Failing this roll ends the fast, as the character can no longer maintain this rigorous diet. Botching this roll means the character permanently damaged his constitution. He gains enough Aging Points to drop his Stamina by one point.\n\n**Chastity **means refraining from any sexual acts or behaviors, and is relatively easy to do in game. A character may need to make appropriate Personality rolls to remain chaste depending upon his Personality.\n\n**An Honorable Personality Flaw **is one that the storyguide decides contributes to the God’s benevolence. Examples are: compassionate, optimistic, and pious.\n\n**A Dishonorable Personality Flaw** is one that the storyguide decides is counter to God’s benevolence. Examples are: ambitious, envious, lecherous, and wraithful.\n\n**Divine Supernatural Abilities,** like Sense Holiness and Unholiness, are an exception and their score is not subtracted from the recitation total.\n\nStoryguides may reward or penalize petitioners depending upon specific instances. Ars Notoria is a form of Holy magic, so actions done in the name of the Divine may increase the modifier."
+    }
+
+    #t828d7c443c924678e7d535 ^"The Offices (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Time", "Activity"]
+            ^"Printed Name" STRING "The Offices"
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 82
+        }
+        TABLE {
+            "2:00" "rise for Matins"
+            "2:15" "spiritual reading"
+            "5:00" "Lauds, followed by a short nap"
+            "5:30" "Prime (“first hour”), followed by chapter"
+            "6:00" "spiritual reading"
+            "8:00" "Terce (“third hour”) and Mass"
+            "9:30" "manual labor"
+            "11:30" "Sext (“sixth hour”), followed by High Mass"
+            "12:00" "dinner (in summer), followed by a nap (in summer)"
+            "14:00" "Nones (“ninth hour”), followed by dinner (in winter)"
+            "14:30" "manual labor"
+            "17:00" "Vespers"
+            "18:00" "supper (in summer)"
+            "18:30" "Compline, followed by retirement"
+        }
+        DESCRIPTION "The monks’ schedule varied according to the season, since it was regulated by the sun and influenced by fast days and the Church year. They had only one meal in winter, and longer services. In summer, they ate twice a day and had more work and reading. A typical monastic day might look something like this:\n\n2:00 rise for Matins 2:15 spiritual reading 5:00 Lauds, followed by a short nap 5:30 Prime (“first hour”), followed by chapter 6:00 spiritual reading 8:00 Terce (“third hour”) and Mass 9:30 manual labor 11:30 Sext (“sixth hour”), followed by High Mass 12:00 dinner (in summer), followed by a nap (in summer) 14:00 Nones (“ninth hour”), followed by dinner (in winter) 14:30 manual labor 17:00 Vespers 18:00 supper (in summer) 18:30 Compline, followed by retirement\n\nThe Rule required every monk to take a two-fold vow: that of *stabilitas loci* (“stability”), meaning permanent residence at the monastery of his entrance to the order, and *conversatio morum* (“conversion of life”). In addition, it was understood that he would follow the three “evangelical counsels” of **poverty**, **celibacy**, and **obedience **to the abbot. The **chapter** of monks (all the monks gathered for official business) elected the abbot for life, who was then solely responsible for the welfare of his house. He in turn chose a **prior** to be his chief assistant, in addition to a **cellarer** who was in charge of the temporal affairs of the house, and **deans**, each of whom was in charge of ten monks.\n\nAt first the chapter had a negative function; it could veto a suggestion by the abbot, but it could not initiate actions that the abbot opposed. By the twelfth century this had changed, however, and most chapters possessed considerable powers of legislation. One reason for this was that very few abbots lived in the monastic cloister any more; instead they had their own house within the compound. The bishops can usually interfere in these elections and decisions, however, and many monasteries have petitioned the head of the Church for special dispensation, and are granted a sort of autonomy whereby they answer only to the pope himself. Thus, abbots are often considered to have social status similar to bishops, and there is disagreement in the Church whether bishops have control over their houses.\n\nBenedictine houses exist for both men and women; a convent follows the same Rule as a monastery, and is overseen by an abbess. The male and female orders are kept separate and distinct, to avoid temptation between the sexes (though there were cases of abbeys with both monks and nuns living under one roof with different wings, and these unusual houses were usually led by women), but since women may not be ordained in the Church, nuns are not completely isolated as they depend upon priests to administer the sacraments and give spiritual guidance.\n\nTwo of the most significant developments in Benedictine monasticism were the establishment of Cluny in 910 and Citeaux in 1098. Cluny sought to emphasize worship to the virtual exclusion of reading and labor, organize monasteries into a coherent system, and free the Church from the control of the nobility. During the tenth and eleventh centuries the Cluniac Order represented everything that was vital and progressive in Christianity. Then, in the twelfth century, the Cistercian Order came into being as a reaction to the secularization of the Church and widespread corruption among monks. The Cistercians sought to return to the simplicity of Benedict’s Rule and the ideals of poverty and isolation. (The Cistercian Order is discussed in more detail in *The Broken Covenant of Calebais*.)"
+    }
+
+}

@@ -1,0 +1,117 @@
+EXTENSION "ArM5_RoP_Divine_BlessedByGod_MethodsPowers" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Three: Blessed By God methods powers"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Divine_Core_Ext"
+
+    # The chapter's methods powers, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t57289da3aa7446445c71ff ^"Invocation (Holy Method)" DEF {
+        EXTENDS #tac2a371e4243b37ac560fa ^"Holy Method"
+        PROPERTIES {
+            ^"Printed Name" STRING "Invocation"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 46
+        }
+        DESCRIPTION "By addressing God and the servants of the Divine, commanding them by their names, and entreating them for aid, you can cause holy effects to manifest. This might be because they hear your pleas and intervene on your behalf, or because your understanding of God’s word is such that you can wield His power using His voice. This typically relies on Communication, and requires that the character invest Confidence in the effect."
+    }
+
+    #tf7c102cd1e39120f482091 ^"Meditation (Holy Method)" DEF {
+        EXTENDS #tac2a371e4243b37ac560fa ^"Holy Method"
+        PROPERTIES {
+            ^"Printed Name" STRING "Meditation"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 46
+        }
+        DESCRIPTION "Through some mundane activity that occupies the mind and relaxes the body, you concentrate your thoughts upon the Divine and slowly enter an ecstatic state where you can examine yourself and your thoughts and even gain insight into the Will of God. Effects associated with Meditation are usually based in Intelligence and are introspective and intensely personal."
+    }
+
+    #tb5e9cff464528322666411 ^"Purity (Holy Method)" DEF {
+        EXTENDS #tac2a371e4243b37ac560fa ^"Holy Method"
+        PROPERTIES {
+            ^"Printed Name" STRING "Purity"
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 46
+        }
+        DESCRIPTION "You may create holy effects by going without food, drink, sleep, or other bodily needs, to purify your spirit and flesh. This allows you to bring about changes to the physical world that seem natural and yet miraculous, effects that seem to come from inside the target rather than from heaven or your own holiness. The skill tends to require great Stamina, and usually costs long-term Fatigue to activate."
+    }
+
+    #t7a15850baa3dd66bc23053 ^"Adjuration (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Adjuration"
+            ^"Methods" LIST OF STRING ["Invocation", "Purity"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "Adjuration is the Power to summon, control, and banish supernatural creatures of all kinds, including dispelling their powers and compelling their cooperation. Through adjuration, God asserts His ultimate authority over creation and both the natural and supernatural worlds. Adjuration is also the witnessing of oaths and truths, by forcing otherworldly beings to recognize God’s authority and obey Him. The target might cry out in pain and wonder when affected, or speak in a different voice that represents its true nature for the effect’s duration.\n\n**Invocation** is used to compel creatures to act, often forcing them to use their powers on the holy character’s behalf. **Purity **can create a holy bond with them, or protect the holy character against their influence. Tragedies of hubris might anger the target, freeing or summoning it, or making the caster more vulnerable."
+    }
+
+    #tb5004aefe0640c2ef24378 ^"Blessing (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Blessing"
+            ^"Methods" LIST OF STRING ["Invocation", "Meditation"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "These effects aid and protect the target from harm by sanctifying it and dedicating it to God’s service. They often have a noticeable effect on the target, perhaps briefly glowing with holy light or ringing with a faint sound. Blessings on a person or an object usually include a concise statement of how God is watching over the subject, and what sort of help He is likely to give. Like any supernatural effect, characters constantly under the influence of a blessing will gain Warping points at the rate of one per year.\n\nWhen designing Blessing effects, **Invocation** draws supernatural aid; this extends the target’s capabilities and boosts his efforts with otherworldly powers. **Meditation** inspires and nurtures the target through natural means, speeding healing and heartening his spirit. Tragedies of hubris with Blessing might involve gaining Warping points or Flaws."
+    }
+
+    #t59873396e69af5773ceee4 ^"Cursing (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Cursing"
+            ^"Methods" LIST OF STRING ["Invocation", "Purity"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 50
+        }
+        DESCRIPTION "Holy folk are not all passive and kind; they can also bring ruin upon God’s enemies and destroy parts of His creation that they believe offend Him. They can often feel like powers that come from the ancient world, perhaps with a darkening of the sky or a sound of thunder or cracking stone accompanying the results.\n\n**Invocation **brings God’s disfavor, a curse that forces the target to overcome greater adversity to encourage repentance. This typically involves lasting effects that do not have an immediate effect, as they merely remove some of the natural protection that God extends to everyone. **Purity** destroys a target immediately, causing damage, ruin, and death. In a sense, the holy character banishes the essence of the offending thing with his holiness, making it no more. A tragedy of hubris might affect the holy character instead of the target."
+    }
+
+    #t91c2c4268b0b3e10ac59e4 ^"Intervention (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Intervention"
+            ^"Methods" LIST OF STRING ["Meditation", "Purity"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "These effects are associated with changes to nature that can be either disturbing or inspiring. In most cases, they are intended to frighten away those who would defile God’s temples, or act as conduits for holy information from above. Most unexplained phenomena and miraculous happenings associated with the divine fall into this category. Intervention is how God works His will in the physical world directly, and while characters can control these effects to some degree, there is always an element of the unknown involved in their use. It is a potent and mysterious Power.\n\nThrough **Meditation**, the holy character can see the strange shapes of the spiritual world through the curtain that binds him to reality, and can cause these portentous apparitions to become visible to others. Likewise, via **Purity**, a holy character can draw the essence of God into his own body or another’s, changing and perfecting it according to His will.\n\nBoth Methods leave a mark of some sort upon the character and others who observe the effect, forever transforming them through the experience. Tragedies of hubris might cause frightening visions, madness, or unwanted attention from supernatural beings."
+    }
+
+    #tcb362378c893b6525043e3 ^"Transcendence (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transcendence"
+            ^"Methods" LIST OF STRING ["Meditation", "Purity"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 53
+        }
+        DESCRIPTION "Transcendence brings about spiritual changes to the mind and body, and these changes often result in physical changes as well. The holy character travels in spirit to another place, one that is beyond human experience, and what he does there often affects the part of him that is left behind. It is a way to escape the boundaries of this world and become closer to God, but those who depart in this way may appear to be dead or comatose until they return, and usually have no memories of what they saw or experienced while away. This is similar to Divine Ascent (see Divine Warping, below), and characters who spend too much time in a transcendent state may receive Warping points and need to check for other effects.\n\n**Meditation** is transcendence of the body, allowing the character to leave his physical shell and travel to other places, overcome Fatigue, and feel no pain. Transcendence of the body requires **Purity**, allowing the holy character to strengthen his body and spirit by tapping into the other world. Characters who suffer a tragedy of hubris with Transcendence may become trapped in the spiritual world, or their bodies and minds might be affected, causing premature aging, wounds, or lost memories."
+    }
+
+    #tef750223a780fc0838e03b ^"Understanding (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Understanding"
+            ^"Methods" LIST OF STRING ["Meditation"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 54
+        }
+        DESCRIPTION "Characters with Understanding can learn hidden information, often about the future or the Divine Will. This information will often be difficult to understand, include additional misleading information, and will not always take into account sinful or mundane possibilities. This is because while this Power gives unique insight into God’s Will and the future, it is impossible for the mortal mind to comprehend things the way that God sees them. The more you explore a subject with your holy Understanding, the less focused the information will become; and revisiting the same questions will bring more confusion than wisdom. God’s ways are not ours, and we cannot ever fully grasp His designs. Thus, reckless glimpses into His plan can break and even destroy the fragile human mind.\n\n**Meditation** is the only Method that allows this sort of prophetic knowledge. Mistakes that lead to tragedies of hubris with Understanding usually involve false, harmful or even abusive information. You might perceive events that never happened, revisit scarring and painful memories, or learn dangerous secrets that you did not wish to know."
+    }
+
+    #t64aa7b1d1df213bef3ea02 ^"Wonders (Holy Power)" DEF {
+        EXTENDS #t42294807639404e3bbecbd ^"Holy Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Wonders"
+            ^"Methods" LIST OF STRING ["Invocation"]
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 55
+        }
+        DESCRIPTION "Those who ask properly will receive God’s gifts, for God provides for the faithful in need. God also summons storms, fire, winds, and other powerful natural forces. These wonders are created at the holy character’s command, and even controlled by him to some extent, although God always keeps His hand upon His miracles. Such things may appear at times to listen to another voice, and act in ways that the holy character does not anticipate.\n\nThese effects use **Invocation** to conjure and command divine forces by their name and purpose. When a character suffers a tragedy of hubris with Wonders, he might create unwanted items, such as rotten food, vermin, or mud. Or, the effect might still happen, but manifest completely out of his control."
+    }
+
+}

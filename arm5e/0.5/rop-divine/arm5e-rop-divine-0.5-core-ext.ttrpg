@@ -1,0 +1,185 @@
+EXTENSION "ArM5_RoP_Divine_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Realms of Power: The Divine is an EXTENSION on the arm5e edition (spec S13 composition). Angels and other
+    # Divine beings are set as the core bestiary sets its own creatures (^"Creature", Might Realm Divine, with
+    # PERSONALITY_TRAITS / COMBAT / ABILITIES / POWERS blocks); the types below are the ones the book adds.
+
+    #ta3872b60ee4dd02a88e718 ^"Angel" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Choir" STRING
+            ^"Confidence Score" STRING
+            ^"Printed Size" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "All angels possess at least one point of Divine Might and may not be affiliated or belong to any other realm other than the Divine."
+    }
+
+    #t0166bf1545d3822d2a101a ^"Angelic Choir" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Divine Might" STRING
+            ^"Personality Traits" STRING
+            ^"Story Hook" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t40042533199d74bd21f7ed ^"Angelic Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Cost" STRING REQUIRED
+            ^"Initiative" STRING REQUIRED
+            ^"Form" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tfa3cc2d5fd90081aede91f ^"Temper" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Opposes" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tac2a371e4243b37ac560fa ^"Holy Method" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t42294807639404e3bbecbd ^"Holy Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Methods" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tdde7bcb30a02cb13eb5677 ^"Holy Effect" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Method" STRING
+            ^"Power" STRING
+            ^"Level" INTEGER
+            ^"General Level" BOOLEAN
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t5807b76ad03348fa3cc70f ^"Holy Guideline" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Power" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t65b2b61b9cea3054a893d1 ^"Holy Relic" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t65baa1ab8c36743313d1ce ^"Holy Tradition" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Tradition Kind" ENUM ["Holy Tradition", "Holy Societas", "Holy Societates"] REQUIRED
+            ^"Tradition Group" STRING
+            ^"Favored Abilities" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t8bb442d8427d39408676da ^"Holy Spell Parameter" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Parameter" ENUM ["Range", "Duration", "Target"] REQUIRED
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t8d188b6ad592676406586c ^"Saint" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Patronage" STRING
+            ^"Divine Might" INTEGER
+            ^"Area of Veneration" STRING
+            ^"Saint Powers" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tbd7845fd113e739a3e5a63 ^"Saint Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Kind" ENUM ["Power", "Curse"] REQUIRED
+            ^"Cost" STRING REQUIRED
+            ^"Initiative" STRING REQUIRED
+            ^"Form" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #tc24b025e097f4da0cdb04a ^"Sacrament" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t3e0e47fb287b14be04f6f3 ^"Sacred Text" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Book" STRING
+            ^"Author" STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t6f4b90565859b46739048e ^"Notoria Ring" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+    #t82e80fe822b5adc6fab3b6 ^"Holy Forbear" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Divine Might" INTEGER
+            ^"Saint Powers" LIST OF STRING
+            ^"Source" STRING DEFAULT "Realms of Power: The Divine"
+            ^"Page" INTEGER
+        }
+    }
+
+}

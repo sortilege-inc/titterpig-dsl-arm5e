@@ -1,0 +1,983 @@
+EXTENSION "ArM5_RoP_Divine_HeavenAndEarth_Angels" {
+    NAME "Ars Magica Fifth Edition, Realms of Power: The Divine - Chapter Two: Heaven and Earth angels"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-04"
+    DEPENDS_ON "ArM5_RoP_Divine_Core_Ext"
+
+    # The chapter's angels, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t74a739e5bd9ad5eb587673 ^"Asuryal, Herald of Deliverance" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Principality"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (35)"
+            ^"Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Inspirational"
+            ^"Reputations" LIST ["Advisor 3 (Local)", "Herald 2 (among Christian and Jewish Theologians) Combat: Fist: Init +5", "Attack 14", "Defense 14", "Damage 14"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Equipment" STRING "Clothes, other items needed to maintain his disguise."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "1 pawn of Mentem."
+            ^"Appearance" STRING "Asuryal appears as a mild-mannered man of middle years, typically dressed in modest clothes of whatever region he is in. He possesses wise eyes, and when in particularly powerful Divine auras, his skin appears luminescent."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 27
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Persuasive" +3
+            "Radiant" +1
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 6 SPECIALTY "politics"
+            "Artes Liberales" SCORE 5 SPECIALTY "rhetoric"
+            "Awareness" SCORE 5 SPECIALTY "conversations"
+            "Brawl" SCORE 2 SPECIALTY "fists"
+            "Charm" SCORE 7 SPECIALTY "nobles"
+            "Civil and Canon Law" SCORE 5 SPECIALTY "noble rights"
+            "Dominion Lore" SCORE 7 SPECIALTY "angels"
+            "Etiquette" SCORE 8 SPECIALTY "courts"
+            "Folk Ken" SCORE 7 SPECIALTY "nobles"
+            "Guile" SCORE 6 SPECIALTY "nobles"
+            "Intrigue" SCORE 7 SPECIALTY "nobles"
+            "Single Weapon" SCORE 1 SPECIALTY "dagger"
+            "Theology" SCORE 7 SPECIALTY "salvation"
+        }
+        POWERS {
+            #tc78011b925cc48e9492156 ^"Blessing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "by effect"
+                }
+                DESCRIPTION "As per the Blessing holy power (see Blessed By God, Miraculous Effects), with the Divine Might cost determined by the Blessing level /10."
+            }
+        }
+        DESCRIPTION "The angel of the Lord encamps around those who fear him, and he delivers them.\n\n*Psalms 34:7*\n\nAsuryal is the Principality who guards the domain of the mundane lord closest to the character’s covenant. He has taken the form of a minor advisor to the lord, and, although he makes no overt divine actions to aid the aristocrat, Asuryal counsels the lord and those around him. Asuryal need not be hostile to the player’s magi or the inhabitants of the covenant, but he will oppose any attempts to endanger the lord’s rule, and may even ask for the aid of other angels."
+    }
+
+    #taf3e5a27d674e0b62c758f ^"Azrael, the Archangel of Death" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 90
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 9
+                ^"Perception" INTEGER 9
+                ^"Presence" INTEGER 9
+                ^"Communication" INTEGER 9
+                ^"Strength" INTEGER 15
+                ^"Stamina" INTEGER 10
+                ^"Dexterity" INTEGER 10
+                ^"Quickness" INTEGER 10
+            }
+            ^"Size" INTEGER 2
+            ^"Age" STRING "n/a"
+            ^"Confidence Score" STRING "7 (50)"
+            ^"Virtues and Flaws" STRING "Piercing Gaze"
+            ^"Reputations" LIST ["Angel of Death 5 (among Jews, Christians and Muslims)", "Unrelenting 5 (among Jews, Christians and Muslims) Combat: Poisoned Long Spear: Init +13", "Attack +29", "Defense +27", "Damage +22 (The spear bears a deadly poison; if any damage is scored, after Soak is subtracted, the target dies instantly. Note that both the spear and the poison are natural, because God made them that way, and thus not magically resisted.)"]
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0/0/0/0, –1/–1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-7), –3 (8-14), –5 (15-21), Incapacitated (22-28)"
+            ^"Equipment" STRING "Robes, poisoned long spear"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "20 pawns of Perdo in the spear."
+            ^"Appearance" STRING "A massive, powerfully built man, with pale skin and black hair, dressed in dark robes. He carries a spear."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 28
+        }
+        PERSONALITY_TRAITS {
+            "Just" +3
+            "Love of God" +5
+            "Unrelenting" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 10 SPECIALTY "souls"
+            "Dominion Lore" SCORE 15 SPECIALTY "angels"
+            "Great Weapon" SCORE 15 SPECIALTY "long Spear"
+            "Hunt" SCORE 15 SPECIALTY "tracking"
+            "Leadership" SCORE 10 SPECIALTY "intimidate"
+            "Theology" SCORE 15 SPECIALTY "angelology"
+        }
+        POWERS {
+            #t0adb6b95c52ca751c0ff35 ^"Spirit Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Azrael can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically."
+            }
+            #tee650a5570c0a824eb9c82 ^"Subtle Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Azrael can change his appearance to look like any human being. His statistics do not change. *Extract Soul*: Not applicable in game terms. Azrael extracts the souls of the Islamic dead when they die, placing them in the grave with their bodies."
+            }
+        }
+        DESCRIPTION "Azrael (‘Azra’il or ‘Izra’il in Islam) is not the only angel of death, but he is both the chief angel of death and one of the archangels. He is also the most physically strong of the angels. He will never be encountered by characters in his natural form, for he is truly immense; it is said that if all the waters on the earth were poured on his head, not a drop would touch the ground, while his 70,000 feet span the heavens. Thus he is most likely to be encountered in the form described here. Azrael’s special charge is the extraction of the souls of prophets, but he may be encountered collecting the souls of others. Characters would be well advised not to hinder him in his work, though, for he can be merciless if provoked."
+    }
+
+    #t0b96e5340cb4f136d31062 ^"Camuel, the Dark Angel" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Throne"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER 1
+            ^"Age" STRING "n/a (35)"
+            ^"Confidence Score" STRING "3 (12)"
+            ^"Virtues and Flaws" STRING "Enduring Constitution, Long-winded, Tough"
+            ^"Reputations" LIST ["Comforter 2 (among Christian and Jewish Theologians) Combat: Fist: Init +5", "Attack +14", "Defense +14", "Damage +14"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-6), –3 (7-12), –5 (13-18), Incapacitated (19-24)"
+            ^"Equipment" STRING "None."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "2 pawns of Corpus in each hand, 2 pawns of Intellego in tongue."
+            ^"Appearance" STRING "Camuel appears to be a tall, muscular — if unassuming — man of indeterminate age. He has deep shadows around his eyes, and his tongue shines like silver."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 28
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Repentant" +4
+            "Relentless" +3
+            "Quarrelsome" -2
+        }
+        ABILITIES {
+            "Athletics" SCORE 8 SPECIALTY "endurance"
+            "Awareness" SCORE 6 SPECIALTY "at night"
+            "Brawl" SCORE 9 SPECIALTY "wrestling"
+            "Dominion Lore" SCORE 9 SPECIALTY "angels"
+            "Etiquette" SCORE 8 SPECIALTY "divine court"
+            "Israel Lore" SCORE 9 SPECIALTY "history"
+            "Theology" SCORE 9 SPECIALTY "election"
+        }
+        POWERS {
+            #t7ec22ddd999461590b8c37 ^"Blessing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "by effect"
+                }
+                DESCRIPTION "As per the Blessing holy power (Holy Powers, Powers and Effects), with the Divine Might cost determined by the Blessing level ÷ 10. Camuel has been known to aid pious faithful in great need."
+            }
+            #t912360fcff4c2c8f903463 ^"Comfort the Righteous" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Alleviates all doubt, worry, and fear of dire future events; this also dispels any negative mind-affecting supernatural effect or spell."
+            }
+            #t9c7987b55f4e133fcd9a36 ^"Unrelenting Struggle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points (1 point)"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "By invoking this power, Camuel is able to fight without break or respite for a single night (from sunset to sunrise), and does not lose Fatigue levels for any reason. By touching someone and spending 1 Divine Might point, Camuel may impart this power to that person."
+            }
+        }
+        DESCRIPTION "And Jacob was left alone; and there wrestled a man with him until the breaking of the day. And when he saw that he prevailed not against him, he touched the hollow of his thigh; and the hollow of Jacob’s thigh was out of joint, as he wrestled with him.\n\n*Genesis 32:24-25*\n\nCamuel (‘he who sees God’) is the mysterious figure who wrestled with the patriarch Jacob (detailed in Genesis 32:24-30), although some traditions say that it was Michael or Uriel who fought that night. Camuel is an important, if little-known angelic figure with a sad past. Although Camuel visited Jesus in the Garden of Gethsemane with Gabriel, he fell from his exalted position as an archangel when he attempted to prevent Moses from receiving the Torah. For this inexplicable decision, God allowed Moses the ability to strip away Cameul’s angelic glory and might, leaving him much reduced. He now serves as a mediator of the faithful, taking prayers before the other Princes of Heaven."
+    }
+
+    #t4ab601a5fd81ee02450f2f ^"Eiael, Aid to the Wise" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Angel"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (60)"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Reputations" LIST ["Guide to the Wise 1 (among Christian and Jewish Theologians) Combat: Fist: Init 0", "Attack 0", "Defense 0", "Damage 0"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Abilities" STRING "Ars Notoria 7 (appropriate use), Artes Liberales 7 (ceremonial magic), Civil and Canon Law 7 (magic), Concentration 7 (prayer), Dominion Lore 7 (angels), Etiquette 7 (magicians), Magic Lore 7 (human magicians), Medicine 7 (mental illness), Music 7 (harp), Penetration 3 (humans), Philosophiae 7 (ceremonial magic), Teach 7 (magicians), Theology 7 (angels)."
+            ^"Equipment" STRING "Whatever is needed to teach his student."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "1 pawn of Mentem in each eye, 2 pawns of Creo in lips."
+            ^"Appearance" STRING "Eiael appears as a venerable, yet awe-inspiring old man, with a luminescent white face, silvery beard, and fiery lips. He is dressed in impressive clothes from whatever region he appears in, and carries a satchel containing any number of mysterious books and instruments. If he needs to, Eiael can reduce his angelic glory and appear more mundane."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 29
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Wise" +4
+            "Patient" +3
+            "Rebellious" -3
+        }
+        POWERS {
+            #t851b3d46fd5c455bd3aa79 ^"Grant Longevity" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "By touching the target, Eiael may remove 5 Aging Points from any combination of Characteristics (this may lower the target’s Decrepitude score or raise his Characteristics)."
+            }
+            #t36f5699c34b8ac2e1c7685 ^"Guardian Angel" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Eiael can bestow the blessings of a Guardian Angel upon a target (see **Ars Magica** 5th Edition page 43): +5 Soak and Magic Resistance 15. By doing this, Eiael gains a limited awareness of the target’s thoughts."
+            }
+            #t0ceb5f07dd141354ca1767 ^"Holy Magic" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "by effect"
+                }
+                DESCRIPTION "Eiael can duplicate any effect of Hermetic or holy magic, at a cost of 1 Might Point for every two magnitudes of the effect. There is no limit, other than his remaining Might Pool, on the number of points he can spend on a single effect. This includes ritual effects, for which he needs neither vis nor long periods of time."
+            }
+            #tb7804766aa8aef7e878818 ^"Impart Wisdom" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Eiael uses this divine power to teach the practitioners of Ars Notoria, which generates a Teaching Source Quality of 13 (see Mythic Christianity, Ars Notoria; and **Ars Magica** 5th Edition Chapter 10 Long Term Events, Teaching)."
+            }
+            #t843e3bec6eee0f49edb460 ^"Revoke Gifts" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Eiael can revoke the effect of any Ring of Solomon (see Ars Notoria) should the target ever act in a manner contrary to the Divine Will. If this power is used on someone to whom Eiael is connected through the Fourth Ring of Solomon, then this power is always successful and ignores magic resistance."
+            }
+            #td5044cc06d9dd407414777 ^"Spirit Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "If threatened, Eiael can shed his flesh and become pure spirit, making him immune to all physical threats. In this form, Eiael can still communicate with the material world, although his voice is as soft as a whisper."
+            }
+        }
+        DESCRIPTION "They plot mischief while on their beds; they are set on a way that is not good; they do not reject evil.\n\n*Psalms 36:4*\n\nWhen the angels Harut and Marut revealed the magical arts to humanity, as revealed in the Qur’an (2:102), they were sent with the purpose to tempt the faithful so that the truly righteous would resist and be blessed. After the magical arts passed into human hands, Eiael was tasked with guarding the lovers of wisdom who pursued the magical arts. When Solomon received the Ars Notoria from Michael, Eiael traveled from heaven with the archangel.\n\nEiael is very knowledgeable in all human arts, be they magical or natural, philosophical or theological. He is often the angel who guides practitioners when they reach the Fourth Ring of Solomon (see Mythic Christianity, Ars Notoria), but he may also escort other holy ritualists in their pursuit of holy magic. To this end (and unlike other angels), Eiael is willing to allow himself to be summoned by magicians who are devout and recognize the potential for sin in their magical arts, and may respond to a special magical ritual involving the recitation of Psalm 36. He does not answer a sinful summons."
+    }
+
+    #t17125904f08844c51c6752 ^"Gabriel, the Archangel of Prophecy" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 100
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 10
+                ^"Perception" INTEGER 10
+                ^"Presence" INTEGER 10
+                ^"Communication" INTEGER 10
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 8
+                ^"Dexterity" INTEGER 8
+                ^"Quickness" INTEGER 8
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a"
+            ^"Confidence Score" STRING "7 (50)"
+            ^"Virtues and Flaws" STRING "Good Teacher, Inspirational"
+            ^"Reputations" LIST ["Messenger of God 5 (among Jews, Christians and Muslims) Combat: Fist: Init +8", "Attack +19", "Defense +19", "Damage +8"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Equipment" STRING "Robes"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "20 pawns of Mentem in head."
+            ^"Appearance" STRING "Gabriel usually takes the form of a compassionate, gentle man, sometimes with wings growing from his shoulders or arms."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 29
+        }
+        PERSONALITY_TRAITS {
+            "Compassionate" +3
+            "Intellectual" +3
+            "Just" +3
+            "Love of God" +5
+            "Patient" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 10 SPECIALTY "the uneducated"
+            "Charm" SCORE 10 SPECIALTY "pupils"
+            "Brawl" SCORE 10 SPECIALTY "fist"
+            "Leadership" SCORE 10 SPECIALTY "calling attention"
+            "Teaching" SCORE 15 SPECIALTY "Theology"
+            "all Knowledge at a score of" SCORE 15
+        }
+        POWERS {
+            #t6679e64fcddfa59329be56 ^"Enlighten" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Gabriel can implant any Knowledge into the mind of another, at a cost of 1 Might for every experience point implanted. He may not give any character knowledge that takes his Ability score over 15."
+            }
+            #t56c7423da237fdc6a947ba ^"Spirit Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Gabriel can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically."
+            }
+            #tb6f59cedaa63d12a2fc905 ^"Subtle Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Gabriel can change his appearance to look like any human being. His statistics do not change."
+            }
+        }
+        DESCRIPTION "Say (O Muhammad, to mankind): Who is an enemy to Jibril! For he it is who hath revealed (this Scripture) to thy heart by Allah’s leave, confirming that which was (revealed) before it, and a guidance and glad tidings to believers.\n\n*— Qur’an* 2:97\n\nMore approachable and intellectually minded than his fellows, the Archangel Gabriel (Jibril or Jabra’il in Islam) is the chief messenger of God, best known for his teaching of the prophet Daniel, his announcing of the incarnation of Christ to the Virgin Mary, and his bringing of the revelation of the *Qur’an* to Muhammad, for whom he also acted as a constant counsellor. He may be encountered by characters who are seeking wisdom, particularly if this wisdom is of a religious nature. He is most likely to be encountered in the form described here; in his natural form he is a 600-winged figure who is large enough to stand astride the horizon."
+    }
+
+    #t5d2876d4eed2107a41eacf ^"Kolazonta, the Chastiser" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Angel"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "2 (15)"
+            ^"Virtues and Flaws" STRING "Greater Immunity (Fire)"
+            ^"Reputations" LIST ["Scourge of the Impious 3 (among Jews) Combat: Flaming Fist: Init +1", "Attack +6", "Defense +6", "Damage +7 This fire is natural and ignores magic resistance", "although not Soak from Arts."]
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Equipment" STRING "None."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "4 pawns Corpus throughout body, 2 pawns Ignem in veins."
+            ^"Appearance" STRING "Kolazonta most often appears as a dark, ominous cloud, but may rarely manifest as a man made of white fire, with veins of flame and eyes of lightning."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 30
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Grim" +4
+            "Remorseless" +3
+        }
+        ABILITIES {
+            "Brawl" SCORE 4 SPECIALTY "fists"
+            "Dominion Lore" SCORE 6 SPECIALTY "angels"
+            "Theology" SCORE 6 SPECIALTY "sin"
+        }
+        POWERS {
+            #t7a917913f4c916942a2b67 ^"Chastise the Sinful" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As *Curse of the Unportended Plague*."
+            }
+            #t5a4702fc8f3dda558162b1 ^"Cloud form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Can take on the form of a cloud at will, making him immune to all physical attacks (although he may be targeted by Auram spells)."
+            }
+            #tf8458d9b974d5626373e90 ^"Fiery Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "May become a fiery man at will, doing +5 damage to anyone who approaches within 5 feet."
+            }
+        }
+        DESCRIPTION "…our father Aaron, armed with the censer, ran through the multitude of the people and conquered the fiery angel … *4 Maccabees 7:11*\n\nKolazonta is one of the angels tasked by the lord to chastise His faithful for their failings, and as such he is a servant of Uriel, the Angel of Punishment. Kolazonta was the angel who brought the plague upon the Israelites (in Numbers 16:46-50) for rebelling against Moses. Aaron defeated Kolazonta after Moses told him it was lifted. Kolazonta is a grim angel who executes the chastisement of the Lord without fear or favor. He is often present amid armies or cities under siege, waiting for the Lord’s command to inflict a plague upon the sinful."
+    }
+
+    #tb6491ac9b94d80f356e130 ^"St. Michael, Captain of the Lord’s Host" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Archangel (Seraphim)"
+            ^"Might" INTEGER 100
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 10
+                ^"Perception" INTEGER 10
+                ^"Presence" INTEGER 10
+                ^"Communication" INTEGER 10
+                ^"Strength" INTEGER 12
+                ^"Stamina" INTEGER 15
+                ^"Dexterity" INTEGER 10
+                ^"Quickness" INTEGER 10
+            }
+            ^"Size" INTEGER 1
+            ^"Age" STRING "n/a"
+            ^"Confidence Score" STRING "7 (50)"
+            ^"Virtues and Flaws" STRING "Entrancement, Greater Immunity (Fire); Animal Ken"
+            ^"Reputations" LIST ["Michael is one of the most well-known saintly and angelic figures of Mythic Europe; only the Blessed Virgin Mary and the Prophet Muhammad are more respected and honored. Combat: Fiery Great Sword: Init +12", "Attack +31", "Defense +31", "Damage +36 Great Spear: Init +13", "Attack +28", "Defense +29", "Damage +19 The fiery nature of Michael’s sword is unaffected by magical resistance. Note also that Michael can wield his Great Sword in only one hand. The damage of Michael’s Great Spear is doubled against any being aligned with the Infernal Realm."]
+            ^"Soak" INTEGER 25
+            ^"Fatigue Levels" STRING "OK, 0/0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "0 (1-6), –1 (7-12), –3 (13-18), –5 (19-24), Incapacitated (25-31)"
+            ^"Powers" STRING "Blessing, variable, +15, varies: As the holy power (Holy Powers, Powers and Effects), with the level of the effect determined by the number of Might Points spent multiplied by 20. Celestial Immunity, 3 points, +15, Corpus: As the saintly miracle (Mythic Christianity, Saints). Command Chaos, 1 point, +15, Mentem: The discordant forces of Chaos are at Michael’s command. He may bring about order (as per Enchantment of Detachment) or create chaos in the hearts of mortals (as per Panic of the Trembling Heart). Create rain, 0 points, +30, Aquam: Michael controls the rains, and can cause it to rain anywhere on earth at will. Heavenly Fire, 1 point, +15, Ignem: As Pilum of Fire, although it does +30 damage when it hits. Heavenly Lance, 1 point, +15, Auram: Michael may cause lightning to strike any point of the earth, even out of a clear sky, as Incantation of Lightning. Smite Evil, variable, +15, Vim: As per Demon’s Eternal Oblivion, with the level of the effect determined by the number of Might Points spent multiplied by 20. This also affects Faeries. The Pious Restored, 1 point, +10, Corpus: May heal any number of Wound levels, any form of disease, and any form of affliction."
+            ^"Equipment" STRING "Great fiery sword or spear, celestial armor, great shield, weighing scales."
+            ^"Encumbrance" STRING "0 (4)"
+            ^"Vis" STRING "10 pawns of Perdo in sword (or spear), 10 pawns of Intellego in scales, 20 pawns of Rego in brow."
+            ^"Appearance" STRING "Michael nearly universally appears as an enormous armored warrior, with shining helm, spear or sword like lightning, and a great shield. To the pious and sinners alike, he is a terrifying figure. He may also appear as a judge of souls, and carries a set of scales with which to judge departed souls."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 30
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Righteous" +5
+            "Dutiful" +4
+            "Warlike" +3
+            "Watchful" +3
+            "Compassionate" -1
+        }
+        ABILITIES {
+            "Animal Ken" SCORE 10 SPECIALTY "lions"
+            "Ars Notoria" SCORE 15 SPECIALTY "wisdom"
+            "Awareness" SCORE 12 SPECIALTY "war"
+            "Church Lore" SCORE 10 SPECIALTY "saints"
+            "Concentration" SCORE 10 SPECIALTY "in combat"
+            "Dominion Lore" SCORE 20 SPECIALTY "angels"
+            "Entrancement" SCORE 10 SPECIALTY "sinners"
+            "Great Weapon" SCORE 15 SPECIALTY "Long Spear"
+            "Infernal Lore" SCORE 15 SPECIALTY "Hell"
+            "Leadership" SCORE 14 SPECIALTY "war"
+            "Magic Lore" SCORE 10 SPECIALTY "magic in combat"
+            "Penetration" SCORE 10 SPECIALTY "Infernal beings"
+            "Philosophiae" SCORE 15 SPECIALTY "moral"
+            "Single Weapon" SCORE 20 SPECIALTY "Great Sword"
+            "Teach" SCORE 10 SPECIALTY "combat"
+            "Theology" SCORE 15 SPECIALTY "angelic duties"
+            "Thrown Weapon" SCORE 12 SPECIALTY "Long Spear"
+        }
+        DESCRIPTION "But I am to tell you what is inscribed in the book of truth. There is no one with me who contends against these princes except Michael, your Prince.\n\n*Daniel 10:21*\n\nMichael (Mika’il in the Qur’an) is the greatest and most beloved of all archangels, except possibly Gabriel and the Metatron, and was the first angel to obey God’s command to worship Adam. He is one of the few angels specifically named in the holy scriptures, in Daniel (10:13 and 12:1) where he is one of the “chief princes” and guardian of Israel, who (according to St. John’s Revelation 12:7) at Armageddon would lead the angelic charge against the Anti-Christ and the forces of Hell. The epistle of St. Jude also mentions St. Michael’s struggle with the devil over the body of Moses, in which he prevented Satan from violating the patriarch’s tomb. Legend has it that it was at this point that St. Michael threw the rebellious Lucifer into Hell, taking his place as chief of the princes of Heaven, making Michael the most powerful being in creation. Church tradition also states that St. Michael is the angel that “keeps the way of the tree of life” (Genesis 3:24) by standing guard at the gates of paradise, and that he was the angel who appeared to Balaam (Numbers 22:22-35). In Christian convention, he is venerated as a saint who may intercede with God on behalf of the devout faithful, and in Islamic tradition he sits on the right hand of God, opposite Gabriel.\n\nFollowing this, St. Michael’s duties are to lead the battle against the Devil, to appear to the faithful at the hour of their death and offer them salvation, then lead them to judgment, and to protect and guard the chosen of God (which would be people from all three faiths of “the Book”). Although he is warlike, St. Michael is also the patron of the sick and is known as a great healer; he also guards mariners and many mountain tops.\n\nSt. Michael is an active angel, and has appeared many times to perform wondrous miracles. He is particularly known for his many healing springs and waters in Greece and the Levant, and for being the protector of the River Nile. St. Michael can be found across Mythic Europe at his many mountain sanctuaries, watching over the knightly orders that have arisen in his name; at the Watchtowers of the World, ever vigilant for attacks against the City of God; and also standing guard at the Gates of Hell. St. Michael was also the angel who taught the Ars Notoria to Solomon."
+    }
+
+    #t0ad4d9e4ee6952f2ba9edf ^"Midael, Captain of the Celestial Army" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Potentate"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (35)"
+            ^"Confidence Score" STRING "3 (12)"
+            ^"Reputations" LIST ["None Combat: Holy spear: Init +5", "Attack +12", "Defense +12", "Damage +10 Does an additional +10 damage against Infernal opponents."]
+            ^"Soak" INTEGER 13
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Equipment" STRING "Chain mail armor, spear and shield."
+            ^"Encumbrance" STRING "0 (3)"
+            ^"Vis" STRING "2 pawns of Perdo in spear, 2 pawns of Mentem in eyes."
+            ^"Appearance" STRING "Midael appears on earth in the guise of a knight or warrior. His angelic nature is clear from his luminous white skin and his shining eyes."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 31
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Relentless" +4
+            "Cunning" +2
+        }
+        ABILITIES {
+            "Athletics" SCORE 6 SPECIALTY "running"
+            "Awareness" SCORE 6 SPECIALTY "battle"
+            "Dominion Lore" SCORE 6 SPECIALTY "angels"
+            "Etiquette" SCORE 6 SPECIALTY "Celestial Court"
+            "Hunt" SCORE 6 SPECIALTY "sinners"
+            "Infernal Lore" SCORE 4 SPECIALTY "devils"
+            "Leadership" SCORE 7 SPECIALTY "angels"
+            "Single Weapon" SCORE 6 SPECIALTY "spear"
+            "Theology" SCORE 6 SPECIALTY "holy war"
+        }
+        POWERS {
+            #t796163c17287b667a285ae ^"Confound the Wicked" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "As *Confusion of the Numbed Will*."
+            }
+            #t577ff6073711b29bab6581 ^"Radiance of the Divine Host" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+15"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Causes sinful or evil foes to become awestruck and fearful."
+            }
+            #te7bf47968e313d53a3f29d ^"Refuge of the Worthy" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+15"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As per the saintly miracle, *Celestial Immunity* (Mythic Christianity, Saints)."
+            }
+            #tb92eb855180d956bb0e22d ^"Tireless Pursuit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Midael can unerringly follow a fleeing foe without losing Fatigue levels for as long as he desires."
+            }
+        }
+        DESCRIPTION "Let them be turned back and confounded who devise evil against me. Let them be like chaff before the wind, with the angel of the Lord driving them on. Let their way be dark and slippery, with the angel of the Lord pursuing them.\n\n*Psalm 35:5-6*\n\nMidael is one of the captains of the celestial host, lead by Michael. He is the angel invoked by David in Psalms 34 and 35, and is the defender of those persecuted by evil men, often appearing as a knight or great warrior to protect the innocent or righteous from dishonorable foes or wicked assailants. He has great martial prowess, but his is also a canny warrior and has defeated many opponents with greater skill or power than he by wit and cleverness."
+    }
+
+    #t482fd0f4f6c85158702b20 ^"Munkar and Nakir, the Questioners" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Thrones"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER 4
+                ^"Communication" INTEGER 4
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (33)"
+            ^"Confidence Score" STRING "3 (20)"
+            ^"Virtues and Flaws" STRING "Piercing Gaze"
+            ^"Reputations" LIST ["Angels of the Grave 3", "among Muslims Combat: Fist: Init +16", "Attack +16", "Defense +16", "Damage +16"]
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Equipment" STRING "Green robes"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "10 pawns of Corpus each in fists."
+            ^"Appearance" STRING "Two identical men in green robes."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 32
+        }
+        PERSONALITY_TRAITS {
+            "Just" +3
+            "Love of God" +5
+        }
+        ABILITIES {
+            "Dominion Lore" SCORE 7 SPECIALTY "angels"
+            "Brawl" SCORE 7 SPECIALTY "fist"
+            "Guile" SCORE 12 SPECIALTY "spot Lies"
+            "Theology" SCORE 10 SPECIALTY "angelology"
+        }
+        POWERS {
+            #tf48e6a791a0048eefe49b5 ^"Question" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Munkar and Nakir can ask a character question, which the character will immediately answer as truthfully as possible. This power physically forces the character to answer, making it a power based on Corpus with a Mentem requisite."
+            }
+            #t7164c4db1d70c2b15830c5 ^"Spirit Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Munkar and Nakir can become creatures of pure spirit as they wish. This means that they are unable to affect things physically, or be affected physically."
+            }
+            #t102c2fd06e0452deae6d48 ^"Subtle Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Munkar and Nakir can change their appearances to look like any human being they wish, though they always take the same form. Their statistics do not change."
+            }
+        }
+        DESCRIPTION "*Note: Munkar and Nakir have the same statistics.\n\nCharged with the souls of the Muslim dead, Munkar and Nakir are angels who examine and if necessary punish their charges in their graves. They ask the dead their opinions regarding Muhammad. The faithful will answer that he is the Messenger of God, upon which they will leave them alone to await the Day of Judgment. However, unbelievers and sinners will be unable to answer, upon which the angels will punish them by beating them for as long as God wills, in some cases until the Day of Judgment."
+    }
+
+    #t8e8bb60f68ed7a3d59b835 ^"Nasir, the Helper" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Angel"
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (33)"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Virtues and Flaws" STRING "Ways of the (Local Environment); Animal Ken, Wilderness Sense"
+            ^"Reputations" LIST ["None Combat: Fist: Init +2", "Attack +8", "Defense +8", "Damage +0"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Equipment" STRING "Travelling clothes"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "4 pawns of Terram in feet."
+            ^"Appearance" STRING "An unassuming man dressed in well-worn travelling clothes."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 33
+        }
+        PERSONALITY_TRAITS {
+            "Compassionate" +3
+            "Just" +3
+            "Love of God" +5
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 8 SPECIALTY "horses"
+            "Animal Ken" SCORE 8 SPECIALTY "horses"
+            "Athletics" SCORE 8 SPECIALTY "climbing"
+            "Awareness" SCORE 8 SPECIALTY "natural hazards"
+            "Brawl" SCORE 5 SPECIALTY "fist"
+            "Chirurgy" SCORE 8 SPECIALTY "bind wound"
+            "Dominion Lore" SCORE 8 SPECIALTY "angels"
+            "Swim" SCORE 8 SPECIALTY "rough water"
+            "Theology" SCORE 8 SPECIALTY "angelology"
+            "Wilderness Sense" SCORE 8 SPECIALTY "local environment"
+        }
+        POWERS {
+            #t879d5cff0b8eb48e1917d1 ^"Calming Touch" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Animal/Mentem"
+                }
+                DESCRIPTION "By touching the target, Nasir can calm his fears, making him feel reassured in the face of dangerous terrain."
+            }
+            #t12aa7b728f94e924110111 ^"Spirit Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Nasir can become a creature of pure spirit as he wishes. This means that he is unable to affect things physically, or be affected physically."
+            }
+            #t9b49f1372a66a05f6579c5 ^"Steadying Hand" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+30"
+                    ^"Form" STRING "Animal/Corpus"
+                }
+                DESCRIPTION "By touching the target, Nasir can assure that his footsteps are firm and that he can cross the most impassable of terrain. The target will not slip or fall as long as contact is maintained."
+            }
+            #t5030d3a5087f4b598524d6 ^"Subtle Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Nasir can change his appearance to look like any human being. His statistics do not change."
+            }
+        }
+        DESCRIPTION "As I was unable to walk, I climbed the mountain on horseback, while its slopes were all covered with pieces of stone and pebbles which slipped backwards under the feet of the horse every time its hoofs struck them ... It slipped backward, with the pebbles and chips of stone sliding under it, and fell. So I dismounted, assisted the horse to its feet and stopped, unable to move. At that moment a man came down to me from the mountain and held me by the hand, my other hand holding the pack horse, until he got me to the summit. No, by Allah, I did not know who the man was and never saw him again. ... He was none other than an angel whom Allah, moved by compassion toward me, sent to my aid.\n\nUsama ibn Munqidh (d. 1188), *The Book of Learning by Example*\n\nNasir is a minor angel charged with the safety of pious travellers. He spends most of his time helping those in need, seeming to appear by mundane means from just out of sight, providing what aid he can, and then leaving again before he can be questioned too closely about his origins."
+    }
+
+    #t127177fbeaa2dca0c5f197 ^"Samuil, Angelic Guide" DEF {
+        EXTENDS #ta3872b60ee4dd02a88e718 ^"Angel"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Cherubim"
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 1
+            ^"Age" STRING "n/a (Indeterminate)"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Reputations" LIST ["None. Combat: Fist: Init +0", "Attack +7", "Defense +7", "Damage +1"]
+            ^"Soak" STRING "+12 (from holy raiment, otherwise +0)"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-6), –3 (7-11), –3 (12-16), Incapacitated (17-21)"
+            ^"Equipment" STRING "Holy garments."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "5 pawns of Corpus in arms."
+            ^"Appearance" STRING "Samuil appears as a large, resplendent man whose face shines like the sun and whose eyes glow with holy light. His arms appear like golden wings. He wears a golden girdle, and his pure-white clothes are covered in the holy names of God."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 33
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Righteous" +4
+            "Poised" +2
+        }
+        ABILITIES {
+            "Awareness" SCORE 5 SPECIALTY "travel"
+            "Brawl" SCORE 4 SPECIALTY "fists"
+            "Dominion Lore" SCORE 9 SPECIALTY "the Seven Heavens"
+            "Etiquette" SCORE 5 SPECIALTY "Divine regiones"
+            "Theology (Books of Enoch)" SCORE 8
+        }
+        POWERS {
+            #t086d71ff693dd1ad342043 ^"Infallible Guide" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Samuil can enter and traverse through any regio as though he were a native inhabitant."
+            }
+            #t6615aafac88a3798fdc902 ^"Grant Vision" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Can duplicate any Understanding effect (see Blessed By God, Miraculous Effects)."
+            }
+            #tb595b89c5f2eb8a0089226 ^"Transport the Devout" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Can take a chosen person to any destination of his choice, and even beyond the Lunar Sphere."
+            }
+        }
+        DESCRIPTION "I was in great trouble, weeping asleep on my couch, and there appeared to me two very big men, such as I have never seen on earth — their faces shone like the sun, their eyes were burning candles, out of their mouths came fire, their clothes and singing were various, and their arms like golden wings. They stood at the head of my couch, and called me by name.\n\n*2 Enoch, 1:5-7*\n\nSamuil, along with Raguel, transported the patriarch Enoch through the Seven Heavens to come before God. He is responsible for keeping the celestial road clear for souls to travel through, and also for ensuring that the faithful know the word and sovereignty of the Lord. He was tasked by God to help Enoch record the journey through the Seven Heavens, and served Enoch while the patriarch still resided on earth. Since Enoch ascended to Heaven and became Metatron, Samuil has been responsible for delivering visions to saints and prophets. He may also have been one of the angels of righteousness to take St. Paul to the Heavens."
+    }
+
+    #tf5841e77732a06b72f7f50 ^"Abbas the Hunted" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 4
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 1
+            ^"Age" STRING "80 (20)"
+            ^"Decrepitude" STRING "0"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Mythic Companion: Nephilim (free); Entrancement, Greater Immunity: Disease, Blood of the Nephilim; Enduring Constitution, Great Stamina, Great Strength, Improved Characteristics (x2), Keen Vision, Lesser Purifying Touch, Long-Winded, Rapid Convalescence, Sense Holiness and Unholiness, Strong Angelic Heritage (free), Student of the Divine; Compassionate, Enemies; Fear of fire, Generous, Lesser Malediction, Vow"
+            ^"Reputations" LIST ["None Combat: Fist: Init –1", "Attack +3", "Defense +2", "Damage +4 Spear (Short): Init +1", "Attack +5", "Defense +2", "Damage +9"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –2, –4, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-6), –3 (7-12), –5 (13-18), Incapacitated (19-24)"
+            ^"Equipment" STRING "Clothes, jewelry, bronze spear."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "1 pawn Corpus in heart."
+            ^"Appearance" STRING "Abbas is a giant (some eight feet tall) with eyes like sapphires. He wears archaic clothes (the style is several hundred years old) encrusted with emeralds and silver, and inscribed with holy words and symbols. He has an oiled beard and jet-black hair that is intricately braided and interwoven with strands of precious metal."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 16
+        }
+        PERSONALITY_TRAITS {
+            "Greedy" +3
+            "Devout" +2
+            "Callous" -2
+        }
+        ABILITIES {
+            "(Area) Lore" SCORE 5 SPECIALTY "regiones"
+            "Athletics" SCORE 4 SPECIALTY "running"
+            "Awareness" SCORE 5 SPECIALTY "wilderness"
+            "Brawl" SCORE 2 SPECIALTY "fist"
+            "Carouse" SCORE 4 SPECIALTY "staying sober"
+            "Charm" SCORE 4 SPECIALTY "friendly conversation"
+            "Concentration" SCORE 4 SPECIALTY "while performing music"
+            "Dominion Lore" SCORE 7 SPECIALTY "divine beings"
+            "Entrancement" SCORE 6 SPECIALTY "bringing peace"
+            "Etiquette" SCORE 5 SPECIALTY "angels"
+            "Folk Ken" SCORE 5 SPECIALTY "divine beings"
+            "Hebrew" SCORE 4 SPECIALTY "archaic"
+            "Leadership" SCORE 4 SPECIALTY "outside combat"
+            "Magic Lore" SCORE 2 SPECIALTY "spirits"
+            "Music" SCORE 6 SPECIALTY "singing"
+            "Penetration" SCORE 5 SPECIALTY "demons) Sense Holiness and Unholiness 7 (demons"
+            "Single Weapon" SCORE 2 SPECIALTY "spears"
+            "Survival" SCORE 5 SPECIALTY "deserts"
+            "Teaching" SCORE 4 SPECIALTY "Music"
+        }
+        POWERS {
+            #t8a36992bb33064786ac9b5 ^"Admonish the Ferocious Animal" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "As *Circle of Beast Warding*."
+            }
+            #t315492bca81dca2eabdcf0 ^"Curse the Sinful Foe" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As *Spasms of the Uncontrolled Hand*."
+            }
+            #t49d0fb99448660710ee031 ^"Halo" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "As *Lamp Without Flame*, which manifests as a halo around Abbas’ head."
+            }
+            #t84d94c58c142015d07f40d ^"The Lord’s Terrifying Herald" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "As *Jupiter’s Resounding Blow*."
+            }
+        }
+        DESCRIPTION "Praise the Lord … you Mighty Ones who do His bidding, who obey His word.\n\n*Psalm 103:20*\n\nAbbas, one of the Nephilim, is the only survivor of an infernal attack on his home, a terrestrial regio near to the player characters’ covenant. He fled the regio to seek help, but was pursued by a fiery hell-hound that left him badly burned (and afraid of fire). Abbas is a kind-hearted soul with a love for music and keen ability to assess a person’s character. He currently has the enmity of a powerful devil who orchestrated the assault. Abbas is seeking help to avenge his murdered family, a solemn promise he made to God, and may see the characters’ covenant as a possible ally."
+    }
+
+    #t15d4ba7e2e10c8e560c252 ^"Chalkydri" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 5
+            ^"Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Greater Immunity (Fire and Heat)"
+            ^"Reputations" LIST ["None Combat: Bite: Init +1", "Attack +14", "Defense +11", "Damage +12 Claws: Init +2", "Attack +16", "Defense +14", "Damage +13 Wings: Init +4", "Attack +8", "Defense +5", "Damage +8"]
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, 0, 0, –1, –1, –3, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-10), –3 (11-20), –5 (21-30), Incapacitated (30-40)"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "1 pawn of Animal in head, one pawn (total) of Ignem and Auram in wings."
+            ^"Appearance" STRING "Chalkydri appear as a lion with a crocodile’s head. They glow with shimmering purple light and have six sets of enormous golden wings, which appear to be made of gleaming fire and water."
+            ^"Source" STRING "Realms of Power: The Divine"
+            ^"Page" INTEGER 17
+        }
+        PERSONALITY_TRAITS {
+            "Compassionate" +2
+        }
+        ABILITIES {
+            "Athletics" SCORE 7 SPECIALTY "flight"
+            "Awareness" SCORE 5 SPECIALTY "sight"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+            "Dominion Lore" SCORE 3 SPECIALTY "divine creatures"
+            "Hunt" SCORE 5 SPECIALTY "sunlight"
+        }
+        POWERS {
+            #td7421a8a345ed633bde112 ^"Blinding Reflection" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "When threatened, chalkydri can angle a set of their wings to deflect the burning rays of the sun against their foe, which blinds the target as *Flash of the Scarlet Flames*, and does damage as *Arc of Fiery Ribbons*."
+            }
+            #ta9511875422115ea3cea09 ^"Radiant Invisibility" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 point"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "With this power, chalkydri can turn invisible and walk in even the busiest place without being seen or sensed by humans. Some animals and those with the appropriate Virtues (such as Sense Holiness and Unholiness) may still sense them."
+            }
+        }
+        DESCRIPTION "And I looked and saw other flying elements of the sun, whose name is Chalkydri, marvelous and wonderful, with feet and tails in the form of a lion, and a crocodile’s head, their appearance is empurpled, like the rainbow; their size is nine hundred measures, their wings are like those of angels, each has twelve, and they attend and accompany the sun, bearing heat and dew, as it is ordered them from God.\n\n*2 Enoch 12:1*\n\nChalkydri are fantastic creatures that regulate the heat from the sun, lit by Raphael’s brilliance. They carry down soothing dew and catch its rays in their wings. Chalkydri are found in both terrestrial and celestial regiones, and high above mortal settlements and cities, protecting them from the burning light of the sun, or at sunrise near to the earth, when they dispense the dew."
+    }
+
+}

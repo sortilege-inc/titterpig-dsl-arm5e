@@ -13,11 +13,27 @@ the unmodified copy PASSES.
 - **Digits found one more gap:** Grogs p48 "Weight of Common Materials" prints a second grid (Size → Weight, 9 rows).
   It was absent; it is now `^"Weight of Common Materials: Size"` (systems.ttrpg 0.5.3). Letters-only could not see it:
   every row is numbers, and every stat line reads alike without them.
-- **OPEN — owner call: the corebook is held out of the gate.** 39 of its 137 sidebars fail, 29 with whole sentences.
-  The core was built by the Stage-B LLM pipeline, so its sidebars are paraphrased ("Pick three words … assign a number
-  between +3 and –3" → "Choose three words … attach a value between –3 and +3"), or absent ("A Virtue or Flaw may be
-  taken more than once only if the description explicitly allows it" is nowhere). The fix is a verbatim sidebar pass
-  over the core, like the sourcebooks' 2026-07-27 backfill. Once that is done, drop the corebook exclusion in `gates.sh`.
+- **Corebook sidebar pass — DONE 2026-10-04 (owner-approved), and the corebook is now in the gate.**
+  `Temp/arm5e-sourcebook-conversions/scripts/corebook_sidebars_complete.py` wrote 24 verbatim changes into 9 core
+  files (VERSION bumped):
+  - 5 boxes that had no entity: V&F Rules and Guidelines, Personality and Story Flaws, Sample Major Magical Foci,
+    Sample Minor Magical Foci (GUIDANCE), and Study Bonus Examples (TABLE DEF);
+  - the printed notes of 11 tables as their DESCRIPTION (Ease Factors, Advancement, Damage, Armor, Melee, Missile,
+    Impact, Sympathetic Connections, Creo Animal Guidelines, Hermetic Houses Summary, Resources);
+  - the six Covenant Situations' prose, with Powerful Location's printed note;
+  - the Detailed Character Creation Summary's TEXT, which had been cut off.
+
+  Where the HTML lost what the page prints, the text comes from `pdftotext -layout` regions and must equal the HTML's
+  letters and digits. That covered the footnote markers `*`/`**`/`***`/`****`, eight lines of Sample Major Magical
+  Foci that the HTML extractor dropped, and the three-column summary. The other 15 failing boxes were present but
+  split (spell guidelines one sentence per entry, wrapped table headers, house rows across grid columns); they are
+  allow-listed with reasons.
+
+  The gate now judges each book against its OWN corpus. The corebook's corpusDir is the arm5e/0.5 root, which nests
+  every sourcebook, and Covenants reprints three core sidebars, so the core had passed on text it did not hold.
+- **Same blind spot in the coverage gate (not changed — owner call):** `arm5e-corebook.manifest.json` has the same
+  nested corpusDir, so `coverageAudit.ts` can credit a core unit by a sourcebook's entity. A `corpusExclude` listing the
+  11 sourcebook dirs would close it; measure what then fails before deciding.
 
 ## 2026-10-04 — sidebar TEXT completed across the sourcebooks (pushed 363c509)
 

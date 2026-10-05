@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Virtues" {
     NAME "Ars Magica Fifth Edition - Virtues"
-    VERSION "0.5.1"
+    VERSION "0.5.2"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-07-24"
     DEPENDS_ON "ArM5_Core_Virtue_Flaw"
@@ -863,6 +863,11 @@ EXTENSION "ArM5_Virtues" {
                 "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
             }
         }
+        GUIDANCE {
+            ENTRY ^"Sample Major Magical Foci" #t5658699f68c3911f9ae530 {
+                TEXT "This list is merely exemplary. Other foci are possible.\nAnimal: Birds, or mammals, or domesticated animals.\nAquam: Salt water or fresh water.\nAuram: Weather.\nCorpus: Men or women.\nHerbam: Trees or food plants.\nImaginem: Visual images, auditory images, tactile images, or taste and smell together.\nMentem: Emotions or memories.\nTerram: Metals or stone.\nNecromancy: Corpus and Mentem as applied to the bodies and spirits of dead people.\nDamage: Any Art, as long as the effect does damage directly, either by inflicting a wound or doing a certain amount of damage which can be soaked.\nDisguise: Changing the appearance of something, by any means."
+            }
+        }
 
         #t2AfdWJJsaw9zgNInKxsNUTY ^"Mastered Spells" DEF {
             EXTENDS #tdtcsFn2Qhvmm6rPadswict8 ^"Virtue"
@@ -955,6 +960,11 @@ EXTENSION "ArM5_Virtues" {
                 "Technique and Form" -> #t4jDROhvCqVnz12uX1FX2TPE ^"Technique and Form"
                 "Lab Total" -> #tKcGQn1q5pvkLlEeay0hXXsV ^"Lab Total"
                 "Major Magical Focus" -> #tqTsiw1PEeUWHmHU2A38UHX5 ^"Major Magical Focus"
+            }
+        }
+        GUIDANCE {
+            ENTRY ^"Sample Minor Magical Foci" #t8421de97562a342196dcad {
+                TEXT "This list is merely exemplary; other foci are possible.\nAnimal: Birds of prey, canines, mustelidae.\nAquam: Stagnant water, small streams.\nAuram: Wind, rain, lightning.\nCorpus: Aging, disease.\nHerbam: Fruiting, wood.\nImaginem: A particular color or sound.\nMentem: Anger, lust, erasing memories, changing memories.\nTerram: Creating metals, destroying stone.\nHealing: Applies to people, animals, and plants.\nSelf-Transformation: Applies to both Corpus and Mentem."
             }
         }
 
@@ -1315,6 +1325,23 @@ EXTENSION "ArM5_Virtues" {
                 ^"Source" STRING "Core Rules"
             }
             DESCRIPTION "When given the opportunity to study an Art from books or raw vis in the presence of the Form or Technique, your surroundings give you new insights into your studies. Add two to die rolls to study from vis, or two to the Quality of any text you study from. Your current Art score determines the magnitude of the surroundings you require to get the bonus. See the table for some guidelines."
+        }
+        #tf5e69cef0a2dc40c439ac5 ^"Study Bonus Examples" DEF {
+            APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+            PROPERTIES {
+                ^"Table Columns" LIST ["Art Score", "Minimum Presence of Art"]
+                ^"Source" STRING "Core Rules"
+            }
+            TABLE {
+                "0" "A candle flame (Ignem), a magic aura (Vim), a dying insect (Perdo)"
+                "5" "A pond (Aquam), a painting (Imaginem), a caterpillar and butterfly (Muto)"
+                "10" "A breezy place in the open air (Auram), a live animal at least the size of a cat (Animal), half a dozen plants at different stages of growth (Creo)"
+                "15" "An area of bare natural rock, such as a mountainside (Terram), a human corpse to dissect (Corpus), at least one book on each of a dozen mundane subjects (Intellego)"
+                "20" "In a forest (Herbam), at a gathering of scholars (Mentem), at a law court (Rego)"
+                "25" "In a boat on a large body of water (Aquam), in a strong (6+) magic aura (Vim), in a hospital full of people dying of pestilence (Perdo)"
+                "30" "In the middle of a large fire (Ignem), in a building covered with elaborate figured decoration in many media, where music is constantly played (Imaginem), in the presence of a magical shapeshifter whose transformations you can control (Muto)."
+                "35" "Flying in the middle of a hurricane (Auram), while dissecting several magical animals (Animal), while surrounded by scrying devices showing every detail of the country for miles around (Intellego)"
+            }
         }
 
         #tVRd5Zy9Eq512L4zuTxyz09T ^"Subtle Magic" DEF {

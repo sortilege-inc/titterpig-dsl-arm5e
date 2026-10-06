@@ -1,0 +1,47 @@
+EXTENSION "ArM5_Transforming_Mythic_Europe_FourthEstate_Rules" {
+    NAME "Ars Magica Fifth Edition, Transforming Mythic Europe - Chapter Two: The Fourth Estate rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Transforming_Mythic_Europe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #taafe9e30600a43c3288bb2 ^"Circulation Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING " 15 (Tribunal), 18 (House), 24 (the Order)"
+            ^"Rules Section" STRING "Circulating the Text"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 29
+        }
+        FORMULAS {
+            "Circulation Total" "Magus’ Reputation + Summa Level (or 5 in the case of tractatus) + Simple Die"
+        }
+    }
+
+    #t998a52e766e775d0a76b65 ^"Argument Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Argument Total"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 31
+        }
+        FORMULAS {
+            "Argument Total" "Text Quality – Prevailing Wisdom Level"
+        }
+    }
+
+    #td8df75e64fb1b60fb7cd02 ^"Charter Strength" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Optional Rule: Charter Strength"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 36
+        }
+        FORMULAS {
+            "Charter Strength" "Intelligence + Civil and Canon Law + Stress Die"
+        }
+    }
+
+}

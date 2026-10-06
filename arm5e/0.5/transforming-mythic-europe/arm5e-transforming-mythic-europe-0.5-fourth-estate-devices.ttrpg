@@ -1,0 +1,48 @@
+EXTENSION "ArM5_Transforming_Mythic_Europe_FourthEstate_Devices" {
+    NAME "Ars Magica Fifth Edition, Transforming Mythic Europe - Chapter Two: The Fourth Estate devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Transforming_Mythic_Europe_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t3330747d787e96b85a9d3e ^"The Unerring Slingshot" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 58
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Special"
+            ^"Effect Design" STRING "(Base 30, +1 Touch, +3 Special Target, +1 Size; +3 triggered by Sight of the Wolf)"
+            ^"Printed Effect Line" STRING "PeAn 58 Pen: 1/day, +0 R: Touch, D: Momentary, T: Special"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 42
+        }
+        DESCRIPTION "Triggered by the Sight of the Wolf effect, and thereby triggered when a wolf enters the enclosure, this effect instantly strikes dead all wolves within the enclosure. Only targets identified by the Sight of the Wolf are affected.\n\nThe Target is based on Room +1, as described in **ArM5**, page 114."
+    }
+
+    #t2dab082080f9bb8bd760ef ^"Wolves in Sheeps’ Clothing" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 48
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Special"
+            ^"Effect Design" STRING "(Base 15, +1 Touch, +1 Diameter, +3 Special Target, +1 Size; +3 triggered by Sight of the Wolf)"
+            ^"Printed Effect Line" STRING "MuAn 48 Pen: 1/day, +0 R: Touch, D: Diameter, T: Special"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 42
+        }
+        DESCRIPTION "As an alternative to simply striking the wolf dead, this effect, also triggered by Sight of the Wolf, changes the sheep within the enclosure such that they each gain the fangs, claws, and ferocity of a wolf.\n\nThe target is based on Room +1, as described in **ArM5**, page 114."
+    }
+
+}

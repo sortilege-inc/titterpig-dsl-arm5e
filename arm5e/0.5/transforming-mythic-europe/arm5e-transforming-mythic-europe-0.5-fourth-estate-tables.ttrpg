@@ -1,0 +1,77 @@
+EXTENSION "ArM5_Transforming_Mythic_Europe_FourthEstate_Tables" {
+    NAME "Ars Magica Fifth Edition, Transforming Mythic Europe - Chapter Two: The Fourth Estate tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Transforming_Mythic_Europe_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t58e0d64c13742b571d18c2 ^"Prevailing Wisdom Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Reach", "Level"]
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 29
+        }
+        TABLE {
+            "Concerning a Magus" "The higher of 3 or the magus’ reputation"
+            "Concerning a Covenant" "6"
+            "Concerning a Tribunal" "9"
+            "Concerning a House" "12"
+            "Concerning the Order" "15"
+        }
+    }
+
+    #t7fbbc847ff927893fa7c87 ^"Prevailing Wisdom Examples" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Topic", "Ease Factor", "Reason"]
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 29
+        }
+        TABLE {
+            "Existence of a secret mystery cult" "6" "Larger than a single magus, but smaller than a Tribunal"
+            "Origin of Magic Theory" "6" "Largely concerning Bonisagus, but involving more than one magus"
+            "Provisions of the Peripheral Code" "9" "As this is restricted to a Tribunal"
+            "Existence of the Order of Odin" "12" "Treated as another House"
+            "Existence of the Order of Suleiman" "12" "Treated as another House"
+            "The Corruption" "12" "Principally concerning House Tytalus"
+            "Provisions of the Oath" "15" "As this concerns the oath taken by every member of the Order"
+            "Schism War" "15" "Central to the Order’s history"
+        }
+    }
+
+    #tc28bdaaa6217157124a03c ^"Warping While Under Constant Magical Effects: First Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Year", "Points Gained", "Warping Score", "Notes"]
+            ^"Table Name Source" STRING "editorial: the book titles neither of the box’s two tables (its text calls them the first and the second table); named for the box"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 39
+        }
+        TABLE {
+            "3" "6" "1" "Gain a Minor Flaw"
+            "15" "30" "3" "Gain a Minor Flaw"
+            "38" "76" "5" "Gain a Minor Virtue"
+            "53" "106" "6" "Gain a Major Flaw"
+            "70" "140" "7" "Gain a Major Flaw"
+        }
+        DESCRIPTION "The following tables show the impact on targets subject to enchantments that have been designed to improve the living conditions modifier by +1. They assume that the effect’s targets have no prior Warping Points. The first table assumes two level 20 enchantments."
+    }
+
+    #t930adf8a6f581e346298d6 ^"Warping While Under Constant Magical Effects: Second Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Year", "Points Gained", "Warping Score", "Notes"]
+            ^"Table Name Source" STRING "editorial: the book titles neither of the box’s two tables (its text calls them the first and the second table); named for the box"
+            ^"Source" STRING "Transforming Mythic Europe"
+            ^"Page" INTEGER 39
+        }
+        TABLE {
+            "1" "5" "1" "Gain a Minor Flaw"
+            "6" "30" "3" "Gain a Minor Flaw"
+            "15" "75" "5" "Gain a Minor Virtue"
+            "21" "105" "6" "Gain a Major Flaw"
+            "28" "140" "7" "Gain a Major Flaw"
+        }
+        DESCRIPTION "The second table assumes a single level 40 enchantment producing five warping points per year."
+    }
+
+}

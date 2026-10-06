@@ -1,0 +1,32 @@
+EXTENSION "ARMDef_The_Contested_Isle_MagicalLandscape_Parameters" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - Chapter Ten: The Magical Landscape parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Contested_Isle_Core_Ext"
+
+    # The chapter's parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t754343266ff4eb57798cab ^"Performance (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Duration: Performance"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "The spell lasts as long as the caster performs the Ability to which it is connected; this is usually Profession: Storyteller or Music. This Duration is equivalent to Concentration Duration. To cast a Performance Duration spell, the caster must succeed in a roll (simple or stress, depending on the situation) of Communication + Ability with an Ease Factor of 3. If this roll fails, the spell fails; if it botches then the spell botches. The spell ends when the caster ceases to perform the Ability, but no rolls are required to maintain the spell while the performance continues."
+    }
+
+    #t192af84e12b8581b0d5c5b ^"Sound (Target)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Target: Sound"
+            ^"Parameter" STRING "Target" FIXED
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "The spell affects any being who hears a sound that is within Range of the spell (which is usually Personal). Use the Range of a Voice spell (**ArM5**, page 83) to determine the area of effect around the sound’s source. Potential targets with the Poor Hearing Flaw (or those who have blocked their ears) are treated as one category further away from the source, those with the Sharp Ears Virtue are considered to be one category closer. An actual sound must be created to carry the spell, but this need not be the sound of the words of the spell — it could be a musical chord. The Sound Target is equivalent to Structure."
+    }
+
+}

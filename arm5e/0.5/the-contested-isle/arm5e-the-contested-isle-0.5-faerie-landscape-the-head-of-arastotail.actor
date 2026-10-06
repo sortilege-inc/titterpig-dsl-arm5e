@@ -1,0 +1,72 @@
+EXTENSION "ArM5_The_Contested_Isle_FaerieLandscape_TheHeadOfArastotail" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - The Head of Arastotail"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Contested_Isle_Core_Ext"
+
+    # The Head of Arastotail (Chapter Eleven: The Faerie Landscape, p130): one being, its stat lines verbatim fields.
+
+    #t93dbca83ecd49d1c72ba97 ^"The Head of Arastotail" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER -3
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER -3
+            ^"Virtues and Flaws" STRING "Negative Reaction; Focus Power, Greater Power; Faerie Sight, Faerie Speech, Humanoid Faerie; Narrowly Cognizant; Sovereign Ward (women)"
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Pretenses" STRING "Artes Liberales 6 (rhetoric), Brawl 1 (dodge), Faerie Lore 1 (local faeries), Philosophiae 7 (ethics)"
+            ^"Vis" STRING "3 pawns of Mentem in his eye-teeth."
+            ^"Appearance" STRING "The head looks like a Greek scholar with a hawk-like nose and wire-bristle hair, thinning on top. His neck ends in a bloodless, skin-covered stump."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 130
+        }
+        PERSONALITY_TRAITS {
+            "Belligerent to Males" +3
+            "Gullible to Females" +3
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 0
+        }
+        POWERS {
+            #tebff4f677021d80ceee7da ^"The Master’s Agreement" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Arastotail’s head can make a man change his mind, to agree with whatever argument the head has offered. (MuMe Base 15, +2 Voice, +2 Sun)"
+            }
+            #t49d909ebf87d1bacfc67b4 ^"Trust of the Master’s Servant" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Similar to the Hermetic spell, Trust of Childlike Faith, Arastotail can force a target to trust him. The head must be held and the target must make eye contact. (PeMe Base 4, +1 Eye, +2 Sun)"
+            }
+            #t2ac5ef9cd39676548eeef8 ^"Master of Waves" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "point cost equals Magnitude"
+                    ^"Initiative" STRING "– 7"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Arastotail’s head can perform any Intellego, Rego, Muto, or Perdo Aquam effect it desires, at the cost of 1 point of Might per magnitude of effect. Effects are limited to level 25 or below. (Special)"
+            }
+        }
+        DESCRIPTION "The Irish believe that Aristotle was a magician, whom they call “Arastotail.” Forever quarreling with his wife, who constantly thwarted his efforts to study bees, stars, and tides, Arastotail lost every argument. Her pestering aside, the magician sought ever-lasting life. To achieve immortality, he severed his own head and told his servant to bury it in a special place and retrieve it at dawn. Some stories say that the servant forgot and Arastotail died. Others say that the head started yelling for the servant and the muffled cries coming from the burial mound could be heard from far away. When an innocent farmer dug up the head, it commanded him to search for Arastotail’s body.\n\nThe Head of Arastotail likes to command a man, proving that the Head is the intellectual superior by ordering a target to do menial tasks. It is a weak argument. The head occasionally enjoys academic disputations and argues philosophical points with learned speakers. The head has no power over women, and turns quite dense and stupid in a woman’s presence."
+    }
+
+}

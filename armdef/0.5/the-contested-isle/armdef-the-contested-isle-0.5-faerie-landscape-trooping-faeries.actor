@@ -1,0 +1,66 @@
+EXTENSION "ARMDef_The_Contested_Isle_FaerieLandscape_TroopingFaeries" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - Trooping Faeries"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Contested_Isle_Core_Ext"
+
+    # Trooping Faeries (Chapter Eleven: The Faerie Landscape, p128): one being, its stat lines verbatim fields.
+
+    #tce5a1f8a7f7a1113041771 ^"Trooping Faeries" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Negative Reaction; Faerie Speech, Hybrid Form, Personal Power; Incognizant, Traditional Ward (a bowl or drop of fresh cow’s milk)"
+            ^"Soak" INTEGER 1
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Awareness 4 (lone travelers), Brawl 7 (claws), Hunt 5 (tracking), Leadership 5 (members of the pack)"
+            ^"Vis" STRING "1 pawn of Herbam vis in one of its thumb nails."
+            ^"Appearance" STRING "This trooping faerie looks like a cat-human hybrid. Standing almost as tall as a man, it has a cat face, cat ears, and dangerous clawed hands. Draped in tattered clothes, it leaps and jumps through the forest. It is indistinguishable from the twenty other trooping faeries it runs with."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 128
+        }
+        PERSONALITY_TRAITS {
+            "Herd Mentality" +3
+            "Savage" +3
+        }
+        COMBAT {
+            "Claws" INIT 2 ATTACK 11 DEFENSE 14 DAMAGE 2
+        }
+        POWERS {
+            #t72c66a835cf851954b91ce ^"Flight (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Flight"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The trooping faerie can fly, using its Athletics Ability to navigate difficult maneuvers. (Base 4, +2 Sun)"
+            }
+            #td4086e97e6a8c305f168e4 ^"Invisibility (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Invisibility"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The trooping faerie can become invisible. (Base 4, +2 Sun, +1 for moving image)"
+            }
+        }
+        DESCRIPTION "An individual trooping faerie does not have a name and exists within the community of its troop. Separated from the horde and interrogated, it can only repeat topics of interest to the larger whole.\n\nIndividually this trooping faerie isn’t a great threat. Combined with its troop it is lethal. It can fight in a trained group of its fellows, acting as leader and vanguard, and always applies the combat bonus to its Attack total. Their sole purpose is to terrorize the communities along their migratory path."
+    }
+
+}

@@ -1,0 +1,74 @@
+EXTENSION "ArM5_The_Contested_Isle_Leinster_Spells" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - Chapter Six: The Province of Leinster spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Contested_Isle_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t067dd545f04c8bc7e34af8 ^"Retrieve the Bloodied Arrow" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReTe 15 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 62
+        }
+        DESCRIPTION "This spell causes a small object to be transported from any point within 50 paces (and within Voice Range) to the magus’ hand. Casting requisites may be needed if the object is not mostly part of the Terram Form. The spell’s name derives from its use by the School of Raghallach to retrieve a missile or thrown weapon that has wounded an opponent, even if it is still piercing the victim. By retrieving the weapon the magus has a sample of the opponent’s blood, which is an Arcane Connection that lasts years (+3 bonus to Penetration Multiplier). This spell uses a guideline first published in *Magi of Hermes*, page 92.\n\n(Base 4, +2 Voice, +1 transport 50 paces)"
+    }
+
+    #t8deecdd0d1fa1de3b6dd27 ^"Revoke the Protection of Bonisagus" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeVi General R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 62
+        }
+        DESCRIPTION "This spell disrupts the Parma Magica, a specific type of Hermetic magic. This spell must Penetrate the target’s Vim-based Magic Resistance, and it must have a total of (level + 10 + stress die) that is greater than the target’s Parma Magica x 5. The affected magus is still protected by the Magic Resistance provided by his Forms, but must repeat the Parma Magica ritual to restore his full Magic Resistance. The School of Raghallach uses this spell in Wizard War or during a Wizard’s March. Outside of these situations, using this spell against a conscious magus could be construed as the prelude to an attempt to slay a magus; some Tribunals have ruled that the caster forfeits immunity by doing so. Many Tribunals (including Hibernia) have forbidden the creation of enchantments containing this effect that have neither restricted users nor effect expiry, for fear of it getting into the wrong hands.\n\n(Base effect, +2 Voice)"
+    }
+
+    #ta65bf09fb5ee34ba376530 ^"Revoke the Protection of (Form)" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeVi General R: Voice, D: Diam, T: Ind"
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 62
+        }
+        DESCRIPTION "There are ten versions of this spell, one for each Hermetic Form (see New Guidelines). If the target has Form Resistance aligned to the appropriate Form that is less than or equal to (spell level – 5 + stress die), then the Form Resistance is canceled for the spell’s Duration. Form Resistance automatically reasserts itself once the spell ends. This spell must Penetrate the Vim-based Magic Resistance of the target to take effect. This spell carries similar legal implications to *Revoke the Protection of Bonisagus*.\n\n(Base effect, +2 Voice, +1 Diam)"
+    }
+
+    #tc98281d7a4f1b156a822f8 ^"Revoke the Protection of (Realm)" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeVi General R: Voice, D: Diam, T: Ind"
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 62
+        }
+        DESCRIPTION "There are four versions of this spell, one for each supernatural Realm (see New Guidelines). If the target has a Might Score from that Realm that is less than or equal to (spell level + 5 + stress die), then its Magic Resistance is canceled for the spell’s Duration, reasserting itself when the spell expires. Might Score is otherwise unaffected. This spell must Penetrate the Vimbased Magic Resistance of the target to take effect. This spell is typically used when the caster wants to affect a supernatural creature with a beneficial spell, or subdue but not harm it.\n\n(Base effect, +2 Voice, +1 Diam)"
+    }
+
+}

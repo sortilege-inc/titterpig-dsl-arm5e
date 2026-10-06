@@ -1,0 +1,72 @@
+EXTENSION "ArM5_The_Contested_Isle_InfernalLandscape_TheHarvestThief" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - The Harvest Thief"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Contested_Isle_Core_Ext"
+
+    # The Harvest Thief (Chapter Thirteen: The Infernal Landscape, p141): one being, its stat lines verbatim fields.
+
+    #tfbf34ab27bd675a77c2dae ^"The Harvest Thief" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Aerial Powers"
+            ^"Might" INTEGER 2
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -20
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 10
+            }
+            ^"Size" INTEGER -10
+            ^"Virtues and Flaws" STRING "Weak Characteristics"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Dodge: Init +10, Attack N/A, Defense +16, Damage N/A Bite: Init +10, Attack +8, Defense +16, Damage –19"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "Dead (1+)"
+            ^"Weakness" STRING "Abhorrent Material (the sound of a dog barking)"
+            ^"Vis" STRING "A swarm can be distilled down to one pawn of Vis Infesta (Realms of Power: The Infernal, page 18)."
+            ^"Appearance" STRING "‭When coagulated, they are small, with bodies no larger than a grain of wheat: skinny, green-skinned imps with freakishly long limbs. They have long ears that taper to a trailing thread and sharp uneven teeth that they use to chew through crops, the physical trigger for their Infernal power."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 141
+        }
+        PERSONALITY_TRAITS {
+            "Cowardly" +3
+            "Hungry" +1
+        }
+        ABILITIES {
+            "Area Lore: Local Area" SCORE 5 SPECIALTY "farmlands"
+            "Athletics" SCORE 5 SPECIALTY "flying"
+            "Brawl" SCORE 5 SPECIALTY "dodge"
+        }
+        POWERS {
+            #t03cd611327ea91144eab6f ^"Coagulation (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The Harvest Thief must coagulate into its physical form in order to chew its way through the fields."
+            }
+            #t456f719b523c3968f08850 ^"The Thief of Vitality" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "This power destroys a single living plant in the case of cereal or root crops, or an individual fruit in the case of orchard crops."
+            }
+        }
+        DESCRIPTION "Invisible and intangible, the Harvest Thieves fly upon a breeze that moves through the crops yet always against the wind. Each Harvest Thief is a small and grey, no larger than a grain of wheat, with spindly limbs and long tapering ears. These creatures are set loose in their hundreds upon the world, where they seek out healthy crops to despoil.\n\nThese creatures are cowardly and easily warded against, both through magical means and by a barking dog, the sound of which they find abhorrent and terrifying.\n\nParticular Harvest Thieves have a taste for particular crops and cannot stand the taste of any other. To find Harvest Thieves roaming the fields outside of harvest time is unusual."
+    }
+
+}

@@ -1,0 +1,120 @@
+EXTENSION "ARMDef_The_Contested_Isle_InfernalLandscape_TemonethMessengerOfDelgnatsBetrayal" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - Temoneth, Messenger of Delgnat’s Betrayal"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Contested_Isle_Core_Ext"
+
+    # Temoneth, Messenger of Delgnat’s Betrayal (Chapter Thirteen: The Infernal Landscape, p143): one being, its stat lines verbatim fields.
+
+    #t29c3acd01b312268593ff7 ^"Temoneth, Messenger of Delgnat’s Betrayal" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Furies"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Berserk"
+            ^"Reputations" LIST ["Ireland’s First Corrupter 5 (Infernal)"]
+            ^"Hierarchy" INTEGER 5
+            ^"Combat" STRING "Dodge: Init +4, Attack N/A, Defense +4, Damage N/A Large Claws: Init +4, Attack +12, Defense +12, Damage +8"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group (those truly happy in marriage)"
+            ^"Vis" STRING "6 Mentem, Vis Infesta (Realms of Power: The Infernal, page 18)."
+            ^"Appearance" STRING "Seen from the front, Temoneth appears to be a voluptuous woman, naked but for a sliver of veil that hides her face. But as the demon turns, her flesh has been stripped in a jagged line, exposing the gory skeleton inside. her guts hang loosely from the rear of her exposed pelvis and her heel bones clack wetly on the ground as she walks."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 143
+        }
+        PERSONALITY_TRAITS {
+            "Wrathful" +4
+            "Arrogant" +3
+            "Self-Controlled" -6
+        }
+        ABILITIES {
+            "Area Lore: Hibernia" SCORE 9 SPECIALTY "personalities"
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Charm" SCORE 5 SPECIALTY "earning trust"
+            "Folk Ken" SCORE 5 SPECIALTY "weaknesses"
+            "Intrigue" SCORE 9 SPECIALTY "alliances"
+        }
+        POWERS {
+            #t7ff74cbfffd20163c6d2d5 ^"Berserker Rage (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Berserker Rage"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The demon can grant anyone the Berserk Virtue, which persists until the target calms down."
+            }
+            #t12c0cb9510d6d79c3a4c7c ^"The Betrayal Revealed" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Used when the target has taken themselves to the brink of suspicion, this power grants absolute certainty to the target, an absolute belief in that suspicion or discovery."
+            }
+            #tb0a0648221160f39747a89 ^"Coagulation (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As per the standard demonic power."
+            }
+            #tb000dca5a30b5cd28b3648 ^"Endurance of the Enraged (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Endurance of the Enraged"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The Furies do not suffer from wound penalties, except on Defense totals."
+            }
+            #t89abb11dbf7fbac0e6029a ^"Obsession (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "As per the standard demonic power, with dominion over lust."
+            }
+            #tb25ac140e5c60d56e5bc94 ^"Possession (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Possession"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "As per the standard demonic power."
+            }
+            #tba8eda29163fe6f5732f99 ^"Waxing Tide of Humors (The Contested Isle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Waxing Tide of Humors"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The Fury causes passion to overcome sense, and the victim must make a stress roll against an Ease Factor of 9, modified by appropriate Personality Traits (such as Calm or Level-Headed) to keep the emotion in check. This power can affect emotions such as anger, lust, wantonness, maliciousness, and the like. It is often employed immediately following a successful use of the demon’s Obsession power."
+            }
+        }
+        DESCRIPTION "The child of covetousness and deceit, Temoneth has been behind many of the ills to have befallen Ireland, starting with Delgnat’s betrayal of her husband Partholon and including the Uí Ruairc queen Dervorgilla’s elopement with her husband’s mortal enemy Dermot MacMurrough. Temoneth is a master of lust and uses her powers to sow discord between man and woman. But she is also arrogant and cannot bring herself to molest those of low status where their superiors make more fitting sport.\n\nTemoneth’s chief weapon is her *Possession* power, with which she hides in the courts of the wealthy to goad them into lust for those they cannot have. Betrayal and cruel revenge often result. Her favored tactic is to possess multiple hosts within a court, advisers to the principle players in the planned tragedies, from where she urges rash actions disguised as wise counsel. But Temoneth lacks self-control and slights made against her hosts enrage her, and she has frequently been moved to murder, disrupting her devious plans and forcing her to flee before discovery."
+    }
+
+}

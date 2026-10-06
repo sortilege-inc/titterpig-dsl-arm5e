@@ -1,0 +1,33 @@
+EXTENSION "ArM5_The_Contested_Isle_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # The Contested Isle is an EXTENSION on the arm5e edition (spec S13 composition). Its covenants, characters and
+    # saints are .actor files, its places LOCATIONs in its .setting; its two new types are a hero's feat and a Fomóir option.
+
+    #te8f1637d34c88c64b5479a ^"Cless" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Ability Roll" STRING REQUIRED
+            ^"Ease Factor" STRING REQUIRED
+            ^"Group" STRING
+            ^"Source" STRING DEFAULT "The Contested Isle"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A hero's feat (cless, plural clesa) of the Clesrada, as The Contested Isle prints it: the Ability roll and Ease Factor its feat roll uses, the group of feats it belongs to, the feat's text."
+    }
+
+    #tb15f735c6ba29f69708870 ^"Fomóir Option" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Kind" ENUM ["Quality", "Inferiority"] REQUIRED
+            ^"Source" STRING DEFAULT "The Contested Isle"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A Quality or Inferiority a Fomóir's battle transformation may take, as The Contested Isle prints it (no magnitude printed): its name and text."
+    }
+
+}

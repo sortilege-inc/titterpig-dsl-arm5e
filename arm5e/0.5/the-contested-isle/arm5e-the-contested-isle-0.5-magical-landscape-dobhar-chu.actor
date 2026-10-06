@@ -1,0 +1,65 @@
+EXTENSION "ArM5_The_Contested_Isle_MagicalLandscape_DobharChu" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - Dobhar-chú"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Contested_Isle_Core_Ext"
+
+    # Dobhar-chú (Chapter Ten: The Magical Landscape, p122): one being, its stat lines verbatim fields.
+
+    #tebf59598a64ba22168dc69 ^"Dobhar-chú" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 8
+            ^"Form" STRING "Aquam"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Monster; Ways of the Lough; Ferocity (against interlopers), Improved Characteristics, Puissant Swim, Self Confident; Wrathful; Infamous"
+            ^"Mundane Qualities" STRING "Amphibious, Imposing Appearance x2, Pursuit Predator, Tireless"
+            ^"Magical Qualities and Inferiorities" STRING "Gigantic, Major Virtue (Greater Immunity to metal weapons), Ritual Power (Death Curse); Minor Virtue (Life Boost), Improved Attack (grapple) x2; Lesser Malediction (vulnerable to silver), Temporary Might"
+            ^"Personality Traits" STRING "Territorial +6, Brave +3, Devoted to Mate +3, Otter +3 Essential Trait"
+            ^"Reputations" LIST ["Killer 4 (Local)"]
+            ^"Combat" STRING "Teeth: Init +4, Attack +15, Defense +11, Damage +6 Grapple: Init +4, Attack +14, Defense +9, Damage n/a includes Ways of the Lough"
+            ^"Soak" STRING "+2 (immune to metal other than silver)"
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3/–3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Vis" STRING "Two pawns of Rego, in fur bearing the cross"
+            ^"Appearance" STRING "A huge otter seven feet from nose to tail; it has black ears and a black stripe down its back and across its shoulders, but otherwise is pure white."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 122
+        }
+        ABILITIES {
+            "Area Lore: Local" SCORE 4 SPECIALTY "waterways"
+            "Awareness" SCORE 3 SPECIALTY "food"
+            "Brawl" SCORE 5 SPECIALTY "teeth"
+            "Hunt" SCORE 4 SPECIALTY "food"
+            "Stealth" SCORE 4 SPECIALTY "reed beds"
+            "Survival" SCORE 3 SPECIALTY "loughs"
+            "Swim" SCORE 5 BONUS 2 SPECIALTY "loughs"
+        }
+        POWERS {
+            #t1e21b0c632964f4add6293 ^"Death Curse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–20"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The individual who strikes the death blow of a dobhar-chú is affected by this power automatically. This power is fueled by the creature’s remaining life, and each of its remaining Fatigue levels adds +5 to the Penetration Total of this power (represented by the Life Boost Virtue). Within 24 hours the dobharchú’s killer finds himself in imminent danger of death due to some accident or freak of nature. A bridge collapses beneath him, he is trapped in a burning building, or struck by lightning, or some other apparent accident. Such disasters do not automatically mean the death of the character, but they will need to be lucky or skilled to escape alive. The curse should be considered to be a 50th level spell for the purpose of countering it. Ritual Power (no Hermetic equivalent)."
+            }
+        }
+        DESCRIPTION "The dobhar-chú attacks the legs of its opponents and attempts to drag them into the water to drown them. Treat this as a grapple attack, and every round the grapple is maintained it draws the captured character closer to the water. Once in the water, the character is required to make a Deprivation roll every round if he struggles against the dobhar-chú. It is a canny opponent, and often spends Fatigue levels to exert itself in combat."
+    }
+
+}

@@ -1,0 +1,75 @@
+EXTENSION "ArM5_The_Contested_Isle_FaerieLandscape_CailteMacRonain" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - Caílte mac Rónáin"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Contested_Isle_Core_Ext"
+
+    # Caílte mac Rónáin (Chapter Eleven: The Faerie Landscape, p129): one being, its stat lines verbatim fields.
+
+    #t8b9ceb5ad9c39e88dba96e ^"Caílte mac Rónáin" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Infiltrator (Outlaw Leader); Greater Power, Increased Faerie Might; Faerie Speech, Humanoid Faerie, Lesser Power, Personal Power; Difficult Underlings, Optimistic; Incognizant, Role Requires Suffering, Traditional Ward (church bells)"
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Athletics 4 (hurling), Brawl 3 (fist), Church Lore 1 (baptisms), Dominion Lore 2 (St. Patrick), Hunt 3 (deer), Etiquette 3 (hospitality rules), Faerie Lore 5 (Fenian Cycle), Magic Lore 1 (Hibernia monsters), Profession Poet 5 (poems about Fionn), Single Weapon 3 (short spear), Thrown Weapon 2 (javelin)"
+            ^"Equipment" STRING "Spear, sword, and archaic aristocratic native dress."
+            ^"Vis" STRING "4 pawns of Mentem in four strands of golden hair."
+            ^"Appearance" STRING "Cáilte looks like a handsome youth with long, straight limbs and flowing golden hair. His style of dress is ancient, a patterned cloak thrown over one shoulder and held in place by an ornate brooch."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 129
+        }
+        PERSONALITY_TRAITS {
+            "Optimistic" +3
+            "Gullible" +2
+            "Innocent" +2
+        }
+        COMBAT {
+            "Short Spear" INIT 2 ATTACK 8 DEFENSE 4 DAMAGE 6
+            " Javelin" INIT 0 ATTACK 7 DEFENSE 3 DAMAGE 6
+        }
+        POWERS {
+            #tb104ec29f4a5d11a59cd66 ^"Speech of the Deer" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Cáilte can speak with an animal within Voice Range. (Base 10, +2 Voice, +1 Conc)"
+            }
+            #t2a53d92ab8875fa34c033c ^"Speed of the Deer" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Cáilte can run as fast as a deer when he invokes this power, giving him +3 to any rolls that involve racing or speed. (Base 15, +2 Sun)"
+            }
+            #te10d658e9034c20e0d7734 ^"Removal of a Thousand Cares" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power is similar to *Pains of a Thousand Worries* (**ArM5**, page 148) but without the painful side-effects. The target becomes listless and lethargic from joy instead of mental suffering. Cáilte often triggers this power after he has told a story to a listener to justify his place among Hibernia’s poets. Reciting a poem is not a requirement, however, and Cáilte can trigger this power when he desires. (Base 4, +2 Voice, +3 Moon, +1 complex effect. 4 excess build points reduce point cost to 0.)"
+            }
+        }
+        DESCRIPTION "Caílte , one of the heroes of the Tales of the Elders (*Acallam na Senorach*), led St. Patrick and his entourage throughout Munster, repeating famous stories of Fionn mac Cumhaill for the saint. Fionn’s nephew, Caílte is a famous poet and warrior. Cáilte believes that St. Patrick raised him from the dead and now he walks the pastures and woods of Mythic Ireland as a man. Though incognizant, Cáilte can increase his Pretenses.\n\nCáilte leads a band of independent warriors. He thinks they are fianna, but in reality they are outlawed men who have joined the faerie. While he tries to steer them towards noble deeds, they more often than not rob and pillage indiscriminately.\n\nCáilte has been baptized and fully accepts Christianity, even though his faerie powers are diminished by Dominion auras.\n\nCáilte is designed as a companionlevel player character."
+    }
+
+}

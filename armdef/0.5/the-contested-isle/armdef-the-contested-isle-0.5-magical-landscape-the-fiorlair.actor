@@ -1,0 +1,78 @@
+EXTENSION "ARMDef_The_Contested_Isle_MagicalLandscape_TheFiorlair" {
+    NAME "Ars Magica Fifth Edition, The Contested Isle - The Fíorláir"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Contested_Isle_Core_Ext"
+
+    # The Fíorláir (Chapter Ten: The Magical Landscape, p121): one being, its stat lines verbatim fields.
+
+    #t31dfabe7ce51941ba3a130 ^"The Fíorláir" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 16
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Friend; Ferocity (when racing), Improved Characteristics x2, Long-Winded, Puissant Athletics; Proud; Reckless"
+            ^"Mundane Qualities" STRING "Imposing Appearance, Fast Runner, Good Jumper, Tireless"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power x2, Major Virtue (Essential Virtue); Improved Might x3, Lesser Power"
+            ^"Personality Trait" STRING "Swift as the Wind (Quickness) +6, Horse +3, Proud +2, Loyal to Owner +2, Brave +1 Essential Trait The fíorláir has a +3 to any rolls involving running or jumping. Whenever racing, use the fíorláir’s Essential Trait of Swift as the Wind instead of its Quickness."
+            ^"Reputations" LIST ["none"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Vis" STRING "Four pawns of Animal vis, one in each hoof"
+            ^"Appearance" STRING "A perfectly-proportioned horse, a caramel in color with a cream mane and tail."
+            ^"Source" STRING "The Contested Isle"
+            ^"Page" INTEGER 121
+        }
+        COMBAT {
+            "Kick" INIT 4 ATTACK 2 DEFENSE 6 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 BONUS 2 SPECIALTY "racing"
+            "Awareness" SCORE 3 SPECIALTY "obstacles"
+            "Brawl" SCORE 2 SPECIALTY "dodging"
+        }
+        POWERS {
+            #tad2ac312206f2d3c79527d ^"Break the Hex" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The fíorláir can break any spell affecting it if it can double the level of the spell on a (stress die + 55). PeVi 40 (Base effect, +1 Touch) Greater Power (40 levels, –2 Might cost)"
+            }
+            #t28a6f2a4632f6621f3f786 ^"Born in the Saddle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Anyone riding a fíorláir gains +3 to any rolls using the Ride Ability. MuCo 5 (Base 2, +1 Touch, +2 Sun) Lesser Power (5 levels, –1 Might cost, +3 Init)"
+            }
+            #t7fa9e6e2b8b7ad81b01e9e ^"Ward the Rider" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Anyone riding the fíorláir gains a +5 to Soak rolls. It can maintain this power indefinitely, but does not recover the Might points spent until it ends the effect. The rider gains a Warping point whenever this power is used. MuCo 40 (Base 25, +1 Touch, +2 Sun) Greater Power (40 levels, –2 Might cost)"
+            }
+        }
+    }
+
+}

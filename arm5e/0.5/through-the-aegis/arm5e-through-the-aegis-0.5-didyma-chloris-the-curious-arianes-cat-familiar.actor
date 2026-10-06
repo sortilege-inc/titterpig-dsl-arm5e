@@ -1,0 +1,95 @@
+EXTENSION "ArM5_Through_the_Aegis_Didyma_ChlorisTheCuriousArianesCatFamiliar" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Chloris the Curious: Ariane’s Cat Familiar"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Chloris the Curious: Ariane’s Cat Familiar (Chapter Four: The Oracles of Didyma, p79): a familiar, its stat lines verbatim fields.
+
+    #t484ed57a8f0596ad73c5b7 ^"Chloris the Curious: Ariane’s Cat Familiar" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#te665861b28dd8521c67fe4 ^"Didyma"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Season" STRING "Summer"
+            ^"Might" INTEGER 12
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -7
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence Score" STRING "1(3)"
+            ^"Virtues and Flaws" STRING "Magic Friend; Magic Animal; Perfect Balance, Puissant Awareness, Second Sight, Sharp Ears, Social Contacts (cats of Miletos), True Friend (Ariane), Unaffected by The Gift; Curse of Venus, Meddler; Compulsive (curiosity), Nocturnal"
+            ^"Qualities" STRING "Lesser Power (Prying Eyes), Lesser Power (Whispers Through the Black Gate), Personal Power (Cat’s Leap), Personal Power x2 (Eyes for Power), Personal Power x2 (Leap of Homecoming)"
+            ^"Animal Qualities" STRING "Ambush Predator, Crafty, Good Jumper, Skilled Climber, Thick Fur"
+            ^"Reputations" LIST ["Pregnant cat 1 (local)"]
+            ^"Soak" STRING "+3 (Sta + Bronze Cord)"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Equipment" STRING "Leather collar stamped with Ariane’s sigil and studded with tiny stones. The stones are fixed Arcane Connections to: three points on the Sacred Way (the covenant terminus, the Panormos junction, a point two miles south of Miletos), the Delphinion (in Miletos), the Lion Gate (in Miletos), and an alley-way near Xylinites (in Constantinople). There is room for another six studs."
+            ^"Vis" STRING "3 pawns of Animal in eyes."
+            ^"Appearance" STRING "Chloris is a small, innocuous, tortoiseshell cat, and Ariane’s familiar. She is Cursed by Venus and thus is constantly either pursued by excited tomcats, pregnant, or nursing young kittens. The Delphinion temple (in Miletos) is her favorite site to raise litters and many of the cats of Miletos are her descendants. Some of her descendants may be magical, but many are not. Chloris is very independent, often wandering far from Ariane and not seen for several seasons."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 79
+        }
+        PERSONALITY_TRAITS {
+            "Meddler" +6
+            "Curious" +4
+            "Cat (essential)" +3
+            "Timid" +2
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 8 DEFENSE 10 DAMAGE -5
+            " Teeth" INIT 4 ATTACK 8 DEFENSE 7 DAMAGE -6
+        }
+        ABILITIES {
+            "Area Lore: Constantinople" SCORE 1 SPECIALTY "alleys"
+            "Area Lore: Miletos" SCORE 3 SPECIALTY "alleys"
+            "Athletics" SCORE 3 SPECIALTY "jump"
+            "Awareness" SCORE 4 SPECIALTY "at night"
+            "Brawl" SCORE 2 SPECIALTY "claws"
+            "Carouse" SCORE 1 SPECIALTY "at night"
+            "Charm" SCORE 1 SPECIALTY "tomcats"
+            "Concentration" SCORE 1 SPECIALTY "Prying Eyes"
+            "Dead Language: Classical Greek" SCORE 5 SPECIALTY "Hermetic usage"
+            "Dead Language: Latin" SCORE 4 SPECIALTY "Hermetic usage"
+            "Hunt" SCORE 4 SPECIALTY "mice"
+            "Intrigue" SCORE 1 SPECIALTY "gossip"
+            "Leadership" SCORE 2 SPECIALTY "cats"
+            "Living Language: Romaic Greek" SCORE 5 SPECIALTY "rituals"
+            "Magic Theory" SCORE 2 SPECIALTY "Intellego"
+            "Organization Lore: Didyma" SCORE 2 SPECIALTY "gossip"
+            "Second Sight" SCORE 3 SPECIALTY "regio boundaries"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+            "Survival" SCORE 2 SPECIALTY "urban"
+        }
+        POWERS {
+            #t8452812eaa2c5dece466b9 ^"Cat’s Leap" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 Points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Personal Range, Animal version of Gift of the Frog’s Legs (**ArM5**, page 134). Personal Power (15 Levels, –2 Might Cost)"
+            }
+            #t85df7b1ee47f60b0322879 ^"Eyes for Power" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 Points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Chloris can see vis (R: Personal, D: Constant, T: Vision). Personal Power x2 (20 Levels, –2 Might Cost, +4 Init) *Leap of Homecoming*, 1 Point: Init +0, Animal: Animal version of the Hermetic spell (**ArM5**, page 135). Personal Power x2 (35 Levels, –3 Might Cost) *Mental Communication*: (both ways) Invested in familiar bond (**ArM5**, page 105). *Prying Eyes*, 0 Point: Init +5, Imaginem: As the Hermetic spell (**ArM5**, page 144). Lesser Power (5 Levels, –1 Might Cost, +3 Init) *Whispers Through the Black Gate*, 1 Points: Init –2, Corpus: As the Hermetic spell (**ArM5**, page 130). (15 Levels, –2 Might Cost)"
+            }
+        }
+        DESCRIPTION "The Familiar Bond was forged with an InAn Lab Total of 26. The Cords are: +1 Gold, +1 Silver, +2 Bronze."
+    }
+
+}

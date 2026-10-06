@@ -1,0 +1,90 @@
+EXTENSION "ARMDef_Through_the_Aegis_Longmist_Spells" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Chapter Five: The Covenant of Longmist spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Through_the_Aegis_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t5c6167a542ee3349516f60 ^"Master the Airy Spirit of (Elemental Form)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "(Form)" FIAT "the spell takes the Form of the spirit it targets; the book prints the Form as a placeholder, 'Re(Form)'"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "Re(Form) 30 R: Voice, D: Moon, T: Individual"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 105
+        }
+        DESCRIPTION "Commands an airy spirit associated with the elemental form to serve the magus for Moon duration. If the spell penetrates the spirit’s Magic Resistance, make a stress roll of Com + Leadership to judge how fully-controlled the spirit is.\n\n(Base: 5, +2 Voice, +3 Moon)"
+    }
+
+    #tb37a25342befc3209b02f1 ^"Summon the Airy Spirit of (Elemental Form)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "(Form)" FIAT "the spell takes the Form of the spirit it targets; the book prints the Form as a placeholder, 'Re(Form)'"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Arcane"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "Re(Form) 35 R: Arcane, D: Momentary, T: Individual"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 105
+        }
+        DESCRIPTION "Summons the target airy spirit into the caster’s presence. There is nothing to compel the spirit to stay once summoned.\n\n(Base: 15, +4 Arcane Connection)"
+    }
+
+    #ta1da31d7f0205f228dd479 ^"Lash the Wayward Spirit" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "PeVi 10 R: Voice, D: Momentary, T: Individual"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 109
+        }
+        DESCRIPTION "As per Demon’s Eternal Oblivion, described in ArM5, page 160, but for magical spirits.\n\n(Base, +2 Voice)"
+    }
+
+    #t0b5848261af4d41a2dc1e3 ^"The Fleas of Saint Nannan" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "Rego Animal 20 R: Touch, D: Mom, T: Group"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 127
+        }
+        DESCRIPTION "Each pawn of vis scattered on the ground, whether that is earth, stone, sand, or even inside a building, spontaneously generates 1000\n\nfleas. While their production is a thing of magic, the magic is simply accelerating a natural phenomenon and as a result these fleas are natural and unaffected by Magic Resistance.\n\nThese cost 3 Build Points per 5 pawns of vis. (Base 5, +1 Touch, +2 Group) Perdo Animal 45 R: Touch, D: Mom, T: Group Each pawn of vis scattered on the ground, whether that is earth, stone, sand, or even inside a building, immediately kills animals up to a standard group. The effect does not discriminate between types of animals so great care must be taken in handling this vis.\n\nThese cost 6 Build Points per 5 pawns of vis. (Base 30, +1 Touch, +2 Group) The covenant owns fifteen pawns of the flea-generating soil and five of the soil harmful to animals."
+    }
+
+    #td004c03751a0d33466f105 ^"The Balm of Tír Nan Óg" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrCo 40 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 128
+        }
+        DESCRIPTION "When the balm is applied to the stricken target, the rigors of age and infirmity are held at bay and the target gains the strength to overcome the crisis.\n\nOne dose of the balm was applied by Lugh to The Cailleach’s parens, Tadhg an Tuir, when he fell gravely ill but even its power seemed insufficient to save the elderly magus.\n\n(Base 35, +1 Touch) Each dose of the balm contains four pawns of Creo vis, costing 4 Build Points. If the dose is split then the inherent magic is lost. There are five doses remaining for a total of 20 Build Points."
+    }
+
+}

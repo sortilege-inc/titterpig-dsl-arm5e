@@ -1,0 +1,71 @@
+EXTENSION "ArM5_Through_the_Aegis_Jardin_HypatiaABlackCatFamiliar" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Hypatia, a Black Cat Familiar"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Hypatia, a Black Cat Familiar (Chapter Three: Jardin, A Summer Covenant, p45): a familiar, its stat lines verbatim fields.
+
+    #tddfb25ad8bb49ccdb8545c ^"Hypatia, a Black Cat Familiar" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#ta0f81a12401f028063f15a ^"Jardin"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Vim"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -7
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Friend; Common Sense, Perfect Balance, Puissant Awareness, Sharp Ears, Tough, True Friend (Xenophanes), Unaffected by The Gift; Nocturnal, Poor Communication, Weak Characteristics x 3 See Realms of Power: Magic. From familiar bond."
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power; Improved Abilities, Improved Powers, Lesser Power x2"
+            ^"Combat: Dodge" STRING "Init +4, Attack n/a, Defense +10, Damage n/a"
+            ^"Bite" STRING "Init +4, Attack +12, Defense +11, Damage –6"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Vis" STRING "2 pawns of Vim"
+            ^"Gold Cord" STRING "1,"
+            ^"Silver Cord" STRING "3, Bronze"
+            ^"Cord" STRING "0 Bond Powers: Mental Communication. This operates both ways between Hypatia and Xenophanes, and both are able to send complex thoughts, such as images and emotions, to each other. This power has unlimited uses. Speech. Hypatia can speak, and does so frequently, usually in a sardonic manner. She is particularly given to commenting upon what she perceives as others’ stupidity and humans’ lack of personal hygiene. She understands she is not allowed to speak in front of visitors to the covenant unless they wear red caps, however. Xenophanes can withdraw the effect temporarily if necessary; otherwise unlimited. The effect maintains concentration. Powers: Aura of Rightful Authority, 2 points, Penetration 0, Init +2, Mentem, R: Eye D: Sun, T: Individual. Inclines humans to obey orders and helps them overcome the shock of talking cats. (See ArM5, page 151) Humans Are Easily Misplaced, Corpus, 0 points, Penetration, +10 Init –3, R: Arc D: Concentration, T: Individual A version of The Inexorable Search (ArM5, page 131) The maps cats use are a mixture of scents and textures, and make little sense to humans. This power requires an Arcane Connection, so Hypatia scent marks humans she wishes to find again by rubbing on them (4 Mastery points spent on reducing Might cost) Master of the Undergrowth, Herbam, 2 points, Init +0, R: Touch, D: Sun, T: Group A feline version of Intuition of the Forest (ArM5, page 136) Pass the Unyielding Portal, Herbam, 1 point, Initiative +2, R: Touch, D: Diameter, T: Individual A feline version of the spell of the same name, used when no humans are available to open doors. (See ArM5, page 137). Prying Eyes, Imaginem, 1 point, Initiative +2, Penetration +5, R: Touch, D: Concentration, T: Room This effect is used to look inside a building and rooms. Note that a cat on a roof can see through it. The human version is on page 144 of ArM5. The Wise Guide, Mentem, 0 points, Penetration +10, Initiative +2, R: Voice, D: Concentration, T: Group. Subtly influences Xenophanes to act in wise and sensible ways as if he had the Common Sense Virtue. There is no compulsion to follow this advice, but Xenophanes generally does. The power does not cause Warping as it was tailored to Xenophanes as part of the familiar bond. ReMe30 (Base 5, +2 Voice, +1 Concentration, +2 Group, 3 Mastery points used to reduce cost, 1 to improve Init.)."
+            ^"Appearance" STRING "An unremarkable female black cat with a slightly snub nose and green eyes. Hypatia has a slight kink in her tail, and is older and leaner than most of the village cats, but you would have to know her well to recognize her in the dark."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 45
+        }
+        PERSONALITY_TRAITS {
+            "Loyal to Xenophanes" +3
+            "Sardonic" +2
+            "Curious" +1
+            "Cat" +3
+        }
+        ABILITIES {
+            "Area Lore: Cahors" SCORE 3 SPECIALTY "hunting spots"
+            "Athletics" SCORE 5 SPECIALTY "jumping"
+            "Awareness" SCORE 7 BONUS 2 SPECIALTY "at night"
+            "Brawl" SCORE 4 SPECIALTY "bite"
+            "High German (Alpine)" SCORE 5
+            "Hunt" SCORE 6 SPECIALTY "mice"
+            "Latin" SCORE 5 SPECIALTY "creative insults"
+            "Magic Lore" SCORE 3 SPECIALTY "animals"
+            "Magic Theory" SCORE 3 SPECIALTY "spells"
+            "Occitan" SCORE 3 SPECIALTY "ask for food"
+            "Organization Lore: Jardin" SCORE 5 SPECIALTY "animals"
+            "Organization Lore: Order of Hermes" SCORE 3 SPECIALTY "familiars"
+            "Penetration" SCORE 5 SPECIALTY "Mentem"
+            "Stealth" SCORE 7 SPECIALTY "stalking"
+            "Survival" SCORE 4 SPECIALTY "shelter"
+        }
+        DESCRIPTION "Hypatia is Xenophanes’ beloved familiar, and a sardonic commentator on happenings at Jardin. She manages to keep Xenophanes out of trouble most of the time, being far more intelligent than he."
+    }
+
+}

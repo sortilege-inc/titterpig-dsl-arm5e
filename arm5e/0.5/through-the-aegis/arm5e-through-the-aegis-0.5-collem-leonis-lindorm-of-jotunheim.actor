@@ -1,0 +1,56 @@
+EXTENSION "ArM5_Through_the_Aegis_CollemLeonis_LindormOfJotunheim" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Lindorm of Jotunheim"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Lindorm of Jotunheim (Chapter Six: Collem Leonis, p159): one creature, its stat lines verbatim fields.
+
+    #t9a0160fe501e401ab3e92e ^"Lindorm of Jotunheim" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#t05209705be91b9906fcea8 ^"Collem Leonis"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER 22
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -12
+            }
+            ^"Size" INTEGER 13
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Monster; Improved Characteristics (x6); Poor Communication (x2), Poor Presence"
+            ^"Magical Qualities and Inferiorities" STRING "Gigantic (x12), Greater Power (x4); Monstrous Appearance, Reduced Communication, Reduced Presence; Minor Flaw (Poor Presence), Reduced Might (x4) ) Blood of Venom 50 levels, Breath of Venom 70 levels, Magical Senses 80 levels"
+            ^"Mundane Qualities and Inferiorities" STRING "Grapple, Keen Sense of Smell, Large Teeth, Loathsome Appearance, Spiny, Tough Hide, Thick Scales, Sharp Ears, Slippery, Venomous"
+            ^"Reputations" LIST ["Lethal and venomous 5 (Local, in Nordic cultures only)"]
+            ^"Combat" STRING "Grapple: Init –12, Attack +13, Defense –4, Damage +22 Large Teeth: Init –12, Attack +18, Defense –4, Damage +25 and poison (see Power: Venomous)"
+            ^"Soak" STRING "+17 (But see Power: Scales later)"
+            ^"Fatigue Levels" STRING "OK, 0/0/0 –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–18), –3 (19-36), –5 (37- 54), Incapacitated (55-72), Dead (73+)"
+            ^"Powers" STRING "Blood of Venom, 0 points, always on, Animal. The lindorm’s blood is magically transformed into a sticky, corrosive venom as it leaves its body, so any grievous wound risks hurting the attacker as well. Any time a Medium or worse wound is inflicted on the lindorm the attacker must roll a Qik–Enc stress roll against an Ease Factor of 9 for a Medium Wound, 12 for a Heavy Wound, or 15 for an Incapacitating Wound or worse. Other targets close by make stress rolls of Qik–Enc against a set Ease Factor of 9. Unsuccessful characters suffer +25 damage from the corrosive venom. The venom continues to inflict damage every round, at a cumulative –1 damage and also –1 Protection. Note that armor can’t have its Protection reduced below 0. This goes on until either the damage roll drops to 0, the armor is removed, the poison is removed, or two minutes have passed. Breath of Venom, 1 point, Init –14, Aquam. The lindorm may forego a bite attack and instead spew forth a sticky, venomous liquid on a target within 15 paces. The attack hits the target automatically and if it Penetrates does +25 damage. The venom may spill onto nearby targets (such as other fighters in a group) for +12 damage unless they succeed in Qik–Enc roll versus an Ease Factor of 9. Constriction (non-magical): The lindorm can “constrict” targets of lower Size than itself, and can even affect multiple opponents simultaneously provided that the sum of their Sizes does not exceed +7. Targets must be successfully grappled one at a time, using the rules for “Non-Lethal Combat”, ArM5, page 174. Victims suffer Deprivation from air as long as they are constricted, ArM5, page 180. For targets of Size +2 or lower, the lindorm actually rolls over them, trapping them under its body, as they are too small for it to wrap around them effectively. Magical Senses, 0 points, always on, Vim. The lindorm’s supernatural sense of smell can find any auras, vis, enchanted devices, creatures with Might, or Gifted people within a mile. It is drawn to then in order to consume the vis, rest in the aura, fight rival beasts, or capture Gifted individuals. Scales (non-magical): The lindorm’s Soak of +17 represents the normal, average number, used for opponents in melee and for normal magical attacks. Against specially targeted attacks and heroic actions intent on hitting the soft underbelly its Soak is only +10. Such actions are left to the storyguide’s discretion but Finesse or Athletics rolls versus an Ease Factor of 12 are suggested for this. If the lindorm fortifies itself and exposes only the hardest, spiny scales, its Soak is increased to +25. This works well against massed archery attacks. Venomous (non-magical): The poisonous nature of the lindorm affects most natural traits as well. If the Attack Advantage of a bite exceeds the target’s Protection (not his Soak), he suffers a Light wound. Any combat Botch in melee also inflicts such a wound, as the target injures himself on a venomous spine."
+            ^"Vis" STRING "The lindorm’s heart is the source of the venom, and it holds 4 pawns of Perdo vis. The lindorm’s remaining body holds 2 pawns of Animal vis. It may have consumed any amount and type of vis during its rampage, which can be extracted from its stomach."
+            ^"Appearance" STRING "The lindorm is an enormous serpent with angry red eyes and a mouth full of teeth the size of greatswords. The spiny ridges are a dull, dark-green, almost black, color, the smooth scales shine in bright green hues in the light, and the softer underbelly is wrinkled and a bilious green-yellow color. It measures about 10 feet in diameter and almost 400 feet in length."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 159
+        }
+        PERSONALITY_TRAITS {
+            "Lindorm" +3
+            "Hungry for Magic" +3
+            "Angry" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 5 SPECIALTY "hearing"
+            "Brawl" SCORE 6 BONUS 2 SPECIALTY "bite"
+            "Penetration" SCORE 5 SPECIALTY "blood"
+            "Survival" SCORE 3 SPECIALTY "forest"
+            "Swim" SCORE 4 SPECIALTY "speed"
+        }
+    }
+
+}

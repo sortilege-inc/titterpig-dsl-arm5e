@@ -1,0 +1,86 @@
+EXTENSION "ArM5_Through_the_Aegis_NorthernSeas_OjoCarlesFamiliar" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Ojo, Carles’ Familiar"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Ojo, Carles’ Familiar (Chapter Two: The Northern Seas, p11): a familiar, its stat lines verbatim fields.
+
+    #t771aeaa4e4c493c8904dbb ^"Ojo, Carles’ Familiar" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#t2b859a5f0c51942368a661 ^"The Northern Seas"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 13
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -2
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Friend; Learn Athletics from Mistakes; Baneful Circumstances (new moon), True Friend (Carles) As Realms of Power: Magic Magical Qualities and Inferiorities: Essential Virtue (Presence), Gift of Speech, Gift of Thumbs, Improved Abilities x 2, Personal Powers x 2; Essential Flaw (Perception), Limited Speech Just as Gift of Speech negates the inherent Mute Flaw of Magic Animals, this Minor Magical Quality negates the inherent No Hands Flaw"
+            ^"Mundane Qualities" STRING "Crafty, Defensive Fighter, Skilled Climber, Timid"
+            ^"Reputations" LIST ["Combat: Bite: Init +2", "Attack +9", "Defense +7", "Damage –3 Dodge: Init +2", "Attack n/a", "Defense +8", "Damage n/a"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Vis" STRING "three pawns of Muto in his hands"
+            ^"Gold Cord" STRING "1,"
+            ^"Silver Cord" STRING "2,"
+            ^"Bronze Cord" STRING "1"
+            ^"Bond Powers" STRING "Mental Communication; this operates both ways between Carles and Ojo and both are able to send complex thoughts, such as images and emotions, to each other. This power has unlimited use."
+            ^"Appearance" STRING "Ojo is a Barbary macaque, a tailless monkey with yellowish, gray, or brown fur with paler underparts, and a dark pink face. His hands and feet are nimble and dextrous, perfect for climbing and thieving. He wears trousers and a jacket of eastern silk."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 11
+        }
+        PERSONALITY_TRAITS {
+            "Cheerful at Full Moon (Presence)" +3
+            "Loyal to Carles" +3
+            "Monkey" +3
+            "Mischievous" +2
+            "Brave" -2
+            "Attentive at New Moon (Perception)" -3
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "climbing"
+            "Awareness" SCORE 4 SPECIALTY "predators"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Finesse" SCORE 4 SPECIALTY "using magic devices"
+            "French" SCORE 3 SPECIALTY "sailing terms"
+            "Latin" SCORE 3 SPECIALTY "Hermetic"
+            "Legerdemain" SCORE 4 SPECIALTY "cutpurse"
+            "Magic Lore" SCORE 4 SPECIALTY "auras"
+            "Magic Theory" SCORE 2 SPECIALTY "spells"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "foraging"
+        }
+        POWERS {
+            #ta5f7ccc11fde15db45691a ^"Ape the Beast" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The monkey can acquire any minor natural ability of any animal he sees: a frog’s ability to swim; a squirrel’s perfect balance; a cat’s night vision, and so forth. He can acquire any mundane Qualities, like a pair of goat’s horns, a tortoise’s shell, a hedgehog’s spines, the venomous fangs of a snake, or the thick pelt of a bear; but cannot make major adaptations like a bird’s wings or the ability to breathe water like a fish. He can only retain one such ability at a time; if he adopts an ability while he still retains another, then the first ability disappears. The power is otherwise maintained indefinitely, but all the time that the monkey retains an ability he loses one Might point every sunset and sunrise (it takes him three hours to regenerate this point; quicker in a Magic aura). MuAn 25 (base 4, +2 Sun, +1 Part, +1 Constant effect, +1 can change ability possessed) Personal Power (25 levels, –2 Might cost)"
+            }
+            #t73e9cb1f83a1bc87bd629a ^"Mimic the Man" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "the monkey can perfectly copy any sound he hears, even human speech. MuIm 3 (base 1, +1 Conc, +1 Complexity) Personal Power (3 levels, –1 Might cost, +1 Init)"
+            }
+        }
+        DESCRIPTION "Ojo is a Barbary macaque who has served several masters during his long life. He joined Carles when the magus recognized the monkey as a magical beast and freed him from a cruel Mediterranean sea captain. Although Ojo can speak only through the use of a power (below), he is intelligent and has learned how to manipulate magical items. He is also an accomplished thief, something he learned in the service of yet another master.\n\nOjo’s A*nimal* Qualities are described in terms of the rules in *Houses of Hermes: Mystery Cults*, page 40. Necessary skill modifiers are summarized here for ease of reference. The *magical* Qualities and Inferiorities are all as described in *Realms of Power: Magic*.\n\nCarles has aquired Ojo’s love of climbing from their bond and Ojo has a preference for wearing clothes.\n\nOjo’s silver cord adds to Carles’ concentration rolls to hold his magic addiction at bay."
+    }
+
+}

@@ -1,0 +1,41 @@
+EXTENSION "ArM5_Through_the_Aegis_Longmist_TheBronzeMan" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - The Bronze Man"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # The Bronze Man (Chapter Five: The Covenant of Longmist, p124): one creature, its stat lines verbatim fields.
+
+    #t06decc2ba8bbf6a618a2a0 ^"The Bronze Man" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#ta1a53a5b77da0fd4b2083d ^"Longmist"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "17 (6)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 2
+            ^"Soak" STRING "+25 (bonus applied to Damage Checks, as per City & Guild, page 77)"
+            ^"Damage Levels" STRING "4 (as per City & Guild, page 77)"
+            ^"Abilities" STRING "Craft: Blacksmith 5 Powers: Freedom of Movement ReTe(Me) 29 Pen +0, Constant Effect R: Personal, D: Sun, T: Part The automaton is able to walk to places as directed by a human controller or to meet the needs of any other instructions. For such a large device, the automaton is careful to avoid causing damage to people or things around it. (Effect: Base 5, +2 Sun, +1 Part, +1 Mentem requisite; Modifications: +1 for 2/ day, +3 triggered at sunrise/set) Dexterity of the Master CrTe 29 Pen +0, Constant Effect R: Personal, D: Sun, T: Part This power gives the automaton a Dexterity of +1 as per the description in Houses of Hermes: Mystery Cults, page 130. (Effect: Base 10, +2 Sun, +1 Part; Modifications: +1 for 2/day, +3 triggered at sunrise/set) Strength of the Master CrTe 29 Pen +0, Constant Effect R: Personal, D: Sun, T: Part This power gives the automaton a Strength of +1 as per the description in Houses of Hermes: Mystery Cults, page 130. (Effect: Base 10, +2 Sun, +1 Part; Modifications: +1 for 2/day, +3 triggered at sunrise/set) The Master At Work ReTe(Me) 49 Pen +0, Constant Effect R: Personal, D: Sun, T: Part The automaton has been invested with the Craft: Blacksmith Ability to a score of 5. (Effect: Base 5, +2 Sun, +1 Part, +1 Mentem requisite, +4 for a score of 5; Modifications: +1 for 2/day, +3 triggered at sunrise/set) Further information on the powers detailed above and their costs is available in Houses of Hermes: Mystery Cults, page 129."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 124
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 0
+            " Fist" INIT 0 ATTACK 1 DEFENSE 0 DAMAGE 1
+            " Bludgeon" INIT 0 ATTACK 3 DEFENSE 0 DAMAGE 3
+        }
+        DESCRIPTION "The automaton has been opened with 17 pawns of vis and a total of 14 pawns have been used to invest the device with enchantments, leaving up to thirty levels that could still be invested into the device.\n\nEach of the invested powers operates as a constant effect, but the automaton responds to commands and is able to suspend operation of these powers."
+    }
+
+}

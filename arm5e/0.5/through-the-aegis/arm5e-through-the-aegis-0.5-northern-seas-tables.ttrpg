@@ -1,0 +1,77 @@
+EXTENSION "ArM5_Through_the_Aegis_NorthernSeas_Tables" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Chapter Two: The Northern Seas tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf721a920fd0f9465cbefa9 ^"Talisman Attunements (Carles Magnus)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Attunement", "Bonus"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Table Name Source" STRING "editorial: the book titles the talisman, not the table; named for the item and its owner"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 11
+        }
+        TABLE {
+            "Iron:" "+7 harm or repel faeries"
+            "Sword:" "+4 harm human and animal bodies"
+            "Topaz:" "+4 leadership"
+            "Topaz:" "+4 strength, courage, pride"
+        }
+    }
+
+    #t540daae7e868beb6697873 ^"Covenant Summary (The Northern Seas)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Resource", "Build Points"]
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 13
+        }
+        TABLE {
+            "Enchanted Devices & Laboratories" "291"
+            "Library & Laboratory Texts" "408"
+            "Money & Wealth" "74"
+            "Specialists & Teachers" "155"
+            "Vis Sources & Stocks" "160"
+        }
+    }
+
+    #t6a7b14268e8b86c738e1a0 ^"Loyalty (The Northern Seas)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Factor", "Score"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 34
+        }
+        TABLE {
+            "Base Loyalty" "–30"
+            "Modifier Covenant Age" "+2"
+            "Turb Captain" "+5"
+            "Living Conditions" "0"
+            "Austerity" "0"
+            "Total" "–23"
+        }
+    }
+
+    #tba45e685b9890829077050 ^"Covenant Finances (The Northern Seas)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Expenditure", "Subtotal", "Reduction", "Total"]
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 34
+        }
+        TABLE {
+            "Buildings" "15" "–7.5" "7.5"
+            "Consumables" "30" "–6" "24"
+            "Laboratories" "11.5" "0" "11.5"
+            "Provisions" "75" "–24" "51"
+            "Tithes" "0" "0" "0"
+            "Wages" "30" "0" "30"
+            "Weapons and Armor" "3" "0" "3"
+            "Writing Materials" "6" "0" "6"
+            "Total" "" "" "133"
+        }
+    }
+
+}

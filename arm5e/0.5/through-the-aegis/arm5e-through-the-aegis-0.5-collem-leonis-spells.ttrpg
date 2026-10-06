@@ -1,0 +1,125 @@
+EXTENSION "ArM5_Through_the_Aegis_CollemLeonis_Spells" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Chapter Six: Collem Leonis spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t4d211badb1a2cea1c0ee74 ^"Voices from Hollow Spaces (Through the Aegis)" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Printed Name" STRING "Voices from Hollow Spaces"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "ReMe 25 R: Voice, D: Ring, T: Individual."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 137
+        }
+        DESCRIPTION "This spell is found in Houses of Hermes: True Lineages, page 140. It binds a ghost — which needs to be present or have been summoned previously — to a place or portable object. The necromancer needs other ways to convince or compel the ghost to subsequently do his bidding. (Base 5, +2 Voice, +2 Ring)"
+    }
+
+    #tce82ac3c9335a09b1b97fd ^"Day of Communion" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "MuVi Gen R: Voice, D: Sun, T: Group."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 137
+        }
+        DESCRIPTION "This spell is a Wizard’s Communion as found in ArM5, page 160, but with a longer duration. In accordance with the errata for Muto Vim such spells need a duration at least as long as the casting of the target spell. As Rituals as minimum are level 20 and take 15 minutes per magnitude to cast, a Muto Vim spell needs to last one hour or more, making Duration: Concentration impractical. All the magi in the group must add together the (level–2 magnitudes) of the Day of Communion they are casting. This number must exceed twice the level of the specified ritual being cast. As no more than one magus may join the group for each magnitude of the ritual being cast, this means that this spell is largely useless below level 20. It is highly useful for casting an efficient Aegis of the Hearth, which is no exception to the rule that all spells directly affecting targets must Penetrate. (Base effect, with two magnitudes devoted to the Duration.)\n\nAppearance: Ferra has a kind face with pale skin, a wrinkled forehead and neat, short hair turning from gray to white. Under thick eyebrows her eyes, which are starting to go cloudy from cataracts, often flash with excitement when hearing of an initiative or when getting an idea. Her once strong back is starting to curve and her sinewy limbs feel the winter’s chill more often than not."
+    }
+
+    #ta9db842318453a316ccd68 ^"Scent of the Gift" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Smell"
+            ^"Printed Stat Line" STRING "InVi 25, R: Per, D: Conc, T: Smell."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 140
+        }
+        DESCRIPTION "The spell allows the caster to smell any person within range who has The Gift, Gentle Gift, or Blatant Gift. It needs to Penetrate, and constitutes scrying if a magus is within range, unless cast forcelessly. (Base 10, +1 Conc +2 Smell)\n\nAppearance: Freki has a mane of sandy hair slicked back over her head and a strong jaw. Her expression is either one of contemplative silence with the occasional hungry look at people, or a wolfish grin showing her sharp teeth."
+    }
+
+    #tc22a7a71b9bb396e177aee ^"Gossip of the Marketplace" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Rego"
+            ^"Printed Stat Line" STRING "Cr(Re)Me 20, R: Eye, D: Sun, T: Ind"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 141
+        }
+        DESCRIPTION ": Compels target to pass on an implanted piece of information (Base 3, +1 Eye, +2 Sun, +1 Rego req, +2 complexity)"
+    }
+
+    #t4c1fbbbf85763f43fc6e8d ^"The Blinded Sentry" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeMe 5, R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 141
+        }
+        DESCRIPTION ": Target momentarily senses nothing, noticing only the initial touch. This is long enough for a single action to be performed unnoticed. (Base 4, +1 Touch)\n\nAppearance: Julia is a slightly built woman but her well-tailored clothing does a good job of hiding this. Her charming face is framed by dark blonde, slightly curly hair."
+    }
+
+    #ta79dd115d0c7d9f53d3abe ^"Circle of Recovery" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Printed Stat Line" STRING "CrCo 20, R: Touch, D: Ring, T: Circle."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 153
+        }
+        DESCRIPTION "Targets receive a +12 bonus to Recovery Rolls as long as they stay within the circle, and thus need to stay there for the entire recovery time. (Base 5; +1 Touch +2 Ring)"
+    }
+
+    #te397ff16a373c48a0a2c42 ^"Enter the Domain of Eir" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Circle"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrCo 30, Ritual, R: Touch, D: Mom, T: Circle."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 153
+        }
+        DESCRIPTION "Named after Eir the Norse goddess of healing. People within the circle have all their wounds improved by one step, and Light wounds are thus completely healed. Guideline from Houses of Hermes: Societates, page 100. (Base 25, +1 Touch)"
+    }
+
+}

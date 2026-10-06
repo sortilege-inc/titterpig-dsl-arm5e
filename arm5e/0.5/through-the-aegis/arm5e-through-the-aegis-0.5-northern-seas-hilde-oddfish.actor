@@ -1,0 +1,61 @@
+EXTENSION "ArM5_Through_the_Aegis_NorthernSeas_HildeOddfish" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Hilde Oddfish"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Hilde Oddfish (Chapter Two: The Northern Seas, p14): one character, its stat lines verbatim fields.
+
+    #t6f0a06e56fe162428597b5 ^"Hilde Oddfish" DEF {
+        EXTENDS #tHoHTL05ExampleCharacterAA ^"Example Character"
+        PROPERTIES {
+            ^"Role" STRING "Magus"
+            ^"Covenant" LIST [#t2b859a5f0c51942368a661 ^"The Northern Seas"]
+            ^"Characteristics" STRING "Int +1 (1), Per 0, Pre +3 (2), Com 0, Str +2, Sta 0, Dex 0, Qik +2 (2)"
+            ^"Size" STRING "+2"
+            ^"Age" STRING "65 (50)"
+            ^"Decrepitude" STRING "1 (0)"
+            ^"Warping Score" STRING "4 (20)"
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "The Gift; Hermetic Magus; Flawless Magic, Giant Blood, Mystery of the Epitome; Berserk, Heartbeast (Shark), Improved Characteristics, Lightning Reflexes; Chaotic Magic, Fury (blood in the water), True Friend (Carles); Careless Sorcerer, Clumsy Magic, Greedy, House Virtue Gained through initiation"
+            ^"Personality Traits" STRING "Shark +3, Angry +2, Loyal to Carles Magnus +2, Studious –1"
+            ^"Reputations" STRING "Afflicted +3 (House Bjornaer), Dangerous +2 (Normandy)"
+            ^"Combat" STRING "Dodge: Init: +2, Attack n/a, Defense +6/+4, Damage n/a Fist: Init: +2, Attack +4/+6, Defense +6/+4, Damage +2 Bite: Init: +2, Attack +5/+7, Defense +7/+5, Damage +2 Bludgeon: Init: +2, Attack +6/+8, Defense +6/+4, Damage +4 Adjustments for the Berserk Virtue"
+            ^"Soak" STRING "0/+2"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Abilities" STRING "Artes Liberales 3 (ritual magic), Athletics 3 (grace), Awareness 2 (in the water), Bjornaer Lore 5 (modifying initiation scripts), Brawl 4 (Bite), Carouse 1 (power drinking), Code of Hermes 3 (tribunal procedures), Faerie Lore 2 (faeries of the sea), Finesse 3 (fast casting), French 4 (slang), German 5 (slang), Heartbeast 6 (regain human form), Latin 5 (hermetic usage), Magic Lore 3 (giants), Magic Theory 6 (inventing spells), Order of Hermes Lore 2 (personalities), Parma Magica 5 (Animal), Penetration 5 (Corpus), Philosophiae 3 (ritual magic), Swim 5 (underwater maneuvering)"
+            ^"Arts" STRING "Cr 10, In 8, Mu 5, Pe 12, Re 7, An 13, Aq 8, Au 5, Co 13, He 11, Ig 5, Im 3, Me 5, Te 5, Vi 7"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" STRING "None"
+            ^"Encumbrance" STRING "0 (1)"
+            ^"Appearance" STRING "Hilde is very large, with broad shoulders and powerful arms and legs. Her wide grin is filled with too many teeth."
+            ^"Casting Sigil" STRING "Brine seeps from Hilde’s skin with each spell cast or device activated"
+            ^"Voting Sigil" STRING "A shark’s tooth made of smooth black stone"
+            ^"Spells Known" STRING "Image of the Beast (InAn 5) +22, Mastery 1 (penetration) Hunter’s Sense (InAn 30) +22, Mastery 1 (penetration) The Baleful Eye that Pains the Beast (PeAn 20) +26, Mastery 1 (penetration) Cripple the Howling Wolf (PeAn 25) +26, Mastery 1 (penetration) Viper’s Gaze (ReAn 15) +21, Mastery 1 (penetration) Subtle Taste of Poison and Purity (InAq 5) +17,"
+            ^"Heartbeast Statistics" DEF {
+                ^"Characteristics (Outer Heartbeast)" STRING "Int +1, Per –2, Pre –3/+3, Com –6, Str +7, Sta 0, Dex +2, Qik +1"
+                ^"Characteristics (Inner Heartbeast)" STRING "Int +1, Per –2, Pre –3/+3, Com –6, Str +10, Sta 0, Dex +2, Qik +1"
+                ^"Size" STRING "+3"
+                ^"Confidence" STRING "1 (3)"
+                ^"Virtues & Flaws" STRING "Berserk, Lightening Reflexes; Ferocity (hunting), Fury (blood in the water), Greedy, Tough"
+                ^"Qualities" STRING "Aggressive, Ambush Predator, Aquatic, Large Teeth, Loathsome Appearance"
+                ^"Personality Traits" STRING "Brave +3, Greedy +3, Cruel +2"
+                ^"Reputations" STRING "Deadly (mariners) 2"
+                ^"Combat" STRING "Large Teeth (Outer Heartbeast): Init +0, Atk +11, Def +6, Dam +10 Large Teeth (Inner Heartbeast): Init +0, Atk +11, Def +6, Dam +13"
+                ^"Soak" STRING "+2"
+                ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3/–3, –5, Unconscious"
+                ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+                ^"Abilities" STRING "Artes Liberales 3 (ritual magic), Awareness 2 (food), Bjornaer Lore 5 (modifying initiation scripts), Brawl 5 (Large Teeth), Code of Hermes 3 (tribunal procedures), Faerie Lore 2 (faeries of the sea), Finesse 3 (casting speed), French 4 (slang), German 5 (slang), Heartbeast 6 (regain human form), Hunt 4 (prey), Latin 5 (hermetic usage), Magic Lore 3 (giants), Magic Theory 6 (inventing spells), Order of Hermes Lore 2 (personalities), Parma Magica 5 (Animal), Penetration 5 (Corpus), Philosophiae 3 (ritual magic), Stealth 4 (stalking prey), Survival 3 (home terrain), Swim 5 (home terrain)"
+                ^"Appearance" STRING "The heartbeast is a noticeably large shark with scarred and pitted grey skin and a wide gaping mouth filled with jagged teeth."
+                ^"Mythic Feat" STRING "At the cost of 1 Confidence"
+            }
+            ^"Heartbeast Statistics Notes" STRING "Using the rules in *Houses of Hermes: Mystery Cults*, page 23, Hilde, in the shape of her shark Heartbeast, has stats as listed below. They include all modifiers for the House Bjornaer Inner Hearbeast (Epitome) Mystery Virtue. Any relevant Virtues and Flaws from human form still apply in animal shape, Social Status is irrelevant. No General Abilities from human form are usable except language and lores, but Arcane, Academic, and Supernatural Abilities are still accessible. In animal form she uses the General Abilities inherent to that beast at their fixed levels, although she may practice if she stays in animal form for an entire season, or spend experience gained on adventures while in animal form.\n\nPoint, the Inner Heartbeast may inflict a Heavy Wound on any creature of size +1 or less on a successful attack. The shark is an unattractive beast, hence its low Presence score. However, its Loathsome Appearance Quality makes it fearsome and its Presence is treated as +3 for the purposes of intimidation.\n\nIf using City & Guild, attacks by her Inner Heartbeast are sufficient to cause ships to make damage rolls."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 14
+        }
+        DESCRIPTION "Mastery 1 (quiet casting) The Wound that Weeps (PeCo 20) +26, Mastery 1 (penetration) Grip of the Choking Hand (PeCo 25) +26, Mastery 1 (penetration) The Withering Eye (PeCo 25) +26, Mastery 1 (penetration) Evisceration of a Thousand Knives (PeCo 30) +26, Mastery 1 (penetration) † Endurance of the Berserkers (ReCo 15) +21, Mastery 1 (quick casting) Demon’s Eternal Oblivion (PeVi 10) +20, Mastery 1 (penetration) Dreadful Bane of the Fae (PeVi 10) +20, Mastery 1 (penetration) † † Guardians of the Forests, page 60. Hilde has not enchanted any items since her unhappy apprenticeship as he is wedded to a Bjornaer sense of purity; she relies on herself and her magic only.\n\nShe has invented her own Longevity Ritual and this provides –6 to Aging Rolls."
+    }
+
+}

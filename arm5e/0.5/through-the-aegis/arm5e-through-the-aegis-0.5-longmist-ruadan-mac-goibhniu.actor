@@ -1,0 +1,74 @@
+EXTENSION "ArM5_Through_the_Aegis_Longmist_RuadanMacGoibhniu" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Ruadan mac Goibhniu"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Ruadan mac Goibhniu (Chapter Five: The Covenant of Longmist, p119): one creature, its stat lines verbatim fields.
+
+    #t8197ae4c4202aeadf11847 ^"Ruadan mac Goibhniu" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#ta1a53a5b77da0fd4b2083d ^"Longmist"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Faerie Might" STRING "40 + 10 (Terram)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence" STRING "4 (3)"
+            ^"Virtues and Flaws" STRING "Highly Cognizant; Humanoid Faerie; Faerie Sight, Faerie Speech, Lesser Power, Place of Power (the Otherworld burrows beneath Longmist), Reputation as Confidence, 2 x Ritual Power; Negative Reaction, Traditional Ward (The Dominion)"
+            ^"Reputations" LIST ["Crafter of Arms and Armor +4", "Prince of the Otherworld +3", "Descendant of Goibhniu +2", "Protector of Longmist +1 Combat: Dodge: Init –2", "Attack n/a", "Defense +6", "Damage n/a Fist: Init –2", "Attack +9", "Defense +6", "Damage +1 Mortal Blades: Init –2", "Attack +11", "Defense +6", "Damage +3 Knife of Sorrows: Init –2", "Attack +16", "Defense +7", "Damage +3 Great Sword of the Moon: Init +0", "Attack +20", "Defense +9", "Damage +10 This is a pretense and so covers all weapons that have been faerie made or faerie touched in some way. Mortal weapons are no better than bludgeons in his hands. The combat scores take into account his specially-crafted faerie weapons. They require specialist training from Ruadan to use", "at which point his great sword and knife provide a +5 bonus to attack."]
+            ^"Soak" INTEGER 14
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Area Lore: Ulaid 6 (sites of historic significance), Artes Liberales 3 (rhetoric), Animal Handling 2 (faerie hounds), Athletics 6 (running), Awareness 2 (ambushes), Bargain 7 (magi), Brawl 6 (knife), Craft Weapons and Armor 9 (swords), Etiquette 7 (maintaining the dignity of the Túatha Dé Danann), Faerie Speech 6 (poetry), Faerie Weapons 7 (great swords), Guile 3 (men), Intrigue 4 (against magi), Leadership 6 (in warfare), Organization Lore: Covenant of Longmist 5 (history), Organization Lore: Order of Hermes 5 (conflicts), Penetration 6 (using Arcane Connections), Teaching 6 (crafting weapons and armor)"
+            ^"Equipment" STRING "Armor forged from tempered night (Prot +14), a long slender sword of purest moonlight, and a dagger poisoned with loss."
+            ^"Vis" STRING "8 pawns Rego, +2 if in the Otherworld"
+            ^"Appearance" STRING "A tall and handsome man apparently in his early thirties, attractive were it not for his bright blue skin and red eyes. His blond hair is lustrous, and his oilblack armor fascinates in the torchlight."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 119
+        }
+        PERSONALITY_TRAITS {
+            "Regal" +3
+            "Manipulative" +2
+            "Forgiving" -2
+        }
+        POWERS {
+            #td47aa3c9668ddabcdce6b5 ^"Binding Oath (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Binding Oath"
+                    ^"Cost" STRING ": 10 points"
+                    ^"Initiative" STRING "(Qik – 20)"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Enforces the power of a solemnly sworn oath or contract between two or more parties. See Realms of Power: Faerie, page 56 for more details."
+            }
+            #t4f87ed7e8cceb93039e07d ^"The Blood of Goibhniu" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING ": variable points"
+                    ^"Initiative" STRING "(Qik – (2 x points spent))"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Allows Ruadan to craft faerie arms and armor out of unusual materials. Once crafted, these can be further enchanted. See later."
+            }
+            #tf069d76073f3a2d3e54ed4 ^"Grant Puissance in Craft Arms and Armor" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING ": 2 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "For each Might Point spent, Ruadan grants a +3 bonus to a single individual against all totals associated with crafting weapons and armor. The points spent are only regenerated when the bonus is withdrawn from the individual. The power must Penetrate at the time the bonus is bestowed."
+            }
+        }
+        DESCRIPTION "Ruadan mac Giobniu is not designed as a player character.\n\nHis Might is increased by 10 when he is within his place of power; the labyrinth beneath Longmist. This is also where he maintains his workshop, which provides a +2 bonus to totals to create new arms and armor due to the exotic supplies and magical fires within its forge. This allows him to make Superior weapons and armor, with the exception of swords which are Excellent, as described in City & Guild, page 69.\n\nWhile the quality of weapons and armor made by Ruadan is determined by the appropriate Pretense, his Blood of Goibhniu power allows him forge unusual substances. These could include moonlight, song, loss, anger, or the power of a storm. He may do this by expending 1 point from his Might Score, plus up to a further 9 points from his Might Score to enchant up to 45 levels of effect. This must be a single effect, and all the usual modifiers apply. Points spent in this way can only be regained by consuming faerie vis associated with the form of Vim, or by taking back the weapon and smelting it down."
+    }
+
+}

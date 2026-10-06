@@ -1,0 +1,117 @@
+EXTENSION "ARMDef_Through_the_Aegis_Didyma_MiletaAlexandersSnakeFamiliar" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Mileta: Alexander’s Snake Familiar"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Through_the_Aegis_Core_Ext"
+
+    # Mileta: Alexander’s Snake Familiar (Chapter Four: The Oracles of Didyma, p75): a familiar, its stat lines verbatim fields.
+
+    #tda5d50da966d6e17705d59 ^"Mileta: Alexander’s Snake Familiar" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#te665861b28dd8521c67fe4 ^"Didyma"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Season" STRING "Summer"
+            ^"Might" INTEGER 14
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence Score" STRING "2(5)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Greater Immunity (steel weapons); Arcane Lore, Improved Characteristics, Self Confident, Student of Infernal, True Friend (Alexander), Unaffected by The Gift; Dark Secret, Magic Monster; Reclusive, Tainted with Evil, Visions."
+            ^"Qualities" STRING "Greater Power (Aura of Rightful Authority), Greater Power (Awaken the Slumbering Corpse), Greater Power (Shadow Form); Gift of Speech, Improved Attack (grapple), Lesser Power (Vipers Gaze), Personal Power (Human Shape),"
+            ^"Animal Qualities" STRING "Ambush Predator, Crafty, Grapple, Keen Sense of Smell, Slippery, Venomous"
+            ^"Reputations" LIST ["Massive snake 1 (local)", "Reclusive laboratory assistant 1 (Hermetic)"]
+            ^"Combat" STRING "Grapple: Init +3, Attack +9, Defense +8, Damage n/a Fangs: Init +3, Attack +9, Defense +8, Damage +1 Mileta can inject venom into any fang wound she causes (Ease Factor 9, Incapacitating Wound; ArM5, page 180)."
+            ^"Soak" STRING "+4 (Sta + Bronze Cord)"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Equipment" STRING "None; black hooded toga in human shape."
+            ^"Vis" STRING "3 pawns of Animal in venom sac."
+            ^"Appearance" STRING "Mileta is an enormous iridescent-scaled snake, 6 inches in diameter and 20 feet long. She either hides deep in the Sacred Spring, or works (in human shape) in Alexander’s laboratory. When humanoid, she pretends to be an unGifted Branchidae, which few even of the covenfolk realize is a lie. Even fewer realize Alexander’s odd assistant is also the spring snake."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 75
+        }
+        PERSONALITY_TRAITS {
+            "Loyal (Alexander)" +3
+            "Reclusive" +3
+            "Serpent (essential)" +3
+            "Liar" +1
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "logic"
+            "Awareness" SCORE 4 SPECIALTY "food"
+            "Brawl" SCORE 4 SPECIALTY "grapple"
+            "Concentration" SCORE 3 SPECIALTY "Viper’s Gaze"
+            "Dead Language: Classical Greek" SCORE 5 SPECIALTY "Hermetic usage"
+            "Dead Language: Latin" SCORE 3 SPECIALTY "Hermetic usage"
+            "Guile" SCORE 4 SPECIALTY "magi"
+            "Hunt" SCORE 4 SPECIALTY "rats"
+            "Infernal Lore" SCORE 4 BONUS 2 SPECIALTY "demonic pacts"
+            "Intrigue" SCORE 4 SPECIALTY "plotting"
+            "Living Language: Romaic Greek" SCORE 5 SPECIALTY "archaic"
+            "Magic Theory" SCORE 6 SPECIALTY "inventing spells"
+            "Organization Lore: Didyma" SCORE 4 SPECIALTY "history"
+            "Stealth" SCORE 4 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "water"
+            "Swim" SCORE 5 SPECIALTY "stealthily"
+            "Teaching" SCORE 1 SPECIALTY "magic theory"
+        }
+        POWERS {
+            #t903d36cd5243fc334f1d92 ^"Aura of Rightful Authority (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Aura of Rightful Authority"
+                    ^"Cost" STRING "0 Points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "As the Hermetic spell (**ArM5**, page 151). Greater Power (20 levels, –2 Might Cost, +4 Init)"
+            }
+            #tdc3bc87afacf6e795ab998 ^"Awaken the Slumbering Corpse (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Awaken the Slumbering Corpse"
+                    ^"Cost" STRING "0 Points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As the Hermetic spell (**ArM5**, page 134), except Range: Touch, and Duration: Sun. Greater Power (25 levels, –3 Might Cost, +2 Init)"
+            }
+            #t7dc62232d6285d472beac3 ^"Human Shape (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Human Shape"
+                    ^"Cost" STRING "1 Point"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Mileta transforms into a tall, skeletal-thin, hairless woman; she retains her fangs. She is of both Corpus and Animal Form when so transformed. (R: Personal, D: Sun, T: Individual) Personal Power (20 levels, –1 Might Cost; *Realms of Power: Magic*, p 39) *Location* (both ways): Invested in familiar bond (**ArM5**, page 105)."
+            }
+            #tb7cdc9bad38c410c0d0340 ^"Shadow Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 Points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "If Mileta enters a shadow big enough to cover her, she can transform into a shadow. As shadow she has +4 to Stealth and cannot be damaged by physical attacks. (R: Personal, D: Concentration, T: Individual) Greater Power (30 levels, –3 Might Cost, +1 Init)"
+            }
+            #t27e2b1fd448a14292486d8 ^"Vipers Gaze" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 Point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Animal, Corpus"
+                }
+                DESCRIPTION "As the Hermetic spell (**ArM5**, page 120), but also targets humans (Corpus). Lesser Power (15 levels, –2 Might Cost"
+            }
+        }
+        DESCRIPTION "Mileta’s Dark Secret is that she is a demon transformed into a magic creature (centuries ago, long before she met Alexander). Mileta does not know why or how she translated into the Magic realm and in fact retains no loyalty to hell. This is a Dark Secret because many magi would refuse to chance Mileta’s true nature or loyalty. Note that it is impossible for Hermetic magic to be absolutely certain that she is not a demon pretending to be a magic creature, except via PeVi effects such as Demon’s Eternal Oblivion, which at best only reveal that a target is a demon weak enough to be affected by a particular casting. The transformation may have happened via a miracle or some long-lost magic. It is also possible that Mileta may have just been fooled or deluded into believing that she was once a demon.\n\nThe Familiar Bond was forged with an InMe Lab Total of 35. The Cords are: +1 Gold, +2 Silver, +2 Bronze."
+    }
+
+}

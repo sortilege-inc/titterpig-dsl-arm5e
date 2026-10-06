@@ -1,0 +1,100 @@
+EXTENSION "ArM5_Through_the_Aegis_Didyma_AgamenothPrinceOfTheMovingEarth" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Agamenoth: Prince of the Moving Earth"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
+
+    # Agamenoth: Prince of the Moving Earth (Chapter Four: The Oracles of Didyma, p92): one creature, its stat lines verbatim fields.
+
+    #t9bfb1ca8c935523cafc58d ^"Agamenoth: Prince of the Moving Earth" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#te665861b28dd8521c67fe4 ^"Didyma"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Aerial Power"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 10
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 5
+            ^"Confidence Score" STRING "1(3)"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Demon Prince of Earthquakes 3 (infernal)"]
+            ^"Hierarchy" INTEGER 8
+            ^"Soak" INTEGER 20
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Equipment" STRING "None."
+            ^"Weakness" STRING "Abhors water (causes no damage, but Agamenoth must flee water or spend a Confidence Point to remain in its presence for a diameter)."
+            ^"Vis" STRING "8 pawns of Terram in skin."
+            ^"Appearance" STRING "Agamenoth appears either as a gigantic black mound of earth and rock with sulfur leaking from cracks in the surface as it forms limbs and heads as needed, or as pitch black seam of coal."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 92
+        }
+        PERSONALITY_TRAITS {
+            "Fury" +6
+        }
+        COMBAT {
+            "Fist" INIT -1 ATTACK 12 DEFENSE 10 DAMAGE 10
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "leap"
+            "Brawl" SCORE 10 SPECIALTY "fist"
+        }
+        POWERS {
+            #ta90847ed88ce19c04cb3a1 ^"Coagulation (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Agamenoth can form a physical body (see Realms of Power: Infernal page 31). His preferred physical forms are a giant earth elemental, with black-cracked skin that stinks of sulfur (statistics given), or a deep black seam of coal several hundred paces wide and long."
+            }
+            #t0ae2a5ecadaad5f1b24c27 ^"Envisioning (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Agamenoth can appear in the dreams of a character (see Realms of Power: Infernal page 32)."
+            }
+            #t61a596e18149a101e04f98 ^"Lord of Moving Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Agamenoth can duplicate any named Hermetic Creo, Muto, or Rego Terram non-ritual spell from **ArM5**. The Might Cost is the magnitude of the spell. *Move Through Earth*, 0 points, constant, Terram: Agamenoth can move through earth (or stone) without penalty."
+            }
+            #tff2e63aa77da6f0e14e640 ^"Obsession (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Whenever a character sins in his presence, Agamenoth can infect the character with the Personality Trait: Fury +1; see Realms of Power: Infernal page 31. Whenever a botch is rolled for a character with this trait, roll an additional number of botch die equal to the value of the Personality Trait. If these die botch, the character enters a furious rage (see Fury, **ArM5** page 54). *Recalcitrance*, 0 points, Init, Constant: for any Hermetic Rego effect, including wards (and equivalent supernatural powers of any realm), Agamenoth is treated as if his Might is 60."
+            }
+            #tdc493f1d0d17e6792cba71 ^"Stir the Sulfurous Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "By using this power Agamenoth causes an earthquake, which also releases a stench of sulfur. The earthquakes triggered by Agamenoth cause extreme shaking within an area one mile in diameter, for a simple die worth of rounds. During each round of shaking, characters within the area must make a Dex + Athletics roll against an Ease Factor of 6 to avoiding falling over. For each vulnerable structure within the area (stone buildings, etc), make a single stress roll against an Ease Factor equal to the number of rounds of shaking, and add +3 to the Ease Factor for buildings more than 2 stories tall. Structures that fail this roll collapse. Characters inside collapsing structures take +15 damage due to falling masonry and may be trapped underneath the rubble. Outside the area, the earthquake can be felt for a distance of 100 leagues (300 miles) but causes no real damage. Agamenoth must Penetrate the the Magic Resistance of the area that suffers damage, so Aegis of the Hearth normally protects a site."
+            }
+        }
+    }
+
+}

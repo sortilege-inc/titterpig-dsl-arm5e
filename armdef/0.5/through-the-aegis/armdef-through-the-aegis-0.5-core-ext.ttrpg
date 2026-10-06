@@ -1,0 +1,27 @@
+EXTENSION "ARMDef_Through_the_Aegis_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # Through the Aegis is an EXTENSION on the arm5e edition (spec S13 composition). Its covenants and characters are
+    # .actor files; its one new type is a covenant library's holding.
+
+    #tb560f58a881643042a069b ^"Library Holding" DEF {
+        APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"]
+        PROPERTIES {
+            ^"Title" STRING REQUIRED
+            ^"Author" STRING
+            ^"Kind" ENUM ["Summa", "Tractatus", "Spell Mastery", "Casting Tablet", "Laboratory Text"]
+            ^"Level" INTEGER MIN 0
+            ^"Quality" INTEGER MIN 0
+            ^"Build Points" INTEGER MIN 0
+            ^"Section" STRING
+            ^"Printed Entry" STRING REQUIRED
+            ^"Source" STRING DEFAULT "Through the Aegis"
+        }
+        DESCRIPTION "A book, casting tablet or Laboratory Text a covenant's library holds, as Through the Aegis lists them: the entry as printed, with its title, author, kind, Level, Quality and Build Point cost where each reads unambiguously."
+    }
+
+}

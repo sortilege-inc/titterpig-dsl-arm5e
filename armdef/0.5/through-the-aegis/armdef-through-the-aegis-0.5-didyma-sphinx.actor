@@ -1,0 +1,53 @@
+EXTENSION "ARMDef_Through_the_Aegis_Didyma_Sphinx" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Sphinx"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Through_the_Aegis_Core_Ext"
+
+    # Sphinx (Chapter Four: The Oracles of Didyma, p89): one creature, its stat lines verbatim fields.
+
+    #t9370871aca3a2ef3c48981 ^"Sphinx (Through the Aegis)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#te665861b28dd8521c67fe4 ^"Didyma"]
+            ^"Printed Name" STRING "Sphinx"
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 2
+            ^"Virtues and Flaws" STRING "Increased Faerie Might; Faerie Sight, Faerie Speech, Lesser Power (Hound), Hybrid Form, Improved Characteristics, Personal Power (Flight), Personal Power (Shriek of the Impending Shafts); Narrowly Cognizant; Monstrous Appearance, Sovereign Ward (riddle solver), Wrathful; Visions"
+            ^"Animal Qualities" STRING "Accomplished Flyer, Aggressive, Ambush Predator, Tough Hide"
+            ^"Reputations" LIST ["Merciless hunter and riddle teller 3 (local)"]
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Pretenses" STRING "Athletics 5 (flying), Awareness 4 (prey), Brawl 5 (claws), Faerie Lore 5 (riddles), Faerie Speech 5 (riddles), Hunt 4 (prey), Stealth 4 (stalking), Survival 3 (Didyma plain)"
+            ^"Powers" STRING "Faerie Sight: This power allows the sphinx to automatically distinguish mundane things from glamor, to automatically identify another faerie’s glamor, and to automatically see an Arcane Connection (and know to whom it is an Arcane Connection, if that person is present). She can also use Faerie Sight to determine the motives and goals of other faeries (Awareness + Perception roll against an Ease Factor equal to Might of other faerie / 5). See Realms of Power: Faerie, page 50 for more details. Faerie Speech: This power allows the sphinx to duplicate the language spoken by her human audience. See Realms of Power: Faerie, page 50 for more details. Flight, 0 points, constant, Auram: The sphinx can fly and carry in her claws (or as a rider) another character of up to Size +1. (Personal Power; 25 spell levels) (Base 4, +2 Sun, +1 Constant; +10 two intricacy points to reduce Might Cost) Hound, 1 point, Init –10, Corpus: The sphinx knows the direction and distance to her quarry. (Lesser Power; 25 spell levels) (Base 3, +4 Arcane, +1 Concentration; +5 one intricacy points to reduce Might Cost) Shriek of the Impending Shafts, 0 points, Init –4, Herbam: As per the Hermetic spell (ArM5, page 136). (Personal Power; 25 spell levels) (Base 2, +2 Sun, +3 Hearing; +10 two intricacy points to reduce Might Cost)"
+            ^"Equipment" STRING "None."
+            ^"Vis" STRING "4 pawns of Auram in wings."
+            ^"Appearance" STRING "The sphinx has a lion’s body from which grows the upper torso and head of a woman (like a feline centaur), and she has the wings of an eagle. The sphinx hunts lone travelers on the Sacred Way, but avoids groups. Her favored tactic is to swoop onto her prey, grab him (successful grapple), gain altitude, and then drop him from a height. Each round, carrying a character, she gains 20 feet in altitude, and a falling character takes +1 Damage per two feet he falls (see ArM5, page 181)."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 89
+        }
+        PERSONALITY_TRAITS {
+            "Treacherous" +6
+        }
+        COMBAT {
+            "Claws" INIT -3 ATTACK 9 DEFENSE 7 DAMAGE 6
+            " Grapple" INIT -2 ATTACK 6 DEFENSE -3
+            " Teeth" INIT -2 ATTACK 9 DEFENSE 4 DAMAGE 5
+        }
+        DESCRIPTION "The sphinx’s Sovereign Ward means that she cannot harm a character who solves her riddle, and she must offer a riddle if a character requests one.\n\nHerakles and William hunt sphinxes (for vis), and a sphinx is a possible familiar for a Merinita magus. The sphinx can receive oracle visions from Apollo Didyma, if she drinks the sacred water at the covenant."
+    }
+
+}

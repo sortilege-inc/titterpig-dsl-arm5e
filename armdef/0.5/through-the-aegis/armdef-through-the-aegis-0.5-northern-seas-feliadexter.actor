@@ -1,0 +1,86 @@
+EXTENSION "ARMDef_Through_the_Aegis_NorthernSeas_Feliadexter" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Feliadexter"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Through_the_Aegis_Core_Ext"
+
+    # Feliadexter (Chapter Two: The Northern Seas, p28): one creature, its stat lines verbatim fields.
+
+    #t6462babb074f7fc8f0232c ^"Feliadexter" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#t2b859a5f0c51942368a661 ^"The Northern Seas"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Weak-Willed"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Claws: Init +3, Atk +6, Def +5, Dam +5 Tongue: Init +4, Atk +7, Def +7, Dam +0"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Weakness" STRING "Love, freely given"
+            ^"Vis" STRING "4 pawns of Mentem vis sordida found in the demon’s bowels"
+            ^"Appearance" STRING "Feliadexter’s true form is that of a spindly bony man with rips tearing through his skin. His mouth is forced open so far that his head always tips back, and out of it spills a massive tongue as wide around as a grog’s arm. The tongue flails around and it is this he uses in combat as a whip."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 28
+        }
+        PERSONALITY_TRAITS {
+            "Selfish" +5
+            "Cruel" +4
+            "Angry" +3
+            "Spiteful" +3
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "whip"
+            "Charm" SCORE 4 SPECIALTY "chosen victim"
+            "Folk Ken" SCORE 6 SPECIALTY "character faults"
+            "Guile" SCORE 6 SPECIALTY "imaginary faults"
+        }
+        POWERS {
+            #tf2235e5cdf554607c2eafc ^"Possession (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Possession"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "*See Realms of Power: The Infernal*, page 32."
+            }
+            #t86f6f1349cb45a0864627a ^"Coagulation (Through the Aegis)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, page 31."
+            }
+            #tb8061e20120a04ae975158 ^"Obsession (Cruelty)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, page 31."
+            }
+        }
+        DESCRIPTION "The possessing spirit of Feliadexter has a Possession Pool of 15, which should be used in place of the Might Score listed above. Points from this Possession Pool are not regained.\n\nHis Possession power has no other Might cost other than the points Feliadexter chooses to place within the host. This means that the demon can jump between hosts with no loss of power and, as the part has the powers of the whole, even split off further possessing spirits and place them within additional crewmembers."
+    }
+
+}

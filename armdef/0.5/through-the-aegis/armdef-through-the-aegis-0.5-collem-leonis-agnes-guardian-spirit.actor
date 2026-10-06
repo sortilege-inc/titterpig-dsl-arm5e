@@ -1,0 +1,70 @@
+EXTENSION "ARMDef_Through_the_Aegis_CollemLeonis_AgnesGuardianSpirit" {
+    NAME "Ars Magica Fifth Edition, Through the Aegis - Agnes, Guardian Spirit"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Through_the_Aegis_Core_Ext"
+
+    # Agnes, Guardian Spirit (Chapter Six: Collem Leonis, p156): one creature, its stat lines verbatim fields.
+
+    #t0ec1a14c5e60af1cc71551 ^"Agnes, Guardian Spirit" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#t05209705be91b9906fcea8 ^"Collem Leonis"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER -1
+            ^"Age" STRING "Not applicable (15)"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Greater Immunity (Perdo Vim), Ways of the Forest; Improved Characteristics, Tough, Unaffected by the Gift; Bound to Magic, Magical Air (free flaw); Ability Block (Logic), Ability Block (Martial), Anchored to the Forest, Generous, Incomprehensible, Small Frame"
+            ^"Qualities and Inferiorities" STRING "Focus Power (x2), Greater Power (x1); Improved Powers"
+            ^"Reputations" LIST ["None"]
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Powers" STRING "Further details of powers can be found in Realms of Power: Magic, pages 38–39 and 102 Donning the Corporeal Veil, 0 points, Init –1, Herbam: Agnes can create a corporeal, humanoid body made of wood. Her flesh is as tough as old oak, yet flexible like a human’s; her blood is a thick sap. The power must be reactivated at each sunrise and sunset and the body is subject to aging, deprivation and so on. To maintain her youthful appearance Agnes reforms a completely new body at least once per month. If the body is killed, Agnes is destroyed, but she can dissolve the body at will, and does so if in danger. (Design: Greater power) Crafter of Herbam, 1 point per magnitude, Init 1– [mag], Herbam: Duplicates any Hermetic Creo Herbam effect up to level 25. (Design: Focus Power, 3 mastery points spent to increase maximum level, 1 mastery point spent to increase Init) Master of Herbam, 1 point per magnitude, Init – [mag], Herbam: Duplicates any Hermetic Rego, or Muto Herbam effect up to level 20. (Design: Focus Power, 2 mastery points spent to increase maximum level)"
+            ^"Equipment" STRING "Simple dress in colors of the forest at the time, woven leather belt, bronze sickle"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "2 pawns of Herbam vis in leaves in hair"
+            ^"Appearance" STRING "Agnes appears as a young, healthylooking woman with golden, almond shaped eyes and dark, curly hair with oak leaves growing in it."
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 156
+        }
+        PERSONALITY_TRAITS {
+            "Generous" +3
+            "Forest Lover" +3
+            "Whimsical" +2
+            "Brave" -1
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Area Lore: Sauerland" SCORE 3 SPECIALTY "geography"
+            "Awareness" SCORE 3 SPECIALTY "searching"
+            "Concentration" SCORE 3 SPECIALTY "spirit powers"
+            "Finesse" SCORE 4 SPECIALTY "Herbam"
+            "Forest Lore" SCORE 3 SPECIALTY "native forest"
+            "High German" SCORE 5 SPECIALTY "magi"
+            "Latin" SCORE 1 SPECIALTY "Hermetic"
+            "Leadership" SCORE 2 SPECIALTY "inspiration"
+            "Magic Lore" SCORE 2 SPECIALTY "creatures"
+            "Organization Lore: Covenant of Collem Leonis" SCORE 3 SPECIALTY "history"
+            "Penetration" SCORE 4 SPECIALTY "Herbam"
+            "Stealth" SCORE 5 SPECIALTY "natural areas"
+        }
+        DESCRIPTION "Agnes is a minor forest spirit who was bound voluntarily to Holzstein’s laboratory and helped him in his day. She has been lonely since the laboratory was abandoned, but has taken adequate care of the sanctum. She is suspicious of intruders after so long, but if treated with respect and kindness she will happily bond with a new master."
+    }
+
+}

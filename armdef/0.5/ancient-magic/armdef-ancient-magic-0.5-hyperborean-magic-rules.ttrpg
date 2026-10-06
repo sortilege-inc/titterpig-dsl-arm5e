@@ -1,0 +1,107 @@
+EXTENSION "ARMDef_Ancient_Magic_HyperboreanMagic_Rules" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Eight: Hyperborean Magic rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #te7983b002ebc77284f8d68 ^"Hymn Recitation Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Reciting the Hymns"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Hymn Recitation Total" "Communication + Hymn Ability + modifiers + aura"
+        }
+    }
+
+    #t5064a38e1ae5a524af3ffe ^"Hymn Recitation Ease Factor" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Reciting the Hymns"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Hymn Recitation Ease Factor" "(total level of Power(s) + Power level modifiers) / 3"
+        }
+    }
+
+    #t50b1a934e986a3a7086e74 ^"Enchantment Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Hyperborean Enchantments"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 116
+        }
+        FORMULAS {
+            "Enchantment Total" "Intelligence + Hymn Ability + modifiers + aura"
+        }
+    }
+
+    #t511183571c7d263c396ec5 ^"Enchantment Ease Factor" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Hyperborean Enchantments"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 116
+        }
+        FORMULAS {
+            "Enchantment Ease Factor" "(total level of Power(s) + modifiers) / 3"
+        }
+    }
+
+    #t5dfd84a9ef40b90a2bc247 ^"Locating the Basilica" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Finding the Basilica"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 121
+        }
+        FORMULAS {
+            "Locating the Basilica" "Intelligence + Order of Hermes Lore + stress die vs. Ease Factor 21"
+        }
+    }
+
+    #t7033d5de79ac600e01f86b ^"Illumination Control Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Illumination: Hyperborean Warping"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Illumination Control Roll" "Stamina + Concentration + highest Hymn Ability score + stress die"
+        }
+    }
+
+    #teab5b7eead4c447ff09d9c ^"Illumination Ease Factor" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Illumination: Hyperborean Warping"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Illumination Ease Factor" "character’s updated Warping Score + number of Warping Points gained + aura + modifiers + stress die"
+        }
+    }
+
+    #tf9b507f2c57d794b83f08d ^"Finding Hymns, the Easy Way Formula" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Formula Name Source" STRING "editorial: the book prints no label for this formula; named for the section it stands in"
+            ^"Rules Section" STRING "Finding Hymns, the Easy Way"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 107
+        }
+        FORMULAS {
+            "Formula" "+ stress die vs. Ease Factor 21"
+        }
+    }
+
+}

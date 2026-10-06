@@ -1,0 +1,204 @@
+EXTENSION "ArM5_Ancient_Magic_GrigoriMagic_Creatures" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Five: Grigori Magic creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t12a87de74abde0c013ac36 ^"Shamsiel, Holy Watcher" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 3
+            ^"Age" STRING "n/a (70)"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Reputations" LIST ["Rebellious Angel 4 (among Christian and Jewish Theologians)", "Teacher of Secrets 3 (among Christian and Jewish Theologians)"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Inc. (25–32)"
+            ^"Equipment" STRING "None"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "Six pawns of Vim in his skull."
+            ^"Appearance" STRING "Shamsiel appears as a gigantic but frail old man, with a wizened face and a shaven head. He dresses in sackcloth and rarely raises his eyes to look at someone when he speaks to them. He is deeply shamed by the evil that has been wrought through his teachings, and he has resigned himself to the punishment he will receive on the day of judgment."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 72
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Patient" +3
+            "Shameful" +3
+        }
+        COMBAT {
+            "Fist" INIT 0 ATTACK 0 DEFENSE 0 DAMAGE 0
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 6 SPECIALTY "astronomy"
+            "Concentration" SCORE 8 SPECIALTY "prayer"
+            "Divine Lore" SCORE 7 SPECIALTY "angels"
+            "Magic Lore" SCORE 7 SPECIALTY "traditions"
+            "Penetration" SCORE 4 SPECIALTY "humans) Philosophiae 8 (ceremonial magic"
+            "Teaching" SCORE 8 SPECIALTY "magic"
+            "Theology" SCORE 6 SPECIALTY "angels"
+        }
+        POWERS {
+            #t3db5468c4de3672d517631 ^"Enfolding (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Enfolding"
+                    ^"Cost" STRING "2 or 10 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "When the pious are in danger or torment, Shamsiel may grant them comfort, imparting a moment of peace and mercy. This power renders the target’s soul wholly safe and protected for a short time. While Enfolded, the target’s soul (and mind) may not be targeted by any supernatural power of any kind. This power only lasts for a few scant moments, but for the target it is timeless and can seem to stretch to a lifetime. Shamsiel may also Enfold a person’s body (costing 10 Might points), rendering him completely invulnerable to magic, pain, damage, fatigue, wounds, or death, although this power only lasts for a very short period of time (no longer than one combat round). This power is most often used on a member of the faithful who is about to be martyred or suffer terribly."
+            }
+            #t7e4f7454766c423a65a752 ^"Holy Magic (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Holy Magic"
+                    ^"Cost" STRING "1 or more points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "by effect"
+                }
+                DESCRIPTION "Shamsiel can duplicate any effect of Hermetic or holy magic, at a cost of 1 Might Point for every two magnitudes of the effect. There is no limit, other than his remaining Might Pool, on the number of points he can spend on a single effect. This includes Ritual effects, for which he needs neither vis nor long periods of time."
+            }
+            #tf7c1fae04f71c3a2712b3b ^"Grant Secret" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Shamsiel may use this power to grant the Virtue Shamsiel’s Secret. The target must remain with Shamsiel for a full year to receive the Virtue."
+            }
+        }
+        DESCRIPTION "Despite his current state, Shamsiel is still an angel, with all the traits described on page 18 of *Realms of Power: The Divine*. As a Grigori, he has been locked permanently in his Mantle, and due to his imprisonment, he has lost his *Envisioning* Power."
+    }
+
+    #tf3ab11a1d7b23e469ee131 ^"Azael, Fallen Watcher" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Duke of Deluders (Watchers)"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER 3
+            ^"Age" STRING "n/a (35)"
+            ^"Confidence Score" STRING "4 (17)"
+            ^"Virtues and Flaws" STRING "Good Teacher, Puissant Guile"
+            ^"Reputations" LIST ["Rebellious Angel 4 (among Christian and Jewish Theologians)", "Teacher of Secrets 2 (among Christian and Jewish Theologians)"]
+            ^"Combat" STRING "Broken Sword: Init +5, Attack +10, Defense +10, Damage +5 (The sword was broken in his battle with Raphael, but Azael retains it anyway.)"
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32)"
+            ^"Weakness" STRING "Ordering"
+            ^"Equipment" STRING "None"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "Eight pawns of Perdo in the sword."
+            ^"Appearance" STRING "Like all the fallen Grigori, Azael is solid black and taller than a giant. No details can be made out other than the hundreds of eyes that cover his featureless skin. He is eternally silent, communicating directly into the minds of his pupils."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 73
+        }
+        PERSONALITY_TRAITS {
+            "Hate of God" +5
+            "Destructive" +3
+            "Credible" +3
+            "Sly" +2
+        }
+        ABILITIES {
+            "Athletics" SCORE 6 SPECIALTY "endurance"
+            "Awareness" SCORE 5 SPECIALTY "battle"
+            "Craft Weapon" SCORE 7 SPECIALTY "swords"
+            "Guile" SCORE 7 BONUS 2 SPECIALTY "magi"
+            "Infernal Lore" SCORE 6 SPECIALTY "hierarchies"
+            "Magic Lore" SCORE 4 SPECIALTY "charms"
+            "Single Weapon" SCORE 6 SPECIALTY "sword"
+            "Teaching" SCORE 5 SPECIALTY "crafts"
+            "Theology" SCORE 6 SPECIALTY "angels"
+        }
+        POWERS {
+            #tc0194b764b1988217b7add ^"Grant Secret" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Azael may use this Power to grant the Virtue Azael’s Secret. The target must remain with Azael for a full year to receive the Virtue. Any use of this Power includes the effects of Corrupted Knowledge as well. Unlike other Grigori Secrets, this is tied to the Infernal realm."
+            }
+            #td82abd6ba29b7f8d0142ba ^"The Wordless Conversation (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Wordless Conversation"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, Chapter 6."
+            }
+            #t931df58d06581b87ec72d4 ^"Corrupted Knowledge (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Corrupted Knowledge"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, Chapter 6."
+            }
+            #t9142a8039082b83c3b58ff ^"Coagulation (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, Chapter 4."
+            }
+            #tb3daca3008f025411b2877 ^"Obsession (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Arrogance. See *Realms of Power: The Infernal*, Chapter 4."
+            }
+            #tba04ccafc4eb869f3f70ab ^"Delusion (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Delusion"
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, Chapter 4."
+            }
+            #t0a12c954c18b8c58f7ac77 ^"Duplicate the Magi’s Destruction" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "variable Form"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, Chapter 4."
+            }
+        }
+    }
+
+}

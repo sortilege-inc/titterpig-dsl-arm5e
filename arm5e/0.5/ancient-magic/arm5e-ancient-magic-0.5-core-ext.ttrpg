@@ -1,0 +1,81 @@
+EXTENSION "ArM5_Ancient_Magic_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Ancient Magic is an EXTENSION on the arm5e edition (spec S13 composition). The types below are the ones the
+    # book adds: the breakthrough points each chapter requires to integrate its magic, and the Hyperborean hymns, their
+    # Powers, and the Powers of Hyperborean relics (Chapter Eight).
+
+    #t60051c4d8aa56491728169 ^"Breakthrough Requirement" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Integrates" STRING REQUIRED
+            ^"Breakthrough Points" INTEGER REQUIRED
+            ^"Breakthrough Kind" STRING
+            ^"Breakthrough" STRING
+            ^"Printed Requirement" STRING
+            ^"Rules Section" STRING
+            ^"Source" STRING DEFAULT "Ancient Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Each chapter of *Ancient Magic*  details the number of breakthrough points required to integrate a specific part of that ancient magic into Hermetic Theory."
+    }
+
+    #t90c095c9b38d9aeacee505 ^"Beautiful Name of Light" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Table Columns" LIST OF STRING
+            ^"Source" STRING DEFAULT "Ancient Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Although the Hyperborean priests who worshiped at the basilica once knew many hundreds of sacred names, in the 13th century only the Seven Beautiful Names of Light remain. These names are the sacred epithets of Apollo Phoebus."
+    }
+
+    #tac091134aaa59eca4f6f30 ^"Hymn Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Hymn" STRING
+            ^"Range" STRING REQUIRED
+            ^"Duration" STRING REQUIRED
+            ^"Target" STRING REQUIRED
+            ^"Forms" LIST OF STRING
+            ^"Penetration" STRING
+            ^"Uses" STRING
+            ^"Effect Design" STRING
+            ^"Ease Factor" STRING
+            ^"Level Cost" STRING
+            ^"Principle" STRING
+            ^"Printed Stat Line" STRING
+            ^"Printed Totals" STRING
+            ^"Source" STRING DEFAULT "Ancient Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "The Hyperborean hymns, such as the Seven Beautiful Names of Light, grant spell-like Powers which, for convenience, have their level determined using the Hermetic Arts guidelines in Chapter 9: Spells of **Ars Magica Fifth Edition**."
+    }
+
+    #t73d2fb798f0fdc97ad886c ^"Relic Power" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Technique" STRING REQUIRED
+            ^"Form" STRING REQUIRED
+            ^"Level" INTEGER
+            ^"Requisite" STRING
+            ^"Penetration" STRING
+            ^"Uses" STRING
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Hymn" STRING
+            ^"Principle" STRING
+            ^"Effect Design" STRING
+            ^"Printed Effect Line" STRING
+            ^"Source" STRING DEFAULT "Ancient Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "Hyperborean relics commonly appear as either a bouquet of black feathers held together by beeswax, or a large tapestry with beautiful images and sacred words and prayers woven into the fabric. Relics typically have between two and five of the following Powers. These could also be used as examples of hymn Powers."
+    }
+
+}

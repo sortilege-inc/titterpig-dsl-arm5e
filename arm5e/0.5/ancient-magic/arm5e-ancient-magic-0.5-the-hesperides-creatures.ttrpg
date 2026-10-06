@@ -1,0 +1,190 @@
+EXTENSION "ArM5_Ancient_Magic_TheHesperides_Creatures" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Seven: The Hesperides creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tec10ae6ab139f9b5b2b189 ^"The Hesperides" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Imaginem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Personality Traits" STRING "Vary, as guided by the description given below."
+            ^"Combat" STRING "The Hesperides refrain from combat, since Ladon is so much more powerful than they are. They may support him with missile fire. The Hesperides use versions of Guan weapons, and envenom them with herbal poisons unique to the garden. Asteropê’s Tree Saw: Init +1, Attack +6, Defense +4, Damage +5 Asteropê’s Rocks: Init 0, Attack +6, Defense +5, Damage +3 Erytheia’s Javelins: Init 0, Attack +8, Defense +6, Damage +3 Erytheia’s Long Dueling Stick: Init +3, Attack +9, Defense +7, Damage +5 Hespra’s Short Bow: Init –2, Attack +10, Defense +6, Damage +8 Hespra’s Tabona: Init 0, Attack +5, Defense +4, Damage +1 A tree saw is used for lopping off branches while pruning. It has a slat blade, with an edge of obsidian glass, mounted at right angles on a four-foot long pole. Wielding it in combat requires the Great Weapon Ability. Asterope’s saw seals cut branches with a layer of hot tar. This power has a Penetration of +1 (Ignem), and causes an extra Light Wound per injury. This does, however seal and cauterize wounds, which prevents them from becoming infected if their bearer survives the battle. Asteropê’s sharpened rocks were used for shying birds out of the Garden before Ladon arrived. On any successful strike, they render any bird unconscious (Penetration 25, Animal), a power that affects Bjornaer magi with bird heartbeasts, even in human form. These are coated with a sticky herbal poison that causes characters injured to fall asleep, after one combat round’s delay, if they fail a Stamina roll with an ease factor of 12. These are coated with a sticky herbal poison that causes a Heavy Wound with each successful strike, unless the character makes a Stamina roll with an Ease Factor of 9."
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "6 pawns of Imaginem vis each, in their faces."
+            ^"Appearance" STRING "The three sisters have a strong family resemblance. Each is tall and fair. They have soulful, brown eyes."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 98
+        }
+        POWERS {
+            #tc312713f657141aeb1f86d ^"Brilliance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Each Hesperid has a power that causes blindness. Erytheia makes everything — including the victim’s eyeballs — glow with a ruby light so that shapes are no longer discernable. Hespera drains all light, except for a single, useless, point, from her target’s field of vision. Asteropê fills her victim’s sight with flashes and sparks."
+            }
+            #t9912f5e7c28dc063a5a136 ^"Embody the Coming Night" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The Hesperides are aspects of daimonic creatures, which are described more fully in *The Mysteries Revised Edition*. They can see perfectly well in darkness, and can navigate perfectly by the stars. They can shed their mortal bodies, which crumble into dust, and create new ones when their stars rise."
+            }
+            #tbd0e5508a6a3346489bfad ^"Harbingers of Night" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The Hesperides are the heralds of night, and may command creatures that are part of night’s domain."
+            }
+            #t845b4f6f417f6fc1ffb65f ^"Summon Tools" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "As tenders of the garden, these nymphs have the power to summon required tools, including their weapons."
+            }
+        }
+        DESCRIPTION "Asteropê, freckled and with honeyblond hair, personifies the star-lit sky. She remains loyal to her mistress.\n\nShe has never left the Garden, so her martial skills are the poorest of the three sisters. Asteropê wishes to rescue Hera from whatever entrapment must have befallen her. She has no idea how to do this, but she would like to begin by searching the cities of the Greek East for clues. The Dominion comes as a rude and frightening shock to her. Unable to seek clues herself, and poor at combat, she needs allies.\n\nErytheia, bronzed and with redgold hair, embodies sunset. She looks older than her sisters, and is the closest to humanity. She had a mortal lover and a son. Her time with her husband allowed Erytheia to learn the use of the shepherd’s staff, as a weapon and means of vaulting. Erytheia believes the Olympians abandoned her. She has resented her servitude ever since Hera forced her to tend the Garden instead of raising her child. She would like to become a faerie power and usurp the worship that Juno enjoys on the island. She does not understand the process of transformation, so she would like to consult the magi of Merinita, and Arcadian potentates.\n\nHespera, pale and with whitegold hair, incarnates the evening star. She willingly served the Olympians, and her occasional membership of the retinue of Diana has made her skilled with a bow. Despite her previous loyalty, Hespera believes the time of the Olympians is done, and the titans that they imprisoned should be released. The titan she is most concerned for is her father, Atlas. Characters with even basic knowledge of classical mythology know that he holds up the sky, so releasing him may have apocalyptic consequences. Because Atlas was a general during the war of the gods, however, he knows how to enter the titans’ base on Mount Orthys. This is a regio that the Order has yet to locate, and Hespera may suggest this as an enticement for magi to find him."
+    }
+
+    #t4ee7c0000436a037bd3c80 ^"Ladon" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 45
+            ^"Form" STRING "Animal"
+            ^"Characteristics" STRING "Int +6, Per +6, Pre +3, Com +3, Str +3 (heads) +6 (main body), Sta +4, Dex +6, Qik +4"
+            ^"Size" INTEGER 8
+            ^"Confidence Score" STRING "3 (12)"
+            ^"Reputations" LIST ["Dead (Students of the Classics) +5", "Watchful (Students of the Classics) +3"]
+            ^"Combat" STRING "Up to 100 Bites: Init +6, Attack +20, Defense +15, Damage +10 Constriction: Init n/a, Attack n/a, Defense +15, Damage +15 Spit Blood: Init +6, Attack +12, Defense 0, Damage n/a† Trample and Constrict: Init –3, Attack +10, Defense +15, Damage +20‡ +6 to Defense against grapple attacks Ladon can inflict trained group damage without the assistance of other creatures. He is able to attack one person with up to 12 heads at a time. When acting as if he is a group, Ladon has a Brawl skill of 9 and acts as if the leader of his group has a Leadership skill of 12. This reflects the seamless way his heads cooperate. If Ladon makes a successful bite attack, he may choose not to do damage, but instead to coil about a victim, immobilizing him. When this occurs, the victim cannot attack using melee weapons, and Ladon automatically does damage in each succeeding round, without requiring an Attack or Defense roll. The victim may still Soak damage. At the end of each round, including the round in which Ladon chooses not to do damage, the character may attempt to break free by an opposed Strength roll. To do this, he rolls Strength + a stress die, and compares it to Ladon’s Strength + a stress die. Success indicates that the character frees himself, and may attack normally in the following round. For each character assisting him in breaking free, the character may add +1 to his Strength roll, but assistants are unable to attack Ladon in rounds when they do this. A character unable to break free for 30 seconds (six combat rounds) must make deprivation rolls, as described on ArM5, page 179. Alternately, Ladon is able to leave his victim’s head free while constricting, and can choose not to damage his captives. This allows him to converse with his prey, or force them to listen to him. He can also attempt to bite the head off a constricted opponent, but may only use one head to attempt this each round. † Ladon is not poisonous, but his blood can cause skin cankers (cancers). He rarely chooses to use this to his advantage, but if pressed he can bite one of his tongues and spit gobbets of his poisoned blood at his attackers. This has a range of only five paces, and can harm only one individual per head at a time. If Ladon bites his own tongue to provide the blood, he takes a Light Wound before the first use of this power by any given head. For each serious injury he takes, Ladon can lick the blood from the cut in one round, and spit it the next, without further injury to himself. The Hesperides know Ladon’s blood causes cankers, and dip weapons in it if they consider it necessary. The cankers do not affect combat outcomes; for more information, see the vis entry below. ‡ Ladon prefers not to use his trample and constrict attack, but characters who decide to attack his vitals may provoke him. If his trample attack is successful in the first round, he does no damage, but coils his thick tail about his enemy. He automatically does constricting damage in subsequent rounds. Characters may attempt to break free, as above, but find it far more difficult, because of the crushing strength of Ladon’s body."
+            ^"Soak" INTEGER 25
+            ^"Fatigue Levels" STRING "OK, 0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–13), –3 (14–26), –5 (27–39), Incapacitated (40–52)"
+            ^"Abilities" STRING "A very wide variety, gained through Exposure, by using Ptolemaic coordinates to spy on people. He has many Lores of 9."
+            ^"Vis" STRING "9 pawns of Creo vis in his blood. Characters who touch Ladon’s blood with bare skin develop virulent skin cancers. This effect has a Penetration of 20, and is based on the random generation of life, so resistance is provided by whatever Form the target’s body expresses. A character who has the cancer excised while it remains small survives. This requires a character to notice a strangely shaped, painless mole or freckle, which may develop years after the battle. If they have it checked by a character who makes an Intelligence + Medicine roll against an Ease Factor of 12, it can be removed with a Dexterity + Chirurgy roll against an Ease Factor of 6, causing a Light Wound. If untreated, the character develops wasting symptoms after a further year, and dies after another six months. Magi who cast longevity rituals using Ladon’s vis develop wasting symptoms immediately, and die within six months, unless magical healing occurs. In this case, the blood is so intimately tied to the character’s life that its cancer-generating properties ignore Magic Resistance. If Ladon’s blood is spilled on the ground, a dragon tree grows."
+            ^"Appearance" STRING "Ladon is a 100-headed hydra, with scales of a wide variety of autumnal hues. His heads, individually, are large enough to swallow an unconscious human. He sometimes pretends one of his heads is the dominant head, that his heads have arguing personalities, or that a particular head can make dreadful magical attacks. These are all subterfuges."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 100
+        }
+        PERSONALITY_TRAITS {
+            "Inquisitive" +5
+            "Loyal to Hera" +5
+            "Sneaky" +3
+            "Bored" +1
+            "Vain" +1
+        }
+        POWERS {
+            #tdb2e3de6cd304cbaafec94 ^"Effectively Tireless" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Ladon’s heads sleep in sequence, so he is always conscious. If struck by a spell, or if he loses a Fatigue level that would cause unconsciousness, Ladon instead sends one of his 100 heads to sleep. This also alters his Fatigue levels, and is accounted for in the statistics above."
+            }
+            #t4bd7ca817616a378ab6f5b ^"Regenerate" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Ladon can shed his skin at sunset to renew his strength. This process takes an hour, but heals him of all wounds, and dispels all unwanted enchantments upon him. If his body is killed, he can create a fresh one as his constellation, Draco, rises. For more information, refer to Appendix C: Daimons, in"
+            }
+            #t8a32779a1d6e9c26009a56 ^"The Mysteries Revised Edition. Speak Many Languages" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Ladon naturally speaks many languages. This includes mystical languages, which allows him to speak to trees, stones, and other usually mute things. It does not include Adamic, described in Chapter 1: The Language of Adam. *See*, 0 points, Init 0, Mentem; Ladon has the ability to be completely aware of the details of his surroundings, and to make inferences from those observations. This allows him to determine a great deal about people. He can see in the dark, and is able to see invisible creatures. He can view places linked to Arcane Connections. Coupling this power with Ptolemy’s coordinates lets him observe many interesting places."
+            }
+        }
+    }
+
+    #t2b24259357d45d43635912 ^"Serpent-dryad Base Scores" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -4
+            ^"Confidence Score" STRING "1"
+            ^"Virtues and Flaws" STRING "Lightning Reflexes, but this is lost once the serpent develops the See Power."
+            ^"Personality Traits" STRING "Vary, but usually Inquisitive +1"
+            ^"Reputations" LIST ["Venomous 4 (even if untrue)"]
+            ^"Combat" STRING "Bite: Init +3, Attack +8, Defense +7, Damage –7 Constriction: Init n/a, Attack n/a, Defense +7, Damage –7 +6 to Defense against grapple attacks See Ladon’s statistics for a description of constriction attacks."
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4)"
+            ^"Vis" STRING "1 pawn of Herbam, per 5 Might, in tree. Dragon trees can technically be harvested for vis, but their serpents hate that sort of thing."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 102
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "prey"
+            "Brawl" SCORE 2 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "rodents"
+            "Stealth" SCORE 4 SPECIALTY "stalking prey"
+            "Survival" SCORE 3 SPECIALTY "grassy areas"
+        }
+        POWERS {
+            #tce0645cdc21581160f7d82 ^"Effectively Tireless" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "After the serpent has five or more heads, it learns to rest them in sequence. If struck by a spell, or upon losing a Fatigue level that would cause unconsciousness, the serpent instead sends one of its heads to sleep."
+            }
+            #tc9d828ffafa9645af1102a ^"Regenerate" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "If the serpent is destroyed, it is regenerated by its tree in lieu of flowering the following spring. If the tree dies, however, this kills the serpent instantly."
+            }
+            #t0bd4cc5a009fc67f38cb73 ^"Venomous Bite (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Venomous Bite"
+                    ^"Cost" STRING "0 Points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Some few of Ladon’s offspring are venomous. When one of these creatures attacks, compare its Attack Advantage to the victim’s armor Protection (not his Soak). If the serpent’s advantage is higher, the victim suffers the effects of adder venom as listed in the Poison Table on ArM5, page 180,, regardless of whether the bite inflicts an actual wound. The storyguide may adjust the victim’s effective Protection for special circumstances; for instance, high boots might offer an effective Protection +3 against the serpent’s special attack even though they don’t protect against normal attacks."
+            }
+        }
+    }
+
+}

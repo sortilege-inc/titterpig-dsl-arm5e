@@ -1,0 +1,44 @@
+EXTENSION "ArM5_Ancient_Magic_DefixioMagic_Tables" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Three: Defixio Magic tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #taa2fd5d4bdfd0b0759a99f ^"Defixio Ease Factor Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Example"]
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 43
+        }
+        TABLE {
+            "0" "The target’s full name and an Arcane Connection to the target are incorporated into the defixio: “Marie the Perfumier, daughter of Claude,” and a lock of Marie’s hair."
+            "3" "Only the target’s full name is used in creating the defixio: “Marie the Perfumier, daughter of Claude.”"
+            "6" "Only the target’s pseudonym or a nickname is known: “Jarvis,” “Lucky,” or “The Weasel.”"
+            "9" "The target is precisely described without using his full name or a pseudonym: “The shield grog of Carolus,” “the covenfolk of Semita Errabunda,” or “the person who stole my cloak.”"
+            "12" "The target cannot be known at the time of creation: “Any person who defiles my grave,” “my killer,” or “the next person to attack me.”"
+        }
+    }
+
+    #t70b8c44d4f608547b27e61 ^"Defixio Lore Cults" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Cult", "Technique and Form"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 43
+        }
+        TABLE {
+            "Cult of Ceres" "Creo Mentem"
+            "Cult of Hecate" "Perdo Corpus/Animal"
+            "Cult of Minerva" "Rego Corpus/Animal"
+            "Cult of Pluto" "Rego Mentem"
+            "Cult of Proserpina" "Muto Mentem"
+        }
+        DESCRIPTION "For every level in Defixio Lore, the character may choose one of the following cults:"
+    }
+
+}

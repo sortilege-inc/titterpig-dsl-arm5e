@@ -1,0 +1,48 @@
+EXTENSION "ARMDef_Ancient_Magic_HyperboreanMagic_Abilities" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Eight: Hyperborean Magic abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t406ce280060744eb62273e ^"Hyperborean Hymn" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Supernatural Ability: Hyperborean Hymn"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Specialties" LIST OF STRING ["specific effects", "in specific circumstances", "involving specific people"]
+            ^"Printed Specialties" STRING "Specialties: specific effects, in specific circumstances, involving specific people. (Supernatural)"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 104
+        }
+        DESCRIPTION "Your character knows a sacred name of Apollo Phoebus, and has memorized the complex and intricate prayers, formulas, and vowel strings needed to perform a recitation. There is a different, unique Ability for each Hyperborean hymn. The hymns are recited in the Hyperborean language; however, your character does not need to know the language to recite a hymn, as the necessary words are learned by rote.\n\nFor each level of a Hymn Ability, your character gains 15 levels of powers (see below for details).\n\nThe hymns represent not only knowledge of the sacred names; if performed correctly, they also fundamentally characterize how your character expresses magic. Because of this, your character’s score in a hymn adds to her Soak score against damage caused by principles of that hymn. This bonus does not stack with other bonuses from Arts or other hymns — only the highest bonus applies.\n\nHymns may be also used in the laboratory, by adding the Ability to your character’s Lab Total if the hymn involves either the effect or item being enchanted."
+    }
+
+    #tf98c2bee4a6e520f1c0944 ^"Dead Language: Hyperborean" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Academic" FIXED
+            ^"Specialties" LIST OF STRING ["everyday usage", "poetry", "religious usage", "talking to spirits"]
+            ^"Printed Specialties" STRING "Specialties: everyday usage, poetry, religious usage, talking to spirits. (Academic)"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 104
+        }
+        DESCRIPTION "This Ability lets your character speak the native tongue of Hyperborea, a deeply mystical language understood by spirits. To the untrained ear, Hyperborean sounds similar to Ancient (Attic) Greek, and a character versed in Ancient Greek may even be able to understand the gist of what is being said, as if their score in Hyperborean was four points lower than their score in Ancient Greek (if this would reduce the score to zero or less, then the character cannot understand what is being said). Your character can also speak with many spirits and other ethereal magical creatures, and likewise is able to understand them. Knowing Hyperborean aids in the recitation of the sacred Hyperborean consecrations, but is not required. Note also that the alphabet used for Hyperborean resembles the Ancient Greek alphabet, but requires a separate level in Artes Liberales to know."
+    }
+
+    #ta877789f052da16776920e ^"Ceremony (Ability) (Ancient Magic)" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "Ability: Ceremony"
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Specialties" LIST OF STRING ["with a certain Ability", "in particular circumstances", "with a specific group or leader"]
+            ^"Printed Specialties" STRING "Specialties: with a certain Ability, in particular circumstances, with a specific group or leader. (Supernatural)"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "Ceremony is an Ability used in conjunction with another Ability, generally a Supernatural Ability, and with other participants, to produce a greater effect. To use Ceremony, your character must gather together a group and agree on a common effect to produce; at least one of the participants (generally the **focus character**) must possess the Ability or Power being used.\n\nAll participants add their totals of the appropriate Characteristic + Ability to the focus character’s total. If a participant doesn’t have the relevant Ability, then only his Characteristic is added.\n\n**Ceremony Bonus: Characteristic **\n\n**+ Ability total of each participant**\n\nAfter this bonus is determined, the focus character rolls as normal, adding the Ceremony Bonus to his total.\n\nThe group may appoint a leader (who must be the focus character), who then uses her Ceremony score to determine how many other characters may contribute to the effort; others may still take part, but their assistance gives no additional benefit. Alternatively, the group may chose to participate without a leader, but doing so results in a penalty to the Ceremony Bonus equal to the number of participants.\n\nCeremony may also be used for seasonal activities, adding the Ceremony Bonus to the seasonal total. Seasonal ceremonial work, however, must be done with a leader. Assistants gain Exposure XP during that season, typically in the Ceremony Ability or the relevant seasonal Ability (if they possess it).\n\nThis Ability first appeared in *Realms of Power: The Divine*, page 36, although this version is slightly different, as it derives from the Magic, rather than Divine, realm.\n\nWhen reciting the hymns in a group, the Hyperboreans were able to invoke free-form magical effects, rather like spontaneous Hermetic magic (although such invocations take days rather than seconds)."
+    }
+
+}

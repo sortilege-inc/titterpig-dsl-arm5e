@@ -1,0 +1,265 @@
+EXTENSION "ArM5_Ancient_Magic_FertilityMagic_Creatures" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Four: Fertility Magic creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t27f6c6e6286dcf6374ffe4 ^"Orpee" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER -1
+            ^"Age" STRING "n/a (40)"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Angry faerie 4 (local)"]
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "n/a"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Equipment" STRING "leather apron, metal working tools"
+            ^"Encumbrance" STRING "0"
+            ^"Vis" STRING "1 pawn of Terram in each eye."
+            ^"Appearance" STRING "Orpee is a stocky man with muscular arms wearing simple leather clothes and a sooty leather apron that is hung with a number of metal-working tools. In low light his eyes have a warm orange glow, like dying embers."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 61
+        }
+        PERSONALITY_TRAITS {
+            "Angry" +3
+            "Reclusive" +3
+            "Intolerant" +2
+        }
+        COMBAT {
+            "Bludgeon" INIT -1 ATTACK 6 DEFENSE 4 DAMAGE 6
+        }
+        ABILITIES {
+            "Area Lore" SCORE 2 SPECIALTY "iron deposits"
+            "Awareness" SCORE 3 SPECIALTY "underground"
+            "Brawl" SCORE 4 SPECIALTY "bludgeon"
+            "Carouse" SCORE 1 SPECIALTY "with craftsmen"
+            "Craft Ironwork" SCORE 3 SPECIALTY "horseshoes"
+            "Faerie Lore" SCORE 2 SPECIALTY "Duergar"
+            "Living Language" SCORE 5 SPECIALTY "blacksmithing terms"
+            "Stealth" SCORE 4 SPECIALTY "underground"
+            "Survival" SCORE 5 SPECIALTY "underground"
+        }
+        POWERS {
+            #t9db18d45aaf9ebd9ae5f79 ^"Iron Glare" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Orpee can inflict a Medium Wound on anyone with whom he makes eye contact (for a description of targeting effects with Range Eye see ArM5, page 111)."
+            }
+            #tb0d8d6f1a7020d68eada50 ^"Sense of Iron" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Orpee can sense and is aware of precisely where any item made of iron is, within the room where he is."
+            }
+        }
+    }
+
+    #t343f12c31fe871c1fa57bb ^"Senna" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER -2
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER -1
+            ^"Age" STRING "n/a (30)"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Forest faerie 4 (local)"]
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "n/a"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Equipment" STRING "Dress made of leaves"
+            ^"Encumbrance" STRING "0"
+            ^"Vis" STRING "2 pawns of Herbam in her hair. This vis can be harvested without harming Senna, although she might not give permission, and it grows back in spring."
+            ^"Appearance" STRING "Senna is a small, lithe woman with a green tinge to her skin, and long, olive-green hair, which is twisted together into several thick strands that have the appearance of the roots of a young tree. She wears a dress made of: in spring, tiny leaves interspersed with small white flowers; in summer, of lush green leaves; and in autumn, of rustling yellow and orange leaves. In winter her dress disappears entirely which forces her, slightly embarrassed, to spend the season sleeping inside a tree."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 61
+        }
+        PERSONALITY_TRAITS {
+            "Jealous" +3
+            "Canny" +2
+        }
+        COMBAT {
+            "Dodge" INIT 1 DEFENSE 1
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "plants"
+            "Awareness" SCORE 4 SPECIALTY "forests"
+            "Charm" SCORE 3 SPECIALTY "men"
+            "Folk Ken" SCORE 2 SPECIALTY "travelers"
+            "Guile" SCORE 3 SPECIALTY "Orpee"
+            "Faerie Lore" SCORE 2 SPECIALTY "forests"
+            "Living Language" SCORE 5 SPECIALTY "plants"
+            "Profession Herbalist" SCORE 4 SPECIALTY "growing plants"
+            "Stealth" SCORE 7 SPECIALTY "forest"
+            "Survival" SCORE 3 SPECIALTY "forest"
+        }
+        POWERS {
+            #t533a55f4c7175c16cb8e51 ^"Into the Trees" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Senna can move inside any living plant that is bigger than she is. She is aware of everything about her, as normal, and cannot be harmed when she is inside a plant, but if the plant is destroyed Senna is too. A plant can be destroyed by being either uprooted, or totally consumed by fire. She can leave the plant again at will."
+            }
+            #t40c5cbdaa309c5ec438e3b ^"Tender to Plants" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Senna may duplicate any Hermetic Creo Herbam spell of magnitude 2 or less."
+            }
+            #tbf340abc94816f6c767da4 ^"Speaker to the Trees" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Senna can speak with any living plant."
+            }
+        }
+    }
+
+    #tb42ab859a6714f778a0ed1 ^"The Worm in the Cave" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 35
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 7
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 7
+            ^"Age" STRING "n/a (30)"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Evil worm that lives in a cave and causes storms 6 (local)"]
+            ^"Combat" STRING "Grapple in Coils: Init +3, Attack +10, Defense +5, Damage +10 The worm attacks by attempting to envelope and disable prey by grappling them in its coils. This is resolved using the non-lethal combat rules (ArM5, page 174). Once its prey is unconscious the worm swallows it. This action, when complete, kills the prey. It takes half an hour to swallow a Size –1 character, an hour to swallow a Size 0 character, two hours to swallow a Size +1 character, and six hours to swallow a Size +2 character. The worm cannot swallow larger characters and smaller characters are swallowed almost instantly."
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–12), –3 (13–24), –5 (25–36), Incapacitated (37–48)"
+            ^"Powers" STRING "Wound the Sky, 10 points, Init, Aquam: The worm can call up an immense deluge that causes rain to fall from the sky for a duration of Sun, over an area about ten miles in diameter. It is virtually impossible for a normal individual to move about during the deluge, and for each character out in the open, a Stamina roll against an Ease Factor of 12 is made every ten minutes. If the roll is failed the character loses a Fatigue level, and any character that becomes Unconscious likely drowns. The deluge also causes rivers in the area to flood, which can cause damage that lasts for years. Wisdom of Water, 2 point, Init +2, Aquam: The worm may duplicate any Hermetic Intellego Aquam spell of level 25 or less. Reform Body, 1 point, Init +5, Animal: The worm can reduce a wound it has sustained by one level each time this power is used: a Medium Wound becomes a Light Wound and so forth. The only way to prevent the worm from repairing a wound is to completely slice through its flesh, by inflicting an Incapacitating Wound and then physically separating the segments before the worm can start to reconnect them — which it does by reducing the Incapacitating Wound to a Heavy Wound."
+            ^"Vis" STRING "10 pawns of Aquam."
+            ^"Appearance" STRING "The worm is 100 feet long, 5 feet in diameter, and covered in bony, segmented armor that originally protected the worm from the pressure of the ocean depths. The worm has no visible sense organs, but a gaping, toothless maw. In fact, the worm senses through delicate tendrils along the length of its body, which detect changes in pressure. Although these work well, the worm has a –3 penalty when making rolls to sense stationary targets. The worm attacks by enveloping its prey in its coils, constricting the prey until dead, and then slowly swallowing the body."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 63
+        }
+        PERSONALITY_TRAITS {
+            "Secretive" +3
+            "Selfish" +2
+        }
+        ABILITIES {
+            "Area Lore" SCORE 5 SPECIALTY "ambush sites"
+            "Awareness" SCORE 5 SPECIALTY "movement"
+            "Brawl" SCORE 5 SPECIALTY "grapple"
+            "Hunt" SCORE 7 SPECIALTY "prey lost in a storm"
+            "Magic Lore" SCORE 3 SPECIALTY "worms"
+            "Living Language" SCORE 5 SPECIALTY "shepherd terminology"
+            "Stealth" SCORE 6 SPECIALTY "hiding"
+            "Survival" SCORE 10 SPECIALTY "local area"
+            "Swim" SCORE 10 SPECIALTY "great depths"
+        }
+    }
+
+    #te0991ceb54ad602fbc5651 ^"St. Anna-Marie" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Divine Might" STRING "25"
+            ^"Characteristics" STRING "Int +5, Per +5, Pre +5, Com +5, Str n/a, Sta n/a, Dex n/a, Qik n/a"
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Saint 6 (local)", "Saint 2 (ecclesiastical)"]
+            ^"Combat" STRING "n/a"
+            ^"Soak" STRING "n/a"
+            ^"Fatigue Levels" STRING "n/a"
+            ^"Wound Penalties" STRING "n/a"
+            ^"Abilities" STRING "None"
+            ^"Equipment" STRING "white robes"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "0"
+            ^"Appearance" STRING "St. Anna-Marie does not usually appear to the faithful, but when she does choose to it is as a young girl, aged about 13, dressed in a simple, pure white robe, accompanied by a delicate, but unidentifiable, perfume."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 64
+        }
+        PERSONALITY_TRAITS {
+            "Pious" +3
+            "Attentive" +2
+            "Benevolent" +2
+        }
+        POWERS {
+            #tb10f31f539a443f25a6653 ^"Tomorrow’s Bounty (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Tomorrow’s Bounty"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "This power allows the saint to instantly create enough food to feed a large crowd — often sacks of grain or baked loaves of bread."
+            }
+            #tdffebf7bf77e6dba960660 ^"Terrify the Unbeliever (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Terrify the Unbeliever"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+18"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This curse causes fear in the target, making him terrified of the saint and her power and forcing him to flee. A Brave or equivalent Personality Trait roll of Ease Factor 12 is needed to overcome this terror, which lasts until dawn."
+            }
+            #ta07a5ccf67ffead40dba50 ^"Acknowledgement of Evil" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power forces any demon within Voice Range of the petitioner to declare his Infernal nature, loudly stating that he is a demon. The Penetration of this miracle (Divine Might – 5) must equal or exceed the demon’s Infernal Might for it to be effective."
+            }
+        }
+        DESCRIPTION "St. Anna-Marie was a girl who lived in one of the nearby villages 200 years ago. At the time, the local lord had imposed a harsh tax regime on the villages, which they were unable to meet, due to a poor harvest. Unconvinced, or unmoved, by the villagers’ claims of poverty, the lord sent his soldiers into the village to collect the unpaid taxes by force. A tense stand-off between the soldiers and the men of the village was miraculously defused by Anna-Marie’s offer to return with the soldiers to the lord’s castle so that she could plead for the village. Several weeks passed and then, to the villagers’ delight, Anna-Marie returned accompanied by the lord’s stonemason. Anna-Marie had prayed for the deliverance of her village on the journey to the castle and, upon her arrival, she not only shamed the lord into granting the village a tax reprieve, but also convinced him to send his stonemason to build a church for the villagers. All the villagers helped with the construction of the church, and it was rapidly completed. Over the next few years, the harvests improved and the village was able to meet the more reasonable tax demands of the lord, who frequently attended mass at the new church. Anne-Marie spent the rest of her life cleaning the church and cooking for the itinerant priests who preached to the village. Upon her death she was interned in the bone cave, and since then she has been venerated by the villagers."
+    }
+
+}

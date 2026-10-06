@@ -1,0 +1,75 @@
+EXTENSION "ArM5_Ancient_Magic_CanaaniteNecromancy_Spells" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Two: Canaanite Necromancy spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t70a15d88597092141c5344 ^"Anat’s Search in the Miry Abyss" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Veil"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "InMe 20 R: Veil, D: Diam, T: Ind"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "This spell senses a specific person in the world of the dead. If a person cannot be sensed, then she is either alive or beyond the reach of the spell. The only reason that a dead person would normally be beyond the reach of the spell is that she is in Heaven. Once sensed, the magus may cast other spells on the target, as long as this spell is active.\n\n(Base 4, +3 Veil, +1 Diam)"
+    }
+
+    #t12f2c896ab63353bc0ebc5 ^"The Ob of Mot" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Veil"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "CrMe 25 R: Veil, D: Conc, T: Group"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "This spell allows those about the caster to speak with a specific person in the world of the dead — to them it appears that the caster is speaking with the voice of the dead person. The caster is effectively acting as a temporary container or vessel for the dead spirit, and botches of this spell might cause the caster to become possessed by a malevolent spirit.\n\nThe caster must either have an Arcane Connection to, or otherwise be able to sense, the target, and the target must be in the world of the dead; that is, neither alive nor in Heaven. The dead person is compelled neither to speak nor be truthful. The\n\ncaster is aware of the conversation, but cannot participate without making an Intelligence + Concentration roll against an Ease Factor of 12.\n\n(Base 3, +3 Veil, +1 Conc, +1 Group)"
+    }
+
+    #t7f9fab1458dd20ed22761a ^"The Visage of Mot" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Veil"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReMe 35 R: Veil, D: Conc, T: Ind, Ritual"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 33
+        }
+        DESCRIPTION "This spell summons the ghost of a specific person in the world of the dead. The caster must either have an Arcane Connection to, or otherwise be able to sense, the target, and the target must be in the world of the dead; that is, neither alive nor in Heaven.\n\n(Base 15, +3 Veil, +1 Conc)"
+    }
+
+    #t461a536293044615507b70 ^"Links of Stone" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "InTe 25 R: Arc, D: Mom, T: Ind"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 36
+        }
+        DESCRIPTION "The caster holds a piece of stone in her hands and receives a brief mental image of the surroundings of the object that this stone is an Arcane Connection to. This spell could be used to find the statue that a fragment came from, or the quarry that the blocks of a castle were chiseled from. If the stone is an Arcane Connection to several things, then the newest Arcane Connection, or the closest, is revealed.\n\n(Base 4, + 5 Arc)"
+    }
+
+}

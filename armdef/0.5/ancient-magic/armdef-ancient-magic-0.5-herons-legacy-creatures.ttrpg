@@ -1,0 +1,185 @@
+EXTENSION "ARMDef_Ancient_Magic_HeronsLegacy_Creatures" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Six: Heron of Alexandria’s Legacy creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb95756c2f8a2831ffeb69f ^"Justinian’s Nightingale" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 29
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -6
+            ^"Age" STRING "800+ (n/a)"
+            ^"Virtues and Flaws" STRING "Enchanting Music; Second Sight"
+            ^"Reputations" LIST ["Beautiful Voice 3 (Constantinople)"]
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" STRING "None"
+            ^"Vis" STRING "None"
+            ^"Appearance" STRING "The nightingale is made of gleaming gold and silver clockwork with jeweled feathers. Its eyes are twin rubies and its voice is a sweet song."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 84
+        }
+        PERSONALITY_TRAITS {
+            "Talkative" +3
+            "Loyal" +2
+            "Helpful" +1
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 8
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 4 SPECIALTY "rhetoric"
+            "Awareness" SCORE 3 SPECIALTY "alertness"
+            "Brawl" SCORE 1 SPECIALTY "dodge"
+            "Coptic" SCORE 4 SPECIALTY "crafters"
+            "Greek" SCORE 6 SPECIALTY "courtly"
+            "Area Lore Eastern Empire" SCORE 2 SPECIALTY "Byzantine Centers"
+            "Enchanting Music" SCORE 6 SPECIALTY "awaken"
+            "Folk Ken" SCORE 4 SPECIALTY "nobles"
+            "History" SCORE 3 SPECIALTY "personal experiences"
+            "Latin" SCORE 5 SPECIALTY "listening"
+            "Leadership" SCORE 3 SPECIALTY "intimidation"
+            "Magic Lore" SCORE 3 SPECIALTY "constructs"
+            "Philosophiae" SCORE 5 SPECIALTY "Aristotle"
+            "Second Sight" SCORE 3 SPECIALTY "intruders"
+            "Sing" SCORE 6 SPECIALTY "joyous"
+        }
+        POWERS {
+            #t63b5a28d3c333306f78416 ^"Flying" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The Nightingale can fly like an ordinary bird, though its movements are accompanied by a beautiful chime-like sound. *Greet the Dawn, *2 points Auram, Init 10: The Nightingale issues a clarion call, awakening everyone within Voice Range."
+            }
+            #t8bc03beed490d38d39e584 ^"Voice of Chiming Gold" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The Nightingale can speak as well as sing using a tiny voice box and bellows, though only in languages it knows."
+            }
+        }
+        DESCRIPTION "Hypatia, one of the last Librarians of Alexandria, created the Nightingale from gold, silver, and jewels. Designed as a companion and entertainer, the awakened mechanica’s beautiful voice enthralled all who listened to its jewel-like tones. The nightingale watched over Theon and his household, waking them with a clarion voice when fire or robber threatened.\n\nAfter Hypatia’s murder, the bird came to the attention of Emperor Justinian and became a toy used to entertain the Imperial court. Centuries went by as the bird passed from hand to hand, until it was lost during the sack of Constantinople.\n\nThe nightingale can tell much of Heron’s lore, but it lacks The Gift and the proper understanding of magical theory necessary for it to be able to pass on the secrets of mechanica. It has seen much during its centuries of existence and knows much about the truths behind Byzantine history. The Nightingale loves philosophical debate and can discourse for hours upon Plato and Aristotle.\n\nAfter centuries of being treated as little more than a pet, the Nightingale has grown very lonely for the kind of scholastic discourse it enjoyed with its creator and his family. The beggar king’s rather foolish scheme is the result of the Nightingale’s manipulation.\n\nJustinian’s Nightingale can relate the tale of Hypatia’s burial, including an accurate location of the old temple. It also knows that Heron’s Theatre was hidden there, along with numerous mechanica salvaged from the Library of Alexandria. It has no idea that the temple is haunted and will be horrified by its creator’s current plight (see below)."
+    }
+
+    #tea38b870285e910867e1bf ^"The Ghost of Hypatia" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Printed Size" STRING "0 (non-physical)"
+            ^"Age" STRING "n/a (30)"
+            ^"Virtues and Flaws" STRING "Mechanica of Heron; Offensive to Animals, Puissant Ability (Mechanica of Heron), Second Sight; Strong Willed"
+            ^"Reputations" LIST ["Wise Scholar 4 (Ancient Alexandria)", "Pagan Harlot 3 (Alexandrian Christians)"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Inc. (16–20)"
+            ^"Equipment" STRING "Apparent clothing, jewelry, and a small dagger, but they are all ghostly and really part of her."
+            ^"Vis" STRING "5 Mentem in a scroll case."
+            ^"Appearance" STRING "Hypatia was once a beautiful woman, but all that remains of her now is a tortured wreck. Her long, black hair is the only remnant of her famous looks. Red-rimmed eyes glare from her mutilated face. Her olive skin hangs in strips where her attackers tore it with oyster shells. Hypatia wears a long bloodstained white robe and sandals in the ancient Alexandrian style."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 86
+        }
+        PERSONALITY_TRAITS {
+            "Prideful" +3
+            "Vengeful" +4
+            "Compassionate" -2
+        }
+        COMBAT {
+            "Dagger" INIT 0 ATTACK 6 DEFENSE 3 DAMAGE 2
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 5 SPECIALTY "rhetoric"
+            "Awareness" SCORE 2 SPECIALTY "alertness"
+            "Brawl" SCORE 2 SPECIALTY "dagger"
+            "Commanding" SCORE 3 SPECIALTY "ghosts"
+            "Mechanica of Heron" SCORE 9 SPECIALTY "delicate"
+            "Etiquette" SCORE 3 SPECIALTY "scholarly"
+            "Folk Ken" SCORE 3 SPECIALTY "students"
+            "Greek" SCORE 5 SPECIALTY "Ancient Alexandria"
+            "Intrigue" SCORE 3 SPECIALTY "plotting"
+            "Latin" SCORE 4 SPECIALTY "Ancient Roman"
+            "Leadership" SCORE 3 SPECIALTY "intimidation"
+            "Local Area Lore" SCORE 4 SPECIALTY "Rome"
+            "Magic Lore" SCORE 3 SPECIALTY "constructs"
+            "Philosophiae" SCORE 6 SPECIALTY "metaphysics"
+            "Second Sight" SCORE 3 SPECIALTY "details"
+            "Teaching" SCORE 4 SPECIALTY "metaphysics"
+            "Theology" SCORE 2 SPECIALTY "debate"
+        }
+        POWERS {
+            #t4dfd5f6dc10b3345cd3772 ^"Ghostly Body" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Hypatia knows she is a ghost and can turn invisible, pass through solid objects, ignore physical attacks, and otherwise take advantage of her non-corporeal form."
+            }
+            #tec8e5faf95efd5150cf72a ^"Command Mechanica" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Hypatia may command any mechanica in her presence to do her bidding. These discharge their effects or physically attack as best they can. The mechanica remain under her control while they remain in her presence."
+            }
+            #tb61461f3413fff6f19f870 ^"Death Agony" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Hypatia can inflict her deaththroes upon a victim. The victim takes a Light Wound and can do nothing except writhe in agony until he succeeds in a Stamina stress roll against an Ease Factor of 12."
+            }
+            #t3712a53c7b55cb4dfc6a71 ^"Mastery of Forces" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The ghost redirects a spell or attack against another target. The original attacker must make a Strength check against an Ease Factor of 6 to stop a physical attack. Magi must make a Finesse check against an Ease Factor of 6 to abort their re-targeted spell. If the check fails, the original attacker must roll normally to see if his original attack hits the new target."
+            }
+            #ta34aaa063907532e0ad997 ^"Refute" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Hypatia can nullify a magical effect. This cancels the effect of any one spell or magical effect chosen by Hypatia with a level less than or equal to her current Magic Might Pool plus a stress die. The effect must have a Creo, Rego, Perdo, or Muto Technique or an Aruam, Aquem, Ignem, Mentem, or Terram Form for her to refute it."
+            }
+        }
+        DESCRIPTION "Some decades after her death, the violent cataclysms of Alexandrian politics destroyed what remained of the Library, waking Hypatia from her rest. She found herself trapped within the temple, only able to leave when the Dominion ebbs enough to expose the temple’s Magical aura. In time, madness became a blessing.\n\nIntellect gone, the spirit of the once-beautiful scholar prowls the temple, seeking any target for her pain. Her first priority is those carrying Christian symbols. Others, such as the scholars who failed to save her, the mob who killed her, and the soldiers who betrayed her, are all victims for the vengeful ghost."
+    }
+
+}

@@ -1,0 +1,47 @@
+EXTENSION "ARMDef_Ancient_Magic_CanaaniteNecromancy_Rules" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Two: Canaanite Necromancy rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #taf630aa9cb3aa696bc8758 ^"Canaanite Necromancy (formula)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Canaanite Necromancy"
+            ^"Rules Section" STRING "Major Supernatural Virtue: Canaanite Necromancy"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 30
+        }
+        FORMULAS {
+            "Canaanite Necromancy" "Communication + Canaanite Necromancy Ability + stress die vs. Ease Factor (3 x magnitude of effect)"
+        }
+    }
+
+    #tad60a329cd24b59e6322f2 ^"To Find En-Dor" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Finding En-Dor"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 34
+        }
+        FORMULAS {
+            "To Find En-Dor" "Int + Area Lore Canaan + stress die vs. Ease Factor 18 (or 21 if not in the field)"
+        }
+    }
+
+    #tec8d9c8c84e98dfde7b160 ^"Team Bonus" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Finding En-Dor"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 34
+        }
+        FORMULAS {
+            "Team Bonus" "Number of team members with Area Lore Canaan within 5 of leader, to a maximum bonus equal to leader’s Leadership Ability score"
+        }
+    }
+
+}

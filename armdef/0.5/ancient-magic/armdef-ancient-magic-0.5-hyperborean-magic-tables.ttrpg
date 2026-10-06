@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_Ancient_Magic_HyperboreanMagic_Tables" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Eight: Hyperborean Magic tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t187e95190963e0342a4554 ^"Recitation Total Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Circumstance", "Modifier"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 107
+        }
+        TABLE {
+            "Devotional behavior*" "+3 per season"
+            "Distraction**" "–1 per day not reciting hymn"
+            "Hyperborean Descent***" "+2/+4"
+            "Language: Hyperborean" "+ score in Ability"
+            "Honorable Minor Personality Flaw†" "+1"
+            "Honorable Major Personality Flaw" "+3"
+            "Dishonorable Minor Personality Flaw‡" "–1"
+            "Dishonorable Major Virtue or Flaw" "–3"
+        }
+        DESCRIPTION "* Devotional behavior means spending a season prior to reciting the hymn in activity devoted to the veneration of Apollo. This could include prayer, ecstatic meditation, pilgrimage to an Apollonian sacred site (such as Delphi or Delos), or intellectual contemplation and refraining from both pleasures of the flesh (such as sex or eating extravagantly) and from dishonorable acts (lying, cheating, etc.). The bonus for devotional behavior stacks for a maximum of three seasons (i.e., up to a +9 bonus), after which no further bonus is gained. ** This has a maximum of 20 days, after which reciting the hymn has no benefit. *** Refers to having either the Minor or Major Virtue, Hyperborean Descent, respectively. † An Honorable Personality Flaw is one that the storyguide decides is considered favorable by Apollo. ‡ A Dishonorable Personality Flaw is one that the storyguide decides is considered unfavorable by Apollo."
+    }
+
+    #t1c3ade8eaffde998400791 ^"Choir Recitation Modifier" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Time Spent", "Modifier"]
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 115
+        }
+        TABLE {
+            "1 day" "+0"
+            "3 days" "+1"
+            "7 days" "+2"
+            "14 days" "+3"
+            "21 days" "+4"
+            "28 days" "+5*"
+        }
+        DESCRIPTION "* This is the maximum bonus possible."
+    }
+
+    #te08c5c5f70c10696cd144a ^"New Shape and Material Bonuses" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Material", "Bonuses"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 116
+        }
+        TABLE {
+            "Cappadocian Salt" "+6 purifying effects"
+            "Doum Palm Leaf" "+3 controlling instincts and base emotions"
+            "Pure Honey" "+5 spiritual travel, +2 preservation"
+            "Sun Scarab" "+4 detect magic"
+        }
+        DESCRIPTION "These new shape and material bonuses are available to all characters."
+    }
+
+}

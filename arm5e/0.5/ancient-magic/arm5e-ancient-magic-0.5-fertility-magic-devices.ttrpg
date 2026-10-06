@@ -1,0 +1,64 @@
+EXTENSION "ArM5_Ancient_Magic_FertilityMagic_Devices" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Four: Fertility Magic devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tc5a9bed824dd6cef621d31 ^"The Mystic’s Forceps" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 5
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Unborn Child"
+            ^"Printed Effect Line" STRING "MuCo 5 Pen +0, 1/day R: Touch, D: Conc, T: Unborn Child"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "These forceps are using during birth, and temporarily reduce the size of the baby as it travels down the birth canal. This greatly speeds and eases the birth process, which means that there is less opportunity for disease-causing demons to wound either mother or child. If the forceps are used to assist birth, they guarantee the birth of a live baby, and prevent any injury or disease from befalling either mother or child due to the birth.\n\n(Effect: Base 3, +1 Touch, +1 Conc; Modifications: None)"
+    }
+
+    #tb9d3e709c36d798bce0501 ^"Black Anne’s Ointment" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 10
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "charged item"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Unborn Child"
+            ^"Printed Effect Line" STRING "PeCo 10 Pen +0, charged item R: Touch, D: Mom, T: Unborn Child"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "When this ointment is smeared over the belly of a pregnant woman, it wounds her unborn baby, which kills it. If the mother is more than one month pregnant, a Stamina stress roll against an Ease Factor of 6 must be made for her, and if it fails she suffers a Medium Wound. Otherwise, the woman suffers no physical harm.\n\n(Effect: Base 5, +1 Touch; Modifications: None)"
+    }
+
+    #t26b6df88cd139ebb8e9f9b ^"Potion of Creation" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "charged item"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Unborn Child"
+            ^"Printed Effect Line" STRING "CrCo 25 Pen +0, charged item R: Per, D: Sun, T: Unborn Child"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "When a fertile woman drinks this potion she is guaranteed to conceive if she has intercourse with a fertile man within a day. If the man is not human (a faerie, for example), then the woman still conceives if a Stamina stress roll against an Ease Factor of 9 is made for her; such a child inherits some traits from his father.\n\n(Effect: Base 15, +2 Sun; Modifications: None)"
+    }
+
+}

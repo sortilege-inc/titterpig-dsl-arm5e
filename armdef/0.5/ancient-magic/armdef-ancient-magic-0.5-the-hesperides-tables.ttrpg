@@ -1,0 +1,59 @@
+EXTENSION "ARMDef_Ancient_Magic_TheHesperides_Tables" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Seven: The Hesperides tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tc9d5b1f3764fac9da26e18 ^"Terminology" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Modern name", "Local Name used by the Guan", "Latin name used by magi and their servants"]
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 93
+        }
+        TABLE {
+            "Tenerife" "Chenech" "Ninguaria (“Snowy,” named for its mountain)"
+            "Fuerteventura" "Maxorata" "Herbania (“Grassy,” which is utterly inappropriate; this may Latinize a local name, “Walled,” referring to the wall between northern and southern kingdoms.)"
+            "Gran Canaria" "Tamarán" "Canaria (“of dogs,” named for the fighting dogs found wild here)"
+            "Lanzarote" "Titeroygatra" "No certain name. Characters might like to use Planasia (flat island) or Invallis (undulating island)."
+            "La Palma" "Benahoare" "Junonia (“of Juno,” named for its doves, sacred to Juno)"
+            "La Gomera" "Gomera" "Capraria (“of goats”)"
+            "El Hierro" "Ecrós" "Pluvialia (without rivers, literally “island of rain”)"
+            "San Bronodon" "no common name" "Aprositus"
+        }
+        DESCRIPTION "Latin names from Pliny or other sources have been used for the islands in this chapter, but storyguides researching the Canaries may find it easier to use modern terms, which were adopted after the Spanish invasion, later than the game period. The native name for each island is also given.\n\n*Guan*, literally meaning “Men,” has been used for the people now called Guanches, which literally means “Men of Chenech.” There is no term, in 1220, for all of the natives of the islands; Guanches is a Spanish term."
+    }
+
+    #td1d118427cd2bc1080c1ac ^"Guan Melee Weapons" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Name", "Ability", "Init", "Atk", "Def", "Dam", "Str", "Load", "Cost"]
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 95
+        }
+        TABLE {
+            "Battle Axe (stone-bladed)" "Great" "+1" "+5" "0" "+9" "+1" "2" "Inexp."
+            "Mace (club studded with stone)" "Single" "+1" "+3" "0" "+6" "0" "2" "Inexp."
+            "Dueling Stick, Short" "Single" "+2" "+4" "+1" "+2" "–2" "1" "Inexp."
+            "Dueling Stick, Medium" "Great" "+2" "+3" "+3" "+2" "–1" "2" "Inexp."
+            "Dueling Stick, Long" "Great" "+3" "+3" "+1" "+5" "0" "3" "Inexp."
+            "Threshing Flail (stone head on leather thongs)" "Single" "+2" "+3" "0" "+5" "0" "2" "Inexp."
+            "Tabona (obsidian knife)" "Brawl" "0" "+1" "0" "+1" "–6" "0" "Inexp."
+        }
+        DESCRIPTION "Those Guan weapons constructed with stone or volcanic glass, in lieu of metal, and have a Damage modifier 2 points lower than usual, to a minimum Damage modifier of +1."
+    }
+
+    #t52251e284fb3fe580abc0b ^"Guan Missile Weapons" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Name", "Ability", "Init", "Atk", "Def", "Dam", "Range", "Str", "Load", "Cost"]
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 95
+        }
+        TABLE {
+            "Rock (sharpened)" "Thrown" "0" "+1" "0" "+3" "5" "–1" "1" "Inexp."
+            "Javelin (stone-headed)" "Thrown" "0" "+2" "0" "+3" "10" "0" "1" "Inexp."
+        }
+    }
+
+}

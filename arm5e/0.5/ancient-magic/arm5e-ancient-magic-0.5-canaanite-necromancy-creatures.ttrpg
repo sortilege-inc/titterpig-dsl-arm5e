@@ -1,0 +1,128 @@
+EXTENSION "ArM5_Ancient_Magic_CanaaniteNecromancy_Creatures" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Two: Canaanite Necromancy creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Ancient_Magic_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t743314926fbb7169107fdc ^"Zephaniah" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Printed Size" STRING "0 (non-physical)"
+            ^"Age" STRING "n/a (50)"
+            ^"Decrepitude" STRING "Already dead"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Wise One, Canaanite Necromancy, Famous, Good Teacher; Enemies (Israelites); Higher Purpose, Nocturnal."
+            ^"Reputations" LIST ["Necromancer 6 (Ecclesiastical, Hermetic)"]
+            ^"Combat" STRING "Brawl (knife): Init +2, Attack +3, Defense +2, Damage +1 When physically manifested. When Zephaniah is non-physical she can neither be harmed by combat, nor can she harm others in combat."
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "n/a when nonphysical. OK, 0, –1, –3, –5, Unconscious, when manifested."
+            ^"Wound Penalties" STRING "n/a when nonphysical. –1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), when manifested."
+            ^"Vis" STRING "5 pawns of Mentem."
+            ^"Appearance" STRING "Zephaniah is a ghost, but is only slightly transparent and, in poor light, could be mistaken for a living person. She has dark skin and long graying black hair, into which are tied colored wooden beads. Zephaniah appears to be about 50 years old; her face is lined and creased, and her eyes are slightly shrunken into their sockets. She is thin and bony and dressed in a simple grey robe. When physically manifested she emanates a slightly stale air, which the unGifted find disconcerting."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 38
+        }
+        PERSONALITY_TRAITS {
+            "Protective" +3
+            "Kind" +1
+        }
+        ABILITIES {
+            "Area Lore Canaan" SCORE 5 SPECIALTY "ancient sites"
+            "Artes Liberales" SCORE 3 SPECIALTY "cuneiform"
+            "Awareness" SCORE 3 SPECIALTY "En-Dor"
+            "Bargain" SCORE 5 SPECIALTY "ghosts"
+            "Brawl" SCORE 1 SPECIALTY "knife"
+            "Canaanite Necromancy" SCORE 5 SPECIALTY "summoning"
+            "Concentration" SCORE 5 SPECIALTY "necromancy"
+            "Hebrew" SCORE 5 SPECIALTY "Canaanite dialect"
+            "Leadership" SCORE 4 SPECIALTY "ghosts"
+            "Magic Lore" SCORE 4 SPECIALTY "ancient traditions"
+            "Penetration" SCORE 3 SPECIALTY "commands"
+            "Survival" SCORE 2 SPECIALTY "desert"
+            "Teaching" SCORE 4 SPECIALTY "necromancers"
+        }
+        POWERS {
+            #t2d23180ff3847032d108f8 ^"Dead Canaanite Necromancer" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Zephaniah is aware that she is a ghost and when she is incorporeal she can turn invisible at will, pass through walls, and ignore physical attacks and fatigue or wound penalties. She also has a permanent Arcane Connection to the dead that she can exploit as a +4 Penetration multiplier, much like any other permanent Arcane Connection (ArM5, page 84), when interacting with the dead. *Return to Flesh*, 10 points, Init, Corpus: Zephaniah is linked to the world of the living and the world of the dead. This Supernatural Power allows her to physically manifest, returning her to the world of the living for a period of one day. When physically manifested, she interacts with the world as if she were still alive. She cannot will herself dead again, but must wait until this Power’s duration expires instead. If she takes a wound or suffers a Fatigue level she must make a Concentration roll to remain manifested, and if she is incapacitated, killed, or loses consciousness she immediately becomes an incorporeal ghost, again."
+            }
+        }
+    }
+
+    #t4f24f59d4de0f6472c7a9c ^"Ghosts of Necromancers" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Printed Size" STRING "0 (non-physical)"
+            ^"Age" STRING "n/a (varies)"
+            ^"Decrepitude" STRING "Already dead"
+            ^"Combat" STRING "The ghosts are non-physical and so can neither be harmed by combat, nor can they harm others in combat."
+            ^"Vis" STRING "1 pawn of Mentem."
+            ^"Appearance" STRING "The ghosts are translucent, and can only be seen with difficulty. They are dressed in funeral bindings or shrouds that may be adorned with jewelry. When in motion, the ghosts drift several centimeters above the ground."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 40
+        }
+        PERSONALITY_TRAITS {
+            "Mindless" +3
+            "Loyal" +2
+        }
+        ABILITIES {
+            "Area Lore En-Dor" SCORE 3 SPECIALTY "hiding places"
+            "Awareness" SCORE 2 SPECIALTY "En-Dor"
+            "Brawl" SCORE 3 SPECIALTY "wrestle"
+            "Hebrew" SCORE 5 SPECIALTY "Canaanite dialect"
+            "Stealth" SCORE 10 SPECIALTY "nighttime"
+        }
+        POWERS {
+            #tadd2e1f08b2eb0cf8f3dfd ^"Traumatic Death" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The ghosts are united by the traumatic death that they suffered at the hands of Saul’s soldiers. The ghosts are Arcane Connections to each other, are constantly aware of everything that the others sense, and can communicate with each other regardless of distance."
+            }
+            #tb6fd371e262a1f6206323e ^"Marionette" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The ghostly necromancers are drawn to the living and sometimes attempt to move the living about as if they were marionettes. This Supernatural Power allows each ghost to attempt to control the limbs of a single person, the marionette, for a period of Diameter. The ghosts are not very proficient and their influence is only equivalent to a child trying to push the marionette about. A conscious marionette can automatically resist the pushing of the ghostly necromancer, but to do anything else at the same time he must make a simple Intelligence + Concentration roll against an Ease Factor of 9 – Size."
+            }
+        }
+    }
+
+}

@@ -1,0 +1,210 @@
+EXTENSION "ARMDef_Ancient_Magic_LanguageOfAdam_Creatures" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter One: The Language of Adam creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t9fc9df3cfcf58e7d1bc068 ^"Guardians of Eden" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Choir" STRING "Cherubim"
+            ^"Might" INTEGER 50
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 5
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "3 (7)"
+            ^"Virtues and Flaws" STRING "Greater Immunity (fire), Second Sight, Sense Holiness and Unholiness"
+            ^"Combat" STRING "Flaming sword: Init +4, Attack +17, Defense +15, Damage +30 The sword is not affected by Magic Resistance of any kind."
+            ^"Soak" INTEGER 16
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (20+)"
+            ^"Equipment" STRING "flaming great sword"
+            ^"Encumbrance" STRING "0 (2)"
+            ^"Appearance" STRING "The guardians appear differently to each person who confronts them, always taking a shape that inspires awe and implies authority. This is typically the shape of an angel, a great androgynous human being with a powerful presence, an aura of light, four sets of wings, and a flaming sword. They can communicate differently with multiple characters at once, seeming to say one thing to one character but something completely different to another."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 19
+        }
+        PERSONALITY_TRAITS {
+            "Love of God" +5
+            "Contemplative" +4
+            "Wise" +4
+            "Righteous" +2
+        }
+        ABILITIES {
+            "Area Lore (Eden)" SCORE 7 SPECIALTY "animals"
+            "Area Lore (Ancient Mesopotamia)" SCORE 3 SPECIALTY "geography"
+            "Awareness" SCORE 7 SPECIALTY "approach"
+            "Dominion Lore" SCORE 4 SPECIALTY "angels"
+            "Etiquette" SCORE 6 SPECIALTY "humans"
+            "Magic Lore" SCORE 4 SPECIALTY "magical beasts"
+            "Great Weapon" SCORE 7 SPECIALTY "sword"
+            "Penetration" SCORE 7 SPECIALTY "mortals"
+            "Philosophiae" SCORE 7 SPECIALTY "natural"
+            "Second Sight" SCORE 7 SPECIALTY "illusions"
+            "Sense Holiness and Unholiness" SCORE 7 SPECIALTY "demons"
+            "Theology" SCORE 7 SPECIALTY "Eden"
+        }
+        POWERS {
+            #t080ee0820eeefc8b2221a2 ^"Angelic Mantle (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Angelic Mantle"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+12"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The guardian takes a human form, apparently flesh and blood."
+            }
+            #td5fd7666d3b8d4e05a5b08 ^"Divine Insight (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Divine Insight"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "May temporarily grant the Clear Thinker, Free Expression, or Inspirational Virtues."
+            }
+            #t508466beadb3907d44ed39 ^"Enfolding (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Enfolding"
+                    ^"Cost" STRING "2 or 10 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The guardian protects the target’s mind or body from all harm."
+            }
+            #t930681e02d621c0c29d8a2 ^"Envisioning (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The guardian may appear in a dream (or a daydream) to the target."
+            }
+            #t5bd5896e10ffb86d036a01 ^"Fiery Form (Ancient Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Fiery Form"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+16"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "May become a fiery shape at will, doing +5 damage to anyone who approaches within five feet."
+            }
+            #tcf9329ec070c7d323c31f4 ^"Turn the Unworthy" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+16"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The guardian forces the target to return immediately to the next lowest level of the regio. This is a miraculous power, and thus cannot be resisted with Might or other kinds of Magic Resistance."
+            }
+        }
+        DESCRIPTION "The guardians can understand any language (including Adamic), and can speak directly into the mind of anyone who wishes to speak with them. Their sole purpose is to forbid entry to the garden to those who have been barred from it, though they might be willing to engage characters who approach the regio in conversation, and may even answer questions about the Garden, and who may enter it, if they are asked. “None of the sons of Adam or daughters of Eve may enter,” they might say, “nor any of the Serpent’s kin. All other animals are welcome.” They may also warn the characters not to touch the trees that grow at the center of the garden."
+    }
+
+    #t6144eb9654a7ae36022abd ^"Cain, the Fugitive" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Faerie Might" STRING "10–70 (Corpus)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 4
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (120)"
+            ^"Reputations" LIST ["Murderer 9 (local)", "Cursed by God 6 (local)"]
+            ^"Soak" STRING "+5 (Stamina)"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Inc. (20+)"
+            ^"Appearance" STRING "Cain can appear in many forms, but most commonly he looks like a crooked old man in a dirty, kilted tunic and hood, with which he covers a black scar in the shape of the cross branded into the center of his forehead. Most of the hair on his head has fallen out, though his eyebrows are unnaturally bushy and he strangely does not have a beard. He bears signs of a nasty arrow wound on the right side of his neck. His remaining teeth are long and sharpened to points, and his fingernails are like claws. His skin is pallid and cold, like a dead body."
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 26
+        }
+        PERSONALITY_TRAITS {
+            "Murderous" +7
+            "Bloodthirsty" +3
+            "Envious" +3
+            "Fearful" +3
+            "Hateful" +3
+            "Reckless" +3
+            "Thieving" +3
+            "Vengeful" +3
+        }
+        COMBAT {
+            "Dodge" INIT -1 DEFENSE 6
+            " Fist and Nails" INIT -1 ATTACK 6 DEFENSE 7 DAMAGE 4
+            " Bite" INIT -2 ATTACK 7 DEFENSE 6 DAMAGE 8
+            " Club" INIT 0 ATTACK 8 DEFENSE 7 DAMAGE 6
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 3 SPECIALTY "oxen"
+            "Area Lore (any)" SCORE 3 SPECIALTY "geography"
+            "Area Lore (Ancient Mesopotamia)" SCORE 8 SPECIALTY "geography"
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 5 SPECIALTY "watching from a distance"
+            "Brawl" SCORE 7 SPECIALTY "grapples"
+            "Dead Language (Adamic)" SCORE 5 SPECIALTY "agricultural terms"
+            "Guile" SCORE 5 SPECIALTY "lying to authority"
+            "Hunt" SCORE 7 SPECIALTY "long distances"
+            "Single Weapon" SCORE 6 SPECIALTY "club"
+            "Stealth" SCORE 6 SPECIALTY "hide"
+            "Survival" SCORE 8 SPECIALTY "desert"
+            "Swim" SCORE 3 SPECIALTY "rivers"
+            "Teaching" SCORE 2 SPECIALTY "children"
+        }
+        POWERS {
+            #tc67f15b4c2adb049d4cc4d ^"Desperate Speed" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Cain can move with astonishing speed when necessary, traveling twice the distance a normal man could move in the same amount of time and adding +7 to his Initiative."
+            }
+            #t1a665d44750120d7ec138d ^"Supernatural Fury" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "When driven into a murderous rage, Cain may ignore all wound penalties and add +4 to his Attack."
+            }
+            #t7affa91a33b9492221eead ^"Rush of Strength" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Cain summons a sudden burst of angry vigor, increasing the amount of damage his next blow deals by +4."
+            }
+            #t00b6bfc7cee46a334b56a9 ^"Shadow of Cain" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "One of Cain’s “shadows” separates from his body and goes elsewhere, taking away 10 points of Might and one of his +3 Personality Traits. This is for all purposes a different being, a specialized instance of Cain that is unaware of the actions of any others, with its own agenda and its own desires. It rises from Cain’s body, however, so Cain cannot do this if he is bound or imprisoned. Each of these shadows can join together with the others, so that it is possible for there to be two versions of Cain in different parts of the world, one with 40 Might and another with 30. When all of his shadows are combined, he has his maximum Might Score of 70."
+            }
+        }
+        DESCRIPTION "Cain does not regain Might like a normal faerie. He must sleep to recover lost Might, replenishing 1 Point per hour if he sleeps for more than six hours. During this time his body is indistinguishable from a corpse. Killing and eating a living thing also restores some of his Might, approximately 1 Might Point for each two points of Size above –15. If his Might Score has been diminished from its default value, each night it is increased by one. Also, he heals very quickly when he is incapacitated, completely recovering from all wounds as if they were Light Wounds, though they often leave unpleasant scars on his body.\n\nLike other faeries, Cain does not age, and he does not suffer Fatigue. He suffers pain from exposure to the elements, but does not need warmth to survive and has no need to breathe or eat. He may walk all day and all night without stopping. If he is not sleeping, he must concentrate on remaining in one place, or he is compelled to travel. He prefers the night, since he is less noticeable then, but also prefers settlements and cities to the wilderness.\n\nCain’s shadows wander throughout all of Mythic Europe, but he is often drawn back to Mesopotamia, his homeland. Characters investigating the ruins of Babylon or searching for the Garden of Eden may stumble across his body huddled within a Faerie aura, appearing to all medical and magical examination to be dead (apart from his Faerie Might), or discover him lurking in the dark of night, watching them from a distance."
+    }
+
+}

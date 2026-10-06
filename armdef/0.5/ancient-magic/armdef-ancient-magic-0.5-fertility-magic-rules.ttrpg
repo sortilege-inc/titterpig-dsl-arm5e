@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_Ancient_Magic_FertilityMagic_Rules" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Four: Fertility Magic rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1580fea1095247f63d037b ^"Maximum Trait Points" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Fertility Ritual"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 56
+        }
+        FORMULAS {
+            "Maximum Trait Points" "1 for every 10 points or fraction of Creo Corpus Lab Total"
+        }
+    }
+
+    #t6c220c3d5d0e2b17e24468 ^"Fertility Fetish Lab Total Bonus" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Fertility Fetishes"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 58
+        }
+        FORMULAS {
+            "Fertility Fetish Lab Total Bonus" "mother’s (Dex + Craft Ability) + supervisor’s Fertility Lore Ability"
+        }
+    }
+
+    #t438293998f981cee166d03 ^"To Find a Suitable Cave System" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Cave Systems"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 59
+        }
+        FORMULAS {
+            "To Find a Suitable Cave System" "Per + Area Lore vs. Ease Factor 18"
+        }
+    }
+
+}

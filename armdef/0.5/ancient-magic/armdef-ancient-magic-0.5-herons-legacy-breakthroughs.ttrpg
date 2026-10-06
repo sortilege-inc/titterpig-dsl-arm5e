@@ -1,0 +1,71 @@
+EXTENSION "ARMDef_Ancient_Magic_HeronsLegacy_Breakthroughs" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Six: Heron of Alexandria’s Legacy breakthroughs"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's breakthroughs, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf195338e5e221941e9bb5c ^"Mutable Device" DEF {
+        EXTENDS #tHoHTL05BreakthroughTypeAA ^"Breakthrough"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Breakthrough: Mutable Device"
+            ^"Scale" STRING "Major"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "A mutable item is created like a Lesser Enchanted Device with the new Mutable Device property adding +10 to the device’s level of effect. If applicable, the Lab Total gains bonuses from the item’s shape and material (see ArM5, page 110). Any magus with the Craft Mutable Device Virtue can subsequently alter the device’s enchantment at need. With a week’s work in the laboratory and the expenditure of a pawn of Vim vis, he can alter the device’s invested effect to another one having the same Form and Technique. Any modifications such as conditions or uses per day may also be changed so long as the final level of effect remains the same or lower (including the +10 for the Mutable Device property). For example, a wand instilled with *Heat of the Searing Forge,* used continually, could be altered to one containing *Flash of the Scarlet Flames,* usable 12 times per day with a +5 Penetration."
+    }
+
+    #t76dacbdca8d67e8910fdbd ^"Integrating Mutable Device" DEF {
+        EXTENDS #t60051c4d8aa56491728169 ^"Breakthrough Requirement"
+        PROPERTIES {
+            ^"Integrates" STRING "Mutable Device"
+            ^"Breakthrough Points" INTEGER 45
+            ^"Breakthrough" STRING "Mutable Device"
+            ^"Printed Requirement" STRING "To Integrate Mutable Device into Hermetic Theory: Suggested accumulated breakthrough points > 45"
+            ^"Rules Section" STRING "Major Breakthrough: Mutable Device"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 79
+        }
+    }
+
+    #t8409d0704e8774bdbf92bd ^"Awakened Device" DEF {
+        EXTENDS #tHoHTL05BreakthroughTypeAA ^"Breakthrough"
+        PROPERTIES {
+            ^"Printed Name" STRING "Major Breakthrough: Awakened Device"
+            ^"Scale" STRING "Major"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "If the researcher has not already discovered Mutable Device, this discovery requires a Major Breakthrough. If the researcher has already discovered Mutable Device, she builds upon existing work and the discovery becomes a Minor Breakthrough requiring 30 points."
+    }
+
+    #tf8759a3afad78484f3f3be ^"Integrating Awakened Device" DEF {
+        EXTENDS #t60051c4d8aa56491728169 ^"Breakthrough Requirement"
+        PROPERTIES {
+            ^"Integrates" STRING "Awakened Device"
+            ^"Breakthrough Points" INTEGER 45
+            ^"Breakthrough" STRING "Awakened Device"
+            ^"Printed Requirement" STRING "To Integrate Awakened Device into Hermetic Theory: Suggested accumulated breakthrough points > 45"
+            ^"Rules Section" STRING "Major Breakthrough: Awakened Device"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 79
+        }
+    }
+
+    #t612c0fe53ac97ab42a7ecd ^"Integrating Awakened Device if Mutable Device Already Integrated" DEF {
+        EXTENDS #t60051c4d8aa56491728169 ^"Breakthrough Requirement"
+        PROPERTIES {
+            ^"Integrates" STRING "Awakened Device if Mutable Device Already Integrated"
+            ^"Breakthrough Points" INTEGER 30
+            ^"Breakthrough" STRING "Awakened Device"
+            ^"Printed Requirement" STRING "To Integrate Awakened Device if Mutable Device Already Integrated: Suggested accumulated breakthrough points > 30"
+            ^"Rules Section" STRING "Major Breakthrough: Awakened Device"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 79
+        }
+    }
+
+}

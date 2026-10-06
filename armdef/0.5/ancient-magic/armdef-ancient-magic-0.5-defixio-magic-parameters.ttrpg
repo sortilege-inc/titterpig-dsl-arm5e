@@ -1,0 +1,32 @@
+EXTENSION "ARMDef_Ancient_Magic_DefixioMagic_Parameters" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Three: Defixio Magic parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #ta688efc4beff5a3f53ef2c ^"Event (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Duration: Event"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 42
+        }
+        DESCRIPTION "This Duration is only available for Ritual spells. When the Ritual spell is cast, it is held in abeyance until a specific condition occurs. The circumstances necessary to activate the spell must be fully described when the Ritual is cast. A spell with Event Duration may be suspended in perpetuity, if the specific criteria never occur. No spell that requires aiming to affect its target may be used with the Event Duration. Unlike Defixio Lore, which is limited to specific combinations of Arts, a spell with Event Duration may have any combination.\n\nAny spell that uses the Event Duration must have an Intellego requisite. If the triggering condition is dependent on the identification of some person, place, or thing, the appropriate Form is also required as a requisite. If the person who would activate the Event condition is protected by Magic Resistance, the spell must penetrate for the event to be triggered, otherwise nothing happens. If an incident that would trigger the condition occurs within an *Aegis of the Hearth*, the spell must penetrate the *Aegis* or be cast by a member of the covenant for it to take effect. Should a new *Aegis* ceremony take place before the condition occurs, the spell must penetrate the new *Aegis*."
+    }
+
+    #ta23688b2f982e2f2283e71 ^"Unlimited (Range)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Range: Unlimited"
+            ^"Parameter" STRING "Range" FIXED
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 45
+        }
+        DESCRIPTION "This range is only available for Ritual spells. As part of the Ritual, the caster must have a single sympathetic connection to the target, or multiple connections that combine to provide at least a +2 bonus on the Sympathetic Connections table (see ArM5, page 84). An Arcane Connection is not required. Distance is immaterial for a Ritual with Unlimited Range, unless the storyguide imposes some limit. This Range adds +6 to the magnitude of the spell or, for spell guidelines that require an Arcane Connection, it adds +2 magnitudes to the base.\n\nThere are multiple ways the caster can acquire the +2 bonus needed from the Sympathetic Connections table. For instance, knowing the target’s nickname (+1) and casting his horoscope for the day (+1) is sufficient to use Unlimited Range to cast a spell on him. Likewise, a simple drawing or clay model of the target created by the magus (+2) is sufficient to cast an Unlimited Range spell.\n\nIf the storyguide allows it, the investigator may partially integrate the Unlimited Range before achieving a Breakthrough. The spell that increases the magus’s breakthrough point total past half the total required for the Breakthrough, and all those invented thereafter provide all of the benefits of the Unlimited Range, except that they require sympathetic connections totaling +5 bonus multipliers. A partially integrated spell must follow all of the other requirements of an Unlimited Range spell."
+    }
+
+}

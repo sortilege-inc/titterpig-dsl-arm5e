@@ -1,0 +1,119 @@
+EXTENSION "ARMDef_Ancient_Magic_HeronsLegacy_Rules" {
+    NAME "Ars Magica Fifth Edition, Ancient Magic - Chapter Six: Heron of Alexandria’s Legacy rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Ancient_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb09f0e206f11d4982ae4f4 ^"Construct Mechanica of Heron Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Construct Mechanica of Heron"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 77
+        }
+        FORMULAS {
+            "Construct Mechanica of Heron Total" "Intelligence + Mechanica of Heron Ability + (lower of Philosophiae or Artes Liberales) + aura"
+        }
+    }
+
+    #t7873668c7d2bec1b832911 ^"Mechanica Creation Level" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Construct Mechanica of Heron"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 77
+        }
+        FORMULAS {
+            "Mechanica Creation Level" "(3 x Magnitude of Imbued Effect) + size factor – ease of use"
+        }
+    }
+
+    #td3c4641976d9f2c8e5c27e ^"Creating Mechanica Cost" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Construct Mechanica of Heron"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 77
+        }
+        FORMULAS {
+            "Creating Mechanica Cost" "1 Mythic Pound per 3 points of Mechanica Creation Level"
+        }
+    }
+
+    #tbde71be19821cbe6c8f679 ^"Alter Mechanica" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING "(3 x Magnitude of New Imbued Effect) + size factor – ease of use"
+            ^"Rules Section" STRING "Modifier Effect"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 77
+        }
+        FORMULAS {
+            "Alter Mechanica" "Intelligence + Mechanica of Heron Ability + (lower of Philosophiae or Artes Liberales) + aura + stress die vs. Ease Factor"
+        }
+    }
+
+    #t4be94f07903e5ab374eefa ^"Anima’s Magic Might" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Major Supernatural Virtue: Mechanica of Heron, Continued"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 78
+        }
+        FORMULAS {
+            "Anima’s Magic Might" "Size + Material Base Points + (lower of Philosophiae or Artes Liberales)"
+        }
+    }
+
+    #t18d2c915a136784021a72d ^"Construct Simulacra Cost" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Major Supernatural Virtue: Mechanica of Heron, Continued"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 78
+        }
+        FORMULAS {
+            "Construct Simulacra Cost" "1 Mythic Pound per point of Magic Might"
+        }
+    }
+
+    #t0242ab4f1db8027c8e4ba2 ^"Awaken Anima Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Major Supernatural Virtue: Mechanica of Heron, Continued"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 78
+        }
+        FORMULAS {
+            "Awaken Anima Total" "Intelligence + Mechanica of Heron Ability + (lower of Philosophiae or Artes Liberales) + Aura"
+        }
+    }
+
+    #t1d636234b5d59672949be8 ^"Awaken Anima Level" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Major Supernatural Virtue: Mechanica of Heron, Continued"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 78
+        }
+        FORMULAS {
+            "Awaken Anima Level" "9 + Magnitude of Anima’s Magic Might"
+        }
+    }
+
+    #td8bdddd31325aa060b703f ^"Study Mechanica" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Major Supernatural Virtue: Mechanica of Heron, Continued"
+            ^"Source" STRING "Ancient Magic"
+            ^"Page" INTEGER 78
+        }
+        FORMULAS {
+            "Study Mechanica" "Intellego Vim Lab Total + stress die vs. device spell or effect level"
+        }
+    }
+
+}

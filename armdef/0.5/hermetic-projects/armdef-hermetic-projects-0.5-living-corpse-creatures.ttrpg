@@ -1,0 +1,232 @@
+EXTENSION "ARMDef_Hermetic_Projects_LivingCorpse_Creatures" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Six: The Living Corpse creatures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Hermetic_Projects_Core_Ext"
+
+    # The chapter's creatures, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t7c822d4195db21cdb45188 ^"Created Corpse" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int n/a, Per n/a, Pre n/a, Com n/a, Str +3, Sta +3, Dex +1, Qik 0"
+            ^"Size" INTEGER 0
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "None"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Appearance" STRING "The appearance of a newly created corpse is up to the magus. It could appear as a leathery, bloated corpse, or as fresh as a sleeping man."
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 115
+        }
+        COMBAT {
+            "Fist" INIT 0 ATTACK 5 DEFENSE 4 DAMAGE 3
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "fist"
+        }
+        DESCRIPTION "A magically created corpse has the same stats as a revenant (*Realms of Power: Magic*, page 98), minus Magic Might, Mental Characteristics, Virtues & Flaws, Magical Qualities & Inferiorities, Powers, and Vis."
+    }
+
+    #t34b5c19ae9d503249f0b75 ^"Animated Custos" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int n/a, Per n/a, Pre n/a, Com n/a, Str +1, Sta +1, Dex +2, Qik +1"
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Covenfolk; Affinity with Single Weapon, Puissant Single Weapon, Warrior; Afflicted Tongue (stammer), Obsessed, Poor Communication"
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "axe, heater shield, full scale armor"
+            ^"Encumbrance" STRING "3 (4)"
+            ^"Appearance" STRING "A day spent dead makes a telling difference. The corpse is pallid and slightly bloated, although this might not be instantly apparent when he is wearing his armor. His movements are stiff and jerky."
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 115
+        }
+        COMBAT {
+            "Axe & Heater Shield" INIT -1 ATTACK 16 DEFENSE 14 DAMAGE 7
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "warriors"
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 4 SPECIALTY "in combat"
+            "Bargain" SCORE 2 SPECIALTY "weapons"
+            "Bows" SCORE 1 SPECIALTY "short bow"
+            "Brawl" SCORE 5 SPECIALTY "dodging"
+            "Carouse" SCORE 1 SPECIALTY "drinking"
+            "Living Language" SCORE 5 SPECIALTY "talking about fighting"
+            "Singe Weapon" SCORE 7 BONUS 2 SPECIALTY "Heater Shield"
+        }
+        DESCRIPTION "The animated custos is an example of a slain grog character, animated to continue serving the magus. Based on the Specialist grog template, a common sample shield grog (**ArM5**, page 21), the example character has lain dead for an entire day before being animated. Without preservation magic, putrefaction will continue to reduce the corpse’s physical Characteristics."
+    }
+
+    #td22405676f463574cd1345 ^"A Walking Colossus" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" STRING "Int n/a, Per n/a, Pre n/a, Com n/a, Str +11, Sta +3, Dex +1, Qik –4"
+            ^"Size" INTEGER 4
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–9), –3 (10–18), –5 (19–27), Incapacitated (28–36), Dead (37+)"
+            ^"Abilities" STRING "Brawl 3 (fist) The colossus is not a subtle creation. Standing over 15 feet tall and weighing around two tons, it will be difficult not to notice it. A magus who wishes to keep his necromantic proclivities secret should opt for another type of corpse minion. An egotistical necromancer need not worry about such things."
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 116
+        }
+        COMBAT {
+            "Fist" INIT -10 ATTACK 5 DEFENSE 4 DAMAGE 11
+        }
+        DESCRIPTION "A colossus is simply a giant corpse, which uses the same stats as a regular animated corpse, adjusted for its increased size."
+    }
+
+    #t59ff228d38acf75224a77c ^"Created Revenant" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 9
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 31
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Human"
+            ^"Magic Qualities & Inferiorities" STRING "Greater Power; No Fatigue; Improved Soak (x4); Baneful Circumstances (in daylight)"
+            ^"Soak" INTEGER 11
+            ^"Fatigue Levels" STRING "None"
+            ^"Powers" STRING "Breath of Corruption, 1 point, Init +2, Auram. The revenant’s foul breathe can infect a person within 2 paces with a disease (Ease Factor 9 effect as Medium Wound). Rise from the Grave, 1 point, Init –, Terram. The revenant can cause the earth over its grave to open for one Diameter so it may enter or leave. The ground then seals, leaving no trace of the revenant’s passing."
+            ^"Vis" STRING "2 Corpus in eyes."
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 116
+        }
+        PERSONALITY_TRAITS {
+            "Vengeful" +6
+        }
+        COMBAT {
+            "Fist" INIT 0 ATTACK 7 DEFENSE 4 DAMAGE 5
+        }
+        DESCRIPTION "A created revenant has the same stats as a revenant found in the field. Add the following information to the stats for the Created Corpse."
+    }
+
+    #te95a6fee013ebef0fad88f ^"Grave Hound" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" STRING "Cun n/a, Per n/a, Pre n/a, Com n/a, Str 0, Sta +2, Dex +1, Qik +2"
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Improved Characteristics, Sharp Ears, Reckless"
+            ^"Reputations" LIST ["Loyal 2 (local)"]
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), – 5 (11–15), –5 (16–20), Dead (21+)"
+            ^"Appearance" STRING "Depending on how long the dog has been dead, it looks very much like a live dog. Closer inspection will reveal its glassy, opaque eyes and fetid breath."
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 118
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Reckless" +3
+            "Savage" +3
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 8 DEFENSE 7 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "keeping watch"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "track by scent"
+        }
+        DESCRIPTION "Despite its name, a grave hound is simply a dead dog animated by Hermetic magic. A grave hound is not a magical beast and does not have a Might score or powers. Because the grave hound is not a Magical Animal but merely an animated corpse, it does not have mental Characteristics. Its physical Characteristics and Abilities assume that it is either recently dead or has been magically preserved from putrefaction. As a dead thing, a dead dog does not have Fatigue Levels. Similar to revenants, a dead dog cannot be Incapacitated."
+    }
+
+    #t8910bb426e3bb84d08a88c ^"Darius as a Living Corpse" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 21
+            ^"Form" STRING "Corpus"
+            ^"Spirit Characteristics" STRING "Int +3, Per +1, Pre –3, Com –1, Str +2, Sta 0, Dex +1, Qik +2"
+            ^"Corpse Characteristics" STRING "Int –2, Per –2, Pre 0, Com –2, Str +3, Sta +3, Dex +1, Qik 0"
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Hermetic Magus, Magic Spirit; Transformed Spirit; Enduring Constitution, Hermetic Prestige, Second Sight, Strong-Willed; Blatant Magical Air, Driven (Hunt Enemies of the Order), Disfigured (horrific appearance)."
+            ^"Qualities and Inferiorities" STRING "Focus Power (Master of Corpus), Greater Power (x2); Improved Might (x11); Major Flaw (Hunger for Corpus Magic), Temporary Might; Limited Speech, Minor Flaw (Weak Sight), Minor Flaw (Sensitive to Heat), Reduced Fatigue"
+            ^"Personality Trait" STRING "Dedicated to Cause +6"
+            ^"Reputations" LIST ["Dedicated Hoplite +3 (Hermetic magi)"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Destroyed (21+)"
+            ^"Equipment" STRING "Former robes and his Necromancer’s Grimoire talisman"
+            ^"Vis" STRING "4 pawns of Corpus vis"
+            ^"Appearance" STRING "A dull-eyed corpse clad in Darius’ ominous robes, with his talisman tied to his chest."
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 110
+        }
+        COMBAT {
+            "Fist" INIT 0 ATTACK 5 DEFENSE 4 DAMAGE 3
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 2 SPECIALTY "grammar"
+            "Athletics" SCORE 2 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "alertness"
+            "Bavaria Lore" SCORE 2 SPECIALTY "geography"
+            "Brawl" SCORE 3 SPECIALTY "fist"
+            "Civil and Canon Law" SCORE 1 SPECIALTY "local customs"
+            "Code of Hermes" SCORE 3 SPECIALTY "Wizards’ Marches"
+            "Concentration" SCORE 3 SPECIALTY "spells"
+            "Dominion Lore" SCORE 2 SPECIALTY "divine creatures"
+            "Faerie Lore" SCORE 2 SPECIALTY "faerie forests"
+            "Finesse" SCORE 4 SPECIALTY "precision"
+            "Folk Ken" SCORE 2 SPECIALTY "peasants"
+            "German" SCORE 4 SPECIALTY "merchant slang"
+            "Guile" SCORE 3 SPECIALTY "fast talk"
+            "Hunt" SCORE 2 SPECIALTY "tracking"
+            "Infernal Lore" SCORE 2 SPECIALTY "demons"
+            "Intrigue" SCORE 3 SPECIALTY "plotting"
+            "Latin" SCORE 4 SPECIALTY "Hermetic"
+            "Leadership" SCORE 3 SPECIALTY "intimidation"
+            "Magic Lore" SCORE 2 SPECIALTY "creatures"
+            "Order of Hermes Lore" SCORE 4 SPECIALTY "criminals"
+            "Penetration" SCORE 6 SPECIALTY "Perdo"
+            "Philosophiae" SCORE 2 SPECIALTY "moral philosophy"
+            "Second Sight" SCORE 3 SPECIALTY "invisibility"
+            "Stealth" SCORE 2 SPECIALTY "shadowing"
+            "Survival" SCORE 1 SPECIALTY "forests"
+        }
+        POWERS {
+            #tfa8cf76b3c5ddb01851d53 ^"Clenching Grip of the Crushed Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power mimics the spell of the same name, one of Darius’ favorites in life. Because it is a magical power, the spirit’s Quickness was used to calculate the power’s Initiative."
+            }
+            #t5f05ff6351227eae2f7a47 ^"Grip of the Choking Hand (Hermetic Projects)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Grip of the Choking Hand"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Mimics the spell of the same name. Mastery points reduce the cost to 0 and increase the Init."
+            }
+            #tc1c95d85b442ba34309d30 ^"Master of Corpus" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "(Qik – Might cost)"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Duplicates any Perdo or Muto Corpus effect. The effect level must be lower than Darius’ Might. This power costs one Might point per magnitude of the effect."
+            }
+        }
+        DESCRIPTION "This example takes Darius of House Flambeau (**ArM5**, page 34) and recasts him as a living corpse. It assumes that he constructed a Necromancer’s Grimoire as a talisman, the ritual suicide worked in creating a ghost, and his ghost was bound to a fresh corpse. Speculating that Darius’ saga is Medium Powered and that he became a shade at death, he begins with a Magic Might of 10 and 720 experience points to repurchase Abilities. He has 10 additional Qualities that are balanced with a like number of Inferiorities. He has magically created a fresh corpse (see stats listed later) for his ghost to control.\n\nAs a newly created living corpse, Darius has lost several Abilities and a handful of Virtues. His new powers and Magic Might barely compensate for his lost Arts, spells, and Parma Magica. He will surely want to increase his Might and gain new powers."
+    }
+
+}

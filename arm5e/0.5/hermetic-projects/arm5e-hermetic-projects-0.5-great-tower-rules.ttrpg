@@ -1,0 +1,35 @@
+EXTENSION "ArM5_Hermetic_Projects_GreatTower_Rules" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Three: The Great Tower rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Hermetic_Projects_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t5b52b75b611c53816fd094 ^"Workshop Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Workshops"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 37
+        }
+        FORMULAS {
+            "Workshop Total" "Intelligence + Craft: Mason + Innovation + Raw Materials"
+        }
+    }
+
+    #t7fdc37d0e7ec58b85f148e ^"Stress Check (Damage and Disrepair)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Stress Check"
+            ^"Rules Section" STRING "Damage and Disrepair"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "Stress Check" "stress die + modifiers vs. Ease Factor 15"
+        }
+    }
+
+}

@@ -1,0 +1,133 @@
+EXTENSION "ArM5_Hermetic_Projects_HermeticShipyard_Tables" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Four: The Hermetic Shipyard tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Hermetic_Projects_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tfd4d5aed1d069c90734c07 ^"Ship Damage" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Quality", "Base Dam Lvl"]
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 53
+        }
+        TABLE {
+            "Shoddy" "1"
+            "Standard" "2"
+            "Superior" "3"
+            "Excellent" "4"
+            "Supernatural *" "5"
+        }
+        DESCRIPTION "*City & Guild* provides rules for damage that objects, ships included, can take before breaking (page 77). In brief, the item has a number of Base Damage Levels determined by its quality. This number is multiplied by a modifier determined by its size. For ships, this is listed in the Ship Sizes and Capacity table.\n\nQuality Base Dam Lvl Shoddy 1 Standard 2 Superior 3 Excellent 4 Supernatural * 5\n\nShips normally only take damage from storms, fire, naval combat, and magical attacks. In addition, enchanted items, ships included, gain a bonus to any Stress Checks equal to the magnitude of all invested effects. These things combined make enchanted ships particularly hardy.\n\nIf you are not using the *City & Guild* sourcebook, it is enough to remember that enchanted devices are tougher than their mundane counterparts, and the magic invested in them continues to function until the device is completely broken."
+    }
+
+    #td3d800b613dd9c1c6b6fa8 ^"Ship Sizes and Capacity" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Size", "Capacity", "Crew", "Cost", "Dam", "Example"]
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 54
+        }
+        TABLE {
+            "+3" "1 ton" "2" "1/5 pound" "2" "Small river ferry"
+            "+3" "8 tons" "2" "2 pounds" "2" "Lighter"
+            "+4" "20 tons" "3" "4 pounds" "2" "River barge"
+            "+5" "20 tons" "8" "8 pounds" "2" "Coastal buss, knarr, small cog"
+            "+6" "100 tons" "12" "40 pounds" "3" "Medium cog, large nef"
+            "+7" "240 tons" "18" "100 pounds" "3" "Large merchant cog"
+            "+8" "800 tons" "150" "320 pounds" "3" "Mediterranean grain barge"
+            "+9" "1200 tons" "200" "600 pounds" "4" "Large Mediterranean grain barge"
+        }
+        DESCRIPTION "Though there are some variations, given the range of sizes in which some of these ships can be built, the table that follows presents a guide to the size, capacity, crew, cost, and Damage Level Modifier of some typical ships.\n\nSize Capacity Crew Cost Dam Example +3 1 ton 2 1/5 pound 2 Small river ferry +3 8 tons 2 2 pounds 2 Lighter +4 20 tons 3 4 pounds 2 River barge +5 20 tons 8 8 pounds 2 Coastal buss, knarr, small cog +6 100 tons 12 40 pounds 3 Medium cog, large nef +7 240 tons 18 100 pounds 3 Large merchant cog +8 800 tons 150 320 pounds 3 Mediterranean grain barge +9 1200 tons 200 600 pounds 4 Large Mediterranean grain barge\n\nLateen-rigged ships typically require larger crews than square-rigged ships, adding half as many crew again to the numbers listed earlier. The grain barges described earlier are only found in the Mediterranean and already have the larger crews factored into their descriptions."
+    }
+
+    #t67e044089346bd6cdd7e4d ^"The Hands of Phereclus Ease Factors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ship", "Ease Factor"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 63
+        }
+        TABLE {
+            "River Barge" "15"
+            "Coastal Buss" "21"
+            "Large Cog" "27"
+            "Grain Barge" "30"
+        }
+    }
+
+    #t884ec68dc0be240a750085 ^"Shipbuilding Shape and Material Bonuses" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Shape/Material", "Bonus"]
+            ^"Printed Name" STRING "Shape and Material Bonuses"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 66
+        }
+        TABLE {
+            "Agate" "+3 air +5 protection from storms"
+            "Anchor" "+3 prevent movement"
+            "Aquamarine" "+3 water"
+            "Ash" "+2 harm people"
+            "Bellows" "+4 create wind"
+            "Beryl" "+3 water"
+            "Boat" "+3 sailing"
+            "Crystal" "+5 water related effect"
+            "Cypress" "+3 necromancy +3 spirits"
+            "Fan" "+4 banish weather phenomena +4 create or control winds"
+            "Fir" "+3 darkness +1 malicious faeries"
+            "Garnet" "+2 navigation"
+            "Lilac" "+2 travel"
+            "Mast" "+2 protection from temptation"
+            "Mercury" "+3 Aquam"
+            "Oak" "+7 protection from storms"
+            "Oar" "+4 affect currents"
+            "Opal" "+4 travel"
+            "Pine" "+3 light +1 friendly faeries"
+            "Rope" "+4 restraint or binding"
+            "Sea Shell" "+2 the sea +3 sea creatures"
+            "Ship" "+5 sailing"
+            "Ship’s Sail" "+4 affect winds +7 sailing"
+            "Wood (dead)" "+4 affect dead wood +3 affect living wood"
+        }
+        DESCRIPTION "Being constructed from wood, effects enchanted into a ship almost certainly benefit from at least the usual +4 bonus to affect dead wood. The type of wood used provides additional material bonuses and different parts of the vessel have different mystical resonances, which provide their own shape and material bonuses.\n\nThe table that follows lists the appropriate bonuses according to the shapes and materials commonly used in ship construction. There are also a number of shapes and materials not traditionally associated with shipbuilding that provide useful bonuses and may find their way into enchanted devices.\n\nShape/Material Bonus Agate +3 air +5 protection from storms Anchor +3 prevent movement Aquamarine +3 water Ash +2 harm people Bellows +4 create wind Beryl +3 water Boat +3 sailing\n\nCrystal +5 water related effect Cypress +3 necromancy +3 spirits Fan +4 banish weather phenomena +4 create or control winds Fir +3 darkness +1 malicious faeries Garnet +2 navigation Lilac +2 travel Mast +2 protection from temptation Mercury +3 Aquam Oak +7 protection from storms Oar +4 affect currents Opal +4 travel Pine +3 light +1 friendly faeries Rope +4 restraint or binding Sea Shell +2 the sea +3 sea creatures Ship +5 sailing Ship’s Sail +4 affect winds +7 sailing Wood (dead) +4 affect dead wood +3 affect living wood"
+    }
+
+    #t3fefdeb7a7712c01756aa7 ^"The Mechanics of Enchantment Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Component", "Base Pawns", "Size", "Total Pawns"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 66
+        }
+        TABLE {
+            "Hull (huge)" "2" "9" "18"
+            "Hull (very large)" "2" "8" "16"
+            "Hull (large)" "2" "7" "14"
+            "Hull (moderate)" "2" "6" "12"
+            "Hull (small)" "2" "5" "10"
+            "Keel (alone)" "2" "5" "10"
+            "Mast" "2" "4" "8"
+            "Rigging" "2" "5" "10"
+            "Sails" "1" "5" "5"
+            "Rudder/Steering Oar" "2" "4" "8"
+            "Castle" "2" "4" "8"
+            "Anchor" "5" "4" "20"
+        }
+    }
+
+    #t7bc7474781a4c79c144e4d ^"Constructing and Preparing the Vessel: Shape and Material Bonuses" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Shape/Material", "Bonus"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 68
+        }
+        TABLE {
+            "Oak" "+7 protection from storms"
+            "Ship" "+5 sailing"
+            "Wood (dead)" "+4 affect dead wood +3 affect living wood"
+        }
+    }
+
+}

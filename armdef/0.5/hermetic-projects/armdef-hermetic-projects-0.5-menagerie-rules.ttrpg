@@ -1,0 +1,73 @@
+EXTENSION "ARMDef_Hermetic_Projects_Menagerie_Rules" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Seven: The Menagerie of Magical Beasts rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Hermetic_Projects_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t2a47b2dde0971efd9a8c47 ^"Accumulated each Season (Magical Trainer Taming Points)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Accumulated each Season"
+            ^"Rules Section" STRING "Magical Trainer Taming Points"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Accumulated each Season" "Might + Animal Handling – Creature’s Might"
+        }
+    }
+
+    #t36cb19fffe323aeb21b60e ^"Accumulated each Season (Mundane Trainer Taming Points)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Accumulated each Season"
+            ^"Rules Section" STRING "Mundane Trainer Taming Points"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Accumulated each Season" "Int + Animal Handling – Creature’s Might"
+        }
+    }
+
+    #t9a5cf00cbf104db2d3ed4f ^"Breeding Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Producing Offspring"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 140
+        }
+        FORMULAS {
+            "Breeding Roll" "stress die + modifiers vs. 9"
+        }
+    }
+
+    #t06a9d0cd5aa46966f963c5 ^"Command Beast" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Powers as Tricks"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Command Beast" "Presence + Animal Handling (or Ride or Magic Lore) + stress die vs. Ease Factor"
+        }
+    }
+
+    #t90fbf0de868d1c2097ca74 ^"Ease Factor (Powers as Tricks)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Powers as Tricks"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Ease Factor" "3 + (3 x Power’s Cost)"
+        }
+    }
+
+}

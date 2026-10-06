@@ -1,0 +1,68 @@
+EXTENSION "ArM5_Hermetic_Projects_GreatTower_Tables" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Three: The Great Tower tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Hermetic_Projects_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf52174ba7007159834174a ^"Damage and Disrepair Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Modifier"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 38
+        }
+        TABLE {
+            "Craft: Mason" "+ Ability score"
+            "Previously repaired" "–1"
+            "Shoddy" "–1"
+            "Superior" "+1"
+            "Excellent" "+3"
+        }
+    }
+
+    #tef37af2a259980a49bc5d6 ^"True Falsework Ease Factors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Falsework", "Ease Factor"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 40
+        }
+        TABLE {
+            "Scaffolding" "9"
+            "Shoring" "12"
+            "Centering" "15"
+        }
+    }
+
+    #t47b80fe43ffe1d79926ff8 ^"The Stonemason’s Art Ease Factors" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Ease Factor"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 41
+        }
+        TABLE {
+            "An even stone block" "9"
+            "A column drum" "12"
+            "A ceiling vault rib" "15"
+        }
+    }
+
+    #t204426ace1e3777e3bfc0a ^"Rate of Progress Table" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Craft: Mason Score", "Progress Per Year", "Progress Per Tribunal", "Progress Per Apprenticeship", "Progress Per Grand Tribunal"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 36
+        }
+        TABLE {
+            "5" "80 ft" "560 ft" "1,200 ft" "2,640 ft"
+            "10" "160 ft" "1,120 ft" "2,400 ft" "5,280 ft"
+            "15" "240 ft" "1,680 ft" "3,600 ft" "7,920 ft"
+        }
+    }
+
+}

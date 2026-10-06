@@ -1,0 +1,71 @@
+EXTENSION "ArM5_Hermetic_Projects_LivingCorpse_Rules" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Six: The Living Corpse rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Hermetic_Projects_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1a514508f1a3f16f8d35e9 ^"Option One" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Type of Ghost a Spirit Becomes"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 107
+        }
+        FORMULAS {
+            "Option One" "Random Chance"
+        }
+    }
+
+    #tc8a655ff43dc3f25d7729e ^"Option Two" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Type of Ghost a Spirit Becomes"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 107
+        }
+        FORMULAS {
+            "Option Two" "Magic Has Impact"
+        }
+    }
+
+    #t5feec05ce6c2304a7a6425 ^"Player’s Death Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Type of Ghost a Spirit Becomes"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 107
+        }
+        FORMULAS {
+            "Player’s Death Roll" "Aura + Magic Lore + Vim Form bonus + stress die vs. Storyguide’s death roll"
+        }
+    }
+
+    #t0230751ade182a31bcf9e6 ^"Storyguide’s Death Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Type of Ghost a Spirit Becomes"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 107
+        }
+        FORMULAS {
+            "Storyguide’s Death Roll" "Absolute Value of all Personality Traits + Divine/Infernal/Faerie Lore + stress die (no botch)"
+        }
+    }
+
+    #tf09a94c3171184590fabb8 ^"Stress Check (Destroying the Enchanted Device)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Stress Check"
+            ^"Rules Section" STRING "Destroying the Enchanted Device"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 114
+        }
+        FORMULAS {
+            "Stress Check" "stress die + modifier vs. 15"
+        }
+    }
+
+}

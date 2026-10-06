@@ -1,0 +1,48 @@
+EXTENSION "ArM5_Hermetic_Projects_BurningCity_Tables" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Two: The Burning City tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Hermetic_Projects_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tfbb20b28096f7023ce889b ^"Volcanic Laboratory Features" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Feature", "Description", "Specializations"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "Fumes" "A sphere of glass rests on plinth in the laboratory. Trapped in the sphere are swirling, noxious vapors captured from a volcanic vent." "Pe, Au, Ig"
+            "Pool of Lava" "The laboratory is either built to enclose a pool of lava or a specially constructed cauldron keeps a sample of lava hot and molten." "Ig, Te"
+            "Thermal Spring" "A volcanically heated spring bubbles up from the center of the laboratory." "Cr, Aq, Ig"
+            "Volcanic Rock" "In the center of the laboratory is a huge slab of volcanic rock." "Mu, Ig, Te"
+        }
+        DESCRIPTION "A Greater Feature is a *Major Structure Virtue* for a Laboratory and it adds +2 Aesthetics and +3 points distributed among the appropriate specializations. A Lesser Feature is a *Minor Structural Virtue* and it adds +1 Aesthetics and +1 in an appropriate specialization."
+    }
+
+    #t15d671c20cc4eaaaec2ffc ^"Volcanic Shape and Material Bonuses" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Shape or Material", "Bonuses"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Table Note" STRING "the book sets in italics (here between asterisks) the bonuses drawn from other books, the rest in regular text"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "Ash (burned debris, not the tree)" "+2 burning things, +5 affect things that have been burned, +2 Ignem"
+            "Artifacts from Pompeii and Herculaneum" "+3 volcanoes"
+            "Marble" "*+5 wards, +3 beauty, *+3 cold"
+            "Mask" "*+2 affect wearer’s sight, +3 hiding, +7 disguise, *+2 affect wearer’s breathing"
+            "Mirror" "+7 illusions, +5 see the truth"
+            "Vent" "+7 affect air passing through it"
+            "Volcano" "+5 volcanoes"
+        }
+        DESCRIPTION "Shape and Material bonuses can give your characters bonuses to their Lab Total when inventing item effects (**ArM5**, page 99). Also, if a magus has a Talisman, then its Shape and Material bonuses can be used to give him a bonus when casting appropriate spells (once the Talisman has been attuned; see **ArM5**, page 98).\n\nSome new Shape and Material Bonuses are listed later (the troupe should feel free to devise their own Shape and Material bonuses too). The bonuses written in *italic text*\n\nhave been drawn from other books in **Ars Magica Fifth Edition**. The bonuses written in regular text are new suggestions."
+    }
+
+}

@@ -1,0 +1,133 @@
+EXTENSION "ArM5_Hermetic_Projects_Menagerie_Tables" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Seven: The Menagerie of Magical Beasts tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ArM5_Hermetic_Projects_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tfd13797222cf2b6138016c ^"Example Physical Characteristics (Insects)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Type", "Size", "Str", "Sta", "Dex", "Qik", "Example"]
+            ^"Printed Name" STRING "Example Physical Characteristics"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 124
+        }
+        TABLE {
+            "Aggressive Flier" "–15" "–30" "+1" "+3" "+15" "Wasp"
+            "Non-Aggressive Flier" "–15" "–29" "0" "+2" "+17" "Butterfly"
+            "Aggressive Crawler" "–13" "–26" "0" "+3" "+14" "Ant"
+            "Non-Aggressive Crawler" "–15" "–30" "+2" "+1" "+17" "Dung Beetle"
+        }
+        DESCRIPTION "In his *Natural History*, Pliny divides animals into four categories: land animals, creatures of the sea, birds, and insects. **ArM5** lists four categories of animals as well: birds, fish, hoofed beasts, and clawed beasts (*Houses of Hermes: Mystery Cults*, Appendix: Mundane Beasts, pages 38–43). The division of land animals into hoofed and clawed is a useful distinction for generating game statistics. Because magical animal stats are based on mundane animal stats, it is difficult to assign stats to a magical insect, without rules for mundane insects. This insert offers information for creating insects, following the guidelines set forth in *Houses of Hermes: Mystery Cults*.\n\n• Insects are Size –15, although larger and smaller types may be encountered. An Ethiopian Ant of Virtue is as large as a dog (Size –1), for example.\n\n• An insect’s Mental Characteristics are as follows: Cunning –1, Perception –1, Presence –6, and Communication –4. • Physical Characteristics are bought with 7 points, similar to human characters. Once Physical Characteristics have been assigned, add twice Size (usually –30) to Strength and subtract Size (usually +15) from Quickness, making insects exceptionally weak and exceedingly fast. • A mundane insect’s basic Abilities are Brawl 2 (bite or horn or dodging), Survival 3 (home terrain), Awareness 3 (food), and Athletics 5 (flying or hopping or scurrying). • An insect’s Natural Weapon is either a bite (Teeth) or a stinger (Horn). • Virtues & Flaws and Qualities can be selected from those mentioned in *Houses of Hermes: Mystery Cults*.\n\nType Size Str Sta Dex Qik Example Aggressive Flier –15 –30 +1 +3 +15 Wasp Non-Aggressive Flier –15 –29 0 +2 +17 Butterfly Aggressive Crawler –13 –26 0 +3 +14 Ant Non-Aggressive Crawler –15 –30 +2 +1 +17 Dung Beetle"
+    }
+
+    #tcffcebb6e1de009c47f06b ^"Shape & Material Bonuses of Magical Creatures" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Shape/Form", "Bonus"]
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 139
+        }
+        TABLE {
+            "Basilisk eye" "+8 kill at a distance"
+            "Catoblepas esophagus" "+7 kill or harm humans"
+            "Chimera tongue" "+8 create fire"
+            "Dragon eye" "+8 protection against ghosts"
+            "Dragon heart" "+7 Intellego magic"
+            "Dragon teeth" "+6 invisibility"
+            "Griffin feather" "+6 flying, +5 strength"
+            "Hippogriff liver" "+6 flying, +5 freedom from restraints"
+            "Hydra teeth" "+8 regeneration, +6 Creo spells"
+            "Leucrota tongue" "+6 mimic human voices"
+            "Manticore teeth" "+5 swiftness, +4 ferocity"
+            "Myrmecoleon exoskeleton" "+6 deprivation and starvation"
+            "Panther of Virtue’s hide" "+6 song and melodious sounds"
+            "Pelican of Virtue’s beak" "+8 healing and nurturing"
+            "Phoenix ashes" "+11 rejuvenation and regeneration"
+            "Remora of Virtue’s fins" "+7 slow or halt a moving object"
+            "Salamander of Virtue’s skin" "+8 extinguish fire"
+            "Siberian six-legged antelope hoof" "+6 speed, quickness"
+            "Unicorn horn" "+11 fertility, +10 detect poison, +8 healing"
+        }
+        DESCRIPTION "Another reason a magus might want to breed magical beasts is the Shape & Material Bonuses their parts lend to laboratory activities. Because these beasts are rare, the bonus provided is quite high. While stocking and breeding a rare beast makes it more common (for the right buyer), it does not diminish the high bonus. Most of the listed creatures are legendary beasts. Shape & Material Bonuses for Animals of Virtue can be derived by using the suggestions found in *Realms of Power: Magic* (pages 66–68).\n\nMyrmecoleon +6 deprivation exoskeleton and starvation Panther of +6 song and Virtue’s hide melodious sounds Pelican of +8 healing and Virtue’s beak nurturing"
+    }
+
+    #tdc6a37e0949a45ee487a14 ^"Breeding Roll Condition Modifiers" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Condition", "Modifier"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 140
+        }
+        TABLE {
+            "Adequate diet" "+1"
+            "Aggressive" "– Ferocity Personality Trait"
+            "Agreeable environment" "+1"
+            "Appropriate Hermetic spell" "+1 per 2 magnitudes of effect"
+            "Carnivore" "–1"
+            "Competent handler" "+1/5 lead handler’s Animal Handling (rounded up)"
+            "Enlightened handler" "+1/5 lead handler’s Magic Lore (rounded up)"
+            "Herbivore" "+1"
+            "Inadequate diet" "–2"
+            "Magical Creature" "– Magic Might (in magnitudes)"
+            "Only beast of its kind besides mate" "–3"
+            "Similar animals in proximity" "+1"
+            "Tamed animal" "+3"
+            "Unsatisfactory environment" "–2"
+        }
+    }
+
+    #t4045e2d8e72ecc70f207c0 ^"Inherited Traits of Offspring: Breeding for Best" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Roll", "Breeding for Best Result"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 141
+        }
+        TABLE {
+            "Botch" "Major Supernatural Flaw or Magical Inferiority gained"
+            "0" "Minor Supernatural Flaw or Magical Inferiority gained"
+            "1-3" "Offspring is weak (Stamina reduced by –1)"
+            "4-12" "Offspring resembles parent"
+            "13-15" "Offspring is exceptionally hardy (Stamina increased +1)"
+            "16-17" "Minor Supernatural Virtue or Magical Quality gained"
+            "18+" "Major Supernatural Virtue or Magical Quality gained"
+        }
+    }
+
+    #t3a0cc519012e7f821136f0 ^"Inherited Traits of Offspring: Breeding for Beast" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Roll", "Breeding for Beast Result"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 142
+        }
+        TABLE {
+            "Botch" "Offspring dies days after birth"
+            "0" "Offspring is weaker than male parent (reduce Stamina or increase the cost of one power)"
+            "1-12" "Offspring resembles male parent"
+            "13" "Offspring resembles female parent (if female, this beast will provide a +3 bonus to future crossbreeding rolls)"
+            "14" "Offspring resembles male parent and has one Minor Virtue or Quality of the female parent"
+            "15+" "Offspring resembles male parent and has one Major Virtue or Quality of the female parent"
+        }
+    }
+
+    #tbfaa176123177383ae7786 ^"Inherited Traits of Offspring: Gestation Conditions" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Condition", "Modifier"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the section it stands in"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 142
+        }
+        TABLE {
+            "Adequate diet" "+1"
+            "Agreeable environment" "+1"
+            "Appropriate Hermetic spell" "+1/magnitude"
+            "Inadequate diet" "–2"
+            "Ligature" "+1 to +3"
+            "Unsatisfactory environment" "–2"
+        }
+    }
+
+}

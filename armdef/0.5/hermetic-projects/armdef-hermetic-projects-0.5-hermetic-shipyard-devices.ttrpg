@@ -1,0 +1,441 @@
+EXTENSION "ARMDef_Hermetic_Projects_HermeticShipyard_Devices" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Four: The Hermetic Shipyard devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Hermetic_Projects_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t20e66f5a047577f83fac73 ^"Sight of the Distant Slipway" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Distant Slipway"
+            ^"Rules Section" STRING "The Distant Slipway"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 35
+            ^"Requisite" STRING "Creo"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Special"
+            ^"Effect Design" STRING "(Base 2, +4 Arcane Connection, +1 Concentration, +2 Special based on Room, +1 Creo requisite; +5 device maintains concentration)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (70), 2 seasons (53), 3 seasons (47), 4 seasons (44)"
+            ^"Printed Effect Line" STRING "In(Cr)Im 35 Pen: +0, 1/day R: Arcane Connection, D: Concentration, T: Special"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 58
+        }
+        DESCRIPTION "This effect collects sight and sound from the target arcane connection and projects these senses around the lower end of the slipway, making it appear that the slipway extends out into the remote location. Once activated, the illusion is maintained by the device until canceled.\n\nThis effect is similar to the commonly known spell Summoning the Distant Image, with an additional Creo requisite to create the appropriate species around the device.\n\nThis device effect is required to survey the site before launching the ship to the remote location. This helps to avoid the catastrophic accidents that could occur when blindly pushing several tons of ship into the remote sea."
+    }
+
+    #t03e12d3e2b7812fb484ab2 ^"Launch the Distant Vessel" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Distant Slipway"
+            ^"Rules Section" STRING "The Distant Slipway"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 55
+            ^"Requisite" STRING "Animal, Aquam, Corpus, Terram"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 35, +1 Touch, +3 Structure) Required Lab Total: 1 season (110), 2 seasons (83), 3 seasons (74), 4 seasons (69)"
+            ^"Printed Effect Line" STRING "ReHe (AnAqCoTe) 55 Pen: +0, 1/day R:Touch, D:Momentary, T:Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 58
+        }
+        DESCRIPTION "This effect transports the target vessel, launched down the slipway, to the distant waterway associated with the arcane connection bound into this device.\n\nAlthough the intent of the effect is to transport the ship, the effect design is based on the Rego Corpus guideline to transport an individual to a location identified through an Arcane Connection. This base effect is used by analogy to affect the target ship, represented by the Structure target.\n\nAny crew present on board are simply taken with the ship when it is transported thanks to the free requisites. This particular device effect does not have Penetration built in, though others might to allow ships containing bound spirits or other resident supernatural entities to be transported. Vessels larger than a medium-sized cog will also need a different launch with an additional +1 magnitude to account for the ship’s size."
+    }
+
+    #t4b94e89ccdf00a12dbe865 ^"The Soak" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Improving the Working Conditions"
+            ^"Rules Section" STRING "Improving the Working Conditions"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 1, +1 Touch, +2 Sun, +3 Structure, +1 subtle effect; +1 for two uses, +3 triggered at sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (48), 2 seasons (36), 3 seasons (32), 4 seasons (30)"
+            ^"Printed Effect Line" STRING "ReAq 24 Pen: +0, Constant Effect R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 61
+        }
+        DESCRIPTION "This wooden sewer grate about the size of a large shield is installed in the deepest point of the boat shed. It draws all uncontained water currently within the structure to it, where it falls through the grate and into the sewer to be flushed away. The effect is subtle, so as not to unnerve the craftsmen and laborers who work in the boathouse. The effect is also restricted to the inside of the boat shed so that rainfall is not unnaturally affected.\n\nThe device needs three pawns of Rego or Aquam vis and a laboratory total of 48 to complete in a single season as a lesser enchanted device, otherwise the device needs to be opened for enchantment with eight pawns of vis."
+    }
+
+    #t97edc66b7e847643adce0e ^"The Wheel" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Tools of the Trade"
+            ^"Rules Section" STRING "Tools of the Trade"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 30
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +1 Concentration, +2 size; +5 device maintains concentration, +10 unlimited use)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)"
+            ^"Printed Effect Line" STRING "ReHe 30 Pen: +0, Unlimited Use R: Touch, D: Concentration, T: Individual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 61
+        }
+        DESCRIPTION "This is a horse-driven wheel connected to a number of chains, ropes, and pulleys that feed into the main boat shed. These ropes can be connected to the various cranes and winches that are used to lift and move the great wooden beams from which the ship is formed.\n\nThe wheel provides motive power, which allows fewer craftsmen than normal to construct the ship, which in turn adds +1 to the ships specialization, and adds +1 to a Rego specialization. The horse is entirely incidental; it is there simply because mundane visitors would expect it."
+    }
+
+    #t1465bf88ecfe2d96491b63 ^"The Conscientious Carpenter" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 30
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Base 5, +1 Touch, +2 Group; +10 unlimited use)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)"
+            ^"Printed Effect Line" STRING "ReHe 30 Pen: +0, Unlimited Use R: Touch, D: Momentary, T: Group"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 64
+        }
+        DESCRIPTION "One advantage of Rego craft magic is that Finesse can be taught to anyone, Gifted or not. This means an enchanted device in the hands of a Finesse-trained mundane craftsman can be put to work as effectively as a magus casting the spell himself.\n\nWhen touched to pile of wood, this wand cleans, cuts, and shapes the wood into the strakes that make up a ship’s hull. The wand is limited to creating strakes and cannot be used to work other parts of the ship.\n\nUse of this wand throughout the building of a ship adds +1 to the shipwrights Profession: Shipwright ability for the purposes of deciding how long the ship takes to complete (*City & Guild*, page 68).\n\nAppropriate laboratory bonuses apply to this effect (+1 Rego) as does a further +4 bonus as the wand is made of wood."
+    }
+
+    #t7e82747664d6d87fae4a52 ^"Shape of the Coastal Buss" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 43
+            ^"Requisite" STRING "Muto, Terram"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "6/day"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 5, +1 Concentration, +3 Structure, +1 Muto requisite, +1 intricacy; +3 for 6 uses per day, +5 device maintains concentration)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (86), 2 seasons (65), 3 seasons (58), 4 seasons (54)"
+            ^"Printed Effect Line" STRING "Re(Mu)He(Te) 43 Pen: +0, 6/day R: Personal, D: Concentration, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "This effect allows The Hermes to change shape; its keel, deck, and strakes can transform from one design to another, in this case to a coastal buss able to navigate shallower waters and travel further upriver than a cog.\n\nTriggered by the captain or a crewman holding firm to the ship and calling for it to change, the ship reshapes itself, strakes pulling themselves free, decks folding themselves, planks stretching and contracting, and nails loosening themselves before finding new homes. At the end of the transformation the original cog is replaced by a smaller coastal buss. The effect is total, such that, where required, the construction of the ship can also change, from clinker-built to carvel, or vice versa. The ship’s rigging is also affected by these shape-changing spells, changing the sails in size and shape where needed.\n\nWhile the Rego technique governs the movement and control of the component parts, the Muto requisite changes them in size and shape, so that no new material is required and none is lost through the transformation. *The Hermes* itself maintains concentration on the transformation and the effect is ended either by command or by the vessel taking on another shape.\n\nThe transformation is likely to be unnerving to first-timers, but the center of the top deck near to the mast is quite safe. Those at the side of the ship must take their chances.\n\nA distinct effect using the same level is required for each shape that the vessel can take, which means the same laboratory text cannot be used for subsequent shapes.\n\nThe laboratory bonus of +10 for ships applies to this effect, as does the +4 bonus to affect dead wood. While the aim of the effect may be to make the ship easier to sail in certain circumstances, the +5 bonus to sailing does not apply. Magi who experiment in creating this effect may see the effect warped, for instance through the new shape being obviously mystical (perhaps expressing magical symbols in its hull) or they may find the ship’s new shape capable of traveling further and faster than anticipated."
+    }
+
+    #t922ead81d0141b48c0a15f ^"Magical Ballast" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 3, +2 Sun, +3 Structure; +1 2/ day, +3 triggered at sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (48), 2 seasons (36), 3 seasons (32), 4 seasons (30)"
+            ^"Printed Effect Line" STRING "ReHe 24 Pen: +0, Constant Effect R: Personal, D: Sun, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "Weight and its distribution through the ship is vital to its handling. This effect ensures that The Hermes always comes to rest true and level in the water. The Hermes is treated as carrying a constant load, evenly distributed across the ship, no matter what cargo it is loaded with. This ensures that the crew can handle the ship as easily fully loaded as they can with an empty hold.\n\nExceeding the ship’s tonnage causes the effect to fail and the ship’s handling to degrade, though it reasserts itself when the load has been reduced.\n\nThe +10 bonus for ships and the +1 bonus for Rego from the laboratory both apply. The +5 shape bonus to sailing also applies as does +1 for prior Rego and/or Herbam effects. If the magus experiments while instilling this effect, it could fail when the ship sails under certain conditions, when cargo is loaded into certain areas, or could increase or decrease the ship’s base tonnage."
+    }
+
+    #t369d14ef3507b06a96e277 ^"The Unerring Navigator" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 40
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 4, +4 Arcane Connection, +1 Concentration; +5 maintain concentration, +10 for unlimited use)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (80), 2 seasons (60), 3 seasons (54), 4 seasons (50)"
+            ^"Printed Effect Line" STRING "InTe 40 Pen: +0, Unlimited Use R: Arcane Connection, D: Concentration, T: Individual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 69
+        }
+        DESCRIPTION "This effect is activated by the magus or crewman calling for *The Hermes* to find a place represented by an arcane connection. The effect allows *The Hermes* to recognize the direction in which the target can be found. The arcane connection must remain in contact with the ship through the effect’s duration.\n\nWhile this effect, on its own, does not provide any bonus toward navigating the ship, later effects invested into *The Hermes* can use the knowledge that this effect provides.\n\nBonuses of +16 apply to this laboratory project: +10 as the ship is enchanted in the shipyard, +5 as it is a sailing effect, and +1 for prior Terram effects."
+    }
+
+    #tec43bb67656deb82cba438 ^"Follow the Coast" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 30
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Effect Design" STRING "(Base 2, +1 Concentration, +4 Vision; +10 unlimited use, +5 maintain concentration)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)"
+            ^"Printed Effect Line" STRING "InTe 30 Pen: +0, Unlimited Use R: Personal, D: Concentration, T: Vision"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 69
+        }
+        DESCRIPTION "Activated by a crewman with clear sight of the coast, The Hermes can be commanded to follow the indicated coastline at a given distance. The coast must be sighted initially for targeting purposes, but does not thereafter need to be kept in sight by the crewman, as the enchantment grants this limited sensory ability to the vessel itself.\n\nThe effect ends either by command by any of the crew or when the ship sails out of sight of the targeted coastline.\n\nThe effect works by determining the direction and distance to the coast throughout the effect’s duration, which *The Hermes* itself maintains. As a navigational effect, it provides no bonuses or benefit to the crew unless used together with the Tillerman enchantment.\n\nEnchanted in the Hermetic Shipyard, this effect benefits from the usual +10 for ships, and the effect is so closely linked to sailing that the shape bonus of +5 to sailing also applies here. In addition, there are prior effects that include Intellego and/ or Terram effects, so the laboratory total gains an additional +2 bonus.\n\nPotential side effects from experimentation might see the effect misjudging the distance to the coast or recognizing only certain types of coastline, such as beaches, harbors, or cliffs."
+    }
+
+    #tee3da53ca42d7f4f473d06 ^"The Tillerman" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Sun, +1 size; +1 for 2/day, +3 triggered at sunrise/set, +3 triggered by the Unerring Navigator, +3 triggered by Follow the Coast)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)"
+            ^"Printed Effect Line" STRING "ReHe 25 Pen: +0, Constant Effect R: Touch, D: Sun, T: Individual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 70
+        }
+        DESCRIPTION "The Hermes is fitted with a large rudder controlled by a sturdy tiller under the rear castle. Ordinarily, the tiller is manned with the tillerman taking commands from the captain or mate forward of the mast. But this effect allows the ship to take control of the rudder.\n\nBy default, this effect keeps the tiller in the last position it was manually moved to. But this effect is unusual in that it is linked to and controlled by two other enchantments. The tiller is controlled according to the headings determined by both the Unerring Navigator and the Follow the Coast effects, shifting the rudder to keep *The Hermes* on course to its destination. While the tiller is being controlled by these effects the ship’s crew gain +3 to navigation and/or sailing rolls to reach the specified location, and +1 to navigate in relation to it.\n\nIt has been enchanted as a constant effect but the additional control mechanisms have also been accounted for in the effect design.\n\nThis effect allows *The Hermes* to sail with a smaller crew than normal without penalty to the ship’s handling.\n\nThis effect has been enchanted into *The Hermes* as the rudder is often vulnerable and prone to damage in difficult waters. This allows the rudder to be replaced without losing the magic.\n\nBonuses of +10 (ships), +5 (sailing), and +1 (Rego) apply to this enchantment, as does a bonus of +2 for prior Rego and/ or Herbam effects."
+    }
+
+    #tc1b3600d7bab7403aee375 ^"Man the Sails" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 26
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Group; +10 for unlimited use, +3 triggered by the Unerring Navigator, +3 triggered by Follow the Coast)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (52), 2 seasons (39), 3 seasons (35), 4 seasons (33)"
+            ^"Printed Effect Line" STRING "ReHe 26 Pen: +0, Unlimited Use R: Touch, D: Momentary, T: Group"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 70
+        }
+        DESCRIPTION "When a crewman calls out his commands loudly and clearly, The Hermes obeys and draws the sails into the desired configuration. The target of the effect is whatever sails and rigging, treated as a Group, are rigged to the mast. Sails can be raised, lowered, or close-hauled, allowing the ship to tack through the wind. The crewman must make a Perception + Finesse Stress Roll against Ease Factor 6 to complete the action successfully.\n\nUse of this effect allows *The Hermes* to sail with a smaller crew than would otherwise be needed, and makes manipulating the sails quicker than mundane vessels, which also helps to make her more maneuverable.\n\nThis effect is also controlled through the two navigational effects described earlier and the cost of the triggers for both of these are accommodated in the effect design.\n\nAssuming this effect is enchanted within the Hermetic Shipyard, the magus receives the following bonuses to his Lab Total: +10 for ships, +5 for sailing, +1 for Rego, and +3 for prior Rego and/or Herbam effects."
+    }
+
+    #tf247a15f4ba838179d1c1e ^"Gather the Wind" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 14
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Sun; +1 for 2/ day, +3 triggered at sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (28), 2 seasons (21), 3 seasons (19), 4 seasons (18)"
+            ^"Printed Effect Line" STRING "ReAu 14 Pen: +0, Constant Effect R:Touch, D:Sun, T: Individual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 70
+        }
+        DESCRIPTION "This enchanted sail amplifies the force of any wind that touches it, collecting more of the wind than would normally pass across the sail.\n\nAn unfamiliar sailor or captain suffers a –1 penalty to any ship handling rolls for the first season working with the device, but once familiarized, he gains a +2 bonus to any sailing rolls and totals for speed. Vessels normally rigged with multiple sails need to be fully rigged with these devices in order to gain the benefit. If they are not, the –1 handling penalty applies.\n\nIf using *City & Guild*, these enchanted sails need to be of at least Superior construction to withstand the greater forces to which they are subject. As this effect is third magnitude, it does provide a +3 bonus to all stress checks against storm damage.\n\nThe sail provides a +4 bonus to effects dealing with wind while the shipyard laboratory adds +1 for each of Rego and Auram."
+    }
+
+    #td4020e0b64be6ca98f0117 ^"Cutting the Waves" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 19
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun; +1 for 2/ day, +3 triggered at sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (38), 2 seasons (29), 3 seasons (26), 4 seasons (24)"
+            ^"Printed Effect Line" STRING "ReAq 19 Pen: +0, Constant Effect R:Touch, D:Sun, T: Individual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 71
+        }
+        DESCRIPTION "This device is a shaped wooden plank, attached to the stem, or leading edge, of the ship. The Rego Aquam enchantment breaks the waves ahead of the vessel, which eases the path of the ship through the water. Each wave is treated as an individual, rather than a part of a larger whole. This is by analogy with Rego Auram, which treats distinct winds as individuals.\n\nThe effect, once the captain and crew are familiar with the ship’s handling, is to improve its speed through the water. An unfamiliar crew or captain suffers a –1 penalty to any ship handling rolls for the first season working with the device, but once familiarized, they gain a +2 bonus to any sailing rolls and totals for speed.\n\nThe Hermetic Shipyard provides a +1 bonus to the lab total for each of Rego and Aquam."
+    }
+
+    #t7051a82d208377ea7818b2 ^"The Ship’s Hearth" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 19
+            ^"Requisite" STRING "Rego"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Circle"
+            ^"Effect Design" STRING "(Base 4, +2 Sun, +1 Rego requisite, +1 2/day, +3 triggered at sunrise/set) Required Lab Total: 1 season (38), 2 seasons (29), 3 seasons (26), 4 seasons (24)"
+            ^"Printed Effect Line" STRING "Cr(Re)Ig 19 Pen: +0, Constant Effect R: Personal, D: Sun, T: Circle"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 71
+        }
+        DESCRIPTION "All ships have at least one hearth of some kind, and these are usually built into the vessel as it is constructed. Ships need fire for cooking, light, and warmth, but a fire that escapes can ravage and sink a ship if not contained quickly. This circular hearth, made of fired brick and mortar, creates its own magical fire of +5 intensity. The Rego requisite ensures that no flame or ember can leave the hearth.\n\nThis device does not benefit from the laboratory bonus to ships, as it is separate from the hull and does not affect the ship itself. But as a hearth, it does gain a +7 to create fire and heat."
+    }
+
+    #t9fd32396f7b4d0a7735f49 ^"False Fire" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 9
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 3, +2 Sun; +1 for 2/day, +3 triggered by sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (18), 2 seasons (14), 3 seasons (12)"
+            ^"Printed Effect Line" STRING "CrIg 9 Pen: +0, Constant Effect R: Personal, D: Sun, T: Individual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 71
+        }
+        DESCRIPTION "These enchanted lamps shine with an unending inner light equivalent to torchlight. The lamps generate neither heat nor smoke, which makes them ideal for lighting the ship. The Hermes has a number of these, as they are cheap and easy to produce, and most magi are able to create multiple lamps in a season, especially given the easily obtainable Laboratory Text.\n\nIf the effects are enchanted into lamps as described earlier, the project benefits from a +7 bonus to produce light, making the devices very easy to make. Given the low level of the effect, it is recommended that these lamps be lesser enchantments, which avoids the need to open each lamp for enchantment."
+    }
+
+    #t8e13660b7af4b0c754828e ^"Poseidon’s Chariot" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 30
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 3, +1 Concentration, +3 Structure; +5 maintain concentration, +10 Unlimited Use)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (44), 2 seasons (33), 3 seasons (30), 4 seasons (28)"
+            ^"Printed Effect Line" STRING "ReHe 30 Pen: +0, Unlimited Use R: Personal, D: Concentration, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 72
+        }
+        DESCRIPTION "This effect allows the ship to be commanded to sink into the sea, overcoming its natural buoyancy. The enchanted ship maintains concentration on the effect and keeps the ship at the depth specified by the crew. The effect can be canceled and the ship commanded to rise back to the surface.\n\nIf enchanted in the Hermetic Shipyard, the usual bonuses apply (+10 ships, +1 Rego), as do +5 sailing and +4 to affect dead wood, which both come from the ship itself.\n\nExperimentation may influence the way in which the ship plunges into or rises from the sea, perhaps violently or even dangerously."
+    }
+
+    #t151170067620126e030c5e ^"The Mermaid’s Kiss" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 43
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 5, +1 Concentration, +3 Structure; +10 Unlimited Use, +5 maintain concentration, +3 triggered by Poseidon’s Chariot)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (86), 2 seasons (65), 3 seasons (58), 4 seasons (54)"
+            ^"Printed Effect Line" STRING "ReAq 43 Pen: +0, Unlimited Use R: Personal, D: Concentration, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 72
+        }
+        DESCRIPTION "Triggered by the Poseidon’s Chariot effect, this effect wards the ship against the inrushing ocean. The effect protects all below-decks areas and any enclosed parts of the vessel’s structure above deck, such as a castle. All doors and hatches are warded, as are any damaged sites that would normally let in water. The open deck, and in particular the mast and the rigging, is not protected by the ward, as this is considered to be on the outside of the structure.\n\nCrew members needing to go up on deck must protect themselves from the ocean and its currents, and submarine ships should be designed and outfitted with this in mind.\n\nThe effect is named after the story that a drowning sailor, kissed by a mermaid, gains the ability to breathe water as though it were air.\n\nThe Hermetic Shipyard provides bonuses of +10 for ships and +1 each for Rego, Aquam, and Auram. As the ship already has one Rego effect invested, a further +1 is gained.\n\nA submarine vessel is likely to have other devices enchanted with similar effects, such as boats that can be launched from the ship while protecting their crew, and helmets with variations of Lungs of the Fish (**ArM5**, page 122)."
+    }
+
+    #t7eda74bbe3eccb9a26fe6c ^"Catching the Tidal Winds" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 33
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited Use"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 3, +1 Concentration, +3 Structure; +10 unlimited use, +5 maintain concentration, +3 triggered by Poseidon’s Chariot)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (66), 2 seasons (50), 3 seasons (44), 4 seasons (42)"
+            ^"Printed Effect Line" STRING "ReHe 33 Pen: +0, Unlimited Use R: Personal, D: Concentration, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 72
+        }
+        DESCRIPTION "This effect propels the ship through the water, riding the undersea currents as though the sails had caught a wind. The movement of the ship is controlled by both the rudder and the sails, allowing the crew to sail the ship under water just as they would on it.\n\nAs with the previous effect, this effect is activated when the vessel plunges into the sea under the power of Poseidon’s Chariot.\n\nThe Hermetic Shipyard provides bonuses of +10 for ships and +1 for Rego. The ship itself provides bonuses of +4 to affect dead wood and +5 for sailing. And as the ship has been enchanted with two prior Rego effects, a further +2 is gained."
+    }
+
+    #t3f411c386456a7dee18861 ^"The Sky is My Ocean" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 39
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 10, +2 Sun, +3 Structure; +1 for 2/day, +3 triggered at sunrise/set) Required Lab Total: 1 season (78), 2 seasons (59), 3 seasons (52), 4 seasons (49)"
+            ^"Printed Effect Line" STRING "ReHe 39 Pen: +0, Constant Effect R: Personal, D: Sun, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "As a constant effect, the ship is lifted into the air. The effect is controlled by a modified tiller and rudder mechanism that both controls how the ship rises and falls and how it is propelled forwards. A vessel enchanted with this effect has no need of sails or oarsmen, but without additional means of propulsion, the movement of this vessel is leisurely, as though from a calm and steady breeze.\n\nThe high base magnitude allows the ship to remain on a chosen course, with adjustments and corrections being made by the crew.\n\nThe effect can be suspended by landing the vessel on the ground, and the shipwright would do well to design the ship with legs that can be set down for just this purpose.\n\nIf enchanted in the Hermetic Shipyard, the usual bonuses apply (+10 ships, +1 Rego), as do +5 sailing and +4 to affect dead wood, which both come from the ship itself."
+    }
+
+    #t04e608f6eb4818aa74fcad ^"The Houseboat" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 44
+            ^"Requisite" STRING "Rego, Herbam"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +3 Structure, +1 Herbam requisite, +1 stone; +1 for 2/day, +3 triggered at sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (88), 2 seasons (66), 3 seasons (59), 4 seasons (55)"
+            ^"Printed Effect Line" STRING "Mu(Re)Te(He) 44 Pen: +0, Constant Effect R:Touch, D:Sun, T: Structure"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "When hammered into the floor of a freestanding structure, this large iron nail reforms the building into a boat of approximately the same size as the structure, changing the nature of the materials such that stone becomes buoyant. The Rego requisite reshapes the building into a seaworthy vessel. The specifics of the design can be amended with each casting, but the origins of the boat are clear, with the roof turned into a hull, or a chimney stack turned into a mast.\n\nThe caster must make a Perception + Finesse roll against an Ease Factor of 9 to produce a seaworthy vessel and the effect is canceled by removing the nail, at which point the structure returns to its natural state, wherever it is.\n\nIf designed in the Hermetic Shipyard, this spell benefits from a +1 bonus to the laboratory total for the use of Rego, and a further +10 as the spell directly concerns ships."
+    }
+
+    #td70bf6f809686cbcdeda40 ^"The Sandship" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 49
+            ^"Requisite" STRING "Rego"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +1 Part, +3 size, +2 intricacy; +1 for 2/day, +3 triggered at sunrise/set)"
+            ^"Required Lab Total" STRING "Required Lab Total: 1 season (98), 2 seasons (74), 3 seasons (66), 4 seasons (62)"
+            ^"Printed Effect Line" STRING "Mu(Re)Te 49 Pen: +0, Constant Effect R:Touch, D:Sun, T: Part"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 75
+        }
+        DESCRIPTION "This staff, when struck into the sands of a shoreline, draws up the sand, shapes it, and transforms it into a ship of magical enchanted sand, the mast forming around the staff. The effect draws the sand together, forming a channel from the beach to the sea that this vessel can float down.\n\nThe ship’s hull, deck, mast, and all other parts of it are made from sand, including the rigging and the sails. The ship maintains the appearance of wet sand throughout, but it is never truly waterlogged. The Art of Muto makes the sand light enough that it can float, ensures that it is non-porous so that water doesn’t seep through the hull, and strengthens the structure to allow a crew to sail the ship.\n\nHowever, being made from sand, the ship is weak and cannot stand up to damage. If using the damaged goods rules from *City & Guild*, page 77, the ship has three damage levels but has a –5 penalty to any stress check made when the ship is put at risk of damage.\n\nA Perception + Finesse roll against an Ease Factor of 9 is required to make a seaworthy vessel.\n\nThe effect is ended by drawing the staff from the ship’s mast.\n\nIf designed in the Hermetic Shipyard, this spell benefits from a +10 ships bonus to the laboratory total."
+    }
+
+}

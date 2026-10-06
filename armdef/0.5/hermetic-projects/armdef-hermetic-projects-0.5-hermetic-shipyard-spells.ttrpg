@@ -1,0 +1,180 @@
+EXTENSION "ARMDef_Hermetic_Projects_HermeticShipyard_Spells" {
+    NAME "Ars Magica Fifth Edition, Hermetic Projects - Chapter Four: The Hermetic Shipyard spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-05"
+    DEPENDS_ON "ARMDef_Hermetic_Projects_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #te7e83b238bc88772acde99 ^"A Season’s Inning" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Aquam"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReTe(Aq) 25 R: Touch, D: Momentary, T: Boundary, Ritual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "Some waterways, especially those near estuaries, are surrounded by marshland. However, there are techniques for building up and draining the land. This can take many seasons of work, with a large team of laborers working in very difficult conditions. The draining of marshland through the digging of drainage channels and the building of dykes is known as inning. This ritual allows the magus to drain an area 300 by 300 paces to the point that it is dry and stable, as though a season had been spent inning the land. The Aquam requisite is used to move the standing water outside the spell boundary, which makes the inning work easier than normal.\n\nThis spell uses the rules for Rego Craft Magic (*Covenants*, page 49) and as such the magus must make a Perception + Finesse roll to determine the success and quality of his work. In this case, the Ease Factor is 15 (base 9 + 6 for a season’s work). Failure means that, while the drainage ditches may have been dug, they are either too shallow or too few to drain the land. If left, the land is likely to remain waterlogged and building on it is impossible.\n\n(Base 2, +1 Touch, +4 Boundary, +1 Size, +1 Aquam requisite)\n\nRequired Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)"
+    }
+
+    #t6e300ca398fb78b5de012c ^"Follow the Route I Command" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "ReTe 25 R: Touch, D: Momentary, T: Part"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 57
+        }
+        DESCRIPTION "This spell carves a new channel in the ground with both ends connected to an existing waterway. As the spell completes, the water flushes into this new section and the spoil from the work starts to fill the old channel. The magus must be touching the ground that he wants the new channel to pass through.\n\nThe movement of a large amount of earth, while time-consuming, requires little skill. A Perception + Finesse roll against Ease Factor 12 is needed. Failure means that the channel is incomplete, or the old route is still flooded. If the Finesse roll botches, the work appears complete but the land is now liable to flooding, causing damage to crops and homes alike.\n\n(Base 3, +1 Touch, +1 Part, +3 size, +1 to affect stone)\n\nRequired Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)"
+    }
+
+    #ta48e9e0a7b51c698cd4aa6 ^"A Mightier Channel" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "PeTe 25 R: Touch, D: Momentary, T: Part"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 57
+        }
+        DESCRIPTION "On casting this spell while touching the river bank, the river is dredged, deepening and widening it as required by the casting magus. A single casting is enough to prepare a small waterway to take a large river barge, or a larger waterway to take a buss or cog.\n\n(Base 3, +1 Touch, +1 Part; +3 size, +1 to affect stone)\n\nRequired Lab Total: 1 season (50), 2 seasons (38), 3 seasons (34), 4 seasons (32)"
+    }
+
+    #t9d557d2e3397f8e9fd4e73 ^"The Hands of Phereclus" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Terram"
+            ^"Printed Stat Line" STRING "ReHe(Te) 40 R: Touch, D: Momentary, T: Group"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "Given enough lumber and prepared iron nails and other fixtures, this craft magic spell constructs an entire ship from the assembled raw materials. The design of the ship can be decided as the magus works the spell, and enough lumber can be controlled by the spell to create a ship of up to size +8. The free Terram requisite allows control and manipulation of the nails, bricks, and other mineral elements, but it cannot prepare them from raw materials; they must be in the required state.\n\nAs with all craft magic, a Perception + Finesse roll is required and, given the difficulty of creating a full vessel in little more than an instant, the Ease Factor is relatively high. Small ships, up to size +5, can ordinarily be built in a single season, while larger ships take multiple seasons. The following table takes this into account and provides a guide to Craft Magic Ease Factors for creating vessels of different sizes:\n\nShip Ease Factor River Barge 15 Coastal Buss 21 Large Cog 27 Grain Barge 30\n\nIn the table earlier, building a river barge is a relatively easy task for a shipwright, which is a base Ease Factor of 9, but the construction is likely to take up to a season, which adds +6 to the Ease Factor for a total of 15. Building a Mediterranean grain barge is an impressive feat (Ease Factor 21) and would normally take a shipwright a year (+9), which means a magus faces an Ease Factor of 30 to create such a vessel with craft magic. Given the relatively high Ease Factors involved, this spell is most likely to be used in constructing small vessels very quickly as a means of income for the shipyard.\n\nThe spell is named for Phereclus, a master shipbuilder of Greek antiquity.\n\n(Base 5, +1 Touch, +2 Group, +3 Size, +1 intricacy)\n\nRequired Lab Total: 1 season (80), 2 seasons (60), 3 seasons (54), 4 seasons (50)\n\nRego effects designed in the shipyard gain a +1 bonus from the Rego specialization and a further +10 as this is directly related to ships. Experimental side effects may include the design of the ships never quite matching what the magus intended, perhaps taking on a Greek aspect as per the spell’s inspiration. Modified effects may provide bonuses or penalties to the Finesse Ease Factors."
+    }
+
+    #td8ce6fae659ca33c71c139 ^"The Unseen Shipwright" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Terram"
+            ^"Printed Stat Line" STRING "ReHe(Te) 30 R: Touch, D: Momentary, T: Group"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 64
+        }
+        DESCRIPTION "The magus selects a pile of wood and formed iron fixtures, and the spell cuts, carves, and joins the wood into the hull of a target ship, repairing splits and holes under the magus’ direction. The worst damage is repaired first so that the vessel is always left seaworthy and the repairs are practically seamless.\n\nA Perception + Finesse roll is required against an Ease Factor set by the storyguide. The table on *Covenants*, page 49, is a useful guide, but a rule of thumb is that repairing a small leak or a splintered rudder is a task of average difficulty taking no more than a day for an Ease Factor of 12, while refloating a wrecked ship is almost impossible, with an Ease Factor of at least 27 (plus any modifiers that the storyguide imposes based on how long it might take a mundane shipwright to refloat the vessel).\n\nThe magus must have appropriate materials to hand in order to make repairs.\n\n(Base 5, +1 Touch, +2 Group, +1 size, +1 flexibility)\n\nRequired Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)\n\nNo shape or material bonuses apply but appropriate laboratory bonuses can be applied. Experiment side effects might include the repairs being obvious or weakened, or the Ease Factors for the Finesse rolls may be modified."
+    }
+
+    #t48ac14fe3beeea25f895d6 ^"Conjuration of the Seaworthy Cog" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Structure"
+            ^"Requisite" STRING "Terram"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrHe(Te) 45 R: Touch, D: Momentary, T: Structure, Ritual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "This ritual creates a fully-formed cog. The resulting ship is an exact copy of the cog used as a template during the design of this spell, even down to the knots in the hull and the adze marks on the keel. The only difference is that, assuming the magus makes the Intelligence + Finesse stress roll against an Ease Factor of 9, the conjured ship is in perfect condition, as though each part of its construction has only just been finished. Any flaws in the original template are rectified where they would have made the conjured ship weaker or less seaworthy.\n\nA Terram requisite is required to create the bolts, nails, and other fixtures.\n\nGiven the nature of the spell, a different ritual is required for each different type of ship that the shipwright wishes to conjure. To achieve this, the Hermetic shipwright must create a new ritual using the existing laboratory text as a guide and apply the principles to a new design.\n\nUnless cast on a waterway, the ritual should be cast within a boat shed prepared to receive the conjured vessel so that it does not topple and damage itself or its surroundings. Making the preparations forms a significant part of the ritual. Botches in casting are likely to conjure the ship in a position the magus did not expect, which could cause significant damage to his laboratory or bystanders.\n\n(Base 3, +1 Touch, +3 Structure, +2 for treated and processed Herbam, +3 intricacy, +1 Terram requisite)\n\nRequired Lab Total: 1 season (90), 2 seasons (68), 3 seasons (60), 4 seasons (57)\n\nIf designed in the Hermetic Shipyard described earlier, the +10 bonus for ships applies to this laboratory total. Magi may want to experiment to raise their lab totals, in which case the type or size of ship created may be different, the quality of the ship may be worse than intended, or the completion of the ritual may destroy the template ship."
+    }
+
+    #t4f7726cefff6828139e910 ^"Reparation of the Wounded Vessel" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Structure"
+            ^"Requisite" STRING "Terram"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrHe(Te) 45 R: Touch, D: Momentary, T: Structure, Ritual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "This ritual repairs all the damage to the target ship, restoring all it sdamage levels regardless of its condition. All components considered intrinsic to the ship are affected by the ritual, including the rudder, masts, castles, sails, oars, and so on. The spell works on any vessel and returns it to the peak of its seaworthiness.\n\nUnless the ship is completely wrecked (having lost all of its damage levels), any Hermetic effects enchanted into the vessel are still retained. Enchantments are only lost where all damage levels have been lost.\n\nA Terram requisite is required to mend or replace bolts, nails, and other fixtures.\n\n(Base 3, +1 Touch, +3 Structure, +2 for treated and processed Herbam, +3 intricacy, +1 Terram requisite)\n\nRequired Lab Total: 1 season (90), 2 seasons (68), 3 seasons (60), 4 seasons (57)\n\nThe +10 ships bonus afforded by the laboratory applies to this effect. Experimentation may reduce the effectiveness of the ritual, leaving the ship with at least one damage level lost, or in the worst cases put the enchantments at risk."
+    }
+
+    #td0d22d256d08a8402fc985 ^"Running Repairs" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Structure"
+            ^"Requisite" STRING "Terram"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrHe(Te) 30 R: Touch, D: Momentary, T: Structure, Ritual"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "This ritual repairs a single damage level to a vessel, represented by the magus identifying and targeting the damaged area of the ship. This ritual may be cast on a ship that has lost multiple damage levels, but only one of those levels will be repaired. A Terram requisite is required to mend or replace bolts, nails, and other fixtures.\n\nIf cast on a ship with at least one remaining damage level, any enchantments in the ship are preserved. If the ship has no damage levels remaining, then the enchantments are lost.\n\n(Base 3, +1 Touch, +3 Structure, +2 for treated and processed Herbam, +1 Terram requisite)\n\nRequired Lab Total: 1 season (60), 2 seasons (45), 3 seasons (40), 4 seasons (38)"
+    }
+
+    #t78a80f609f94863140c17b ^"Sail With the Tide" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "ReAq 35 R:Voice, D:Concentration, T: Part"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "Ships must usually wait for the tide before they leave port. Waters dangerous at low tide become navigable at high tide, allowing laden ships to leave port safely. This means that there are limited times in the day that ships can enter and leave port.\n\nThis spell draws a magical high tide to an area chosen by the caster, which is maintained for as long as the caster concentrates. The swell is enough to float a large ship and the caster is able to move the tide in relation to the ship.\n\nThe effect Duration is Concentration, which means the caster may need to maintain concentration for some time, likely an hour or two.\n\n(Base 4, +2 Voice, +1 Concentration, +1 Part, +3 size)\n\nRequired Lab Total: 1 season (70), 2 seasons (53), 3 seasons (47), 4 seasons (44)\n\nIf designed in the Hermetic Shipyard, this spell benefits from a +1 bonus to the laboratory total for each of Rego and Aquam."
+    }
+
+    #t5cc52b78f74e76a74d1e56 ^"Lifting the Storm" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "ReAu 45 R: Voice, D: Sun, T: Group"
+            ^"Source" STRING "Hermetic Projects"
+            ^"Page" INTEGER 74
+        }
+        DESCRIPTION "Poor weather can keep ships anchored in harbor for weeks, while their captains wait for the weather to turn. This spell controls even the strongest of storms, carving a channel through the weather through which ships can sail.\n\nNote that the spell is powerful enough to lift a storm across a harbor, but the effect is somewhat localized. This means that the weather may still be problematic out to sea, but at least the ships are able to safely leave the more treacherous inshore waters. The Sun duration allows multiple ships to sail under a single casting.\n\n(Base 5, +2 Voice, +2 Sun, +2 Group, +2 size)\n\nRequired Lab Total: 1 season (90), 2 seasons (68), 3 seasons (60), 4 seasons (57)\n\nIf designed in the Hermetic Shipyard, this spell benefits from a +1 bonus to the laboratory total for each of Rego and Auram."
+    }
+
+}

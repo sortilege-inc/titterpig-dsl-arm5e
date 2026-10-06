@@ -1,0 +1,55 @@
+EXTENSION "ArM5_Guardians_of_the_Forests_TheForest_Holzfrau" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Holzfrau"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Guardians_of_the_Forests_Core_Ext"
+
+    # Holzfrau (Chapter Four: The Forest, p36): one being, its printed stat lines verbatim fields.
+
+    #te460358c0f6d0a7464896d ^"Holzfrau" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Faerie Might" STRING "20"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Ways of the Forest"
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6-10), –5 (11-15), Incapacitated (16–20)"
+            ^"Powers" STRING "Faerie Nature: As a faerie, the holzfrau does not suffer from Fatigue, nor is she affected by diseases or old age. She can understand any languages, and can be understood by anyone. All faeries also have the Second Sight Virtue, and gain the benefits or penalties of any supernatural aura when using their faerie powers, according to the Realm Interaction table (see Ars Magica 5th Edition, page 183). Vulnerability to Iron: Cold-forged iron is painful to a holzfrau, and they will do anything to avoid its touch. It will not actually harm them, however. Control Plants, 1 point per magnitude, Init +1, Herbam: Wood-wives may create any Creo or Rego Herbam effects up to 20th level, at a cost of 1 point per magnitude of the effect. This cost is doubled in the winter. Fertility, 4 points, Init +1, Herbam: All holzfrauen can create an effect identical to The Bountiful Feast, granting fertility and protection to crops. They can also withdraw any protection that they have bestowed, should their generosity be abused. Healing, 4 points, Init –1, Corpus: With a kiss, a wood-wife can remove pain, cleanse a wound of infection, or grant swift healing. This either cures a light wound caused by disease or gives a +9 to recovery rolls."
+            ^"Vis" STRING "4 Herbam, in hair"
+            ^"Appearance" STRING "The holzfrau always appears as a woman, often (but not always) young and beautiful. She is usually bare-foot, and dressed in peasant clothing. They always have a distinguishing manner of dress, which may be used to identify the type of wood-wife (see main text)."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 36
+        }
+        PERSONALITY_TRAITS {
+            "Kindly" +3
+            "Shy" +3
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "escaping pursuers"
+            "Awareness" SCORE 2 SPECIALTY "travelers"
+            "Charm" SCORE 3 SPECIALTY "men"
+            "Chirurgy" SCORE 5 SPECIALTY "infected wounds"
+            "Faerie Lore" SCORE 5 SPECIALTY "faerie plants"
+            "Magic Lore" SCORE 4 SPECIALTY "magical herbs"
+            "Second Sight" SCORE 4 SPECIALTY "animals"
+            "Stealth" SCORE 3 SPECIALTY "hiding from pursuers"
+        }
+        DESCRIPTION "The Holzfrau is a spirit of vegetation, and is usually beneficial to mankind. She will simply flee from those who threaten her, but those who treat her kindly may receive kindness in return. Different wood-wives are associated with different plants — somewhat like dryads — and may have powers that relate to the mythical properties of the plant that they tend. Walpurga (see Chapter 8: Central Germany, The Harz Mountains) is the queen of the holzfrauen.\n\nSome spirits are more malicious. Stories of the Baumesel (Ass of the Trees) and Bockman (man-goat; see Chapter 6: The Black Forest) are used to frighten children, and with good reason, for these spirits attack lone travelers in the woods. The Eschenfrau (Wife of the Ash) is a very evil spirit to those unfortunate enough to have one living near them, and she must be appeased with a sacrifice on Ash Wednesday."
+    }
+
+}

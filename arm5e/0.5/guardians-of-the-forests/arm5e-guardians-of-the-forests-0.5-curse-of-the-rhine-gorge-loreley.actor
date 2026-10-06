@@ -1,0 +1,46 @@
+EXTENSION "ArM5_Guardians_of_the_Forests_CurseOfTheRhineGorge_Loreley" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Loreley"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Guardians_of_the_Forests_Core_Ext"
+
+    # Loreley (Chapter Twelve: Curse of the Rhine Gorge, p127): one being, its printed stat lines verbatim fields.
+
+    #tc5b722df0db81cac579f6b ^"Loreley" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t23968fd01b98a0006c5d60 ^"Loreley"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 5
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Soak" INTEGER 5
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Powers" STRING "Faerie Nature: As a faerie, the Loreley does not suffer from Fatigue, nor is she affected by diseases or old age. She can understand any languages, and can be understood by anyone. All faeries also have the Second Sight Virtue, and gain the benefits or penalties of any supernatural aura when using their faerie powers, according to the Realm Interaction table (see Ars Magica 5th Edition, page 183). Vulnerability to Iron: Cold iron is extremely painful to the Loreley, and she will take a Light Wound even from the merest touch. Any iron weapon that hits her (that is, still has a Damage Total after subtracting her Soak), has its wound level increased by one. Infatuation, 4 points, Init +0, Imaginem: The Loreley’s voice can create a strong desire in all who hear it to approach her. They will do everything in their power to get close to her, even leaping into the river and scrabbling up the cliff, or steering their craft towards the rocks, if that is what it takes. This power can affect up to ten people each round, who get a single Intelligence stress roll against an Ease Factor of 9 to resist it. Women receive a +3 bonus to this roll, as do those who have blocked their ears with wax. Possession of a dripstone (see page 124) allows the wearer to ignore the song if he makes a Perception roll against an Ease Factor of 6. Control Person, 8 points, Init +2, Mentem: If the Loreley can lure someone close enough to make eye contact, she can attempt to dominate his mind. This power only works on men, and can only affect one person at a time. The victim must make an Intelligence stress roll against an Ease Factor of 12 or do anything that the Loreley tells him, even leap to his death if that is what she desires. Control Water, 1 point per magnitude, Init +0, Aquam: The Loreley may cause any Creo or Rego Aquam effects up to 30th level, at a cost of 1 Might per magnitude of the effect. Form of Water, 10 points, Init +3, Aquam: The Loreley can transform herself into water and slip into the Rhine. While in this form she will regenerate 5 Might points per hour (four times her usual rate), and she will recover from wounds in minutes, hours, or days (for Light, Medium, and Heavy wounds, respectively), rather than days, weeks, and months. This makes her almost impossible to kill."
+            ^"Vis" STRING "6 Aquam, in blood; 4 Imaginem, in comb"
+            ^"Appearance" STRING "An exceedingly beautiful maiden, clothed only in her long, golden hair, which she is forever combing with a jeweled comb."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 127
+        }
+        PERSONALITY_TRAITS {
+            "Hateful to Men" +3
+            "Jealous of Women" +3
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 0
+        }
+        DESCRIPTION "The daughter of the Rhine Spirit (see Chapter 5: The Rhine, The Rhinefalls), the Loreley resents humankind’s attempts to tame her father and tries to wreak as much havoc on shipping as she can. Women do not escape her fury either — she is jealous of their ability to win the hearts of men when she can only hold their attention with her glamor. She will lure mariners towards her cliff and then nimbly scramble down to greet them, capturing them with her Control Person power and causing them to drown."
+    }
+
+}

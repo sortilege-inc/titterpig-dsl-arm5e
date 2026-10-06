@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_TheBlackForest_SordusABasilisk" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Sordus, a Basilisk"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # Sordus, a Basilisk (Chapter Six: The Black Forest, p61): one being, its printed stat lines verbatim fields.
+
+    #t84ed4b8707aa1f3d281bac ^"Sordus, a Basilisk" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tc98c4248567d4678fed5e2 ^"The Black Forest"]
+            ^"Covenant" LIST [#t14d731f2aac544e4980694 ^"Durenmar"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Animal"
+            ^"Characteristics" STRING "Int –3, Per 0, Pre n/a, Com n/a, Str 0, Sta +4, Dex –3, Qik –3"
+            ^"Size" INTEGER -2
+            ^"Combat" STRING "Sordus is too lazy to enter combat"
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, –1, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1-3), –3 (4-6), –5 (7-9), Incapacitated (10-12)"
+            ^"Abilities" STRING "Folk Ken 2 (intimidate), German 5 (insults), Hunt 4 (lying in wait), Latin 5 (whispers), Magic Lore 2 (beasts), West Norse 3 (threats) Bond Scores (PeVi Lab Total 81): Bronze +2, Silver +2, Gold +4"
+            ^"Vis" STRING "10 pawns of Perdo, in each eye"
+            ^"Appearance" STRING "Sordus is a huge lizard, standing about knee-height, and about 6 feet long from nose to tail. He is covered with tiny, diamondshaped scales that are various shades of gray, dark green, and black. On his head is a series of fleshy ridges, like a cock’s comb, that resembles a crown. Every movement he makes is laborious but deliberate."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 61
+        }
+        PERSONALITY_TRAITS {
+            "Disdainful" +3
+            "Lazy" +3
+            "Indifferent" +1
+        }
+        POWERS {
+            #t8b36de189d2d7436324fb8 ^"Gaze of Death" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "8 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Sordus can choose to inflict an incapacitating wound on anyone on whom his gaze rests."
+            }
+            #t27a38f29e122beef5ee36c ^"Horrid Wilting" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Every living plant within 5 paces of Sordus dies. Vegetable matter will start to rot, and worms will appear in food. Wood will begin to decay within a day of his presence. Sordus cannot control this power."
+            }
+            #t73996b3c4321bc8c84b25b ^"Pollute Water" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "All standing water within 5 paces of Sordus becomes stagnant. Other liquids will putrify, and running water will turn black until he moves on. Sordus cannot control this power. **Familiar Powers:* Mental Communication*: Sordus and Philippus are in constant mental contact, and can exchange words, images, and emotions, although either one can deny contact to the other. (Level 15)"
+            }
+        }
+    }
+
+}

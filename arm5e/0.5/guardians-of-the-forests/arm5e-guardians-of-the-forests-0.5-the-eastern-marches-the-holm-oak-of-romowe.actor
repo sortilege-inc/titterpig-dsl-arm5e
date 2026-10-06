@@ -1,0 +1,26 @@
+EXTENSION "ArM5_Guardians_of_the_Forests_TheEasternMarches_TheHolmOakOfRomowe" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - The Holm Oak of Romowe"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Guardians_of_the_Forests_Core_Ext"
+
+    # The Holm Oak of Romowe (Chapter Nine: The Eastern Marches, p99): one being, its printed stat lines verbatim fields.
+
+    #t2bb6a4b2b5dcf51e2c77c2 ^"The Holm Oak of Romowe" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tc90d50a9f766363c445754 ^"The Eastern Marches"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "45 (currently 30 due to entrapment)"
+            ^"Special Powers" STRING "Grant Flaw (Depression; upon anyone who breaks a branch or kills an animal), Possession (anyone who takes a branch of the tree) The Pomeranian Forest is one of the most oppressive and fearsome in Germany. Dominated by pine, fir, holly, and evergreen oak, it remains green and dark all year around. Its borders spill over into Pomerania and Poland, and it is reputedly a stronghold of witches and werewolves. In the northern reaches of the forest there is a sacred grove called Romowe; all locals know the perils of breaking a twig or slaying a beast there. Dominating the center of the grove is a massive holm (evergreen) oak, bedecked with ribbon of cloth and talismans. A small band of foresters tends the grove, ensuring that a fire beneath the oak’s boughs never goes out. The fire is fed with fallen branches. Contrary to first appearances, this is not a pagan revival; the foresters know that if the fire ever goes out, the malevolent spirit of Romowe will escape. Even taking a twig from the tree releases some of the ancient evil of the oak, causing some calamity to the taker. When Romowe was last free, it possessed a human who violated the sacred grove; the spirit became a tyrant, ruling over the whole region. It took St. Adalbert of Prague to defeat the spirit, drive it back into the Holm Oak, and light the fire that keeps it trapped."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 99
+        }
+        PERSONALITY_TRAITS {
+            "Domineering" +3
+            "Cruel" +1
+        }
+    }
+
+}

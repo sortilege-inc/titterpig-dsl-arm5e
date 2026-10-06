@@ -1,0 +1,41 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_CurseOfTheRhineGorge_CyrillusOfArgentoratum" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Cyrillus of Argentoratum"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # Cyrillus of Argentoratum (Chapter Twelve: Curse of the Rhine Gorge, p134): one being, its printed stat lines verbatim fields.
+
+    #t4fe4fa6f70ecb3db639110 ^"Cyrillus of Argentoratum" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#td9960ee83fd2c56dd9fac8 ^"The Amphitheater"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "20"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 0
+            ^"Combat" STRING "Trident and net: Init +7, Attack +12, Defense +14, Damage +7 Net: Init +4, Attack +11, Defense +11, Damage +7 Dagger: Init +4, Attack +8, Defense +8, Damage +5 Resolve as a scuffle attack (see ArM5, page 174) to immobilize or entangle a weapon."
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "–1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Appearance" STRING "This combatant is a wiry, dark-haired figure armed as a retetarius, with a trident and a net. His shoulder is protected by a galerus (metal shoulder guard) and his left arm by a manica (heavy linen quilting). He wears a copper mask of Poseidon."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 134
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Duty-Bound" +3
+            "Crafty" +1
+        }
+    }
+
+}

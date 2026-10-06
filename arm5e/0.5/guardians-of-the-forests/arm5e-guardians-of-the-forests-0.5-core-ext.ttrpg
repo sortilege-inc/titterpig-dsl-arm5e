@@ -1,0 +1,21 @@
+EXTENSION "ArM5_Guardians_of_the_Forests_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Guardians of the Forests is an EXTENSION on the arm5e edition (spec S13 composition). Its covenants and
+    # characters are .actor files, its places LOCATIONs in its .setting; its one new type is a path through the forest.
+
+    #tffea5b3c44838a75d0ccaf ^"Forest Path" DEF {
+        PROPERTIES {
+            ^"Steps" INTEGER
+            ^"Account" STRING
+            ^"Source" STRING DEFAULT "Guardians of the Forests"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A path of power through a forest, as Guardians of the Forests prints it: a character with Forest Lore communes with the forest's genius locus, takes on a Flaw (the Sacrifice), serves out a Quest, and gains a Virtue (the Fruit); each step of the path a Sacrifice, a Quest and a Fruit, each a field as printed ('1st Sacrifice', '1st Quest', '1st Fruit', ...). Account: the heading of the path's story in the chapter's lore."
+    }
+
+}

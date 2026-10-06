@@ -1,0 +1,26 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_CentralGermany_TheAppleOfTheKyffhauser" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - The Apple of the Kyffhäuser"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # The Apple of the Kyffhäuser (Chapter Eight: Central Germany, p85): one being, its printed stat lines verbatim fields.
+
+    #t4c93c9bea7703ea411c6d0 ^"The Apple of the Kyffhäuser" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t2886d57650d6b492986c64 ^"Central Germany"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "70"
+            ^"Special Powers" STRING "Grant Victory (to anyone who manages to hang their shield on the tree), Grant Virtue (Unaging; to prolong the active life of the men-at-arms), Heal Wounds, Possession (any who fail to defeat the men-at-arms) Forming part of the border between Saxony and Thuringia, the Kyffhäuser Mountains are a double line of hills that, in popular legend, are the resting place of any number of famous kings, most notably Frederick Barbarossa. At the base of the tallest peak of the Kyffhäuser stands a withered apple tree. The tree is closely guarded by men-at-arms, and it is said that whatever prince succeeds in hanging his shield on this tree will become lord of all the West; but those who fail are doomed to forever protect the tree as one of its warriors. The tree has been cut down three times by successful challengers (Clovis, Charlemagne, and Frederick Barbarossa) to prevent others from copying their feat. However, the tree has always sprung up again as luxuriant as ever, only to gradually fade and wither with the fortunes of those men. The next time it bursts into leaf, a terrible fight will begin; when it bears fruit, the king will hang his shield upon it and all men will rally around the shield while the wicked will be extirpated. The tree last bore fruit during the reign of Barbarossa."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 85
+        }
+        PERSONALITY_TRAITS {
+            "Regal" +4
+            "Peaceful" -1
+        }
+    }
+
+}

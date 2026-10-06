@@ -1,0 +1,39 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_TheForest_Abilities" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Chapter Four: The Forest abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t9b5cdd9af26a6ca2396808 ^"Forest Lore" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Arcane Ability: Forest Lore*"
+            ^"Ability Type" STRING "Arcane" FIXED
+            ^"Cannot Use Untrained" BOOLEAN true
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "This Ability covers knowledge of the Forest in all its manifestations. At its most mundane, it counts as an Area Lore for the forest in which it was learned; yet it is much more than this. It includes knowledge of the supernatural beings and places of a forest, as well as a sense of the spirit that rules it; what pleases it, what angers it, and whether it is currently Manifested in proximity to the character. Unless otherwise stated (see below), this understanding only applies to the home forest. As understanding deepens, however, this Ability becomes more general, applying to all supernatural forests rather than just the one where the character dwells, although the corresponding Ease Factor or required score level is raised by three points for a foreign forest. For example, a score of 4 (instead of 1) is required to enter communion with a foreign genius locus. Forest Lore can only be increased through practice, and the Source Quality is always equal to the strength of the forest’s aura.\n\nThe character typically (but not always) develops a deep spiritual attachment to the forest that he studies and lives in."
+    }
+
+    #tf1a8826c8e3761b91b6cbf ^"Forest Lore (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Score (Home Forest)", "Score (Foreign Forest)", "Understanding"]
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 37
+        }
+        TABLE {
+            "0" "3" "An elementary understanding of the forest with a resident spirit; the character merely has to spend a few hours in such a forest and he will be able to locate the most important sites, and know the major dangers."
+            "1" "4" "A basic understanding of the forest, its denizens, and important locations. You can enter communion with a genius locus and make the appropriate sacrifices."
+            "2" "5" "An awareness of the supernatural elements of the forest; you can detect when a spirit has Manifested in a nearby animal or plant, or whether a person is a recipient of a Virtue or Flaw from a forest spirit."
+            "3" "6" "You can locate vis in the forest by spending a few days searching."
+            "4" "7" "An understanding with the forest’s supernatural residents; they will tend to act neutrally or friendly towards the character. The spirit will occasionally communicate with the character, to warn him of interlopers, for example."
+            "5" "8" "You can communicate directly with the genius locus of the forest. The character is respected by most of the forest’s denizens."
+            "6" "9" "Respected and acknowledged as an ally by the forest spirit."
+        }
+    }
+
+}

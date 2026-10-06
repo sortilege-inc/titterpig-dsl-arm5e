@@ -1,0 +1,45 @@
+EXTENSION "ArM5_Guardians_of_the_Forests_TheBlackForest_Bockman" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Bockman"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Guardians_of_the_Forests_Core_Ext"
+
+    # Bockman (Chapter Six: The Black Forest, p50): one being, its printed stat lines verbatim fields.
+
+    #t7f3a0fc820065caeaec7bd ^"Bockman" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tc98c4248567d4678fed5e2 ^"The Black Forest"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Animal"
+            ^"Characteristics" STRING "Int –1, Per +1 Pre –5, Com 0, Str +1, Sta +2, Dex +5, Qik +2"
+            ^"Size" INTEGER -1
+            ^"Virtues and Flaws" STRING "Ways of the Forest"
+            ^"Combat" STRING "Claws: Init +9, Attack +13, Defense +9, Damage +3 (includes bonus for Ways of the Forest)"
+            ^"Soak" INTEGER 5
+            ^"Wound Penalties" STRING "–1 (1-4), –3 (5-8), –5 (9-12), Incapacitated (13-16)"
+            ^"Powers" STRING "Faerie Nature: As a faerie, the bockman does not suffer from Fatigue, nor is it affected by diseases or old age. All faeries also have the Second Sight Virtue, and gain the benefits or penalties of any supernatural aura when using their faerie powers, according to the Realm Interaction table (see ArM5, page 183). Vulnerability to Iron: Weapons made from iron do an extra 2 points of damage to the bockman. The Patient Stance, 0 points, Init n/a, Imaginem: Whilst remaining motionless, the bockman cannot be distinguished from the surrounding vegetation; it is effectively invisible. This power only works in forests. Unease of the Still Forest, 2 point per hour, Init n/a, Mentem: The bockman can radiate an aura of unease for up to 100 paces from its current location. The aura causes birds to stop singing, and an unnatural silence strikes the area of effect. This aura causes a growing feeling of dread to all within it; tempers become frayed, and people become paranoid and jumpy. For every hour subjected to this aura, a person suffers a cumulative –1 penalty to Personality Traits involving bravery or positive action, and it similarly enhances those such as Short-Tempered and Suspicious. No sleep can be gained while under the effects of the aura, and no Fatigue can be regained. Fear, 4 points, Init +2, Mentem: The victims of this power suffer an overwhelming dread, and if they fail a stress die roll against an Ease Factor of 6 (modified by a Brave Personality Trait), they will run in fear until exhausted, or (if unable to run), will collapse in a quivering heap until the sun rises. If the bockman uses this power when it may be seen, then anyone who sees it can be affected (up to ten people); otherwise it can affect only one target."
+            ^"Vis" STRING "1 pawn of Animal vis, in the right horn; 1 pawn of Mentem vis, in the left horn"
+            ^"Appearance" STRING "Although human in shape, the only thing remotely human in appearance is its chest and arms. It has the head and legs of a goat. The horns are usually backwards-curving and sharp. Its feral eyes and slavering jaws (filled with sharp teeth) strike fear in the bravest hearts."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 50
+        }
+        PERSONALITY_TRAITS {
+            "Malicious" +3
+            "Brave" -1
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "leaping"
+            "Awareness" SCORE 3 SPECIALTY "forests"
+            "Black Forest Lore" SCORE 6 SPECIALTY "roads"
+            "Brawl" SCORE 3 SPECIALTY "claws"
+            "Second Sight" SCORE 4 SPECIALTY "glamors"
+            "Stealth" SCORE 3 SPECIALTY "forests"
+            "Survival" SCORE 6 SPECIALTY "forests"
+        }
+        DESCRIPTION "These horrible faeries lurk near the paths through the Black Forest, waiting to ambush travelers. They usually use their* Unease of the Still Forest* to spook their victims and their mounts, before leaping out from concealment and unleashing their* Fear* power. They are physically weak in combat, and notoriously cowardly themselves; their main purpose (which is successful) is to discourage travelers through the forest. They nearly always work alone, and can be found in many of the oldest forests in Germany."
+    }
+
+}

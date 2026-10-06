@@ -1,0 +1,111 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_TheLowlands_Spells" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Chapter Seven: The Lowlands spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t5bb08d722f897d475f02a9 ^"Rising Passion" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrMe 15; R:Eye, D:Sun; T:Ind"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "Raises an unnatural carnal lust in a target. The target has no control over his or her passion, and is likely to act inappropriately. (Base 4, +1 Eye, +2 Sun)"
+    }
+
+    #tdbfb8e4071e0e205fc3c3a ^"Gossip of the Marketplace (Guardians of the Forests)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Printed Name" STRING "Gossip of the Marketplace"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Rego"
+            ^"Printed Stat Line" STRING "Cr(Re)Me 20; R:Eye, D:Sun, T:Ind"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "Implants a piece of information in a target, who is then compelled to pass this information on to his friends until the duration expires. (Base 3, +1 Eye, +2 Sun, Rego requisite to compel gossiping, +2 complexity)"
+    }
+
+    #t9e6384fe49753a4a676049 ^"Seed of Betrayal" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuMe 15; R:Eye, D:Moon, T:Ind"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "Changes the target’s emotions towards his master(s) to contempt, such that he will readily betray them. Subtract 5 points from the target’s relevant Loyal Personality Trait, for the duration of the spell. (Base 3, +1 Eye, +3 Moon)"
+    }
+
+    #tdc40c2905edb778a0dd264 ^"The Blinded Sentry (Guardians of the Forests)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Blinded Sentry"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeMe 5; R:Touch, D:Mom, T:Ind"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "Renders the target insensate for a moment, sufficient for the caster to slip past him, raise a shout, cast a spell, or pick his pocket. Only the initial touch is registered by the target. (Base 4, +1 Touch)"
+    }
+
+    #t21357f7e2c61e56ab121de ^"Clear Breath of the Consummate Liar" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Mentem"
+            ^"Printed Stat Line" STRING "MuVi(Me) 20; R:Per, D:Conc; T:Ind"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 73
+        }
+        DESCRIPTION "Allows the caster to manipulate the workings of a Frosty Breath of the Spoken Lie cast on himself. He can make himself appear to be lying or telling the truth, as desired. Casting without words or gestures is obviously advisable, and casting under Masking the Odor of Magic is also advantageous. (Base effect, +1 Conc, Mentem requisite)"
+    }
+
+    #t54266024a0ff0c5b78a8e4 ^"My New Best Friend" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Muto"
+            ^"Printed Stat Line" STRING "R: Eye, D: Sun, T: Individual, Level 25 Requisite: Muto"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 72
+        }
+        DESCRIPTION "This spell causes the target to believe that the caster is an old friend. The spell actually causes the caster to be temporarily substituted for one of the target’s real friends, adding realism; which means that the target will not suspect something is wrong, nor concentrate on the substitution unduly. Additionally, once the spell has expired, the target will not necessarily realize that he has been duped. The target will have one pivotal memory about the caster, usually (but not always) about how they became friends; and a host of supporting memories of minor events. Note that the caster does not know the memories that will be replaced, but can be assured of a friendly reaction (the target acquires a ‘Friendly to Caster’ Personality Trait at +3). Only if the target is a misanthrope with no good friends will the memories be entirely false, in which case the target gets an Intelligence roll against an Ease Factor of 9 to reveal the memory as false. Henri’s sigil, which reflects his trading interests, tends to create a memory associated with a business partner or a former transaction.\n\n(Base 5, +1 Eye, +2 Sun, +1 complexity)"
+    }
+
+}

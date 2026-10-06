@@ -1,0 +1,87 @@
+EXTENSION "ArM5_Guardians_of_the_Forests_TheLowlands_Boglin" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Boglin"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Guardians_of_the_Forests_Core_Ext"
+
+    # Boglin (Chapter Seven: The Lowlands, p79): one being, its printed stat lines verbatim fields.
+
+    #t186381b49ccc5cd0bfe496 ^"Boglin" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#ta3d45ed204e9411ed35068 ^"The Lowlands"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 6
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Printed Size" STRING "+3 (Body), 0 (Tentacle)"
+            ^"Virtues and Flaws" STRING "Greater Immunity, Ways of the Swamp; Tough; Blind, Greedy; Obese, Tainted With Evil"
+            ^"Combat" STRING "Tentacle: Init +10, Attack +14, Defense +12, Damage +8 Bite: Init +3, Attack +10, Defense +11, Damage +13 (includes bonus for Ways of the Swamp)"
+            ^"Soak" STRING "+12 (immune to damage from bludgeoning weapons)"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "(main body) –1 (1-8), –3 (9-16), –5 (17-24), Incapacitated (25-32); (each tentacle) –1 (1-5), –3 (6-10), –5 (11-15), Incapacitated (16-20)"
+            ^"Vis" STRING "8 pawns of Animal vis, one pawn in each tentacle; 6 pawns of Perdo vis, in its brain (a black and smelly nodule)"
+            ^"Appearance" STRING "The Boglin possesses eight slimy, dark brown, 12-foot-long tentacles. Its large misshapen saclike body, covered with a tough carapace, is rarely seen as it mostly stays under murky waters. Somewhere in it is a broad toothy orifice that serves as a mouth."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 79
+        }
+        PERSONALITY_TRAITS {
+            "Greedy" +5
+            "Reclusive" +2
+            "Guileful" +1
+        }
+        ABILITIES {
+            "Awareness" SCORE 5 SPECIALTY "swamp"
+            "Brawl" SCORE 8 SPECIALTY "Tentacle"
+            "Stealth" SCORE 3 SPECIALTY "swamp"
+            "Survival" SCORE 6 SPECIALTY "swamp"
+            "Swim" SCORE 3 SPECIALTY "swamp"
+        }
+        POWERS {
+            #t1b5036b58a5cf35f33f51c ^"Abominable Stench" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The Boglin may rudely fart out a great cloud of noxious bodily fumes from an orifice just beneath the waterline. This choking swamp gas spreads to a radius of 15 yards over 3 rounds, taking a further 3 rounds to dissipate. Any who come into contact with it must make a Stamina roll against an Ease Factor of 9, or otherwise recoil with watery eyes, clenching their nostrils shut, unable to act further. Any who botch keel over, vomiting."
+            }
+            #t499bcca2516d8390793a7e ^"Paralysis" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "Each of the Boglin’s tentacles is equipped with venomous barbs. This poison may be applied upon any hit that inflicts a wound: A Stamina roll against an Ease Factor of 9 may be made to resist this poison, but a failure results in a –5 penalty to all physical actions as their muscles seize. This poison wears off in about an hour**.** Each tentacle inflicts poison only once in any combat."
+            }
+            #t355d0aa5a98cbb6215158c ^"Writhing Grasp" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "Any hit by a tentacle that would inflict a Medium Wound or greater instead inflicts just a Light Wound, but the tentacle envelopes the victim in its choking grip. Each round thereafter, the victim may attempt either an opposed Strength roll to extricate himself completely or an opposed Dexterity roll to free his hands to be able to act. If the grip is not broken, the victim will be drawn into the water within range of the fearsome maw in 3 rounds. Only then may the Boglin use its Bite attack."
+            }
+            #taf74e876120e1f185aebd3 ^"Regeneration" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "20 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The Boglin may hibernate and regrow any severed tentacles at the rate of one per season."
+            }
+        }
+        DESCRIPTION "These primeval and foul spirits lurk in the swamps of northern Germany. The terrible stench of the pools they inhabit, together with occasional faint murmuring, provides clues to their presence. Only gentle ripples in the water tell of the stealthy approach of a boglin, before the beast suddenly lashes out with its tentacles at its prey (anything moving that passes by). The attacking tentacles should be treated as separate entities, with individual Wound Penalties. An Incapacitating blow may sever a tentacle; each such loss counts as a Light Wound to the creature proper. Once a live victim has been firmly grasped in its great black maw, it will withdraw and drag the victim underwater for later consumption at its leisure — horrid belching hours later tells of its pleasure in its gruesome meal. The Boglin possesses a simplistic and bestial malice — its gluttony is its overriding emotion — but nevertheless it is capable of surprising cunning in the hunt."
+    }
+
+}

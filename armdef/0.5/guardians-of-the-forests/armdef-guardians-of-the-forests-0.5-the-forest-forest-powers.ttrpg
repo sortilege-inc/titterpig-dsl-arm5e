@@ -1,0 +1,212 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_TheForest_ForestPowers" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - Chapter Four: The Forest forest powers"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # The chapter's forest powers, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tabd2a76df8d0db75f59803 ^"Presence (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Presence"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "General"
+            ^"Printed Stat Line" STRING "0 points"
+            ^"Cost" STRING "0 points"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "The spirit is aware of everything that happens within its bounds. In essence, the spirit is the forest, so it is present simultaneously everywhere within the forest’s boundaries. The presence of the spirit is stronger in some areas than others; at these locations an aura will spring up, of a strength appropriate to the Might of the spirit. The larger the Might of the spirit, the stronger the aura, or the larger its area of effect."
+    }
+
+    #t67147b16d1a4bf940ddb7e ^"Manifestation (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Manifestation"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "General"
+            ^"Printed Stat Line" STRING "5 points minimum, Init +1, Animal or Herbam, as appropriate"
+            ^"Cost" STRING "5 points minimum"
+            ^"Initiative" STRING "+1"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "The spirit can manifest its consciousness amongst animals of the forest, temporarily granting them a Might score and thus controlling their actions. For a cost of 5 points of Might, a single Size 0 creature (or an equivalent mass of smaller creatures) can be controlled. For each 5 additional Might points, ten more creatures of that size may be controlled. By manifesting its consciousness in plants of the forest, the spirit can make them grow with unnatural speed: a patch of weeds can spring up overnight; dense undergrowth will form in a week; a tree can grow from a seeding in a month. A base plant that is a pace in diameter (or its equivalent mass) costs 5 Might, and each ten-fold increase in mass costs another 5 points. If the spirit divides up all of its Might in this fashion, without leaving any points that are not manifested, then the spirit’s Presence power is temporarily withdrawn (although any auras remain unless the spirit’s power is withdrawn for more than a season). Humans and other sentient beings cannot be controlled by this power; instead, use the Possession power (see below)."
+    }
+
+    #t4441bde6ed386c27f858e9 ^"Produce Vis (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Produce Vis"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "General"
+            ^"Printed Stat Line" STRING "1 point per pawn"
+            ^"Cost" STRING "1 point per pawn"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "All forests inhabited by a spirit produce a yearly harvest of vis, of a number of pawns up to the Might score. This vis usually comes in a variety of different sources; vegetative (such as bark, fruit, seeds, mushrooms, or leaves), animal (such as hides, bone, teeth, or feces), or is found in the forest’s earth or water. Most magi are usually only able to discover or harvest a small fraction of the available vis, if any at all."
+    }
+
+    #t99809821068cf92a27cf6d ^"Control Weather (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Control Weather"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "10 points, Init 0, Auram"
+            ^"Cost" STRING "10 points"
+            ^"Initiative" STRING "0"
+            ^"Form" STRING "Auram"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The forest spirit may alter the weather over its domain to a significant extent, but it must remain somewhat appropriate to the current season, as all forests remain beholden to the passing of the seasons."
+    }
+
+    #t50505687c7af367f21ba42 ^"Grant Flaw (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Grant Flaw"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "5 points for Minor Flaw, 10 points for Major Flaw, Init 0, Vim"
+            ^"Cost" STRING "5 points for Minor Flaw"
+            ^"Initiative" STRING "0"
+            ^"Form" STRING "Vim"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The spirit may lay a specific Flaw upon those who have angered it. Each spirit may possess more than one power of this type, each bestowing a different Flaw. In most cases, the effects of the Flaws remain even if the victim escapes the spirit’s power, but they gradually fade over a matter of years, as long as the victim stays away from the center of the spirit’s power."
+    }
+
+    #t0e20264cbecaf475ed87d0 ^"Grant Victory (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Grant Victory"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "variable cost, Init +3, Corpus"
+            ^"Cost" STRING "variable cost"
+            ^"Initiative" STRING "+3"
+            ^"Form" STRING "Corpus"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "Similar to the Manifestation power, the spirit can place a portion of its power into humans, thus granting them prowess in combat. For each Might point invested, ten men can be given a +1 to all combat rolls; or one man can be given a +3 to Soak. Variations of this power grant +1 to all rolls in a specific situation, or +3 to a specific roll. Thus ten men could be given +1 to all woodcraft rolls, or one man could gain +3 to his Hunt Ability. Might points spent on this power are recovered when its effects are withdrawn."
+    }
+
+    #tc28b237b716e9cf14191b6 ^"Grant Virtue (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Grant Virtue"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "5 points for Minor Virtue, 10 points for Major Virtue, Init 0, Vim"
+            ^"Cost" STRING "5 points for Minor Virtue"
+            ^"Initiative" STRING "0"
+            ^"Form" STRING "Vim"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The spirit may bestow a specific Virtue upon those who it favors. Each spirit can possess more than one power of this type, each bestowing a different Virtue. In most cases, the effects of the Virtue fade if the possessor spends too long away from the source of the spirit’s power."
+    }
+
+    #tcc96d45e9713121b0be409 ^"Guide (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Guide"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "2 points, Init 0, Mentem"
+            ^"Cost" STRING "2 points"
+            ^"Initiative" STRING "0"
+            ^"Form" STRING "Mentem"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The forest spirit is able to subtly guide visitors in a desired direction, or to a desired location. The visitors may be able to follow certain mystical signs, or instead simply find a new track leading the way, or follow one of the forest creatures, although they are not compelled to follow these hints."
+    }
+
+    #t24627871a6824c02d1e40d ^"Healing (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Healing"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "4 points, Init –1, Corpus"
+            ^"Cost" STRING "4 points"
+            ^"Initiative" STRING "–1"
+            ^"Form" STRING "Corpus"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The spirit can heal a human or animal: the worst of their wounds improves by one level. Animals that are indigenous to the forest can be healed completely. The healing can be accomplished when the recipient performs a specific action, such as drinking from a forest spring, using harvested forest herbs, or simply spending a night in the forest."
+    }
+
+    #tefa10825d8f10d0583d735 ^"Possession (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Possession"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "5 points, Init +2, Mentem"
+            ^"Cost" STRING "5 points"
+            ^"Initiative" STRING "+2"
+            ^"Form" STRING "Mentem"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "To possess a human (or other sentient being such as a faerie), the spirit detaches a portion of its Might. If the target’s resistance is overcome by this power, the victim is possessed by a fragment of the spirit’s consciousness and falls under its direct control. Any number of points from the spirit’s remaining Might Pool may be placed into the possessed creature; these points will not be regenerated until the possession is ended. The spirit may spend points from the Might Pool it has placed in its victim to fuel any of its usual powers while it remains within its domain; but should it leave its own forest, it must rely solely upon whatever abilities the possessed victim has at his or her disposal. Any attempt to force the possessed person to act wholly contrary to his nature, or to use any of his or her own magical powers, requires that the spirit spends points from the Might Pool it has placed within the receptacle. A supernatural power requires 1 Might point per magnitude to produce, in addition to the Might cost (if any) to the possessed. A questionable action requires the spirit to exceed the possessed being’s Personality Trait roll on a stress die + Might points spent. The storyguide may give a modifier to the Personality Trait roll based on the nature of the command. Note that use of a supernatural power might also be contrary to the victim’s nature; in which case both costs must be met. Once the Might Pool placed into the victim reaches zero, the possession ends. Note that a being can be possessed with as little as 1 Might point, as long as the spirit does not wish to do too much as a host."
+    }
+
+    #t5b2703d92dc87b3a918d09 ^"Oath-Swearing (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Oath-Swearing"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "5 or 10 points, Init +0, Vim"
+            ^"Cost" STRING "5 or 10 points"
+            ^"Initiative" STRING "+0"
+            ^"Form" STRING "Vim"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "The spirit can enforce the power of a solemnly-sworn oath between two or more parties. All parties must agree to the oath of their own free will. If one of the participants in the oath tries to act in direct contravention of it, they will immediately become aware of this. If they carry on regardless, they are then struck with a Flaw (either Minor or Major, depending on the Might cost paid by the spirit). This Flaw can be removed by re-swearing the oath in front of the original participants. This power persists until there is no further record of the oath, either in the memories of the participants or in written form. New participants may be added to the oath by swearing to it in the presence of the spirit, and if it pays the original Might cost again."
+    }
+
+    #t2a30fa20153fca454a4517 ^"Regio (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Regio"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "10 points per level, Init 0"
+            ^"Cost" STRING "10 points per level"
+            ^"Initiative" STRING "0"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "A regio may exist at a part of the forest where an aura is present. The spirit controls access to the different levels of the regio, and at higher levels may be contacted more directly, or more obviously present. In some cases, the regio is only accessible in certain seasons. The Might point expenditure is permanent, for so long as the regio is maintained. For example, a regio with levels having auras of 5 and 7 would require the commitment of 20 Might points. **Shroud** (6 points, Init 0, Mentem): The forest spirit is able to obstruct intruders, to prevent them reaching a certain area of the forest. They may find their way blocked by impenetrable undergrowth, difficult terrain, or a wild animal, and instead choose a more favorable route that leads them the wrong way. This provides an effect similar to the spell *The Shrouded Glen*."
+    }
+
+    #tb665f9a80e80e3e2091ab8 ^"Stasis (forest spirit power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Stasis"
+            ^"Creature" STRING "Forest spirit"
+            ^"Group" STRING "Specific"
+            ^"Printed Stat Line" STRING "15 points, Init 0, Vim"
+            ^"Cost" STRING "15 points"
+            ^"Initiative" STRING "0"
+            ^"Form" STRING "Vim"
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "A certain inner part of the forest may become so remote and closed off from the outside world that the passage of time itself is altered. Any mortals resident here do not age (no Aging points are gained) for so long as they remain. However, their perception of the passing years and memories of their prior life gradually become hazy, and they will become Warped after decades or more in the forest. This might allow for magi or others of legend in centuries past to still endure, hidden deeply in a powerful forest. A prerequisite for this rare power is the presence of a regio with a high-level aura. A slightly more common, lesser variant is the Grant Virtue (Unaging) power."
+    }
+
+}

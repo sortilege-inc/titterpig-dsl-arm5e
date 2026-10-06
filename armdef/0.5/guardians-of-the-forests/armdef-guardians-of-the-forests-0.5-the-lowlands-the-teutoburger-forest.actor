@@ -1,0 +1,27 @@
+EXTENSION "ARMDef_Guardians_of_the_Forests_TheLowlands_TheTeutoburgerForest" {
+    NAME "Ars Magica Fifth Edition, Guardians of the Forests - The Teutoburger Forest"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Guardians_of_the_Forests_Core_Ext"
+
+    # The Teutoburger Forest (Chapter Seven: The Lowlands, p77): one being, its printed stat lines verbatim fields.
+
+    #t5cc207ba8a63b2a29cf9fd ^"The Teutoburger Forest" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#ta3d45ed204e9411ed35068 ^"The Lowlands"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "50"
+            ^"Special Powers" STRING "Grant Flaw (Simple-Minded), Grant Victory, Regio, Shroud, Stasis The forest-clad slopes of the Teutoburger hills are known for an important victory of the native German people, lead by Hermann against the invading Roman legions (see Chapter 2: History, Germania Magna). Charlemagne also fought a war here in the late 8th century while establishing his empire. The forest has always seemed an important beachhead to establish when conquering a land, which is possibly why it has such strong guardians. At the center of the forest is a great clearing surrounded by a circle of ancient trees of differing types. These trees act jointly as the guardians of the forest, watching over it and ensuring that it remains unsullied as one of the few remaining wildernesses bordering the northern lowlands. After the Battle of the Teutoburger Forest in the 1st century, the remaining Roman legions retreated into the heart of the forest, and were never heard from again."
+            ^"Source" STRING "Guardians of the Forests"
+            ^"Page" INTEGER 77
+        }
+        PERSONALITY_TRAITS {
+            "Patient" +3
+            "Unforgiving" +1
+        }
+        DESCRIPTION "At the top level of the regio, a fortified camp of the Roman soldiers is to be found in the center of the clearing. The guardians neither allow them to die nor to leave the forest (although they can leave the clearing to hunt and gather food, they remain trapped in the regio), even though they have grown to treat the trees with reverence."
+    }
+
+}

@@ -1,0 +1,56 @@
+EXTENSION "ARMDef_The_Lion_and_the_Lily_Brittany_Korrigan" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - Korrigan"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Lion_and_the_Lily_Core_Ext"
+
+    # Korrigan (Chapter Four: Brittany, p38): one being, its stat lines verbatim fields.
+
+    #t23d66551f365ec068339c8 ^"Korrigan" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t3936139d064f38314d5df8 ^"Brittany"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Faerie Might" STRING "Typically 5–10; rarely 15 (Animal)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -2
+            ^"Age" STRING "n/a"
+            ^"Confidence Score" STRING "0"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Dangerous 3 (local)", "Tireless dancers 1 (local)", "Magicians 1 (local)"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "n/a"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), -5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Abilities" STRING "Area Lore 3 (paths), Athletics 5 (dancing), Awareness 4 (gold, silver), Brawl 2 (claws), Guile 1 (bargaining), Speak Breton 4 (commands), Stealth 4 (hiding), Single Weapon 2 (club), Thrown Weapon 2 (stones) Powers (not all have this): Human Form, 5 points, Init 2, Corpus: The more powerful korrigan can assume the form of a beautiful young woman. The transformation lasts for one hour, or until the same amount of Might is expended to reverse it. In human form, the following changes apply: Characteristics (human form): Int –2, Per +1, Pre +2, Com +1, Str –1, Sta 0, Dex 0, Qik –1; Size (human form): 0 Club: Init +0, Attack +2, Defense +0, Damage +2 Stone (thrown): Init -1, Attack +3, Defense +1, Damage +1"
+            ^"Equipment" STRING "Usually none."
+            ^"Natural Weapons" STRING "Claws: Init -1, Attack +2, Defense +3, Damage +2."
+            ^"Encumberance" STRING "0 (0)"
+            ^"Vis" STRING "1 pawn of Animal vis in hooves"
+            ^"Appearance" STRING "A hunchbacked manikin about three feet tall with cat’s claws on its hands and goat’s hooves for feet."
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 38
+        }
+        PERSONALITY_TRAITS {
+            "Avaricious" +2
+            "Capricious" +2
+            "Short-tempered" +2
+        }
+        COMBAT {
+            "Claws" INIT 1 ATTACK 7 DEFENSE 8 DAMAGE 1
+            " Club" INIT 3 ATTACK 6 DEFENSE 5 DAMAGE 2
+            " Stone (thrown)" INIT 2 ATTACK 5 DEFENSE 4 DAMAGE 1
+        }
+        DESCRIPTION "Anyone attempting to collect vis or investigate the mysteries of the forest will have to contend with the korrigan (singular: korred). A korred is a hunchbacked manikin about three feet tall with cat’s claws on its hands and goat’s hooves for feet; with the expenditure of Might, it may take on the form of a beautiful young woman. They are known as dancers and magicians. Since their queen, Viviane, lost interest in the Brocéliande forest and them, the korrigan in this region have become very dangerous. Elsewhere, they may live in forests, caves, or dolmens, where they collect valuable objects. They administer severe punishments to those who annoy them, but periodically give rewards from their treasures. In some places, they like to dance in a circle holding hands under the moonlight at a crossroads and, if they are in a good mood, invite all who pass to join them. Those who accept may be given a gift, but those who refuse are punished.\n\nThese statistics apply to the korrigan of Brocéliande. Those encountered in other parts of Brittany are less dangerous; they are more interested in dancing and riches, though still unpredictable and short-tempered."
+    }
+
+}

@@ -1,0 +1,76 @@
+EXTENSION "ArM5_The_Lion_and_the_Lily_Brittany_TheThreeGreatSpirits" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - The Three Great Spirits"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Lion_and_the_Lily_Core_Ext"
+
+    # The Three Great Spirits (Chapter Four: Brittany, p42): one being, its stat lines verbatim fields.
+
+    #t0c9b3a66d9363a408fa028 ^"The Three Great Spirits" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t3936139d064f38314d5df8 ^"Brittany"]
+            ^"Covenant" LIST [#td930f6dae8abded92ad0b4 ^"Fudarus"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" STRING "Ways of the Island"
+            ^"Vis" STRING "The presence of these spirits causes 12 pawns of vis to manifest on Ushant each year, four each of Creo, Auram, and Imaginem. Only the inhabitants of Fudarus know what form this vis takes."
+            ^"Appearance" STRING "To those who can see them, each of the three Great Spirits of Ushant are immense, filling the sky. Mogidell appears as a huge gray bird; when she unfurls her wings the sea mist descends upon Ushant. Kerseenn is constantly shifting shape between weird amalgams of human and beast. Arnev takes the appearance of an immense serpent with the head of a horse."
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 42
+        }
+        PERSONALITY_TRAITS {
+            "Watchful" +5
+            "Capricious" +3
+            "Playful" +3
+        }
+        POWERS {
+            #t41dac6f4d2a28c6a26706c ^"Incorporeal" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "Constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "All three spirits are both invisible and intangible, and cannot be influenced by the physical world. Magic may only directly target a spirit if the caster can sense its existence. *Presence*, 0 points, constant, Mentem: The spirits are aware of everything that occurs on Ushant."
+            }
+            #tc4d7d904bff67305d9d328 ^"Mastery of Mist" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 – 8 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Mogidell can duplicate any non-Ritual spell of 40th level or lower pertaining to mist and fog, at a cost of 1 Might point per magnitude of the effect."
+            }
+            #tbb85ab1739ca1481620c23 ^"Mastery of Misdirection" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 – 8 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Kerseenn can duplicate any non-Ritual spell of 40th level or lower pertaining to misdirection and concealment, at a cost of 1 Might point per magnitude of the effect."
+            }
+            #t4aa9388f30594fe4356654 ^"Mastery of Storms" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 – 8 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Arnev can duplicate any non-Ritual spell of 40th level or lower pertaining to high winds, rain, and other bad weather, at a cost of 1 Might point per magnitude of the effect."
+            }
+        }
+        DESCRIPTION "The three spirits of Ushant are called Mogidell (a spirit of mists and sea-fog), Kerseenn (a spirit of misdirection), and Arnev (a spirit of stormy weather). They obey the bearer of the Circlet of the Primus (see below), although this item itself does not compel them; rather, the age-old pact made with the spirits by Fudarus’s theurgists has made them *genii loci* of Ushant."
+    }
+
+}

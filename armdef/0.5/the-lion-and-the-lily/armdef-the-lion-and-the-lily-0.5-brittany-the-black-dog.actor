@@ -1,0 +1,57 @@
+EXTENSION "ARMDef_The_Lion_and_the_Lily_Brittany_TheBlackDog" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - The Black Dog"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Lion_and_the_Lily_Core_Ext"
+
+    # The Black Dog (Chapter Four: Brittany, p40): one being, its stat lines verbatim fields.
+
+    #tb89fc62c187ff9c92e3f54 ^"The Black Dog" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t3936139d064f38314d5df8 ^"Brittany"]
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence Score" STRING "0"
+            ^"Virtues and Flaws" STRING "Improved Characteristics, Long-Winded, Sharp Ears, Reckless"
+            ^"Qualities" STRING "Domesticated, Keen Sense of Smell, Pack Animal, Pursuit Predator, Vocal"
+            ^"Reputations" LIST ["Terrifying +3 (local)"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Natural Weapons" STRING "The weapon statistics for a dog’s bite are Init 0, Atk +3, Def +1, Dam +1. Powers: Fearsome Bark: 1 point, Init 2, Animal or Mentem; as the spell Panic of the Trembling Heart but with Range Voice. Dreadful Howl: 3 points, Init 2, Animal or Mentem; as the spell Weight of a Thousand Hells but with Duration Sun and Range Voice."
+            ^"Vis" STRING "1 or 2 pawns in the tongue when the dog dies by any means other than drowning. A drowned dog contains no vis."
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 40
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Reckless" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 8 DEFENSE 7 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "keeping watch"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "track by scent"
+        }
+        DESCRIPTION "If the spirit of a deceased family member refuses to leave the house, a locally known folk ritual can trap it inside the body of a black dog. This involves taking the dog inside the house, tying a favorite article of clothing belonging to the dead person around the body of the dog, and making the dog eat a fist-sized gobbet of meat stuffed with scraps of plants gathered in the cemetery. The dog is drowned as quickly as possible, to release the spirit from its ties to the world of the living. The Black Dog is only different to a normal dog between the completion of the folk ritual and the death of the dog. If the dog is killed in any way other than drowning, the spirit remains tied to the world in the place the dog expired. Similar creatures with an Infernal Might can arise if the deceased person was a notable sinner, or even more rarely with a Magic Might if the deceased was a pagan. The Might of the dog containing the spirit is typically 5, but may be as high as 10 if the deceased was especially holy or evil. Some rare black dogs are almost as large as a person (Size 0)."
+    }
+
+}

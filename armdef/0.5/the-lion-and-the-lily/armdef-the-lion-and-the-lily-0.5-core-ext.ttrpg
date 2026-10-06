@@ -1,0 +1,23 @@
+EXTENSION "ARMDef_The_Lion_and_the_Lily_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # The Lion and the Lily is an EXTENSION on the arm5e edition (spec S13 composition). Its covenants and
+    # characters are .actor files, its places LOCATIONs in its .setting; its one new type is a Tribunal ruling.
+
+    #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling" DEF {
+        APPLIES TO [#tqPOcmupI8sEPkY2NKMNZUVO ^"Covenant"]
+        PROPERTIES {
+            ^"Location" LIST
+            ^"Year" STRING
+            ^"Meeting" STRING
+            ^"Source" STRING DEFAULT "The Lion and the Lily"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A ruling of a Tribunal's Peripheral Code, as The Lion and the Lily prints it: the Tribunal it binds (its LOCATION), the year and meeting where printed, the ruling's text."
+    }
+
+}

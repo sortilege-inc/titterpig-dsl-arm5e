@@ -1,0 +1,65 @@
+EXTENSION "ARMDef_The_Lion_and_the_Lily_Normandy_Lutin" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - Lutin"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Lion_and_the_Lily_Core_Ext"
+
+    # Lutin (Chapter Five: Normandy, p53): one being, its stat lines verbatim fields.
+
+    #t72e46fde93f19a7e89716d ^"Lutin" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tcbc1badcab8b3b50b3f7dc ^"Normandy"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -2
+            ^"Age" STRING "n/a"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["Helpful spirit (local) +1"]
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Powers" STRING "The Master’s Things, 0 points, Constant, Terram: The lutin is aware of exactly what is in the room that he is in, how many of those things there are, and where each item is. The lutin can only classify things by their physical appearance, and he will not necessarily know the purpose of items; for example, unless he had seen it used previously, he would identify a magical wand as being a “small stick.” The lutin can find items that are disguised or hidden in the room by mundane means, but he cannot discern items hidden by magic with a magnitude greater than one. This power must also penetrate to find characters with Magic Resistance. This power has no effect outdoors. Soap and Suds, 1 point, Init +1, Aquam: The floor in the room that the lutin is in becomes soapy and slippery. A character moving quickly in the room (including in combat), must make a Dexterity roll against an Ease Factor of 6 to avoid slipping each round. This power has no effect outdoors."
+            ^"Equipment" STRING "Household items (broom, shovel, or cloth)."
+            ^"Vis" STRING "1 pawn of Aquam vis, concentrated in the heart."
+            ^"Appearance" STRING "Lutin are servile goblins."
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 53
+        }
+        PERSONALITY_TRAITS {
+            "Servile" +3
+            "Dreamer" +2
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 4
+            " Broom (improvised bludgeon)" INIT 2 ATTACK 6 DEFENSE 3 DAMAGE -3
+        }
+        ABILITIES {
+            "Area Lore: Normandy" SCORE 3 SPECIALTY "villages"
+            "Athletics (jumping)" SCORE 4
+            "Awareness (people)" SCORE 3
+            "Brawling (dodge)" SCORE 1
+            "Carouse (singing)" SCORE 2
+            "Etiquette (faeries)" SCORE 4
+            "Faerie Lore (nobles)" SCORE 1
+            "Guile (superiors)" SCORE 3
+            "Living Language (eavesdropping)" SCORE 5
+            "Profession: servant (cleaning)" SCORE 5
+            "Stealth (indoors)" SCORE 5
+            "Swim (rivers)" SCORE 3
+        }
+        DESCRIPTION "They look like small people, and sometimes perform cleaning services for households in return for offerings of offal or clean water. Lutin are quite common in the faerie courts of Normandy, and are also particularly attracted to villages that have no church. However, they usually avoid actually meeting people, even those that leave offerings for them. Lutin seem to universally dread a “goblin duke of Normandy,” but the Order of Hermes has no information on who or what this individual might be."
+    }
+
+}

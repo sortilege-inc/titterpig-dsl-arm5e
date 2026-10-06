@@ -1,0 +1,335 @@
+EXTENSION "ArM5_The_Lion_and_the_Lily_HermeticCulture_Rulings" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - Chapter Three: Hermetic History and Culture rulings"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Lion_and_the_Lily_Core_Ext"
+
+    # The chapter's rulings, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tcdeb5b445d813edcd367df ^"Normandy Tribunal Ruling: Seisins" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1025"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 19
+        }
+        DESCRIPTION "The Tribunal of 1025 ruled that a vis source that is within a day’s return march of an established covenant of the Normandy Tribunal is considered to belong to that covenant automatically; such a source is called a seisin. A seisin recognized by the Tribunal grants its owners exclusive right of harvest.\n\nThe Tribunal of 1109AD ruled that if a man can get from the covenant’s council chamber to a vis source and back again, on his own two feet and unaided by magic, between sunrise and sunset on a day which is within a month of an equinox, then the vis source is a seisin of that covenant. This ruling superseded previous entries into the Peripheral Code which were unclear as to the definition of “a day’s return march”.\n\nNearly every covenant in the Tribunal has a specialist called a *cursor*, or “runner,” usually a highly athletic grog, whose sole purpose is to prove to the Quaesitores in a trial run that their vis source is within this range. Cursors are prized members of any covenant, and some trade them like cattle. As a general rule, assume that a fit man can cover a number of miles in a day equal to 10 + (2 x Athletics) cross country. Through untamed wilderness, the distance can be reduced by five miles per day (or perhaps more), whereas well-traveled roads might add five miles per day."
+    }
+
+    #t9ce86255ea205ab5a526ca ^"Normandy Tribunal Ruling: Legacies" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1025"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 20
+        }
+        DESCRIPTION "The Tribunal of 1025 ruled that a vis source which is too distant to be declared a seisin can be made a legacy of the discoverer by a vote of the Tribunal. A legacy lease issued by the Tribunal offers a covenant exclusive rights to harvest from the source, but the terms of the lease last only seven years. The Tribunal of 1032 instituted the need for holders of a legacy lease to acquire renewal of that lease from the Tribunal every seven years at the Tribunal meeting; if the Tribunal votes against the renewal of the lease, the Tribunal takes possession of the legacy and it becomes a tropaeum instead (see below).\n\nTraditionally, any newly discovered vis source is a legacy of the covenant that found it, and it is very common for a new legacy lease to be granted without serious competition. The only exception is if the vis source is close enough to another covenant to be considered a seisin; the rulings regarding seisins take precedence over legacies. The renewal of an established lease is more difficult to achieve, and usually requires backing from other covenants to be successful. Such backing is often too expensive for young covenants, and there is often too much rivalry between the older covenants to achieve viable coalitions to keep legacies in their hands. At each Tribunal meeting, less than half of those covenants trying to renew a legacy are successful. Those that are not renewed become tropaea (see below). Occasionally, a vis source may remain a legacy for many lease periods if there is a reason why the vis would be very hard for another covenant to harvest. For example, it might require a unique item, spell, or password, which the discoverers refuse to relinquish. Alternatively, it might be very close to a covenant, but take more than half a day to reach — it might be up a mountain, at the bottom of a lake, or deep within caverns.\n\nWhile in possession of a legacy lease, a covenant is guaranteed exclusive rights to harvest its vis. If proof can be offered at Tribunal that a non-leaseholder has harvested vis from a legacy, the offender is automatically found guilty of the High Crime of depriving a magus of his magical power. Mitigating pleas for mercy are almost always granted (see *Houses of Hermes: True Lineages*, page 59), so the charge rarely ends in a Wizard’s March.\n\nThe covenant that holds a lease is entitled to grant the harvest of the legacy to any magus or covenant it desires, including magi who intend to set up a covenant within a day’s march of the vis source (thus making it their seisin). This is how most new covenants are founded (see below for more details)."
+    }
+
+    #t176e115d46be22632856d7 ^"Normandy Tribunal Ruling: Tropaeum" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1032"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 21
+        }
+        DESCRIPTION "The Tribunal of 1032 ruled that the known vis sources that were not seisins of a covenant or currently held under a legacy lease were tropaea (singular tropaeum, meaning “trophy”) and owned in common by the Tribunal as a whole. Tropaea are to be distributed among the members of the Tribunal on seven-year leases by being won in the Tourney. A vis source becomes a tropaeum, and thus the property of the Tribunal, if it does not qualify as a seisin, and a petition for a legacy lease has been rejected by the Tribunal. Only vis sources that require minimal effort to harvest are eligible to become tropaea; vis sources that require effort or skill to harvest are declared luctationes (see below) instead.\n\nTropaeum leases, like legacy leases, last from one Tribunal meeting to the next, and the holder of the lease has the same rights of exclusive harvest as the holders of legacy leases. However, a covenant that wishes to establish itself within a day’s march of a tropaeum must seek the approval of the Tribunal before it does so, and if they win the vote the tropaeum becomes a seisin of the new covenant."
+    }
+
+    #t5d6d4af7d3485f49ee0990 ^"Normandy Tribunal Ruling: Luctatio" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1039"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 21
+        }
+        DESCRIPTION "The Tribunal of 1039 ruled that a vis source owned by the Tribunal that relies heavily on the abilities or skill of the harvester becomes a luctatio (“contest”) rather than a tropaeum. The list of all luctationes owned by the Tribunal is a matter of public record and a copy is kept at Confluensis, although the method of obtaining the vis need not be detailed. Any magus can attempt to harvest this vis if he is prepared for the effort or danger that it poses, although succeeding in a luctatio does not confer any rights over that vis source in subsequent years. Like tropaea, the Tribunal’s permission must be sought before establishing a covenant in close proximity to a luctatio, but it is usually marginally easier to do so.\n\nLuctationes do not cost Build Points to acquire because they do not belong to a single covenant. If a covenant does have exclusive access to a luctatio for some reason, then it is costed as a vis source with the Contested Resource Hook."
+    }
+
+    #t8f4e4bbf30256df5c68dd3 ^"Normandy Tribunal Ruling: Interim Leases and Plundering" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1025"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 21
+        }
+        DESCRIPTION "The Tribunal of 1025 determined the procedure for establishing a seisin or legacy. Upon finding a vis source, the discoverer must report its location to a Quaesitor, who grants an interim lease on the vis until it can be officially declared at the next Tribunal meeting. An interim lease does not hold the same legal weight as a full lease; specifically it does not guarantee exclusivity due to the difficulty of determining which lease was granted first, and who has the stronger claim. Should another covenant discover the same vis source, it may also obtain an interim lease. Multiple leaseholders must settle the matter privately until a final ruling can be made at Tribunal.\n\nAll seisins, legacies, tropaea, and luctationes are a matter of public record, but they have the advantage of granting exclusivity of harvest. A covenant which harvests a hitherto unknown vis source but chooses not to secure an interim lease is guilty of plundering, a Low Crime under the Peripheral Code of the Normandy Tribunal. Traditionally the Tribunal has treated such cases harshly (fines have been in excess of three times the amount of vis plundered), and many magi consider that it is not worth the risk. At least a legacy guarantees them seven years of harvesting from a vis source. Nevertheless, given that legacy leases are notoriously difficult to renew, there is a definite incentive for a covenant to neglect to declare a vis source to the Tribunal but to continue to harvest from it clandestinely."
+    }
+
+    #t62b68a167f78844a9b66b2 ^"Normandy Tribunal Ruling: The Library of the Tribunal" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1081"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 22
+        }
+        DESCRIPTION "The Tribunal of 1081 ruled that the books owned in common by the Tribunal are available as prizes at the Tourney. Winning a book in the tournament grants exclusive access to that tome for a total of seven years; at which point it is returned to the Tribunal’s store. The book store is maintained at Confluensis, and a list of the books and their authors is a matter of public record. These books cannot be consulted by any member of the Tribunal unless they have been won at the Tourney. The leasee is responsible for the book’s safety during the seven-year lease, and it must be returned to Confluensis before the next Tribunal in an acceptable state. Books are leased under a Cow and Calf Oath (*Covenants*, page 95) which states that copies made of a book belong to owner (that is, the Tribunal), not to the copyist."
+    }
+
+    #tc3525593a22cfd1fd91734 ^"Normandy Tribunal Rulings: Mundane Resources and Raiding" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1116"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "The Tribunal of 1116 confirmed the earlier ruling of 1081 that the mundane resources of a covenant do not necessarily contribute to the magical power of its members. Specifically, food, consumables, building supplies, arms and armor, and luxury goods are not part of a magus’s magical power. However, completed or partially completed books, vis, enchanted items, and laboratory supplies all are components of a magus’s magical power.\n\nLater rulings clarified that livestock and covenfolk were not afforded any especial immunity, but clearly apprentices, familiars, and magical beasts were. Further, a maga conducting a raid cannot damage the physical buildings of the covenant itself, and must not break the Code in any fashion during the course of a raid, such as putting the life of another magus in danger. The raiding maga must challenge any accompanying magi to certamen; should she lose then she must abandon her raid. If she wins, then her opponent must retreat to a distance of at least a mile, and cannot return until the sun rises. Junior magi are often assigned the duty of accompanying supplies to the covenant; this prevents the raiding party from scrying ahead and restricts the use of area-affecting magic that might inadvertently affect the escorting magus."
+    }
+
+    #t2faea7e87afdf355c0b16a ^"Normandy Tribunal Ruling: The Town Senex" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1200"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "The Tribunal of 1200 determined that the agents of the covenant closest to a town, referred to as the senex, have superior rights to those of the agents of other covenants operating in that town. In particular, this means that if the actions of the senex collaterally damage the interests of another covenant, then ruin has *not* been caused. The senex is judged to be the covenant in which the town’s church bells sound the loudest, as determined by a Quaesitor. Therefore, if a town’s church bells cannot be heard at all in a covenant that covenant is too distant from the town to claim senex rights, and for many towns therefore there is no extant senex."
+    }
+
+    #t7229413074acbd6e3bd65d ^"Normandy Tribunal Ruling: Urban Covenants" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1207"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 25
+        }
+        DESCRIPTION "The Tribunal of 1207 determined that a covenant may be sited in a town (see *Covenants*, page 11), and the normal interaction of covenant members with the townsfolk does not thereby cause ruin to other members of the Order of Hermes.\n\nFurther, the Tribunal of 1207 determined that a covenant may be granted a town charter by a mundane lord (see *City and Guild*, page 8). However, the magi themselves cannot take advantage of any privileges under the charter, as to do so would be effectively the same as swearing an oath of fealty. It is acceptable, however, for a covenant to collectively pay a tax, either in coin or mundane produce. It is also noted that while the contents of grants of charter are, of course, entirely at the discretion of a mundane lord, lords who propose charters should be reminded that magi cannot be held accountable to such a document. This may help avoid unnecessary future friction with the nobility.\n\nMany towns are governed by officials either elected or appointed under their charter (see *City and Guild*, page 13). The Tribunal of 1207 also deemed it acceptable for eligible members of a covenant to vote or hold office in a town. Whatever the town charter might state, a magus, however, is not eligible as under the Code of Hermes he cannot swear an oath of fealty to mundane authorities."
+    }
+
+    #teeeb8193478eff91920e1b ^"Normandy Tribunal Ruling: Mundane Interference" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 25
+        }
+        DESCRIPTION "There have been no specific rulings, which sets the Tribunal’s policy regarding the use of agencies and masks on unstable ground. Magi who are new to the Tribunal may witness events that would be considered violations of the Code of Hermes in other Tribunals, and even by a strict interpretation of Normandy’s Peripheral Code. However, there are numerous precedents that give a defendant legal standing when testing whether ruin was actually caused by his actions, and the Tribunal rarely convicts in situations where damage to a Hermetic magus cannot be unequivocally demonstrated."
+    }
+
+    #t2fbc3e94c814f32961dc15 ^"Normandy Peripheral Code, 871" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "871"
+            ^"Meeting" STRING "The inaugural meeting of the Tribunal of the West Franks."
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Present are the covenants of Confluensis, Pagus, Baiocassium, Bibracte, and Sinapis (the covenants of Fudarus and Branugurix both attend the Britannian Tribunal meeting)."
+    }
+
+    #t62783e8457474c818590be ^"Normandy Peripheral Code, 885" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "885"
+            ^"Meeting" STRING "3rd meeting of the Tribunal of the West Franks"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Maga Adela of Jerbiton, a frequent attendant at court, was accused of acting as “court wizard” to King Louis III between 879 and 881. She maintained that the accusation was brought by a magus with whom she had a long-standing feud, and there was no evidence to suggest any risk to the Order resulting from her friendship with the king, who died in 882. The maga was acquitted."
+    }
+
+    #tacff4097d9b814dbb4c781 ^"Normandy Peripheral Code, 899" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "899"
+            ^"Meeting" STRING "5th meeting of the Tribunal of the West Franks"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "The Tribunal votes to support the decision of the 7th meeting of the Grand Tribunal, subsumes some of the former territories of the Provençal Tribunal and extends eastward to share a border with the Rhine Tribunal."
+    }
+
+    #t3cffd474c527c01708be1f ^"Normandy Peripheral Code, 983" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "983"
+            ^"Meeting" STRING "17th meeting of the Tribunal of the West Franks"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "In light of the preeminence of the Duke of Normandy in the territories claimed by the Tribunal, and the decline of the Franks as a people, the Tribunal supported the proposal of Adrianus of Montverte, and the Tribunal of the West Franks was renamed the Normandy Tribunal."
+    }
+
+    #t5c6f123ccc4b59d33048db ^"Normandy Peripheral Code, 1018" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1018"
+            ^"Meeting" STRING "22nd meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "The Tribunal welcomes Fudarus to its 22nd meeting; and since it is the only surviving Breton covenant, the Tribunal claims Brittany and all its magical resources."
+    }
+
+    #t8f93a51ac9112228e27c1b ^"Normandy Peripheral Code, 1025 – 1039" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1025 – 1039"
+            ^"Meeting" STRING "23rd – 25th meetings of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Pertheus of Tytalus proposes a series of rulings to end disputes over magical resources in the Tribunal, later called the Perthean Compact. (see the Perthean Compact, above)."
+    }
+
+    #t898fc483607a0aef37c808 ^"Normandy Peripheral Code, 1095" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1095"
+            ^"Meeting" STRING "33rd meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Covenant of Nauche-Fleur was accused at Tribunal of entering into a feudal obligation with their local baron. The covenant protested that the oath was taken by an unGifted companion who acted the role of Lord of the Manor on behalf of the magi. The Tribunal ruled that the magi were innocent."
+    }
+
+    #t72046eb9340b415eeb7a3c ^"Normandy Peripheral Code, 1102" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1102"
+            ^"Meeting" STRING "34th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "In response to a complaint from three Flambeau magi of Provençal, the Tribunal rules that lacking a clear geographical boundary between Provençal and Normandy, the border should be determined on linguistic grounds. Territory disputed by the two Tribunals shall be henceforth decided by the language of the closest settlement; if it is a *langue d’oeil *then it is Normandy, else it is Provençal. Despite protests from Provençal at the Grand Tribunal in 1129, this decision is upheld."
+    }
+
+    #t5cbc04db5643384e1e05c0 ^"Normandy Peripheral Code, 1109" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1109"
+            ^"Meeting" STRING "35th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Quaesitor Muirgheal encounters a group of hedge wizards who are fighting a plague of restless dead, and inducts many of them into the Order as the Ex Miscellanea tradition of the Donatores Requietis Aeternae (see *Houses of Hermes: Societates*, House Ex Miscellanea)."
+    }
+
+    #t231d3bab58beec94629e39 ^"Normandy Peripheral Code, 1116" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1116"
+            ^"Meeting" STRING "36th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Raiding of mundane resources is explicitly permitted by Quaesitor Lothaire based on an earlier ruling (see Mundane Resources, above)."
+    }
+
+    #t46e04ce2c89e7c78fb7fc6 ^"Normandy Peripheral Code, 1116 (2)" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1116"
+            ^"Meeting" STRING "36th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Magus Praecepsus of Flambeau was accused of using a sword enchanted with Perdo spells to cut down the enemies of the king during the raid on Paris by the count of Meulan in 1111. The Tribunal ruled that, since there was no evidence, to mundane eyes, that magic was involved, there was no charge to answer."
+    }
+
+    #tb01d9fb0965c583a2444d8 ^"Normandy Peripheral Code, 1123" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1123"
+            ^"Meeting" STRING "37th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Pandion of Flambeau was accused of depriving Antonin of Dragon’s Rest of his magical power by stealing twelve valuable horses from the Redcap, one of which was a magical creature. Pandion was convicted, and ordered to return the magical horse, along with a fine of 10 pawns of vis, but was permitted to retain the other eleven horses as spoils from a lawful raid. The Tribunal noted that while livestock did not in general contribute to a magus’s magical power, enchanted creatures — even those that were not familiars — certainly did. After a request for clarification, Quaesitor Lothaire extended this ruling to exclude covenfolk from a magus’s magical power."
+    }
+
+    #tcfc2ac805bd32faed7fee5 ^"Normandy Peripheral Code, 1130" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1130"
+            ^"Meeting" STRING "38th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Jacinth of Oleron was accused of deprivation in that, conducting a raid against the covenant of Infelicitas, he caused the collapse of the upper story of the covenant. Further, he was accused of attempting to slay a magus through the physical destruction of the covenant. This second charge could not be proved, but Jacinth was convicted of the first, since two laboratories were destroyed. Quaesitor Lothaire ruled that raiding magi are forbidden from damaging the physical structure of a covenant, and reminded the Tribunal that they cannot contravene the Code in an otherwise legal raid. Jacinth escaped a Wizard’s March, but suffered the loss of his familiar."
+    }
+
+    #t089f877949a0d95fe1d0fd ^"Normandy Peripheral Code, 1144" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1144"
+            ^"Meeting" STRING "40th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Quaesitor Lothaire was publicly accused of partisanship by Jacinth of Oleron, who cited specific instances where the Quaesitor was a beneficiary of numerous raids conducted by the covenants of Montverte, Fudarus, and their allies. A subsequent Quaesitorial investigation exonerated Lothaire from any wrongdoing owing to lack of substance to Jacinth’s accusations. Nevertheless, Lothaire did not regain his status as chief Quaesitor of Normandy, and was invited to join Magvillus in recognition of his long service to the Order."
+    }
+
+    #t6039647122721c5784bdea ^"Normandy Peripheral Code, 1172" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1172"
+            ^"Meeting" STRING "44th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Atlax of Tytalus was accused of stealing and reading the messages carried by the Redcap Camille while the latter was hosted at Fudarus. Quaesitor Whent held the covenant responsible for their magus’s crime, and stripped Fudarus of the lease of a legacy, and granted it to House Mercere instead."
+    }
+
+    #t0b27c8c1aff7d39acb6f45 ^"Normandy Peripheral Code, 1179" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1179"
+            ^"Meeting" STRING "45th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Magus Pernix of Merinita was accused by Magus Visurgis of Tytalus of interfering with mundanes when he used magic to heal a young nobleman who fell from his horse. The accused argued that the only people who knew that magic was used were the injured man himself and the abbot, prior, and infirmarian of the monastery where he was taken to recover. All were friends of his covenant and so there was no scandal or “ruin.” Magus Pernix was acquitted."
+    }
+
+    #t6fe962639e305c2ea1d757 ^"Normandy Peripheral Code, 1179 (2)" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1179"
+            ^"Meeting" STRING "45th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Camille of Mercere was accused by Buliste of Tytalus of interfering with mundanes, in that he used a local knight to secure the vis from one of his legacies. The knight later admitted to his confessor that he had “done the work of devils,” and it was only the swift action of Atlax of Fudarus that prevented ruin from being brought on the Order. The Tribunal agreed; Camille was ordered to pay fifteen pawns of vis to Fudarus in damages, and the vis source in question was declared off limits for at least three decades."
+    }
+
+    #t2864f213a399e5feef904d ^"Normandy Peripheral Code, 1207" DEF {
+        EXTENDS #t09e2baafb2a1eb218bdeed ^"Tribunal Ruling"
+        PROPERTIES {
+            ^"Location" LIST [#tbb241794821b6cb4be1ecb ^"The Normandy Tribunal"]
+            ^"Year" STRING "1207"
+            ^"Meeting" STRING "49th meeting of the Normandy Tribunal"
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "Pugnatis had been found guilty by the 48th Tribunal of mundane interference in that she had used magic to control the mayor of Laval to obtain access to a vis source. She was ordered to create some enchanted items by way of a fine. She and the items failed to turn up at this Tribunal, and she was expelled from the Order."
+    }
+
+}

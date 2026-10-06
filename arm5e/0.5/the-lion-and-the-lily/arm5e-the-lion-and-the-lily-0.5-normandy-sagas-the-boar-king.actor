@@ -1,0 +1,74 @@
+EXTENSION "ArM5_The_Lion_and_the_Lily_NormandySagas_TheBoarKing" {
+    NAME "Ars Magica Fifth Edition, The Lion and the Lily - The Boar King"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Lion_and_the_Lily_Core_Ext"
+
+    # The Boar King (Chapter Ten: Normandy Sagas, p120): one being, its stat lines verbatim fields.
+
+    #tc22a63632b3cdb9037b30d ^"The Boar King" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 1
+            ^"Age" STRING "n/a (30)"
+            ^"Confidence Score" STRING "2 (6)"
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["King of the Forest 3 (local)", "Ally of House Diedne 2 (Hermetic)"]
+            ^"Soak" INTEGER 10
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Powers" STRING "Voice of the Woods, 0 points, constant, Animal (Herbam or Mentem): The Boar King can converse with any woodland creature or plant. They will also obey any order he issues to the best of their abilities. Sylvan Sanctity, 1 point, Init 0, Mentem: When he uses this power, the Boar King is aware of the approximate location and number of all human intruders in his forest. Normally, this is quite a large number of people and there is too much information for the Boar King to fully understand. However, he can easily identify when trespassers enter areas that are normally empty of people. This power needs to penetrate to be successful, but groups of magi (for example) often travel with grogs and companions who have no Magic Resistance. As it takes several days to penetrate into the heart of the forest, and he uses this power daily, the Boar King can be well prepared for visitors. Ancient Rage, 5 points, Init –10, Animal: The Boar King enters a frothing fury; he has +3 to all his Attack and Soak scores, and a –3 penalty to his Defense. He also ignores all Wound Penalties except Incapacitated when enraged. His rage lasts for a day, and during this time he attacks anyone at the slightest provocation, and he may neither retreat nor give quarter. Impaled by the Thorn, 5 points, Init –5, Corpus and Mentem: The Boar King may hurl a boar spear at any human target within Sight Range. No roll is required to hit the target, and if this attack penetrates she is paralyzed and cannot move, speak, see, smell, or otherwise act or think (including casting a spell). The character does not age either. Wrenching the spear from her body ends the effect, but inflicts a Heavy Wound — although magic may be able to overcome this difficulty. Call of the Hunter, 10 points, Init 0, Herbam: Using this power, the Boar King can appear at any location in his forest."
+            ^"Equipment" STRING "The Boar King carries a number of boar spears, but his court can furnish him with anything he desires, although some items may be glamour, not real."
+            ^"Vis" STRING "4 pawns of Animal in each tusk."
+            ^"Appearance" STRING "The Boar King is a large man with the head of a boar. His speech is oddly accented due to two large tusks that protrude from his jaw. His arms and naked torso are adorned with abstract tattoos and bronze bracelets, and he normally wears animal-hide trousers and a cloak. He often rides a wild horse bareback, accompanied by a group of faerie knights. He is also travels with a number of other courtiers."
+            ^"Source" STRING "The Lion and the Lily"
+            ^"Page" INTEGER 120
+        }
+        PERSONALITY_TRAITS {
+            "Reckless" +3
+            "Proud" +2
+            "Wrathful" +1
+        }
+        COMBAT {
+            "Boar Spear (foot)" INIT 3 ATTACK 13 DEFENSE 9 DAMAGE 11
+            " Boar Spear (mounted)" INIT 3 ATTACK 16 DEFENSE 12 DAMAGE 11
+            " Tusks (gore)" INIT 0 ATTACK 12 DEFENSE 10 DAMAGE 7
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 5 SPECIALTY "boar"
+            "Area Lore: Normandy Tribunal" SCORE 5 SPECIALTY "forest"
+            "Athletics" SCORE 5 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "trespassers"
+            "Brawl" SCORE 9 SPECIALTY "gore"
+            "Carouse" SCORE 3 SPECIALTY "lament"
+            "Dead Language: Latin" SCORE 3 SPECIALTY "hunting terms"
+            "Dead Language: Gaulish" SCORE 5 SPECIALTY "druidic terms"
+            "Etiquette" SCORE 1 SPECIALTY "courtly"
+            "Faerie Lore" SCORE 5 SPECIALTY "worship"
+            "Folk Ken" SCORE 3 SPECIALTY "hunters"
+            "Great Weapon" SCORE 7 SPECIALTY "boar spear"
+            "Hunt" SCORE 10 SPECIALTY "hunters"
+            "Leadership" SCORE 5 SPECIALTY "faeries"
+            "Living Language: Breton" SCORE 3 SPECIALTY "hunting terms"
+            "Organization Lore: Order of Hermes" SCORE 2 SPECIALTY "House Diedne"
+            "Ride" SCORE 5 SPECIALTY "hunting"
+            "Stealth" SCORE 7 SPECIALTY "forest"
+            "Survival" SCORE 10 SPECIALTY "forest"
+            "Swim" SCORE 3 SPECIALTY "swamp"
+        }
+    }
+
+}

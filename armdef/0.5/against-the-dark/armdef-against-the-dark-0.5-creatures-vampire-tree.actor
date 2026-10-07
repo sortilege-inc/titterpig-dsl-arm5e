@@ -1,0 +1,47 @@
+EXTENSION "ARMDef_Against_the_Dark_Creatures_VampireTree" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Vampire Tree"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # Vampire Tree (Chapter Eight: Creatures, p120): one being, its printed stat lines verbatim fields.
+
+    #t153d7f1c7bf10340a8370e ^"Vampire Tree" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" STRING "Cun –3, Per –1, Pre +1, Com –3, Str +10, Sta +5, Dex 0, Qik,–5"
+            ^"Size" INTEGER 5
+            ^"Virtues and Flaws" STRING "Huge x 4; Feast of the Dead, Lesser Powers, Passes for Plant; Freshly Sprung x2, Incognizant, Limited Movement, Traditional Ward (fire) Equivalent to Passes for Human Realms of Power: Magic, page 42"
+            ^"Soak" INTEGER 15
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Pretenses" STRING "Area Lore 3 (fields), Awareness 3 (victims), Brawl 4 (branch), Native Language 5 (local dialect), Leadership 3 (menacing), Stealth 3 (pretending to be a normal tree), Survival 2 (harsh winters)"
+            ^"Vis" STRING "2 pawns of Herbam, in bark"
+            ^"Appearance" STRING "This vampire is based on a white willow. It stands about twenty feet tall, and all its branches point upwards — until they lash down in pursuit of blood. Its silver-green leaves are usually spotted with blood, and the ground around its roots is littered with bones. Vampire trees can understand human languages, but cannot speak."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 120
+        }
+        PERSONALITY_TRAITS {
+            "Hostile" +2
+        }
+        COMBAT {
+            "Branch" INIT 5 ATTACK 9 DEFENSE 2 DAMAGE 12
+            " Grapple" INIT 5 ATTACK 8 DEFENSE 1
+        }
+        POWERS {
+            #tf22a28dd9b22967cfb44e3 ^"Sap the Life" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "Qik – 3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See earlier for details. PeCo 15 (Base 10, +1 Touch) Lesser Power (15 levels, –2 Might cost)"
+            }
+        }
+        DESCRIPTION "A vampire tree can attack as a trained group with up to four limbs simultaneously, and has a +9 Group bonus which it always adds to its Attack. It usually concentrates on one victim at a time, attacking with a grapple and then holding tight. It can use limbs not involved in striking to hold onto grappled victims. Every round it uses another branch to hold onto a victim increases the Grapple Strength (**ArM5**, page 174) by +5. The vampire tree is not suitable as a player character."
+    }
+
+}

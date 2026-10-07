@@ -1,0 +1,71 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_IncorporealVampire" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Incorporeal Vampire"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # Incorporeal Vampire (Chapter Eight: Creatures, p119): one being, its printed stat lines verbatim fields.
+
+    #t439ca440f90c6c9957c09b ^"Incorporeal Vampire" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Feast of the Dead, Focus Power (Ghost Touch), Lesser Power (Eidolon), Lesser Power (Vampiric Touch), Second Sight; Intangible Flesh; Freshly Sprung, Incognizant, Negative Reaction, Traditional Ward"
+            ^"Combat" STRING "Dodge: Init +2, Attack n/a, Defense +7, Damage n/a Thrown Knife: Init +2, Attack +5, Defense +6, Damage +7 Since it is incorporeal, the vampire need not actually avoid physical attacks"
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Area Lore 3 (village), Awareness 2 (family), Brawl 3 (dodging), Charm 5 (bereaved family), Living Language 5 (local dialect), Second Sight 3 (spirits), Stealth 3 (livestock), Thrown Weapon 3 (knives)"
+            ^"Vis" STRING "1 pawn of Ignem, in item affected by the Ghost Touch power."
+            ^"Appearance" STRING "Normally invisible, this vampire can visually manifest as a glowing point of light, or else use its Eidolon power to take the form of the deceased."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 119
+        }
+        PERSONALITY_TRAITS {
+            "Malicious" +3
+        }
+        POWERS {
+            #tb3f640a72fde14448f0062 ^"Eidolon (Against the Dark)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Eidolon"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "See earlier for details. CrIm 20 (Base 2, +2 move at direction, +1 Touch, +2 Sun, +1 intricacy) Lesser Power (20 levels, –2 Might cost)"
+            }
+            #tab785b5ffae31f5fec906b ^"Sap the Life" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See earlier for details. PeCo 15 (Base 10, +1 Touch) Lesser Power (15 levels, –1 Might cost)"
+            }
+            #t1c88188d284645ad14eef0 ^"Ghost Touch (Against the Dark)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Ghost Touch"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "See earlier for details. ReTe 25: Focus Power"
+            }
+        }
+        DESCRIPTION "This vampire has 7 points of Virtues and Flaws."
+    }
+
+}

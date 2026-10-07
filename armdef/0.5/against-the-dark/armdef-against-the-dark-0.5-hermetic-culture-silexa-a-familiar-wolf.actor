@@ -1,0 +1,42 @@
+EXTENSION "ARMDef_Against_the_Dark_HermeticCulture_SilexaAFamiliarWolf" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Silexa, a Familiar Wolf"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # Silexa, a Familiar Wolf (Chapter Two: Hermetic Culture, p32): one being, its printed stat lines verbatim fields.
+
+    #t8f6a57ae99988861315b47 ^"Silexa, a Familiar Wolf" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" STRING "Int +2, Per +1, Pre –2, Com +1, Str –1, Sta +3, Dex +2, Qik +2 Lacks the ability to speak."
+            ^"Size" INTEGER -1
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magical Animal; Essential Virtue (Minor), Improved Characteristics (x2), Ferocity (when hungry), Long-Winded, Sharp Ears, True Friend, Wilderness Sense, Infamous, Magical Creature"
+            ^"Magical Qualities" STRING "Personal Power (Hands of the Magical Animal), 2 x Improved Damage, 2 x Improved Defense, 2 x Improved Fatigue, Improved Initiate, 2 x Improved Soak"
+            ^"Personality Trait" STRING "Brave +3, Loyal (Monica) +3, Wolf +3 Cautious +2 This trait is part of Silexa’s essential nature, and so cannot be affected by Hermetic magic. It makes her loyal to her pack, and immune to spells which try to make her act in a humanish way."
+            ^"Reputations" LIST ["Honorable 4 (Hermetic wolves)"]
+            ^"Soak" INTEGER 11
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1,–1, –3/–3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Abilities" STRING "Area Lore: Transylvanian Tribunal 3, Athletics 5 (distance running), Awareness 3 (smell), Brawl 5 (teeth), Hunt 4 (track by smell), Latin 5 (listening), Leadership 3 (wolves), Survival 3 (winter), Swim 3 (rivers), Wilderness Sense (Transylvania) 5."
+            ^"Powers" STRING "Hands of the Magical Animal: 0 points, Init 0, Animal. Allows the wolf to carry objects as if she had hands and a Strength of 5. She must concentrate to do anything but carry an object.. ((Base 3, +1 Touch, +2 Sun, +1 constant, Personal Power (15 levels, –2 Might cost) Realms of Power: Magic, page 39)"
+            ^"Vis" STRING "2 pawns, Animal, heart."
+            ^"Appearance" STRING "A wolf with a pelt the color of flint."
+            ^"Bond Cords" STRING "Gold +2, Silver +1, Bronze +3"
+            ^"Bond Powers" STRING "2 Shared senses (Sight), 0 points, Init 0, Corpus or Animal, as per ArM5, page 105 Ever-present Familiar, 0 points, Init 0, Animal."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 32
+        }
+        COMBAT {
+            "Teeth" INIT 5 ATTACK 11 DEFENSE 13 DAMAGE 6
+        }
+        DESCRIPTION "Silexa is not one of the native white wolves, being of Irish extraction, but she has great seniority in the strange community of wolves that depends on House Tremere.\n\nAllows Monica to call Silexa to her side, provided the wolf is within seven leagues. Silexia often recovers Arcane Connections to places, to allow Monica to use Leap of Homecoming. (Base 30, +3 24 uses per day) Mental communication as per **ArM5**, page 105, complex variant."
+    }
+
+}

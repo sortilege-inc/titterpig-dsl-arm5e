@@ -1,0 +1,64 @@
+EXTENSION "ARMDef_Against_the_Dark_Creatures_UpokoritumaAnAzdaja" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Upokorituma, an Aždaja"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # Upokorituma, an Aždaja (Chapter Eight: Creatures, p105): one being, its printed stat lines verbatim fields.
+
+    #t983acfcf7e2588c6420808 ^"Upokorituma, an Aždaja" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 17
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Greater Infernal Power (x2); Great Stamina, Lesser Infernal Power, Tough; Greedy, Horrifying Appearance; Demonic Weakness (abhorrent material: Serbian spruce tree), Corrupted Beast, Fear (doves)."
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Vis" STRING "4 pawns of Vim vis, one in each of the aždaja’s largest canine teeth."
+            ^"Appearance" STRING "Upokorituma is squat and stocky, like a thick-legged horse, with eight heads resting atop eight thick necks. His membranous wings appear too small to support its weight, but this is a false impression and the aždaja is a skilled flier. He is dark gray with pink eyes and blood-red gums."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 105
+        }
+        PERSONALITY_TRAITS {
+            "Covetous" +6
+            "Furious" +3
+            "Vengeful" +3
+        }
+        COMBAT {
+            "Claws" INIT -3 ATTACK 10 DEFENSE 8 DAMAGE 4
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "flying"
+            "Awareness" SCORE 3 SPECIALTY "food"
+            "Brawl" SCORE 6 SPECIALTY "claw"
+            "Survival" SCORE 3 SPECIALTY "wooded gulches"
+        }
+        POWERS {
+            #t5988a21203b6b9c7c14f71 ^"Claws as Sharp as Satan’s" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Upokorituma can magically cause his claws to harden and become sharper for a limited period of time (D: Dia), causing an extra +4 Damage with his claw attacks. (Incantation/Effusion Base 20, +1 Dia) *February’s Frosty Bite*, 5 points, Init +3, Ignem. This power chills the target enough to burn flesh, doing +10 Damage. (Incantation/Effusion Base 5, +3 Sight, +1 magnitude of extra Damage) *Flight of the Raven*, 0 points, Constant, Animal: This power grants Upokorituma wings with which he can fly. (Debauchery/Phantasm Base 3, +2 Sun, +1 Constant, +1 Size adjustment)"
+            }
+        }
+        DESCRIPTION "Aždaje are corrupted beasts, not demons, and follow the rules found in *Realms of Power: The Infernal*, page 77. In most cases, a corrupted beast is a tainted version of a mundane beast, and game statistics are created by adding Infernal Virtues and Flaws to the mundane beast’s existing statistics. Because there are no mundane dragons, a corrupted dragon’s game statistics can either be created using a combination of Infernal Virtues and Flaws (*Realms of Power: The Infernal*, pages 77–79) and Virtues and Flaws appropriate for beasts (*Houses of Hermes: Mystery *Cults, pages 38–43). You may also add Infernal Virtues and Flaws to a Magic dragon, using the rules found in *Realms of Power: Magic*. In the latter case, the dragon is a creature of the Infernal realm, and has Infernal Might instead of Magic Might, even if it has powers created using the rules for Magic creatures. The following example uses Infernal Virtues and Flaws and standard Virtues & Flaws to create a sample aždaja.\n\nUpokorituma lives along the upper Danube, hiding in gulches and hard-toreach ravines. He constantly watches for merchant vessels, often waiting submerged until a targeted ship passes above him. Once past, the beast rises out of the river to attack with surprise. Typically he slays all aboard, sinks the vessel, and returns to his lair with all the loot he can carry."
+    }
+
+}

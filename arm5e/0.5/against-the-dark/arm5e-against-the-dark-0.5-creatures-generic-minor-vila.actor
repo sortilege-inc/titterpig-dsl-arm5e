@@ -1,0 +1,33 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_GenericMinorVila" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Generic Minor Vila"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # Generic Minor Vila (Chapter Eight: Creatures, p122): one being, its printed stat lines verbatim fields.
+
+    #t10ea1feecd1f3850d2d9d5 ^"Generic Minor Vila" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Faerie Might" STRING "5 (Usually Corpus)"
+            ^"Characteristics" STRING "Int 0, Per 0, Pre 3, Com 0, Str 1, Sta 0, Dex 0, Qik 0"
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Passes for Human: Faerie Sight, Human Form, Incognizant, Traditional Ward (suggestions given later)."
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Athletics 3 (dance), Awareness 3 (mortals), Brawl 3 (claws), Carouse 3 (getting mortals to drink), Charm 6 (preferred type of mortal), Folk Ken 3 (festivals), Music 5 (singing)."
+            ^"Powers" STRING "As per role, defined later"
+            ^"Vis" STRING "1 pawn Corpus, a long blonde hair"
+            ^"Appearance" STRING "A beautiful maiden, either naked or dressed in white clothes."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 122
+        }
+        COMBAT {
+            "Claws" INIT -1 ATTACK 6 DEFENSE 7 DAMAGE 3
+        }
+        DESCRIPTION "This weak vila is suitable for stories with grogs, or other characters lacking magical powers or Resistance. She is suitable as a player character, but will be more useful in most covenants if given additional powers and a larger Might pool to support them. Any added Virtues need to be balanced with Flaws.\n\nThe powers listed in this section are Greater Powers unless otherwise noted, and are purchased as Major Virtues. Most Greater Powers can be transformed into Lesser Powers, which are Minor Virtues. Notes on doing this are in *Realms of Power: Faerie* on page 57. Troupes preferring speed over accuracy should double the Might cost and quadruple the Initiative penalty of the powers given here. Powers noted as Personal affect only the faerie, and are Minor Virtues.\n\nAs an antagonist, augment these statistics using the suggestions for customization by role, given later. NPC faeries do not need balanced Virtues and Flaws."
+    }
+
+}

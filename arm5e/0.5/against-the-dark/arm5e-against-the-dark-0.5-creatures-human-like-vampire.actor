@@ -1,0 +1,53 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_HumanLikeVampire" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Human-like Vampire"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # Human-like Vampire (Chapter Eight: Creatures, p118): one being, its printed stat lines verbatim fields.
+
+    #t329d55a6e6a8e0b10ba29d ^"Human-like Vampire" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Negative Reaction; Feast of the Dead, Humanoid Faerie, Increased Faerie Might x2, Lesser Powers; Incognizant, Traditional Ward"
+            ^"Combat" STRING "Teeth: Init +3, Attack +8 Defense +10, Damage +4"
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Area Lore 3 (livestock), Athletics 5 (climbing), Brawl 5 (teeth), Charm 3 (bereaved family), Living Language 5 (local dialect), Stealth 5 (village streets)"
+            ^"Vis" STRING "2 pawns of Corpus, in grave dirt"
+            ^"Appearance" STRING "A recently deceased human corpse, often with red eyes and fingernails. Vampires usually wear burial shrouds, or else go naked."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 118
+        }
+        PERSONALITY_TRAITS {
+            "Hungry" +3
+        }
+        POWERS {
+            #t145a52a1112304f18efb01 ^"Sap the Life" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "Qik –2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See earlier for details. PeCo 15 (base 10, +1 Touch) Lesser Power (15 levels, –1 Might cost, +1 Init)"
+            }
+        }
+        DESCRIPTION "This vampire has 5 points of Virtues and 3 points of Flaws."
+    }
+
+}

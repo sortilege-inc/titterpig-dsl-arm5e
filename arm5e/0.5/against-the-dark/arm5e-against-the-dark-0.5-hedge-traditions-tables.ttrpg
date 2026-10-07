@@ -1,0 +1,123 @@
+EXTENSION "ArM5_Against_the_Dark_HedgeTraditions_Tables" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Chapter Nine: Hedge Traditions tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t0fa96e7ed6dc9aac765a62 ^"Scry Levels (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Scry Level", "Strength of Connection"]
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 134
+        }
+        TABLE {
+            "3" "Determine direction and distance to the foe. No sympathetic connection bonus gained."
+            "4" "Smell what the foe smells, and can hear muffled sounds that may give clues as to its whereabouts. No sympathetic connection bonus gained."
+            "5" "Hear everything that the foe hears, and also receives a vague impression of what is occurring in its vicinity, as if seeing through fog. Provides a sympathetic connection bonus to the foe of +1."
+            "10" "See and hear everything that takes place within five paces of foe. Provides a sympathetic connection bonus to the foe of +2."
+        }
+    }
+
+    #t6cdd8676a4ea6a4fc0ac31 ^"Physical Ban (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Wound", "Cost"]
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 135
+        }
+        TABLE {
+            "Light" "3"
+            "Medium" "5"
+            "Heavy" "10"
+            "Incapacitating" "15"
+            "Deadly" "20"
+        }
+    }
+
+    #t720ea23f02a26cb90500b4 ^"Supernatural Ban Levels (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Level", "Effect"]
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 136
+        }
+        TABLE {
+            "10" "Reduce the Duration of a power by one quarter; Cause the foe to make an extra Concentration roll to maintain a D: Conc power.*"
+            "15" "Reduce the Duration of a power by one half; Cause the foe to make an extra Concentration roll to maintain a D: Conc power at +3 to the Ease Factor.*"
+            "20" "Reduce the Duration of a power by three quarters; Cause the foe to make an extra Concentration roll to maintain a D: Conc power at +6 to the Ease Factor.*"
+        }
+    }
+
+    #te3b412322ea7066a52a4ee ^"Storm Size (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Size", "Effect"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 129
+        }
+        TABLE {
+            "+3" "Local" "Storm affects an area 3 miles across. Vis cost: 1 pawn Auram."
+            "+6" "Provincial" "Storm affects an area 21 miles (7 leagues) across. Vis cost: 2 pawns Auram."
+            "+12" "National" "Storm affects an area 150 miles across. Vis cost: 4 pawns Auram."
+        }
+    }
+
+    #tac48bdde95be433c435d7f ^"Storm Duration (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Duration"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 129
+        }
+        TABLE {
+            "+3" "Storm lasts for 1 Diameter."
+            "+6" "Storm lasts for 1 Hour."
+            "+9" "Storm lasts for Sun."
+            "+12" "Storm lasts for Moon."
+        }
+    }
+
+    #t7534b341e19eaf48af714f ^"Black Hawthorn: Shape and Material Bonuses (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Bonus", "Value"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 131
+        }
+        TABLE {
+            "Protection from vampires" "+7"
+            "Protection from evil" "+4"
+            "Prevent disease" "+4"
+        }
+    }
+
+    #tebc154d7d2256d00801efd ^"Sympathetic Connections (table) (Against the Dark)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Bonus"]
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 133
+        }
+        TABLE {
+            "Name of vampire in life" "+1"
+            "Soil from a foe’s footprint" "+1"
+        }
+    }
+
+    #t676489abb645d3e39c2128 ^"Arcane Connections (table) (Against the Dark)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Item", "Duration", "Multiplier"]
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 133
+        }
+        TABLE {
+            "Wound caused by a foe" "hours" "1"
+            "Personally conversing with a faerie foe" "special (until conversation ends)*" "2"
+            "Body of victim" "weeks" "2"
+            "Earth from grave" "weeks" "2"
+            "Personally wounded by a faerie foe" "special (until wound heals)*" "3"
+            "Child of the vampire hunted**" "decades" "3"
+        }
+    }
+
+}

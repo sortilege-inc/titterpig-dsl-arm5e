@@ -1,0 +1,63 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_Gadja" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Gadja"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # Gadja (Chapter Eight: Creatures, p119): one being, its printed stat lines verbatim fields.
+
+    #tcb7a8c735f9b534f188e74 ^"Gadja" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Feast of the Dead, Hybrid Form, Increased Faerie Might, Lesser Power; Monstrous Appearance; Clumsy, Incognizant, Traditional Ward (sunlight), Traditional Ward (thorns)"
+            ^"Soak" INTEGER 3
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Area Lore 3 (livestock), Awareness 5 (livestock), Brawl 5 (bite), Concentration 3 (while feeding), Hunt 5 (wounded animals), Stealth 5 (fields)"
+            ^"Vis" STRING "Two pawns of Corpus, in the jelly-like blood within the gadja"
+            ^"Appearance" STRING "A flaccid sack of skin about one pace in diameter. It has a face bearing a sharp snout and a pair of beady eyes."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 119
+        }
+        PERSONALITY_TRAITS {
+            "Hungry" +3
+        }
+        COMBAT {
+            "Bite" INIT 0 ATTACK 7 DEFENSE 7 DAMAGE 4
+        }
+        POWERS {
+            #t0b0c287d8922a0c8255cc7 ^"Calm the Sheep of the Field" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "Qik –2"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The gadja can prevent an animal from fleeing as it approaches, allowing it to feed from them. ReAn 10 (Base 4, +1 Eye, +1 Conc) Lesser Power (10 levels)"
+            }
+            #tc27ec7ac54f40395424642 ^"Sap the Life" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "Qik – 3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See earlier for details. PeCo 15 (Base 10, +1 Touch) Lesser Power (15 levels)"
+            }
+        }
+        DESCRIPTION "The gadja has 4 points of Virtues and 7 points of Flaws."
+    }
+
+}

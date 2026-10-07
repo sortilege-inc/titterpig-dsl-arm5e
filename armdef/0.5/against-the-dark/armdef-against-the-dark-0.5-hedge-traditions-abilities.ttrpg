@@ -1,0 +1,50 @@
+EXTENSION "ARMDef_Against_the_Dark_HedgeTraditions_Abilities" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Chapter Nine: Hedge Traditions abilities"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # The chapter's abilities, structured; each DESCRIPTION the source's text, verbatim.
+
+    #te43889cd8e9dde37fc45a4 ^"Storm Calling" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        DESCRIPTION "This Supernatural Ability allows the storm wizard to either create or move a storm.\n\nTo create a storm, make a Storm Calling roll against an Ease Factor that depends on the size and duration of the desired storm (see insert). The storm wizard must also sacrifice a number of pawns of Auram vis (see Ice Harvesting) that depends on the size of the storm (see insert). The storm is centered on the location of the wizard at the time of casting, but if he subsequently moves, the storm will stay in place. It takes a number of rounds equal to the required Ease Factor for the storm to manifest. If the storm wizard calls a storm while indoors, the storm will appear outside, above and around, his location.\n\nCreating a storm is a Supernatural effect, so the Storm Calling roll is affected by the aura like any other Supernatural Ability. However, once created, the storm is entirely natural; it does not need to Penetrate to cause damage to characters who have Magic Resistance, or to enter an *Aegis of the Hearth* effect. Any character with a Score in Magic Lore (or Wilderness Sense) who witnesses the creation of a storm can automatically identify that the storm is being created artificially, but unless he is familiar with storm wizard magic, he will be unable to identify the specific form of magic.\n\nTo move a storm, make a Storm Calling roll against an Ease Factor that depends on the size of the storm (that is, the Ease Factor for moving a storm does *not* depend on the storm’s Duration). A storm can be moved at rate of about 1 mile per Diameter, and the storm wizard must be able to see the storm while it is moving. Moving a storm does not cost any vis, but while it is being moved, the storm is considered to be under a supernatural effect. If the storm wizard wishes to keep a storm moving for an extended period of time, make a new roll to keep the storm moving every Diameter. The speed at which the storm wizard moves the storm is not unnaturally fast, but the storm wizard may move the storm in an entirely unnatural way, for example, he can move the storm against the wind, or even inside through windows and doors.\n\nA storm wizard may move any storm, regardless of whom (if anyone) created it. If two (or more) storm wizards wish to move the same storm, then the storm moves according to the direction of whomever rolls the greatest Storm Calling roll (which also exceeds the required Ease Factor). Storm wizards cannot usefully work together to move a storm.\n\n**Storm Calling Roll: **\n\n**Communication + Storm Calling **\n\n**+ Stress Die vs Ease Factor**\n\n**Storm Creation Vis Cost: **\n\n**Depends on Storm Size**"
+    }
+
+    #t8fc35eeb7154a0ef2dc04a ^"Storm Riding" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 129
+        }
+        DESCRIPTION "Storm Riding allows the storm wizard to either sense or travel to any point covered by a storm. The storm wizard must be able to see the storm to use this Supernatural Ability, and he receives a +3 bonus to the Storm Riding roll if he is actually inside the storm when he uses the Ability. As it is a Supernatural Ability, the Storm Riding roll is affected by the aura.\n\n**Storm Riding Roll: **\n\n**Perception + Storm Riding + Stress Die **\n\n**vs Ease Factor**\n\nThe Ease Factor for Storm Riding depends on what the storm wizard wants to achieve:\n\n**Ease Factor 9:** The storm wizard may use his senses from any point in the storm. Note that such magical senses need to Penetrate to “see” characters with Magic Resistance. A successful roll allows the character to see from a specified vantage for Concentration duration. Using any other storm wizard Supernatural Ability while concentrating on seeing is simple (Concentration Ease Factor of 3). **Ease Factor 12: **The storm wizard may travel instantly to any point in the storm. If the storm wizard can see the destination, he arrives at the precise location; otherwise, he must estimate the relative distance to the destination (“500 feet, east,” for example). If required, the troupe can make another suitable roll to determine the accuracy of this estimate. **Ease Factor 15: **The storm wizard may cause another character to travel instantly to any point in the storm. The storm wizard must be touching the target character, and the effect needs to Penetrate the target’s Magic Resistance. Characters who are sent to a high altitude take damage when they hit the ground (see **ArM5**, page 181)."
+    }
+
+    #t4c5c3c6e3a1cd7d5c56d25 ^"Storm Fighting" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Supernatural" FIXED
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 129
+        }
+        DESCRIPTION "Storm Fighting allows the storm wizard to use the fury of a storm to attack other characters and structures, such as houses, castles, forests, etc. The storm wizard must be able to see both the storm and the target of the attack, and the target must be within the storm. As it is a Supernatural Ability, the Storm Fighting roll is affected by the aura.\n\n**Storm Fighting Roll: **\n\n**Strength + Storm Fighting + Stress Die **\n\n**vs Ease Factor**\n\nThe Ease Factor depends on the type of attack used:\n\n**Buffet: Ease Factor n/a. **The Storm Fighting roll is treated as a normal melee Attack Total against a target character. Shields and weapons can be used in a defensive roll against this attack. The storm wizard may make a number of Buffet attacks equal to his Storm Fighting Ability Score in a round. These attacks may all target the same individual, or can be spread without penalty among multiple targets within the storm. If an attack is successful, the target takes +10 damage from being torn and thrown about by strong winds. In a round where this attack is used, the storm wizard may also make a Storm Fighting roll as a Defense Total. Storm Fighting has an Initiative modifier of 0. This attack type has no Penetration, and so a target with Magic Resistance cannot be affected by a buffet attack. **Deluge: Ease Factor 3.** This attack affects everyone within an area no more than 30 yards across. All mobile characters must make a Dexterity roll against an Ease Factor of 6, or lose their footing and fall. This attack is Aimed, and thus bypasses Magic Resistance (see **ArM5**, page 86). **Hail: Ease Factor 6.** This attack affects everyone within an area no more than 30 yards across. All characters take +3 damage (which can be soaked as usual). This attack is Aimed, and thus bypasses Magic Resistance (see **ArM5**, page 86). **Erosion: Ease Factor 9.** This attack affects a single Structure or a part of larger Structure. Examples include: a tree, a house, a small tower, or part of a castle wall. If this roll is successful, the storm washes away the dirt beneath the foundations of the structure, causing it to collapse. As the erosion actually attacks the earth beneath the structure, the quality of the built structure is largely irrelevant. However, the storyguide can elect to increase the required Ease Factor to represent, for example, a structure which is directly anchored to the bedrock by deep foundations. Such well-secured structures are very rare in Mythic Europe, especially among mundane architecture. **Lightning: Ease Factor 12.** This attack strikes a single target with a jagged arc of lightning, which causes +20 damage. Assuming the Ease Factor is met, this attack cannot miss, but it must Penetrate the target’s Magic Resistance."
+    }
+
+    #tf620cfefa8dcba82ac1a42 ^"Organization Lore: Storm Wizard" DEF {
+        EXTENDS #tLzvYKtdVMBerES3oaOuTyEy ^"Ability"
+        PROPERTIES {
+            ^"Ability Type" STRING "Arcane" FIXED
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 130
+        }
+        DESCRIPTION "This Arcane Ability is an Organization Lore that concerns the magic, personalities, and special locations (such as magical ice sites) of the storm wizard tradition. It is also used in ice harvesting and storm wizard initiations. **Specialties: ** ice harvesting, initiations, history, locations, personalities."
+    }
+
+}

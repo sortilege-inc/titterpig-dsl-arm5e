@@ -1,0 +1,57 @@
+EXTENSION "ARMDef_Against_the_Dark_Creatures_CostacheACaptiveGiant" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Costache, a Captive Giant"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # Costache, a Captive Giant (Chapter Eight: Creatures, p113): one being, its printed stat lines verbatim fields.
+
+    #t94547e07eed27992ac9416 ^"Costache, a Captive Giant" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 7
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER -6
+            }
+            ^"Size" INTEGER 3
+            ^"Virtues and Flaws" STRING "Negative Reaction; Greater Power (2), Huge (x2); Humanoid Faerie; Incognizant, Traditional Ward (iron)"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Pretenses" STRING "Athletics 3 (running), Awareness 2 (listening), Brawl 4 (fist), Charm 1 (princesses), Folk Ken 3 (guests), Guile 4 (inventing stories), Legerdemain 4 (snatching small objects), [Local] Living Language 5 (telling lies), Stealth 4 (sneaking through castles), Survival 1 (forests)"
+            ^"Vis" STRING "4 pawns of Mentem vis in his tongue"
+            ^"Appearance" STRING "Costache looks like a large, captive prince or nobleman, with tattered robes, tussled hair, and dirty skin. His eyes nearly sparkle with treachery and malevolence. A few moments after being freed, Costache’s clothes regain a like-new appearance, and he suddenly becomes well-groomed and clean."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 113
+        }
+        PERSONALITY_TRAITS {
+            "Deceitful" +3
+            "Sly" +2
+        }
+        COMBAT {
+            "Fist" INIT -6 ATTACK 8 DEFENSE -1 DAMAGE 7
+        }
+        POWERS {
+            #t9a15a18a17c49777c07c49 ^"Rousing the Castle’s Curiosity" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power instills a powerful sense of curiosity in all those within the targeted structure. Those affected will prowl and snoop through the structure, investigating every corridor, chamber, and locked door. (Base 4, +2 Voice, +2 Sun, +3 Structure) *Flee like a Bird*, 3 points, Init –9, Auram. This power mimics the Hermetic spell, *Wings of the Soaring Wind*, allowing Costache to fly out a window once he is released. *The Shock of Consequence*, 4 points, Init –10, Corpus. This power paralyzes a group of up to 10 people. Costache invokes this power as soon as he is free, freezing his rescuers into immobility while he chastises them and steals something valuable as they stand helpless. (Base 5, +2 Voice, +2 Sun, +2 Group)"
+            }
+        }
+        DESCRIPTION "Another common giant is the one trapped in a king’s palace, locked away in a room that guests are forbidden to enter, and contained in a spike-lined wooden barrel bound with three iron chains. Easy to initially capture, Costache is difficult to keep. He has a magical power that makes residents of the palace curious, and he thrives on the anxiety and wonder produced by those who know they are investigating where they shouldn’t."
+    }
+
+}

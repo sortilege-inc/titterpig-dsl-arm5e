@@ -1,0 +1,602 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_Powers" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Chapter Eight: Creatures powers"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # The chapter's powers, structured; each DESCRIPTION the source's text, verbatim.
+
+    #ta8352b668801c04f285462 ^"Cause Drowsiness (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Cause Drowsiness"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Lesser"
+            ^"Might Cost" STRING "3 points, Init Qik – 6, Mentem"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init Qik – 6"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "ReMe 15 3 points, Init Qik – 6, Mentem"
+            ^"Technique and Form" STRING "ReMe"
+            ^"Level" INTEGER 15
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R: **Touch, **D:** Sun, **T:** Ind Allows the faerie to cause a human it touches to fall asleep.\n\n(Base 4, +1 Touch, +2 Sun),"
+    }
+
+    #t5b3a9b5e22a2c0eed40147 ^"Eidolon (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Eidolon"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Lesser"
+            ^"Might Cost" STRING "4 points, Init Qik – 8, Imaginem"
+            ^"Might Cost Value" INTEGER 4
+            ^"Initiative" STRING "Init Qik – 8"
+            ^"Form" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "CrIm 20 4 points, Init Qik – 8, Imaginem"
+            ^"Technique and Form" STRING "CrIm"
+            ^"Level" INTEGER 20
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R:** Touch, **D:** Sun, **T:** Ind This power creates an illusory form that is visible and audible. The creature can create a single form for each version of this power they possess. The image can move and speak as directed by the faerie, and lasts until the faerie has no further use for it.\n\n(Base 2, +2 move at direction, +1 Touch, +2 Sun, +1 intricacy)"
+    }
+
+    #t7f5f05e5dde6fc75c59745 ^"Sap the Life (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Sap the Life"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Lesser"
+            ^"Might Cost" STRING "3 points, Init Qik – 6, Corpus"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init Qik – 6"
+            ^"Form" STRING "Corpus"
+            ^"Printed Stat Line" STRING "PeCo 15 3 points, Init Qik – 6, Corpus"
+            ^"Technique and Form" STRING "PeCo"
+            ^"Level" INTEGER 15
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R:** Touch, **D:** Mom, **T:** Ind This power causes the target to weaken and lose the vitality that sustains life. This is treated as a disease that initially inflicts a Light Wound; in addition, the victim loses two Fatigue levels which cannot be regained until the disease has abated. Every week, the afflicted character can make a Disease Recovery Roll; he must beat an Ease Factor of 12 to remain stable, and a 18 to improve. If you are using the disease rules of *Art & Academe*, this is a Serious disease of Severity 15. Either Faerie Lore or Medicine may be used to treat the effects.\n\n(Base 10, +1 Touch)"
+    }
+
+    #tb03d65792c1ea4e9775d72 ^"Ghost Touch (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Ghost Touch (Focus Power)"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Focus"
+            ^"Might Cost" STRING "Variable cost, Init Qik – 5, Terram"
+            ^"Initiative" STRING "Init Qik – 5"
+            ^"Form" STRING "Terram"
+            ^"Printed Stat Line" STRING "ReTe 25 Variable cost, Init Qik – 5, Terram"
+            ^"Technique and Form" STRING "ReTe"
+            ^"Level" INTEGER 25
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R:** Varies, **D:** Varies, **T:** Varies Moves objects that are not held by another or fastened down. For 1 Might point, a maximum of 5 lbs. can be moved; every additional Might point doubles this weight limit. If the item is hurled with force, the spirit requires the Thrown Weapons Ability, and the item inflicts +5 damage per Might point spent. If the faerie has a Martial Ability, it can enter combat with an object when using this power (most weapons weigh less than 10 lbs.), and uses its Characteristics to calculate combat totals as normal. All physical attacks with this power need to penetrate Magic Resistance. The power lasts until the object is released by the faerie."
+    }
+
+    #tfd3d8aec22712a31f8cc2d ^"Flight (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Flight"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Personal"
+            ^"Might Cost" STRING "2 points, constant, appropriate Form"
+            ^"Might Cost Value" INTEGER 2
+            ^"Initiative" STRING "constant"
+            ^"Form" STRING "appropriate Form"
+            ^"Printed Stat Line" STRING "ReFo 15 2 points, constant, appropriate Form"
+            ^"Technique and Form" STRING "ReFo"
+            ^"Level" INTEGER 15
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R:** Per, **D:** Sun, **T:** Ind The character is capable of flight. He may use the Athletics skill to simulate difficult maneuvers, but may not engage in combat while flying incredibly swiftly. The faerie may not fly when heavily encumbered, or with a passenger of its Size or more, unless assisted by another faerie that shares the load.\n\n(Base 4, +2 Sun, +1 constant. This base is deliberately lower than Hermetic magic might suggest.)"
+    }
+
+    #tc472b8e8ac066c08510819 ^"Invisibility (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Invisibility"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Personal"
+            ^"Might Cost" STRING "2 points, Init –2, Imaginem"
+            ^"Might Cost Value" INTEGER 2
+            ^"Initiative" STRING "Init –2"
+            ^"Form" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "PeIm 15 2 points, Init –2, Imaginem"
+            ^"Technique and Form" STRING "PeIm"
+            ^"Level" INTEGER 15
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R:** Per, **D:** Sun, **T:** Ind A personal version of *Veil of Invisibility* (**ArM5**, page 146)\n\n(Base 4, +2 Sun, +1 for moving image)"
+    }
+
+    #t9826909e8e857a3ff6c0be ^"Silent Motion (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Silent Motion"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Personal"
+            ^"Might Cost" STRING "1 point, constant, Imaginem"
+            ^"Might Cost Value" INTEGER 1
+            ^"Initiative" STRING "constant"
+            ^"Form" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "PeIm 10 1 point, constant, Imaginem"
+            ^"Technique and Form" STRING "PeIm"
+            ^"Level" INTEGER 10
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R:** Per, **D:** Sun, **T:** Ind Allows the character to move without making a noise.\n\n(Base 3, +2 Sun, +1 constant)"
+    }
+
+    #t9b24f7fa31c11d738bea60 ^"Supernatural Agility (vampire power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Supernatural Agility"
+            ^"Creature" STRING "Vampire"
+            ^"Group" STRING "Personal"
+            ^"Might Cost" STRING "3 points, constant, appropriate Form"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "constant"
+            ^"Form" STRING "appropriate Form"
+            ^"Printed Stat Line" STRING "ReCo 25 3 points, constant, appropriate Form"
+            ^"Technique and Form" STRING "ReCo"
+            ^"Level" INTEGER 25
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "**R: **Per, **D:** Sun, **T:** Ind This power allows the character to perform minor supernatural feats when using its Athletics Pretense. These include swiftly scaling walls, leaping from the ground onto the back of a galloping horse, and dropping great distances to the ground without harm.\n\n(Base 10, +2 Sun, +1 constant)"
+    }
+
+    #t7d2bbb92eae2588c26b6de ^"Transform into Animal (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transform into Animal"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Shapeshifter"
+            ^"Might Cost" STRING "2 points, Init –2, Animal"
+            ^"Might Cost Value" INTEGER 2
+            ^"Initiative" STRING "Init –2"
+            ^"Form" STRING "Animal"
+            ^"Printed Stat Line" STRING "Transform into Animal: 2 points, Init –2, Animal"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Transforms the character into a specified land animal of human size or smaller for Sun duration"
+    }
+
+    #t08af14c0ac16cae7ff16df ^"Transform into Animal (vila power 2)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transform into Animal"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Shapeshifter"
+            ^"Might Cost" STRING "3 points, Init –3, Animal"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Animal"
+            ^"Printed Stat Line" STRING "Transform into Animal: 3 points, Init –3, Animal"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Transforms the character into a large animal (current Size +1) for Sun duration."
+    }
+
+    #t0db1b82ef05e3f8748f90e ^"Transform into Animal (vila power 3)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transform into Animal"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Shapeshifter"
+            ^"Might Cost" STRING "3 points: Init –3, Animal"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Animal"
+            ^"Printed Stat Line" STRING "Transform into Animal: 3 points: Init –3, Animal"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Transforms the character into a specified land animal of human size or smaller for Until duration."
+    }
+
+    #t1123befad96836bee9af7b ^"Transform into Bird or Fish (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transform into Bird or Fish"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Shapeshifter"
+            ^"Might Cost" STRING "3 points, Init –3, Animal"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Animal"
+            ^"Printed Stat Line" STRING "Transform into Bird or Fish: 3 points, Init –3, Animal"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Transforms the character into a specified bird or fish of human size or smaller for Sun duration"
+    }
+
+    #tf65107a5b2d24db52f003c ^"Transform into Bird or Fish (vila power 2)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transform into Bird or Fish"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Shapeshifter"
+            ^"Might Cost" STRING "4 points, Init –4, Animal"
+            ^"Might Cost Value" INTEGER 4
+            ^"Initiative" STRING "Init –4"
+            ^"Form" STRING "Animal"
+            ^"Printed Stat Line" STRING "Transform into Bird or Fish: 4 points, Init –4, Animal"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Transforms the character into a specified bird or fish of human size or smaller for Until duration Transform into Human costs the same as the inverse power. A faerie crow transforming into a human uses more Might than a fox that does so."
+    }
+
+    #t004f407ae278ae64cdad8b ^"Allure (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Allure"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Enthralling Voice"
+            ^"Might Cost" STRING "1 point, Init –1, Mentem"
+            ^"Might Cost Value" INTEGER 1
+            ^"Initiative" STRING "Init –1"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Allure: 1 point, Init –1, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Makes the faerie supernaturally attractive. Grants a +3 bonus on all rolls that convince or impress others."
+    }
+
+    #t05a230d51b329468767e23 ^"Enthralling Sound (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Enthralling Sound"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Enthralling Voice"
+            ^"Might Cost" STRING "3 points, Init –3, Mentem"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Enthralling Sound: 3 points, Init –3, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Allows a faerie to create, or intensify, a particular emotion in a group of people for Sun Duration. A Personality trait roll against an Ease Factor of 9 allows a character to ignore this effect."
+    }
+
+    #t6a8fb74e760d7104c8081b ^"Enthrallment (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Enthrallment"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Enthralling Voice"
+            ^"Might Cost" STRING "4 points, Init –4, Mentem"
+            ^"Might Cost Value" INTEGER 4
+            ^"Initiative" STRING "Init –4"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Enthrallment: 4 points, Init –4, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Allows a faerie to take complete control of the mind of a human for Sun Duration. Requires initial eye contact. The faerie still sings while making the eye contact, because folklore says the song is the transmission mechanism, but that’s stage dressing."
+    }
+
+    #t895711c3a0c3759fee959d ^"Guide (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Guide"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Enthralling Voice"
+            ^"Might Cost" STRING "3 points, Init –3, Mentem"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Guide: 3 points, Init –3, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Subtly guides a group of people to an action that the faerie desires, for Sun duration. This power acts like a version of the Common Sense Virtue that gives the character advice which suits the vila. Again, the vila sings when using this power, for folkloric aptness."
+    }
+
+    #t412b893930308a4b624a63 ^"Kiss of Forgetfulness (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Kiss of Forgetfulness"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Enthralling Voice"
+            ^"Might Cost" STRING "4 points, Init –4, Mentem"
+            ^"Might Cost Value" INTEGER 4
+            ^"Initiative" STRING "Init –4"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Kiss of Forgetfulness: 4 points, Init –4, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Causes a mortal to forget her life until she sees a particular object, or class of object, associated with her home. This effect has an Until Duration, and requires physical contact at inception. Despite the name, holding hands while dancing works perfectly well. The vila will sing to the character at some point, because her role says she should do so when using this power."
+    }
+
+    #t5e03141d8f56adb5d45d89 ^"Steal Judgment (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Steal Judgment"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Enthralling Voice"
+            ^"Might Cost" STRING "2 points, Init –2, Mentem"
+            ^"Might Cost Value" INTEGER 2
+            ^"Initiative" STRING "Init –2"
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Steal Judgment: 2 points, Init –2, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Causes a human to believe any lie the faerie tells. Can be resisted with an Intelligence roll against an Ease Factor of 6 for implausible lies."
+    }
+
+    #ta2e0765c5dc57c104545af ^"Grant (Major Virtue) (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Grant (Major Virtue)"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Blessing Dance"
+            ^"Might Cost" STRING "10 points, Init (Qik – 20), Vim"
+            ^"Might Cost Value" INTEGER 10
+            ^"Initiative" STRING "Init (Qik – 20)"
+            ^"Form" STRING "Vim"
+            ^"Printed Stat Line" STRING "Grant (Major Virtue), 10 points, Init (Qik – 20), Vim"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Grants a Major Virtue either permanently, which drains the character’s Might pool permanently, or until a condition is met. This is a Ritual Power and is purchased as a Major Virtue."
+    }
+
+    #t6fd4c493398c4f6a12ac5d ^"Grant (Minor Virtue) (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Grant (Minor Virtue)"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Blessing Dance"
+            ^"Might Cost" STRING "5 points, Init (Qik – 10), Vim"
+            ^"Might Cost Value" INTEGER 5
+            ^"Initiative" STRING "Init (Qik – 10)"
+            ^"Form" STRING "Vim"
+            ^"Printed Stat Line" STRING "Grant (Minor Virtue), 5 points, Init (Qik – 10), Vim"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Grants a Minor Virtue either permanently, which drains the character’s Might pool permanently, or until a condition is met. This is a Ritual Power and is purchased as a Major Virtue."
+    }
+
+    #t92994ba2999dce872a419b ^"Grant Puissance in (Ability) (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Grant Puissance in (Ability)"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Blessing Dance"
+            ^"Might Cost" STRING "2 points, Init –2, Vim"
+            ^"Might Cost Value" INTEGER 2
+            ^"Initiative" STRING "Init –2"
+            ^"Form" STRING "Vim"
+            ^"Printed Stat Line" STRING "Grant Puissance in (Ability), 2 points, Init –2, Vim"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "Bestows the faerie power of pretending to have an Ability. For every added point spent, a group can be granted +1 on all rolls in a certain situation (combat or court, for example), or one character can be given +3 on a particular Total or roll (Soak or Carouse, for example.) This effect has Sun Duration, and the faerie only recovers its Might once the effects are withdrawn."
+    }
+
+    #t09f5f3a7bb9e798f5178bb ^"Craft Magical Trinket (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Craft Magical Trinket"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Cursing Dance"
+            ^"Might Cost" STRING "10/15 points, Init 0, as per Target"
+            ^"Initiative" STRING "Init 0"
+            ^"Printed Stat Line" STRING "Craft Magical Trinket: 10/15 points, Init 0, as per Target"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "The circles where vilas dance must not be stepped upon, or curses fall upon the trespassers. This power, which makes the circle a kind of magic item, costs 10 points if the curse is a Minor Flaw, and 15 points if it is a Major Flaw."
+    }
+
+    #t6beaa6ee425fc0404df7f1 ^"Spirit Away (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Spirit Away"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Spirit Away"
+            ^"Might Cost" STRING "Variable"
+            ^"Printed Stat Line" STRING "Spirit Away: Variable"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This is the power that allows faeries to assist the passage of mortals to their Realm. It is discussed at length in Chapter 2 of *Realms of Power: Faerie. *Troupes not using these rules should just assume the attempt succeeds when it suits the story."
+    }
+
+    #tbbc60ac07b0506dcc14a28 ^"Flight (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Flight"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Cloud or Storm Maiden"
+            ^"Might Cost" STRING "2 points, constant, usually Corpus"
+            ^"Might Cost Value" INTEGER 2
+            ^"Form" STRING "usually Corpus"
+            ^"Printed Stat Line" STRING "Flight, 2 points, constant, usually Corpus"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "The character can fly."
+    }
+
+    #t5eb937eb0248a0cf7d54e8 ^"Storms (Focus power) (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Storms (Focus power)"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Cloud or Storm Maiden"
+            ^"Might Cost" STRING "by Magnitude, Init – (Qik – 5), Auram"
+            ^"Initiative" STRING "Init – (Qik – 5)"
+            ^"Form" STRING "Auram"
+            ^"Printed Stat Line" STRING "Storms (Focus power), by Magnitude, Init – (Qik – 5), Auram"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "The character has a range of weather-related powers, simulating all Hermetic weather spells of level 25 or less. *Guide*, described in the Enthralling Voice section, earlier, but here used to cause people to become lost."
+    }
+
+    #ta76723f390b994c3bab358 ^"Pine Away (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Pine Away"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Cursed Lover"
+            ^"Might Cost" STRING "3 points, Init –3, Corpus"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Corpus"
+            ^"Printed Stat Line" STRING "Pine Away, 3 points, Init –3, Corpus"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "Target gradually loses the will to live. Simulated as a major disease with an Ease Factor of 9 that causes a Light Wound. Faerie Lore or Medicine may be used to treat the effects."
+    }
+
+    #t317d812891799b9b66c599 ^"Shake the Earth (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Shake the Earth"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Huntress"
+            ^"Might Cost" STRING "3 points, Init –3, Terram"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Terram"
+            ^"Printed Stat Line" STRING "Shake the Earth: 3 points, Init –3, Terram"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This power causes the ground for 100 paces to violently shake. Characters fall unless they make a Quickness – Encumbrance stress roll against an Ease Factor of 10, modified as follows: +2 standing still, +2 on solid stone, +0 moving slowly or on earth, –2 running, –6 on a narrow bridge. (As Earth Shock, in **ArM5,** page 56.) Note that the faerie is unaffected by her own power."
+    }
+
+    #t289723ae1b419e583720ca ^"Illusory Home (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Illusory Home"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Temptress"
+            ^"Might Cost" STRING "4 points, Init –4, Imaginem"
+            ^"Might Cost Value" INTEGER 4
+            ^"Initiative" STRING "Init –4"
+            ^"Form" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "Illusory Home, 4 points, Init –4, Imaginem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "Makes a place look, sound, smell, and feel like a suitable place for the faerie’s role."
+    }
+
+    #t5a75ce6916fe4b5dd2a2f1 ^"Kiss of the Mermaid (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Kiss of the Mermaid"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Water Maiden"
+            ^"Might Cost" STRING "3 points, Init –3, Imaginem"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "Kiss of the Mermaid, 3 points, Init –3, Imaginem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "Allows the recipient of the kiss to breathe water until he or she next steps on dry land."
+    }
+
+    #t7cba3137058d1d11664f7f ^"Extend Glamor (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Extend Glamor"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Woodland Maiden"
+            ^"Might Cost" STRING "0 points, constant, Mentem"
+            ^"Might Cost Value" INTEGER 0
+            ^"Form" STRING "Mentem"
+            ^"Printed Stat Line" STRING "Extend Glamor: 0 points, constant, Mentem"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 125
+        }
+        DESCRIPTION "The faerie is aware of all activity in her place of power. The more powerful the faerie, the larger this area can be, and the more vis she can force it to produce each year, as per *Realms of Power: Faerie* page 61. This is a personal power."
+    }
+
+    #t97a32f6814a771b3284af6 ^"Transform Victim Into (animal) (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Transform Victim Into (animal)"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Woodland Maiden"
+            ^"Might Cost" STRING "3 points, Init –3, Animal"
+            ^"Might Cost Value" INTEGER 3
+            ^"Initiative" STRING "Init –3"
+            ^"Form" STRING "Animal"
+            ^"Printed Stat Line" STRING "Transform Victim Into (animal): 3 points, Init –3, Animal"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 125
+        }
+        DESCRIPTION "Turns a character who can hear the voice of the vila into a specified animal for Sun duration. *Transform Victim into (object*): 5 points, Init –5, as per object: Turns character who can hear the vila’s voice into the specified object for Sun Duration. Some vilas instead have a version of this power with Touch Range and Until Duration. This version has the same cost and Initiative as earlier. Note that a faerie with extended glamour has extended Touch."
+    }
+
+    #te4d30fa6c98e2e0ae49de5 ^"Healing (Focus power) (vila power)" DEF {
+        EXTENDS #t84d15c61569668f6f97c5a ^"Faerie Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Healing (Focus power)"
+            ^"Creature" STRING "Vila"
+            ^"Group" STRING "Wise Woman"
+            ^"Might Cost" STRING "by Magnitude, Init – (Qik – 5)"
+            ^"Initiative" STRING "Init – (Qik – 5)"
+            ^"Printed Stat Line" STRING "Healing (Focus power): by Magnitude, Init – (Qik – 5)"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 125
+        }
+        DESCRIPTION "Allows the faerie to simulate any Hermetic healing spell up to level 25."
+    }
+
+    #t8ed819b9ac0b183186f667 ^"Lungs of the Fish (dragon-born power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Lungs of the Fish"
+            ^"Creature" STRING "Dragon-born"
+            ^"Group" STRING "Personal Power"
+            ^"Range, Duration, Target" STRING "R: Per, D: Moon, T: Part"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 108
+        }
+        DESCRIPTION "The character was born to a dragon that lived under a lake and can breathe water by expending a Fatigue Level.\n\n(Base 4, +3 Moon, +1 Part."
+    }
+
+    #t69c751302ccdbf24f63767 ^"Hands of the Fiery Beast (dragon-born power)" DEF {
+        EXTENDS #tL4MotIBVF5lx9HoVrT1yDlM ^"Power"
+        PROPERTIES {
+            ^"Printed Name" STRING "Hands of the Fiery Beast"
+            ^"Creature" STRING "Dragon-born"
+            ^"Group" STRING "Personal Power"
+            ^"Range, Duration, Target" STRING "R: Per, D: Conc, T: Part"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 108
+        }
+        DESCRIPTION "The character can cause his hands to become so hot that they ignite held material and burn those he touches. Visually, the character’s hands glow as brightly as molten iron. It costs the character a Fatigue Level to use this power, which has a Penetration of 10.\n\n(Base 5, +1 Conc, +1 Part. Excess spell levels used for Penetration)"
+    }
+
+}

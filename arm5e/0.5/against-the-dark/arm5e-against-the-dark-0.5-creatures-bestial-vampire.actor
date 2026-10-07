@@ -1,0 +1,72 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_BestialVampire" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Bestial Vampire"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # Bestial Vampire (Chapter Eight: Creatures, p118): one being, its printed stat lines verbatim fields.
+
+    #t95d6b7fc12f0b29e61cc40 ^"Bestial Vampire" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Increased Faerie Might; Feast of the Dead, Hybrid Form, Lesser Powers, Personal Power (Transform into Animal), Tough; Monstrous Appearance; Incognizant, Traditional Ward (sunlight)"
+            ^"Soak" INTEGER 9
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "(Area) Lore 3 (livestock), Athletics 5 (running), Awareness 3 (movement), Brawl 5 (claws), Hunt 5 (human prey), Stealth 5 (woods)"
+            ^"Vis" STRING "Two pawns of Animal, in eyes"
+            ^"Appearance" STRING "An horrific hybrid between wolf and man, this hairy creature stands on two legs, yet has the claws and muzzle of an immense wolf. Huge, human-like eyes stare crazily from its snarling face."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 118
+        }
+        PERSONALITY_TRAITS {
+            "Hungry" +6
+        }
+        COMBAT {
+            "Claws" INIT 1 ATTACK 13 DEFENSE 10 DAMAGE 7
+        }
+        POWERS {
+            #tf5df9f5aa5cfae3658e404 ^"Contort the Boneless Body" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The vampire can squash its boneless body through the tiniest gaps, or hide in a seemingly impossible small space. MuAn 10 (Base 5, +1 Conc) Lesser Power (10 levels)"
+            }
+            #tcf7bb573aa3de1d35d081e ^"Transform into Animal (Against the Dark)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Transform into Animal"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Transforms the faerie into wolf form. MuCo(An) 20 (Base 10, +2 Sun) Personal Power (20 levels, –1 Might cost)"
+            }
+            #tdf3c983e9c00dca1c0a614 ^"Sap the Life" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See earlier for details. PeCo 15 (Base 10, +1 Touch) Lesser Power (15 levels)"
+            }
+        }
+        DESCRIPTION "This vampire has 8 points of Virtues and 5 points of Flaws."
+    }
+
+}

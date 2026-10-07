@@ -1,0 +1,70 @@
+EXTENSION "ARMDef_Against_the_Dark_HedgeTraditions_ZubanAFourEyedDog" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Zuban, a Four-Eyed Dog"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # Zuban, a Four-Eyed Dog (Chapter Nine: Hedge Traditions, p131): one being, its printed stat lines verbatim fields.
+
+    #t2993a7640be4154578119f ^"Zuban, a Four-Eyed Dog" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -2
+            ^"Ferocity Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal, Magical Friend; Ferocity (against vampires), Long-Winded, Sharp Ears; Clumsy, Reckless"
+            ^"Mundane Qualities" STRING "Domesticated, Keen Sense of Smell, Pack Leader, Tireless"
+            ^"Magical Qualities and Inferiorities" STRING "Improved Abilities, Improved Powers, Lesser Power (Dispel the Dark), Minor Virtue (Second Sight); Minor Flaw (Slow Power)."
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Vis" STRING "1 pawn of Intellego, in eyes."
+            ^"Appearance" STRING "A medium-sized dog with an erect tail. His coat is tawny, although his chest and feet are white, and he has a black muzzle. He has two black marks above his eyes. He is always bumping into things, perhaps because his eyes are focused on other things no-one else can see."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 131
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Reckless" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Bite" INIT 4 ATTACK 7 DEFENSE 9 DAMAGE -3
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "keeping watch"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 3 SPECIALTY "track by scent"
+            "Leadership" SCORE 3 SPECIALTY "dogs"
+            "Penetration" SCORE 3 SPECIALTY "Dispel the Dark"
+            "Second Sight" SCORE 2 SPECIALTY "vampires"
+        }
+        POWERS {
+            #ta87f97534fb86b3443e7bb ^"Dispel the Dark" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Any faerie hearing Zuban’s bark loses 5 points of Might, if the effect Penetrates. Because of his Slow Power Flaw, Zuban must bark for two rounds before this power has its effect. PeVi 10 (Base effect, +3 Sound) Lesser Power (10 levels, –1 Might cost, +1 Init, 5 experience in Penetration)."
+            }
+        }
+        DESCRIPTION "Zuban is suitable as a Magical Animal Companion, or perhaps as a grog character. In the latter case, his Cunning should be made into Intelligence."
+    }
+
+}

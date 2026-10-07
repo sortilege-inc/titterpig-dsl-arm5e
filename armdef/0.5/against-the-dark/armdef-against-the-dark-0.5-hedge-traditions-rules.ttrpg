@@ -1,0 +1,258 @@
+EXTENSION "ARMDef_Against_the_Dark_HedgeTraditions_Rules" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Chapter Nine: Hedge Traditions rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t970c945d33ed4c35ba85e7 ^"Storm Calling Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Calling"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Storm Calling Roll" "Communication + Storm Calling + Stress Die vs Ease Factor"
+        }
+    }
+
+    #t9a7ba8c7cd004e5e7806a6 ^"Storm Creation Vis Cost" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Calling"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Storm Creation Vis Cost" "Depends on Storm Size"
+        }
+    }
+
+    #t6a3487e3d2a0d21a2feee7 ^"Storm Riding Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Riding"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 129
+        }
+        FORMULAS {
+            "Storm Riding Roll" "Perception + Storm Riding + Stress Die vs Ease Factor"
+        }
+    }
+
+    #td2ebd8b82b1bbef227e766 ^"Storm Fighting Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Fighting"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 129
+        }
+        FORMULAS {
+            "Storm Fighting Roll" "Strength + Storm Fighting + Stress Die vs Ease Factor"
+        }
+    }
+
+    #t39a525ad6cdf503a1cbd19 ^"Ice Harvesting Formula" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Formula Name Source" STRING "editorial: the book prints no label for this formula; named for the section it stands in"
+            ^"Rules Section" STRING "Ice Harvesting"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 130
+        }
+        FORMULAS {
+            "Formula" "“Ice” Harvesting: (Intelligence + Organization Lore: Storm Wizard + Magic Aura) / 3 (round up) pawns of Auram vis per season"
+        }
+    }
+
+    #tdd31b1f1da2a674606c837 ^"SCRY TOTAL" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Forging the Initial Connection"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 134
+        }
+        FORMULAS {
+            "SCRY TOTAL" "Perception + Scry + (Foe) + Aura bonus + stress die"
+        }
+    }
+
+    #t861743a6c408a1987b7cd6 ^"Sense a Foe" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING " 6 + (foe’s Might/5)"
+            ^"Rules Section" STRING "Using the Scrying Connection"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Sense a Foe" "Stamina + Concentration + stress die"
+        }
+    }
+
+    #tdf3eaccbf1a0bfb8e9a3d4 ^"Physical Ban Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Creating a Physical Ban"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Physical Ban Total" "Presence + Ban + (Foe) + Aura modifier + stress die"
+        }
+    }
+
+    #t9fc7b62048520d75794c54 ^"Level (Creating a Physical Ban)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Level"
+            ^"Rules Section" STRING "Creating a Physical Ban"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Level" "5, or 15 against a mortal Foe"
+        }
+    }
+
+    #ta22b074343d342523cede9 ^"Physical Ban Strength" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Creating a Physical Ban"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 135
+        }
+        FORMULAS {
+            "Physical Ban Strength" "Physical Ban Total – Level"
+        }
+    }
+
+    #t7f298e27771424e2d1bb9a ^"Supernatural Ban Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Creating a Supernatural Ban"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 136
+        }
+        FORMULAS {
+            "Supernatural Ban Total" "Intelligence + Ban + (Foe) + Aura modifier + stress die"
+        }
+    }
+
+
+    #ta5e7d349bfee2ba21916ce ^"Weakening Ban Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Creating a Weakening Ban"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 136
+        }
+        FORMULAS {
+            "Weakening Ban Total" "Intelligence + Ban + (Foe) + Aura bonus + stress die"
+        }
+    }
+
+    #tfa07b9bbffa105bd4a53a9 ^"Level (Creating a Weakening Ban)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Level"
+            ^"Rules Section" STRING "Creating a Weakening Ban"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 136
+        }
+        FORMULAS {
+            "Level" "The number of Might subtracted by the Ban"
+        }
+    }
+
+    #tb8dbd7048add16f1ea7761 ^"Slay Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Making the Slaying Weapon"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 136
+        }
+        FORMULAS {
+            "Slay Total" "Dexterity + Slay + (Foe) + Aura + stress die"
+        }
+    }
+
+    #td124cd8e62a5512568b59b ^"Level (Making the Slaying Weapon)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Level"
+            ^"Rules Section" STRING "Making the Slaying Weapon"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 136
+        }
+        FORMULAS {
+            "Level" "25 or less (see later), or 35 or less for mortal Foes."
+        }
+    }
+
+    #t766b97202270deb7d1deda ^"Penetration (Against the Dark)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration"
+            ^"Rules Section" STRING "Storm Wizard Magic Game Mechanics"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Penetration" "Storm Wizard Effect Roll – Ease Factor + Penetration Bonus"
+        }
+    }
+
+    #t3c30693f1fae96860bf38b ^"Magnitude" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Wizard Magic Game Mechanics"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Magnitude" "Storm Wizard Supernatural Ability Score"
+        }
+    }
+
+
+    #td852ce48d1e395d0d15d14 ^"Storm Trance Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Wizard Magic Game Mechanics"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Storm Trance Roll" "Strength + Stress Die"
+        }
+    }
+
+    #t120b44c56059408063bd43 ^"Storm Trance Ease Factor" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Storm Wizard Magic Game Mechanics"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 128
+        }
+        FORMULAS {
+            "Storm Trance Ease Factor" "3 + Warping Score"
+        }
+    }
+
+    #teb12debeb7bdf90c956bdb ^"PENETRATION TOTAL" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Penetration and the Hunters’ Arts"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 134
+        }
+        FORMULAS {
+            "PENETRATION TOTAL" "Art Total + Penetration Bonus – Level"
+        }
+    }
+
+}

@@ -1,0 +1,185 @@
+EXTENSION "ArM5_Against_the_Dark_HiddenFortresses_Devices" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Chapter Seven: Networks of Hidden Fortresses devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #te4792d2e32e469251798fe ^"Disease Effect" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 33
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1 use per day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 15, +1 Touch, +3 Structure; +3 Environmental Trigger)"
+            ^"Printed Effect Line" STRING "PeCo 33 Pen +0, 1 use per day R: Touch, D: Momentary, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This effect activates every dawn and inflicts the ague upon any character in the Room. This has no effect on a character who already has the ague, but if a character is cured or recovers, the disease he will be re-infected if the staff affects him again. The ague causes a Heavy Disease Wound."
+    }
+
+    #tdaf7e505e2f719b5dc003b ^"Chest of Good Food" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 24
+            ^"Requisite" STRING "Herbam"
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Base 2, +1 Touch, +2 Sun, +2 Group, +1 Herbam Requisite; +4 Constant Effect)"
+            ^"Printed Effect Line" STRING "CrAn(He) 24 Pen +0, constant effect R: Touch, D: Sun, T: Group"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This enchanted item is a large chest carved with scenes of feasting. Food made from animal or plant products, when placed in the chest, is preserved while it remains in the chest. The food will not putrefy, rot, or decay in any way. When it is full, the chest contains one man-month worth of food.\n\nIt is expected that characters who eat from the zenodochium’s supplies will restock the chest before leaving."
+    }
+
+    #t05499ca2e49c66c7605b17 ^"Vermin Ward (Against the Dark)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Vermin Ward"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 2, +1 Touch, +2 Sun, +3 Structure; +4 Constant Effect)"
+            ^"Printed Effect Line" STRING "ReAn 24 Pen +0, constant effect R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This enchanted item, a carved statue of a mutilated rat, keeps all animals without Magic Resistance out of the Structure. This means that an unoccupied zenodochium will not be ruined by marauding animals."
+    }
+
+    #t7fe29d4a99ef2c83ce86b4 ^"Wound Recovery Effect" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Hippocratic Staff"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 34
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +3 Structure; +4 Constant Effect)"
+            ^"Printed Effect Line" STRING "CrCo 34 Pen +0, Constant Effect R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This effect gives characters within the Structure a +9 bonus to Wound Recovery Rolls."
+    }
+
+    #teb23285aa7f5cee754c6be ^"Disease Recovery Effect" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Hippocratic Staff"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 34
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +3 Structure; +4 Constant Effect)"
+            ^"Printed Effect Line" STRING "CrCo 34 Pen +0, Constant Effect R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This effect gives characters within the Structure a +9 bonus to Disease Recovery Rolls."
+    }
+
+    #t2d9f7f86dd0360cf265456 ^"Ankh of Moving Forward" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 60
+            ^"Penetration" STRING "+12"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Base 35, +1 Touch, +2 Sun; +4 Constant Effect; +6 Penetration)"
+            ^"Printed Effect Line" STRING "CrCo 60 Pen +12, constant effect R: Touch, D: Sun, T: Individual"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "When this silver ankh is placed around the neck of a character, all of her wounds are instantly healed and she no longer suffers any Wound Penalties.\n\nThis enchanted item does not permanently heal the character; it actually suspends her natural healing, and when the ankh is removed all her wounds return. The intended use is that grogs may place this ankh around the neck of their grievously injured mistress, who can then cast spells and direct the grogs as to the best course of further action without penalty.\n\nNote that, as this item has low Penetration, a typical maga needs to suppress her Magic Resistance when she puts this item on, in order to be affected by it. Recall that if a maga is unconscious, then her Parma Magica will automatically cease at the next sunrise or sunset when she does not renew the ritual, leaving her protected only by her Corpus Form. The item’s Penetration is often enough to defeat that Magic Resistance, but not always."
+    }
+
+    #t1384ce880aba8389b1305d ^"Bowl of the Honest Traveler" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 29
+            ^"Penetration" STRING "0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Sun +3 Structure; +4 Constant Effect)"
+            ^"Printed Effect Line" STRING "ReMe 29 Pen 0, constant effect. R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "This enchanted pauper’s bowl, resting on a shelf in the zenodochium, inclines all who are within the structure to scrupulous honesty. This is usually enough to prevent opportunistic thieving from the zenodochium, in much the same way that The Shrouded Glen (ArM5, page 152) prevents casual discovery of a location. If a character is determined to steal from the zenodochium, make a Personality Roll (using a suitable Personality trait) against an Ease Factor of 12. If the Personality Roll is failed, the character’s conscience prevents him from stealing from the zenodochium.\n\nObviously, as this item has no Penetration, it does not prevent magi and other characters with Magic Resistance from stealing from zenodochia."
+    }
+
+    #t3c6e3f831ea6df13d41e25 ^"Ward Against the Infernal Agents of Disease" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 35
+            ^"Penetration" STRING "+12"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Sun +3 Structure; +4 Constant Effect, +6 Penetration 12)"
+            ^"Printed Effect Line" STRING "ReVi 35 Pen +12, constant effect R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "This enchanted cross is hung above the entrance to the zenodochium. It prevents minor disease demons (and other types of demons, too) who have a Might of 10 or less from entering the zenodochium."
+    }
+
+    #t6856e9c19f09d862eedfa3 ^"Ward Against Mad Dreams" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 35
+            ^"Penetration" STRING "+12"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Sun +3 Structure; +4 Constant Effect, +6 Penetration 12)"
+            ^"Printed Effect Line" STRING "ReVi 35 Pen +12, constant effect R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "This enchanted iron horseshoe is hung above the entrance to the zenodochium. It prevents faeries of Might 10 or less from entering the zenodochium."
+    }
+
+}

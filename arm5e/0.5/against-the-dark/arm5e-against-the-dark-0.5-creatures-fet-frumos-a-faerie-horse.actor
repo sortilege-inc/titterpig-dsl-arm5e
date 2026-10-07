@@ -1,0 +1,49 @@
+EXTENSION "ArM5_Against_the_Dark_Creatures_FetFrumosAFaerieHorse" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Fet-Frumos, a Faerie Horse"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Against_the_Dark_Core_Ext"
+
+    # Fet-Frumos, a Faerie Horse (Chapter Eight: Creatures, p113): one being, its printed stat lines verbatim fields.
+
+    #tac7c06a372d45c86b67e15 ^"Fet-Frumos, a Faerie Horse" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 2
+            ^"Virtues and Flaws" STRING "Positive Folktales; Highly Cognizant, Huge; Great Strength, Increased Characteristics (x2), Faerie Speech, Focus Power"
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Pretenses" STRING "Athletics 6 (flying), Brawl 5 (kick), Faerie Lore 4 (giant kin), (Local Area) Lore 4 (faerie homes)"
+            ^"Powers" STRING "Flight, 2 points, constant, Auram: The faerie horse can fly, as described in Realms of Power: Faerie, page 62."
+            ^"Equipment" STRING "The faerie horse is equipped with appropriate tack and harness."
+            ^"Vis" STRING "Two pawns of Auram vis, one in each front hoof."
+            ^"Appearance" STRING "Fet-Frumos has two modes of appearance. While captured, he looks like an old, dirty, rundown nag, swaybacked and bowlegged. Once rescued and when serving a hero, Fet-Frumos looks like a healthy, young horse, with a coat so well-groomed that it actually shines. Although smaller than a warhorse, it can easily transport an armored knight."
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 113
+        }
+        PERSONALITY_TRAITS {
+            "Patient" +3
+            "Wise" +2
+            "Compassionate to Humans" +1
+        }
+        COMBAT {
+            "Kick" INIT 0 ATTACK 9 DEFENSE 4 DAMAGE 5
+        }
+    }
+
+}

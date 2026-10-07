@@ -1,0 +1,58 @@
+EXTENSION "ARMDef_Against_the_Dark_PeoplesOfTheBorder_RealmEffects" {
+    NAME "Ars Magica Fifth Edition, Against the Dark - Chapter Six: Peoples of the Transylvanian Border realm effects"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Against_the_Dark_Core_Ext"
+
+    # The chapter's realm effects, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t9beee004e38f979657cd04 ^"New Blessing Guideline" DEF {
+        EXTENDS #t5807b76ad03348fa3cc70f ^"Holy Guideline"
+        PROPERTIES {
+            ^"Power" STRING "Blessing" FIXED
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 83
+        }
+        GUIDELINES {
+            "Level 15" "Extend the beneficial effects of a relic over a standard Group of men. Size modifiers may be added to extend the effect further. The target of the spell is the relic, not the men affected by the relic’s powers."
+        }
+    }
+
+    #td3c1d77e1ce7f2506b6983 ^"He stands for the injustice of the people; Christian soldiers in their ranks" DEF {
+        EXTENDS #tdde7bcb30a02cb13eb5677 ^"Holy Effect"
+        PROPERTIES {
+            ^"Printed Name" STRING "He stands for the injustice of the people; Christian / SOLDIERS IN THEIR RANKS"
+            ^"Method" STRING "Invocation"
+            ^"Power" STRING "Blessing"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sabbath"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "Invocation, Blessing 30 R: Touch, D: Sabbath, T: Ind"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 83
+        }
+        DESCRIPTION "Up to ten men are granted the Magic Resistance offered by a single relic; this does not stack with Magic Resistance granted by other relics, but does stack with Magic Resistance offered by other Divine sources. Furthermore, any demon attacking any of the affected group is affected by the relic’s Scourging of Infernal power (Realms of Power: The Divine, page 45) — demons cannot harm the protected men if their Infernal Might is less than the Divine Might of the relic, and even if it exceeds the relic’s Might, they suffer damage equal to its Divine Might every round they continue to attack. The affected men must remain as a coherent group to be continually affected for the entire duration. Only the wielder of the relic can use its Faith points as Confidence points.\n\n(Base 15, +1 Touch, +2 Sabbath)"
+    }
+
+    #t1f7b993b5f26b0fd8e5900 ^"Bite Deep and Drink" DEF {
+        EXTENDS #t94643c11773ea1436be1fb ^"Maleficium"
+        PROPERTIES {
+            ^"Part Of" STRING "The Swords of the Teutonic Order"
+            ^"Penetration" STRING "0"
+            ^"Uses" STRING "3/day"
+            ^"Method" STRING "Incantation"
+            ^"Power" STRING "Consumption"
+            ^"Level" INTEGER 37
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "Incantation, Consumption 37 R: Touch, D: Mom, T: Ind Pen 0, 3/day"
+            ^"Source" STRING "Against the Dark"
+            ^"Page" INTEGER 84
+        }
+        DESCRIPTION "Upon successfully striking a target with the sword, instead of inflicting normal damage, the wielder of the sword can instead elect to inflict an Incapacitating wound. This simultaneously heals the wielder’s most serious wound — up to and including an Incapacitating wound. This effect has to Penetrate any Magic Resistance.\n\n(Base 30, +1 Touch; +2 3/day)"
+    }
+
+}

@@ -1,0 +1,103 @@
+EXTENSION "ARMDef_The_Sundered_Eagle_TheIslands_TheNymphsArgeOpisAndLoxo" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - The Nymphs Arge, Opis, and Loxo"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Sundered_Eagle_Core_Ext"
+
+    # The Nymphs Arge, Opis, and Loxo (Chapter Six: The Islands, p75): one being, its printed stat lines verbatim fields.
+
+    #t5d8c4a56b42551e20dd35b ^"The Nymphs Arge, Opis, and Loxo" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tedaf08b5dafedeae3f4e6b ^"The Islands"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Corpus"
+            ^"Season" STRING "Winter"
+            ^"Characteristics" STRING "Int +1, Per +2, Pre+2, Com –1, Str +1, Sta +2, Dex +6, Qik +3"
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "3 (8)"
+            ^"Virtues and Flaws" STRING "Daimon, Magic Spirit; Great Dexterity x 2, Improved Characteristics x 2, Puissant Bows, Self-Confident; Driven, Fury, Magical Air (free)"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Donning the Corporeal Veil), Greater Power (Strike of the Cornered Game), Greater Power (varies), Improved Dexterity, Major Virtue (Essential Virtue); Improved Attack, Improved Confidence, Improved Damage x2, Improved Defense, Improved Initiative, Mentem Resistance, Minor Virtue (Keen Vision), Minor Virtue (Improved Characteristics) x4, Minor Virtue (Inoffensive to Animals), Minor Virtue (Tethered Magic), Minor Virtue (Voice of the Island) Arge knows Outstanding Distance, Opis knows Unequaled Aim, Loxo knows Peerless Trajectory. From Houses of Hermes: True Lineages, page 107; this allows the nymphs to use their powers on their arrows, which then deliver their effects."
+            ^"Reputations" LIST ["Guardian of the Shrines 3 (Local)"]
+            ^"Soak" INTEGER 5
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Short bow, full heavy leather armor"
+            ^"Vis" STRING "6 Rego, in bows."
+            ^"Appearance" STRING "Three stern-looking maidens with hair drawn back into severe pony tails. They wear leather armor and each carry a bow of ivory. They radiate a sense of displeasure. The three nymphs are difficult to tell apart."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 75
+        }
+        PERSONALITY_TRAITS {
+            "Archer" +6
+            "Wrathful" +3
+            "Dutybound" +3
+        }
+        COMBAT {
+            "Short Bow" INIT 5 ATTACK 25 DAMAGE 14
+            " Dodge" INIT 3 DEFENSE 11
+        }
+        ABILITIES {
+            "Classical Greek" SCORE 4 SPECIALTY "sacred hymns"
+            "Athletics" SCORE 5 SPECIALTY "running"
+            "Awareness" SCORE 5 SPECIALTY "vandals"
+            "Bows" SCORE 12 BONUS 2 SPECIALTY "short bow"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Delos Lore" SCORE 5 SPECIALTY "birds"
+            "Hunt" SCORE 6 SPECIALTY "quail spirits"
+            "Hyperborean" SCORE 5 SPECIALTY "warriors"
+            "Hyperborean Lore" SCORE 3 SPECIALTY "archers"
+            "Leadership" SCORE 4 SPECIALTY "intimidation"
+            "Magic Lore" SCORE 4 SPECIALTY "wizards"
+            "Mentem Resistance" SCORE 5 SPECIALTY "deception"
+            "Penetration" SCORE 4 SPECIALTY "Strike of the Cornered Game power"
+            "Swim" SCORE 4 SPECIALTY "coastal waters"
+        }
+        POWERS {
+            #t4aad56aaa77fab261ea943 ^"Donning the Corporeal Veil (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The nymphs can form a body with the statistics presented here. They can dissolve this body at will, but if it is slain, it contains the vis listed below. This does not slay the spirit itself, merely its current Aspect."
+            }
+            #td72ddb60f71bdc39944fb4 ^"Strike of the Cornered Game" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The nymph can paralyze any individual struck by one of her arrows. The paralysis lasts until the nymph decides to cancel the power, or until the sun crosses the horizon. ReCo 25 (base 5, +1 Touch, +2 Sun, +1 canceled at will) Greater Power (25 Levels, –1 Might cost, +4 Init)"
+            }
+            #t029bdb4cd0bb398cb08622 ^"Outstanding Distance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "(Arge only) Arge can shoot an arrow that can hit any target up to seven leagues away. She must hit the target with a normal missile Attack Total, but ignores range increment penalties. She must be capable of seeing her target to strike them, and so there cannot be any intervening obstacles. ReHe 25 (base 3, +1 Touch, +4 magnitudes for seven leagues) Greater Power (25 levels, +5 Init)"
+            }
+            #t88841f7be54fa730ac2ab6 ^"Unequaled Aim" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "(Opis only) Opis can shoot an arrow that, if it hits, strikes a part of the body designated by her. Damage from the arrow is delivered as normal, and the body part is also left unusable. The target temporarily acquires a Minor Flaw such as Missing Eye, Missing Hand, or Lame; this Flaw disappears once the wound that inflicted it has healed. If the hand is struck then the target drops whatever he was holding in that hand. PeCo 15 (base 5, +1 Touch, +1 Part) Greater Power (15 levels, +7 Init)"
+            }
+            #tc26a8b986cedb3b514c322 ^"Peerless Trajectory" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "(Loxo only) Loxo can shoot an arrow that flies around corners, over obstacles, and behind shields. Cover is no impediment to such an arrow, if the nymph knows the location of her target, she can still make a normal missile Attack roll against it. Range penalties apply according to the actual path of the arrow. The target’s Defense Total must be calculated excluding a shield, as Loxo’s arrow strikes around even these obstacles. ReHe 5 (base 3, +1 Touch, +1 complexity) Greater Power (5 Levels, –1 Might cost, +8 Init)"
+            }
+        }
+        DESCRIPTION "These nymphs are actually Daimons, a type of spirit that resides in the Magic Realm. The guardians of Delos are Aspects of the Daimons, so if they are slain they can simply reform a new Aspect a day later. (See *Realms of Power: Magic,* page 102, for more details). They typically dwell in the shrines where the Magical aura is highest, to preserve their Might from Acclimation."
+    }
+
+}

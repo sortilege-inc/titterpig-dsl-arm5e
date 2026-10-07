@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_The_Sundered_Eagle_FaerieLandscape_CharacterGuideStoicheion" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - Character Guide: Stoicheion"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Sundered_Eagle_Core_Ext"
+
+    # Character Guide: Stoicheion (Chapter Ten: The Faerie Landscape, p129): one being, its printed stat lines verbatim fields.
+
+    #te0fd89a59a767353bba38f ^"Character Guide: Stoicheion" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Faerie Might" STRING "10 (Animal); 20 in its village"
+            ^"Characteristics" STRING "Int 0, Per +1, Pre +2, Com –1, Str +1/+2, Sta +2/+3, Dex 0/+3, Qik 0/+2 in physical form"
+            ^"Size" INTEGER 2
+            ^"Virtues and Flaws" STRING "Faerie Beast; Focus Power (Guardian of the Bounds), Ritual Power (Strike Dumb); Faerie Sight, Feast of the Fae, Improved Powers, Increased Faerie Might, Lesser Power (Loosely Material), Personal Power (Extended Glamour), Reputation as Confidence, Time or Place of Power; Narrowly Cognizant; Overconfident, Intangible Flesh; Traditional Ward (varies)"
+            ^"Personality Trait" STRING "Fiercely Protective +6, Brave +3, Loyal +3."
+            ^"Reputation" STRING "Defender 4 (Local)"
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Powers" STRING "Extended Glamour, 0 points, constant, Mentem: Grants awareness of everything that happens within the bounds of a specific domain chosen by the faerie. In essence, the faerie is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. A stoicheion with a Might of 10 can extend its glamour to the size of a room, while more powerful faeries can affect a greater area. The area controlled by the faerie can produce a yearly harvest of (Might/10) pawns of Animal vis, which manifests as physical objects within the controlled region. Removing this vis does not harm the faerie if it is bargained for. Guardian of the Bounds, 1 – 5 points, Init –5, varies: The spirit protects its chosen community by using this power. By completing a circuit around the village and inscribing a circle, the faerie creates a ward designed to exclude a particular type of supernatural threat. This operates exactly like a Ward against Faeries of the Water, but the stoicheion can choose which Realm and which Form is affected each time it uses the power. The power costs 1 Might point per 5 levels (or fraction) of the equivalent spell. Common wards include a Ward against Faeries of the Wood, to prevent crop-damaging faeries; and Ward against Demons of the Mind, to exclude the evil eye. These wards typically are of low level to ensure that they have sufficient Penetration against their foe; a stoicheion with a Might of 20 (in its village, for example) can create a Level 10 ward with a Penetration of 15, at the cost of 2 Might points. Loosely Material, 3 points, Init –10, Animal: The stoicheion can take on glamoured flesh and a material form. It takes one round to take this form. The creature is Size +2, and has the physical statistics marked with an asterisk. It is only in this form that it can physically attack. The faerie may maintain the material body indefinitely. If slain, the body contains the vis listed below. When the faerie returns to immateriality, which takes an uninterrupted combat round, it regains the Might points spent to activate this power. If it then takes on matter again, it does not carry over the wounds caused to its previous body. Strike Dumb, 5 points, Init – 20, Vim: Imposes the Mute Flaw upon a victim. The faerie can decide to bestow the Flaw permanently or temporarily. If permanent, the power costs points from the creature’s Might score as well as Might pool. If temporary, the Might points spent on this power are only recovered when its effects are withdrawn. This power has been affected by the Improved Powers Virtue"
+            ^"Vis" STRING "3 pawns of Animal vis, in bones"
+            ^"Appearance" STRING "Usually immaterial, those with Second Sight might see the stoicheion as an oversized animal of its chosen form."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 129
+        }
+        COMBAT {
+            "(pick one weapon appropriate to animal shape) Teeth" INIT 2 ATTACK 14 DEFENSE 10 DAMAGE 5
+            " Claws" INIT 2 ATTACK 15 DEFENSE 12 DAMAGE 6
+            " Horns" INIT 4 ATTACK 13 DEFENSE 11 DAMAGE 5
+        }
+        ABILITIES {
+            "Area Lore" SCORE 4 SPECIALTY "local spirits"
+            "Awareness" SCORE 3 SPECIALTY "faeries"
+            "Brawl" SCORE 6 SPECIALTY "varies by animal"
+            "Romaic Greek" SCORE 4 SPECIALTY "those whom it protects"
+            "Faerie Lore" SCORE 2 SPECIALTY "weaknesses of enemies"
+            "Hunt" SCORE 3 SPECIALTY "enemies"
+            "Penetration" SCORE 4 SPECIALTY "Guardian of the Bounds power"
+        }
+        DESCRIPTION "This stoicheion is not intended to be a player character unless taken as a maguslevel character, since it has 15 points of Virtues and 7 points of Flaws. However, it suitable as an ally of a covenant, perhaps even its guardian (bought as a covenant Boon). It can take up to 3 more points of Flaws, each point granting 2 more Virtue points. In the faerie’s chosen locality, its Faerie Might is increased to 20 and its protective power is enhanced. The most common taboo (i.e. Traditional Ward) of stoicheia is that they are bound to the land or people they are sworn to protect, and perish if they leave. If a stoicheion is slain it will eventually be reborn in a modified form, in the manner of faeries."
+    }
+
+}

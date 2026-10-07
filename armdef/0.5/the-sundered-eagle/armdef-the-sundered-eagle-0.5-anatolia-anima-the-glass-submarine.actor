@@ -1,0 +1,53 @@
+EXTENSION "ARMDef_The_Sundered_Eagle_Anatolia_AnimaTheGlassSubmarine" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - Anima: The Glass Submarine"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Sundered_Eagle_Core_Ext"
+
+    # Anima: The Glass Submarine (Chapter Eight: Anatolia, p115): one being, its printed stat lines verbatim fields.
+
+    #t4dd290103e0d22bbc806de ^"Anima: The Glass Submarine" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t6011936012e27a98d19946 ^"Anatolia"]
+            ^"Covenant" LIST [#t971f29fc8b8b7dfe6c00c7 ^"Moero’s Garden"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 12
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER 7
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER -3
+            }
+            ^"Size" INTEGER 4
+            ^"Virtues and Flaws" STRING "Lightning Reflexes; Poor Eyesight"
+            ^"Soak" INTEGER 8
+            ^"Wound Penalties" STRING "None, see below."
+            ^"Powers" STRING "Supple as a Fish, 0 points, Init +0, Terram. This instilled power allows the anima to swim as naturally as a fish. ReTe 34: base 3, +2 metal, +3 Size, +2 Sun, +1 level for two uses per day, +3 levels for environmental trigger sunrise/sunset, +1 complexity. Transparent Skin, 0 points, Init +0, Terram. This effect changes the opacity of the anima’s skin so that it is nearly transparent, making it difficult to spot and allowing interior riders to clearly see through it. MuTe 24: base 1, +2 metal, +3 Size adjustment, +2 Sun, +1 level for two uses per day, +3 levels for environmental trigger sunrise/sunset. Habitable Bowels, 0 points, Init +0, Auram. This effect produces a slight breeze within the anima’s interior, providing air for the riders and making the experience slightly more comfortable. CrAu 19: base 1, +1 Touch, +3 Structure, +2 Sun, +1 level for two uses per day, +3 levels for environmental trigger sunrise/sunset."
+            ^"Appearance" STRING "The anima looks like a huge dolphin made out of iron."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 115
+        }
+        PERSONALITY_TRAITS {
+            "Playful" +3
+            "Loyal" +1
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "food"
+            "Brawl" SCORE 2 SPECIALTY "dodging"
+            "Survival" SCORE 3 SPECIALTY "Aegean Sea"
+            "Swim" SCORE 5 SPECIALTY "Bay of Smyrna"
+        }
+        DESCRIPTION "Because the glass submarine is an awakened simulacrum, it has Characteristics and Abilities similar to a regular dolphin. It has powers because they were instilled in it, not because of its essential magical nature like magic creatures. Consequently, it does not need to spend Might points to activate its powers.\n\nThe anima is an ancient construction, built before Alexander discovered it. The builder used 9 of the12 available slots for vis, meaning that it could receive more enchantments from a trained mechanician. If investigated, it will provide three Insights for hermetic integration for each investigator.\n\nThe anima can be boarded through a large, water-tight hatch on its back, approximately in the location of its blowhole.\n\nThere is room for five Size 0 people inside, although filling it with five will make it quite crowded. Larger characters will fit, but will have a difficult time climbing through the hatch.\n\nBecause the anima is made out of iron, it does not have Wound Penalties like living creatures, but Damage Levels like commercial products (see *City & Guild*, page 77). Whenever an attack does damage greater than the anima’s Soak, it must make a stress check to avoid losing a Damage Level. Roll the anima’s Stamina (+1) plus a stress die against an Ease Factor equal to the excess damage. If the roll fails, the anima loses a Damage Level; if the roll botches, it loses additional Damage Levels equal to the number of botches. The anima has 15 Damage Levels total. It suffers no penalties as it accrues damage (loses Damage Levels), but when the last one is lost it bursts asunder and is destroyed.\n\nRepairing the submarine is difficult, and can only be done by someone with a score in either Mechanica or Automata. If a character has one of these Abilities, she can repair a number of Damage Levels equal to her score in a season. Catella does not yet have a score in Mechanica, but a handful of Verditius magi throughout the Tribunal are skilled in Automata."
+    }
+
+}

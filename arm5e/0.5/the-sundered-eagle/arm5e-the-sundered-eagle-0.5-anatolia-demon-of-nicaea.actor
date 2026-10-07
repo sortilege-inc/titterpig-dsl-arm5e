@@ -1,0 +1,59 @@
+EXTENSION "ArM5_The_Sundered_Eagle_Anatolia_DemonOfNicaea" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - Demon of Nicaea"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_The_Sundered_Eagle_Core_Ext"
+
+    # Demon of Nicaea (Chapter Eight: Anatolia, p105): one being, its printed stat lines verbatim fields.
+
+    #t8867cabcf047e832d8c749 ^"Demon of Nicaea" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t6011936012e27a98d19946 ^"Anatolia"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Furies"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Berserk, Tough"
+            ^"Reputations" LIST ["Harrower of Saints 2 (Infernal)"]
+            ^"Hierarchy" INTEGER 1
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Powers" STRING "Coagulation, 2 points, Init –1, Corpus. Described in Realms of Power: The Infernal, page 31 Endurance of the Enraged, 0 points, Init 0, Corpus. Described in Realms of Power: The Infernal, page 42. Obsession, 1 – 3 points, Init –5, Vim: Wrath. Described in Realms of Power: The Infernal, page 31"
+            ^"Weakness" STRING "Abhorrent Circumstance: sunny day"
+            ^"Vis" STRING "4 pawns of Animal vis, one in each paw"
+            ^"Appearance" STRING "The demon looks like a large, savage dog with wild hair, slavering from its snarling mouth. It always appears to be stalking prey, moving low to the ground with its ears back and growling. Its bright red eyes fill its victims with dread."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 105
+        }
+        PERSONALITY_TRAITS {
+            "Wrathful" +6
+            "Savage" +4
+        }
+        COMBAT {
+            "Teeth" INIT 2 ATTACK 12 DEFENSE 9 DAMAGE 4
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "pursuit"
+            "Awareness" SCORE 3 SPECIALTY "stragglers"
+            "Brawl" SCORE 5 SPECIALTY "teeth"
+            "Leadership" SCORE 6 SPECIALTY "demons of Nicaea"
+        }
+        DESCRIPTION "The demons of Nicaea are only interested in murder and slaughter, and while they can talk, they rarely do so. Their favorite tactic is to creep up on a lone victim and rend him to bits. They can fight as a trained group, making them a formidable opponent. While full of ferocity, they are not fearless, and will flee from a superior group or strong individual."
+    }
+
+}

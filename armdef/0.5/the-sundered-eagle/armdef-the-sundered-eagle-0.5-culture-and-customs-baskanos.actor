@@ -1,0 +1,71 @@
+EXTENSION "ARMDef_The_Sundered_Eagle_CultureAndCustoms_Baskanos" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - Baskanos"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Sundered_Eagle_Core_Ext"
+
+    # Baskanos (Chapter Four: Culture & Customs, p47): one being, its printed stat lines verbatim fields.
+
+    #tbccb93b13d2de9b893a14e ^"Baskanos" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -7
+            ^"Virtues and Flaws" STRING "Hex; Sharp Ears; Restriction (targets of envy); Weak-Willed"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Weakness" STRING "Abhorrent Material (amulet against the evil eye)"
+            ^"Vis" STRING "1 pawn of Vim vis, in eye."
+            ^"Appearance" STRING "a tiny wizened man no larger than a rat, with a lidless staring eye instead of a head."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 47
+        }
+        PERSONALITY_TRAITS {
+            "Envious" +6
+            "Selfish" +5
+            "Petulant" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 4 SPECIALTY "compliments"
+            "Folk Ken" SCORE 4 SPECIALTY "envy"
+            "Hex" SCORE 10 SPECIALTY "destroy prosperity"
+            "Penetration" SCORE 5 SPECIALTY "Hex"
+        }
+        POWERS {
+            #t1896e096f6c112178e2959 ^"Coagulation (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "the demon can obtain a material form, which it may dissolve at will."
+            }
+            #t81c059a5250e642bf62113 ^"Obsession (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1–3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can impose the Obsession Trait of Envy. See *Realms of Power: The Infernal*, pages 31–32, for more details"
+            }
+        }
+        DESCRIPTION "Baskanoi are members of the Order of Tempters (*Realms of Power: The Infernal,* page 43), of a type of demon called kakodaemones in Greek. They throng in the air like flies, looking for an opportunity to breed resentment through the evil eye. They use their Hex Ability to curse their victims, although they are restricted in only affecting those who have received a compliment or been the target of envy. They often use their Obsession power to create targets for their malice."
+    }
+
+}

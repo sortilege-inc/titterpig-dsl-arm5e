@@ -1,0 +1,72 @@
+EXTENSION "ARMDef_The_Sundered_Eagle_MagicalLandscape_CharacterGuideASibyl" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - Character Guide: A Sibyl"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Sundered_Eagle_Core_Ext"
+
+    # Character Guide: A Sibyl (Chapter Nine: The Magical Landscape, p121): one being, its printed stat lines verbatim fields.
+
+    #t84e024eefa2f0f3d3aa412 ^"Character Guide: A Sibyl" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "25+ (Mentem)"
+            ^"Season" STRING "Winter"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 6
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "n/a (varies)"
+            ^"Confidence Score" STRING "2 (6)"
+            ^"Virtues and Flaws" STRING "Magic Human, Magical Master; Famous, Self Confident; Meddler; Ability Block (Martial Abilities), Visions"
+            ^"Magical Qualities and Inferiorities" STRING "Divination & Augury (see The Mysteries Revised Edition, Chapter 7), Improved Perception, Natural Appearance; Improved Abilities x 3, Mentem Resistance, Minor Virtue (additional Divination methods) x5, Minor Virtue (Great Intelligence) x2, Minor Virtue (Great Perception) x2, Minor Virtue (Improved Characteristics), Minor Virtue (Premonitions), Minor Virtue (Puissant Divination)"
+            ^"Reputations" LIST ["Prophetess 4 (Local)"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "5 pawns of Mentem vis, in tools of divination"
+            ^"Appearance" STRING "Each sibyl appears as a woman native to the area; some appear to be young maidens, whereas others appear as haggard crones. They wear flimsy veils across their faces, or else a blindfold."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 121
+        }
+        PERSONALITY_TRAITS {
+            "Enigmatic" +6
+            "Meddlesome" +3
+            "Brave" +1
+        }
+        COMBAT {
+            "Unarmed Defense" INIT -1 DEFENSE -1
+        }
+        ABILITIES {
+            "Classical Greek" SCORE 5 SPECIALTY "prophetic pronouncement"
+            "[Area A] Lore" SCORE 5 SPECIALTY "varies"
+            "[Area B] Lore" SCORE 5 SPECIALTY "varies"
+            "[Area C] Lore" SCORE 5 SPECIALTY "varies"
+            "Artes Liberales" SCORE 4 SPECIALTY "scribing riddles"
+            "Divination" SCORE 10 BONUS 2 SPECIALTY "varies"
+            "Faerie Lore" SCORE 4 SPECIALTY "prophecy"
+            "Guile" SCORE 1 SPECIALTY "under duress"
+            "Intrigue" SCORE 3 SPECIALTY "local politics"
+            "Latin" SCORE 5 SPECIALTY "declamations"
+            "Living Language" SCORE 4 SPECIALTY "local dialect"
+            "Magic Lore" SCORE 5 SPECIALTY "prophecy"
+            "Mentem Resistance" SCORE 5 SPECIALTY "mind-reading"
+            "[Organization A] Lore" SCORE 5 SPECIALTY "varies"
+            "[Organization B] Lore" SCORE 5 SPECIALTY "varies"
+            "Penetration" SCORE 5 SPECIALTY "Divination"
+            "Philosophiae" SCORE 4 SPECIALTY "natural philosophy"
+            "Premonitions" SCORE 5 SPECIALTY "nations"
+            "Teaching" SCORE 3 SPECIALTY "Area Lore"
+        }
+        DESCRIPTION "This character guide follows the rules for Magic Characters (see *Realms of Power: Magic*, pages 29–54), and describes the basic minimum game statistics of a sibyl. However, there is plenty of room for customization; the sibyl has only 5 points of Virtues and Flaws, and most sibyls have a Magic Might greater that 25, allowing room for some overtly magical powers rather than relying on Divination, Premonitions, and a vast knowledge of diverse subjects. The sibyl’s Enigmatic Personality Trait is an Essential Trait; magical effects to make her speak clearly mysteriously fail. Some sibyls might be Transformed Humans rather than Magic Humans."
+    }
+
+}

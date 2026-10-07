@@ -1,0 +1,104 @@
+EXTENSION "ARMDef_The_Sundered_Eagle_InfernalLandscape_Vrykolakas" {
+    NAME "Ars Magica Fifth Edition, The Sundered Eagle - Vrykolakas"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_The_Sundered_Eagle_Core_Ext"
+
+    # Vrykolakas (Chapter Twelve: The Infernal Landscape, p141): one being, its printed stat lines verbatim fields.
+
+    #t258c00602fa45632303930 ^"Vrykolakas" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Vessel of Iniquity"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Shapeshifter; Improved Characteristics, Lightning Reflexes"
+            ^"Soak" INTEGER 14
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group (those born on a Saturday)."
+            ^"Vis" STRING "4 pawns of Corpus in its teeth"
+            ^"Appearance" STRING "The vrykolakas is indistinguishable from ordinary people in appearance, until it reveals its powers, at which point it takes on its true form. Some have shiny black skin, others glow in the dark. They are hunchbacked, with black hands and long nails. Their faces are blood-red and peeling, their teeth are like those of a cat or wolf, and they have wild hair and beards. In Thrace they are even more monstrous, with the skin of a goat, the trunk of an elephant, and a single colossal eye. With their Shapeshifter Ability they usually take the form of cats, goats, and owls."
+            ^"Source" STRING "The Sundered Eagle"
+            ^"Page" INTEGER 141
+        }
+        PERSONALITY_TRAITS {
+            "Hateful" +6
+            "Depraved" +6
+        }
+        COMBAT {
+            "Grapple" INIT 2 ATTACK 6 DEFENSE 7 DAMAGE 4
+            " Teeth" INIT 2 ATTACK 10 DEFENSE 8 DAMAGE 7
+            " Spittle" INIT 2 ATTACK 6 DAMAGE 10
+        }
+        ABILITIES {
+            "Athletics" SCORE 10 SPECIALTY "leaping"
+            "Brawl" SCORE 5 SPECIALTY "grapple"
+            "Folk Ken" SCORE 3 SPECIALTY "passing for human"
+            "Shapeshifter" SCORE 3 SPECIALTY "at night"
+            "Thrown Weapons" SCORE 5 SPECIALTY "spittle"
+        }
+        POWERS {
+            #tae3358856abb0e293c4be9 ^"Form of Wickedness (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Form of Wickedness"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, page 39"
+            }
+            #t09f4adc686360b600dc265 ^"Form of Man (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Form of Man"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, page 39"
+            }
+            #td322c19b2c8cd6f4d92287 ^"Contagious Obsession (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Contagious Obsession"
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, page 39"
+            }
+            #t857d6f955e7259c803b216 ^"Obsession (The Sundered Eagle)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Fear. See *Realms of Power: The Infernal*, page 31."
+            }
+            #ta80c483f27513ef46a9049 ^"Burning Spittle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "the spittle of a vrykolakas is liquid fire, and it can expel it up to 5 paces. If it hits, the spittle inflicts +10 damage; if it is parried it eats through any object it touches rendering it useless. This is considered a natural attack and cannot be resisted by Magic Resistance."
+            }
+        }
+        DESCRIPTION "Vrykolakes usually take victims who are on their own, locking them in a grapple before biting them. They occasionally keep their victims alive and feed from them night after night by inflicting scuffle damage rather than normal damage."
+    }
+
+}

@@ -1,0 +1,77 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicArabia_ZawbaaWhirlwindOfTheDesert" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Zawba’a, Whirlwind of the Desert"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Zawba’a, Whirlwind of the Desert (Chapter Six: Mythic Arabia, p103): one being, its printed stat lines verbatim fields.
+
+    #t839d12eb56448b8faf2ba7 ^"Zawba’a, Whirlwind of the Desert" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tba6700e7963dd72aab43fb ^"Arabia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 18
+            ^"Form" STRING "Terram"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Printed Size" STRING "0 (+1 in material form)"
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Jinni; Greater Immunity (heat), Ways of the Deserts; Berserk, Keen Vision, Second Sight, Wilderness Sense; Blatant Magical Air, Driven (to kill), Greater Malediction (bound by bargains), Magical Air; Baneful Circumstances (in contact with iron)"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power x3, No Fatigue; Improved Attack x2, Improved Initiative x2, Improved Soak x2"
+            ^"Personality Traits" STRING "Angry +2, Vicious +3, Merciless +2; Bloodthirsty (Strength) +3 Combat: Clawing Wind: Init +8, Attack +12, Defense +8, Damage +6 Includes Bloodthirsty Essential Trait earlier. The zawba’a may also cause additional damage with its Flay Power, later."
+            ^"Soak" INTEGER 7
+            ^"Wound Penalties (material form)" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Vis" STRING "When the zawba’a is destroyed, it leaves behind a small whirling column of black sand that if collected yields 3 pawns of Terram vis and 1 pawn of Auram vis."
+            ^"Appearance" STRING "In corporeal form, the zawba’a appears as a column of sand whirling at high speed, within the heart of which chuckles a malicious, bloodthirsty face. It is about 8 ft tall."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 103
+        }
+        ABILITIES {
+            "Arabic" SCORE 5 SPECIALTY "abuse"
+            "Athletics" SCORE 2 SPECIALTY "sprint"
+            "Awareness" SCORE 2 SPECIALTY "potential victims"
+            "Bargain" SCORE 1 SPECIALTY "magical bargains"
+            "Brawl" SCORE 5 SPECIALTY "clawing wind"
+            "Desert Lore" SCORE 3 SPECIALTY "trade routes"
+            "Folk Ken" SCORE 1 SPECIALTY "wizards"
+            "Hunt" SCORE 3 SPECIALTY "tracking"
+            "Penetration" SCORE 3 SPECIALTY "Corpus"
+            "Second Sight" SCORE 4 SPECIALTY "invisible things"
+            "Survival" SCORE 3 SPECIALTY "deserts"
+            "Theology: Islam" SCORE 1 SPECIALTY "Jinn"
+            "Wilderness Sense" SCORE 3 SPECIALTY "deserts"
+        }
+        POWERS {
+            #td6a0b46029a88700d84bb2 ^"Donning the Corporeal Veil (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The zawba’a can assume material form (Size +1, as described later) to allow it to attack its opponents physically. (Greater Power; see *Realms of Power: Magic*, page 102)"
+            }
+            #tdda70e29521e6e0e70456a ^"Flay" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As the zawba’a touches its opponent his skin is partially flayed from his body. The victim suffers a Heavy Wound. (R: Touch, D: Mom, T: Ind. Greater Power, 20 levels, –2 Might cost, +1 Initiative, remaining Mastery points used for Penetration Ability) *Presence*, 0 points, Constant, Imaginem: The zawba’a is aware of everything happening in the area that it haunts, which can be up to a Structure in size. (Greater Power; see *Realms of Power: Magic*, page 103)"
+            }
+        }
+        DESCRIPTION "The zawba’a is a bloodthirsty jinni of the Arabian deserts, which takes delight in slaying anyone unfortunate enough to stray across its path. It is, however, a rather single-minded creature and is unlikely to adopt any tactic beyond the frontal assault, making it relatively easy to outwit.\n\nSome experienced sahirs are able to bargain with zawba’a and bind them as servants using the khadim bond (see Chapter 3: The Order of Suleiman). Such sahirs often use these desert jinn as a form of travel — the sight of a powerful sorcerer being carried across the landscape by a whirling sandstorm instead of a mundane mount strikes respect into even the most powerful of mundane rulers!\n\n**Story Seed: Death by Zawba’a?** The characters are called in to investigate a murder. The victim was found flayed to death in his chamber, which was covered in a fine layer of sand. Investigating, the characters uncover a plot by a shadowy cabal of sahirs from a minor Islamic sect who have learned to bind the zawba’a, deadly jinn whirlwinds, to their service. The sahirs use them as weapons against their political enemies, unleashing them on unsuspecting victims. Is this what happened here, and if so, who was responsible?"
+    }
+
+}

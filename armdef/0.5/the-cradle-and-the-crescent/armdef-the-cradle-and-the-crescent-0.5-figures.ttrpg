@@ -1,0 +1,157 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_Figures" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - figures"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The book's eight figures as ^"Figure" records: Solomon's Seal family symbols p25; maps of Arabia p102, Medina and
+    # the Mosque of the Prophet p110, Mecca and the Mosque of the Haram p113, Mesopotamia p121, Baghdad p125, Persia p140,
+    # Transoxiana and the East p166. Their labels were read by eye (no text layer); the transcription, its uncertain readings
+    # and how it was made: the-cradle-and-the-crescent/figures.json.
+
+    # source: page 25, read by eye from the art (no text layer; figures.json)
+    #taeec2a106da51317c976b8 ^"Solomon’s Seal Family Symbols (figure)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Solomon’s Seal Family Symbols"
+            ^"Lettering" LIST OF STRING ["Solomon’s Seal Family Symbols", "Ashab al-Najm", "“Followers of the Star”", "Ashab al-Sakhr", "“Followers of the Stone”", "Ashab al-Yad", "“Followers of the Hand”", "Ashab al-Halqa", "“Followers of the Circle”", "Ashab al-Nahr", "“Followers of the River”", "Ashab al-Qalb", "“Followers of the Heart”", "قلب"]
+            ^"Shows" STRING "the symbols of the six families of the Order of Suleiman, each with its name and its meaning, over a pentagram"
+            ^"Uncertain Readings" LIST OF STRING ["قلب: the Ashab al-Qalb’s symbol, the Arabic word qalb (heart), transcribed in Arabic script"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 25
+        }
+    }
+
+    # source: page 102, read by eye from the art (no text layer; figures.json)
+    #t5b2d7355b9f43696984473 ^"Arabia (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Arabia"
+            ^"Lettering" LIST OF STRING ["ARABIA", "Holy Land", "Syrian Desert", "Mesopotamia", "Nefud", "Dahna", "Bahrayn", "Persia", "Persian Gulf", "Hajar", "The Hijaz", "Tayma'", "Khaybar", "Medina", "Badr", "Najd", "Yamama", "Gulf of 'Uman", "Muscat", "Nizwa", "'Uman", "Jiddah", "Mecca", "Ta'if", "The Empty Quarter", "Africa", "Red Sea", "'Asir", "Ubar", "Arabian Sea", "Hadramawt", "Yemen", "Sana'a", "Ma'rib", "Soqotra", "Horn of Africa", "MAP KEY", "City / Town", "Mythic Site", "Realm Border", "Mountains", "Desert", "miles"]
+            ^"Shows" STRING "the Arabian peninsula and its neighbours: cities and towns, mythic sites, realm borders, mountains, deserts, seas"
+            ^"Uncertain Readings" LIST OF STRING ["Ubar: a mythic site; the text names Ubar the capital of the people of ‘Ad, not as one of its place headings -- not linked"]
+            ^"Locations" LIST [#tba6700e7963dd72aab43fb ^"Arabia", #t1064f6c58f821a7d358bb0 ^"Mesopotamia", #t59809b4350e93cb2cd6d23 ^"Bahrayn", #tebff438c04fc4b38ba2900 ^"Persia", #t7ea4401716cd0583832bf5 ^"Hajar", #t8dd8e6346ed7a4aa48a773 ^"The Hijaz", #t0eec323785e3932b1b6fc9 ^"Tayma’ and Khaybar", #t1e7f78811d311ce94d5a49 ^"Medina", #t1dcf338272bf271ab8283a ^"The Najd and Yamama", #t6124f6e1265f5dcd21c600 ^"Muscat", #t8de62ded76f19dccf788f8 ^"Nizwa", #tf769361aedf7c7f9d478e8 ^"‘Uman", #t2a0c3a0b70f56fe2479815 ^"Mecca", #t134404252207a1c74be656 ^"Ta’if", #t94e70672bfc78cff961e59 ^"The Empty Quarter", #tf5d8bb32dd877ccc366edc ^"‘Asir & Yemen", #t0a52493dd7ecb93e65f34e ^"Hadramawt", #t69aeba9ad16ce92ece29d5 ^"Sana’a", #t14dc0095b1a0acb3e06e63 ^"Ma’rib"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 102
+        }
+    }
+
+    # source: page 110, read by eye from the art (no text layer; figures.json)
+    #t636e65d04228083607aead ^"Medina (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Medina"
+            ^"Lettering" LIST OF STRING ["Medina", "1. Mosque of the Prophet", "2. Houses of 'Umar and Abu Bakr", "3. Mosque of Abu Bakr", "4. Mosque of Quba'", "5. Battlefield of Uhud", "6. Cemetary of al-Gharqad", "Mt Uhud", "Mt Sala", "Mt 'Ayr", "To Mecca", "miles"]
+            ^"Shows" STRING "Medina and its surroundings: the city, its mosques, the battlefield of Uhud and the cemetery, the mountains about it"
+            ^"Uncertain Readings" LIST OF STRING ["6. Cemetary of al-Gharqad: printed so (Cemetery)", "Mt 'Ayr: the apostrophe printed with a gap before it (Mt ' 'Ayr)"]
+            ^"Locations" LIST [#t1e7f78811d311ce94d5a49 ^"Medina"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 110
+        }
+    }
+
+    # source: page 110, read by eye from the art (no text layer; figures.json)
+    #tb589d223a4e134b8c7b846 ^"Mosque of the Prophet (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Mosque of the Prophet"
+            ^"Lettering" LIST OF STRING ["Mosque of the Prophet", "1. Tomb of the Prophet", "2. Tomb of Fatima", "3. Gate of Gabriel", "4. Gate of the Women", "5. Mihrab", "6. Women's Prayer Place", "7. Gate of al-Majidi", "8. Gate of Mercy", "9. Gate of Peace", "10. Minbar", "11. Rawda", "12. Prophet's Mihrab", "13. Mihrab of 'Uthman", "14. Tomb of 'Umar", "15. Tunnel to House of Abu Bakr", "16. Tomb of Abu Bakr", "17. Platforms", "18. Well", "19. Fatima's Orchard", "20. Courtyard", "N", "S", "E", "W", "yards"]
+            ^"Shows" STRING "the plan of the Mosque of the Prophet at Medina: its tombs, gates, mihrabs, minbar, courtyard and orchard"
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 110
+        }
+    }
+
+    # source: page 113, read by eye from the art (no text layer; figures.json)
+    #ta67ab0b4c63c716a90f1d5 ^"Mecca (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Mecca"
+            ^"Lettering" LIST OF STRING ["Mecca", "1. Mosque of the Haram and Ka'ba", "2. Grave of Abu Lahab", "3. Graveyard", "4. Palace of the Sharifs", "5. Path of Thorns", "6. Al-Marwa", "7. Al-Safa", "8. Al-Ma'la Cemetery and Mosque of the Jinn", "M - Market", "- Fortification", "To Medina", "To 'Arafat", "To Jidda", "Mt Kada", "Mt La'la", "Mt Qu'ayqi'an", "Gorge of 'Amir", "Gorge of 'Ali", "Mt Khandama", "Mt Abu Qubays", "Mt al-Fanna'", "Mt 'Umar", "Mt Kuda", "N", "S", "E", "W", "yards"]
+            ^"Shows" STRING "Mecca and the mountains and gorges about it: its mosque and Ka’ba, graves, palace, markets and fortifications, and the roads out"
+            ^"Uncertain Readings" LIST OF STRING ["- Fortification: the legend's symbol (a ringed dot) before the dash"]
+            ^"Locations" LIST [#t2a0c3a0b70f56fe2479815 ^"Mecca", #t38b4b0cff0f65d756506c6 ^"The Haram Mosque and the Ka’ba", #tf0acdd2e1cb8857af40fe9 ^"Al-Ma’la Cemetery and the Mosque of the Jinn"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 113
+        }
+    }
+
+    # source: page 113, read by eye from the art (no text layer; figures.json)
+    #tfba61ba7ef5a8730585260 ^"Mosque of the Haram (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Mosque of the Haram, 1220"
+            ^"Lettering" LIST OF STRING ["Mosque of the Haram", "1220", "1. Ka'ba", "2. Hatim/Hijr Isma'il", "3. Maqam Ibrahim", "4. Zamzam Enclosure", "5. Gate of the Banu Shayba", "6. Colonnaded Arcades", "7. House of Maliki Jurisprudents", "8. Dar al-Nadwa (House of Counsel)", "al-Marwa", "al-Safa", "yards"]
+            ^"Shows" STRING "the plan of the Mosque of the Haram at Mecca in 1220: the Ka’ba, the Hatim, the Maqam Ibrahim, the Zamzam enclosure, gates, arcades and houses, with al-Marwa and al-Safa"
+            ^"Uncertain Readings" LIST OF STRING ["8. Dar al-Nadwa (House of Counsel): the C of Counsel carries a mark like a cedilla (Çounsel) -- a blemish in the art or a misprint", "1220: printed between dashes (-1220-)"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 113
+        }
+    }
+
+    # source: page 121, read by eye from the art (no text layer; figures.json)
+    #t80e0c7109c129a7a4b3943 ^"Mesopotamia (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Mesopotamia"
+            ^"Lettering" LIST OF STRING ["MESOPOTAMIA", "Black Sea", "Greater Caucasus Mtns.", "Tiflis", "Lesser Caucasus Mtns.", "Cyrus", "Lake Guchka", "Shirvan", "Shamakhi", "Trebizond", "Gtr. Armenia", "Arran", "Anatolia", "Arzanjan", "Mt Ararat", "Baylaqan", "Bajarvan", "Araxes", "Mukan", "The Bahr Khazar", "Sanjah Bridge", "Amid", "Lake Van", "Azarbaijan", "Armenian Highlands", "Lake Urmiya", "Urmiya", "Maragha", "Barvan", "Gilan", "Edessa", "Mardin", "Nasibin", "Mt. Judi", "Harran", "Barqa'id", "Sorceror's Tower", "Aleppo", "Raqqa", "Mosul", "Jazira", "Masyaf", "Euphrates", "Tigris", "Qasr Shirin", "Zagros Mtns.", "Samarra", "Iraq", "Baghdad", "Al Mada'in", "1. Dayr 'Aqul", "2. Dayr Qunna", "3. Dayr Hizqil", "Kutha", "Karbala'", "Babylon", "Hilla", "Kufa", "Najaf", "Uruk", "Arabia", "The Great Swamp", "Ubulla", "Basra", "Persia", "Persian Gulf", "MAP KEY", "City / Town", "Mythic Site", "Realm Border", "Mountains", "River", "Swamp", "miles"]
+            ^"Shows" STRING "Mesopotamia, the Jazira, Azarbaijan and the Caucasus: cities and towns, mythic sites, realm borders, mountains, rivers, swamps"
+            ^"Uncertain Readings" LIST OF STRING ["Lake Guchka: the map's italic h is shaped like a b (Gucbka; so too Khazar, Bahr); the lake is not named in the text", "Sorceror's Tower: printed so; the text's is the Sorcerer’s Tower", "Azarbaijan: printed so; the text spells it Azarbayjan -- not linked, the book never equates them", "Gtr. Armenia: abbreviated so (Greater Armenia)"]
+            ^"Locations" LIST [#t1064f6c58f821a7d358bb0 ^"Mesopotamia", #t7ac59c86f1e95488dedf42 ^"Tiflis", #t5a96ce468e0acc10aa870e ^"Shirvan", #tb66b8a88fe933e5a27bdfe ^"Shamakhi", #t9c2d6f5d371d7d45935529 ^"Greater Armenia", #ta80c1d11a0332c1aaf9883 ^"Arran", #tc1ceb3c9137000e7720eb8 ^"Arzanjan", #t593b66964a58a2f5035ec7 ^"Baylaqan", #t92b8b7bec915391d2c5049 ^"Bajarvan", #t23522408ed8cb7129da4ba ^"Mukan", #t041cc40266a7290e98debc ^"The Sea of Khazar", #ta6ff2ec9594a0395ba3cac ^"The Sanjah Bridge", #t175efb5ad89e3b0ed6eb41 ^"Amid", #teaef4cbd20d252735aab6e ^"Lake Urmiya", #te1b81ca25b0a434d70d4fc ^"Maragha", #t46472441785aa51274bcfe ^"Barvan", #tbb6eb6d9b8d9dedff8e152 ^"Gilan", #t7b1a192e6e1d5cfffac967 ^"Edessa", #tcc519289546fa7a56c5743 ^"Nasibin", #t84558f5ffad16ce92faae7 ^"Mount Judi", #t0440f59ed22bfafbd61684 ^"Harran", #ta5dea346258a783c84683d ^"Barqa’id", #t08b1eb504af3ae3bf4d0bb ^"Raqqa and the Battlefield of Siffin", #tf60f6cafd30f86c6b2e896 ^"Mosul", #t1c5c04cdcfa2405d88a7f8 ^"The Jazira", #ta70dc143db0635ee46fa10 ^"Qasr Shirin", #t515652180570ecb2bd66a0 ^"Samarra", #t68cd5126ff343d84803bad ^"Iraq", #t74f07bd2d90e7c5390f1fb ^"Baghdad", #taaf91033f636fd26c7f31e ^"Al-Mada’in", #t6b2ec88d8152fed89c44eb ^"Dayr al-’Aqul", #t21f52fc64044a189a93890 ^"Dayr Qunna", #tf2d3698a75f5018c79dd34 ^"Dayr Hizqil", #ta1937be9adf301759536d9 ^"Kutha", #t8dfe99a2d2e0834794ef44 ^"Karbala’", #t70411abf2baaa9153ba4af ^"The Ruins of Babylon", #tab30896c21785c885dcc2f ^"Hilla", #t6bc691380dfe7e6950f9ef ^"Kufa", #tddcb4d62dff6ce34249632 ^"Najaf", #t3672988dc6edc2fb9746f6 ^"The Ruins of Uruk", #tba6700e7963dd72aab43fb ^"Arabia", #t409eec04983bcc89f474cb ^"The Great Swamp", #te25fbee5ff11846479d110 ^"Basra", #tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 121
+        }
+    }
+
+    # source: page 125, read by eye from the art (no text layer; figures.json)
+    #t74e26ac008088ad06f33a0 ^"Baghdad (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Baghdad"
+            ^"Lettering" LIST OF STRING ["Baghdad", "1. Tomb & Mosque of Abu Hanifa", "2. Rusafa Mosque", "3. Palace of al-Mahdi", "4. Bab al-Sham (Syrian Gate)", "5. Bab al-Khurasan (Khurasan Gate)", "6. Dar al-Mamlaka Palace", "7. Mosque of the Sultan", "8. Al-Khuld Palace", "9. Bab al-Dhahab Palace & Mosque", "10. Bab al-Zafariyya (Zafariyya Gate)", "11. Bab al-Sultan (Gate of the Sultan)", "12. Bab al-Kufa (Kufa Gate)", "13. Bab al-Basra (Basra Gate)", "14. Al-Mustansiriyya Religious College", "15. Al-Thalatha' Market", "16. Al-Nizamiyya Religious College", "17. Mosque of the Caliphs", "18. Bab al-Halaba (Halaba Gate)", "19. Old Bridge", "20. Caliph's Palace", "21. New Bridge", "22. Bab al-Basaliyya (Basaliyya Gate)", "A Shammasiyya Quarter", "B Abu Hanifa Quarter", "C Al-Harbiyya Quarter", "D Rusafa Quarter", "E Bab al-Basra Quarter", "F Mukharrim Quarter", "G Karkh Quarter", "H Zafariyya Quarter", "I Nahr al-Mus'alla Quarter", "J Qurayya Quarter", "K Al-Ma'muniyya Quarter", "L Bab al-'Azaj Quarter", "M The Round City", "Wall of al-Musta'in", "Wall of al-Mustazhir and others", "Sarat Canal", "'Isa Canal", "Tigris River", "N", "All distances in yards."]
+            ^"Shows" STRING "Baghdad on the Tigris: its quarters, the Round City, gates, palaces, mosques, colleges, bridges, canals and walls"
+            ^"Locations" LIST [#t74f07bd2d90e7c5390f1fb ^"Baghdad"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 125
+        }
+    }
+
+    # source: page 140, read by eye from the art (no text layer; figures.json)
+    #tae65028870c0d9640530dd ^"Persia (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Persia"
+            ^"Lettering" LIST OF STRING ["PERSIA", "The Bahr Khazar", "Great Wall of Gurgan", "Atrek", "Karakum Desert", "Transoxiana", "Merv", "Khurasan", "Takht-i-Suleiman", "Safid Rud", "Alborz Mtns", "Amul", "Gird Kuh", "Gurgan", "Nishapur", "Mihr", "Mashhad", "Jibal", "Hamadan", "Kanguvar", "Bustam", "Kirmanshah", "Savah", "Damghan", "Caspian Gates", "Turshiz", "Herat", "Sirishk", "Qum", "Salt Lake", "Dasht-i Kavir", "Qubistan", "Qa'in", "Tun", "Dayr al-Jiss", "Kargas Mtns", "Zagros Mtns", "Garmah", "Tabas", "Birjand", "Harut", "Firuzkuh", "Bamiyan", "Caucasus Indicus", "Kabul", "Ghazni", "Mesopotamia", "Gundeshapur", "Zanyandeh", "Isfahan", "Karun", "Yazd", "Naband", "Nih", "Dartal", "Farab", "Khwash", "Ghur", "Al Ahwaz", "Ramhurmuz", "Shardiz", "Fars", "Dasht-i Lut", "Hindijan", "Arranjan", "Tab", "Forest of Kamfiruz", "Istakhr", "Jabal Kufs", "Bardasir", "Gandom Beriyan", "Lake Zarab", "Zaranj", "Helmand", "Seistan", "Shapur", "Shiraz", "Lake Bakhtigan", "Sirjan", "Mandistan Desert", "Darabgerd", "Kavarvand", "Jiruft", "Sanij", "Makran", "Persian Gulf", "Kajaran", "Kirman", "Gedrosian Desert", "Fannazbur", "Arabia", "Kish", "Abarkavan", "Tiz", "Gulf of 'Uman", "Mazandaran:", "a Gilan", "b Daylam", "c Tabaristan", "d Gurgan", "e Qumis", "f Khuzistan", "1. Lamasar", "2. Alamut", "3. Qazvin", "4. Maimun Diz", "5. Rayy", "6. Mt. Damavand", "MAP KEY", "City / Town", "Mythic Site", "Realm Border", "Mountains", "River", "Desert", "Oasis", "miles"]
+            ^"Shows" STRING "Persia, Khurasan and the lands to Kabul: provinces, cities and towns, mythic sites, realm borders, mountains, rivers, deserts, oases"
+            ^"Uncertain Readings" LIST OF STRING ["Qubistan: the map's italic h is shaped like a b: Quhistan, the text's spelling -- linked", "Zanyandeh: printed so (the Zayandeh river); not named in the text"]
+            ^"Locations" LIST [#tebff438c04fc4b38ba2900 ^"Persia", #t041cc40266a7290e98debc ^"The Sea of Khazar", #t8f4ba7dd4ae2676f8e60a2 ^"The Great Wall of Gurgan", #t238d839923a1264d51b516 ^"Karakum Desert", #t88829e491ac90c9333439e ^"Transoxiana", #t3fd2ab54b8077525be174e ^"Merv", #te5a5d0cd41e17e84558d6c ^"Khurasan", #t339efa15a579aa3b7e96ac ^"Takht-i-Suleiman", #tdc748a5ca762f1296f702a ^"Nishapur", #t5703b12e6951dcb97943dd ^"Mihr", #tbae34568cb23aeed9c1e81 ^"Mashhad", #t8bfda944ba5a027e57761b ^"Jibal", #tc6c4aea51735b60f7b0933 ^"Kanguvar", #t22df96ef1f13af26c05ec4 ^"Kirmanshah", #t1badbcd265e64b3c124a03 ^"Savah", #t20274c51251bf4bb89020b ^"Herat", #t049ae1a234d3b646695c80 ^"Qum", #tb175f1ab67a542d54d4566 ^"Dasht-i Kavir", #t91bd4cfe16b7e4c3d023d4 ^"Quhistan", #t22eb83d1097bd1d5ee2aba ^"Kargas Kuh and Siyah Kuh", #te893cf0ea1578ca619395f ^"Garmah", #t81c2a02d22a6377091bfbe ^"Firuzkuh", #t9bc97e59fcff43102bbb25 ^"Bamiyan", #ta586fde81f3bab0ac3ebac ^"Kabul", #t68d6253c88bf3e6bfd4705 ^"Ghazni", #t1064f6c58f821a7d358bb0 ^"Mesopotamia", #ta75451e1ef72f3881f793d ^"Gundeshapur", #t202a51c1c86898e7b8252f ^"Isfahan", #tb8ecd075aafc882120d236 ^"Yazd", #t8a484fefde5f3e1639e548 ^"Naband", #t464e9b61c188942e30a53d ^"Dartal", #t2dd1824a3b73ed82fc9da3 ^"Ghur", #tea4d3c4d2813e0ccc58195 ^"Ahwaz", #te8dbeda1f3e5cdc88eeb77 ^"Ramhurmuz", #t8b6ccc47f9aa13afe0ae74 ^"Fars", #t098f139cf30f02ba43f946 ^"Dasht-i Lut", #tc9743b7a40132e03776e4c ^"Arranjan", #t0e7364d4c10b5ce2ce7d7b ^"Istakhr", #t59f70f4bde3af6a0f6617f ^"Bardasir", #t5338274ecf4f9b84894275 ^"Gandom Beriyan", #t2ab3ccd558d70f3cffacf4 ^"Zaranj", #ta4a7afb03d05a34394efd7 ^"Seistan", #t89bb2dbf2a45b9af725f34 ^"Shapur", #t7ddaedb6b024e6c5fca857 ^"Shiraz", #t910c516ffd58af63fe7781 ^"Darabgerd", #t1ce6c0131ec0e40a57ca3d ^"Mount Kavarvand", #ta62e6ba601951f1b68dd7b ^"Jiruft", #t7f8221d524cf465b276d33 ^"Sanij", #t615cc102399436471419da ^"Makran", #tae1b3513c2c71a72199c5d ^"Kajaran", #t6003978cf06ea0082ee460 ^"Kirman", #td4e3eec0543aed90016624 ^"The Gedrosian Desert", #tba6700e7963dd72aab43fb ^"Arabia", #tac836a18dcf5e92db91bbf ^"Kish", #t98c3f937e85a7b80852759 ^"Abarkavan", #t18d9feed0094c44fc01c75 ^"Mazandaran", #tbb6eb6d9b8d9dedff8e152 ^"Gilan", #ta2c507a534b61c0306ff21 ^"Daylam", #tbd1b3c10ba16d42d8ad6b5 ^"Qumis", #t30d6cf918cd967c8e617a4 ^"Khuzistan", #t57b18e5fc84e6fa1168c38 ^"Alamut", #t0de19feabd143447747772 ^"Rayy", #t6e5c438ebaee1c64ad5a0c ^"Mount Damavand"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 140
+        }
+    }
+
+    # source: page 166, read by eye from the art (no text layer; figures.json)
+    #t7d68e7922013d684e9bb67 ^"Transoxiana and the East (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "Transoxiana and the East"
+            ^"Lettering" LIST OF STRING ["TRANSOXIANA AND THE EAST", "Aral Sea", "Jabal Jagharaz", "Jaxartes", "The Great Steppe", "Otrar", "Talas", "Kath", "Gurganj", "Kyzylkum Desert", "Tashkent", "Khojend", "Osh", "Oxus", "Bukhara", "Samarkand", "Hoja Ismail", "Zerafshan", "Khashgar", "Janaindar", "Taklimakan Desert", "The Bahr Khazar", "Sogdian Rock", "Lahzvard", "Ai Khanoum", "Stone Tower", "Roof of the World", "Wakhan", "Balkh", "a Khwarazm", "b Sogdiana", "c Farghana", "d Bactria", "e Badakhshan", "Caucasus Indicus", "Persia", "Indus", "India", "Daybul", "Al-Mansura", "Persian Gulf", "Gulf of 'Uman", "MAP KEY", "City / Town", "Mythic Site", "Realm Border", "Mountains", "River", "Desert", "miles"]
+            ^"Shows" STRING "Transoxiana, the Roof of the World and the lands east to the Taklimakan: provinces, cities and towns, mythic sites, realm borders, mountains, rivers, deserts"
+            ^"Locations" LIST [#te7caee397b52bcc8711419 ^"Transoxiana and the East", #t83fd4a01aa7db2be2830cc ^"The Aral Sea", #t50221f0d49acc2d7be8b1a ^"The Jaxartes", #t6506fb782ccdd116e9e0df ^"The Great Steppe", #teaad190ca2e951660a58e7 ^"Otrar", #t804d5aa4a4d57796bce9d8 ^"Talas", #t7e110bebda57e284657c38 ^"Kath", #t8b2d4238241542444f83d4 ^"Gurganj", #tddab584aa969529bca6ac0 ^"Kyzylkum Desert", #t8e21019ad68082594f2f84 ^"Tashkent", #teef6b8dbf062fc0a068f5d ^"Khojend", #t6f9f5df67bea0c1b972b5f ^"Osh", #t68c511f498b5e4f78ac854 ^"The Oxus", #tff44ea39e4cde2b7e78f05 ^"Bukhara", #tcaf184d72adb29c6c4fd24 ^"Samarkand", #tc34e86f848cbf507585364 ^"Khashgar", #td72305884d4801753ad1ed ^"The Taklimakan", #t041cc40266a7290e98debc ^"The Sea of Khazar", #t99ecdfda9043b6de8ce420 ^"Sogdian Rock", #t49631b6a6d197a1945ac75 ^"The Mines of Lahzvard", #ta3d180f4d01b9793cd91c8 ^"The Ruins at Ai Khanoum", #t6c4a5a088ced9cd60d59df ^"Turris Lapidae, the Stone Tower", #taf2483d3073b4d024fd2b6 ^"The Roof of the World", #td2e662bc70dee2bd446047 ^"Wakhan", #t3b67e9fd6af79bce9f272c ^"Balkh", #t39207eb72412e0f7c4e25e ^"Khwarazm", #t77ddedea6b9b509e063de4 ^"Sogdiana", #t104c7b35400e96a9354502 ^"Farghana", #ta14bbedf973d81898d157d ^"Bactria", #t3549dc24334cb80021fd84 ^"Badakhshan", #tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, the small labels at 420-1200 dpi (no text layer); labels as printed"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 166
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicZoroastrianism_HolyParameters" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Chapter Five: Mythic Zoroastrianism holy parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The chapter's holy parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tc70d13a0fa853d0c69ed2f ^"Minutes (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Minutes"
+            ^"Parameter" STRING "Duration"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "The effect lasts for a certain number of astrological minutes. Equivalent to Diameter. To calculate the duration correctly, succeed in a roll of Intelligence + Artes Liberales + dice against an Ease Factor of 6 + Number of Minutes desired."
+    }
+
+    #t549239445db9ef9ec013be ^"Hours (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Hours"
+            ^"Parameter" STRING "Duration"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "The effect lasts a number of astrological hours, regardless of sunrise or sunset. Equivalent to Sun. To calculate the duration correctly, succeed in a roll of Intelligence + Artes Liberales + dice against an Ease Factor of 6 + Number of Hours desired."
+    }
+
+    #tbcf41db1aa365a56a10908 ^"Days (Duration)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Days"
+            ^"Parameter" STRING "Duration"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "The effect lasts a number of astrological days, regardless of the lunar phase. Equivalent to Moon. To calculate the duration correctly, succeed in a roll of Intelligence + Artes Liberales + dice against an Ease Factor of 6 + Number of Days desired. **Sign: **The effect lasts a number of astrological signs, regardless of sunrise or sunset. Equivalent to Year. To calculate the duration correctly, succeed in a roll of Intelligence + Artes Liberales + dice against an Ease Factor of 6 + Number of Signs desired."
+    }
+
+    #t9cffacb73cdfbcbb9b907a ^"Fire (Duration) (The Cradle & The Crescent)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Duration: Fire"
+            ^"Parameter" STRING "Duration"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "The spell will last as long as a specific sacred fire burns in a specific fire temple (the fire and temple must be determined at the time of casting the spell). Fire is equivalent to Moon."
+    }
+
+    #t40896e39a22a42a1792d84 ^"Ground (Range)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Range: Ground"
+            ^"Parameter" STRING "Range"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "The target can be affected so long as he/it is touching the same ground that the caster is standing upon. The caster need not be able to see the target. Rivers, mountains and other significant obstacles (although not roads or walls) act as boundaries to this range. Furthermore, the ground must be natural earth. Artificial ground, like floorboards or cobble stones, puts a target out of this Range. Ground is equivalent to Arcane Connection."
+    }
+
+    #t8859a3b9912597dc29152e ^"Community (Target)" DEF {
+        EXTENDS #t8bb442d8427d39408676da ^"Holy Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Target: Community"
+            ^"Parameter" STRING "Target"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 99
+        }
+        DESCRIPTION "Affects everyone living in the same community. A community is defined as a group of people living in the same locality, or who form a distinct segment of society (such as Jews, beggars, or Christians, but can also include plants or animals). Community is equivalent to Boundary."
+    }
+
+}

@@ -1,0 +1,28 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicPersia_Tables" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Chapter Eight: Mythic Persia tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #td958a9e48918858640d058 ^"Hyrcanian Vis (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Condition", "Modifier"]
+            ^"Table Footnotes" STRING "* Only one of these bonuses can be used ** Cannot grant a bonus greater than the character’s Mazandaran Lore. Further, if Magic Lore is not used, half of the vis found (rounded up) is tainted by the Realm applicable to the Lore used."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 152
+        }
+        TABLE {
+            "Spell that detects vis*" "+ magnitude of spell with highest Target parameter"
+            "Magic Sensitivity*" "+ Ability"
+            "(Realm) Lore**" "+Ability"
+            "Entire region searched within a Magic aura" "+aura"
+            "Searched this area in the last season" "–15"
+            "Searched this area in the last six months" "–9"
+            "Searched this area in the last year" "–3"
+        }
+    }
+
+}

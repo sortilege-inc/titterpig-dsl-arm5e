@@ -1,0 +1,44 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_TheSilkRoad_BactrianCamel" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Bactrian Camel"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Bactrian Camel (Chapter Nine: The Silk Road & Beyond, p170): one being, its printed stat lines verbatim fields.
+
+    #t69ead0e5cab7e4f4bd47cd ^"Bactrian Camel" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te7caee397b52bcc8711419 ^"Transoxiana and the East"]
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "0 (0)"
+            ^"Virtues and Flaws" STRING "Long-Winded; Feral Scent"
+            ^"Qualities" STRING "Hardy, Herd Animal"
+            ^"Reputations" LIST ["Ill-tempered beast +3 (throughout Mythic Middle East)"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3/–3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Abilities" STRING "Athletics 4 (running), Awareness 3 (predators), Brawl 2 (dodging), Survival 5 (home terrain)."
+            ^"Powers" STRING "Smell Water, 0 points, Init 0: All camels can smell drinkable water for a distance up to two miles. Survive Without Water, 0 points, Init 0: All camels can survive without water for up to two weeks."
+            ^"Appearance" STRING "These statistics are for a typical Bactrian riding camel. Known for their stubbornness, resilience and pungent odor, these otherwise docile animals can become very aggressive during mating season. Their ability to last without water for weeks on end and locate buried water makes them the preferred beast of burden for desert crossings."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 170
+        }
+        COMBAT {
+            "Kick (hooves)" INIT 0 ATTACK 3 DEFENSE 2 DAMAGE 4
+        }
+        DESCRIPTION "Camels have been bred, like horses, to have differing traits:\n\n*Bactrian Pack Camel: *Add the Domesticated Quality and gain the Great Bearer Minor Heroic Virtue (*Houses of Hermes: True Lineages, *page 105), which allows the camel to carry twice as much on its back before becoming weighed down and to travel twice as far before becoming fatigued by a journey. Drop the Survival Ability. Most Bactrian camels found in the great caravans are pack camels.\n\n*Wild Bactrian Camel:* Add the Wilderness Sense Virtue and the Greater Immunity: Thirst Virtue. Reduce Communication to –6. Add Defensive Fighter (and therefore an extra Fatigue level), Fast Runner and Herd Animal Qualities. Increase Brawl (dodging) to 4 and add Wilderness Sense (sense sandstorms) 3. A wild Bactrian camel’s kick has the following statistics: Init +0 Attack +5 Defense +3 Damage +4.\n\n*War Camel (variant): *Add the Aggressive and Pack Animal Qualities and the Ferocity (when ridden in battle) Virtue. Increase Brawl (hooves) to 5. A war camel’s kick has the following modifications to the basic combat statistics given for either the Bactrian camel or a dromedary camel: Init +0 Attack +4 Defense +3 Damage +0. It can be trained to attack as part of a Trained Group with its rider.\n\nRare Bjornaer magi who are born in the southeastern peripheries of Mythic Europe have been noted with a dromedary or even wild Bactrian camel Heartbeast. Camels are considered to have a melancholic humor with a choleric aspect."
+    }
+
+}

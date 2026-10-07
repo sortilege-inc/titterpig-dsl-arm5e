@@ -1,0 +1,45 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicPersia_GazellePersian" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Gazelle, Persian"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Gazelle, Persian (Chapter Eight: Mythic Persia, p155): one being, its printed stat lines verbatim fields.
+
+    #tf2c770f4d8c2e62e1307b1 ^"Gazelle, Persian" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -1
+            ^"Virtues and Flaws" STRING "Improved Abilities, Long Winded, Well-Traveled; Compassionate"
+            ^"Qualities" STRING "Defensive Fighter, Fast Runner, Herd Leader, Keen Eyesight, Large Horns, Herd Animal, Tireless Males only."
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3/–3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Abilities" STRING "Area Lore: Dasht-i Kavir 4 (finding water), Athletics 4 (running), Awareness 3 (predators), Brawl 4 (dodging), Leadership 5 (gazelles), Survival 3 (semi-desert) Males only."
+            ^"Appearance" STRING "A small, delicate antelope with fawn hide; its flanks are marked with a dark stripe. The male has horns that it uses to defend itself."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 155
+        }
+        PERSONALITY_TRAITS {
+            "Gentle" +3
+        }
+        COMBAT {
+            "Horns" INIT 5 ATTACK 8 DEFENSE 9 DAMAGE 1
+            " Dodge" INIT 3 DEFENSE 10
+        }
+        DESCRIPTION "The gazelle (Arabic *ghazal*), is called “dorcas” in the Western bestiaries. It has exceptionally sharp sight (+3 to visionrelated rolls) and is swift (+3 to running-related rolls). Only the male gazelle engages in combat; when forced to do so, he temporarily gains the Ferocity Virtue (grants 3 temporary Confidence Points). It is common in the Dasht-i Kavir of Persia."
+    }
+
+}

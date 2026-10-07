@@ -1,0 +1,65 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_TheJinn_TheBuran" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - The Buran"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The Buran (Chapter Four: The Jinn, p70): one being, its printed stat lines verbatim fields.
+
+    #t438ff28f210cb28bd6ef30 ^"The Buran" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Auram"
+            ^"Order: Aerial Powers (Buran) Characteristics" STRING "Int –5, Per 0, Pre +3, Com -2, Str na, Sta na, Dex +3, Qik +6"
+            ^"Size" INTEGER 4
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Jinni; Berserk, Strong-Willed, Wilderness Sense; Fury (Major) (when summoned), Greater Malediction (bound by bargains), Mute"
+            ^"Reputations" LIST ["Scourge of Yenghissar 2 (local)"]
+            ^"Hierarchy" STRING "3 (storm demons)"
+            ^"Combat" STRING "Not applicable, the buran is an insubstantial spirit"
+            ^"Soak" STRING "Not applicable, the buran is an insubstantial spirit"
+            ^"Wound Penalties" STRING "Not applicable, the buran is an insubstantial spirit"
+            ^"Abilities" STRING "Arabic 5 (understanding), Folk Ken 3 (travelers), Theology: Islam 3 (jinn), Survival 5 (desert), Taklamakan Lore 5 (legends), Wilderness Sense 2 (weather) Represents level of understanding as the spirit is Mute."
+            ^"Weaknesses" STRING "Protected Group (individuals that invoke the Bismillah invocation)"
+            ^"Vis" STRING "5 pawns of Auram vis prava, left behind as black sand when dispersed."
+            ^"Appearance" STRING "Usually manifests as a giant shapeless vortex of raging black sand using its Auram powers. To those with Second Sight, a giant humanoid shadow can be discerned within the sandstorm."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 70
+        }
+        PERSONALITY_TRAITS {
+            "Untameable" +5
+        }
+        POWERS {
+            #t551637ab7259199966b438 ^"Delusion of the Desert" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "This evil spirit can create illusions of a lost traveler’s companions or a welcoming oasis, only to launch itself in fury at an unsuspecting victim. Alternatively it can create images of itself as a humanoid sandstorm with glowing fiery eyes in order to terrify its victims prior to their deaths. A minor illusion which affects an Individual amount of material (such as the demon itself) costs one point; a larger illusion which fills a room costs five points. These visions always have a flaw, however (they smell wrong, can only be seen by one target, etc.)."
+            }
+            #tab4baa627292505694b030 ^"Elemental Control of Wind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The buran has control over the winds of nature, which it uses to wreak destruction on the desert fringes. It may create any Creo, Muto, or Rego effect appropriate to Auram, at a cost of 1 Might Point per magnitude of effect. The demon cannot create any effect with a level greater than its Infernal Might, nor duplicate Ritual effects."
+            }
+            #t3863a89b0c0ffa175e51c1 ^"Recalcitrance (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Recalcitrance"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Any attempt to control (but not destroy) the buran with any form of Supernatural Power (magical, Divine, or otherwise) treats the demon’s Might as if it were 150% its actual Might, or otherwise has its Ease Factor increased by 50%. For example, a *Circular Ward Against Demons *of 38th level is needed to stop this buran with Might 25."
+            }
+        }
+        DESCRIPTION "Unlike many other corrupt jinn, the buran lacks the *Coagulation *and *Obsession* powers common to most demons and is an insubstantial spirit, unable to affect the physical world except through its magic. It is an example of an Infernal storm spirit likely to be found in the Taklamakan Desert, although much stronger and less powerful creatures also exist (see Chapter 9: On the Silk Road). Many travelers’ tales tell of companions fallen behind who are tempted off the track by the illusions created by these demons.\n\nThose storm spirits aligned to the Magic realm may have very similar characteristics, although they lack the Recalcitrance power and the brutal malevolence of their demonic cousins. Similar spirits aligned to other elemental Forms can be represented with modifications to these statistics.\n\n**Story Seed: The Corruption of the West** European demons of Christian origin are becoming increasingly common in the Levant since the advent of the Crusades, but have yet to penetrate past the borders of Outremer. Apart from a handful of Jewish demons and Infernal entities from ancient Persian mythology, the vast majority of Infernal creatures in the Mythic Middle East are in fact Infernal jinn and thus susceptible to Sihr, as commonly practiced by the Order of Suleiman.\n\nAll this will change as merchants, missionaries and Hermetic magi penetrate further east, bringing with them their own legacies of sin and corruption that may change the balance of mystical power in the Mythic Middle East. The Unholy Trinity (see Chapter 1: Saga and Introduction) are a group of demons drawing on western conceptions of Islam that may have a large role to play in increasing the number of non-jinn Infernal spirits of the Mythic Middle East."
+    }
+
+}

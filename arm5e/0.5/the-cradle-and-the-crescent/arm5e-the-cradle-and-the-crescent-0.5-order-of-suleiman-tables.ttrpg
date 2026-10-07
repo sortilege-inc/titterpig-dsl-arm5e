@@ -1,0 +1,179 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_OrderOfSuleiman_Tables" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Chapter Three: Order of Suleiman tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t4d816f54534ebecbea9e39 ^"Invocation of Names of Power (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Name", "Type"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the Virtue whose entry it is printed in"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 30
+        }
+        TABLE {
+            "Adad" "storms, divination"
+            "Dumuzi" "livestock, crops"
+            "Ishtar" "healing, love"
+            "Nergal" "destruction, disease"
+            "Ninhursag" "earth"
+            "Shamash" "light, justice"
+        }
+    }
+
+    #t097bfd8589791de008e4d4 ^"Warding (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Term", "Text"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 41
+        }
+        TABLE {
+            "Safety" "Subtract 1 botch die from the sahir’s summoning, casting, and Fatra Bayna Avoidance rolls (see Warping and Corruption, later in this section)."
+            "Casting" "Add 2 to the sahir’s Casting Total."
+            "Finesse" "Add 3 to the sahir’s Finesse rolls."
+            "Concentration" "Add 2 to both the spirit’s and the sahir’s Concentration rolls."
+            "Penetration" "Add 5 to the spirit’s Penetration Total."
+        }
+    }
+
+    #t7d66deafc9cc2c0337c608 ^"Warping and Corruption: Die roll (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Die roll", "Duration", "Effects"]
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 43
+        }
+        TABLE {
+            "1 or less" "Diameter" "+3 Corruption Pts"
+            "2–4" "Sun" "+2 Corruption Pts"
+            "5–7" "Moon" "+1 Corruption Pt"
+            "8–9" "Season" "+1 Spirit Pt"
+            "10+" "Year" "+3 Spirit Pts"
+        }
+    }
+
+    #t748318042c02cb464323e8 ^"Warping and Corruption: Spirit Points (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Spirit Points", "Effects"]
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 43
+        }
+        TABLE {
+            "1" "Gain (Warping Score x 5) experience points in a summoning or Solomonic art; The sahir invents a new naranj with a level no greater than the sahir’s (Warping Score x 5); The sahir returns with (Warping Score x 5) vis of a type appropriate to the experience, collected within his person or his belongings; Gain 3 Confidence Points."
+            "3" "Increase the sahir’s Confidence Score by 1; Gain a +1 cumulative bonus to all social interactions (leading, teaching and bargaining, but not summoning or casting). While the effects of The Gift or similar Flaws are unchanged, the sahir becomes better at talking his way around them. The bonus does offset simple penalties to social rolls imposed by The Gift or Flaws, however. For example, a Gifted sahir with the normal Gift who takes this effect once has a –2 penalty to social rolls, but still suffers from the distrust and dislike inspired by The Gift; Gain a Minor Virtue appropriate to the experience, or remove a Minor Flaw."
+        }
+    }
+
+    #t348f7a162ebe70750a5e61 ^"Warping and Corruption: Corruption Points (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Corruption Points", "Effects"]
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 43
+        }
+        TABLE {
+            "1" "Make an immediate Aging roll, adding the sahir’s Warping Score to the total; Suffer a Heavy wound; Gain a bad Reputation among spirits from the appropriate realm at 2, or increase this Reputation by 1 if the sahir already has one."
+            "3" "Gain a –1 penalty to all social interactions, which is cumulative with the effects of The Gift and similar Flaws; Gain a Minor Flaw appropriate to the experience, or lose a Minor Virtue."
+        }
+    }
+
+    #tf321229acb4d1361c6ab0a ^"Bargaining with the Jinni (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Situation", "Example", "Modifier"]
+            ^"Table Columns Source" STRING "printed, but for Example: the book prints that column of quoted examples without a head"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        TABLE {
+            "Terms are general in scope" "“Follow me around and do as I say.”" "+3"
+            "Terms are specific in scope" "“Help me locate the lost city of Babel.”" "+0"
+            "Terms constitute a single task" "“Escort me safely to Damascus.”" "–3"
+            "Terms reduce Might Score" "" "+3/pt"
+            "Service to last one day" "" "–3"
+            "Service to last one week" "" "0"
+            "Service to last one month" "" "+3"
+            "Service to last one season" "" "+6"
+            "Service to last one year" "" "+9"
+            "Sahir accepts a small duty" "" "–3/duty"
+            "Sahir accepts a heavy duty" "" "–6/duty"
+            "Sahir offers less vis than is the standard" "" "+2/pawn under"
+            "Sahir offers more vis than is the standard" "" "–2/pawn above"
+            "Sahir offers different type of vis" "" "+1/pawn"
+        }
+    }
+
+    #tcdafc4dc01e9bb8efc54d1 ^"Alteration (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Alteration", "Effect"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 48
+        }
+        TABLE {
+            "Slight" "The matter undergoes a subtle change in appearance or property, within the common range of examples for that matter. For example, give water the scent of the sea, or change the color of a standard gemstone. (+0 magnitudes)"
+            "Minor" "The matter undergoes a noticeable change in appearance or property. The change must be commonly found in nature, and of a general sort. For example, brighten moonlight to that of a torch, or condense air into a cloud. A Minor change can increase or decrease Size by one category. (+1 magnitude)"
+            "Substantial" "The matter undergoes a significant change in appearance or property, uncommon in nature. For example, make water as caustic as acid, or iron as flexible as copper. A Substantial change can increase or decrease Size by two categories. (+2 magnitudes)"
+            "Major" "The matter undergoes a total change in appearance or property, but no more than the extremes found in nature. For example, call lightning from a clear sky, or make stone as hard as diamond. A Major change can increase or decrease Size by three categories. (+3 magnitudes)"
+        }
+    }
+
+    #t2ccbf15ee1915007959f15 ^"Detail (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Detail", "Effect"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 50
+        }
+        TABLE {
+            "Binary" "A one-word answer between two choices. (+0 magnitudes)"
+            "Basic" "The equivalent of a three-word answer. This adds a +1 bonus to premonition effects. (+1 magnitude)"
+            "Brief" "A single sentence of information."
+        }
+    }
+
+    #t236effebd485568507022d ^"Potency (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Potency", "Effect"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 53
+        }
+        TABLE {
+            "Weak" "Affect pain or other symptoms of injury or disease, minor aging crises, Winded Fatigue levels, or Characteristics or Personality Traits with scores of up to +1 or –1. (+0 magnitudes)"
+            "Mild" "Affect Light Wounds, Minor Diseases, serious aging crises, Weary Fatigue levels, or Characteristics or Personality Traits with scores of up to +2 or –2. (+1 magnitude)"
+            "Moderate" "Affect Medium Wounds, Serious Diseases, major aging crises, Tired Fatigue levels, or Characteristics or Personality Traits with scores of up to +3 or –3. (+2 magnitudes)"
+        }
+    }
+
+    #t071cc9dedb99806738cb07 ^"Allure (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Allure", "Effect"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 55
+        }
+        TABLE {
+            "Simple" "The target sees through the effect with a Perception + Awareness against an Ease Factor of 6, made when the subject first encounters the effect. (+0 magnitudes)"
+            "Emotional" "The target resists the effect with a Perception die roll plus or minus a Personality Trait that suggests whether or not he would question the effect, against an Ease Factor of 6. For example, Brave and Loyal would probably subtract from the die roll. (+1 magnitudes)"
+            "Unsuspecting" "An intelligent target may see through the effect if his suspicions are raised. Once the target is skeptical, this is a Perception + Guile roll against an Ease Factor of 6 to resist. (+2 magnitudes)"
+        }
+    }
+
+    #tc621b425aa662dd294a586 ^"Delay (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Delay", "Effect"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 57
+        }
+        TABLE {
+            "Season" "The effect manifests at the next solstice or equinox. (+0 magnitudes)"
+            "Moon" "The effect manifests during the next full or new moon. (+1 magnitude)"
+            "Sun" "The effect manifests at the next dawn or dusk. (+2 magnitudes)"
+            "Immediate" "The effect manifests immediately. (+3 magnitudes)"
+        }
+    }
+
+}

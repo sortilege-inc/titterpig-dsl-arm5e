@@ -1,0 +1,73 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicMesopotamia_Girtablullu" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Girtablullu"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Girtablullu (Chapter Seven: Mythic Mesopotamia, p122): one being, its printed stat lines verbatim fields.
+
+    #ted29a3309e5024d1493ae9 ^"Girtablullu" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t1064f6c58f821a7d358bb0 ^"Mesopotamia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 17
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Human; Ways of the Desert; Great Quickness; Greater Malediction (inhibited at night, see later); Dutybound"
+            ^"Magical Qualities and Inferiorities" STRING "Improved Abilities, Improved Attack (bow) x2, Improved Characteristics x4, Improved Damage (sting), Improved Might x2, Improved Powers, Improved Soak x2, Lesser Power (Venom), Minor Virtue (Large)"
+            ^"Combat" STRING "Bow: Init +5, Attack +20, Defense +13, Damage +11 Sting: Init +9, Attack +15, Defense +15, Damage +9 and venom (see Powers) Includes +3 for Ways of the Desert"
+            ^"Soak" INTEGER 12
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Equipment" STRING "bow, quiver of 11 arrows, lamellar armor (equivalent to full metal-reinforced leather)"
+            ^"Encumbrance" STRING "0 (3)"
+            ^"Vis" STRING "3 pawns of Perdo, in sting"
+            ^"Appearance" STRING "From the waist up, appears as a human warrior, with long hair and a braided beard. From the waist down, the girtablullu has the shiny black carapace of a scorpion, including its long tail equipped with a stinger. It stands on two clawed legs like those of a bird, and carries a bow. Some scorpion-men have birdlike wings."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 122
+        }
+        PERSONALITY_TRAITS {
+            "Fiercely Protective" +3
+        }
+        ABILITIES {
+            "Arabic" SCORE 1 SPECIALTY "Maslawi"
+            "Athletics" SCORE 4 SPECIALTY "over sand"
+            "Awareness" SCORE 3 SPECIALTY "interlopers"
+            "Babylonian" SCORE 5 SPECIALTY "orders"
+            "Brawl" SCORE 5 SPECIALTY "sting"
+            "Bows" SCORE 5 SPECIALTY "longbow"
+            "Hunt" SCORE 2 SPECIALTY "thieves"
+            "Leadership" SCORE 3 SPECIALTY "scorpionmen"
+            "Local Area Lore" SCORE 1 SPECIALTY "hiding places"
+            "Penetration" SCORE 3 SPECIALTY "Venom power"
+            "Stealth" SCORE 3 SPECIALTY "ruins"
+        }
+        POWERS {
+            #t8a19e1157b034bf196a656 ^"Venom (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Venom"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "the sting of the scorpion-man’s tail contains a potent venom. Characters struck must make a Stamina roll against an Ease Factor of 9 or take a Heavy Wound. The sting is treated as a weapon, so this power has no Initiative score. PeCo 20 (base 15, +1 Touch) Lesser Power (20 levels, –4 Might cost, +10 experience in Penetration)"
+            }
+        }
+        DESCRIPTION "The gods appropriated the girtablullu as guardians of monuments and sacred places, and they are particularly associated with the sun god Shamash. Consequently, these scorpion-men are encountered by those who investigate the ruins left behind by cultures past. Girtablullu are usually found in small groups, which constitute a Trained Group. They are most powerful during the day, suffering from the Poor Eyesight, No Sense of Direction, and Clumsy Flaws when encountered at night."
+    }
+
+}

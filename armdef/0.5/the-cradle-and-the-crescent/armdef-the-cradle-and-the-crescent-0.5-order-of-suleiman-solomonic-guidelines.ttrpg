@@ -1,0 +1,103 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_OrderOfSuleiman_SolomonicGuidelines" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Chapter Three: Order of Suleiman solomonic guidelines"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The chapter's solomonic guidelines, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1df9600fab56895c7d7e3c ^"Solomonic Alchemy Guidelines" DEF {
+        EXTENDS #tad715571a62d5d21d926ff ^"Solomonic Guidelines"
+        PROPERTIES {
+            ^"Art" STRING "Solomonic Alchemy"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 49
+        }
+        GUIDELINES {
+            "Level 3" "Enhance or diminish a secondary quality of simple matter. Purify simple matter."
+            "Level 4" "Enhance or diminish a principle quality of simple matter."
+            "Level 5" "Enhance or diminish a secondary quality of complex matter. Purify complex matter. Transform simple matter into another kind of simple matter for the duration of the effect. (Ritual) Increase or decrease the size of matter for the duration of the effect. (Ritual)"
+            "Level 10" "Enhance or diminish a principle quality of complex matter. Animate simple matter for the duration of the effect. (Ritual) Transform simple or complex matter into another kind of simple or complex matter for the duration of the effect. (Ritual)"
+            "Level 15" "Animate complex matter for the duration of the effect. (Ritual) Transform matter for the duration of the effect, adding or removing properties like weight or temperature with the Alteration parameter. (Ritual)"
+        }
+        DESCRIPTION "These guidelines distinguish between changes to principle qualities (hot, cold, dry, or moist) and secondary qualities (things like acidity, density, weight, or color) of matter.\n\nRitual alchemy effects can be held dormant until the sahir or the spirit triggers them by concentrating upon them, for as long as the spirit maintains the effect, and may be transferred from one appropriate target to another as long as the effect is still active and the new target is touching the former target, the sahir, or the spirit (Finesse rolls are required if the new target is not clearly part of the original target). Animated objects will move under the sahir’s control if he concentrates upon them, but he must make Finesse rolls for more focused manipulation.\n\nUnlike basic Alchemy spells that bring about natural changes to the substance of the target, spells that use ritual guidelines produce a magical substance that for the duration cannot directly affect anyone with Magic Resistance unless the spell Penetrates."
+    }
+
+    #tbe050cb8b1d0b566eec8f3 ^"Solomonic Astrology Guidelines" DEF {
+        EXTENDS #tad715571a62d5d21d926ff ^"Solomonic Guidelines"
+        PROPERTIES {
+            ^"Art" STRING "Solomonic Astrology"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 51
+        }
+        GUIDELINES {
+            "General" "Receive a premonition regarding auspicious influences for a particular action. The bonus the target receives is equal to (the magnitude of this effect – 3), and cannot be negative. (Ritual)"
+            "Level 2" "Perceive one obvious property of a person or object (e.g., hair color, current activity)."
+            "Level 3" "Perceive one property of a person or object that can be determined from close examination (e.g., state of consciousness, age)."
+            "Level 4" "Perceive a specific piece of information about a person or object that cannot normally be determined without an appropriate Ability (e.g., emotional state, maker of an object). Perceive one obvious property of a person’s or object’s surroundings (e.g., time of day, sounds). (Ritual)"
+            "Level 5" "Sense complex information about a person or object that would normally require extended use of an Ability (e.g., the truth of a statement, all mundane properties of an object). Perceive one property of a person’s or object’s surroundings that can be determined from close examination (e.g., climate, prosperity level). (Ritual) Receive a premonition regarding mortal peril to a person or object (+2 bonus). (Ritual) Create a temporary Arcane Connection to the target, with connection strength equal to (the magnitude of the Detail parameter + 1). (Ritual)"
+            "Level 10" "Perceive a specific piece of information about a person’s or object’s surroundings that cannot normally be determined without an appropriate Ability (e.g., a companion’s health, a supernatural aura). (Ritual) Receive a premonition regarding danger to a person or object (+1 bonus). (Ritual)"
+            "Level 15" "Perceive complex information about a person’s or object’s surroundings that would normally require extended use of an Ability (e.g., all nearby animals, what others think of that person) (Ritual) Receive a premonition regarding an inconvenience to a person or object (+0 bonus). (Ritual)"
+        }
+        DESCRIPTION "All Solomonic Astrology ritual spells increase the Penetration of the sahir’s magic by the effect level when casting subsequent spells against that same target, as long as the Solomonic Astrology ritual itself Penetrates. This bonus only lasts while the spirit maintains the effect, and requires the sahir to make a Finesse roll if he is casting the second spell through the same spirit."
+    }
+
+    #t53502f515463143dbda6df ^"Solomonic Physic Guidelines" DEF {
+        EXTENDS #tad715571a62d5d21d926ff ^"Solomonic Guidelines"
+        PROPERTIES {
+            ^"Art" STRING "Solomonic Physic"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 53
+        }
+        GUIDELINES {
+            "General" "Modify the target’s next Wound Recovery roll by (3 x (the effect’s magnitude + 2)). Use this general guideline for effects Base Level 5 or greater. Modify the target’s next Disease Recovery roll by (3 x (the effect’s magnitude + 2)) against diseases of a certain humor. Use this general guideline for effects Base Level 5 or greater. Cause a wound if the target fails a Stamina roll against an Ease Factor of (3 x (the effect’s magnitude + 2)). Use this general guideline for effects Base Level 5 or greater. Increase or decrease a Personality Trait associated with one of the four humors by a number of points equal to (the magnitude of this effect + 1), up to the maximum established by the Potency parameter. (Ritual) Increase one of a person’s Characteristics for the effect’s duration by a number of points equal to (the magnitude of this effect – 3), up to the maximum established by the Potency parameter. (Ritual) Decrease one of a person’s Characteristics for the effect’s duration by a number of points equal to (the magnitude of this effect – 3), up to the maximum established by the Potency parameter. (Ritual)"
+            "Level 2" "Modify the target’s next Wound Recovery roll by 1. Modify the target’s next Disease Recovery roll against diseases of a certain humor by 1. Cause a wound if the target fails a Stamina roll against an Ease Factor of 0."
+            "Level 3" "Modify the target’s next Wound Recovery roll by 3. Modify the target’s next Disease Recovery roll against diseases of a certain humor by 3. Cause a wound if the patient fails a Stamina roll against an Ease Factor of 3. Reduce or increase the potency of poison by one step."
+            "Level 4" "Modify the target’s next Wound Recovery roll by 6. Modify the target’s next Disease Recovery roll against diseases of a certain humor by 6. Cause a wound if the patient fails a Stamina roll against an Ease Factor of 6."
+            "Level 5" "Cure a specific disease in the normal recovery interval. Restore a fatigue level. Cause the loss of a fatigue level. Restore a long-term fatigue level. (Ritual) Cause the loss of a long-term fatigue level. (Ritual) Instantly cure a specific disease. (Ritual) Infect the target with a specific disease. (Ritual) Transform a Personality Trait into a different Trait for the duration. (Ritual)"
+            "Level 10" "Heal a wound from a specific source (poison, crushing damage, piercing damage) over the course of the wound’s normal recovery interval. Instantly heal a wound from a specific source (piercing damage, crushing damage, poison). (Ritual) Cause a wound. (Ritual) Instantly cure any disease. (Ritual)"
+            "Level 15" "Instantly heal a wound from any source. (Ritual)"
+            "Level 20" "Resolve an aging crisis. (Ritual) Cause an aging crisis. (Ritual)"
+        }
+        DESCRIPTION "All active Solomonic Physic ritual spells also either protect the patient against the penalties for that particular type of wound, disease, or level of fatigue; or they prevent that wound, disease or fatigue from healing, for as long as the spirit maintains the effect.\n\nAlso, for the duration, ritual spells may be delayed like with Solomonic Alchemy: they can be held dormant until the sahir or the spirit releases them by touching the target."
+    }
+
+    #t728400fde2e45839e70637 ^"Solomonic Storytelling Guidelines" DEF {
+        EXTENDS #tad715571a62d5d21d926ff ^"Solomonic Guidelines"
+        PROPERTIES {
+            ^"Art" STRING "Solomonic Storytelling"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 56
+        }
+        GUIDELINES {
+            "Level 3" "Change an audience’s dominant emotion into a similar emotion. Convince an audience to follow an innocuous course of action (“drink and carouse”)."
+            "Level 4" "Inspire a specific emotion in an audience. Convey a short message to an audience, no matter what language they speak. Change an audience’s current mental state (sleepy, confused, or awake). Convince an audience to follow a questionable course of action (“give me your money”)."
+            "Level 5" "Alter an audience’s memories of an event. Convince an audience to follow a dangerous course of action (“wander into the desert”). Conjure an illusion of an individual (with additional size magnitudes for very large individuals). (Ritual) Change an individual’s image (with additional magnitudes added for very large individuals, or for increasing the target’s size). (Ritual)"
+            "Level 10" "Place false memories of an event in an audience’s minds. Convince an audience to follow a heinous course of action (“attack each other”). Conjure an illusion of a group of individuals (with additional magnitudes added for larger groups). (Ritual) Change the images of a group of individuals (with additional magnitudes added for larger groups). (Ritual)"
+            "Level 15" "Convince an audience to follow a suicidal course of action (“fall upon your swords”). Conjure an illusion of a room and its contents, or another image up to about ten paces across. (Ritual) Change the images in a room, or another location up to about ten paces across. (Ritual)"
+            "Level 20" "Conjure an illusion of a structure and its contents, or another image up to about a hundred paces across. (Ritual) Change the images in a structure, or another location up to about a hundred paces across. (Ritual)"
+            "Level 25" "Conjure an illusion of a boundary and its contents, or another image up to about a thousand paces across. (Ritual) Change the images in a boundary, or another location up to about a thousand paces across. (Ritual)"
+        }
+        DESCRIPTION "All active Solomonic Storytelling ritual spells allow the sahir to provide additional direction by concentrating on the target, and selectively suppress or restore the effects on anyone affected by them, for as long as the spirit maintains the spell."
+    }
+
+    #ta83c20128aca35831049dc ^"Solomonic Travel Guidelines" DEF {
+        EXTENDS #tad715571a62d5d21d926ff ^"Solomonic Guidelines"
+        PROPERTIES {
+            ^"Art" STRING "Solomonic Travel"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 58
+        }
+        GUIDELINES {
+            "General" "Give the target a Warping Point if it fails a Stamina roll against an Ease Factor of (3 x (the spell’s base magnitude + 1)). Additional magnitudes can also increase the number of Warping Points gained. Restore a number of Might Points to a target equal to (the base level of the effect – 5). Open a passage through a supernatural regio boundary of level no greater than (the base magnitude of this effect + 5). Open a passage through the Twilight Void to a vestige or boundary in the Magic Realm of level no greater than the base magnitude of this effect (see *Realms of Power: Magic*, pages 21–26). Open a passage into the Faerie Realm through a supernatural aura of level no less than (10 – (the base magnitude of this effect + 1)) (see *Realms of Power: Faerie*, pages 20–23). Close a window or passage opened with Solomonic Travel or a similar power if the magnitude of the canceled effect is less than ((this spell’s base magnitude + 1) x 2). Open a passage from the Faerie Realm to a supernatural aura with an aura bonus or penalty no less than (10 – (the base magnitude of this spell + 5)) (see *Realms of Power: Faerie*, pages 29-30). (Ritual) Open a passage through a supernatural aura to another aura of the same realm, both auras of level no less than (10 – the base magnitude of this spell). (Ritual)"
+            "Level 10" "Force the target to make an Aging roll."
+            "Level 15" "Open a passage into the Twilight Void (see *Realms of Power: Magic*, pages 23–26). (Ritual) Open a window through an Arcane Connection. (Ritual) Open a window through which ghosts and other insubstantial beings can be seen. (Ritual) Open a window into a sleeping person’s dreams (see *The Mysteries Revised Edition*, pages 102–111). (Ritual)"
+            "Level 20" "Open a window to or from the physical world through a Magic Realm vestige or boundary (see *Realms of Power: Magic*, pages 21-23). (Ritual)"
+            "Level 25" "Open a passage that transforms the sahir and his companions into spirits for the duration. (Ritual) Open a passage into a sleeping person’s dreams (see *The Mysteries Revised Edition*, pages 102–111). (Ritual) Open a passage through an Arcane Connection. (Ritual)"
+            "Level 30" "Open a direct passage to or from the Magic Realm through a vestige or boundary, bypassing the Twilight Void (see *Realms of Power: Magic*, pages 21–23). (Ritual) Open a direct passage to or from the Faerie Realm (see *Realms of Power: Faerie*, pages 29–30). (Ritual)"
+        }
+        DESCRIPTION "Active Solomonic Travel ritual spells grant the sahir supernatural senses, allowing him to see through illusions and perceive things that are imbued with supernatural power. Treat this as scores in both Magic Sensitivity and Second Sight equal to the magnitude of the spell for as long as the spirit maintains it. This supernatural sense is also affected by the Delay parameter, however, and does not actually manifest until the spell comes into effect, though the spirit must still maintain it until then.\n\nA window or passage allows the sahir  and anyone nearby to perceive species through it from another location, and allows those on the other side to perceive the sahir’s location as well. These portals remain open as long as the spirit maintains the effect, and travel through a passage can be selectively granted or revoked to others by the spirit or as the sahir directs."
+    }
+
+}

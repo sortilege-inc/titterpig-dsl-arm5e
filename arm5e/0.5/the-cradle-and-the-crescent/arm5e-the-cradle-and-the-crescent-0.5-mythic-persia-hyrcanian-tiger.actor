@@ -1,0 +1,63 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicPersia_HyrcanianTiger" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Hyrcanian Tiger"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Hyrcanian Tiger (Chapter Eight: Mythic Persia, p153): one being, its printed stat lines verbatim fields.
+
+    #t0e90ad9e5edfd7a38f8fee ^"Hyrcanian Tiger" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Affinity with Athletics, Improved Characteristics, Puissant Athletics; Proud"
+            ^"Magical Qualities and Inferiorities" STRING "No Fatigue; Improved Abilities (x3), Improved Attack (trip), Minor Virtue (Great Quickness) (x2), Personal Power"
+            ^"Qualities" STRING "Crafty, Fast Runner, Pursuit Predator, Tireless A magical Hyrcanian tiger suffers no fatigue, but a mundane tiger has this Quality."
+            ^"Personality Traits" STRING "Vain +5, Swift +3, Brave +1 This is an Essential Trait; see Realms of Power: Magic, page 54."
+            ^"Combat" STRING "Bite: Init +5, Attack +11, Defense +12, Damage +1 Trip: Init +4, Attack +11, Defense +13, Damage n/a If the tiger exceeds its opponent’s Defense Total by 3; it is knocked prone."
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "2 pawns Animal, in feet."
+            ^"Appearance" STRING "The Hyrcanian tiger is a long-legged tawny cat, about 7 feet long (including a 3 foot tail), and weighing about 150 pounds. Tigers in Mythic Europe have spots rather than stripes, although naturally you can have striped tigers in your saga if you prefer."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 153
+        }
+        ABILITIES {
+            "Athletics" SCORE 6 BONUS 2 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "gazelle"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+            "Dasht-i Kavir Lore" SCORE 2 SPECIALTY "oases"
+            "Hunt" SCORE 4 SPECIALTY "gazelle"
+            "Survival" SCORE 3 SPECIALTY "semi-desert"
+        }
+        POWERS {
+            #td613c99ef0c9129c54f611 ^"Swiftness of Thought" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "A Hyrcanian tiger can naturally move at incredible speeds, but by spending a Might point it moves an extra 500 paces for a single round. ReAn 20 (Base 20, by analogy with ReCo) Personal Power (20 levels, –1 Might cost)"
+            }
+        }
+        DESCRIPTION "Hyrcanian Tigers are found in Mazandaran and Persia’s northern desert. The tiger is named after its swift flight (coming from a word meaning “arrow”), and gives its name to the Tigris River. The ancient Persian kings loved keeping Hyrcanian tigers as pets, and even today the nobility set hunters to steal cubs to be trained for the hunt. The pursuing mother can be distracted by glass spheres; on seeing her own reflection she thinks it is her cub and is cheated from her revenge.\n\nThe tiger receives a +3 to all rolls involving running.\n\nFor a mundane version of this creature, remove the Might score, Magical Qualities, Powers, and vis from the earlier description. A Hyrcanian tiger is more than twice as swift than the fastest horse, even without magical powers, but can normally only sustain such speeds for one or two rounds. Its prey’s only hope of escape is to dodge and weave, since the Hyrcanian tiger cannot make sharp turns when traveling at full speed. It is in the magical tiger’s nature to hunt, and it consumes its prey — principally gazelles — even though, as a magic animal, it doesn’t need this to survive."
+    }
+
+}

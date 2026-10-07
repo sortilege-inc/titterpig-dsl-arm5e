@@ -1,0 +1,84 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicMesopotamia_Mushhushshu" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Mushhushshu"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Mushhushshu (Chapter Seven: Mythic Mesopotamia, p123): one being, its printed stat lines verbatim fields.
+
+    #t3913799485f7488508b7fc ^"Mushhushshu" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t1064f6c58f821a7d358bb0 ^"Mesopotamia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Arcane Lore, Clear Thinker, Keen Vision, Lightning Reflexes, Piercing Gaze, Strong Willed, Tough; Proud, Wanderlust; Infamous"
+            ^"Magical Qualities and Inferiorities" STRING "Gigantic, Major Virtue (Greater Immunity to Poison), Greater Power (Voice of Regal Authority); Gift of Speech, Improved Abilities x2, Improved Attack (bite) x2, Improved Powers x2, Improved Soak x2, Lesser Power (Assessing Gaze), Lesser Power (Eye of the Serpent), Minor Virtue (Desert Regio Network), Minor Virtue (Large), Minor Virtue (Lesser Immunity to Arrows), Minor Virtue (Puissant Brawl), Minor Virtue (Second Sight) See Realms of Power: Magic, page 45."
+            ^"Reputations" LIST ["Violent against Foreigners 2 (Local)"]
+            ^"Combat" STRING "Bite: Init –1, Attack +18, Defense +9, Damage +9 Claws: Init –1, Attack +14, Defense +10, Damage +10 Because of the sinuous body of the mushhushshu, it can attack with both claws and bite in the same round."
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Vis" STRING "5 pawns of Vim, in horns"
+            ^"Appearance" STRING "The mushhushshu has the sinuous body of a snake, although it has four legs like a dragon; the forelegs are like those of a lion, and the hindlegs like those of an eagle. Its head has both horns and a splendid crest."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 123
+        }
+        PERSONALITY_TRAITS {
+            "Vain" +6
+            "Aloof" +2
+            "Thirst for Knowledge" +2
+        }
+        ABILITIES {
+            "Arabic" SCORE 4 SPECIALTY "Maslawi"
+            "Assyria Lore" SCORE 4 SPECIALTY "magical places"
+            "Awareness" SCORE 3 SPECIALTY "invaders"
+            "Babylonian" SCORE 5 SPECIALTY "Assyrian"
+            "Brawl" SCORE 6 BONUS 2 SPECIALTY "bite"
+            "Concentration" SCORE 3 SPECIALTY "Eye of the Serpent"
+            "Hunt" SCORE 4 SPECIALTY "interlopers"
+            "Infernal Lore" SCORE 3 SPECIALTY "local demons"
+            "Intrigue" SCORE 3 SPECIALTY "politics"
+            "Faerie Lore" SCORE 2 SPECIALTY "servants of deities"
+            "Magic Lore" SCORE 4 SPECIALTY "local spirits"
+            "Mesopotamia Lore" SCORE 4 SPECIALTY "Old Babylonia"
+            "Penetration" SCORE 4 SPECIALTY "Voice of Regal Authority"
+            "Second Sight" SCORE 4 SPECIALTY "spirits"
+        }
+        POWERS {
+            #t6dcde43eaa2a88a72e12ce ^"Assessing Gaze" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The mushhushshu can determine which of a group of humans poses it the greatest threat. This usually reveals who is the most competent warrior, but can also detect the presence (although not strength) of magic. InCo(Vi) 25 (Base 5, +1 Eye, +2 Group, +1 requisite) Lesser Power (25 levels, –4 Might cost and +1 Init from Improved Powers) *Voice of Regal Authority*, 1 point, constant, Mentem: Anyone hearing the voice of the mushhushshu is strongly inclined to obey its commands. ReMe 35 (Base 5, +2 Sun, +3 Sound, +1 constant effect) Greater Power (35 levels, –3 Might cost)"
+            }
+            #t90084e5a3263a481516acc ^"Eye of the Serpent" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–6"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The mushhushshu can transfix a person with a glance, leaving him incapable of movement. ReCo 15 (Base 5, +1 Eye, +1 Conc) Lesser Power (15 levels, –2 Might cost, +5 Init from Improved Powers)"
+            }
+        }
+        DESCRIPTION "After the death of their mother Tiamat, the mushhushshu (moosh-chooshshoo, where the “ch” is pronounced as in “loch”) were assigned to Ashshur, the patron of Assyria. His priesthood were capable of summoning and controlling the mushhushshu, and there may be yatus in Harran (see later) who are still able to do so. Unless summoned, the mushhushshu roam through the hills and desert fringes of old Assyria, traveling between Magic auras and regiones. They are prone to attack any armed foreigners within the borders of Assyria, but can be forestalled from attacking by offering interesting information or important news. Before battle, if possible, the creature uses its *Assessing Gaze* power to determine the target for its *Eye of the Serpent* power."
+    }
+
+}

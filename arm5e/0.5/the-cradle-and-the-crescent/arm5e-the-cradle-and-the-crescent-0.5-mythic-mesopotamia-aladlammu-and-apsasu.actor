@@ -1,0 +1,76 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicMesopotamia_AladlammuAndApsasu" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Aladlammu and Apsasu"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Aladlammu and Apsasu (Chapter Seven: Mythic Mesopotamia, p120): one being, its printed stat lines verbatim fields.
+
+    #tc5d8930e04a4b8e1b80601 ^"Aladlammu and Apsasu" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t1064f6c58f821a7d358bb0 ^"Mesopotamia"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 4
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Huge x3, Greater Power (Repel the Nightstalking Spirit), Increased Might, Major Virtue (Greater Immunity to Disease), Ritual Power (Restoration of the Defiled Body); Faerie Speech, Improved Characteristics x2, Improved Damage, Improved Soak x3, Increased Might x2, Hybrid Form, Lesser Power (Burn the Filthy Spirit), Positive Folk Tales, Second Sight; Compassionate, Sovereign Ward (special amulet, see later), Supernatural Nuisance (disease demons); Incognizant"
+            ^"Reputations" LIST ["Foe of Demons 2 (Local)"]
+            ^"Soak" INTEGER 8
+            ^"Wound Penalties" STRING "–1 (1–9), –3 (10–18), –5 (19–27), Incapacitated (28–36), Dead (37+)"
+            ^"Pretenses" STRING "Awareness 3 (alertness), Brawl 7 (hooves), Chirurgy 2 (heatstroke), Folk Ken 4 (spotting the possessed), Infernal Lore 4 (disease spirits), Second Sight 5 (demons)"
+            ^"Vis" STRING "6 pawns of Animal, in hooves"
+            ^"Appearance" STRING "The aladlammu has the body of a mighty bull, an immense pair of wings, and a bearded human head. The apsasu have a similar appearance, but their heads are female. When they strike with their hooves against an opponent, sparks fly."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 120
+        }
+        PERSONALITY_TRAITS {
+            "Hatred for demons" +3
+            "Helpful" +2
+        }
+        COMBAT {
+            "Trample" INIT 0 ATTACK 12 DEFENSE 8 DAMAGE 14
+        }
+        POWERS {
+            #t1ad641a0794ebe57d77298 ^"Burn The Filthy Spirit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "By making eye contact with a demon (whether through normal sight or Second Sight), the aladlammu can strip it of 15 Might. PeVi 10 (Base 5, +1 Eye) Lesser Power (10 levels, –2 Might cost, +1 Init)"
+            }
+            #t2672eb9bd284d21ddbdf9a ^"Repel the Nightstalking Spirit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The aladlammu can designate a room or area of clear ground to be safe from demons. If there are no clear pre-existing boundaries, the creature must mark the protected area somehow to create an unbroken line, although this need not be a circle. If the power has a sufficient Penetration Total, no demon with an Infernal Might of 25 or less may enter this designated area. ReVi 30 (Base 25, +1 unusual Target) Greater Power (30 levels, –2 Might cost, +10 experience points in Penetration)"
+            }
+            #tffff823ed387401ecbd6a4 ^"Restoration of the Defiled Body (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Restoration of the Defiled Body"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–11"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "as per the spell of the same name (**ArM5**, page 129). As a ritual power, this power requires a permanent reduction in Might Score as well as Might points. CrCo 25 (Base 20, +1 Touch) Ritual Power (25 levels, –2 Might cost, +15 experience points in Penetration)"
+            }
+        }
+        DESCRIPTION "The aladlammu and apsasu are guardian creatures created by the gods of old, male and female respectively. Creatures with the same characteristics, but with winged human bodies to match their heads are called *shedu* if male, or *lamassu* if female. Colossal effigies of these beasts can be found among many major ruins of the ancient Middle East. They are fierce opponents of harmful spirits, and a region lucky enough to have an effigy can evoke the faerie to assist them if plagued by disease or demons. A character with an appropriate Area Lore and Faerie Lore can construct an amulet that constitutes an aladlammu’s Sovereign Ward (*Realms of Power: Faerie*, page 52).\n\nThese creatures are not suitable as player characters."
+    }
+
+}

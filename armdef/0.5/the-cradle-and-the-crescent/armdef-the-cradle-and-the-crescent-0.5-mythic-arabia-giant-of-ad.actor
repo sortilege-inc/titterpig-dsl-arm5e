@@ -1,0 +1,54 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_MythicArabia_GiantOfAd" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Giant of ‘Ad"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Giant of ‘Ad (Chapter Six: Mythic Arabia, p119): one being, its printed stat lines verbatim fields.
+
+    #t95dab3ed4774c6c7189b93 ^"Giant of ‘Ad" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tba6700e7963dd72aab43fb ^"Arabia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Corpus"
+            ^"Season" STRING "Autumn"
+            ^"Characteristics" STRING "Int 0, Per +2, Pre –1, Com –1, Str +13, Sta 0, Dex +1, Qik –4."
+            ^"Size" INTEGER 7
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Human; Improved Characteristics, Magical Champion, Ways of the Desert; Pagan; Anchored to the Desert; (Magical) Animal Companion, Offensive to Spirits."
+            ^"Magic Qualities and Inferiorities" STRING "Gigantic x6; Focus Power, 3 points; Monstrous Appearance (free); Acclimation Prone; Susceptible to Deprivation."
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–12), –3 (13– 24), –5 (25–36), Incapacitated (37– 48), Dead (49+)"
+            ^"Abilities" STRING "Animal Handling 2 (falconry), Arabia Lore 6 (cities), ‘Adid 5 (ancient), Bargain 3 (payment for services), Brawl 2 (stomp), Craft (stonemason) 6, Magic Lore 4 (Arabia), Survival 3 (desert)."
+            ^"Equipment" STRING "mason’s tools, sand-colored Bedouin robes"
+            ^"Vis" STRING "1 pawn of Corpus vis in heart, 1 pawn of Terram vis in each hand."
+            ^"Appearance" STRING "Towering above the average human, a giant of ‘Ad stands over 30 feet tall but appears much more civilized than the primitive giants of Europe. They have an affinity for falcons and other birds of prey and are usually found accompanied by at least one nesting within their long hair or beard. Lone giants emerge from the deep desert to offer their building skills to sorcerers and emirs, in return for insights into the secrets of eternal life."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 119
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +2
+            "Focused" -1
+        }
+        COMBAT {
+            "Chisel (as knife)" INIT -4 ATTACK 3 DEFENSE -2 DAMAGE 15
+            " Stomp (kick)" INIT -5 ATTACK 4 DEFENSE -1 DAMAGE 16
+        }
+        POWERS {
+            #td77efec3684b5f90a8b5c3 ^"Stonesmith" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1–4 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Duplicates any non-Ritual Creo Terram, Intellego Terram or Muto Terram spell less than or equal to 20th level that affects stone, at a cost of 1 Might point per magnitude of effect."
+            }
+        }
+        DESCRIPTION "Descendants of Great ‘Ad, the giants of southern Arabia are colossal magical creatures from pre-Islamic times. Descended from Noah’s third son, they have dwelled within magic regiones deep within the deserts of Oman since the loss of their greatest creation, the fabled City of a Thousand Pillars. Unlike many magical creatures, the ‘Adites are not immortal and weaken if they spend too much time outside strong desert Magic auras.\n\nA giant of ‘Ad is balanced as a starting character, albeit a powerful initial Companion option. This character guide has 295 Experience Points available to spend on Abilities and 5 Virtue points free (to be balanced with 5 points of Flaws). His falcon companion may be either mundane or magical, although proportionately larger (up to Size +3) and has its statistics adjusted accordingly."
+    }
+
+}

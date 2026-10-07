@@ -1,0 +1,444 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_OrderOfSuleiman_Rules" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Chapter Three: Order of Suleiman rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t509fe9bce08ce2254557f9 ^"Summoning Total (Summoning Spells)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Summoning Total"
+            ^"Ease Factor" STRING " spirit’s Might Score"
+            ^"Rules Section" STRING "Summoning Spells"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 34
+        }
+        FORMULAS {
+            "Summoning Total" "stress die + Presence + summoning art + aura"
+        }
+    }
+
+    #t58bd2a7fb53aa2fb9e5c9b ^"Penetration Total (Summoning Spells)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration Total"
+            ^"Rules Section" STRING "Summoning Spells"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 34
+        }
+        FORMULAS {
+            "Penetration Total" "Summoning Total + sahir’s Penetration bonus – spirit’s Might Score"
+        }
+    }
+
+    #t4b187ccd8e39e98788fbfa ^"Summoning Strength (Formulaic and Ritual Spells)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Summoning Strength"
+            ^"Rules Section" STRING "Formulaic and Ritual Spells"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 35
+        }
+        FORMULAS {
+            "Summoning Strength" "Summoning Total – spirit’s Might Score"
+        }
+    }
+
+    #tb2bf7b56c3cbf99737d6a4 ^"Formulaic Spell Casting Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Formulaic and Ritual Spells"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 35
+        }
+        FORMULAS {
+            "Formulaic Spell Casting Total" "stress die + Presence + Solomonic art + Summoning Strength + aura (+ appropriate Ability, if used)"
+        }
+    }
+
+    #t5b89ecb3d6e366d61f4db7 ^"Ritual Spell Casting Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Formulaic and Ritual Spells"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 35
+        }
+        FORMULAS {
+            "Ritual Spell Casting Total" "spend vis, stress die + Presence + Solomonic art + Summoning Strength + aura (+ appropriate Ability, if used)"
+        }
+    }
+
+    #t8e8aa09f77a0f63fe89219 ^"Penetration Total (Formulaic or Ritual Spell)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration Total"
+            ^"Rules Section" STRING "Formulaic or Ritual Spell"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 37
+        }
+        FORMULAS {
+            "Penetration Total" "spirit’s Might Score + spirit’s Penetration bonus + spirit’s aura modifier – spell level"
+        }
+    }
+
+    #t17d6403333eba1759c2b74 ^"Spell Level Limit (unGifted)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Formulaic or Ritual Spell"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 37
+        }
+        FORMULAS {
+            "Spell Level Limit (unGifted)" "Might Score of summoned spirit"
+        }
+    }
+
+    #t5905901aaef198f7936e83 ^"Vis Limit (Vis (Taqa))" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Vis Limit"
+            ^"Rules Section" STRING "Vis (Taqa)"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 37
+        }
+        FORMULAS {
+            "Vis Limit" "score in summoning art (summoning spell) or Solomonic art (formulaic or ritual spell)"
+        }
+    }
+
+    #t955c892656d13b48323df1 ^"Lab Total (The Cradle & The Crescent)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Lab Total"
+            ^"Rules Section" STRING "Seasonal Summoning"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 37
+        }
+        FORMULAS {
+            "Lab Total" "Intelligence + appropriate Solomonic art + appropriate Ability + Summoning Strength + aura"
+        }
+    }
+
+    #tedf0088234feded48c51ff ^"Lab Effect Level Limit (unGifted)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Seasonal Summoning"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 37
+        }
+        FORMULAS {
+            "Lab Effect Level Limit (unGifted)" "spirit’s Might Score"
+        }
+    }
+
+    #tcf5849e24fa3969a486449 ^"Vis Extraction (The Cradle & The Crescent)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Vis Extraction"
+            ^"Rules Section" STRING "Vis Manipulation"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "Vis Extraction" "pawns equal to (Solomonic Alchemy + Philosophiae Lab Total) / 10"
+        }
+    }
+
+    #t0a9c7cb04cb5e8bded1d22 ^"Vis Removal" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vis Manipulation"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "Vis Removal" "pawns equal to (Solomonic Alchemy + Philosophiae Lab Total) / 5"
+        }
+    }
+
+    #ta8ed8d0c65afd8f7f9dee7 ^"Vis Transfer (The Cradle & The Crescent)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Vis Transfer"
+            ^"Rules Section" STRING "Vis Manipulation"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "Vis Transfer" "pawns equal to (Solomonic Alchemy + Philosophiae Lab Total) / 2"
+        }
+    }
+
+    #t71d599f58ecb7101bc9756 ^"Vis Limit (Vis Manipulation)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Vis Limit"
+            ^"Rules Section" STRING "Vis Manipulation"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 38
+        }
+        FORMULAS {
+            "Vis Limit" "score in associated Solomonic art"
+        }
+    }
+
+    #t9579df3fa7c9b8ee95acc0 ^"Fix Arcane Connections" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Arcane Connections"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Fix Arcane Connections" "Solomonic Astrology + Artes Liberales Lab Total"
+        }
+    }
+
+    #t9ac69d311554b6e22f3d8c ^"Transfer Arcane Connections" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Arcane Connections"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Transfer Arcane Connections" "Solomonic Astrology + Artes Liberales Lab Total"
+        }
+    }
+
+    #ta9bd8c3641628a098543d5 ^"Learning Spells" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Naranjs"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Learning Spells" "spell levels equal to teacher’s highest applicable Teaching Lab Total"
+        }
+    }
+
+    #t1605171ddae74ec902288a ^"Inventing Formulaic or Ritual Spells" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Naranjs"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Inventing Formulaic or Ritual Spells" "(appropriate art + appropriate Ability Lab Total – effect level) points towards spell level"
+        }
+    }
+
+    #t8098751afbdf42a464173d ^"Inventing Summoning Spells" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Naranjs"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Inventing Summoning Spells" "(Solomonic Astrology + Artes Liberales Lab Total – effect level) points towards spell level"
+        }
+    }
+
+    #t8e7bec14f2598d075db878 ^"Lesser Bindings" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Bindings"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Lesser Bindings" "effect level equal to (appropriate art + Philosophiae Lab Total) / 2"
+        }
+    }
+
+    #tae3df75cc6bd0196404d00 ^"Binding Enchantments" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Bindings"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Binding Enchantments" "(Solomonic Alchemy + Philosophiae Lab Total – pawns of vis to be invested) points towards the number of pawns of vis to be invested"
+        }
+    }
+
+    #t0130ded4a2d466f75ad23d ^"Greater Bindings" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Bindings"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 39
+        }
+        FORMULAS {
+            "Greater Bindings" "(appropriate art + Philosophiae Lab Total – effect level) points towards effect level"
+        }
+    }
+
+    #t893052391aa4ed2bea801b ^"Maximum Might Score (Seeking)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Seeking and Scouring"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 40
+        }
+        FORMULAS {
+            "Maximum Might Score (Seeking)" "Solomonic Storytelling + appropriate Area Lore Lab Total"
+        }
+    }
+
+    #tc4f95256380a1bfed53f6d ^"Maximum Might Score (Scouring)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Seeking and Scouring"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 40
+        }
+        FORMULAS {
+            "Maximum Might Score (Scouring)" "(Solomonic Storytelling + appropriate Area Lore Lab Total) / 2"
+        }
+    }
+
+    #t28420e6add7e21797075b6 ^"Maximum Might Score Warded" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Warding"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 41
+        }
+        FORMULAS {
+            "Maximum Might Score Warded" "Solomonic Travel + (Realm) Lore Lab Total"
+        }
+    }
+
+    #tcfb423c6bf3f8bd6392465 ^"Enchanting a Khadim" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Warding"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 41
+        }
+        FORMULAS {
+            "Enchanting a Khadim" "highest Solomonic art + (Realm) Lore Lab Total, equal to spirit’s Might Score"
+        }
+    }
+
+    #tbd3a0c5ab81a0e92a5f97c ^"Al-Iksir" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Warding"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 41
+        }
+        FORMULAS {
+            "Al-Iksir" "highest Solomonic art + Medicine Lab Total"
+        }
+    }
+
+    #t29f50f005d1b58126e906a ^"Opening Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Initiating the Arts"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 42
+        }
+        FORMULAS {
+            "Opening Total" "(Solomonic Travel + Magic Lore Lab Total) / 2"
+        }
+    }
+
+    #td015f7da6eaab255221111 ^"Fatra Bayna Avoidance" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Warping and Corruption"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 43
+        }
+        FORMULAS {
+            "Fatra Bayna Avoidance" "stress die + Stamina + Concentration + Solomonic Travel bonus vs. stress die (no botch) + Warping Score + Warping Points received + aura"
+        }
+    }
+
+    #td837d2b5e74abf65d11f1c ^"Discern Might" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Discerning Jinn"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Discern Might" "Intelligence + (Realm) Lore + stress die against Ease Factor of 9"
+        }
+    }
+
+    #taef7690522459a584632f1 ^"Summoning Total (Summoning Jinn)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Summoning Total"
+            ^"Ease Factor" STRING " jinni’s Might Score"
+            ^"Rules Section" STRING "Summoning Jinn"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Summoning Total" "Presence + Sihr + aura + stress die"
+        }
+    }
+
+    #ta03d84915e39c3eea93458 ^"Summoning Penetration" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Summoning Jinn"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Summoning Penetration" "Summoning Total + sahir’s Penetration Bonus – jinni’s Might Score"
+        }
+    }
+
+    #t633602d7981bdb569ff05a ^"Summoning Strength (Summoning Jinn)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Summoning Strength"
+            ^"Rules Section" STRING "Summoning Jinn"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Summoning Strength" "Summoning Total – jinni’s Might Score"
+        }
+    }
+
+    #tbd1e2f93ae97c4026dda2f ^"Bargaining Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING " 18 + bargaining modifiers"
+            ^"Rules Section" STRING "Bargaining with the Jinni"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Bargaining Total" "Communication + Bargain + Summoning Strength + stress die"
+        }
+    }
+
+    #tc260d6827c5e2867692c93 ^"Maximum Number of Bound Jinn" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Bargaining with the Jinni"
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 46
+        }
+        FORMULAS {
+            "Maximum Number of Bound Jinn" "Leadership + 1"
+        }
+    }
+
+}

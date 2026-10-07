@@ -1,0 +1,73 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicArabia_TheNisnas" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - The Nisnas"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The Nisnas (Chapter Six: Mythic Arabia, p116): one being, its printed stat lines verbatim fields.
+
+    #t0bb617e1f976bb7974461d ^"The Nisnas" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tba6700e7963dd72aab43fb ^"Arabia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -1
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Human; Magical Monster; Essential Virtue (Fast Leaper), Ways of the Forests; Keen Vision, Long-Winded, Sharp Ears, Voice of the Forest, Wilderness Sense; Enemies (people of Hadramawt); Compulsion (curiosity), Missing Eye, Missing Hand, Small Frame"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power, Improved Defense x2, Improved Fatigue x2, Improved Initiative x2, Improved Soak x2; Monstrous Appearance; Susceptible to Deprivation"
+            ^"Soak" INTEGER 6
+            ^"Wound Penalties (material form)" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Vis" STRING "2 pawns Corpus, in foot."
+            ^"Appearance" STRING "The nisnas looks like a small man, but with half a head (with no face), half a body, one arm, one leg, a sheep’s tail and half a face implanted in its chest."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 116
+        }
+        PERSONALITY_TRAITS {
+            "Cautious" +1
+            "Curious" +3
+            "Skittish +2; Fast (Leaping) +6 Combat: Fist: Init" +6
+            "Attack" +2
+            "Defense" +8
+            "Damage" -3
+        }
+        ABILITIES {
+            "Arabic" SCORE 4 SPECIALTY "listening in"
+            "Athletics" SCORE 5 SPECIALTY "leaping"
+            "Awareness" SCORE 3 SPECIALTY "ambushes"
+            "Brawl" SCORE 3 SPECIALTY "fist"
+            "Concentration" SCORE 2 SPECIALTY "jumping"
+            "Folk Ken" SCORE 2 SPECIALTY "peasants"
+            "Hadramawt Lore" SCORE 3 SPECIALTY "forests"
+            "Hunt" SCORE 3 SPECIALTY "tracking"
+            "Stealth" SCORE 3 SPECIALTY "sneak"
+            "Survival" SCORE 3 SPECIALTY "forests"
+            "Wilderness Sense" SCORE 3 SPECIALTY "forests"
+        }
+        POWERS {
+            #te23aa1bd4b7022a0836619 ^"Hop like the Wind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "R: Per, D: Sun, T: Ind. The nisnas can make great leaps to cover terrain at speed. This works like the Hermetic spell *Gift of the Frog’s Legs*, except that the nisnas may make a great leap every round. (Greater Power, 20 levels, –2 Might cost, +4 Initiative)"
+            }
+        }
+        DESCRIPTION "The nisnas is found in the forests of Yemen and Hadramawt, though its origin seems to be in Hadramawt specifically. It is a wild, inoffensive creature, but the people of Hadramawt find its flesh sweet, so they hunt it for food. Nisnases can speak, and tales are told of some who begged for mercy before they were slain.\n\n**Story Seed: An Escaped Nisnas** The characters come across a nisnas that has escaped from its captors. It begs them to help it get away. This is likely to raise a moral or emotional dilemma for some characters. According to most religious teachings, only humans have souls. Yet this creature seems literally half-human; so does it have a soul? Even if not, will the characters willingly refuse aid to a creature that is begging for them to help it escape from being eaten?"
+    }
+
+}

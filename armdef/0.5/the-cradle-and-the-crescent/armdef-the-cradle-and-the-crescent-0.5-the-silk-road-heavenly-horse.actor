@@ -1,0 +1,50 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_TheSilkRoad_HeavenlyHorse" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Heavenly Horse"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Heavenly Horse (Chapter Nine: The Silk Road & Beyond, p174): one being, its printed stat lines verbatim fields.
+
+    #t2db7862378288e3e552cbd ^"Heavenly Horse" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te7caee397b52bcc8711419 ^"Transoxiana and the East"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "0"
+            ^"Virtues and Flaws" STRING "External Vis (minor, bloody sweat), Faerie Beast, Ferocity (when ridden in battle), Long Winded, Improved Characteristic x3, Positive Reputation, Unaffected by The Gift; Incognizant, Proud (minor), Susceptible to Deprivation."
+            ^"Qualities" STRING "Amphibious, Domesticated, Fast Runner, Good Jumper, Herd Animal, Imposing Appearance x3, Tireless."
+            ^"Reputations" LIST ["Dragon-steed 2 (local)"]
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Pretenses" STRING "Athletics 4 (long-distance running), Awareness 3 (noises), Brawl 2 (hooves), Swim 4 (rivers)."
+            ^"Powers" STRING "Heavenly Hooves, 2 points, Constant, Animal: This power allows the animal to move at its maximum speed, unimpeded by poor terrain, achieving up to 30 miles per day. It may even do this across open water or chasms without needing to slow its pace. ReAn 25 (Base 10, Sun +2, +1 Constant): Personal Power, 25 levels."
+            ^"Appearance" STRING "These horses appear similar to other mid-sized breeds of charger, although even an experienced horse trainer will find it difficult to ascertain its origin. Usual specimens stand just under 16 hands (62 inches) high but appear more refined than even the finest mundane horse."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 174
+        }
+        PERSONALITY_TRAITS {
+            "Spirited" +3
+            "Loyal" +2
+        }
+        COMBAT {
+            "Hooves" INIT 4 ATTACK 2 DEFENSE 6 DAMAGE 6
+        }
+        DESCRIPTION "These Faerie mounts are believed to be descended from river dragons east of the valley of Farghana. Unlike mundane horses, they are not affected by the negative effects of The Gift or Magical Air of their riders. Even a Blatant Gift does not especially bother the animal.\n\nThese Faerie horses are also renowned for their unusual trait of sweating blood. The crimson sweat is produced by any significant physical exertion, but does no harm to the creature. If properly collected over the course of a year, such sweat acts as a Vis Source and provides 1 pawn of faerietainted Animal vis per year. As a faerie, it does not suffer from fatigue or age, although it does suffer the usual consequences if it lacks air, food, and water in its role as a magical steed.\n\nLike all horses, a Heavenly Horse gets a +3 to all rolls involving running or jumping. These creatures are not balanced to be used as player characters."
+    }
+
+}

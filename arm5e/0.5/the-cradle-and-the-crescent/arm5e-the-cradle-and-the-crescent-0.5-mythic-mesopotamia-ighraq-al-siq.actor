@@ -1,0 +1,64 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicMesopotamia_IghraqAlSiq" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Ighraq al-Siq"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Ighraq al-Siq (Chapter Seven: Mythic Mesopotamia, p130): one being, its printed stat lines verbatim fields.
+
+    #tafcc5e96613a8d60baeaa4 ^"Ighraq al-Siq" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t1064f6c58f821a7d358bb0 ^"Mesopotamia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 40
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 9
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -3
+            }
+            ^"Size" INTEGER 5
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit, Jinni; Magical Monster; Ways of the River; Improved Characteristics x2, Large, Second Sight, Water Lore; Wrathful (Major); Infamous (the mad river), Poor Memory."
+            ^"Qualities and Inferiorities" STRING "Focus Power (Crafter of Water), Greater Powers x5 (Drown, Presence, Transform into Floodwave), Lesser Powers (Donning the Corporeal Veil, Presence), Ritual Power x3 (Grant Water Lore, Grant Wilding); Huge x3, Improved Might x 5, Improved Powers x5; Major Flaw: Blatant Magical Air, Limited Movement, Major Flaw: Restriction (confined to the Majnun canyon on the Lesser Zab); Minor Flaw: Baneful Circumstances (not touching water), Minor Flaw: Restricted Power (only use Drown in Floodwave form), Minor Flaw: Restricted Power (only use Grant Wilding to individuals with existing score in Water Lore), Minor Flaw: Slow Power (Transform into Floodwave), Minor Flaw: Slow Power (Donning the Corporeal Veil)."
+            ^"Personality Traits" STRING "Wrathful +5, Proud +3, Fickle +2, Flood +3 (Essential Trait)"
+            ^"Reputation" STRING "Mad river 4 (local)"
+            ^"Combat" STRING "Bludgeon: (in floodwave form) Init -3, Attack +8, Defense +2, Damage +11 Lance: Init 0, Attack +8, Defense +2, Damage +16"
+            ^"Soak" INTEGER 6
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Abilities" STRING "Arabic 2 (water), Aramaic 5 (water),Area Lore: Tigris 5 (floods), Area Lore: Zab 6 (history), Brawl 6 (bludgeon), Great Weapon 3 (lance), Penetration 4 (wards), Second Sight 4 (jinn), Swim 6 (leaping out of the water), Theology: Islam 2 (jinn), Water Lore 6 (rivers)."
+            ^"Vis" STRING "2 pawns of Aquam vis can be collected every year from his haunt, in the form of clear rainwater that collects within a niche carved into the stone block that imprisons him. If slain in a physical form or dispersed in elemental, his body yields 8 pawns of Aquam vis within perfectly smooth stones of varied hue."
+            ^"Appearance" STRING "Ighraq al-Siq appears as a thin giant with blue-green complexion and straggly green-black hair like water weeds. He carries a large spear and is clad in a vest of watersmoothed stones. Once manifested, this humanoid form can disperse into his preferred elemental form, a floodwave carrying a hail of stones that can travel upriver or downriver along a watercourse as a marauding torrent. The effect of a Deluge of Rushing and Dashing when invoked within the narrow confines of the gorge is particularly devastating."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 130
+        }
+        POWERS {
+            #t5a3dddf7495860d42b78a1 ^"Crafter of Water (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Crafter of Water"
+                    ^"Cost" STRING "1–8 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Duplicates any non-Ritual Creo Aquam or Rego Aquam spell less than or equal to 40th level at the cost of 1 Might point per magnitude of the effect. Ighraq al-Siq can use the Water-way Range (equivalent to Sight) and Body-of-water target (equivalent to Structure) when invoking this power, being able to target anyone or anything on or in his part of the river or affecting the Zab as a whole (see *Realms of Power: Magic*, page 43). CrAq 40 or ReAq 40: Focus Power (3 mastery points to increase level by 15)."
+            }
+            #t00569e5c33dadd905ee9fd ^"Drown (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Drown"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "In Floodwave form only, Ighraq al-Siq can engulf a target whose Size is smaller than his own after a successful melee attack in an attempt to drown it, necessitating a roll to avoid deprivation (**ArM5**, pages 180–181). The victim can attempt to escape from his clutches each round using the Grappling rules (**ArM5**, page 174). (30 levels, 3 Intricacy points spent on reduced Might, 1 point on Initiative) *Donning the Corporeal Veil*, 2 points, Init +1 (affected by the Slow Power Flaw, takes an additional round of preparation to activate), Corpus; 35 levels: Ighraq al-Siq can form the humanoid body described under Appearance to house his spiritual form; when doing so he acquires the physical characteristics, size, combat statistics, and Wound levels listed earlier. His arms and amor are also created with this power. He cannot become fatigued. This body lasts until he decides he no longer needs it. Killing the body does not kill Ighraq al-Siq. *Grant Water Lore*, 5 points, Qik –13, Vim: Ighraq can grant the Minor Mystery Virtue Water Lore to an individual either temporarily or permanently. Characters granted this Virtue could improve it further through Adventure, Exposure or Experience like any other Nature Lore (see *Houses of Hermes: Mystery Cults*, pages 103–104). The Source Quality of Ighraq’s canyon is normally 4 but magi able to persuade the malevolent jinni to teach them can use the normal Teaching rules as an exception to the usual rule — in this case Ighraq’s effective Source Quality is 9. *Grant Wilding*, 10 points, Qik –23, Vim: Ighraq can grant the Major Mystery Virtue Wilding to an individual with an existing Water Lore score either temporarily or permanently (see *Houses of Hermes: Mystery Cults*, pages 105–106). *Presence*, 0 points, constant, Mentem: Once released, Ighraq al-Siq is aware of everything that goes on within his haunt. This power needs to Penetrate to perceive beings with a Magic Resistance. (35 levels, 3 Mastery points spent on reduced Might) *Transform into Floodwave*, 4 points Init –4 (affected by the Slow Power Flaw, takes an additional round of preparation to activate), Aquam: Ighraq al-Siq can transform into a floodwave, seemingly drawing on the water of the stream to appear as an elemental. (45 levels)"
+            }
+        }
+        DESCRIPTION "Ighraq al-Siq (“the drowning flood of the gorge”) is an ancient pagan spirit of the Tigris, now confined to a gorge on the lower or Lesser Zab, a tributary of the Tigris (also called Majnun, “the mad river”) from its impetuous currents. Once able to range freely along the length of the river, he is currently confined to a specific stretch in the lower reaches known as the Siq al-Majnun, or sometimes just “the Jinni’s Gorge”. He is responsible for the paroxysmal Spring flooding through this narrow canyon. This immediate canyon area has a Magic Aura of 6.\n\n**Story Seed: Jinni Blocks** Since ancient times the spirit Ighraq al-Siq has been trapped inside a Jinni Block — a type of unusual tower tomb placed at the entrances to the ruins of some lost cities. The process may be similar to the Goetic Art of Binding, but an unknown effect triggered by intrusion into the Majnun canyon area releases Ighraq al-Siq from his imprisonment and compels him to drive off intruders. While trapped within the block, Ighraq al-Siq is essentially unable to affect his surroundings in any way and cannot be detected by magic, as he becomes part of the native stone. The stone block is granted the jinni’s Magic Resistance, but can still be eroded and broken by the elements and other nonmagical attacks.\n\nOver time, the area immediately surrounding the block has become a fixed Arcane Connection to the spirit, providing a +1 bonus to the Penetration multiplier and replacing his original physical locus. A character who actually stands barefoot on top or touches the prison block is considered to have a stronger Arcane Connection to Ighraq al-Siq, gaining a +3 Penetration multiplier bonus, and also gains the benefit of the entrapped spirit’s Magic Resistance. A sahir, summoner, or Hermetic magus can use his magic to attempt to command Ighraq al-Siq using scouring (*Realms of Power: the Infernal*, page 117) or Sihr by standing within the vicinity of the Jinni Block even if he is unaware of his presence. A failed attempt at controlling him, however, will trigger his release and invoke his displeasure."
+    }
+
+}

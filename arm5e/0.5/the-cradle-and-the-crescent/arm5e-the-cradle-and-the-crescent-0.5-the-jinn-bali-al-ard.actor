@@ -1,0 +1,43 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_TheJinn_BaliAlArd" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Bali’ al-Ard"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Bali’ al-Ard (Chapter Four: The Jinn, p65): one being, its printed stat lines verbatim fields.
+
+    #t54b58f7f564b1743bc1843 ^"Bali’ al-Ard" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Characteristics" STRING "Int –2, Per 0, Pre +2, Com –4, Str +4, Sta +3, Dex +1, Qik +5 (racing) Denotes the specialty for Mythic Quickness."
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Jinni, Faerie Beast; Greater Power; Great Quickness x2, Improved Characteristics, Mythic Quickness (racing), Personal Power x2, Reputation as Confidence; Curse of Venus, Greater Malediction (keep any bargain made); Proud (Minor), Incognizant, Traditional Ward (Bismillah Invocation), Tragic Intelligence (easily tricked) Although a Heroic Virtue, this Virtue is allowed, being integral to the Faerie racehorse concept."
+            ^"Qualities" STRING "Domesticated, Fast Runner, Herd Animal, Imposing Appearance x3"
+            ^"Reputations" LIST ["Magnificent racehorse 3 (local)"]
+            ^"Soak" INTEGER 3
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Pretenses" STRING "Arabic 5 (horses), Athletics 6 (racing), Awareness 3 (bad footing), Theology: Islam 1 (jinn)"
+            ^"Powers" STRING "Drinker of the Wind, 1 points, Init +1, Animal; This power instantly transports ‘ al-Ard from one location to another within seven leagues that he can see or has an Arcane Connection to. As Seven League Stride but as a non-Hermetic effect allows the rider to accompany him to fulfill his racehorse role. Greater Power, 30 spell levels, 2 Intricacy points spent on Initiative and 2 Intricacy points spent on reduced Might cost. Immateriality, 3 points, Init +2, Imaginem; Makes him immaterial until sunrise or nightfall. Personal Power, 40 spell levels, 1 Intricacy point spent on Initiative, and 1 Intricacy point spent on reduced Might cost"
+            ^"Equipment" STRING "exceptional quality tack and harness, coppery gold horseshoes"
+            ^"Vis" STRING "1 pawn of Animal vis, copper horseshoe"
+            ^"Appearance" STRING "Bali’ al-Ard (Arabic, “The Swallower of the Ground”), appears as a magnificent example of an Arabian stallion, a breed famed throughout the Mythic Middle East and even in far-off Europe."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 65
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+            "Loyal" +2
+            "Brave" +1
+        }
+        COMBAT {
+            "Hooves" INIT 6 ATTACK 3 DEFENSE 4 DAMAGE 5
+        }
+        DESCRIPTION "This jinni can only assume animal form although he is able to become immaterial. He is an example of a potential khadim (servant spirit) of a beginning unGifted sahir with only limited scores in the Solomonic Arts. See Chapter 3: The Order of Suleiman for more details of khadim and sahir.\n\nBali is not balanced for use as a starting player character and is based on an Arabian racing horse — essentially a modified courser. Like all horses he gains a +3 to running rolls."
+    }
+
+}

@@ -1,0 +1,47 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_TheJinn_GhulaFaerie" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Ghula, Faerie"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Ghula, Faerie (Chapter Four: The Jinn, p72): one being, its printed stat lines verbatim fields.
+
+    #t043ebf690bd2a95ef22b60 ^"Ghula, Faerie" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Jinn; 2 x Greater Faerie Powers, Infiltrator (Wealthy, orphaned merchant’s daughter); Ways of the Land (Desert); Faerie Sight, Faerie Speech, Feast of the Dead, Humanoid Faerie, 3 x Increased Faerie Might, Personal Faerie Powers; Narrowly Cognizant; Greater Malediction (when it enters a bargain, it is bound to the agreed terms unless its partner reneges first), Restricted Might (Major — daylight); Traditional Ward (Bismillah Invocation)."
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Arabic 5 (seduction), Charm 6 (men), Brawl 6 (in dark areas), Stealth 9 (urban areas), Theology: Islam 1 (jinn)."
+            ^"Powers" STRING "Cause Drowsiness: 2 points, Init –2, Corpus; Allows the ghula to cause a human it touches to fall asleep. 25 spell levels, ReCo (Base 4, +1 Touch Range, +4 Until Duration), 1 intricacy point spent on cost Illusionary Home: 0 points, Init –3, Imaginem; This comprehensive use of glamour makes a place look, sound, smell and feel like a suitable home for the role the faerie is playing. Within the altered space, the sense of taste is also affected. 40 spell levels, MuIm (Base 5, +1 Touch, +2 Sun, +1 Constant, +3 Structure), 4 intricacy points spent on cost. Transform Into Human: 0 points, Init. 0, Animal; This power transforms the character between human and feasting form. Personal Power, 25 spell levels, MuCo(An) (Base 10, +2 Sun, +1 Size), 3 intricacy points spent on cost, 2 intricacy points spent on initiative)"
+            ^"Equipment" STRING "Perfume, wardrobe"
+            ^"Vis" STRING "4 pawns Imaginem, rat skulls"
+            ^"Appearance" STRING "Ghulas usually look like beautiful women. To attract husbands, ghulas pretend to be wealthy widows or orphans of good family, in need of husbands. Ghulas often pretend to be members of communities displaced by war, as it gives their story verisimilitude. The eyes and the insides of the mouths of Arabic ghulas are always green. Male Faerie ghuls exist, but are the servants of the ghulas, and rarely play the role of seducer. See later for an example of an Infernal male ghul."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 72
+        }
+        PERSONALITY_TRAITS {
+            "Demure/Ravenous" +3
+        }
+        COMBAT {
+            "Claws" INIT 0 ATTACK 11 DEFENSE 10 DAMAGE 5
+            " Fangs" INIT 1 ATTACK 10 DEFENSE 8 DAMAGE 4
+        }
+        DESCRIPTION "Ghulas are not designed as player characters. The version represented here differs slightly from the European ghulas or lamiae  originally presented in that she reflects the Arab conception of her as an evil jinniyya. Although a form of Faerie spirit, ghulas are locked in a physical manifestation."
+    }
+
+}

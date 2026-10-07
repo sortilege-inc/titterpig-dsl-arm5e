@@ -1,0 +1,117 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_OrderOfSuleiman_KharratTheBraggartAnInfernalJinni" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Kharrat the Braggart, an Infernal Jinni"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Kharrat the Braggart, an Infernal Jinni (Chapter Three: Order of Suleiman, p35): one being, its printed stat lines verbatim fields.
+
+    #tb20f4b422b0bdb93600ab6 ^"Kharrat the Braggart, an Infernal Jinni" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempter (Shaitan)"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Jinni; Greater Malediction (bound by bargains); Weak-Willed"
+            ^"Reputations" LIST ["none"]
+            ^"Hierarchy" STRING "1 (Shaitan)"
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group (A victim who willingly and totally rejects him, fueled with a Confidence Point), Protected Group (individuals that invoke the Bismallah invocation)"
+            ^"Vis" STRING "2 pawns of Ignem in its eyes"
+            ^"Appearance" STRING "Kharrat looks like a normal man with pale skin and completely black eyes that give off smoke like smoldering coals. He is generally in spirit form, where no one can see him."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 35
+        }
+        PERSONALITY_TRAITS {
+            "Selfish" +5
+            "Proud" +3
+            "Cruel" +3
+        }
+        COMBAT {
+            "Fist" INIT 1 ATTACK 9 DEFENSE 8 DAMAGE 2
+        }
+        ABILITIES {
+            "Arabic" SCORE 5 SPECIALTY "threats"
+            "Brawl" SCORE 6 SPECIALTY "fist"
+            "Charm" SCORE 6 SPECIALTY "bragging"
+            "Concentration" SCORE 2 SPECIALTY "maintaining spells"
+            "Folk Ken" SCORE 3 SPECIALTY "temptation"
+            "Penetration" SCORE 3 SPECIALTY "Vim"
+            "Theology: Islam" SCORE 1 SPECIALTY "jinn"
+        }
+        POWERS {
+            #t15e7a65e43c1d84d670ae5 ^"Apparition (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Apparition"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Kharrat may assume an illusory form that only his chosen victim, ‘Arkhaman, can perceive. To ‘Arkhaman, the form appears to be a real person in all respects."
+            }
+            #tfe85b608c6b88739d07efb ^"Protection of the Close Friend (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Protection of the Close Friend"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The chosen victim of Kharrat cannot act directly against it without extreme provocation; it would be akin to attacking one’s own mother. The victim may be as angry as they like with the demon, but actually physically opposing it requires a huge effort of will, which must be repeated every time the victim wants to renew his attacks."
+            }
+            #tc0ff21fd7cbcf7106e4498 ^"Control Human (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Control Human"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "equal to Qik"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "If this power penetrates, Kharrat exerts direct control over its companion. It can issue commands that the target carries out to the best of his abilities; however, the target can attempt to break the control of the jinni every time he is asked to do something contrary to the tenets of his faith."
+            }
+            #t8065a8c2365a1e176a1340 ^"Envisioning (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 or 2 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This Power allows Kharrat to appear in the dreams of its sleeping companion (in which case it costs 1 point), or make the target experience a waking dream or vision (in which case it costs 5 points). The shaitan cannot instantly make substantial changes to a dream, but instead gradually twists it to take on darker and more frightening tone, and can speak through any figure from the victim’s subconscious. A waking dream is more obvious; the victim suffers an immediate and powerful hallucination of whatever the demon desires. This may be so frightening that the victim is stunned for a round, and must make a Brave Personality roll against an ease Factor of 9 or have an extreme reaction, such as retching, convulsions, or abject terror. This is the preferred way a qareen communicates with its chosen companion."
+            }
+            #t5e1e77e2728adb566453c2 ^"Coagulation (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See *Realms of Power: The Infernal*, page 31."
+            }
+            #t25595df98ac730d08bc903 ^"Obsession (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Overconfident. See *Realms of Power: The Infernal*, page 31."
+            }
+        }
+        DESCRIPTION "Kharrat is a pompous and arrogant jinni (see Chapter 4: The Jinn). He desires nothing more than to corrupt and control the sahir named ‘Arkhaman, who believes him to be his father. At every opportunity, he encourages ‘Arkhaman to behave recklessly and with sinful pride by goading him through his dreams, or by affecting him with his *Obsession* power. His plan is to help ‘Arkhaman to become a powerful sahir under his control, and then force him to help Kharrat rise in the infernal hierarchy by fighting other demons.\n\nWhen used to channel Solomonic magic, Kharrat is strongly associated with a sickly shade of yellow, like tarnished brass or sandy mud. This colors ‘Arkhaman’s magic much like a wizard’s sigil affects Hermetic spells."
+    }
+
+}

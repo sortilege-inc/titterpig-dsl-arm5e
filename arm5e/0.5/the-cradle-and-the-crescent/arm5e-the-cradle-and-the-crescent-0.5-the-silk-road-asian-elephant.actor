@@ -1,0 +1,49 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_TheSilkRoad_AsianElephant" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Asian Elephant"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Asian Elephant (Chapter Nine: The Silk Road & Beyond, p173): one being, its printed stat lines verbatim fields.
+
+    #t43fba7f901d133a940cd6c ^"Asian Elephant" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te7caee397b52bcc8711419 ^"Transoxiana and the East"]
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 10
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 4
+            ^"Confidence Score" STRING "0 (0)"
+            ^"Virtues and Flaws" STRING "Improved Characteristics x3, Tough; Fear (the squeal of a pig). As a Size +4 creature, an elephant gains 12 Characteristic points per Improved Characteristic Virtue"
+            ^". Qualities" STRING "Amphibious, Crafty, Defensive Fighter, Grapple, Herd Animal, Sharp Ears, Thick Skin, Tough Hide."
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Abilities" STRING "Athletics 3 (running), Awareness 3 (food), Brawl 4 (dodge), Survival 3 (forests or plains), Swimming 4 (rivers)."
+            ^"Powers" STRING "Trunk, 0 points, constant, Animal: the elephant’s trunk can be used to manipulate objects like a human hand, although tasks requiring two hands suffer a –3 penalty."
+            ^"Natural Weapons" STRING "an elephant’s stomp has the following combat characteristics: Init –1, Attack 0, Defense –1, Damage +3. Their trunk is only effective as a grapple."
+            ^"Appearance" STRING "The elephant found throughout the Mythic Middle East is the Asian variety. It stands up to 10 feet tall, measures 20 feet long and weighs up to 8,000 pounds. These statistics represent the more commonly domesticated female — only the male elephant has significantly sized tusks to use in combat."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 173
+        }
+        PERSONALITY_TRAITS {
+            "Lustful" -3
+            "Wise" +2
+        }
+        COMBAT {
+            "Stomp" INIT -2 ATTACK 4 DEFENSE 2 DAMAGE 13
+            " Trunk (grapple)" INIT -1 ATTACK 4 DEFENSE 2
+        }
+        DESCRIPTION "Elephants have excellent hearing and vibration sense through the trunk, gaining a +3 on all rolls involving hearing. An average elephant inflicts +15 damage when dropped onto a human-sized character from on high.\n\n*Male Elephant:* Add Aggressive and change to Brawl 5 (tusks). Add the Extra Natural Weapons, Imposing Appearance x2, Large Horns (Tusks), and Herd Leader Qualities and the Ferocity (defending herd) Virtue. Increase Presence to +1 and Communication to –4. Add Leadership 5 (elephants). A male elephant’s Tusk attack has the following combat statistics: Init +1, Attack +9, Defense +5, Damage +13.\n\n*War Elephant: *Add the Aggressive and Pack Animal Qualities. Change to Brawl 5 (stomp) and improve the elephant’s Stomp attack: Init –2, Attack +6, Defense +3, Damage +13. Persian war elephants are usually clad in the equivalent of leather or metal scale (add Protection of 3 or more to Soak) and carry a platform known as a howdah which can accommodate up to six soldiers armed with javelins, polearms or bows. They can be trained to fight as part of a Trained Group with their squad of accompanying soldiers under the direction of their mahout or driver.\n\n**Story Seed: Elephants of Alexander ** The ghosts of ancient war elephants can be summoned at the battle sites of antiquity throughout Arabia, Persia, and Transoxiana, using their bones to call them back to unearthly service. Such sites are of particular interest to House Tremere, who seek to expand the versatility and power of their ghostly forces.\n\nFaerie war elephants from the land of Hind, as used in the armies of Alexander the Great, appear even larger and more fearsome than their mundane kin. Such creatures sport multiple large curved tusks and have been trained to wield spiked balls on chains with their trunks. They prompt panic in lesser creatures and are capable of deafening opponents with their trumpeting. The remains of these giant creatures are found primarily in the far mountains of the eastern provinces and the southern deserts of Persia."
+    }
+
+}

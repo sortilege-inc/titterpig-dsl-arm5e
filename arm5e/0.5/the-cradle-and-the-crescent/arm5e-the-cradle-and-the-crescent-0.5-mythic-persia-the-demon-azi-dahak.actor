@@ -1,0 +1,136 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicPersia_TheDemonAziDahak" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - The Demon Azi Dahak"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The Demon Azi Dahak (Chapter Eight: Mythic Persia, p143): one being, its printed stat lines verbatim fields.
+
+    #t5b1a5d606b035715730a99 ^"The Demon Azi Dahak" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Duke of the Spirits of Deceit"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 12
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 4
+            ^"Confidence Score" STRING "3 (9)"
+            ^"Virtues and Flaws" STRING "Ablating, Binding, Commanding, Summoning; Inspirational"
+            ^"Reputations" LIST ["Legendary Tyrant King 7 (Infernal)"]
+            ^"Hierarchy" INTEGER 7
+            ^"Combat" STRING "Bite: Init +1, Attack +15, Defense +10, Damage +20 Azi Dahak can bite three targets in each round; he acts like a Trained Group with three members."
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–9), –3 (10–18), –5 (19–27), Incapacitated (28–36), Dead (37+)"
+            ^"Weakness" STRING "Abhorrent Material (flame from a Mazdean temple)"
+            ^"Vis" STRING "8 pawns of Mentem vis prava, in eyes."
+            ^"Appearance" STRING "On the rare occasions it takes material form, Azi Dahak is an immense winged serpent with three heads, bearing six eyes and three pairs of fangs on each head. When wounded, snakes and scorpions spew from its wounds."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 143
+        }
+        PERSONALITY_TRAITS {
+            "Deceitful" +6
+            "Hatred of Persia" +5
+            "Trustworthy" -5
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "flying"
+            "Brawl" SCORE 8 SPECIALTY "bite"
+            "Guile" SCORE 8 SPECIALTY "promises of power"
+            "Intrigue" SCORE 5 SPECIALTY "nobles"
+            "Leadership" SCORE 4 SPECIALTY "own heads"
+            "Organization Lore: Suhhar Sulayman" SCORE 4 SPECIALTY "viziers"
+            "Penetration" SCORE 4 SPECIALTY "Possession"
+            "Teaching 5 (Goetic Arts) Arts: Ablating" SCORE 12
+            "Binding" SCORE 8
+            "Commanding" SCORE 8
+            "Summoning" SCORE 10
+        }
+        POWERS {
+            #t02d957c5e92c4efeeffb46 ^"Coagulation (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Azi Dahak can form a physical body, and dismiss it at will."
+            }
+            #t346c0cfb29e7f0d7b32f13 ^"Obsession (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1–3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Azi Dahak can invoke the Personality Trait of Power Hungry. See *Realms of Power: The Infernal*, page 31, for more details."
+            }
+            #t6219fb378fc619b464b05a ^"Envisioning (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The demon can appear in the dreams of a person."
+            }
+            #t92417bed2f4f532240ac28 ^"Possession (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Possession"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Azi Dahak usually places all of his Might Pool into possession and can control the actions of his victim. He cannot regenerate Might points until the possession ends, so he has to leave periodically. During this time, his victim suffers terrible dreams of his death and torment in hell, and may act to prevent the demon returning. See *Realms of Power: The Infernal*, page 32, for more details."
+            }
+            #t4e4d63e3ca82394c090bea ^"Trust of the Innocent (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Trust of the Innocent"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target of this effect loses all judgment and believes a specific lie (as long as it is passable) until presented with evidence to the contrary. An Intelligence roll against an Ease Factor of 6 is allowed to resist the effect."
+            }
+            #t27a38d2a5c13403d430b36 ^"Forked Tongue of the Serpent (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Forked Tongue of the Serpent"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target believes any lie, no matter how preposterous, until he relates that lie to someone else. At this point he realizes how ridiculous the falsehood sounds, and the demonic power is broken. An Intelligence roll against an Ease Factor of 9 also reveals the lie to be false, with the first roll allowed an hour after the effect was used, and further rolls permitted once every subsequent hour."
+            }
+            #t2c7f5bddb76dd78a199712 ^"The Serpent’s Oracle (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Serpent’s Oracle"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can duplicate the effects of any Intellego spell for the cost of 2 Might points. It may also gain a morsel of future knowledge, understanding the most immediate consequences of any one specific action."
+            }
+            #t5b4fa6f2df5bf2d028c268 ^"Empower the Possessed" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Whenever a possessed victim is willfully using the Goetic Arts, Azi Dahak grants a bonus equal to his own score in that Art. Furthermore, the demon’s Hierarchy score can be used in place of the possessed character’s score."
+            }
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_MythicPersia_OlghoiKhorkhoi" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Olghoi Khorkhoi"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Olghoi Khorkhoi (Chapter Eight: Mythic Persia, p159): one being, its printed stat lines verbatim fields.
+
+    #t1cf84776a03e61739556b6 ^"Olghoi Khorkhoi" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 14
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Magic Animal; Ways of the Desert; Improved Characteristics, Puissant Stealth, Tough; Gluttonous; Offensive to Animals, Poor Communication x2"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Spit Fire), Major Virtue (Greater Immunity to Fire); Improved Abilities, Improved Might x 4, Improved Powers, Personal Power x2 (Fiery Touch); Monstrous Appearance; Minor Flaw (Restricted Power)"
+            ^"Reputations" LIST ["Death Worm 2 (Local)"]
+            ^"Combat" STRING "Fiery venom: Init +6, Attack +11, Defense +9, Damage +30 (see Spit Fire power, later) Bludgeon: Init +5, Attack +15, Defense +10, Damage +9 (and +10 fire damage, see Fiery Touch power, later) Includes +3 for Ways of the Desert"
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "3 pawns of Ignem, in body"
+            ^"Appearance" STRING "A worm, five feet long and one foot in diameter; the olghoi khorkhoi has no discernable head or tail. It is blood-red in color, with black mottling."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 159
+        }
+        PERSONALITY_TRAITS {
+            "Hungry" +6
+        }
+        ABILITIES {
+            "Brawl" SCORE 4 SPECIALTY "bludgeon"
+            "Desert Lore" SCORE 2 SPECIALTY "trails"
+            "Stealth" SCORE 4 BONUS 2 SPECIALTY "under sand"
+            "Thrown Weapon" SCORE 4 SPECIALTY "fiery venom"
+        }
+        POWERS {
+            #tdb0ff64aee4c191af297ca ^"Spit Fire (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Spit Fire"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The olghoi khorkhoi can spit fiery venom up to 15 paces. It must succeed in a Thrown Weapons Attack to do so, receiving a –2 penalty if the target is 6–10 paces away, and a –4 penalty if it is greater than 10 paces away. The fiery venom can only be parried if the target has a shield; otherwise it must be dodged with a Brawl Defense Total. If it hits, the venom inflicts +30 damage. The creature cannot use this power between June and November (Restricted Power Flaw). CrIg 35 (Base 25, +2 Voice) Greater Power (35 levels, –3 Might cost, +6 Init (from *Fiery Touch *power and Improved Powers)) *Fiery Touch*, 0 points, constant effect, Ignem: The fiery slime of the olghoi khorkhoi’s body burns those it touches and corrodes even metal armor. It inflicts +10 damage in addition to its bludgeoning attack, and any armor worn by its opponent loses one point of Protection even if the opponent soaked all damage. CrIg 30 (Base 5, +1 Touch, +2 Sun, +1 corrosive effect, +1 constant effect) Personal Power x2 (30 levels, –3 Might cost)"
+            }
+        }
+        DESCRIPTION "Found in the northern deserts of Persia and Transoxiana, the olghoi khorkhoi (“intestine worm”) is the mature form of the worms that cause the disease called rishtah. It can move about freely beneath the soil, and, while blind, is very sensitive to vibrations. If it succeeds in a Dexterity + Stealth roll greater than its victim’s Perception + Awareness roll, it can burst out of the ground next to him, gaining a +3 bonus to Attack on the first round of combat only. Initiative is rolled after this initial attack. Animals instinctively shy from the olghoi khorkhoi, and the reaction of horses is often the first sign that one is in the area."
+    }
+
+}

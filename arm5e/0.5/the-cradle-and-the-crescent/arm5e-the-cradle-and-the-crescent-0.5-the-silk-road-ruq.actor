@@ -1,0 +1,81 @@
+EXTENSION "ArM5_The_Cradle_and_The_Crescent_TheSilkRoad_Ruq" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Ruq"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Ruq (Chapter Nine: The Silk Road & Beyond, p176): one being, its printed stat lines verbatim fields.
+
+    #td80bc23b6863bde3419a5d ^"Ruq" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te7caee397b52bcc8711419 ^"Transoxiana and the East"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 14
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Autumn"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 13
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -4
+            }
+            ^"Size" INTEGER 6
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magical Animal; Ferocity, Keen Vision, (Cloud) Regio Network, Unaffected by the Gift; Magical Monster; Offensive to Animals."
+            ^"Magical Qualities and Inferiorities" STRING "Gigantic x5; Improved Initiative x5, Lesser Power x2; Major Flaw (Age Quickly); Reduced Might x3, Susceptible to Deprivation."
+            ^"Qualities" STRING "Accomplished Flier, Aggressive, Extra Natural Weapons, Fast Flyer, Grapple, Imposing Appearance x3, Keen Eyesight, Pursuit Predator, Tough Feathers"
+            ^"Reputations" LIST ["Stealer of livestock 3 (Transoxiana)"]
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–14), –3 (15–28), –5 (29–42), Incapacitated (43–56), Dead (57+)"
+            ^"Vis" STRING "3 pawns of Animal, in wingtip feathers"
+            ^"Appearance" STRING "The ruq appears as a gigantic eagle, with steel-bright eyes and cruelly curved talons. These statistics represent one of the smaller specimens, standing just over 25 feet tall with a wingspan just over 40 feet."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 176
+        }
+        PERSONALITY_TRAITS {
+            "Fierce" +3
+            "Raptor" +3
+        }
+        COMBAT {
+            "Beak" INIT 5 ATTACK 7 DEFENSE 6 DAMAGE 14
+            " Talons" INIT -1 ATTACK 11 DEFENSE 3 DAMAGE 13
+            " Grapple" INIT -1 ATTACK 6 DEFENSE 1
+        }
+        ABILITIES {
+            "Area Lore: Persia" SCORE 6 SPECIALTY "mountains"
+            "Area Lore: Transoxiana" SCORE 6 SPECIALTY "mountains"
+            "Athletics" SCORE 5 SPECIALTY "flight"
+            "Awareness" SCORE 4 SPECIALTY "prey"
+            "Brawl" SCORE 5 SPECIALTY "grapple"
+            "Hunt" SCORE 4 SPECIALTY "find prey"
+            "Survival" SCORE 3 SPECIALTY "mountains"
+        }
+        POWERS {
+            #t87b6baa82a4377c1c2f47e ^"Clasp" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–8"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power weakens the upper limbs of a target clasped by the talons of the ruq after a successful Grapple attempt. He cannot attempt to free himself from the ruq’s talons by opposing the Grapple. ReCo (base 3, +1 Eye, +2 Sun), Lesser Power (10 levels, –2 Initiative, 1 spare intricacy point from 5 unused spell levels)."
+            }
+            #tbde1df135a7127605c9641 ^"Paralyzing Stare" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 points"
+                    ^"Initiative" STRING "–9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power transfixes any humansized target that makes eye contact with the great bird’s fearsome stare. ReCo (base 5, +1 Eye, +1 Conc), Lesser Power (15 levels, -2 Might, –1 Initiative from intricacy points)"
+            }
+        }
+        DESCRIPTION "Although a magnificent creature, a ruq (or roc) is not a Beast of Virtue and is not designed to be a player character. This ruq is based on a large falcon or eagle (Size –2) with a base Might of 15 advanced to gigantic proportions. This specimen is large enough to carry off livestock, horses and humans. Larger specimens (Size +8) have been seen to carry off elephants and even giants.\n\n*Golden Eagles:* Used by the eastern Turks and Mongols, the large *burkit *(Size –2) of the steppe are used to hunt foxes and can even be trained to attack wolves. Although similar in appearance to ruq, such eagles use the base characteristics of a falcon given in the *Book of Mundane Beasts* but have the additional Qualities: Grapple and Imposing Appearance x2. Oversized eagles (up to Size 0) are sometimes used by the Ghuzz magic-kin and have their characteristics modified accordingly for their size (see Chapter 8: Mythic Persia)."
+    }
+
+}

@@ -1,0 +1,76 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_MythicPersia_NasuSpirit" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Nasu Spirit"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Nasu Spirit (Chapter Eight: Mythic Persia, p142): one being, its printed stat lines verbatim fields.
+
+    #t78c9b078b294f93b20bf4d ^"Nasu Spirit" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -20
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 10
+            }
+            ^"Size" INTEGER -12
+            ^"Virtues and Flaws" STRING "Magic Spirit; Magic Sensitivity; Gluttonous"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Donning the Corporeal Veil), Greater Power (Swarm Form), Ritual Power (Corpse-Feeding); Improved Damage x10, Improved Powers; Miniature x5"
+            ^"Personality Trait" STRING "Hungry +6 Essential Trait"
+            ^"Combat" STRING "Swarm bite: Init +10, Attack +7, Defense n/a, Damage +10 A nasu swarm cannot be parried, only dodged."
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Vis" STRING "1 pawn of Animal, in body."
+            ^"Appearance" STRING "A three-inch-long fly, with a red and yellow striped abdomen. They make a fearful buzzing sound when they fly."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 142
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "flying"
+            "Awareness" SCORE 3 SPECIALTY "corpses"
+            "Brawl" SCORE 3 SPECIALTY "biting"
+            "Magic Sensitivity" SCORE 3 SPECIALTY "wizards"
+        }
+        POWERS {
+            #tc9b29c5afdb75c21cac834 ^"Donning the Corporeal Veil (The Cradle & The Crescent)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Allows the nasu to take material form, which it can dismiss at any time. Nasu usually only leave the material world when there are no more corpses on which to feed. Cr(Re)An 25 (base 5, +1 Touch, +2 Sun, +1 requisite) Greater Power (25 levels, –3 Might cost, +2 Init)"
+            }
+            #t703d1988e79ef9a19a1a45 ^"Corpse-Feeding" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+8"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "When a nasu enters an orifice on a corpse, it can emerge three rounds later as ten individuals. Each of these individuals is identical in every way to the original nasu, including having this power, except that each swarm, no matter how large, has a single pawn of vis. Every three rounds, a nasu swarm can gain three points of size, and its ability to grow is limited only by the number of corpses it has available; of course, as it grows, it attacks living things and creates more bodies. CrAn(Vi) 25 (base 5, +1 Touch, +2 Group, +1 requisite) Ritual Power (25 levels, –2 Might cost, +3 Init, including Improved Powers)"
+            }
+            #t7bad49e997ae1d71997d22 ^"Swarm Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "A nasu does not attack as an individual, but rather as a swarm. The combat statistics are for an entire swarm, which must be the same Size or larger than its opponent. Thus a swarm of 100,000 nasus (Size +3) can attack a standard group of humans. A nasu swarm cannot be killed by normal weapons, only by area effects such as fire or smoke. The storyguide should consider how much of the swarm is affected by the area effect and assign damage in terms of Might points: if one-fifth of the swarm is affected then it loses one Might point; if twofifths is affected it loses two Might points, and so forth. Greater Power — no Hermetic equivalent."
+            }
+        }
+        DESCRIPTION "The nasu is a Persian magical nonjinni spirit which is attracted to the bodies of the recently dead, especially the corpses of magical creatures or sorcerers. They rarely take material form unless summoned; they are minor spirits, and any apprentice summoner can call one, which is why many masters are very careful to indicate why they should never be summoned — one nasu can become millions in a matter of minutes if sufficient fresh meat is around. Although a magical spirit, nasu are not jinn and cannot be called by sahirs using Solomonic Sihr, although they can be summoned by wizards using (Spirit) Summoning."
+    }
+
+}

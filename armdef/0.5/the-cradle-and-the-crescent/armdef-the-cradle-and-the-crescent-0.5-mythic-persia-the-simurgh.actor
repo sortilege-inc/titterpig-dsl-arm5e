@@ -1,0 +1,66 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_MythicPersia_TheSimurgh" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - The Simurgh"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # The Simurgh (Chapter Eight: Mythic Persia, p154): one being, its printed stat lines verbatim fields.
+
+    #t114ad8ae3487da62619558 ^"The Simurgh" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tebff438c04fc4b38ba2900 ^"Persia"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 50
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 15
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 9
+            ^"Virtues and Flaws" STRING "External Vis, Huge x8; Faerie Beast, Faerie Sight, Faerie Speech, Focus Power (Heart of the Whirlwind), Greater Immunity (Bludgeoning Weapons), Greater Immunity (Slashing Weapons), Greater Immunity (Piercing Weapons), Improved Characteristics x9, Improved Powers x6, Positive Folk Tales, Reputation as Confidence, Ritual Power (Grant Fertility) x3; Compassionate; Incognizant, Traditional Ward"
+            ^"Reputations" LIST ["Bird of God 5 (Local)"]
+            ^"Soak" INTEGER 12
+            ^"Wound Penalties" STRING "–1 (1–14), –3 (15–28), –5 (29–42), Incapacitated (43–56), Dead (57+)"
+            ^"Pretenses" STRING "Area Lore: Arabia 5 (wars), Area Lore: Persia 8 (legendary figures), Area Lore: Transoxiana 5 (peoples), Artes Liberales 8 (Persian literature), Athletics 5 (flying), Awareness 4 (wrongdoers), Brawl 5 (claws), Philosophiae 8 (natural sciences), Survival 6 (mountains), Teaching 5 (Area Lore)"
+            ^"Vis" STRING "15 pawns of Animal, in breast feathers"
+            ^"Appearance" STRING "The Simurgh is an enormous creature, large enough to carry off an elephant. She appears as an eagle with the head of a dog and claws of a lion. Her feathers are the color of highly polished copper, although her peacock-like tail is patterned with thirty different colors."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 154
+        }
+        PERSONALITY_TRAITS {
+            "Kind" +6
+            "Curious" +3
+        }
+        COMBAT {
+            "Claws" INIT 0 ATTACK 12 DEFENSE 8 DAMAGE 19
+        }
+        POWERS {
+            #t9ac6a67f6958ca50eaaaf5 ^"Heart of the Whirlwind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1–10 points"
+                    ^"Initiative" STRING "–(Might cost)"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "This Focus Power allows the Simurgh to duplicate any non-ritual wind-related spell up to 50th level, at a cost of 1 Might point per magnitude of the spell."
+            }
+            #t38eda174eef3e69ee61f4d ^"Grant Fertility" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–22"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "As the Simurgh flies over fields, she can use this power to create an effect similar to *The Bountiful Feast*, except that it affects an area ten times greater, and grants fertility to animals as well as plants. CrHe(An) 55 (Base 1, +3 Sight, +4 Year, +4 Bound, +2 Size, +1 Animal requisite) Ritual Power (55 levels, –9 Might cost, including 5 points from Improved Powers)"
+            }
+        }
+        DESCRIPTION "The Simurgh is an immense bird that lives on Mount Damavand, although she makes expeditions to all corners of Persia and most of its inhabitants have seen her at some point. The people of Persia are oddly comforted by her presence, as she is a bringer of fertility as well as a symbol of national pride. The Simurgh is so old that she claims to have seen the destruction of the world three times over. During her exceptionally long life she has accumulated wisdom, and she is an authority on many subjects. In her most famous legend, the simurgh adopted the albino Zal (the father of Rostam), when he was abandoned by his father in the Alborz mountains. Zal learnt much from the Simurgh, and when he left her she gave him three of her feathers, with which he could summon her in need.\n\nThe Simurgh is so large that normal weapons are as nothing to her. It requires magical weapons or spells to cause wounds. She may grant a worthy character one of her breast feathers using her External Vis Virtue; each one contains five pawns of vis. These feathers are Arcane Connections to the Simurgh, and can be used to summon her in times of great need by casting them into a fire.\n\nThe Simurgh is not designed to be a player character."
+    }
+
+}

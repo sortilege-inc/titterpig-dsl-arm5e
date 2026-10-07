@@ -1,0 +1,48 @@
+EXTENSION "ARMDef_The_Cradle_and_The_Crescent_TheSilkRoad_HorseSteppePonyTurpanus" {
+    NAME "Ars Magica Fifth Edition, The Cradle & The Crescent - Horse, Steppe Pony (Turpanus)"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_The_Cradle_and_The_Crescent_Core_Ext"
+
+    # Horse, Steppe Pony (Turpanus) (Chapter Nine: The Silk Road & Beyond, p179): one being, its printed stat lines verbatim fields.
+
+    #t2b877af3a3c2cea781637c ^"Horse, Steppe Pony (Turpanus)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te7caee397b52bcc8711419 ^"Transoxiana and the East"]
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "0"
+            ^"Virtues and Flaws" STRING "Enduring Constitution, Long Winded, Improved Characteristic; Simple-Minded"
+            ^"Reputations" LIST ["Hardy 1 (local)"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (18–24), Dead (25+)"
+            ^"Appearance" STRING "Slightly smaller than their European cousins, these hardy ponies range in coloration from light grey to dappled brown."
+            ^"Source" STRING "The Cradle & The Crescent"
+            ^"Page" INTEGER 179
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +2
+        }
+        COMBAT {
+            "Kick" INIT 5 ATTACK 0 DEFENSE 5 DAMAGE 3
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "long-distance running"
+            "Survival" SCORE 3 SPECIALTY "steppe"
+        }
+        DESCRIPTION "The majority of horses in the Eastern Provinces are the small but hardy ponies of the steppe’s nomad tribes. They are notably different than larger breeds commonly used in Europe, Arabia, and southern Persia presented in the *Book of Mundane Beasts *and *Lords of Men*, Chapter 5: Leisure.\n\nSteppe ponies are bred from the wild horses of the Steppe by the various nomad tribes that range across it. Exceptional Steppe ponies with the Minor Heroic Virtues Great Bearer and Sure Traveler (see *Houses of Hermes: True Lineages*, pages 105-107) are highly prized by the Steppe nomads. Like all light horses, a Steppe pony is a fast runner and gets a +3 to rolls involving running or jumping."
+    }
+
+}

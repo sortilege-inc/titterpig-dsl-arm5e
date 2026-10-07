@@ -1,0 +1,70 @@
+EXTENSION "ARMDef_Calebais_TheRuinsOfCalebais_UderzusMagisterOfPerception" {
+    NAME "Ars Magica Fifth Edition, Calebais - Uderzus, Magister of Perception"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # Uderzus, Magister of Perception (Chapter Two: The Ruins of Calebais, p76): one being, its printed stat lines verbatim fields.
+
+    #ta8772401739761b847e056 ^"Uderzus, Magister of Perception" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t59b95b63ce16c76929ea97 ^"Burial Chamber"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 49
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Age" STRING "94 (50)"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Arts" STRING "Cr 25, In 30, Mu 15, Pe 15, Re 15, An 5, Aq 15, Au 15, Co 25, He 5, Ig 15, Im 25, Me 25, Te 15, Vi 25"
+            ^"Powers" STRING "Ghostly Body, 0 points, constant, Mentem: Uderzus is aware he is a ghost, and can turn invisible, pass through walls, ignore physical attacks, and otherwise take advantage of his spirit form. Ghostly Certamen, 0 points, special, special: Uderzus can participate in certamen with living magi, and can also initiate certamen against other ghosts. The phantasms are real to them, and attack and defend as normal, but instead of causing Fatigue, Weakening Totals affect ghostly opponents’ Might Pool. Ghostly Magic, 1 or more points, -2, by spell: Uderzus can make a spell he has cast affect the physical world by spending 1 point of temporary Might per magnitude of the effect. Uderzus also carries the spiritual counterpart of his Sundered Lance, once a holy item, which retains two divine powers, both of which have penetration 30: Pierce the Mail of Falsehood, PeVi20: The lance reduces the casting total of any non-ritual Creo or Rego magic at which it points by 20 spell levels. The Trembling Lordling, CrMe30: Characters with noble blood at whom the lance is leveled experience a glimpse of terror so frightening that they are afraid of it for the rest of their lives. The source of the terror is different for each character, i.e. one person might see a mouse while another experiences extreme claustrophobia, and this power can only ever be used against each character once."
+            ^"Spells Known" STRING "Uderzus also knows many Intellego Imaginem and Intellego Mentem spells, but they do not function in Calebais as long as the Veil is active. Eyes of the Bat (InAu25/+46) Vision of Heat’s Light (InIg20/+46) Well Without Light (PeIg25/+30) Sight of the Active Magics (InVi40/+56) Wind of Mundane Silence (PeVi40/+41)"
+            ^"Wizard’s Sigil" STRING "Uderzus is evidenced by tiny cracks in his spells, like flaking paint. This shows through in his powers, above; for example, the darkness in his Well Without Light fractures in places, allowing threads of light (but not enough to see anything) to show through, and his illusions might have subtle but telltale cracks."
+            ^"Vis" STRING "9 Vim left in his ghostly lance, if his questions are satisfactorily answered"
+            ^"Appearance" STRING "Uderzus is short and squat; he is missing his left hand and has difficulty standing up straight. His ghostly image is very solid and quite realistic. He has flame-red hair in patches, but other parts are white and gray. His burlap tunic is scorched and ripped, and he leans against his seven foot lance, the last foot of which has broken and splintered at the end."
+            ^"Roleplaying Tips" STRING "Purse not only your lips but your whole face."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 76
+        }
+        PERSONALITY_TRAITS {
+            "Megalomaniacal" +2
+            "Patient" -2
+            "Straightforward" -2
+            "Tolerant" -3
+        }
+        COMBAT {
+            "Lance" INIT 1 ATTACK 7 DEFENSE 4 DAMAGE 9
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "astronomy"
+            "Awareness" SCORE 9 SPECIALTY "searching"
+            "Concentration" SCORE 3 SPECIALTY "reading"
+            "Finesse" SCORE 4 SPECIALTY "Mentem"
+            "Folk Ken" SCORE 3 SPECIALTY "magi"
+            "German" SCORE 5 SPECIALTY "understanding"
+            "Great Weapon" SCORE 4 SPECIALTY "lance"
+            "Latin" SCORE 5 SPECIALTY "reading"
+            "Magic Sensitivity" SCORE 3
+            "Magic Theory" SCORE 3 SPECIALTY "enchantment"
+            "Parma Magica" SCORE 7 SPECIALTY "Corpus"
+            "Penetration" SCORE 3 SPECIALTY "Intellego"
+            "Second Sight" SCORE 5
+            "Sense Holiness and Unholiness" SCORE 4
+        }
+        DESCRIPTION "Laugh happily when others fail, but give grudging admiration when they succeed. Practice grimaces in the mirror and perfect a series of taunts. Don’t forget to have trouble positioning the lance you always have with you, and remember that you are stronger than you appear. When faced with characters casting Creo or Rego spells at you, aggressively swing the lance to point at them and haughtily stop them in their tracks."
+    }
+
+}

@@ -1,0 +1,66 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_Paulo" {
+    NAME "Ars Magica Fifth Edition, Calebais - Paulo"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Paulo (Chapter Two: The Ruins of Calebais, p44): one being, its printed stat lines verbatim fields.
+
+    #t2e8afd7134b925083a19d1 ^"Paulo" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t0a90abc3ea28ad794d5f24 ^"Entrance Room"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 21
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Age" STRING "39"
+            ^"Soak" INTEGER 7
+            ^"Powers" STRING "Smash Stone, 1 point, +1, Terram: Causes stone to weaken and crack when hit with his hammer."
+            ^"Equipment" STRING "War hammer, short bow, metal reinforced armor (half)."
+            ^"Encumbrance" STRING "0 (3)"
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Vis" STRING "4 Mentem in his ghostly war hammer, if he does a good deed for the covenant."
+            ^"Appearance" STRING "Paulo is a very strong, broad-shouldered man in heavy leather armor and a metal helmet that covers his head like a hat, wielding a large hammer. He is determined and slow-witted, and deeply sad. He is also a ghost, though it is not easy to see this at first glance."
+            ^"Roleplaying Tips" STRING "Sway back and forth when you speak, standing ready for anything. Be distrustful, but very respectful of magi. Nod a lot even if you don’t understand, and never do anything you could not do if you were a real person. With little or no provocation, suddenly become very angry and begin smashing walls. As characters get to know Paulo, they should come to expect this behavior."
+            ^"What He Knows" STRING "Very little. He knows the difference between the two staircases, and that the wizards live on the lower levels. He does what his bosses tell him. Crenvalus once told him to watch the entrance, so he watches the entrance. He doesn’t know where everyone else is. Those in authority he obeys, those who threaten the covenant he attacks."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 44
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Determined" +2
+            "Hopeful" -2
+        }
+        COMBAT {
+            "War hammer" INIT 1 ATTACK 13 DEFENSE 10 DAMAGE 18
+            " Short Bow" INIT -1 ATTACK 11 DEFENSE 4 DAMAGE 12
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "stairs"
+            "Awareness" SCORE 5 SPECIALTY "guarding"
+            "Bow" SCORE 4 SPECIALTY "short bow"
+            "Brawl" SCORE 4 SPECIALTY "wrestling"
+            "Carouse" SCORE 4 SPECIALTY "songs"
+            "Great Weapon" SCORE 6 SPECIALTY "smashing stone"
+            "Latin" SCORE 2 SPECIALTY "listening"
+            "Local Language" SCORE 3 SPECIALTY "listening"
+            "Single Weapon" SCORE 5 SPECIALTY "long sword"
+            "Stealth" SCORE 3 SPECIALTY "shadowing"
+            "Thrown Weapon" SCORE 5 SPECIALTY "javelin"
+        }
+    }
+
+}

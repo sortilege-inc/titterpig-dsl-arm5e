@@ -1,0 +1,46 @@
+EXTENSION "ArM5_Calebais_TheMysteryOfCalebais_Rules" {
+    NAME "Ars Magica Fifth Edition, Calebais - Chapter One: The Mystery of Calebais rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t440b66b1f9869775a608a6 ^"Knowledge Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Rumors of Calebais"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 10
+        }
+        FORMULAS {
+            "Knowledge Roll" "stress die + Intelligence + Ability"
+        }
+    }
+
+    #t3dd598ec4eeba25aaff186 ^"Research" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Rumors of Calebais"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 10
+        }
+        FORMULAS {
+            "Research" "Knowledge Roll + Quality"
+        }
+    }
+
+    #t19366862a4cb230a48985e ^"Summa Limit" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Rumors of Calebais"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 10
+        }
+        FORMULAS {
+            "Summa Limit" "Level x 3"
+        }
+    }
+
+}

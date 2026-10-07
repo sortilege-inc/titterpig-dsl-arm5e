@@ -1,0 +1,380 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_Devices" {
+    NAME "Ars Magica Fifth Edition, Calebais - Chapter Two: The Ruins of Calebais devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t090c31641e029ca9263335 ^"The Fountain" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 45
+        }
+        DESCRIPTION "The fountain is a powerful magical artifact; it is the device that binds the dryad who powers the Veil of Mormulus to the covenant. It is extremely heavy, and not at all easy to move, as it is attached to the floor with thick, iron brackets. A Rego Terram ward prevents damage to the statue from physical objects, and a Rego Aquam effect transports water from the bottom of the well to fill the basin when it becomes low, keeping the water in motion to prevent it from becoming stagnant.\n\nIf the fountain is pried up from the ground and carried out of the covenant, the spirit of the dryad (page 29) will appear in the wood and beg the characters not to proceed. Carrying the statue out of the Veil will kill her. If they continue anyway, she will use her powers to confuse and mislead the characters, but if they have a diadem (see page 78) they will see right through these illusions. If they do not heed her, she will command the forest to attack as her last defense, trying to either damage or recover the statue.\n\nAt the edge of the regio the characters will feel a powerful tug, and if they persist, the statue will shudder and crack and its color will fade as the dryad dies. The Veil of Mormulus will fail, though the characters may not recognize this from outside. If they spend a season in the lab investigating the enchantment, they may learn something of how the device worked, but not very much because it is no longer magical once the faerie is dead.\n\nIf the characters find a way to damage the statue significantly (such as dropping it down the well) without removing it from the forest, they will release the dryad without destroying the Veil. The stone will lose some of its color, and a faint breeze will stir from the cracks, with a distant sound of buzzing bees and a thick, musty smell of papery bark. From then on, the dryad may be found in her palace, the satyrs will lose interest in their captive, and the Veil will be impassable for any characters not led by someone with a diadem (see page 24). Without the dryad to control them, the illusionary guides will become increasingly chaotic and garbled, perhaps misleading or even attacking visitors."
+    }
+
+    #tf23b4857f06af4afbb1cbe ^"Captain’s Sword" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Device Class" STRING "invested device"
+            ^"Effects" LIST [#t6d6c579abe443f74115687 ^"Blade of the Virulent Flame (Calebais)", #t3b46f582bec58b9e0c1d51 ^"Captain’s Sword (2)", #t7b0967fca542cf6b3d712f ^"Captain’s Sword (3)"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "The sword has the symbol of Calebais sculpted into the hilt, and is an invested device with three powers. It can cast *Blade of the Virulent Flame* (CrIg Base 5, +1 Conc; +5 maintain concentration = Level 15), activated by holding the sword aloft as if to catch the light, and this effect is reflected in both Hofot’s and David’s stats. The sword also resists physical damage and rust, maintaining its edge throughout the years (CrTe Base 5, +2 Sun; +1 two uses per day, +3 activated by sunrise and sunset = Level 19). Finally, the sword cuts through magical defenses, taking down wards and even Parmae. Whenever the sword comes in contact with a non-ritual spell of more than Momentary duration, roll a stress die (no botch). That spell is canceled if its level is (20 + the roll) or less; Parmae are cut down if (20 + the roll) is more than (5 x Parma Magica). (PeVi Base 4, +1 Touch; unlimited +10, penetration 30 +15 = Level 30). If the ward would resist the effect, as Parma would, the sword’s power must penetrate the magic resistance."
+    }
+
+    #t8bbf783c06482474eb9b67 ^"The Magical Stone of Erechtheus" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Device Class" STRING "lesser magic device"
+            ^"Effects" LIST [#t9cfaea9aa6e063912ef2f9 ^"The Magical Stone of Erechtheus (1)"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "This item is about two feet wide and a few inches thick, and looks very much like Gemaric in his transformed state. It is a lesser magic device enchanted with one constant effect that changes it and whatever person is carrying it into a rock (MuCoTe Base 25, +1 Touch, +2 Sun, +1 for special effect; +4 constant = Level 49). If its effect is dispelled, it will slip from Gemaric’s hands, but whoever picks it up might be affected by it the next time it triggers. Since part of the stone’s effect is that it changes itself along with its wielder, the stone will remain part of Gemaric if he is magically given another form, and will change him back into a rock as soon as the new spell wears off. Investigation in the lab will reveal that there is a way to cancel the effect, which requires that the person make a particular sign with the fingers on either hand, and wiggle like a snake. These gestures cannot be seen by others, but the device knows when they have been performed."
+    }
+
+    #t226bc67c5d2ec0d4fa6d70 ^"Malevola Vida’s Talisman" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Device Class" STRING "invested device"
+            ^"Effects" LIST [#t144c1b48f9d110ec418091 ^"Malevola Vida’s Talisman (1)"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 55
+        }
+        DESCRIPTION "This black iron rod with a dark onyx at its tip has the power to shatter rock or metal anywhere within the sound of the wielder’s voice. It blasts a hole three feet deep and three feet wide in the shape of a half-sphere, leaving rough or jagged edges (PeTe5, +2 Voice, +1 Part; +10 unlimited = Level 30). The Hrools mistakenly wielding it as a weapon don’t know how to use it. You must say “Posse visum durare in aeternum” (POHS-say WEE-soom doo-RAH-ray een eye-TAYR-noom, “May the vision last forever”) and then swing the rod over your shoulder, back in front of you, point the gem at the rock to be broken, and thrust the wand forward.) Magi may learn this through magical investigation in the lab, or by talking with Ferdina, for whom Malevola demonstrated it. This wand was going to serve as Malevola’s talisman, though she had not yet attuned it when she died. It was opened as an invested device, but this effect is the only one she completed. Or, if you wish, perhaps she instilled other effects that require magical investigation to reveal."
+    }
+
+    #t2db6dd37dc3291de65822a ^"Captain’s Shield" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Effects" LIST [#t663a1125a7e31e2babfda2 ^"Captain’s Shield (1)", #t76aa40047f57bec0d678fe ^"Captain’s Shield (2)"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "The shield David carried is emblazoned with the symbol of Calebais, and has two powers invested in it: it is resistant to wear and age, preventing rust and mending itself when damaged (CrTe10, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 24). Also, if held still for six seconds, it can turn the bearer and everything he carries invisible for as long as he remains in one place. (PeIm4, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 19)."
+    }
+
+    #td8adcf71486bd5dc5407e6 ^"Captain’s Mail" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Effects" LIST [#t3cfacb17d272c0b6fd6f67 ^"Captain’s Mail (1)", #td06a7ba32c1b216e51ef1d ^"Captain’s Mail (2)", #tac1320a3b8cf21877b3790 ^"Captain’s Mail (3)", #t56e261234c424a6998cdd6 ^"Captain’s Mail (4)"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "David’s chain mail has three magical powers that were designed to trigger automatically every sunrise and sunset, though wounds do not heal naturally while the mail is worn and reopen soon after it is removed. These effects are: “heal the debilitating effects of disease, poison, or injury” (CrCo20, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 39), “heal an incapacitating wound” (CrCo30, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 49), and “reduce the intensity of all of a person’s emotions” (PeMe4, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 19). The mail is also resistant to wear and age, preventing rust and mending itself when damaged (CrTe10, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 24)."
+    }
+
+    #t2cf6e500aab1e6ed76f42b ^"The Diadems" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Effects" LIST [#td3c4a12d7fd32c81b78675 ^"The Diadems, I"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "The diadems are the C-shaped crowns made of gold wire, each with a green gemstone shaped like an eye worn at the forehead. The back of a diadem is open, and it naturally clasps any normal-sized head. They have specific powers of their own, but since they are mystically connected to the Bell, their powers are few until the Bell is mended. There were twenty-four of them in all, but many of them have been lost. Luckily, characters only *need* one, though the Bell will be more useful if they recover more.\n\nI. Those who wear a diadem can see through any illusion cast by Mormulus, including all illusions in the story except those created by Uderzus. This allows them to walk through the Veil without having to answer the riddle and perceive Mormulus’s lab as it really is. (InIm30) II. A diadem is a mark of authority in the covenant, and those who wear one may command the dryad to change the riddle, refuse entry to Calebais, or temporarily give up the Veil for a day and a night. The wearer falls into a deep sleep and takes control of the Veil in the meantime. III. If characters are foolish enough to wear a diadem all the time, they will quickly gain Warping points for being under a constant mystical effect, producing a Major Personality Flaw:"
+    }
+
+    #tee200b830b24305418ac73 ^"The Bell of Ibyn" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Effects" LIST [#td6f80498f59eceac976a4f ^"The Bell of Ibyn, I", #tebcadff36c47736712f40d ^"The Bell of Ibyn, II", #te5312349a23888db29fdb2 ^"The Bell of Ibyn, III"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "One of the more well-known magical artifacts in the Order of Hermes is the Bell of Ibyn. This is not so much because of its power (though it is formidable) or because of its strange origins, but rather because of the pride the magi of Calebais had in it. Older magi or students of Order of Hermes Lore will remember how magi of Calebais were known for boasting that their covenant was immune to attack because of their precious Bell. The characters will probably know of these stories and be eager to begin using their treasure. However, they will soon find that it is more difficult to use than they might think. In fact, it will have little effect at all until they can discover the key to unlock its powers.\n\nThe Bell is partially submerged, but has not been tarnished at all. It does not look like a normal church bell, oval with a round bottom and a round knocker inside; instead, it has two convex sides that meet at either of its edges, and a flat top with a massive bracket that was at one time attached with ropes to the rotted wood frame. It is three feet wide and five feet tall, and weighs nearly 600 pounds. Viewed from the bottom, it looks like an eye, though without a clapper or pupil. The sides of the Bell are inscribed with strange, non-Hermetic runes. There is also a series of twelve knobs on each side, each knob a round projection about two inches long and an inch thick, marked with a different strange and unfamiliar symbol. The knobs on the front protrude outward, while those on the back are rounded into the interior of the Bell.\n\nThe Bell has no readily discernible powers, except that it is certainly magical if tested with Intellego Vim. Only by playing about with it while wearing one of the diadems can the magi get a glimpse of its power. Approximate levels are provided in case the characters investigate it in a magical laboratory, but since it is unusual magic, not entirely conforming to Hermetic Theory, it may not work as the players expect, and the effect levels may not correspond to those of other Hermetic devices. The powers they might discover are:\n\nI. Whenever the Bell rings, such as when someone strikes it with something, it will toll with a horrible, flat sound that will slowly die after five minutes of ringing. This sound is not so loud as to harm those standing nearby, yet can be easily heard throughout the entire covenant. (ReIm15)\n\nII. Any time a human dies within the boundary that surrounds the covenant, the Bell will ring from one to six times, depending on the victim’s power and importance in the covenant. If any of the characters die during the story, even in the forest that surrounds Calebais, the Bell will ring, but with a horribly flat sound. (InCo20)\n\nIII. When a person wearing a diadem touches the Bell and says “Corona fracta est” (coh-ROH-nah FROCK-tah EST, “The crown is broken”), they will be able to see all the surrounding area of the covenant from the perspective of any creature or person within that radius. They have no control over the subject, and it will not know it has been possessed. This effect works even at Calebais, despite Mormulus’s Veil, as the Veil was designed to exclude the Bell from its effects. (InAnMe25)\n\nIf the characters devote time to magical study of the Bell, they may learn of the following properties, in addition to those described above:\n\nLevel 10: To use any of the powers of the Bell, you must wear a diadem.\n\nLevel 30: The Bell is damaged, and many of its powers are not accessible.\n\nLevel 40: The Bell uses strange, non-Hermetic magic, which has been intertwined with effects designed by magi from the Order of Hermes. Its unusual origin makes it difficult to identify its powers as long as it is broken.\n\nLevel 55: The Bell is out of tune, and must be adjusted in order to function properly. This involves filing down the knobs, but as some of them are already worn, this is dangerous without sure knowledge of how to go about it.\n\nLevel 80: The knobs are tuned to resonate with the personalities of those who wear the diadems, and there must be at least twelve different people involved to create the proper sound.\n\nOnce the characters realize that there is important information they lack in order to understand how to use the Bell, they will probably question the ghosts that remain, but none of them know or remember the details of the ritual, since it was Ornath who traditionally led the ceremony. Laboratory investigation may yield some of the information they seek, but all of the effects are of such high magnitude that it is doubtful they will be able to learn more than a general idea that it is magical and has very powerful effects. Eventually, however, one of the characters should remember Sister Larine and Crenvalus’s cryptic curses about her giving the magi the key, and resolve to track her down to see if she can provide the information they need."
+    }
+
+    #t6d6c579abe443f74115687 ^"Blade of the Virulent Flame (Calebais)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Blade of the Virulent Flame"
+            ^"Part Of" STRING "Captain’s Sword"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 15
+            ^"Effect Design" STRING "CrIg Base 5, +1 Conc; +5 maintain concentration = Level 15"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "The sword has the symbol of Calebais sculpted into the hilt, and is an invested device with three powers. It can cast *Blade of the Virulent Flame*"
+    }
+
+    #t3b46f582bec58b9e0c1d51 ^"Captain’s Sword (2)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Sword"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 19
+            ^"Effect Design" STRING "CrTe Base 5, +2 Sun; +1 two uses per day, +3 activated by sunrise and sunset = Level 19"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "activated by holding the sword aloft as if to catch the light, and this effect is reflected in both Hofot’s and David’s stats. The sword also resists physical damage and rust, maintaining its edge throughout the years"
+    }
+
+    #t7b0967fca542cf6b3d712f ^"Captain’s Sword (3)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Sword"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 30
+            ^"Effect Design" STRING "PeVi Base 4, +1 Touch; unlimited +10, penetration 30 +15 = Level 30"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 49
+        }
+        DESCRIPTION "Finally, the sword cuts through magical defenses, taking down wards and even Parmae. Whenever the sword comes in contact with a non-ritual spell of more than Momentary duration, roll a stress die (no botch). That spell is canceled if its level is (20 + the roll) or less; Parmae are cut down if (20 + the roll) is more than (5 x Parma Magica)."
+    }
+
+    #t9cfaea9aa6e063912ef2f9 ^"The Magical Stone of Erechtheus (1)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Magical Stone of Erechtheus"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Corpus"
+            ^"Requisite" STRING "Terram"
+            ^"Level" INTEGER 49
+            ^"Effect Design" STRING "MuCoTe Base 25, +1 Touch, +2 Sun, +1 for special effect; +4 constant = Level 49"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 51
+        }
+        DESCRIPTION "This item is about two feet wide and a few inches thick, and looks very much like Gemaric in his transformed state. It is a lesser magic device enchanted with one constant effect that changes it and whatever person is carrying it into a rock"
+    }
+
+    #t144c1b48f9d110ec418091 ^"Malevola Vida’s Talisman (1)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Malevola Vida’s Talisman"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 30
+            ^"Effect Design" STRING "PeTe5, +2 Voice, +1 Part; +10 unlimited = Level 30"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 55
+        }
+        DESCRIPTION "This black iron rod with a dark onyx at its tip has the power to shatter rock or metal anywhere within the sound of the wielder’s voice. It blasts a hole three feet deep and three feet wide in the shape of a half-sphere, leaving rough or jagged edges"
+    }
+
+    #t663a1125a7e31e2babfda2 ^"Captain’s Shield (1)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Shield"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 24
+            ^"Effect Design" STRING "CrTe10, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 24"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "The shield David carried is emblazoned with the symbol of Calebais, and has two powers invested in it: it is resistant to wear and age, preventing rust and mending itself when damaged"
+    }
+
+    #t76aa40047f57bec0d678fe ^"Captain’s Shield (2)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Shield"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 19
+            ^"Effect Design" STRING "PeIm4, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 19"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "Also, if held still for six seconds, it can turn the bearer and everything he carries invisible for as long as he remains in one place."
+    }
+
+    #t3cfacb17d272c0b6fd6f67 ^"Captain’s Mail (1)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Mail"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 39
+            ^"Effect Design" STRING "CrCo20, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 39"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "David’s chain mail has three magical powers that were designed to trigger automatically every sunrise and sunset, though wounds do not heal naturally while the mail is worn and reopen soon after it is removed. These effects are: “heal the debilitating effects of disease, poison, or injury”"
+    }
+
+    #td06a7ba32c1b216e51ef1d ^"Captain’s Mail (2)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Mail"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 49
+            ^"Effect Design" STRING "CrCo30, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 49"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "“heal an incapacitating wound”"
+    }
+
+    #tac1320a3b8cf21877b3790 ^"Captain’s Mail (3)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Mail"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 19
+            ^"Effect Design" STRING "PeMe4, +1 Touch, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 19"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "and “reduce the intensity of all of a person’s emotions”"
+    }
+
+    #t56e261234c424a6998cdd6 ^"Captain’s Mail (4)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Captain’s Mail"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 24
+            ^"Effect Design" STRING "CrTe10, +2 Sun; +1 twice per day, +3 activate at sunrise and sunset = Level 24"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        DESCRIPTION "The mail is also resistant to wear and age, preventing rust and mending itself when damaged"
+    }
+
+    #td3c4a12d7fd32c81b78675 ^"The Diadems, I" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Diadems"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 30
+            ^"Effect Design" STRING "InIm30"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 78
+        }
+        DESCRIPTION "I. Those who wear a diadem can see through any illusion cast by Mormulus, including all illusions in the story except those created by Uderzus. This allows them to walk through the Veil without having to answer the riddle and perceive Mormulus’s lab as it really is."
+    }
+
+    #td6f80498f59eceac976a4f ^"The Bell of Ibyn, I" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Bell of Ibyn"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 15
+            ^"Effect Design" STRING "ReIm15"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "I. Whenever the Bell rings, such as when someone strikes it with something, it will toll with a horrible, flat sound that will slowly die after five minutes of ringing. This sound is not so loud as to harm those standing nearby, yet can be easily heard throughout the entire covenant."
+    }
+
+    #tebcadff36c47736712f40d ^"The Bell of Ibyn, II" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Bell of Ibyn"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 20
+            ^"Effect Design" STRING "InCo20"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "II. Any time a human dies within the boundary that surrounds the covenant, the Bell will ring from one to six times, depending on the victim’s power and importance in the covenant. If any of the characters die during the story, even in the forest that surrounds Calebais, the Bell will ring, but with a horribly flat sound."
+    }
+
+    #te5312349a23888db29fdb2 ^"The Bell of Ibyn, III" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "The Bell of Ibyn"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Animal"
+            ^"Requisite" STRING "Mentem"
+            ^"Level" INTEGER 25
+            ^"Effect Design" STRING "InAnMe25"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "III. When a person wearing a diadem touches the Bell and says “Corona fracta est” (coh-ROH-nah FROCK-tah EST, “The crown is broken”), they will be able to see all the surrounding area of the covenant from the perspective of any creature or person within that radius. They have no control over the subject, and it will not know it has been possessed. This effect works even at Calebais, despite Mormulus’s Veil, as the Veil was designed to exclude the Bell from its effects."
+    }
+
+    #t5ae8f3e57756636a366e49 ^"The Garden (1)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Requisite" STRING "Animal"
+            ^"Level" INTEGER 10
+            ^"Effect Design" STRING "CrCo(An) 10"
+            ^"Location" LIST [#t795a89cc66508b5ce7d342 ^"The Garden"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 54
+        }
+        DESCRIPTION "A small magical spring bubbles out of a boulder and into a small pool. It has strange powers of fortification; if used to help cleanse wounds, it gives +1 to recovery rolls"
+    }
+
+    #t02cf6fcde6782c2a6bb99d ^"Gift of the Frogs’ Legs" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "eight crystal vials"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 15
+            ^"Effect Design" STRING "ReCo15"
+            ^"Location" LIST [#tb8c9fece6048f61d545485 ^"Drininkeana’s Laboratory"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "VII. eight crystal vials, stoppered and containing water charged with magical effects that are cast on whoever drinks them: three green ones are *Gift of the Frogs’ Legs*"
+    }
+
+    #tfdfdc54514985d8e87f4e6 ^"Converse with Plants and Trees" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "eight crystal vials"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 25
+            ^"Effect Design" STRING "InHe25"
+            ^"Location" LIST [#tb8c9fece6048f61d545485 ^"Drininkeana’s Laboratory"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "two light blue ones are *Converse with Plants and Trees*"
+    }
+
+    #t52dad5fcc4f2fb6b2eefcf ^"The Leap of Homecoming (Calebais)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Leap of Homecoming"
+            ^"Part Of" STRING "eight crystal vials"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 35
+            ^"Effect Design" STRING "ReCo35"
+            ^"Location" LIST [#tb8c9fece6048f61d545485 ^"Drininkeana’s Laboratory"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 56
+        }
+        DESCRIPTION "and four deep black ones are *The Leap of Homecoming*"
+    }
+
+    #t9e3f8c29308f5784375904 ^"Ventus Gurges’s Laboratory (1)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 35
+            ^"Effect Design" STRING "CrAu35"
+            ^"Location" LIST [#tec3564f3c6d1cd90fd1cfd ^"Ventus Gurges’s Laboratory"]
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 68
+        }
+        DESCRIPTION "If anyone touches the massive table in the center of the room, a bolt of lightning (CrAu35) flies from a small silver knob on the west wall onto the table’s center, accompanied by a loud crack."
+    }
+
+}

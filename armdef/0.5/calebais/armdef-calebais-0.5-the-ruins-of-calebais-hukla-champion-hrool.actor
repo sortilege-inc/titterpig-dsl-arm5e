@@ -1,0 +1,61 @@
+EXTENSION "ARMDef_Calebais_TheRuinsOfCalebais_HuklaChampionHrool" {
+    NAME "Ars Magica Fifth Edition, Calebais - Hukla, Champion Hrool"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # Hukla, Champion Hrool (Chapter Two: The Ruins of Calebais, p63): one being, its printed stat lines verbatim fields.
+
+    #t473d112db97cedd5ec3f97 ^"Hukla, Champion Hrool" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tdef31276440fa89744126f ^"Ierimyra’s Laboratory"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence" STRING "2 (5)"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-2), -3 (3-4), -5 (5-6), Incapacitated (7-8)"
+            ^"Equipment" STRING "David’s shield, and a wooden stake."
+            ^"Encumbrance" STRING "2 (2)"
+            ^"Vis" STRING "2 Corpus in each satyr horn (8 total), 2 Animal"
+            ^"Appearance" STRING "Hukla is a hero among his kind, exceptionally lithe and fast and dotted with white spots over his furry body. He wears a necklace with four satyr horns, a sign of great status among the Hrool. He carries a magical heater shield, which he can lift though it is bigger than he is, and usually carries a long spear."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 63
+        }
+        PERSONALITY_TRAITS {
+            "Careful" +3
+            "Dedicated" +2
+            "Brave" -2
+        }
+        COMBAT {
+            "Bite and shield" INIT 6 ATTACK 7 DEFENSE 10 DAMAGE 1
+            " Spear and shield" INIT 5 ATTACK 10 DEFENSE 14 DAMAGE 4
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "climbing"
+            "Awareness" SCORE 3
+            "Brawl" SCORE 2 SPECIALTY "grapple"
+            "Leadership" SCORE 4 SPECIALTY "combat"
+            "Single Weapon" SCORE 5 SPECIALTY "spear"
+            "Speak Hrool" SCORE 3 SPECIALTY "orders"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Swim" SCORE 3 SPECIALTY "diving"
+        }
+    }
+
+}

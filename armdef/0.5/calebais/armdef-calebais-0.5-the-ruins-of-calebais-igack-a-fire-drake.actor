@@ -1,0 +1,58 @@
+EXTENSION "ARMDef_Calebais_TheRuinsOfCalebais_IgackAFireDrake" {
+    NAME "Ars Magica Fifth Edition, Calebais - Igack, a Fire Drake"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # Igack, a Fire Drake (Chapter Two: The Ruins of Calebais, p52): one being, its printed stat lines verbatim fields.
+
+    #t6b460c5d0d389e7d7e7adc ^"Igack, a Fire Drake" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t51abbcb1c81d6549752fd3 ^"Small Storage Room"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 18
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -4
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -1
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-4), -3 (5-8), -5 (9-12), Incapacitated (1316)"
+            ^"Powers" STRING "Fiery Breath, 2 points, +4, Ignem: Breathes fire that does +10 Damage to a single target within five paces. Dominate Animal, 3 points, +0, Animal: Gives an animal a silent order that it carries out to the best of its ability, delayed up to a month later. This doesn’t work on the Hrools."
+            ^"Equipment" STRING "Diadem"
+            ^"Vis" STRING "3 Ignem"
+            ^"Appearance" STRING "Igack is a dragon-like serpent with shiny red scales and sharp teeth. He has no wings, but he does breathe fire and can move quickly on four legs. He is proud of the gold diadem he wears, a C-shaped crown with a green gemstone shaped like an eye that sits in the center of his forehead."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 52
+        }
+        PERSONALITY_TRAITS {
+            "Hasty" +3
+            "Friendly" +2
+            "Generous" -2
+        }
+        COMBAT {
+            "Bite and claw" INIT 2 ATTACK 7 DEFENSE 8 DAMAGE 6
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "jumping"
+            "Awareness" SCORE 5 SPECIALTY "alertness"
+            "Brawl" SCORE 5 SPECIALTY "play-wrestling"
+            "Hunt" SCORE 7 SPECIALTY "Hrools"
+            "Latin" SCORE 2 SPECIALTY "simple words"
+            "Local Area Lore" SCORE 6 SPECIALTY "Calebais"
+            "Survival" SCORE 3 SPECIALTY "Calebais"
+        }
+    }
+
+}

@@ -1,0 +1,70 @@
+EXTENSION "ARMDef_Calebais_TheRuinsOfCalebais_CrenvalusMagisterOfControl" {
+    NAME "Ars Magica Fifth Edition, Calebais - Crenvalus, Magister of Control"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # Crenvalus, Magister of Control (Chapter Two: The Ruins of Calebais, p75): one being, its printed stat lines verbatim fields.
+
+    #t6e7e704a3c1fd35b9528f3 ^"Crenvalus, Magister of Control" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t59b95b63ce16c76929ea97 ^"Burial Chamber"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 52
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Age" STRING "115 (40)"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (1620)"
+            ^"Arts" STRING "Cr 5, In 7, Mu 5, Pe 12, Re 35, An 30, Aq 5, Au 5, Co 35, He 5, Ig 5, Im 5, Me 35, Te 30, Vi 5"
+            ^"Powers" STRING "Ghostly Body, 0 points, constant, Mentem: Crenvalus is aware he is a ghost, and can turn invisible, pass through walls, ignore physical attacks, and otherwise take advantage of his spirit form. Ghostly Magic, 1 or more points, +2, by spell: Crenvalus can make a spell he has cast affect the physical world by spending 1 point of temporary Might per magnitude of the effect. Possession, 3 points, +2, Mentem: Crenvalus can take over a living body as if it were his own. Each round, the victim may make an Intellegence roll to resist, adding an appropriate Personality trait (e.g. Rebellious). On a 12+, Crenvalus is driven out. On a 9+, the two wills are in conflict and neither may act. Otherwise, Crenvalus may use the body as he wishes, including casting his spells in the physical realm. Spells Known: Tossing the Brawling Brute (ReCo10/+70): Throws a person 15 feet in the air or 25 feet in any direction, causing falling damage if a solid object intervenes (Base 4, +2 Voice). Topple the Brutish Band (ReCo20/+70): As Tossing the Brawling Brute, but affects a Group (Base 4, +2 Voice, +2 Group). Strings of the Unwilling Marionette (ReCo25/+70) Confusion of the Numbed Will (ReMe15/+70) Aura of Rightful Authority (ReMe20/+70) Enslave the Mortal Mind (ReMe40/+70) Earth Shock (ReTe30/+65) The Earth Split Asunder (ReTe30/+65) Pitsdim’s Downfall (ReTe50/+70): Shakes and collapses the ceiling of an entire level of caves to which you have an arcane connection, causing damage to other levels as well (Base 3, +4 Arc, +1 Diam, +1 Part, +5 size)."
+            ^"Vis" STRING "10 Rego in his ghostly staff, if killed by David"
+            ^"Appearance" STRING "Crenvalus is a long, lanky, sinewy apparition with dark, bronzed skin and thick, heavy eyebrows. His white hair cascades across his head like a lion’s mane, but his eyes are narrow and suspicious, and his smile should seem tense, like a trap ready to spring. He wears simple, well-made robes that are neither humble nor kingly, and carries a plain wooden staff."
+            ^"Roleplaying Tips" STRING "Ensure that every other thing you say is an order of some kind, though not necessarily malicious or pompous (“Get me a chair; my feet grow weary.”) React poorly to those who don’t show you proper respect, and reject anything that sounds like a command. Give your eyes a haunted look, and stop moving them only when you speak, but take care never to look at a player directly, staring instead at a point directly behind them. You are crazier than you seem; let that slip occasionally. Start to lose it if questioned about David and the magical portal. When you can’t take it any more, start screaming (and actually scream, to shock the players), “I should be in charge! I was the last! I survived! I was the best!” Slowly regain your composure, and then begin again."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 75
+        }
+        PERSONALITY_TRAITS {
+            "Megalomaniacal" +5
+            "Honorable" +1
+            "Trusting" -3
+            "Humble" -3
+        }
+        COMBAT {
+            "Dodge" INIT 2 ATTACK 2 DEFENSE 5 DAMAGE 1
+            " Staff" INIT 2 ATTACK 4 DEFENSE 11 DAMAGE 3
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 2 SPECIALTY "logic"
+            "Awareness" SCORE 5 SPECIALTY "alertness"
+            "Brawl" SCORE 3
+            "Concentration" SCORE 5 SPECIALTY "spells"
+            "Finesse" SCORE 6 SPECIALTY "Corpus"
+            "Great Weapon" SCORE 3 SPECIALTY "staff"
+            "Guile" SCORE 4 SPECIALTY "manipulation"
+            "Intrigue" SCORE 3 SPECIALTY "plotting"
+            "Latin" SCORE 6 SPECIALTY "covenant usage"
+            "Leadership" SCORE 6 SPECIALTY "intimidation"
+            "Magic Theory" SCORE 4 SPECIALTY "spells"
+            "Parma Magica" SCORE 8 SPECIALTY "Mentem"
+            "Penetration" SCORE 5 SPECIALTY "Rego"
+            "Philosophiae" SCORE 3 SPECIALTY "moral"
+            "Spanish" SCORE 5 SPECIALTY "poetry"
+            "Theology" SCORE 1 SPECIALTY "Bible"
+        }
+    }
+
+}

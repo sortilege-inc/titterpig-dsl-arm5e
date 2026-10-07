@@ -1,0 +1,62 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_DavidCaptainOfTheGuard" {
+    NAME "Ars Magica Fifth Edition, Calebais - David, Captain of the Guard"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # David, Captain of the Guard (Chapter Two: The Ruins of Calebais, p48): one being, its printed stat lines verbatim fields.
+
+    #t4482ad97e85ba828a6e925 ^"David, Captain of the Guard" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tde433eccf47217d1a4d572 ^"Greeting Hall"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 29
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Age" STRING "27"
+            ^"Combat" STRING "Long Sword and Kite Shield: Init +2, +9, +12, +18"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Powers" STRING "Command Warrior, 3 points, +0, Mentem: Forces up to a Group of trained warriors to perform an action he commands that falls within their normal duties, unless resisted with a Loyal roll of 9+. Ghostly Flames, 4 points, +1, Ignem: David’s sword passes through shield and armor, but the flames still damage flesh. When he uses this power, ignore his opponent’s Defense and Protection, and treat Damage as +8."
+            ^"Equipment" STRING "David has ghostly versions of his sword and heater shield. If the characters should come across the real versions or his suit of chain mail, he will claim them, and merge them with their ghostly counterparts. The chain mail gives him +9 Soak and 1 Encumbrance."
+            ^"Encumbrance" STRING "0 (2)"
+            ^"Vis" STRING "6 Mentem total in his ghostly sword, shield, and mail (or their physical counterparts if he has them), if he sees Crenvalus defeated."
+            ^"Appearance" STRING "David is a well-formed, whole-body apparition of an experienced warrior, with the symbol of Calebais (the broken crown and flames) emblazoned in full color on his surcoat and shield. He carries a large sword at his side, and his abdomen is wrapped in bloody bandages."
+            ^"Roleplaying Tips" STRING "Assume a strong demeanor and a leader’s tone of voice. Don’t let anyone give you crap. David will either see the characters as superiors to whom he can report, or intruders whom he must scare away, and it all depends on what they say or do. Strong, decisive leadership will quickly gain his respect."
+            ^"What He Knows" STRING "David can give visitors directions and advises them to stay in their quarters where it is safe. If they are willing to help him restore order, he can describe many of the magi and outline the general timeline of the Sundering. He thinks a group loyal to Granorda initiated the conflict, but almost everyone died in the rebellion, the great tremor, or a sudden attack of satyrs who made it all the way to the sixth level. He has never seen the Bell, but Larine told him about it; she said she there was a strange book in the library that described its origins. He does not know what became of her and hopes that she is hiding somewhere safe. He will recognize Crenvalus’s letter if it is shown to him, but it will drive him into an incoherent rage that he cannot explain, and he might even try to destroy it."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 48
+        }
+        PERSONALITY_TRAITS {
+            "Commanding" +3
+            "Loyal" +2
+            "Merciful" -2
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "stairs"
+            "Awareness" SCORE 4 SPECIALTY "alertness"
+            "Brawl" SCORE 3 SPECIALTY "dodging"
+            "Carouse" SCORE 1
+            "Folk Ken" SCORE 2 SPECIALTY "magi"
+            "Latin" SCORE 4 SPECIALTY "receiving orders"
+            "Leadership" SCORE 5 SPECIALTY "small groups"
+            "Local Area Lore" SCORE 4 SPECIALTY "directions"
+            "Local Language" SCORE 5 SPECIALTY "giving orders"
+            "Single Weapon" SCORE 4 SPECIALTY "long sword"
+        }
+    }
+
+}

@@ -1,0 +1,65 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_WarriorHrool" {
+    NAME "Ars Magica Fifth Edition, Calebais - Warrior Hrool"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Warrior Hrool (Chapter Two: The Ruins of Calebais, p33): one being, its printed stat lines verbatim fields.
+
+    #td91710d072819234e6e941 ^"Warrior Hrool" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t5ec6277a332cedb0108847 ^"Calebais"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence" STRING "1 (3)"
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-2), -3 (3-4), -5 (5-6), Incapacitated (7-8)"
+            ^"Vis" STRING "2 Corpus in each satyr horn, 1 Animal"
+            ^"Appearance" STRING "Warrior Hrools look like regular adult Hrools who have been put through a training program. They are stronger and meaner, with darker coats, wielding wooden clubs made from fallen tree branches or stone axes. They wear necklaces strung with satyr horns around their necks."
+            ^"Note" STRING "Warrior Hrools are used to fighting in trained groups of 3-5 under the leadership of their champion or an ermine. This means the group receives a +12 combat bonus to either attack or defense."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 33
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Protective" +2
+        }
+        COMBAT {
+            "Axe (stone)" INIT 2 ATTACK 8 DEFENSE 10 DAMAGE 7
+            " Bite" INIT 5 ATTACK 8 DEFENSE 8 DAMAGE 0
+            " Club" INIT 0 ATTACK 7 DEFENSE 10 DAMAGE 5
+            " Short Spear" INIT 4 ATTACK 7 DEFENSE 8 DAMAGE 3
+            " Javelin (thrown)" INIT 0 ATTACK 7 DEFENSE 4 DAMAGE 7
+            " Stone (thrown)" INIT 1 ATTACK 4 DEFENSE 5 DAMAGE 3
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "climbing"
+            "Awareness" SCORE 1
+            "Brawl" SCORE 4 SPECIALTY "grapple"
+            "Hunt" SCORE 3 SPECIALTY "rats"
+            "Leadership" SCORE 2 SPECIALTY "combat"
+            "Single Weapon" SCORE 4 SPECIALTY "club"
+            "Speak Hrool" SCORE 2 SPECIALTY "orders"
+            "Stealth" SCORE 1
+            "Swim" SCORE 3 SPECIALTY "diving"
+            "Thrown Weapons" SCORE 1 SPECIALTY "rocks"
+        }
+    }
+
+}

@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_Calebais_TheRuinsOfCalebais_HofotChampionHrool" {
+    NAME "Ars Magica Fifth Edition, Calebais - Hofot, Champion Hrool"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # Hofot, Champion Hrool (Chapter Two: The Ruins of Calebais, p49): one being, its printed stat lines verbatim fields.
+
+    #tbd4a48f5578966163da713 ^"Hofot, Champion Hrool" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tde433eccf47217d1a4d572 ^"Greeting Hall"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -2
+            ^"Confidence" STRING "2 (5)"
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-3), -3 (4-6), -5 (7-9), Incapacitated (10-12)"
+            ^"Equipment" STRING "David’s long sword (wielded two-handed), ill-fitting leather gloves, and a hastily-constructed hauberk."
+            ^"Encumbrance" STRING "0 (2)"
+            ^"Vis" STRING "2 Animal, 10 Corpus in satyr horns"
+            ^"Appearance" STRING "Hofot is an extremely large, bulky Hrool wearing a leather jerkin that appears to have been chewed to fit and carrying David’s magical long sword with both paws. Flames burn brightly along the edge of it. He wears a tattered leather coat and a necklace made from five satyr horns, and his arms are completely white."
+            ^"Note" STRING "Hofot can lead up to five Hrools as a trained group, and usually leads five warriors. Each group receives a +15 bonus to either attack or defense."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 49
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Protective" +2
+            "Generous" -2
+        }
+        COMBAT {
+            "Long sword" INIT 4 ATTACK 11 DEFENSE 10 DAMAGE 18
+            " Stone (thrown)" INIT -1 ATTACK 2 DEFENSE 2 DAMAGE 8
+            " Bite" INIT 4 ATTACK 5 DEFENSE 9 DAMAGE 2
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "climbing"
+            "Brawl" SCORE 3 SPECIALTY "grapple"
+            "Hunt" SCORE 3 SPECIALTY "rats"
+            "Leadership" SCORE 4 SPECIALTY "combat"
+            "Single Weapon" SCORE 4 SPECIALTY "long sword"
+            "Speak Hrool" SCORE 2 SPECIALTY "orders"
+            "Swim" SCORE 3 SPECIALTY "diving"
+            "Thrown Weapons" SCORE 1 SPECIALTY "rocks"
+        }
+    }
+
+}

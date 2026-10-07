@@ -1,0 +1,54 @@
+EXTENSION "ARMDef_Calebais_Figures" {
+    NAME "Ars Magica Fifth Edition, Calebais - maps"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # The book's three maps (the wood p17; the ruins, levels One to Five p38 and Six to Nine p39), as ^"Figure"
+    # records. Their labels were read by eye (no text layer); the transcription, its links, its uncertain readings and how
+    # it was made: calebais/figures.json.
+
+    # source: page 17, read by eye from the art (no text layer; figures.json)
+    #tbd28a277d1b42efdcff2cc ^"The Wood (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Lettering" LIST OF STRING ["Dryad Grove (5)", "The Veil (4)", "Young Woman", "Satyr Hollow (3)", "Marker", "Murder Site", "Sir Gilbert's Camp", "Meadow (2)"]
+            ^"Shows" STRING "the wood about Calebais and its Faerie auras (the figure under each name): the meadow, the Veil and the Dryad Grove, Satyr Hollow, the Marker, Sir Gilbert's camp, and where the young woman is held and the murder took place"
+            ^"Locations" LIST [#t491372c6f891a9377da122 ^"The Dryad Grove", #tdcde71b5ff9e6cc8e15c06 ^"Satyr Hollow", #tbf70e9836398bc29478d35 ^"The Marker", #t4d3405531e0695c0117ba1 ^"Sir Gilbert’s Camp"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, two labels at 500 dpi (no text layer); labels as printed"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 17
+        }
+    }
+
+    # source: page 38, read by eye from the art (no text layer; figures.json)
+    #t97a748148159a300791750 ^"The Ruins of Calebais, Levels One to Five (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "The Ruins of Calebais"
+            ^"Lettering" LIST OF STRING ["The Ruins of Calebais", "Level One", "Archers' Room", "Storage", "Entry Room", "Level Two", "Grog Barracks", "Private Rooms", "Meeting Room", "Level Three", "Meeting Room", "Storage", "Kitchen", "Banquet Hall", "Level Four", "Living Quarters", "Small Storage", "Woodshop", "Smithy", "Storage", "Cloth & Leather Shop", "Level Five", "Garden", "Common Room", "Storage"]
+            ^"Shows" STRING "the plans of the ruins' first five levels round the central well, each room named, the stairs between levels"
+            ^"Uncertain Readings" LIST OF STRING ["Entry Room: the text's room on this level is the Entrance Room (p44) -- not linked, the book never equates the names", "Meeting Room (Level Three): the text's third level has no meeting room (its rooms: Greeting Hall, Banquet Hall, Kitchen) -- not linked", "Storage (Level Three, Level Four): the text names no storage room on the third level; the fourth has a Small and a Large Storage Room, and the map labels a Small Storage apart -- not linked", "Living Quarters: the text's fourth level has Four Private Chambers -- not linked"]
+            ^"Locations" LIST [#t3b16262dbecfcacceb9eda ^"The Entrance", #ta28950ad552fd10197e89d ^"Archers’ Room", #t5d5bc51ef0583264b0c8a0 ^"Storage Room (The Entrance)", #t0e4651336a6153cfd3def3 ^"The Second Level", #t4eda76bf3eb4bbdc26ef7a ^"Barracks", #t97b8ddac30487072de2025 ^"Private Rooms", #tc56a05a399f511e5f0e6f9 ^"Meeting Room", #t6e7241fe1e50c3ee7d93c1 ^"The Third Level", #t7b201e221cd0c630eca084 ^"Kitchen", #t81fc8495136d244017ebe5 ^"Banquet Hall", #t22ed73870d3b7c94371f5d ^"The Fourth Level", #t51abbcb1c81d6549752fd3 ^"Small Storage Room", #t304491d8772edc8304692b ^"Wood Shop", #t94584bc778376e6f5c38c3 ^"Smithy", #tc3e4690867dbd35513d365 ^"Leather and Cloth Shop", #tb2cc06fa97ce1e55e7a1be ^"The Fifth Level", #t795a89cc66508b5ce7d342 ^"The Garden", #tb3800aef59d3cdba8dd657 ^"Common Room", #t2ced40d200601107fa7179 ^"Storage Room (The Fifth Level)"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, two labels at 500 dpi (no text layer); labels as printed"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 38
+        }
+    }
+
+    # source: page 39, read by eye from the art (no text layer; figures.json)
+    #tb6c527d30a02ee6e5818d4 ^"The Ruins of Calebais, Levels Six to Nine (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Lettering" LIST OF STRING ["Level Six", "Living Quarters", "Drininkeana's Laborarory", "Illusions", "Mormulus' Laboratory", "Pool", "Guard Post", "Living Quarters", "Ierimeyra's Laboratory", "Hrool Warrens", "Level Seven", "Corpses", "The Bell", "Treasure Chests", "Level Eight", "Magic Door", "Council Chamber", "Antechamber", "Library", "Level Nine", "Laboratory", "Living Quarters", "Cloud Room", "Antechamber"]
+            ^"Shows" STRING "the plans of the ruins' sixth to ninth levels round the central well -- the laboratories, the Hrool warrens, the council chamber and library -- and the way from the eighth level to the Bell"
+            ^"Uncertain Readings" LIST OF STRING ["Drininkeana's Laborarory: printed so (Laboratory); not linked", "Ierimeyra's Laboratory: printed so; the text's magus is Ierimyra -- not linked", "Guard Post: the text's sixth-level room is the Guard Room -- not linked", "Council Chamber: the text's eighth-level room is the Council Room (its sidebar: 'Background: The Council Chamber') -- not linked", "Antechamber (Level Nine): the text names no antechamber on the ninth level -- the eighth's is linked"]
+            ^"Locations" LIST [#tb3e30e16204aae078a92fc ^"The Sixth Level", #ta60f5d1d2763e0b36daa6f ^"Mormulus’s Laboratory", #t5fe14d221109447b0890a1 ^"The Seventh Level", #ta993ce185bf4fc37c2b137 ^"The Eighth Level", #t910b6d6fa71dd4a489ecfa ^"Antechamber", #t25afbe5d71bdb35cd27f3e ^"Library", #tf9362a2f46ca42730e42b8 ^"The Ninth Level"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 220 dpi, two labels at 500 dpi (no text layer); labels as printed"
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 39
+        }
+    }
+
+}

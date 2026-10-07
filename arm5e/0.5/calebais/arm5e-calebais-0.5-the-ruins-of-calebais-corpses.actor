@@ -1,0 +1,36 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_Corpses" {
+    NAME "Ars Magica Fifth Edition, Calebais - Corpses"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Corpses (Chapter Two: The Ruins of Calebais, p77): one being, its printed stat lines verbatim fields.
+
+    #t16b82d7048da237ee4b89b ^"Corpses" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t59b95b63ce16c76929ea97 ^"Burial Chamber"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 0
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER -3
+                ^"Dexterity" INTEGER -3
+                ^"Quickness" INTEGER -3
+            }
+            ^"Soak" INTEGER -3
+            ^"Wound Penalties" STRING "-0 (1-5), -0 (6-10), -0 (11-15), Splattered (16-20) (yes, “splattered”)"
+            ^"Appearance" STRING "Each of these creatures is a bloated corpse, remarkably well-preserved, animated but mindless. What little clothing or few possessions they carried are tattered and decayed."
+            ^"Note" STRING "The corpses can only fight as untrained groups. These corpses are mindless, and do not fear anything; they cannot be affected by Mentem spells of any kind. They cannot really see or hear either, but simply have a magical sense of where the characters are. They ignore wound penalties and have no fatigue. If their bodies are searched afterward, there might be trinkets or other small objects of value on them, but this sort of looting will frighten Granorda into casting more spells to protect herself."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 77
+        }
+        COMBAT {
+            "Punch and Grapple" INIT -3 ATTACK -3 DEFENSE -3 DAMAGE 3
+        }
+    }
+
+}

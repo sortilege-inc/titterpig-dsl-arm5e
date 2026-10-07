@@ -1,0 +1,69 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_FerdinaTheAutocrat" {
+    NAME "Ars Magica Fifth Edition, Calebais - Ferdina, the Autocrat"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Ferdina, the Autocrat (Chapter Two: The Ruins of Calebais, p54): one being, its printed stat lines verbatim fields.
+
+    #t4f5e682c6fc40254d93ff4 ^"Ferdina, the Autocrat" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tb3800aef59d3cdba8dd657 ^"Common Room"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER -2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Age" STRING "41"
+            ^"Soak" INTEGER -2
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Powers" STRING "Ring the Chime, 15 points, +0, Mentem: When Ferdina strikes the memory of the chime she carries, the bell in the council chamber on the eighth floor will ring with a strange, ominous sound, and the ghosts of all the magi in the covenant will be compelled to attend a council meeting. Such a meeting is likely to end in (ghostly) bloodshed fairly quickly, but Ferdina may be able keep order for one or two items of business before the remaining magi remember their grudges and renew their battles."
+            ^"Equipment" STRING "Council chime"
+            ^"Vis" STRING "5 Mentem in ghostly chime, if she earns the wizards’ respect for her actions"
+            ^"Appearance" STRING "Ferdina is a thick, white, glowing apparition of a woman who has been badly burned (no hair, burn scars, blackened clothes). She might have a fearful, hunted look in her eyes, which contrasts with her otherwise erudite and noble bearing. She carries a ghostly magical chime, which is the last vestige of the respect and status she once held at Calebais."
+            ^"Roleplaying Tips" STRING "Speak crisply and precisely, keep your back straight, and never forget your manners. Let this thin veneer crack under pressure, though, especially if other ghosts taunt you and tell the characters the truth about your failure here. Ferdina will accept pity. If she is treated with respect, she will be astounded and will likely aid such “dignified folk” as much as she can, even going so far as to betray the covenant if she believes she is truly appreciated."
+            ^"What She Knows" STRING "Ferdina was a member of the council, and knows all of the magi at least by reputation. She can describe their accomplishments (she doesn’t know as much as she thinks about Magic Theory, but she gets some of the details right), including the newest effects of Mormulus’s Veil and how to activate Malevola Vida’s talisman. She used to have a diadem before the Sundering, and can tell some of what it did, but the magi took it away from her. She has never seen the Bell but she does know where it is (in the chambers on the other side of the magic door)."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 54
+        }
+        PERSONALITY_TRAITS {
+            "Gentle" +3
+            "Loyal" +1
+            "Brave" -3
+        }
+        COMBAT {
+            "Dodge" INIT 0 ATTACK 0 DEFENSE 0 DAMAGE -2
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 6 SPECIALTY "Mathematics"
+            "Athletics" SCORE 3 SPECIALTY "stairs"
+            "Awareness" SCORE 3 SPECIALTY "alertness"
+            "Bargain" SCORE 4 SPECIALTY "arcane items"
+            "Carouse" SCORE 2 SPECIALTY "abstaining"
+            "Civil and Canon Law" SCORE 2 SPECIALTY "trade"
+            "Charm" SCORE 2 SPECIALTY "guests"
+            "Concentration" SCORE 3 SPECIALTY "reading"
+            "Etiquette" SCORE 3 SPECIALTY "hosting"
+            "Latin" SCORE 5 SPECIALTY "magical terms"
+            "Local Area Lore" SCORE 4 SPECIALTY "nobility"
+            "Local Language" SCORE 6 SPECIALTY "trade"
+            "Other Language" SCORE 4 SPECIALTY "trade"
+            "Magic Theory" SCORE 2 SPECIALTY "Hermetic limits"
+            "Order of Hermes Lore" SCORE 2 SPECIALTY "wizards"
+            "Philosophiae" SCORE 3 SPECIALTY "metaphysical"
+        }
+    }
+
+}

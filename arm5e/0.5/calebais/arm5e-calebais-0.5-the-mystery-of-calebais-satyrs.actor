@@ -1,0 +1,64 @@
+EXTENSION "ArM5_Calebais_TheMysteryOfCalebais_Satyrs" {
+    NAME "Ars Magica Fifth Edition, Calebais - Satyrs"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Satyrs (Chapter One: The Mystery of Calebais, p18): one being, its printed stat lines verbatim fields.
+
+    #t09ca605b2a438f9263d1f9 ^"Satyrs (Calebais)" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tdcde71b5ff9e6cc8e15c06 ^"Satyr Hollow"]
+            ^"Printed Name" STRING "Satyrs"
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 22
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 1
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-6), -3 (7-12), -5 (13-18), Incapacitated (19-24)"
+            ^"Powers" STRING "Enrage, 2 points, +0, Mentem: Satyrs can play wild, violent music, giving those who hear it +3 on Attack, Damage and Brave totals for the rest of the scene. Revelry, 2 points, +0, Mentem: Satyr dancing music makes listeners more riotous and merry, increasing Personality traits like Reckless, Lustful, and Impulsive by 3 for the rest of the scene."
+            ^"Vis" STRING "2 Corpus in each horn"
+            ^"Appearance" STRING "Faerie satyrs are rugged, wild men with two sharp horns in their foreheads and goat’s legs and hooves. They are very hairy, their whole bodies covered in short, dark fur, and they often sport scraggly beards. They are also a little larger than normal men. In spite of all this, they are still very attractive in a wild, virile way, for they embody pure masculinity in everything they do."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 18
+        }
+        PERSONALITY_TRAITS {
+            "Lusty" +5
+            "Hasty" +2
+        }
+        COMBAT {
+            "Kick (non-lethal)" INIT 1 ATTACK 7 DEFENSE 7 DAMAGE 7
+            " Horn and Kick" INIT 1 ATTACK 8 DEFENSE 6 DAMAGE 11
+            " Javelin" INIT 2 ATTACK 8 DEFENSE 9 DAMAGE 8
+            " Javelin (thrown)" INIT 0 ATTACK 9 DEFENSE 6 DAMAGE 10
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "dancing"
+            "Awareness" SCORE 2
+            "Brawling" SCORE 5 SPECIALTY "wrestling"
+            "Carouse" SCORE 6
+            "Charm" SCORE 2 SPECIALTY "taking liberties"
+            "Guile" SCORE 3 SPECIALTY "women"
+            "Hunt" SCORE 3 SPECIALTY "tracking"
+            "Local Language" SCORE 3
+            "Music" SCORE 3 SPECIALTY "flute"
+            "Single Weapon" SCORE 4 SPECIALTY "javelin"
+            "Survival" SCORE 2
+            "Thrown Weapon" SCORE 3 SPECIALTY "javelin"
+        }
+    }
+
+}

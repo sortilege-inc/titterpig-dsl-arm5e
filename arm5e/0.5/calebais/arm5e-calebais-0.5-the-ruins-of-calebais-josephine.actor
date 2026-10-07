@@ -1,0 +1,63 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_Josephine" {
+    NAME "Ars Magica Fifth Edition, Calebais - Josephine"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Josephine (Chapter Two: The Ruins of Calebais, p47): one being, its printed stat lines verbatim fields.
+
+    #td95a9bb92665e421689b09 ^"Josephine" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t97b8ddac30487072de2025 ^"Private Rooms"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 1
+            }
+            ^"Age" STRING "25"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20)"
+            ^"Powers" STRING "Filch, 2 points, +1, Terram: Josephine can attempt to steal an item using her Legerdemain. If she succeeds without being detected, the item becomes ghostly until she ditches it."
+            ^"Equipment" STRING "Long spear, short sword, metal reinforced leather armor (hauberk)."
+            ^"Encumbrance" STRING "1 (2)"
+            ^"Vis" STRING "3 Mentem in her ghostly spear, if Gemaric is rescued"
+            ^"Appearance" STRING "Josephine is a very hazy ghost of a strong, young woman in torn leather armor. She clutches a spear and has a short sword buckled at her side. Her cheeks are lined from tears, and she bows her head and covers her eyes with her forearm as she shakes with grief."
+            ^"Roleplaying Tips" STRING "Pretend to grasp the shaft of her spear, and let your hands tremble as you speak; the violence of your grip symbolizes her pain and loss."
+            ^"What She Knows" STRING "She can sketch some of the details of the fighting among the grogs, three factions that began fighting each other at the orders of their magi. One was Crenvalus’s, one was Granorda’s, and the rest were neutral."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 47
+        }
+        PERSONALITY_TRAITS {
+            "Suspicious" +3
+            "Obsessed" +2
+            "Forgiving" -2
+        }
+        COMBAT {
+            "Long Spear" INIT 1 ATTACK 10 DEFENSE 11 DAMAGE 7
+            " Short Sword" INIT 1 ATTACK 10 DEFENSE 8 DAMAGE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "stairs"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Bows" SCORE 2 SPECIALTY "short bow"
+            "Great Weapon" SCORE 5 SPECIALTY "spear"
+            "Legerdemain" SCORE 5 SPECIALTY "stealing"
+            "Local Area Lore" SCORE 3 SPECIALTY "families"
+            "Local Language" SCORE 5 SPECIALTY "slang"
+            "Single Weapon" SCORE 4 SPECIALTY "short sword"
+        }
+    }
+
+}

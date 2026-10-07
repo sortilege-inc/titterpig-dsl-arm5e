@@ -1,0 +1,39 @@
+EXTENSION "ARMDef_Calebais_TheRuinsOfCalebais_TheUndertakers" {
+    NAME "Ars Magica Fifth Edition, Calebais - The Undertakers"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ARMDef_Calebais_Core_Ext"
+
+    # The Undertakers (Chapter Two: The Ruins of Calebais, p56): one being, its printed stat lines verbatim fields.
+
+    #t4c2458549a8d19e15ebe19 ^"The Undertakers" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tb8c9fece6048f61d545485 ^"Drininkeana’s Laboratory"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -5
+                ^"Perception" INTEGER -2
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 8
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 2
+            ^"Soak" STRING "+26 (they take double damage from edged weapons)"
+            ^"Wound Penalties" STRING "-1 (1-7), -3 (8-14), -5 (15-21), Incapacitated (22-28)"
+            ^"Vis" STRING "4 Terram"
+            ^"Appearance" STRING "Undertakers are hard to see, because they spend most of their time underground. They are made entirely of tightly packed earth, and have four tentacles that sprout from the surface to grasp a victim. When they envelop or swallow intruders, they might appear to have mouths as they fold in on themselves, but they have no need of eyes, ears, or even a humanoid shape, as they are simply dirt that has been animated to take an efficient, mutable, and malevolent form."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 56
+        }
+        COMBAT {
+            "Tentacles" INIT 3 ATTACK 7 DEFENSE 10 DAMAGE 8
+        }
+    }
+
+}

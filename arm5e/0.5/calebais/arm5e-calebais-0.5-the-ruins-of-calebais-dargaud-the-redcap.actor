@@ -1,0 +1,65 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_DargaudTheRedcap" {
+    NAME "Ars Magica Fifth Edition, Calebais - Dargaud, the Redcap"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Dargaud, the Redcap (Chapter Two: The Ruins of Calebais, p42): one being, its printed stat lines verbatim fields.
+
+    #t24e6dfad7d7ef6771776bb ^"Dargaud, the Redcap" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t91eba6d3c2676a6cc67c5b ^"Outer Barracks and Stable"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 11
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Age" STRING "20"
+            ^"Size" INTEGER -1
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-4), -3 (5-8), -5 (9-12), Incapacitated (1316)"
+            ^"Powers" STRING "Kinesis, 1 point, +4, Terram: Dargaud can pick up a small physical object, no bigger than his head, and throw it. While he is holding it, the object becomes ghostly and invisible, but he can only hold one thing at a time because he holds his sigil in his other hand."
+            ^"Vis" STRING "2 Mentem in his voting sigil, if he learns the details of how he died"
+            ^"Appearance" STRING "Dargaud is completely insubstantial, and cannot be seen unless he is submerged in water, when he appears hazily as a bedraggled, mousy young man wearing the red cap of House Mercere. He never goes anywhere without his voting sigil, a small ordinary stone with a flat base and his name carved into the bottom."
+            ^"Roleplaying Tips" STRING "If characters find a way to communicate with Dargaud, they will find him alert but almost unintelligible. He uses a great many words, with an amazing vocabulary, but none of them make any sense together. “Traversal boundless undersea lyceums without meticulosity,” or “Where abrogate certamen equals extremist succedaneum.” Slowly speak a sentence like this, throwing together whatever interesting words you can think of, and then while the characters are puzzling it over, have him throw a rock at them and try to run away."
+            ^"What He Knows" STRING "Dargaud is aware that something is wrong with the covenant, but not what. He can act as a guide, as he knows the layout of the covenant well, but only as it was fifty years ago. If coerced, he can give vague descriptions of the magi, though he does not remember much about them. He was just an apprentice almost all of his life at Calebais, and rarely interacted with the other magi, since he only passed his Gauntlet a few weeks before the Sundering. He was given a diadem, but never participated in the Bell ritual."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 42
+        }
+        PERSONALITY_TRAITS {
+            "Patient" +3
+            "Curious" +2
+            "Forgiving" -2
+        }
+        COMBAT {
+            "Fist and Kick" INIT 0 ATTACK 1 DEFENSE 1 DAMAGE 2
+            " Stone (thrown)" INIT -1 ATTACK 4 DEFENSE 5 DAMAGE 3
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "climbing"
+            "Awareness" SCORE 3 SPECIALTY "movement"
+            "Brawl" SCORE 3
+            "Guile" SCORE 2 SPECIALTY "lying to authority"
+            "Latin" SCORE 5 SPECIALTY "vocabulary"
+            "Local Language" SCORE 5 SPECIALTY "vocabulary"
+            "Order of Hermes Lore" SCORE 3 SPECIALTY "places"
+            "Ride" SCORE 1
+            "Stealth" SCORE 4 SPECIALTY "hiding"
+            "Survival" SCORE 1
+            "Thrown Weapons" SCORE 3 SPECIALTY "rocks"
+        }
+    }
+
+}

@@ -1,0 +1,72 @@
+EXTENSION "ArM5_Calebais_TheRuinsOfCalebais_GranordaMagisterOfDeath" {
+    NAME "Ars Magica Fifth Edition, Calebais - Granorda, Magister of Death"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # Granorda, Magister of Death (Chapter Two: The Ruins of Calebais, p74): one being, its printed stat lines verbatim fields.
+
+    #t64c077ef746f16100973d0 ^"Granorda, Magister of Death" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#td84416cf4456ca86dc2229 ^"Corridor and Pitfalls"]
+            ^"Covenant" LIST [#t3258eeb24aa00a2434f405 ^"Calebais"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 45
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -2
+            }
+            ^"Age" STRING "95 (40)"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, -1, -3, -5, Unconscious"
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (1620)"
+            ^"Arts" STRING "Cr 20, In 25, Mu 5, Pe 5, Re 25, An 5, Aq 5, Au 5, Co 25, He 5, Ig 5, Im 5, Me 25, Te 8, Vi 5"
+            ^"Powers" STRING "Ghostly Body, 0 points, constant, Mentem: Granorda is aware she is a ghost, and can turn invisible, pass through walls, ignore physical attacks, and otherwise take advantage of her spirit form. Ghostly Magic, 1 or more points, -2, by spell: Granorda can make a spell she has cast affect the physical world by spending 1 point of temporary Might per magnitude of the effect. Ghostly Vis, 1 or more points (special), -2, by spell: Granorda can permanently expend her Magic Might as vis, with each point equivalent to one pawn. Spells Known: Charm Against Putrefaction (CrCo10/+49) Incantation of the Body Made Whole (CrCo40, Ritual/+52) Grip of the Choking Hand (PeCo15/+31) Awaken the Slumbering Dead (ReCo35/+51): Animates a Room of corpses (Base 10, +2 Voice, +1 Conc, +2 Room). Enchantment of my Lover’s Eye (ReMe20/+51): Like Aura of Rightful Authority, except that the target acts as if he were in love (Base 5, +1 Eye, +2 Sun). Coerce the Spirits of the Night (ReMe20/+55) Incantation of Summoning the Dead (ReMe40, Ritual/+57)"
+            ^"Vis" STRING "9 Corpus in her physical remains"
+            ^"Appearance" STRING "Long black hair and a disheveled, dirty black gown are the most prominent features of this well-built woman. She is attractive, but not by ordinary standards; it is her confidence and her mystery that turns heads. Although she walks about as if she were statuesque and queenly, her physical features are much more mundane."
+            ^"Roleplaying Tips" STRING "Be calm, never lose your cool, and until you have made up your mind, treat people with respect. Be interested in good-looking men. Speak with a slight lisp and practice dainty, careful mannerisms. Glance away often, as if worried about something, but refuse to explain if caught. Trust no one, for you have been betrayed before. If you decide that someone is vile and contemptible, you must get rid of that person as quickly as possible."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 74
+        }
+        PERSONALITY_TRAITS {
+            "Megalomaniacal" +4
+            "Brash" +3
+            "Just" +2
+            "Kind" +2
+        }
+        COMBAT {
+            "Dodge" INIT -2 ATTACK 0 DEFENSE -2 DAMAGE 0
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 3 SPECIALTY "grammar"
+            "Awareness" SCORE 3 SPECIALTY "keeping watch"
+            "Charm" SCORE 5 SPECIALTY "common folk"
+            "Concentration" SCORE 5 SPECIALTY "spells"
+            "Etiquette" SCORE 2 SPECIALTY "nobility"
+            "Finesse" SCORE 2 SPECIALTY "Corpus"
+            "Folk Ken" SCORE 2 SPECIALTY "men"
+            "Guile" SCORE 2 SPECIALTY "faking authority"
+            "Infernal Lore" SCORE 3 SPECIALTY "undead"
+            "Intrigue" SCORE 3 SPECIALTY "plotting"
+            "Local Language" SCORE 5 SPECIALTY "old dialects"
+            "Latin" SCORE 5 SPECIALTY "Hermetic"
+            "Leadership" SCORE 2 SPECIALTY "intimidation"
+            "Magic Theory" SCORE 3 SPECIALTY "spells"
+            "Medicine" SCORE 3 SPECIALTY "anatomy"
+            "Parma Magica" SCORE 6 SPECIALTY "Corpus"
+            "Penetration" SCORE 3 SPECIALTY "Corpus"
+            "Philosophiae" SCORE 3 SPECIALTY "natural"
+            "Teaching" SCORE 3 SPECIALTY "men"
+        }
+    }
+
+}

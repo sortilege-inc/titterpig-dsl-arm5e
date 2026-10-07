@@ -1,0 +1,40 @@
+EXTENSION "ArM5_Calebais_TheMysteryOfCalebais_TheDryad" {
+    NAME "Ars Magica Fifth Edition, Calebais - The Dryad"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-07"
+    DEPENDS_ON "ArM5_Calebais_Core_Ext"
+
+    # The Dryad (Chapter One: The Mystery of Calebais, p29): one being, its printed stat lines verbatim fields.
+
+    #tbf6df2e6c5e73ed89328c3 ^"The Dryad" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t491372c6f891a9377da122 ^"The Dryad Grove"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 45
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Powers" STRING "Control Herbam, 0 points, +5, Herbam: The dryad can control plants within the Veil, causing them to respond to her command. This is equivalent to a sixth magnitude Hermetic effect. Infatuation, 1 point, +0, Mentem: By drawing her spirit close to a mortal, the dryad can cause intense desire for her and a willingness to do her will. Insubstantial Form, 0 points, +5, Imaginem: The dryad cannot be affected by physical things, though she also cannot affect them. This is the only way she can manifest as long as she is bound to Calebais."
+            ^"Vis" STRING "The dryad has no vis, since her magical essence is part of the enchantment of the wood."
+            ^"Appearance" STRING "The dryad is old, white-haired, and wise, but still beautiful and earthy. She wears a living gown of leaves and flowers."
+            ^"Source" STRING "Calebais"
+            ^"Page" INTEGER 29
+        }
+        PERSONALITY_TRAITS {
+            "Lonely" +3
+            "Protective" +2
+            "Kind" +1
+        }
+    }
+
+}

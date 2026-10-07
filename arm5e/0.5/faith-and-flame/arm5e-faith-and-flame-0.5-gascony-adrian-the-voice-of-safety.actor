@@ -1,0 +1,126 @@
+EXTENSION "ArM5_Faith_and_Flame_Gascony_AdrianTheVoiceOfSafety" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Adrian, the Voice of Safety"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # Adrian, the Voice of Safety (Chapter Five: Gascony, p54): one being, its printed stat lines verbatim fields.
+
+    #t7aebf9502e0f532a669d73 ^"Adrian, the Voice of Safety" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Spirit of Deceit"
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Puissant Charm, Puissant Guile; Weak-willed"
+            ^"Reputation" STRING "The Convincing Silver Tongue of Doubt 4 (Infernal)"
+            ^"Hierarchy" INTEGER 4
+            ^"Combat" STRING "Dodge: Init +2, Attack -, Defense +8, Damage - Fist: Init +2, Attack +7, Defense +7, Damage +4"
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group (Crusaders)"
+            ^"Vis" STRING "There are 6 pawns of Vim vis in the demon’s hands."
+            ^"Appearance" STRING "Adrian appears as a handsome troubadour or beautiful trobairitz traveling the countryside, spreading news, and performing for both common folk and nobility through song and music."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 54
+        }
+        PERSONALITY_TRAITS {
+            "Deceptive" +6
+            "Acedia" +3
+            "Persuasive" +3
+            "Spirit of Deceit Demon" +3
+            "Trustworthy" -5
+        }
+        ABILITIES {
+            "Brawl" SCORE 5 SPECIALTY "Dodge"
+            "Carouse" SCORE 4 SPECIALTY "appearing drunk"
+            "Charm" SCORE 5 BONUS 2 SPECIALTY "first encounters"
+            "Etiquette" SCORE 5 SPECIALTY "nobles"
+            "Folk Ken" SCORE 5 SPECIALTY "humans"
+            "Guile" SCORE 7 BONUS 2 SPECIALTY "convincing others"
+            "Perform" SCORE 5 SPECIALTY "guitarra latina"
+            "Theology" SCORE 4 SPECIALTY "duty"
+        }
+        POWERS {
+            #tc5ed7b617d58a88d21dcd4 ^"Change Form (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Change Form"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Can take on the form of a human between Size –2 and Size +2. He often chooses the form of a troubadour with a guitar."
+            }
+            #tfc2f4e7e426ab761d3eb3f ^"Trust of the Innocent (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Trust of the Innocent"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target of this effect loses all judgment and believes a specific lie (as long as it is passable) until presented with evidence to the contrary. An Intelligence roll against an Ease Factor of 6 is allowed to resist the effect."
+            }
+            #tbd8c3e9942d55f31743548 ^"Obsession (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "the demon can impose the Obsession Trait of Acedia or Sloth. (*Realms of Power: The Infernal*, pages 31-32)"
+            }
+            #t12996d963e19b81fa9553a ^"Coagulation (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "May take on a physical body in 30 rounds of manifestation, or may dissolve with a round of concentration."
+            }
+            #tb15f7cb511f1c80e66e508 ^"Forked Tongue of the Serpent (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Forked Tongue of the Serpent"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target believes any lie, no matter how preposterous, until he relates the lie to someone else. He then realizes how ridiculous the falsehood sounds, and the demonic Power is broken. An Intelligence roll against an Ease Factor of 9 also reveals the lie’s veracity, with the first roll allowed an hour after the effect was used, and further rolls permitted every subsequent hour."
+            }
+            #tb2db2db8aa55d0bba425ed ^"The Serpent’s Oracle (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Serpent’s Oracle"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon duplicates the effect of any non-ritual Intellego spell for the cost of 2 Might Points. It may also gain a morsel of future knowledge, understanding the most immediate consequences of any one future action."
+            }
+            #td2ac9e94910db42cac7be3 ^"Strangle the Noble Endeavor" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power allows the demon to create a perfectly convincing moral, theological, and scriptural argument for whatever point he is trying to prove, generally demonstrating how participating in a Crusade brings ruin on a person’s loved ones. After reasoned consideration a Intelligence + Theology against an Ease Factor of 9 reveals the reasoning to be false, with the first roll allowed a day after the effect was used, and further rolls permitted every subsequent month. Someone else may explain the error to the victim, effectively making the roll on the victim’s behalf."
+            }
+        }
+        DESCRIPTION "Wherever the demon goes, it warns of the terrible atrocities being performed in Narbonnais or across the sea “in the name of faith,” and how people shouldn’t imagine either going to join the Crusade or even join the defense of the nearby Crusade’s targets, the Cathars. He infects people with the emotion of acedia, the sloth of inaction, convincing them they have no place participating in a fight that doesn’t involve them, and that such an endeavor would not only lead to folly and misery for the target’s family, but also serves uncaring nobles seeking to line their pockets."
+    }
+
+}

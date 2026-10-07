@@ -1,0 +1,94 @@
+EXTENSION "ARMDef_Faith_and_Flame_Gascony_LouCarcolh" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Lou Carcolh"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # Lou Carcolh (Chapter Five: Gascony, p63): one being, its printed stat lines verbatim fields.
+
+    #te92e3589a25e4de36d1603 ^"Lou Carcolh" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Animal"
+            ^"Printed Might" STRING "25 (An)"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 10
+                ^"Stamina" INTEGER 7
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -3
+            }
+            ^"Size" INTEGER 5
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal, Magical Monster; Greater Immunity (Deprivation); Ferocity (trying to eat people), Homing Instinct (cavern home), Improved Characteristics, Puissant Brawl, Tough; Mute, No Hands; Compulsion (eat people)"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Grasping Tentacles), Greater Power (Viscous Travel), Improved Defense (tentacle), Improved Initative (x2, tentacle), Improved Stamina (x2), Improved Might (x5), Improved Power (x3, Grasping Tentacles) Improved Soak, Lesser Power (Sense the Quivering Prey)"
+            ^"Reputations" LIST ["The Terrible Monster which Eats Travelers 4 (Local Area); Strange Beast of Legend 2 (Local)"]
+            ^"Soak" INTEGER 11
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Equipment" STRING "None"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "There are five pawns of Animal vis in the lou carcolh’s tentacles"
+            ^"Appearance" STRING "This strange creature appears to be an enormous, dragon-headed snail, with a beard of nearly a score of tentacles extending implausibly far to grasp prey and pull it toward a maw filled with forearm-sized teeth. A thick shell covered in lumps the size of a man’s head forms its carapace, while its pebbly hide easily turns most weapons."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 63
+        }
+        PERSONALITY_TRAITS {
+            "Lou Carcolh" +3
+            "Ravenous" +2
+            "Uncaring" +2
+        }
+        COMBAT {
+            "Fangs" INIT -3 ATTACK 12 DEFENSE 6 DAMAGE 15
+            " Tentacle" INIT 3 ATTACK 14 DEFENSE 11 DAMAGE 14
+            " Grapple" INIT -3 ATTACK 8 DEFENSE 4
+        }
+        ABILITIES {
+            "Area Lore: Local Region" SCORE 3 SPECIALTY "trade routes"
+            "Athletics" SCORE 4 SPECIALTY "moving"
+            "Awareness" SCORE 5 SPECIALTY "humans"
+            "Brawl" SCORE 5 BONUS 2 SPECIALTY "tentacle"
+            "Concentration" SCORE 2 SPECIALTY "Sense the Quivering Prey"
+            "Hunt" SCORE 3 SPECIALTY "people"
+            "Penetration" SCORE 3 SPECIALTY "Grasping Tentacles"
+            "Stealth" SCORE 4 SPECIALTY "remaining unseen"
+            "Survival" SCORE 4 SPECIALTY "finding prey) Natural Weapons: Fangs: (Init 0, Atk +4, Def +2, Dmg +5) Tentacle: (Init 0, Atk +5, Def +3, Dmg +4"
+        }
+        POWERS {
+            #t841329181c96867128b00d ^"Viscous Travel" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–6"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The lou carcolh slithers over any terrain, unhindered by brambles, debris or any other rubble of lesser size than itself. **ReAn 30 R: **Per, **D: **Conc, **T: **Ind (Base 15, +1 Conc, +2 size): Greater Power (30 levels; +5xp Concentration, +10xp Penetration, –1 might cost)"
+            }
+            #tc2f68302a3f7150ab73c33 ^"Grasping Tentacles" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The lou carcolh has the ability to extrude its many tentacles to attack up to 100 paces away. Each tentacle requires another invocation of this power. The lou carcolh suffers no penalties to attacks made at this distance. **MuAn 45 R: **Pers, **D: **Diam, **T: ** Part (Base 25, +1 Diameter, +1 Part, +2 size): Greater Power (45 MuAn; +5xp Penetration), Improved Powers, (+10 initiative, reduce Might cost -3, +10xp Concentration)"
+            }
+            #t048fa96129b5feeabb49bc ^"Sense the Quivering Prey" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The lou carcolh can sense the presence of creatures by “feeling” the boundaries of the air with its tentacles. This doesn’t permit fine discriminations, and cannot discern between live and dead bodies. **InIm 10 R: **Per, **D: **Conc, **T: **Touch (Base 4, +1 Conc, +1 Touch): Lesser Power (10 levels; +15xp Penetration)"
+            }
+        }
+        DESCRIPTION "*It was a vast creature, lumbering and vicious. Oblivious to us as we hid, its head was like a dragon with a beard of tentacles, a mouth of sword-like fangs. Its neck became that of a snail and its body disappeared within an enormous shell. It left a trail of thick slime in its wake, rolling over the broken wagons as if they were nothing. The mule, however, was not so fortunate, and its cries were quickly silenced after the tentacles shot forth and pulled it bleating into that ravenous maw. I can only hope the monster wasn’t an immature beast.* — From the Journal of Acumenis, Ex Miscellanea"
+    }
+
+}

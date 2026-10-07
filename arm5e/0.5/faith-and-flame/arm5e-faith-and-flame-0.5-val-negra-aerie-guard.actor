@@ -1,0 +1,115 @@
+EXTENSION "ArM5_Faith_and_Flame_ValNegra_AerieGuard" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Aerie Guard"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # Aerie Guard (Chapter Nine: The Lost Covenant of Val-Negra, p142): one being, its printed stat lines verbatim fields.
+
+    #te36fe72028426671bbcaa3 ^"Aerie Guard" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Printed Name" STRING "Character Guide: Aerie Guard"
+            ^"Covenant" LIST [#t351a772376b4e82412716c ^"Val-Negra"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            ^"Personality Traits" STRING "Unnoticeable (Dexterity) +3, Loyal +2, Brave –2, Inconspicuous (Presence) –3"
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "unknown (33)"
+            ^"Virtues and Flaws" STRING "Magic Human; Affinity with Single Weapon, Custos, Warrior; Covenant Upbringing, Dutybound, Vow (service to Val-Negra)"
+            ^"Qualities and Inferiorities" STRING "Natural Appearance; Essential Virtue: Unnoticeable (Minor), Gift of Tongues, Improved Powers (x2), Lesser Powers (x2), Mentem Resistance, Minor Virtue: Arcane Lore, Second Sight, Unaffected by the Gift; Restricted Power, Slow Power, Susceptible to Depravation"
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "long sword, round shield, partial suit chain mail"
+            ^"Encumbrance" STRING "1"
+            ^"Vis" STRING "2 Mentem in brains"
+            ^"Appearance" STRING "The people of the Aerie Clan appear drab, dull, and unnoticeable. Physically they are nearly identical, with variations due to gender and age."
+            ^"Variations" STRING "These statistics represent a typical adult clan member, in this case a soldier of the Black Guard. These statistics can be changed represent any clan member by applying a few quick adjustments. The Minor Flaw of Covenant Upbringing is required, and they each have an Affinity pertaining to their role (a primary Ability). Make adjustments to Characteristics and other Abilities as needed. Grog Level Characters have a Might Score of 10, and Companions have a score of 20 (and additional Qualities). Children and Youth have 240 fewer experience points, and Elders have an additional 360 experience points."
+            ^"Aerie Weaver Woman" STRING "(Mature Grog)"
+            ^"Virtues & Flaws" STRING "Covenfolk; Magic Human; Affinity with Craft: Weaving, Gossip; Covenant Upbringing, Fear: of Outside World (Minor)"
+            ^"Characteristics" DEF {
+                ^"Perception" INTEGER 2
+                ^"Strength" INTEGER -1
+                ^"Dexterity" INTEGER 2
+            }
+            ^"Romulus & Remus" STRING "The Aerie are always led by a pair of twins named Romulus and Remus. Romulus is Autocrat of the Interior and the dominant of the pair. Remus, Autocrat of the Exterior, is slightly weaker but possesses secret knowledge. Twins are rare amongst the Aerie, and signify a time to transfer knowledge to the next generation. The elder and younger twins conduct a secret ceremony before the Shrine. When it is finished, the young twins emerge with the minds and memories of the elder pair, who have disappeared. Romulus is obsessed with keeping Val-Negra closed off, and Remus wants to reach out to the outside world. They have Might scores of 33 & 32 (respectively), and are more advanced than other Aerie in various other ways. Each has the following additional power: Aura of Rightful Authority, 0 points, Init –2, Mentem. ReMe20 R: Voice, D: Concentration, T: Ind. (Base 5, +2 Voice, +1 Concentration); Lesser Power (20 levels, –4 cost +1 Init; Improved Power: +5 Init)"
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 142
+        }
+        COMBAT {
+            "Long Sword & Round Shield" INIT 3 ATTACK 12 DEFENSE 11 DAMAGE 8
+        }
+        ABILITIES {
+            "Aerie Language" SCORE 5 SPECIALTY "gossip"
+            "Athletics" SCORE 3 SPECIALTY "climb"
+            "Awareness" SCORE 2 SPECIALTY "alert"
+            "Brawl" SCORE 4 SPECIALTY "grapple"
+            "Carouse" SCORE 1 SPECIALTY "drinking songs"
+            "Concentration" SCORE 1 SPECIALTY "silent speech"
+            "Folk Ken" SCORE 1 SPECIALTY "Aerie Clan"
+            "Latin" SCORE 3 SPECIALTY "Hermetic"
+            "Magic Lore" SCORE 1 SPECIALTY "effects of magic"
+            "Mentem Resistance" SCORE 1 SPECIALTY "Hermetic"
+            "Organization Lore: Aerie" SCORE 1 SPECIALTY "ancestors"
+            "Organization Lore: Order of Hermes" SCORE 1 SPECIALTY "House Flambeau"
+            "Penetration" SCORE 4 SPECIALTY "other Aerie"
+            "Profession: Soldier" SCORE 4 SPECIALTY "guard duty"
+            "Second Sight" SCORE 4 SPECIALTY "spirits"
+            "Single Weapon" SCORE 6 SPECIALTY "long sword"
+            "Stealth" SCORE 3 SPECIALTY "quiet"
+            "Thrown Weapon" SCORE 4 SPECIALTY "spear"
+            "Val-Negra Lore" SCORE 1 SPECIALTY "glory days"
+        }
+        POWERS {
+            #t462b1ad79a8087e6683a17 ^"Silent Speech of the Aerie Clan" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Aerie can mentally communicate with each other using a form of “silent speech.” That is, if they communicate their thoughts “aloud,” they can be heard by any other Aerie within range of their “voice”; that is, how much effort they put into the “volume” of their words, which for them is no different that the effort a man puts into whispering or shouting. This power is Restricted in that communication is only possible with other Aerie, and concerning one another, Penetration is multiplied by 6; +2 Sympathetic Connection for being blood related and knowing each other’s names, +4 for the Arcane Connection they share (this connection is personal and cannot be used by others). The typical Aerie will thus have a Penetration of 40, allowing them to speak with Romulus and Remus. **CrMe20 R: **Special, **D: **Conc, **T: **Ind. (Base 3, +2 Voice, +1 Conc, +2 Group): Lesser Power (20 levels, –1 cost); Restricted Power: 25xp Penetration"
+            }
+            #t99f088c5dc3481193e4308 ^"Invisibility of Silent Standing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "one round then +0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "If standing quietly for more than a few moments, an Aerie totally blends in with her surroundings to the point that she is invisible. The effect is brought upon automatically if the conditions are met, but is broken if she moves or speaks aloud or mentally (remaining mentally silent can be challenging, thus the Duration of Concentration). Aerie elders are able to remain invisible longer and even while moving (optional Variable Power). **PeIm5 R: **Per, **D: **Conc, **T: ** Ind. (Base 4, +1 Conc); Lesser Power (5 levels, –1 cost, Slow Power)"
+            }
+        }
+        ABILITIES {
+            "Aerie Language" SCORE 5 SPECIALTY "gossip"
+            "Awareness" SCORE 1 SPECIALTY "details"
+            "Brawl" SCORE 1 SPECIALTY "knife"
+            "Carouse" SCORE 1 SPECIALTY "drinking songs"
+            "Craft: Weaving" SCORE 5 SPECIALTY "tapestries"
+            "Concentration" SCORE 2 SPECIALTY "silent speech"
+            "Folk Ken" SCORE 3 SPECIALTY "Aerie Clan"
+            "Intrigue" SCORE 3 SPECIALTY "gossip"
+            "Latin" SCORE 3 SPECIALTY "Hermetic"
+            "Magic Lore" SCORE 2 SPECIALTY "effects of magic"
+            "Mentem Resistance" SCORE 1 SPECIALTY "Hermetic"
+            "Organization Lore: Aerie" SCORE 2 SPECIALTY "ancestors"
+            "Organization Lore: Order of Hermes" SCORE 1 SPECIALTY "House Flambeau"
+            "Penetration" SCORE 4 SPECIALTY "other Aerie"
+            "Second Sight" SCORE 3 SPECIALTY "spirits"
+            "Stealth" SCORE 2 SPECIALTY "quiet"
+            "Val-Negra Lore" SCORE 2 SPECIALTY "interesting sites"
+        }
+    }
+
+}

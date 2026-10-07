@@ -1,0 +1,80 @@
+EXTENSION "ArM5_Faith_and_Flame_Arelat_ASmallTarasque" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - A Small Tarasque"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # A Small Tarasque (Chapter Eight: Arelat, p120): one being, its printed stat lines verbatim fields.
+
+    #t8da387e2411fb535085c9e ^"A Small Tarasque" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tfa62cc5c89e37cf1241ab1 ^"Arelat"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 3
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Greater Immunity (deprivation), Greater Immunity (fire); Ferocity, Improved Characteristics (x2), Tough; Magic Monster, Mute, No Hands; Baneful Circumstances (Sincere Holy Displays), Weakness (Sincere Holy Displays)."
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Breath of Flame), No Fatigue; Improved Attack (claws), Improved Attack (teeth), Improved Damage (claws), Improved Damage (teeth), Improved Might (x3), Improved Powers (x2), Improved Soak (x7), Personal Power (Unnatural Flight); Monstrous Appearance"
+            ^"Reputations" LIST ["Savage Beast from Galacia 3 (local)", "Dragon Mesmerized by Hymns 2 (Narbonnais)"]
+            ^"Soak" INTEGER 20
+            ^"Fatigue Levels" STRING "None."
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "There are four pawns of Animal vis in the Tarasque’s carapace."
+            ^"Appearance" STRING "The tarasque resembles a scaly, winged oxen with a vaguely reptilian lion’s head, six legs, a tortoise-like carapace, and a leathery tail. The full body of the creature measures roughly 15 paces long. Its legs end in heavy, sharply curved talons, and its great maw sports sword-like teeth. Wisps of pale gray smoke curl from its nostrils and open mouth."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 120
+        }
+        PERSONALITY_TRAITS {
+            "Ravenous" +3
+            "Vicious" +3
+            "Tarasque" +3
+            "Cunning" +2
+        }
+        COMBAT {
+            "Large Claws" INIT -1 ATTACK 17 DEFENSE 10 DAMAGE 13
+            " Large Teeth" INIT -1 ATTACK 15 DEFENSE 7 DAMAGE 12
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "charging"
+            "Awareness" SCORE 4 SPECIALTY "humans"
+            "Brawl" SCORE 7 SPECIALTY "claws"
+            "Hunt" SCORE 4 SPECIALTY "woods"
+            "Stealth" SCORE 2 SPECIALTY "remaining unseen"
+            "Survival" SCORE 3 SPECIALTY "forests"
+        }
+        POWERS {
+            #td902d0993244636e4e1f78 ^"Unnatural Flight" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The wings of a tarasque should not carry it through the air, but they do, and do so tirelessly. **ReAn 15 R: **Per, **D: **Sun, **T: **Ind. (Base 4, +2 sun, +3 size): Personal Power (25 levels), Improved Power (–2 Might cost, +3 Initiative.)"
+            }
+            #tb2e66883997ecd0a45e2de ^"Breath of Flame" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The tarasque breathes a gout of flame 3 paces by 3 paces by 9 paces long. Anything caught in its effect suffers a stress die +25 damage from the fire. **CrIg 40 R: **Voice, **D: **Mom, **T: **Ind. (Base 20, +2 Voice, +2 size): Greater Power (50 levels, mastery points: –2 Might cost), Improved Power: (+5 Initiative))"
+            }
+        }
+    }
+
+}

@@ -1,0 +1,111 @@
+EXTENSION "ARMDef_Faith_and_Flame_Gascony_JulianJuliaTheTempterOfTheWayOfStJames" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Julian/Julia, the Tempter of the Way of St. James"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # Julian/Julia, the Tempter of the Way of St. James (Chapter Five: Gascony, p55): one being, its printed stat lines verbatim fields.
+
+    #t3d19f8a30cee4d08fea9d3 ^"Julian/Julia, the Tempter of the Way of St. James" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (Incubi/Succubi)"
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Improved Characteristics x2, Puissant Charm, Puissant Guile; Weak-willed"
+            ^"Hierarchy" INTEGER 3
+            ^"Reputation" STRING "The Despoiler of the Pious 3 (Infernal), Clever 1 (Pilgrimage Hostels)"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group (people who have already lost love once)"
+            ^"Vis" STRING "Three pawns of Vim vis reside in the demon’s belt buckle."
+            ^"Appearance" STRING "Appearing as a vibrant and cheerful man or woman in his or her early 20’s, the demon tempter is always finely, but suggestively, dressed. He favors rich blues and deep brown colors, and appears greatly interested in the victim’s insights and experiences."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 55
+        }
+        PERSONALITY_TRAITS {
+            "Selfish" +5
+            "Deceptive" +4
+            "Lustful" +4
+            "Tempter Demon" +3
+            "Cowardly" +2
+        }
+        COMBAT {
+            "Club" INIT 3 ATTACK 7 DEFENSE 6 DAMAGE 5
+            " Fist" INIT 2 ATTACK 4 DEFENSE 4 DAMAGE 2
+        }
+        ABILITIES {
+            "Awareness" SCORE 3 SPECIALTY "humans"
+            "Brawl" SCORE 2 SPECIALTY "club"
+            "Charm" SCORE 7 BONUS 2 SPECIALTY "first encounters"
+            "Concentration" SCORE 3 SPECIALTY "maintaining concentration"
+            "Folk Ken" SCORE 7 SPECIALTY "humans"
+            "Guile" SCORE 7 BONUS 2 SPECIALTY "seduction"
+            "Penetration" SCORE 3 SPECIALTY "Hag Ride"
+        }
+        POWERS {
+            #t238cc98e1991be3045b277 ^"Coagulation (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "2 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The demon can obtain a material form, which it may dissolve at will."
+            }
+            #tfe140f1b35e02277620dc9 ^"Obsession (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1-3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can impose the Obsession Trait of Betraying Lust. (*Realms of Power: The Infernal*, pages 31–32)"
+            }
+            #t7ac760d3db05c27982ac3b ^"Harness the Wind (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Harness the Wind"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This Power allows the demon to fly from one place to any other. The Power lasts until the journey’s end, or dawn. Most demons do not bother to do this; they instead discorporate and generate a fresh body at the new location. Sexual demons can do this, instead of using this Power, but lose their cargo when they do."
+            }
+            #t6e998a0ac4e5a7a1412fe0 ^"Hag Ride (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Hag Ride"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The demon may “ride” a victim for an evening. This Power causes the victim to lie, fully conscious but unable to struggle, while assaulted by the demon. If the demon is in spiritual form, the victim can see ghost-like glimpses of his assailant. Being ridden by these demons causes the loss of a long-term Fatigue level, and prevents the recovery of any other Fatigue levels during the night. Sometimes a victim is ridden on consecutive evenings, and loses additional Fatigue level each evening. Some powerful sexual demons can cause wounds or can kill with a single ride. Others ride victims in their dreams. The target regains the power to move at dawn."
+            }
+            #tb49826c1e951ad32e7e6d0 ^"Mutable Gender (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Mutable Gender"
+                    ^"Cost" STRING "0 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The demon can change the shape of its manifestation at will, to whatever male or female human form it desires. Julian almost always takes the mien of a raven-haired roguish man in his early twenties wearing pilgrim’s garb, unless another form would be more appropriate to the situation."
+            }
+        }
+        DESCRIPTION "Julian often asks a target to walk and tell him more about a topic the individual feels passionate about, drawing her aside from prying eyes before attempting to seduce the target with his powers. Then he arranges future trysts, even traveling along with the victim’s entourage. When possible, he escalates the liaisons, adding elements of risk while catering to every whim until the pair is “accidentally” caught in the act of carnal sin in the most damaging manner.\n\nDue to their nature, both Cenodoxus and Julian prefer to keep their activities to more populated sites, like Bordeaux, Bayonne or the ferry crossing at Blaye. Cenodoxus requires an audience to achieve his full effect, and so restricts himself to larger settlements. Julian finds settlements to be fertile ground for spreading his particular sin, and regularly preys upon pilgrims using the Way of St. James, fiendishly delighting in their spiritual corruption. Adrian wanders from town to village to city, performing at inns and taverns every night, carousing with the inhabitants to better widely spread his obsession."
+    }
+
+}

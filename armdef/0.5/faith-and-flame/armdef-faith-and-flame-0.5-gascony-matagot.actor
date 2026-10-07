@@ -1,0 +1,79 @@
+EXTENSION "ARMDef_Faith_and_Flame_Gascony_Matagot" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Matagot"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # Matagot (Chapter Five: Gascony, p62): one being, its printed stat lines verbatim fields.
+
+    #ta9a02aa8d59ad12af8d9e6 ^"Matagot" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -7
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -3
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Luck, Perfect Balance, Puissant Awareness, Sharp Ears, Unaffected by the Gift; Magic Friend, Nocturnal, Proud, Tainted with Evil, Vow (serve the individual who first feeds it food until the person dies or releases it from service)"
+            ^"Magic Qualities and Inferiorities" STRING "Ritual Power (Quid Pro Quo) x2; Improved Abilities, Improved Power (Quid Pro Quo), Improved Recovery, Improved Soak, Lesser Power (Wages of Greed), Minor Virtue (Shapeshifter), Minor Virtue (Tough); Susceptible to Deprivation"
+            ^"Qualities" STRING "Ambush Predator, Crafty, Good Jumper, Skilled Climber, Thick Fur"
+            ^"Reputations" LIST ["Evil 3 (local)", "Strange and double-edged creatures 2 (regional)"]
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Vis" STRING "There are three pawns of Animal vis in the Matagot’s tail."
+            ^"Appearance" STRING "A large, dark calico cat flecked with gold, but with tufted ears and dark eyes with a vicious look. Note that the matagot is a specific sort of magical creature, and not a magic cat lineage."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 62
+        }
+        PERSONALITY_TRAITS {
+            "Cat" +3
+            "Curious" +4
+            "Cruel" +3
+            "Deceptive" +3
+            "Vindictive" +3
+            "Independent" +2
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 10 DEFENSE 12 DAMAGE -5
+            " Teeth" INIT 4 ATTACK 10 DEFENSE 9 DAMAGE -6
+        }
+        ABILITIES {
+            "Area Lore: Local" SCORE 2 SPECIALTY "villages"
+            "Athletics" SCORE 3 SPECIALTY "chase"
+            "Awareness" SCORE 4 BONUS 2 SPECIALTY "humans"
+            "Brawl" SCORE 4 SPECIALTY "claws"
+            "Guile" SCORE 2 SPECIALTY "playing dead"
+            "Hunt" SCORE 4 SPECIALTY "birds"
+            "Occitan" SCORE 4 SPECIALTY "conversational"
+            "Shapeshifter" SCORE 4 SPECIALTY "human"
+            "Stealth" SCORE 5 SPECIALTY "remaining unseen"
+            "Survival" SCORE 3 SPECIALTY "home"
+        }
+        POWERS {
+            #t8d0e88b3b3f7e2f3f9b268 ^"Quid Pro Quo" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "This power creates a cache of gold coins worth approximately 20 Mythic Pounds. The matagot creates this horde in a hidden place, such as under a house or in a foundation, but prefers an isolated location. It parcels out the coins when its adopted family acts appropriately, as determined by the matagot. The coins resemble a local coin, if the matagot has one, but otherwise have a strange, unidentifiable design. **CrTe 35 R: **Touch, **D: **Mom, **T: **Ind (Base 15, +1 Touch, +2 Group, +1 finesse): Ritual Power (35 levels, -3 reduced cost; Note that this power reduces the matagot’s Might Score until it either spends a season in a Magic Aura of 3, or consumes 15 pawns of Animal vis), Improved Power (-3 reduced cost) *Wages of Greed*, 5 points, Init –6, Corpus The matagot often reserves this power for those who refuse to release it. This power causes miserable pain which hampers them from regular activities without actually injuring them. **PeCo 25 R: **Voice, **D: **Sun, **T: **Ind (Base 5, +2 Voice, +2 Sun): Lesser Power (25 levels)"
+            }
+        }
+        DESCRIPTION "*“At first I thought it no different from other cats, perhaps oddly colored, but the creature has a definite taste for food and a vindictive nature. The gold was useful, I admit, but I can do without the temper of such a damnable, cruel beast.”* —From the Journal of Acumenis Ex Miscellanea"
+    }
+
+}

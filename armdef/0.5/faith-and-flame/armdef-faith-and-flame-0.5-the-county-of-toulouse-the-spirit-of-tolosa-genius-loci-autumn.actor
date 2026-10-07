@@ -1,0 +1,59 @@
+EXTENSION "ARMDef_Faith_and_Flame_TheCountyOfToulouse_TheSpiritOfTolosaGeniusLociAutumn" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - The Spirit of Tolosa (Genius Loci, Autumn)"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # The Spirit of Tolosa (Genius Loci, Autumn) (Chapter Four: The County of Toulouse, p37): one being, its printed stat lines verbatim fields.
+
+    #t4181d62595f871535b1e58 ^"The Spirit of Tolosa (Genius Loci, Autumn)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t17fc949bb8c25dedb8cbb0 ^"County of Toulouse"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Printed Size" STRING "N/A"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues & Flaws" STRING "Magic Spirit, Ways of the Land (Toulouse); Entrancement; Affinity with Area Lore, Inoffensive to those of the Magic Realm, Magic Sensitivity, Puissant Area Lore; Dependent (citizens), Servant of the Land (Toulouse); Anchored to the Land (Toulouse), Incomprehensible, Soft-Hearted, Susceptible to Infernal Power."
+            ^"Magical Qualities" STRING "Greater Power, No Fatigue, Ritual Power x6; Gift of Speech, Improved Abilities, Improved Powers x10, Vis Mastery (Aquam)."
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "N/A"
+            ^"Wound Penalties" STRING "N/A"
+            ^"Powers" STRING "Sturdy Walls of Toulouse, 8 points, Terram, Init +2. Heals breaches in the city walls, the missing stone magically repairing itself until sunset or sunrise when it suddenly collapses away leaving the holes. (–2 points for Improved Powers, +22 Init.) The Silent Counsel, 4 points, Mentem, Init –2. Subtly influences a group of people, such as the bishop, or the capitouls in session, toward the best outcome for the city as a whole. Human Shape, 1 point, Corpus, Init –1. Allows the spirit to physically manifest until the next sunrise or sunset as a nondescript member of the lower orders of Toulousain society. The penalties imposed by The Gift still apply; the spirit is somehow disturbing and stands out, despite appearing very average in every way. Grant Blessing of the City, 5 points, Vim, Init –19. The recipient of this power suddenly prospers, as everything turns to their favor, and gains the Virtue Ways of Toulouse until such a time as the spirit chooses to withdraw it. However the Might cost is not recovered by the spirit until it ends the effect. (Improved powers: Might cost: 5, Initiative +1) Oath Swearing, 8 points, Vim, Init –9. This power is very unusual, in that it works only upon the steps of the church of Saint-Pierre des Cuisines, where by tradition the counts of Toulouse make oaths to the people, and where capitouls swear their vows to serve the city. (The steps have a tiny Magic aura of 1, a lacuna). If the power Penetrates, then the oath made before the people is binding. If it is broken, even inadvertently and secretly, then (mostly) false rumors about the individual concerned spring up among the citizens, and throughout the county of Toulouse, and he gains the Minor Flaw Infamous, even if the actual nature of their indiscretion remains unknown. (Improved Powers: cost: 2, Initiative +1)"
+            ^"Appearance" STRING "The genius loci of Toulouse usually manifests, if seen by Second Sight, as a damp mist, or a figure of indeterminate gender seemingly made out of water and pond reeds. It answers only to the name Tolosa, and the magi tend to avoid interfering with it, though they are aware it has weakened substantially in recent years. At night it can sometimes be found manifested in its human form, as a fisherman sitting on Adam Carpentiere’s river barrage fishing, and is only too willing to chat to anyone. It rarely makes much sense though, at least to short-lived mortals."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 37
+        }
+        PERSONALITY_TRAITS {
+            "Soft-Hearted" +3
+        }
+        ABILITIES {
+            "Area Lore: County of Toulouse" SCORE 18 BONUS 2 SPECIALTY "city of Toulouse"
+            "Artes Liberales" SCORE 1 SPECIALTY "poetry"
+            "Awareness" SCORE 1 SPECIALTY "fires"
+            "Folk Ken" SCORE 5 SPECIALTY "Toulousain residents"
+            "Bargain" SCORE 1 SPECIALTY "Toulouse"
+            "Carouse" SCORE 1 SPECIALTY "poetry"
+            "Charm" SCORE 3 SPECIALTY "strangers"
+            "Civil & Canon Law" SCORE 1 SPECIALTY "Toulouse"
+            "Entrancement" SCORE 2 SPECIALTY "citizens"
+            "Living Language: Occitan" SCORE 5 SPECIALTY "Provençal/Languedoc"
+            "Magic Sensitivity" SCORE 2 SPECIALTY "regiones"
+            "Organization Lore: Tolosate" SCORE 1 SPECIALTY "lake sacrifices"
+            "Penetration" SCORE 4 SPECIALTY "Mentem"
+        }
+    }
+
+}

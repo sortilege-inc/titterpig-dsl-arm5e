@@ -1,0 +1,158 @@
+EXTENSION "ARMDef_Faith_and_Flame_Gascony_Maju" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Maju"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # Maju (Chapter Five: Gascony, p72): one being, its printed stat lines verbatim fields.
+
+    #t87fef3db78d1f42bbc4a8d ^"Maju" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Serpent"
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Duke of False Gods"
+            ^"Might" INTEGER 45
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -2
+            ^"Virtues and Flaws" STRING "Puissant Charm, Puissant Guile; Overconfident"
+            ^"Reputation" STRING "Duke of Hell 7 (Infernal)"
+            ^"Hierarchy" INTEGER 7
+            ^"Combat" STRING "Fist: Init +4, Attack +9, Defense +9, Damage +4 Or as appropriate for physical form."
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Weakness" STRING "Protected Group (Those who have given alms that day)"
+            ^"Vis" STRING "There are 9 pawns of Vim vis in the demon’s eyes."
+            ^"Appearance" STRING "As Dama’s familiar, Maju often appears as a small, winged faerie sprite, though he is also capable of shifting forms between a hare, a snake, or a dove, as most appropriate to the situation. In private, he prefers the shape of the snake as it allows him to wrap around Dama and tantalizingly threaten her with strangulation."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 72
+        }
+        PERSONALITY_TRAITS {
+            "Deceptive" +6
+            "Proud" +6
+            "Clever" +3
+            "Persuasive" +3
+            "False God Demon" +3
+            "Trustworthy" -5
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 7 SPECIALTY "astronomy"
+            "Awareness" SCORE 5 SPECIALTY "identifying magi"
+            "Bargain" SCORE 7 SPECIALTY "pacts"
+            "Brawl" SCORE 5 SPECIALTY "Dodge"
+            "Carouse" SCORE 5 SPECIALTY "appearing drunk"
+            "Ceremony" SCORE 3 SPECIALTY "summoning"
+            "Charm" SCORE 5 BONUS 2 SPECIALTY "first encounters"
+            "Dominion Lore" SCORE 5 SPECIALTY "angels"
+            "Etiquette" SCORE 5 SPECIALTY "magi"
+            "Faerie Lore" SCORE 5 SPECIALTY "mannerisms"
+            "Faerie Magic" SCORE 3 SPECIALTY "experimentation"
+            "Folk Ken" SCORE 4 SPECIALTY "humans"
+            "Guile" SCORE 7 BONUS 2 SPECIALTY "appearing mundane"
+            "Magic Theory" SCORE 4 SPECIALTY "learning spells"
+            "Music" SCORE 6 SPECIALTY "guitar"
+            "Infernal Lore" SCORE 6 SPECIALTY "demons"
+            "Intrigue" SCORE 6 SPECIALTY "longterm plans"
+            "Philosophiae" SCORE 5 SPECIALTY "ceremonial magic"
+            "Teaching" SCORE 4 SPECIALTY "magic"
+            "Theology" SCORE 3 SPECIALTY "contradictions"
+        }
+        POWERS {
+            #t8d0b2421bf5064fa9754eb ^"Change Form (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Can take on the form of a humanoid between Size –2 and Size +2. He often chooses the form of a troubadour with a guitar or a small, winged sprite."
+            }
+            #t57e5e95f4b35765b9e7b78 ^"Shapeshifter (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Can take on the form of animals (even fantastic creatures, such as a griffon or a drake) between Size –2 and Size +2. He often chooses the form of a dove, a hare, or a snake depending on the circumstances, but he is not limited to those forms."
+            }
+            #ta152f572d307bd5049199f ^"A Pretty Cloak to Wrap it Within" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "up to 9 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Maju may create Imaginem effects up to 9th magnitude."
+            }
+            #t6a0b96f89e730af70f04d8 ^"Obsession (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Cruelty, Greed, Pride."
+            }
+            #t263ff763549d2797215bf1 ^"Coagulation (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "May take on a physical body in 45 rounds of manifestation, or may dissolve with a round of concentration."
+            }
+            #t5db191097121486cb41b53 ^"Lend Senses (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "While in physical contact with another being, the demon can lend that being either its hearing or sight. This lasts indefinitely, but if the eavesdroppers witness a display of religious sentiment, it is immediately terminated."
+            }
+            #t9dcb975b9807d9bd180e43 ^"Shroud the Stench of the Pit (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can conceal the Infernal nature of any other supernatural power or aura, making it appear to be Magical or Faerie instead. It may also be used to remove all stench of the supernatural, making things appear wholly mundane. This power can shield a creature or effect from the Sense Holiness/Unholiness ability. This Power costs Might Points equal to the original cost of the Power being concealed, or Might Points equal to the magnitude of the Infernal effect if it does not cost Might Points. This Power lasts for as long as the Power it is masking. This means Maju normally has 42 Might Points to spend, as it regularly cloaks the Infernal aura at Mimizan to conceal its past."
+            }
+            #t71829eb09a0c0f225e1cec ^"Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The demon can summon riches; each use of this Power can create wealth equivalent to up to 45 pounds of gold. This wealth can be of any form— gold, gems, rich tapestries, ivory, etc—but it always has intrinsic value, rather than being valuable because of its utility (a roomful of grain, for example). This wealth is not created, it is instead summoned from somewhere else, chosen by the demon usually for the greatest corrupting effect. This might be a royal treasury on the other side of Europe or the purse of the man standing nearby."
+            }
+            #te0054655aea159be426eb2 ^"His Master’s Voice (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can summon other demons or corrupt beasts to its current location. This costs one Might Point for every point of Infernal Might of the being summoned, so is used sparingly. The demon has no control over the demon he has summoned."
+            }
+            #tebc64cf457d0142ead4886 ^"The Serpent’s Oracle (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can duplicate the effect of any non-ritual Intellego spell for the cost of 2 Might Points. It may also gain a morsel of future knowledge, understanding the most immediate consequences of any one future action."
+            }
+        }
+        DESCRIPTION "Maju has played a very long game with Dama. It started as part of the pagan religion of the Gauls, then subverted the pagan religion of the Basques in the region (Maju often takes the form of a snake and has Dama call it Sugaar when dealing with Basques, and many of the folk witches who serve Dama believe they are the god and goddess of their faith). Eventually, the sins the creature perpetuates will taint it so deeply that it will transform into an infernal being. Until then, Maju is trying to corrupt both Christianity and the Order of Hermes. It does this by setting up conflict between men and women, making women think they have a special, purer version of their faith than the mens’. Through Dama’s cult the creature has taken aim at the Virgin Mary. To Maju, the Black Madonna represents a dark feminine goddess in perfect opposition to the masculine God of the Dominion, who is different and more exalted. It seeks to make women desire glory beyond their place in the Christian hierarchy, to want to teach and preach, and to worship Mary (or multiple Marys) instead of Christ. To do this, it teaches great power to those who serve it. Like the serpent of Genesis, it corrupts mankind through Eve with forbidden fruit."
+    }
+
+}

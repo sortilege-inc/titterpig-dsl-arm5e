@@ -1,0 +1,138 @@
+EXTENSION "ArM5_Faith_and_Flame_ValNegra_TheAdulterationOfFlambeauMalignancyAutumn" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - The Adulteration of Flambeau (Malignancy, Autumn)"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # The Adulteration of Flambeau (Malignancy, Autumn) (Chapter Nine: The Lost Covenant of Val-Negra, p140): one being, its printed stat lines verbatim fields.
+
+    #tce8cf71090b410dfd0276f ^"The Adulteration of Flambeau (Malignancy, Autumn)" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Covenant" LIST [#t351a772376b4e82412716c ^"Val-Negra"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 65
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence" STRING "3 (4)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Greater Immunity (Deprivation); Improved Characteristics x3, Great Intelligence, Great Stamina, Tough, Warrior; Blatant Magical Air, Magic Monster, Environmental Magic Condition (Enclosed by the Iron Door), Wrathful (Major); Proud (Minor)"
+            ^"Magical Qualities" STRING "Focus Power x5, Greater Power x4, Magical Meditation, Major Virtue: Greater Immunity to Fire, No Fatigue, Ritual Power x2, Vis Mastery (Ignem); Improved Abilities x5, Improved Confidence, Improved Power x9, Minor Virtue: Arcane Lore, Minor Virtue: Educated, Minor Virtue: Unaffected by the Gift, Improved Recovery (65)"
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "N/A"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Appearance" STRING "If perceived or manifested the Adulteration appears as a deeply tanned, bald man in his late 50’s. If angry, it begins to smolder and smoke and releases bits of ash, bursting into an immolated form when furious and ready to attack. It truly believes it is the Founder Flambeau, trapped within the regio. It usually manifests in human form, but may conceal itself and interact via its Eidolon. It loathes Moors and sahirs, and immediately attacks if confronted by such individuals. Imprisonment confuses it and it strives to escape, though it doesn’t understand how the door prevents it from leaving."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 140
+        }
+        PERSONALITY_TRAITS {
+            "Hard-Hearted" +2
+            "Proud" +3
+            "Wrathful" +5
+        }
+        ABILITIES {
+            "Awareness" SCORE 3 SPECIALTY "light sources"
+            "Concentration" SCORE 4 SPECIALTY "maintaining"
+            "Dead Language: Latin" SCORE 4 SPECIALTY "curses"
+            "Folk Ken" SCORE 4 SPECIALTY "sensing lies"
+            "Guile" SCORE 3 SPECIALTY "concealing intent"
+            "Finesse" SCORE 5 SPECIALTY "Ignem"
+            "Artes Liberales" SCORE 1 SPECIALTY "literacy"
+            "Living Language: French" SCORE 5 SPECIALTY "Gascony dialect"
+            "Living Language: Spanish" SCORE 5 SPECIALTY "Asturian dialect"
+            "Magical Meditation" SCORE 4 SPECIALTY "recovery"
+            "Magic Lore" SCORE 4 SPECIALTY "Ignem entities"
+            "Magic Theory" SCORE 7 SPECIALTY "Ignem"
+            "Organization Lore: Order of Hermes" SCORE 4 SPECIALTY "early members"
+            "Philosophiae" SCORE 2 SPECIALTY "metaphysics"
+            "Penetration" SCORE 6 SPECIALTY "Ignem"
+            "Pyrenees Lore" SCORE 4 SPECIALTY "caverns"
+            "Single Weapon" SCORE 5 SPECIALTY "longsword"
+            "Theology: Christian" SCORE 1 SPECIALTY "gospel"
+            "Thrown Weapon" SCORE 4 SPECIALTY "javelin"
+            "Val-Negra Lore" SCORE 4 SPECIALTY "regio boundaries"
+        }
+        POWERS {
+            #tb65fb1d85c03952527c8c8 ^"Arc of Fiery Ribbons (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Arc of Fiery Ribbons"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "As per the spell of the same name, creating a dozen fiery ribbons that fan out in a sixty-degree arc and inflict +10 Damage. **CrIg 25 R: **Voice, **D: **Mom, **T: **Group. (Base 5, +2 Voice, +2 Group): Greater Power (25 levels); Improved Power (+3 Init, –3 Might cost, Spell Mastery 3 (Fast Cast, Multi-Cast, Penetration))"
+            }
+            #t7fa4178420fdfd10aa7326 ^"Aura of the Avenger" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Swaths the Adulteration with a fiery aura, which will burn whatever it touches and inflicts +10 damage to others (the Adulteration being immune to fire). **CrIg20 R: ** Touch, **D: **Conc, **T: **Ind. (Base 10, +1 Touch, +1 Conc); Greater Power (20 levels); Improved Power (–2 Might cost, +2 Init)"
+            }
+            #tf1dd073662c59332dc7ceb ^"Aura of Enlightenment" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The Adulteration can glow as bright as direct sunlight on a clear day. **CrIg10 R: **Per, **D: **Conc, **T: **Ind. (Base 5, +1 Conc): Greater Power (10 levels); Improved Power (-1 Might cost) *Authority of Ignem*, 1–10 points, (Ignem), Init 0 (- Might points spent). The spirit can recreate any non-ritual Ignem effects no greater than 50th level at a cost of 1 Might point per magnitude of the effect. **(Te)Ig 50 R: **varies, **D: **varies, **T: **varies: Focus Power x4"
+            }
+            #tec5bf21666455d2d6352b6 ^"Ball of Abysmal Flame (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Ball of Abysmal Flame"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Another favorite of the Founder, shooting a ball of flame that inflicts +30 damage to a single target. **CrIg 35 R: **Voice, **D: **Mom, **T: **Group. (Base 25, +2 Voice): Greater Power (35 levels); Improved Power (+4 Init, -4 Might cost, Spell Mastery 3 (Fast Cast, Multi-Cast, Penetration))"
+            }
+            #td693756c2b4e68b9635e82 ^"Eidolon (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Eidolon"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Creates an illusionary form visible and audible to material beings. The spirit can create a single form. The image can move and speak as directed, and lasts until the spirit has no further use for it. **CrIm15 R: **Touch, **D: **Conc, **T: **Ind. (Base 2, +1 Touch, +1 Conc, +2 move at command, +1 intricacy): Greater Power (15 levels); Improved Power (–2 Might cost) *Curse of Ash;* 5 points, (Ignem), Init –10. Imposes the Minor Flaw of Deficient Form (Ignem). If permanent, the cost is removed from the Adulteration’s Might score as well as Might pool. If temporary, Might points spent are recovered when the Flaw is withdrawn. **R: **Touch, **D: **Mom, **T: **Ind, Ritual. Ritual Power (non-Hermetic) *Curse of Cinders*; 5 points, (Ignem), Init –10. Imposes the Minor Flaw of Incompatible Arts (CrIg, ReIg) upon the victim. If permanent, the cost is removed from the Adulteration’s Might score as well as Might pool. If temporary, Might points spent are recovered when the Flaw is withdrawn. **R: **Touch, **D: **Mom, **T: **Ind, Ritual. Ritual Power (non-Hermetic)"
+            }
+            #tfad331997b6fdd8d1e34b1 ^"Donning the Corporeal Veil (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Allows the spirit to physically manifest until the next sunrise or sunset, as a darkly tanned older man, dressed in a rough, brown woolen robe. The penalties imposed by The Gift still apply though; the spirit is somehow disturbing and stands out, despite appearing very average in every way. **Cr(Re)Co 25 R: **Touch, **D: **Sun, **T: **Ind. (Base 5, +1 Touch, +2 Sun, +1 requisite): Greater Power (25 levels); Improved Power (–3 Might cost) *Ghost Touch,* variable cost, (Te), Init 0 (– Might points spent). Moves objects not held by another or fastened down. For 1 Might point, a maximum of 5 pounds can be moved; every additional Might point doubles this weight limit. If the item is hurled with force, use the Thrown Weapons ability and it inflicts +5 damage per Might point spent. The spirit can enter combat with an object when using this power. All physical attacks with this power must penetrate Magic Resistance. The power last until the object is released by the spirit. The Adulteration cannot affect items beyond the Iron Door unless the door ceases to function. **ReTe25 R: **varies, **D: **varies, **T: **varies. Focus Power *Pilum of Fire,* 0 points, (Ignem), Init 0. The Founder’s signature spell, creating a jet of flame that inflicts +15 damage. **CrIg20 R: **Voice, **D: **Mom, **T: **Group. (Base 10, +2 Voice): Greater Power (20 levels); Improved Power (+2 Init, –3 Might cost, Spell Mastery 3 (Fast Casting, Multiple Casting, Penetration))"
+            }
+            #tc4d2495b9bd9b81d27b43b ^"Presence (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Presence"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Grants awareness of everything that happens within the innermost regio of Val-Negra, but cannot affect anything beyond the Iron Door unless the Ward ceases to function. **InIm35 R: **Arc, **D: **Sun, **T: **Ind. (Base 2 +4 Arc, +2 Sun, +1 constant effect. +1 non-Hermetic effects): Greater Powers (35 levels); Improved Power (–3 Might cost)"
+            }
+            #t03e1b9a7e17e976553bd1a ^"Smoke on the Wind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The Adulteration can fly through the air in any direction simply by concentrating. If distracted, control is lost but the power holds the Adulteration aloft indefinitely. **ReIg15 R: **Per, **D: **Sun, **T: **Ind (Base 4, +2 Sun, +1 Constant): Greater Power (15 levels); Improved Power (-2 Might cost, +2 Init)"
+            }
+        }
+    }
+
+}

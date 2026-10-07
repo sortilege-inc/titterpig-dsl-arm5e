@@ -1,0 +1,128 @@
+EXTENSION "ArM5_Faith_and_Flame_Gascony_CenodoxusSuperbiaLordOfPrideAndEnvy" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Cenodoxus Superbia, Lord of Pride and Envy"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # Cenodoxus Superbia, Lord of Pride and Envy (Chapter Five: Gascony, p52): one being, its printed stat lines verbatim fields.
+
+    #t73ea01f8b8d769c699e46e ^"Cenodoxus Superbia, Lord of Pride and Envy" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Lord of the Vessels of Iniquity"
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence" STRING "2 (7)"
+            ^"Virtues and Flaws" STRING "Improved Characteristics, Self-Confident; Overconfident"
+            ^"Reputation" STRING "Subtle & Effective 5 (Infernal)"
+            ^"Hierarchy" INTEGER 5
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Weakness" STRING "Protected Group (meek people)"
+            ^"Vis" STRING "There are eight pawns of Vim vis in the demon’s tongue and eyes."
+            ^"Appearance" STRING "Cenodoxus manifests as a handsome and well, but appropriately, dressed man or woman, depending on whom he targets. He always has a dagger adorning his outfit, and carries quality tools associated with his target’s chosen craft or profession."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 52
+        }
+        PERSONALITY_TRAITS {
+            "Depraved" +6
+            "Hateful" +6
+            "Subtle" +5
+            "Cunning" +4
+            "Deceptive" +4
+            "Vessel of Iniquity Demon" +3
+        }
+        COMBAT {
+            "Fist" INIT 3 ATTACK 7 DEFENSE 7 DAMAGE 3
+            " Dagger" INIT 3 ATTACK 10 DEFENSE 8 DAMAGE 6
+        }
+        ABILITIES {
+            "Bargain" SCORE 7 SPECIALTY "setting rates for assistance"
+            "Brawl" SCORE 4 SPECIALTY "dagger"
+            "Charm" SCORE 7 SPECIALTY "first encounters"
+            "Folk Ken" SCORE 7 SPECIALTY "humans"
+            "Guile" SCORE 7 SPECIALTY "craftsmen"
+            "Intrigue" SCORE 7 SPECIALTY "subtly spreading gossip"
+        }
+        POWERS {
+            #t20550954c94cb37b151e75 ^"Form of Wickedness (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Form of Wickedness"
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This Power is a special variant of the Coagulation Power, and it replaces that Power for this order of demons. The demon assumes a physical form with no shape, dimension, or other accidents of form; while composed of matter, it is pure sin made visible to mankind. Indescribable, this form provokes an extreme response in viewers who indulge in the sin of envy until they drop from exhaustion. (See* Realms of Power: Infernal*, page 39)"
+            }
+            #t1f739428b13103d4c925d1 ^"Form of Man (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Form of Man"
+                    ^"Cost" STRING "0 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "After taking physical form, the demon may shapeshift into any human form, which it may dissolve at will."
+            }
+            #t8278f7a908f619d5a5d3e7 ^"Obsession (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1-3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can impose the Obsession Trait of Pride or Envy. (*Realms of Power: The Infernal*, pages 31-32)"
+            }
+            #t08098ea0bb4d317eabaecd ^"Contagious Obsession (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Contagious Obsession"
+                    ^"Cost" STRING "1 point per victim"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Any person who succumbs to the Obsession (Envy) Power of a Vessel of Iniquity becomes a carrier of that Power, and can pass it on to anyone who becomes a victim of their sin. Obsession is resolved in the usual way, except that if the target fails his personality roll, he becomes contagious. Any other person who suffers as a result of his new personality trait must himself make a resistance roll against the initial Obsession Personality Trait or succumb and become a carrier. The total number of people potentially affected is limited by the number of Might points the demon expended to fuel the power."
+            }
+            #t2c38a2d3e34728853798c4 ^"Grant the Master’s Potential" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "–17"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Cenodoxus grants the equivalent of the Great Characteristic virtue to the target, raising the appropriate Characteristic associated with the target’s chosen craft to +3, or by +1, whichever is better (See **ArM5**, page 30). The demon usually grants the Virtue temporarily, subtracting the cost from its Might Pool. It can choose to bestow the Virtue permanently, which reduces the demon’s Might Score as well. If temporary, the Might points are only restored when the Virtue is withdrawn. The demon may do this at anytime by simply choosing to, but it also often occurs when a prohibition placed at the time of the gifting is broken. The prohibition is often just a time limit, like a year and a day or “until this project is complete.” Targets receiving the Virtue permanently also gain the Flaw Tainted with Evil. No Hermetic equivalent. **R: **Touch, **D: ** Mom, **T: **Individual, Ritual"
+            }
+            #teea81c1c38b3f3edb84c3a ^"Grant the Master’s Insight" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-7"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The Lord of Pride and Envy grants the equivalent of the Puissant (Ability) Virtue to the target, providing a bonus to the appropriate craft ability of 2 (see **ArM5**, page 48). This power provides its bonus in addition to any bonus the target may have from other Virtues, including Puissant (Ability). (For example, a smith with Craft: Smithing) 3, Puissant Craft: Smithing and this benefit would have a total of 3+2+2.) The demon usually grants the Virtue temporarily, subtracting the cost from its Might Pool. It can choose to bestow the Virtue permanently, which reduces the demon’s Might Score as well. If temporary, the Might points are only restored when the Virtue is withdrawn. The demon may do this at anytime by simply choosing to, but it also often occurs when a prohibition placed at the time of the gifting is broken. The prohibition is often just a time limit, like a year and a day or “until this project is complete.” Targets receiving the Virtue permanently also gain the Flaw Tainted with Evil. No Hermetic equivalent. **R: **Touch, **D: ** Momentary, **T: **Individual, Ritual"
+            }
+            #t373970cdd3c0cf78f8968e ^"Shroud the Stench of the Pit (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Shroud the Stench of the Pit"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can conceal the Infernal nature of any other supernatural power or aura, making it appear to be Magical or Faerie instead. It may also be used to remove all stench of the supernatural, making things appear wholly mundane. This power can shield a creature or effect from the Sense Holiness/ Unholiness ability. This Power costs Might Points equal to the original cost of the Power being concealed, or Might Points equal to the magnitude of the Infernal effect if it does not cost Might Points. This Power lasts for as long as the Power it is masking."
+            }
+        }
+        DESCRIPTION "Cenodoxus delights in acting as the advisor or muse, demanding the victim create ever better works while backhandedly stoking the craftsman’s ego and enticing him into a state of sinful pride. Then, he socializes with those surrounding or associating with the craftsman, noting the victim’s success, his innate skill, his brilliant vision — asking others what they wouldn’t give to achieve similar results, infecting them with contagious envy. These tactics help the demon corrupt whole guilds with hubris and jealousy, sometimes shifting its own allegiance simply to evoke envy in the victim he first uplifted. Cenodoxus sometimes leaves his dagger lying out and “misplaced,” when both tempers and passions flare, enabling murders of convenience. He would gleefully join a Verditius’ forge companions, and his higher Might means he can bypass many covenants’ *Aegis.*"
+    }
+
+}

@@ -1,0 +1,82 @@
+EXTENSION "ArM5_Faith_and_Flame_Arelat_TheOgreUnderTheBridge" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - The Ogre Under the Bridge"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # The Ogre Under the Bridge (Chapter Eight: Arelat, p121): one being, its printed stat lines verbatim fields.
+
+    #tace6443f812d7b1873e0f0 ^"The Ogre Under the Bridge" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tfa62cc5c89e37cf1241ab1 ^"Arelat"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Vim"
+            ^"Printed Might" STRING "20 (30) (Vim)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -3
+            }
+            ^"Size" INTEGER 3
+            ^"Virtues and Flaws" STRING "External Vis (skull, grants Tough), Increased Might; Faerie Sight, Faerie Speech, Feast of the Dead, Huge x2, Hybrid Form, Improved Characteristics, Improved Powers, Improved Soak x2, Lesser Power, Personal Power x2, Place of Power (Pont Flavian), Tough; Monstrous Appearance, Recovery requires Vitality; Incognizant, Role requires suffering, Susceptible to deprivation, Traditional Ward (Payment: those who pay the toll)"
+            ^"Reputations" LIST ["Ravenous Guardian of the Pont Flavian 3 (Narbonnais)", "Sheep and Cattle Thief 2 (local)"]
+            ^"Soak" INTEGER 10
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Pretenses" STRING "Awareness 4 (humans), Bargain 4 (creating terms), Brawl 5 (club), Concentration 4 (maintaining Seeming of the Menhir), Faerie Speech 5 (sounding intimidating), Guile 3 (bluffing), Narbonnais Lore 3 (surrounding Pont Flavian), Stealth 3 (remaining unseen), Survival 3 (hills), Thrown Weapon 5 (rocks)"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "There are four pawns of Corpus in the skull it keeps in a net hanging on its belt. This skull has no encumbrance value and grants the bearer the Tough virtue. It serves as the Ogre’s external vis."
+            ^"Appearance" STRING "A very tall, brutishly strong man with heavily clawed hands and a head very reminiscent of a tusked boar. He carries the thick stump of a tree for a club, the knotted roots serving as makeshift spikes. He carries a burlap sack over one shoulder, filled with badly cooked mutton, half-full casks of poor-quality beer or wine, and several throwing stones. His forearms are stained a rusty, dark-brown up to the elbow, and the wickedly curved tusks which jut from his lower jaw are almost amber streaked with dirty brown. He wears a ragged hide for a loincloth and saddle cinch serves as his belt. One bare skull and several recently taken heads in various states of decomposition hang from the creature’s waist. He has a vicious and hungry look in his piggish squint."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 121
+        }
+        PERSONALITY_TRAITS {
+            "Destructive" +3
+            "Greedy" +2
+            "Hungry" +3
+            "Ogre" +3
+            "Willing to Barter" +2
+        }
+        COMBAT {
+            "Club" INIT -5 ATTACK 13 DEFENSE 6 DAMAGE 15
+            " Thrown Rock" INIT -6 ATTACK 13 DEFENSE 4 DAMAGE 14
+            " Large Claws" INIT -3 ATTACK 11 DEFENSE 5 DAMAGE 10
+            " Tusks" INIT -3 ATTACK 10 DEFENSE 4 DAMAGE 11
+        }
+        POWERS {
+            #te89602e750e3b281a92c82 ^"Stone from the Loam" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The ogre reaches into the ground and draws forth a stone appropriate for throwing. The ogre must be in an area of natural earth to use this power. **ReTe 10 R: **Touch, **D: **Mom, **T: **Part. (Base 4, +1 Touch, +1 Part): Lesser Power (10 levels, +3 Initiative), Improved Powers (–2 Might points)"
+            }
+            #t1d32b3bab308da45902345 ^"Seeming of the Menhir" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–6"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The ogre takes on the semblance of a large boulder or standing stone appropriate to the area. **MuCo 25 R: **Per, **D: **Conc, **T: **Individual. (Base 5, +1 Conc, +3 Size): Personal Power (25 levels), Improved Powers (–3 Might points)"
+            }
+            #t5f8eb6874aa8298629de21 ^"Stealth through the Grass" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The Ogre makes no sound as it moves. Its voice, thrown rocks and attacks make noise normally. **PeIm 20 R: **Per, **D: **Sun, **T: **Individual. (Base 3, +2 Sun, +3 Size): Personal Power (20 levels, –1 Initiative)"
+            }
+        }
+        DESCRIPTION "**Story Seed: The Ogre’s Prisoner** Some claim the ogre can be placated by leaving him a skin of wine and a sheep for each wagon or herd to cross the Pont Flavian, or with a simple sack of coins. Those who attempt to sneak across or damage the bridge are often waylaid and eaten. A Redcap, unfamiliar with the area and trying to deliver correspondence to the covenant, found himself captured by the ogre. In a panicked attempt to barter for his life, he promised the ogre that the magi would pay a ransom for his freedom—whatever the ogre desired, be it ten head of cattle, a great lump of gold, a wagon loaded with full wine casks. Unwilling to surrender his prisoner or leave the bridge, the ogre captured the next shepherd to wander nearby. The ogre made the Redcap give directions to the covenant, telling the lad he would eat a sheep for every day beyond the fourth it took the shepherd to return, and swore he’d eat the boy himself if he failed to return with the wizards.\n\nSo how will the magi react when a random sheepherder arrives at their doorstep unannounced, telling them they must come to see the ogre of Pont Flavian, and perhaps pay the ransom for a Redcap they have never met? The ogre is not foolish, either. He has hidden the Redcap in a secret oubliette only he knows and has the strength to open. If the Ogre is killed before the Redcap’s ransom is paid, the Mercere will likely rot in an unconsecrated grave, lost in the hills. Complicating matters, the ogre claims to be the cousin of the Boar King (*The Lion and the Lily*, page 120), declaring his noble kinsman will avenge any wrong committed against him."
+    }
+
+}

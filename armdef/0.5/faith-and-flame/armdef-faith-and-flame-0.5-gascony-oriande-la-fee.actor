@@ -1,0 +1,77 @@
+EXTENSION "ARMDef_Faith_and_Flame_Gascony_OriandeLaFee" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Oriande la Fée"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # Oriande la Fée (Chapter Five: Gascony, p57): one being, its printed stat lines verbatim fields.
+
+    #t27cbef49349799549ed166 ^"Oriande la Fée" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t614fcfe4baefecc1851b8e ^"Gascony"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 50
+            ^"Form" STRING "Herbam"
+            ^"Printed Might" STRING "50 (60 in her demesne) (Herbam)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 4
+                ^"Communication" INTEGER 4
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Focus Power x2, Great Characteristics x3, Greater Power x3; Fae Sight, Fae Speech, Humanoid, Highly Cognizant, Improved Characteristics x6, Increased Might x9, Improved Powers x2, Lesser Power, Personal Power x3, Place of Power (Médoc), Pretentious; Monstrous Appearance, Vulnerable to Iron; Poor Combatant, Restricted Might (Storm), Susceptible to Deprivation, Traditional Ward: Divine."
+            ^"Reputations" LIST ["Cruel 3 (local)", "Meddlesome 3 (Knights)", "Observant 3 (region)"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Powers" STRING "Call of the Kept, 0 points, Init 0, Non-Hermetic. Oriande may call forth a Faerie ally, providing it with the cue to manifest and act as she directs. R: Voice, D: Mom, T: Ind Caress of the Lethe, 4 points, Init –4, Mentem. The person touched by Oriande forgets his mortal life until he sees a particular object, or class of object, associated with his home. R: Touch, D: Until, T: Ind Dream’s Undeniable Invitation, 1 point, Init –1, Corpus. Oriande causes a human within Voice Range to fall asleep. R: Voice, D: Sun, T: Ind Enthralling Sound, 3 points, Init –3, Mentem. Through her storytelling Oriande creates a particular emotion in any group of people who hear her speak. This power also increases the intensity of an existing emotion. A stress roll with an appropriate Personality trait against an Ease Factor of 9 allows a victim to overcome this power’s effect. R: Voice, D: Sun, T: Group Extended Glamour, 0 points, constant, Mentem. This power allows the Queen to take control of a mundane area, making it an extension of her Faerie kingdom. Focus Power (Plants within her realm), up to 10 points, Init 0, Herbam. Oriande may create Herbam effects up to 10th magnitude. (10 Intricacy points spent on Initative) On the Breath of the Wind, 5 points, Init –5, Herbam. Oriande transforms into a swirling breeze of leaves appropriate to the season until she decides to resume her regular form. R: Per, D: Until, T: Ind The Price of Impertinence, 5 points, Init -5, Animal. A human within range of Oriande’s voice is turned into a woodland creature, such as a squirrel, a hare, a fawn, a hedgehog or polecat, until a condition set by the Fae Queen is met. R: Voice, D: Until, T: Ind"
+            ^"Equipment" STRING "Oriande carries a dagger with a blade of glass, which she can gift for use within her lands as part of her Extended Glamour. When she does so, it becomes a weapon of the wielder’s choice."
+            ^"Vis" STRING "10 pawns of Herbam vis in her antlers."
+            ^"Appearance" STRING "A beautiful woman with faintly olive skin and a pair of mosscovered wooden antlers protruding up from her wild yet luxuriant hair, which is shot through with small flowers. Oriande’s amber eyes are the color of frozen sap, revealing the callous and arrogant visage of a noble who exercises power absolutely and despises being thwarted. Her dress is made of leaves and lacy spider webs, and she walks trailing a cloud of fireflies or soft snow flurries, depending on the season. Where she steps, the natural environment seems to become more perfect— new shoots and bulbs burst forth in Spring, lush grass and leaves unfurl in Summer, vibrant colors emerge in Autumn, crisp frost forms and dried leaves swirl in Winter, only to fade slightly when she departs."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 57
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +4
+            "Aloof" +3
+            "Faerie Queen" +3
+            "Meddling" +3
+        }
+        COMBAT {
+            "Fist" INIT 0 ATTACK 3 DEFENSE 1 DAMAGE 1
+        }
+        ABILITIES {
+            "Area Lore: Provence" SCORE 6 SPECIALTY "Gascony"
+            "Animal Handling" SCORE 6 SPECIALTY "woodland creatures"
+            "Artes Liberales" SCORE 3 SPECIALTY "Astronomy"
+            "Athletics" SCORE 3 SPECIALTY "dance"
+            "Awareness" SCORE 2 SPECIALTY "within court"
+            "Bargain" SCORE 7 SPECIALTY "setting favorable terms"
+            "Brawl" SCORE 1 SPECIALTY "dodge"
+            "Carouse" SCORE 6 SPECIALTY "appearing intoxicated"
+            "Charm" SCORE 6 SPECIALTY "knights"
+            "Concentration" SCORE 3 SPECIALTY "remaining focused"
+            "Etiquette" SCORE 7 SPECIALTY "inciting insult"
+            "Fae Speech" SCORE 6
+            "Finesse" SCORE 6 SPECIALTY "Rego"
+            "Folk Ken" SCORE 2 SPECIALTY "men"
+            "Guile" SCORE 3 SPECIALTY "entendres"
+            "Intrigue" SCORE 5 SPECIALTY "confounding conversation"
+            "Leadership" SCORE 6 SPECIALTY "directing fae"
+            "Organization Lore: Order of Hermes" SCORE 4 SPECIALTY "Merinita"
+            "Penetration" SCORE 6 SPECIALTY "Rego"
+            "Profession: Storyteller" SCORE 4 SPECIALTY "history"
+            "Survival" SCORE 4 SPECIALTY "fens"
+        }
+        DESCRIPTION "Oriande delights in tormenting wandering knights and pilgrims, causing them to forget their journeys and remain with her for as long as they entertain her. She draws vitality through the creation of conflicts, such as by kidnapping people and holding them hostage or stealing items and demanding tasks or ransoms in exchange for their return, and forcing the knights and pilgrims of the area to resolve those stories, either by rescuing what was taken or dying in the process. In these tales, she plays the capricious Faerie regent, exercising power at her whim. Particularly intriguing knights have been gifted her dagger, which has transformed into a blade of glass at their desire. It may not be particularly effective against mundane opponents, but faeries of the region immediately recognize it as her token—though some may seek to claim it for their own!\n\nOnce the playthings of this faerie queen become faeries themselves, she generally loses interest in them. She has hosted many magi in her court as refugees, vassals or allies, including Maugris and Dama. Dama, in particular, spent a long period there while pursuing the mysteries of Story Magic."
+    }
+
+}

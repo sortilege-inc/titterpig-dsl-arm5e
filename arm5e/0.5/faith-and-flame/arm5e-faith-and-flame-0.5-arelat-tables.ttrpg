@@ -1,0 +1,35 @@
+EXTENSION "ArM5_Faith_and_Flame_Arelat_Tables" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Chapter Eight: Arelat tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tcd5cb6fdf4ce2a9c7490e0 ^"Purple and Crimson Dyes: Shape and Material Bonuses (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Material", "Bonuses"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 125
+        }
+        TABLE {
+            "Purple (murex) dye" "+10 royalty, +7 rulership and authority, +5 control people"
+            "Crimson (kermes) dye" "+7 violence, +4 courage and martyrdom, +3 sin"
+        }
+    }
+
+    #te0338a56831faa11bbbb67 ^"Salt: Shape and Material Bonuses (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Material", "Bonuses"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 123
+        }
+        TABLE {
+            "Salt" "+5 preservation, +3 protection from evil spirits and demons"
+        }
+    }
+
+}

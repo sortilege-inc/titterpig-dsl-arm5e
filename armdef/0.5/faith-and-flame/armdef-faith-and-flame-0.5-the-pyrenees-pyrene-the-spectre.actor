@@ -1,0 +1,89 @@
+EXTENSION "ARMDef_Faith_and_Flame_ThePyrenees_PyreneTheSpectre" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Pyrene the Spectre"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ARMDef_Faith_and_Flame_Core_Ext"
+
+    # Pyrene the Spectre (Chapter Six: The Pyrenees and the Hispanic March, p80): one being, its printed stat lines verbatim fields.
+
+    #tc27abca44049e5536f7335 ^"Pyrene the Spectre" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t18869af1029902f26b6df4 ^"The Pyrenees"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 14
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 6
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER -1
+            ^"Season" STRING "Autumn"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Magic Monster; Good Teacher, 2x Great Presence, Homing Instinct (Boulder marking vis site), Inoffensive to Animals, 2x Lesser Power, Mountain Regio Network, Master of Magic Creatures, Voice of the Mountains; Curse of Venus, Magical Air; Baneful Circumstances (day), Proud, Small Frame, Soft-hearted"
+            ^"Magical Qualities and Inferiorities" STRING "Improved Presence; 2x Improved Abilities, 4x Improved Might, Improved Power"
+            ^"Reputations" LIST ["Weeping woman of the hills 3 (local)"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "None."
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "There are three pawns of Mentem in Pyrene’s dress."
+            ^"Appearance" STRING "Pyrene manifests as a ghostly pale, yet breathtakingly beautiful, raven-haired woman with mangled lower legs, bloodied feet and a tearstreaked face. She wears only a ragged linen dress."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 80
+        }
+        PERSONALITY_TRAITS {
+            "Grieving" +3
+            "Reclusive" +3
+            "Proud" +2
+        }
+        COMBAT {
+            "Fist" INIT 1 ATTACK 3 DEFENSE 3 DAMAGE -2
+        }
+        ABILITIES {
+            "Animal Ken" SCORE 4 SPECIALTY "pacifying"
+            "Area Lore: Pyrenees" SCORE 5 SPECIALTY "passes"
+            "Athletics" SCORE 2 SPECIALTY "sprinting"
+            "Awareness" SCORE 5 SPECIALTY "the living"
+            "Brawl" SCORE 2 SPECIALTY "dodge"
+            "Charm" SCORE 5 SPECIALTY "apologies"
+            "Dead Language: Gothic" SCORE 4 SPECIALTY "commands"
+            "Dead Language: Latin" SCORE 4 SPECIALTY "commands"
+            "Etiquette" SCORE 4 SPECIALTY "nobles"
+            "Folk Ken" SCORE 3 SPECIALTY "discerning motivation"
+            "Intrigue" SCORE 2 SPECIALTY "spotting conspiracy"
+            "Leadership" SCORE 2 SPECIALTY "maintaining a household"
+            "Living Language: Euskara" SCORE 5 SPECIALTY "conversation"
+            "Living Language: Occitan" SCORE 4 SPECIALTY "commands"
+            "Magic Lore" SCORE 5 SPECIALTY "creatures"
+            "Stealth" SCORE 3 SPECIALTY "keeping hidden"
+        }
+        POWERS {
+            #t93b00b9f2b3a9b7ab84a63 ^"Invisiblity" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Pyrene becomes invisible when she wishes, but can still be seen by Second Sight. **PeIm 15 R: **Touch, **D: ** Conc, **T: **Ind. (Base 4, +1 Touch, +1 Conc, +1 moving image): Lesser Power (25 levels, –2 Might cost)"
+            }
+            #t1d098e63a096cf5e586d4a ^"Donning the Corporeal Veil (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Pyrene can assume material form. Lesser Power; Improved Power (–5 Might cost)"
+            }
+        }
+    }
+
+}

@@ -1,0 +1,75 @@
+EXTENSION "ArM5_Faith_and_Flame_Arelat_DracLesser" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - Drac, Lesser"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # Drac, Lesser (Chapter Eight: Arelat, p116): one being, its printed stat lines verbatim fields.
+
+    #t5dbdcb22761718f19da831 ^"Drac, Lesser" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tfa62cc5c89e37cf1241ab1 ^"Arelat"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Animal"
+            ^"Printed Might" STRING "15 +10 (Animal) Denotes increased Might from the Place of Power Virtue"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Focus Power (Crafter of Illusion), Greater Power (Gift of the Drac); Faerie Beast, Improved Powers, Increased Faerie Might x2, Personal Power x1 (Transform into Human), Place of Power (the Rhone near Beaucaire), Reputation as Confidence, Rhone Regio Network; Cruel (Major), Monstrous Appearance; Incognizant. Some more civilized drac spend the majority of their time disguised in human society as boatmen, washerwomen or merchants. These particular Faeries lack the Monstrous Appearance Major Flaw and substitute the Infiltrator Virtue (Minor or Major depending on the Social Status Virtue mimicked) and Dark Secret Flaw instead. The more sociable drac may even be Narrowly Cognizant and usually possess Faerie Speech and additional Pretenses that help maintain their role."
+            ^"Reputations" LIST ["Watery threat 3 (local)"]
+            ^"Combat" STRING "Bite: Init +3, Attack +10, Defense +9, Damage +6 Grapple: Init +3, Attack +7, Defense +9, Damage na Includes a +3 bonus for Crushing Jaws: reflects the fact that although these dragons are not particularly strong compared to humans, the muscles with which they bite down are tremendously powerful. The muscles which open its mouth are comparatively weak. A human may hold a drac’s jaws closed with a successful Grapple."
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1, (1–8), –3 (9–16), –5 (17–24), Incapacitated (25+)"
+            ^"Pretenses" STRING "Area Lore: Rhone 4 (hiding places), Athletics 2 (lunges), Awareness 3 (prey), Brawl 5 (grapple), Concentration 2 (remaining invisible), Folk Ken 2 (river folk), Hunt 4 (prey), Occitan 6 (Provençal), Stealth 4 (stalking prey), Survival 3 (river), Swim 2 (rivers)"
+            ^"Vis" STRING "3 Imaginem in eyes"
+            ^"Appearance" STRING "In its true form, the creature is a greenish-black worm with a long sinuous body girt with webbed legs like a flamingo and vestigial fin-like wings of blue lace."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 116
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +3
+        }
+        POWERS {
+            #t3379ba9eec60ca7d9875f0 ^"Crafter of Illusion" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0–5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "A drac can create illusions, particularly to lure its prey, by spontaneously producing the effect of any Creo or Rego Imaginem spell of fourth magnitude or less at a cost of (magnitude) Might points. Focus Power, 2 Intricacy points to increase magnitude of effects, 3 intricacy points to improve Initiative."
+            }
+            #t5610bc3ac2b22eb6df26d6 ^"Transform into Human (Faith & Flame)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Transform into Human"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "This allows the drac to turn into human size from its larger natural size. **MuAn 30** (Base 10, +2 Sun, +2 size): Personal Power (30 levels)."
+            }
+            #tf325dec99b8c0a164ccfaa ^"Gift of the Drac" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Allows a person grappled by the drac to breathe easily underwater until they resurface in the Drac’s air-filled lair or escape to the riverbank. **MuCo 30** (Base 4 +1 Touch, +4 Until, +1 Part): Greater Power (30 levels)."
+            }
+        }
+        DESCRIPTION "Common to the Rhone and its tributaries, the lesser drac are aquatic Faerie drakes that lure their helpless prey (washerwomen, children, or vagrants) into watery lairs through their illusory powers. Feeding on the fear the stories of their predations cause, these dragons are very different from Orms and act out stories in the role as Child Stealers or Sexual Predators. They possess some or all of the powers attributed to their elder namesake and are encountered along the more sinister sections of the Rhone’s tributary streams.\n\nThis version of the drac represents a younger dragon but is not designed for use as a player character. A Faerie enchanter of magus level power using this creature as a template is possible but would require dropping several Virtues and additional Pretenses to provide balance.\n\nThe statistics above represent a small adult drac, just grown into maturity. Their strong illusory powers allow them to move silently, become invisible, and change their appearance readily in human form."
+    }
+
+}

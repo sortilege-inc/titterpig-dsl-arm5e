@@ -1,0 +1,87 @@
+EXTENSION "ArM5_Faith_and_Flame_Narbonnais_TheJinnCorsairHowlingKnifeOfTheDunes" {
+    NAME "Ars Magica Fifth Edition, Faith & Flame - The Jinn Corsair, Howling Knife of the Dunes"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-06"
+    DEPENDS_ON "ArM5_Faith_and_Flame_Core_Ext"
+
+    # The Jinn Corsair, Howling Knife of the Dunes (Chapter Seven: Narbonnais, p107): one being, its printed stat lines verbatim fields.
+
+    #td1a1ef493ed5b09544c75c ^"The Jinn Corsair, Howling Knife of the Dunes" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t3a70b7965555119b337ee7 ^"Narbonnais"]
+            ^"Covenant" LIST [#t89e3531582ad22c2eae1be ^"Stella Durus"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Narrowly Cognizant, Passes for Human; External Vis (scimitar, grants Puissant Single Weapon), Greater Power, Increased Faerie Might (Major); Faerie Sight, Faerie Speech, Feast of the Fae, Improved Characteristics x3, Infiltrator (Branded Criminal), Lesser Power x3, Positive Folktales, Pretentious, Puissant Single Weapon; Fury (failure in chosen mission), Sovereign Ward (person it has agreed to serve); Overconfident, Pious (Islam), Role Requires Suffering, Traditional Ward (Name: Howling Knife of the Dunes)"
+            ^"Reputations" LIST ["Capable Bodyguard 3 (Sahir)", "Creature for Hire 2 (Maghreb Pirates)"]
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+) Pretenses: Area Lore: Mediterranean Coasts 3 (places to come ashore), Artes Liberales 1 (astronomy), Athletics 3 (climbing), Awareness 5 (identifying threats), Bargaining 3 (establishing terms), Brawl 4 (fist), Faerie Speech 5 (issuing threats), Folk Ken 3 (humans), Leadership 2 (pirates), Profession: Navigator 1 (staying on course), Profession: Sailor 4 (pirate), Single Weapon 5+2 (scimitar), Survival 1 (desert)"
+            ^"Equipment" STRING "Scimitar, clothes, any reasonable equipment necessary for his current activities."
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "There is one pawn each of Auram, Corpus, Ignem and Imaginem vis in the Jinn’s scimitar, for four total pawns. The scimitar has no encumbrance and its possessor gains the Puissant Single Weapon Minor Virtue."
+            ^"Appearance" STRING "Dressed like a male Maghrebi pirate with a grinning and handsome countenance, the Jinn has a branded scar on his left cheek. His clothing is made of rich fabrics and he bears a well crafted scimitar. Turned in the morning light, this blade seems to be fashioned of glass."
+            ^"Source" STRING "Faith & Flame"
+            ^"Page" INTEGER 107
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Jinn" +3
+            "Bargaining" +2
+        }
+        COMBAT {
+            "Scimitar" INIT 3 ATTACK 12 DEFENSE 9 DAMAGE 8
+            " Fist" INIT 1 ATTACK 6 DEFENSE 6 DAMAGE 2
+        }
+        POWERS {
+            #t83166fea3c0bd5cf6ed267 ^"Sirocco’s Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The Jinn Corsair transforms into a swirling cyclone of gritty desert wind. He may carry one person inside this wind. **CrAu 50 R: **Per, **D: **Until, **T: **Ind, (Base 30, +4 Until): Greater Power (50 levels)"
+            }
+            #t1d136bcf7cec314ef64566 ^"Sense the Living Treasure" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–7"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The Jinn Corsair concentrates and senses the location of the person linked to an arcane connection in his possession. The longer he concentrates, the better he knows the distance and direction to the target. **InCo 20 R: **Arc, **D: **Conc, **T: **Ind. (Base 3, +4 Arc, +1 Conc): Lesser Power (20 levels, 1 intricacy point on cost.)"
+            }
+            #t3055168df57aa9b242f9a9 ^"Scimitar of Blazing Fury" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–8"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The Jinn Corsair coats his weapon in searing white flame, adding +10 damage to attacks made with the weapon. **CrIg 20 R: **Touch, **D: ** Diam, **T: **Ind. (Base 10, +1 Touch, +1 Diam): Lesser Power (20 levels, 1 intricacy point spent on cost.)"
+            }
+            #ta6646250f66c36d1a73133 ^"Conceal the Precious Charge" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The Jinn Corsair can make a target he touches undetectable by normal sight, regardless of what it does. However, the target still casts a shadow. **PeIm 15 R: **Touch, **D: **Diam, **T: **Ind. (Base 4, +1 Touch, +1 Diam, +1 changing image): Lesser Power (15 levels, 2 intricacy points spent on initiative)"
+            }
+        }
+        DESCRIPTION "The Jinn Corsair often barters with mortals who seek him for a term of protective service. He takes this duty seriously; his success is a matter of some pride, and he has only lost a charge twice. Once to a dragon, and once at the hands of a Hermetic magus—perhaps it was one of the magi from the covenant?"
+    }
+
+}

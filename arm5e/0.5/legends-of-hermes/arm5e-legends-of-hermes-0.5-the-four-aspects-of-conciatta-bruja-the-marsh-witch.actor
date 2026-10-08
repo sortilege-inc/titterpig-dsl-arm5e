@@ -1,0 +1,73 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheFourAspectsOfConciatta_BrujaTheMarshWitch" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Bruja, the Marsh Witch"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Bruja, the Marsh Witch (Chapter Two: The Four Aspects of Conciatta, p37): one being, its printed stat lines verbatim fields.
+
+    #t3eac068f52005f35c4214a ^"Bruja, the Marsh Witch" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#ta7577edad62c09782b18cd ^"Tartessos"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Focus Power x2, Greater Power; Faerie Sight, Faerie Speech, Lesser Power, Humanoid Form; Incognizant"
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Awareness 3 (gifts), Bargain 6 (riches), Brawl 1 (claws), Brew Potion 4 (healing), Chirurgy 4 (treating poisons), Faerie Speech 5 (threats), Folk Ken 5 (seeing the evil of men), Marsh Lore 3 (geography)"
+            ^"Vis" STRING "3 pawns Aquam in her legs."
+            ^"Appearance" STRING "Bruja is hunched with craggy wrinkled features. She wears a large-sleeved cloak of green that drags behind her and has plants growing within its threadbare warp and weft. She carries a satchel into which she drops the things she finds. But while Bruja looks human at first sight, her oversized lower legs are like those of a wading bird. These legs help her move effortlessly through the marsh."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 37
+        }
+        PERSONALITY_TRAITS {
+            "Irascible" +3
+            "Stubborn" +2
+        }
+        COMBAT {
+            "Claws" INIT 6 ATTACK 7 DEFENSE 7 DAMAGE 3
+        }
+        POWERS {
+            #t19025a69f74bc3298948d7 ^"Spirit Away:" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "(magnitude/2)"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "By brewing a potion, Bruja can add Threshold Points to a character’s Threshold Total at the cost of 1 Might Point per Threshold Point. The character must already have a Threshold Total and the Crone cannot contribute all the points needed to send the character into Faerie. The potion can take any form as described below. (Greater Power)"
+            }
+            #t47939a84672ec225d280e3 ^"The Malicious Brew" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING ": variable points (magnitude)"
+                    ^"Initiative" STRING "–8"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Bruja uses this power to brew any Perdo Corpus effect with an Individual target up to 9th magnitude into a potion. The effects of the poison, whatever they may be, are not immediate but increase towards a significant moment (such as sunset, or the full moon, or as the cock crows), giving the target or his friends time to find a cure. While the effect is supernatural, an Intelligence + Medicine simple roll against an Ease Factor of 9 identifies how long the target has. Bruja regains the Might spent on this power at the end of the effect’s duration. (Focus Power)"
+            }
+            #taf51734a8885a9e956c8fa ^"The Merciful Brew" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING ": variable points (magnitude)"
+                    ^"Initiative" STRING "–9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Bruja uses this power to brew a healing potion. The effect is as the standard *Purification of the Festering Wounds* spell but with a duration of “Season” rather than Moon. This allows the potion to benefit those recovering from heavy wounds. Bruja regains the Might spent on this power at the end of the effect’s duration. This potion is also able to instantly relieve the effects of a *Malicious Brew,* as described nearby. (Lesser Power)"
+            }
+        }
+        DESCRIPTION "Bruja apparently roams the marshes looking for herbs, roots, and small creatures that she can use to ferment her noxious potions. Her powers are transmitted through these potions, poultices, possets, bandages, or any other shape or material that seems fitting at the time. Bruja’s healing potions frequently take the form of marsh leeches or unpleasant concoctions of animal parts and marsh water. While her Might is expended at the time of brewing, the potion can be carried away and is not activated until applied to the target in the appropriate manner. Her potions are usually brewed with a given person in mind, whether present or not, and so do not cause Warping."
+    }
+
+}

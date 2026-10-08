@@ -1,0 +1,253 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheFlyingCastleOfThomae_Templates" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Six: The Flying Castle of Thomae templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t85bd3218469b2a411f1da9 TEMPLATE "The Dogs of the Castle" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 1
+            ^"Virtues and Flaws" STRING "Greater Faerie Power (Grasp Ghost), Faerie Beast, External Vis (finial), Faerie Sight, Improved Characteristics, Sharp Ears, Large; Incognizant, Reckless, Traditional Ward (cannot be inside)"
+            ^"Soak" STRING "+7 (naturally armored form)"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Pretenses" STRING "Athletics 5 (distance running), Awareness 6 (keeping watch), Brawl 5 (bite), Hunt 6 (track by scent)"
+            ^"Vis" STRING "1 pawn Terram, in finial"
+            ^"Appearance" STRING "The faerie dogs seem to be cunningly articulated, animated bronze statues."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 132
+        }
+        PERSONALITY_TRAITS {
+            "Loyal to the castle" +5
+        }
+        COMBAT {
+            "Bite (small teeth)" INIT 2 ATTACK 10 DEFENSE 9 DAMAGE 1
+        }
+        POWERS {
+            #t52c4f4e36989079e4abeb4 ^"Fearful Flaming Eyes (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Fearful Flaming Eyes"
+                    ^"Cost" STRING ": 2 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Completely paralyzes a human who makes eye contact with the faerie. Costs 15 spell levels (Base 5, +1 Eye, +1 Conc)"
+            }
+            #t03f8d6cc3945d31237de5a ^"Grasp ghosts:" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Allows the dog to grasp a ghost and drag it back to the castle, where a ring of hounds prevent escape. Costs 20 spell levels (Base 5 (control a disembodied spirit), +1 Touch, +2 Sun.) *Hands of the Animal*: 2 points, constant, Animal: This allows the dog to manipulate and carry an item as if it had human hands and a Strength of +5. The dog must concentrate to do anything other than carry the object, and to drop it or take something else. Costs 15 spell levels (ReTe Base 3, +1 Touch, +2 Sun, +1 constant)"
+            }
+        }
+    }
+
+    #t8477ac6893582bb60dd607 TEMPLATE "Female Adult Griffon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tbc36cc3074b32b83913340 ^"The Lair of the Griffons"]
+            ^"Magic (Faerie?) Might" STRING "30 (Animal)"
+            ^"Characteristics" STRING "Cun 0, Per +3, Pre +2, Com –, Str +7, Sta +1, Dex +1, Qik +2"
+            ^"Size" INTEGER 3
+            ^"Confidence" STRING "2 (5 points)"
+            ^"Virtues and Flaws" STRING "Magical Monster; Ferocity (may use Confidence points only when home threatened), Homing Instinct (always knows where home is in relation to self), Keen Vision"
+            ^"Qualities and Inferiorities" STRING "Focus Power (Nests of Gold), Improved Abilities, Improved Attack x 3 (beak, claws, grapple), Improved Confidence, Improved Damage x 4 (beak, 3 x claws), Improved Defense x 2 (beak and claws), Improved Fatigue x 2, Improved Initiative x 4 (beak, claws, 2 grapple), Improved Soak x 4, Minor Virtue (Improved Characteristics x 2), Minor Virtue (Long Winded), Minor Virtue (Puissant Athletics), Minor Virtue (Second Sight), Minor Virtue (Strong Willed)."
+            ^"Combat" STRING "Beak: Init +5, Attack +15, Defense +14, Damage +11 Grapple: Init: +8, Attack +12, Defense +11, Damage: special (On subsequent rounds may add Grapple Strength to Attack Roll for beak attacks.) Large Claws: Init +5, Attack +17, Defense +16, Damage +20"
+            ^"Soak" INTEGER 11
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious Wound Penalties: –1 (1–8), –3 (9–16), –4 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Abilities" STRING "Animal Handling 5 (griffons), Area Lore 5 (home territory), Area Lore 3 (gold rich territory), Athletics 7+2 (flight), Awareness 5 (prey), Brawl 8 (claws), Hunt 4 (horses), Second Sight 5 (Illusions), Survival 5 (home terrain)."
+            ^"Vis" STRING "6 of Animal, heart"
+            ^"Appearance" STRING "A female griffon is the size of a small horse, and its features combine those of a lion and an eagle. The head, forequarters and forelimbs of the griffon are aquiline, while the hind legs, torso and tail are leonine. Female griffons have feathery wings, and fly with a swiftness and dexterity that is surprising in so large a beast. The female griffon is surprisingly strong, given that its foreparts have the comparatively delicate structure of a bird’s skeleton."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 134
+        }
+        PERSONALITY_TRAITS {
+            "Defends home" +5
+            "Brave" +3
+        }
+        POWERS {
+            #t4ec8486b2ee3de2ade8ae0 ^"Nests of Gold" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "A catch-all power that allows griffons to detect, excavate, and craft gold. This is also the power that allowed the griffons to puncture the side of the tower."
+            }
+        }
+    }
+
+    #tc10066da4d2cd4aa54ac7f TEMPLATE "Female Juvenile Griffon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tbc36cc3074b32b83913340 ^"The Lair of the Griffons"]
+            ^"Magic (Faerie?) Might" STRING "15 (Animal)"
+            ^"Characteristics" STRING "Cun 0, Per +3, Pre +2, Com –, Str +4, Sta +1, Dex +1, Qik +3"
+            ^"Size" INTEGER 2
+            ^"Confidence" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Magical Monster; Ferocity (may use Confidence points only when home threatened), Homing Instinct (always knows where home is in relation to self), Keen Vision"
+            ^"Qualities and Inferiorities" STRING "Focus Power (Nests of Gold), Improved Abilities, Improved Attack x 2 (beak and claws), Improved Damage x 2 (beak and claws), Improved Soak x 2, Minor Virtue (Improved Characteristics), Minor Virtue (Long Winded), Minor Virtue (Puissant Athletics), Minor Virtue (Second Sight), Minor Virtue (Strong Willed)."
+            ^"Combat" STRING "Beak: Init +3, Attack +12, Defense +10, Damage +8 Grapple: Init: +3, Attack +7, Defense +9, Damage: special (On subsequent rounds may add Grapple Strength to Attack Roll for beak attacks.) Large Claws: Init +3, Attack +14, Defense +12, Damage +8"
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious Wound Penalties: –1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Abilities" STRING "Animal Handling 1 (griffons), Area Lore 4 (home territory), Area Lore 1 (gold rich territory), Athletics 5+2 (flight), Awareness 5 (prey), Brawl 5 (claws), Hunt 4 (horses), Second Sight 3 (Illusions), Survival 4 (home terrain). +2 Athletics (female) included."
+            ^"Vis" STRING "3 of Animal, heart"
+            ^"Appearance" STRING "A female griffon is the size of a small horse, and its features combine those of a lion and an eagle. The head, forequarters and forelimbs of the griffon are aquiline, while the hind legs, torso and tail are leonine. Female griffons have feathery wings, and fly with a swiftness and dexterity that is surprising in so large a beast. The female griffon is surprisingly strong, given that its foreparts have the comparatively delicate structure of a bird’s skeleton."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 134
+        }
+        PERSONALITY_TRAITS {
+            "Defends home" +5
+            "Brave" +3
+        }
+        POWERS {
+            #t0fdcb104fd3da48fc65349 ^"Nests of Gold" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "A catch-all power that allows griffons to detect, excavate, and craft gold. This is also the power that allowed the griffons to puncture the side of the tower."
+            }
+        }
+    }
+
+    #t61000b4e4f6305bc07fcb7 TEMPLATE "Male Adult Griffon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tbc36cc3074b32b83913340 ^"The Lair of the Griffons"]
+            ^"Magic (Faerie?) Might" STRING "30 (Animal)"
+            ^"Characteristics" STRING "Cun 0, Per +3, Pre +2, Com –, Str +7, Sta +1, Dex +1, Qik +2"
+            ^"Size" INTEGER 3
+            ^"Confidence" STRING "2 (5 points)"
+            ^"Virtues and Flaws" STRING "Magical Monster; Ferocity (may use Confidence points only when home threatened), Homing Instinct (always knows where home is in relation to self), Keen Vision"
+            ^"Qualities and Inferiorities" STRING "Focus Power (Nests of Gold), Improved Abilities, Improved Attack x 3 (horns, 2 grapple), Improved Confidence, Improved Damage x 3 (2 horns, spikes), Improved Defense x 2 (horns and grapple), Improved Fatigue x 2, Improved Initiative x 5 (2 horns, 3 grapple), Improved Soak x 4, Minor Virtue (Improved Characteristics x 2), Minor Virtue (Long Winded), Minor Virtue (Puissant Brawl), Minor Virtue (Second Sight), Minor Virtue (Strong Willed)."
+            ^"Combat" STRING "Beak: Init +2, Attack +14, Defense +13, Damage +8 Grapple: Init: +11, Attack +15, Defense +15, Damage: special (On subsequent rounds may add Grapple Strength to Attack Roll for beak attacks.) Large Claws: Init +2, Attack +16, Defense +15, Damage +11 Large Horns: Init +10, Attack +17, Defense +18, Damage +16 Spikes: The spikes which grow from the joints of the male griffon do +8 damage to any attacker making a successful mêlée attack, including grappling attacks."
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious Wound Penalties: –1 (1–8), –3 (9–16), –4 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Abilities" STRING "Animal Handling 5 (griffons), Area Lore 5 (home territory), Area Lore 3 (gold rich territory), Athletics 7 (running), Awareness 5 (prey), Brawl 8+2 (horns), Hunt 4 (horses), Second Sight 5 (Illusions), Survival 5 (home terrain)."
+            ^"Vis" STRING "6 of Animal, heart"
+            ^"Appearance" STRING "A male griffon is the size of a small horse, and its features combine those of a lion and an eagle. The head, forequarters and forelimbs of the griffon are aquiline, while the hind legs, torso and tail are leonine. Males have more muscular bodies than female griffons, particularly in their forequarters. Male griffons are wingless, but have defensive horns and spines that protrude from the body, and especially around the neck."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 135
+        }
+        PERSONALITY_TRAITS {
+            "Defends home" +5
+            "Brave" +3
+        }
+        POWERS {
+            #t9039b84b4022bc0f2f9334 ^"Nests of Gold" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "A catch-all power that allows griffons to detect, excavate, and craft gold. This is also the power that allowed the griffons to puncture the side of the tower."
+            }
+        }
+    }
+
+    #t524f5aa35d99d7cf38dbde TEMPLATE "Male Juvenile Griffon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tbc36cc3074b32b83913340 ^"The Lair of the Griffons"]
+            ^"Magic (Faerie?) Might" STRING "15 (Animal)"
+            ^"Characteristics" STRING "Cun 0, Per +3, Pre +2, Com –, Str +4, Sta +1, Dex +1, Qik +3"
+            ^"Size" INTEGER 2
+            ^"Confidence" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Magical Monster; Ferocity (may use Confidence points only when home threatened), Homing Instinct (always knows where home is in relation to self), Keen Vision"
+            ^"Qualities and Inferiorities" STRING "Focus Power (Nests of Gold), Improved Abilities, Improved Attack x 2 (beak and claws), Improved Damage x 2 (beak and claws), Improved Soak x 2, Minor Virtue (Improved Characteristics), Minor Virtue (Long Winded), Minor Virtue (Puissant Brawl), Minor Virtue (Second Sight), Minor Virtue (Strong Willed)."
+            ^"Combat" STRING "Beak: Init +3, Attack +12, Defense +10, Damage +8 Grapple: Init: +3, Attack +9, Defense +11, Damage: special (On subsequent rounds may add Grapple Strength to Attack Roll for beak attacks.) Large Claws: Init +3, Attack +16, Defense +14, Damage +8 Spikes: The spikes which grow from the joints of the male griffon do +5 damage to any attacker making a successful mêlée attack, including grappling attacks."
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious Wound Penalties: –1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Abilities" STRING "Animal Handling 1 (griffons), Area Lore 4 (home territory), Area Lore 1 (gold rich territory), Athletics 5 (running), Awareness 5 (prey), Brawl 5+2 (claws), Hunt 4 (horses), Second Sight 3 (Illusions), Survival 4 (home terrain)."
+            ^"Vis" STRING "3 of Animal, heart"
+            ^"Appearance" STRING "A male griffon is the size of a small horse, and its features combine those of a lion and an eagle. The head, forequarters and forelimbs of the griffon are aquiline, while the hind legs, torso and tail are leonine. Males have more muscular bodies than female griffons, particularly in their forequarters. Male griffons are wingless, but have defensive horns and spines that protrude from the body, and especially around the neck."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 135
+        }
+        PERSONALITY_TRAITS {
+            "Defends home" +5
+            "Brave" +3
+        }
+        POWERS {
+            #ta233a2dc0cd1ca4f3594e1 ^"Nests of Gold" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "A catch-all power that allows griffons to detect, excavate, and craft gold. This is also the power that allowed the griffons to puncture the side of the tower."
+            }
+        }
+    }
+
+    #t7103fd8f7e069ed19f2be2 TEMPLATE "Female Hatchling Griffon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tbc36cc3074b32b83913340 ^"The Lair of the Griffons"]
+            ^"Magic (Faerie?) Might" STRING "5 (Animal)"
+            ^"Characteristics" STRING "Cun 0, Per +3, Pre +2, Com –, Str +2, Sta 0, Dex +1, Qik +4"
+            ^"Size" INTEGER 1
+            ^"Confidence" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Magical Monster; Ferocity (may use Confidence points only when home threatened), Homing Instinct (always knows where home is in relation to self), Keen Vision"
+            ^"Qualities and Inferiorities" STRING "Improved Abilities, Minor Virtue (Long Winded), Minor Virtue (Puissant Athletics), Minor Virtue (Second Sight), Minor Virtue (Strong Willed)."
+            ^"Combat" STRING "Beak: Init +4, Attack +3, Defense +6, Damage +3 Grapple: Init: 0, Attack +2, Defense +7, Damage: special (On subsequent rounds may add Grapple Strength to Attack Roll for beak attacks.) Large Claws: Init +4, Attack +9, Defense +10, Damage +6"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious Wound Penalties: –1 (1–6), –3 (7–2), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Abilities" STRING "Area Lore 3 (home territory), Athletics 3+2 (flight), Awareness 4 (prey), Brawl 2 (claws), Hunt 2 (horses), Second Sight 1 (Illusions), Survival 3 (home terrain)."
+            ^"Vis" STRING "1 of Animal, heart"
+            ^"Appearance" STRING "Griffon hatchlings are about the size of a human. Its features combine those of a lion and an eagle. The head, forequarters and forelimbs of the griffon are aquiline, while the hind legs, torso and tail are leonine. Female griffons have feathery wings, and fly with a swiftness and dexterity that is surprising in so large a beast. The female griffon is surprisingly strong, given that its foreparts have the comparatively delicate structure of a bird’s skeleton."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 136
+        }
+        PERSONALITY_TRAITS {
+            "Defends home" +5
+            "Brave" +3
+        }
+    }
+
+    #t59e11882afd36529af84d8 TEMPLATE "Male Hatchling Griffon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tbc36cc3074b32b83913340 ^"The Lair of the Griffons"]
+            ^"Magic (Faerie?) Might" STRING "5 (Animal)"
+            ^"Characteristics" STRING "Cun 0, Per +3, Pre +2, Com –, Str +2, Sta 0, Dex +1, Qik +4"
+            ^"Size" INTEGER 1
+            ^"Confidence" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Magical Monster; Ferocity (may use Confidence points only when home threatened), Homing Instinct (always knows where home is in relation to self), Keen Vision"
+            ^"Qualities and Inferiorities" STRING "Improved Abilities, Minor Virtue (Long Winded), Minor Virtue (Puissant Brawl), Minor Virtue (Second Sight), Minor Virtue (Strong Willed)."
+            ^"Combat" STRING "Beak: Init +4, Attack +5, Defense +8, Damage +3 Grapple: Init: 0, Attack +4, Defense +9, Damage: special (On subsequent rounds may add Grapple Strength to Attack Roll for beak attacks.) Large Claws: Init +4, Attack +11, Defense +12, Damage +6"
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious Wound Penalties: –1 (1–6), –3 (7–2), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Abilities" STRING "Area Lore 3 (home territory), Athletics 3 (running), Awareness 4 (prey), Brawl 2+2 (claws), Hunt 2 (horses), Second Sight 1 (Illusions), Survival 3 (home terrain)."
+            ^"Vis" STRING "1 of Animal, heart"
+            ^"Appearance" STRING "Griffon hatchlings are about the size of a human. Its features combine those of a lion and an eagle. The head, forequarters and forelimbs of the griffon are aquiline, while the hind legs, torso and tail are leonine. Males have more muscular bodies than female griffons, particularly in their forequarters. Male griffons are wingless, and the horns and fans of spikes that protrude from the body of an adult male griffon are not found in hatchlings."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 137
+        }
+        PERSONALITY_TRAITS {
+            "Defends home" +5
+            "Brave" +3
+        }
+    }
+
+}

@@ -1,0 +1,84 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheMagicalGardenOfHerisson_MandragoraAMandrake" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Mandragora, a Mandrake"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # Mandragora, a Mandrake (Chapter Four: The Magical Garden of Hérisson, p85): one being, its printed stat lines verbatim fields.
+
+    #t06c4c3f17a30691dcc76f5 ^"Mandragora, a Mandrake" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t88f662629bf343de9473c4 ^"Hérisson’s Garden"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -10
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 6
+            }
+            ^"Size" INTEGER -6
+            ^"Season" STRING "Spring"
+            ^"Virtues and Flaws" STRING "Magic Thing; Magical Champion; Hex; Arcane Lore, Puissant Penetration, Voice of the Garden; Hatred; Anchored to the Garden, Infamous, Tainted with Evil, Weak Characteristics Magic"
+            ^"Qualities and Inferiorities" STRING "Greater Power (Deadly Scream), Greater Power (Rally the Wooden Troops), Greater Power (Unwholesome Lust); Improved Abilities x 2, Improved Powers; Limited Gestures, Reduced Powers"
+            ^"Reputation" STRING "Deadly 4 (Local)"
+            ^"Combat" STRING "Dodge: Init +6, Attack N/A, Defense +10, Damage N/A"
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Vis" STRING "2 pawns of Corpus, in root."
+            ^"Appearance" STRING "The above-ground part of a mandrake plant looks like a cluster of oblong, tapered leaves growing close to the earth. The root is about six inches long, fleshy, and has five lobes. It vaguely resembles a human figure with head, arms, and legs. Wrinkles and lumps on the uppermost lobe suggest a human face. The mandrake’s flabby ‘arms’ have no fingers, and it is unable to grasp or manipulate objects with any skill."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 85
+        }
+        PERSONALITY_TRAITS {
+            "Spiteful" +6
+            "Mandrake" +3
+            "Reclusive" +3
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "dodging"
+            "Hex" SCORE 4 SPECIALTY "5) (illness"
+            "Leadership" SCORE 3 SPECIALTY "poisonous plants"
+            "Magic Lore" SCORE 1 SPECIALTY "5) (poisonous plants"
+            "Mastery of Rally the Wooden Troops" SCORE 4 SPECIALTY "toadstools"
+            "Penetration" SCORE 4 BONUS 2 SPECIALTY "scream"
+            "Profession: Apothecary" SCORE 4 SPECIALTY "poisons"
+        }
+        POWERS {
+            #tc297cee31c1bb3a9c20efc ^"Deadly Scream" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "The mandrake root’s scream is deadly to all who hear it (deafness is an effective defense). Unlike a Mandrake of Virtue, this Magical mandrake can use this power at any time. PeCo(An) 50 (Base 30, +3 Sound, +1 Animal Requisite): Greater Power (50 levels), Improved Powers (5 mastery points, +3 Initiative, –2 Might cost)"
+            }
+            #tb44d78e6999597a5a85445 ^"Rally the Wooden Troops" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "see earlier; can only affect the Venenarium tribe."
+            }
+            #tead42f98d9c53380aaca42 ^"Unwholesome Lust" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The target of this power becomes inflamed with lust for a target chosen by the plant at the time of activating the power. She can do nothing except pursue the object of her unnatural attraction until the duration ends. CrMe 20 (Base 4, +2 Voice, +2 Sun): Greater Power (20 levels, –5 for Reduced Powers, –1 Might cost)"
+            }
+        }
+        DESCRIPTION "Insert text here\n\nMandrake is the evil genius of the Venenarium tribe, and is consumed with hatred for all things breathing. It prefers to work behind the scenes through intermediates and patsies, and avoids revealing itself to be the source of the character’s trouble. Note that this is a more powerful, animate version of the Mandrake of Virtue found in *Realms of Power: Magic*."
+    }
+
+}

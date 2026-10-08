@@ -1,0 +1,142 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheMagicalGardenOfHerisson_Rules" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Four: The Magical Garden of Hérisson rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf0d4cee9a30f5de58effb5 ^"Vitalization Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vitalizing Vis"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 73
+        }
+        FORMULAS {
+            "Vitalization Total" "Intelligence + Creo + Vim + Hermetic Viresculture + Aura Modifier"
+        }
+    }
+
+    #t121b13870a0b6fee975568 ^"Level of Effect" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vitalizing Vis"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 73
+        }
+        FORMULAS {
+            "Level of Effect" "Magic Might"
+        }
+    }
+
+    #t8a60af20f2613e75405713 ^"Invigoration Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Invigorating a Stirps"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 74
+        }
+        FORMULAS {
+            "Invigoration Total" "Intelligence + Creo + Form (Vim Requisite) + Hermetic Viresculture + Aura Modifier"
+        }
+    }
+
+    #tb5da68225432bb00fb94b8 ^"Breeding Seasons" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Invigorating a Stirps"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 74
+        }
+        FORMULAS {
+            "Breeding Seasons" "Invigoration Total / 10, rounded up"
+        }
+    }
+
+    #t73e69b918c48b0064d1731 ^"Number of Pawns of vis produced" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Invigorating a Stirps"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 74
+        }
+        FORMULAS {
+            "Number of Pawns of vis produced" "(Magic Might/5) or (Level of Effect/5), rounded up"
+        }
+    }
+
+    #t15f35dc050124c9cdab163 ^"Maximum Number of Stirpes fertile in a generation" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Maximum Number of Stirpes"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 75
+        }
+        FORMULAS {
+            "Maximum Number of Stirpes fertile in a generation" "Hermetic Viresculture"
+        }
+    }
+
+    #td580aa26e7070e484bbbd3 ^"Proportion of Yield that is a Stirps" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Maximum Number of Stirpes"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 75
+        }
+        FORMULAS {
+            "Proportion of Yield that is a Stirps" "one tenth (minimum one pawn)"
+        }
+    }
+
+    #t9143a6984de9a33a9df862 ^"Labor Points required" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Maximum Number of Stirpes"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 75
+        }
+        FORMULAS {
+            "Labor Points required" "12 per Stirps"
+        }
+    }
+
+    #tcb2fe9813ac9964f01c9ee ^"Reduced Yield for insufficient help" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Maximum Number of Stirpes"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 75
+        }
+        FORMULAS {
+            "Reduced Yield for insufficient help" "–1 per 6 Labor Points (or fraction) lacking"
+        }
+    }
+
+    #t54df5ceb7a44a1727c2de5 ^"Reduced Yield for inattention" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Maximum Number of Stirpes"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 75
+        }
+        FORMULAS {
+            "Reduced Yield for inattention" "–1 pawn per neglected month or fraction"
+        }
+    }
+
+    #tb47c3a3d15d375c1afe7af ^"Yearly Aura Modifier for Viresculture" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Yearly Aura Modifier for Virescul-"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 76
+        }
+        FORMULAS {
+            "Yearly Aura Modifier for Viresculture" "– (total pawns / 5)"
+        }
+    }
+
+}

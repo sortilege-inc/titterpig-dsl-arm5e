@@ -1,0 +1,85 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheFlyingCastleOfThomae_DespairDemon" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Despair Demon"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # Despair Demon (Chapter Six: The Flying Castle of Thomae, p130): one being, its printed stat lines verbatim fields.
+
+    #t8b10c531131a10c022d47a ^"Despair Demon" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Accusers (variant)"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence" STRING "1 (3 points)"
+            ^"Virtues and Flaws" STRING "Weak-willed"
+            ^"Combat" STRING "Rolling Ball of Spikes (trample): Init +8, Attack +16, Defense +14, Damage +13 Includes Ability specialization."
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Abilities" STRING "Brawl 6 (trample)."
+            ^"Weakness" STRING "Protected Group (truly penitent people)"
+            ^"Vis" STRING "2 pawns, body"
+            ^"Appearance" STRING "A ball of icicles a yard in diameter."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 130
+        }
+        PERSONALITY_TRAITS {
+            "Doubt" +3
+        }
+        POWERS {
+            #t47071f4cd8bfbfda8efb89 ^"Coagulation (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Allows the demon to create a material form for itself. This form is a spiked ball of icicles a yard in diameter. This takes one round, although the demon may disincorporate almost instantly."
+            }
+            #t495e346fc96a8172f57c1b ^"Elemental Control of Air (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Elemental Control of Air"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The demon may create any Creo, Muto or Rego Auram effect, at the cost of 1 Might per magnitude. The demon is limited to minor effects, with level equal to its Might Score or less. It uses this power to separate straying travelers from groups by hiding paths, erasing footprints, limiting visibility and stifling cries for help."
+            }
+            #t07f4a204f8b29a8ffa3f96 ^"Envisioning (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The demon may make subtle changes to a victim’s dreams, to make them more ominous and depressing."
+            }
+            #t3021c220859b725979977d ^"Obsession (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "When a human performs a venial sin and the demon responds by spending Might, this demon gains an opportunity to force the human to feel spiritual doubt. When next faced with a crisis of worthiness, the storyguide makes a simple roll +3, to reflect the strength of the feelings of doubt, and the player responds with a simple die + a suitable Personality Trait as adjustments for exposure to a harsh environment. If the character’s total is higher, the demon has not been able to break the character’s sense of self-worth. If the demon’s total is higher, then the character gains a Doubt score of +1. If the character ever acts on this score, then he is in s state of sin. The demon then coagulates and kills its victim."
+            }
+        }
+        DESCRIPTION "The statistics for this demon use the rules given in *Realms of Power: The Infernal. *\n\nThese demons dwell in the Alps and prey on travelers. They separate and confuse humans so that they become lost in the wilderness. The demons hope that, worn down with physical privation and the psychological strain of imminent death, their victims will lose faith in the Lord. They then kill the victim, so that penitence is impossible. These demons are suited for encounters with individual characters who separate themselves from the group, like scouts or foragers."
+    }
+
+}

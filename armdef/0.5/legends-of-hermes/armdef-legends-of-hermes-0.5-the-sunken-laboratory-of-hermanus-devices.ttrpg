@@ -1,0 +1,753 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheSunkenLaboratoryOfHermanus_Devices" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Five: The Sunken Laboratory of Hermanus devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb5083f695d87505b5a4556 ^"Beyond Reach of the Sea" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Ring of Aquatic Freedom"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 34
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Effect Design" STRING "(Effect: Base 10, +1 Touch, +2 Sun, +1 part; Modifications, +1 level 2 uses per day, + 3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "ReAq 34 Constant effect R: Touch, D: Sun, T: Part"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "Water is prevented from coming within 6 paces of the ring. This not only prevents the wearer from drowning; the wearer cannot drink water and his sweat is thrown from his body. On muddy ground, a circle of moisture is thrown up at 6 paces from the wearer.\n\n(Effect: Base 10, +1 Touch, +2 Sun, +1 part; Modifications, +1 level 2 uses per day, + 3 levels environmental trigger)"
+    }
+
+    #tddd34044cb251d2c54f30f ^"Lock Improperly Opened" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Locksmith’s Will"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 29
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 4, +1 Touch, +2 Sun, +2 Room; Modifications, +1 level 2 uses per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InTe 29 Constant effect R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#ta8e00470c32e5247cc5d47 ^"Hallway"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 108
+        }
+        DESCRIPTION "This enchantment triggers the *Herald of Imperative* when a lock in the target room is opened without the use of a matching key, such as if a lock is picked, opened with magic, or is opened by being smashed to bits. The walls and doors of the room itself are considered within the room for this effect.\n\n(Effect: Base 4, +1 Touch, +2 Sun, +2 Room; Modifications, +1 level 2 uses per day, +3 levels environmental trigger)"
+    }
+
+    #tc7e07e3fece178df413410 ^"Summon the Stony Servants" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Statue of Conjured Assistants"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 52
+            ^"Penetration" STRING "8"
+            ^"Uses" STRING "6/day"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Effect Base 15, +4 Arcane connection, +2 Group; Modifications, +4 levels 8 Penetration, +3 levels 6 uses per day)"
+            ^"Printed Effect Line" STRING "ReTe 52 Penetration 8, 6/day R: Arc, D: Mom, T: Group"
+            ^"Location" LIST [#ta8e00470c32e5247cc5d47 ^"Hallway"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 110
+        }
+        DESCRIPTION "This effect summons two specific spirits of the elements, Ferox and Fidelius (see Realms of Power: Magic page 104, and statistics provided later), to the location of the Statue of Conjured Assistants. Arcane connections to the spirits are incorporated into the item.\n\n(Effect Base 15, +4 Arcane connection, +2 Group; Modifications, +4 levels 8 Penetration, +3 levels 6 uses per day)"
+    }
+
+    #t8196d52bd26a8d9d787e2f ^"Test of Motive" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Handle of Ill Will"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 60
+            ^"Penetration" STRING "+60"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 15, +1 Touch; Modifications, +10 levels unlimited uses per day, +30 levels +60 Penetration)"
+            ^"Printed Effect Line" STRING "InMe 60 Penetration +60 R: Touch, D: Mom, T: Ind"
+            ^"Location" LIST [#t8674a8786d84d5feea12a1 ^"Scriptorium"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 110
+        }
+        DESCRIPTION "This enchantment is triggered whenever the handle is touched. Test of motive triggers the Herald of Imperative if the person touching the handle wishes House Tremere ill fortune. Specifically the item determines the answer to the question “Do you wish ill fortune to House Tremere?”. If the answer from the target is “yes,” then the item triggers the Herald of Imperative enchantment (see “The Laboratory of Hermanus and Surrounding Structures” earlier)\n\n(Effect: Base 15, +1 Touch; Modifications, +10 levels unlimited uses per day, +30 levels +60 Penetration)"
+    }
+
+    #tb88aa746c1630df5d68e31 ^"Elevation of the Interloper" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Net of Patient Thieves"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 65
+            ^"Penetration" STRING "+60"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 4, +1 Touch, +2 Sun, +2 Room; Modifications, + 30 levels Penetration 60)"
+            ^"Printed Effect Line" STRING "ReCo 65 Penetration +60 R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#t8674a8786d84d5feea12a1 ^"Scriptorium"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 110
+        }
+        DESCRIPTION "All people in the target room are levitated a few inches away from all floors and walls and held aloft until the next dawn or dusk. This immobilizes any creature that has no means of forcefully moving itself without touching a surface.\n\n(Effect: Base 4, +1 Touch, +2 Sun, +2 Room; Modifications, + 30 levels Penetration 60)"
+    }
+
+    #tebaec52e289a23beb6b1e2 ^"Room of Pleasant Incense" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Censer of the Unseen"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 9
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 1, +1 Touch, +2 Sun, +1 complexity; Modifications, +1 level 2 uses per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "CrAu 9 Constant effect R: Touch, D: Sun, T: Ind"
+            ^"Location" LIST [#td2148fcf5dddfa25c1b313 ^"Store Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 111
+        }
+        DESCRIPTION "A pleasant-smelling smoke constantly pours from the censer, filling the room. This smoke can be clearly seen but it can not be smelled by any creature with Magic Resistance. While clearly visible, the smoke does not significantly obscure vision. The smoke fills the target room but does not travel outside of it.\n\n(Effect: Base 1, +1 Touch, +2 Sun, +1 complexity; Modifications, +1 level 2 uses per day, +3 levels environmental trigger)"
+    }
+
+    #t9ed75e5e2e09bae18e2388 ^"Ascertaining the Absence of Images" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Censer of the Unseen"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 34
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 4 as InAu, InCo, and InHe, +1 Touch, +2 Room, +2 Sun, +1 complexity; Modifications +1 level 2 uses per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InIm 34 Constant effect R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#td2148fcf5dddfa25c1b313 ^"Store Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 111
+        }
+        DESCRIPTION "The enchantment determines if there is an area within the room that is not filled with either the image of smoke (presumably from the Room of Pleasant Incense effect) or the image of some other object. This effect triggers the Herald of Imperative (see “The Laboratory of Hermanus and Surrounding Structures” earlier) if there is a volume of space within the room where there is no image, such as the location of an invisible creature or object. This effect also triggers the Herald of Imperative if all of the smoke is removed from the room.\n\n(Effect: Base 4 as InAu, InCo, and InHe, +1 Touch, +2 Room, +2 Sun, +1 complexity; Modifications +1 level 2 uses per day, +3 levels environmental trigger)"
+    }
+
+    #te93dec1e184b674e779323 ^"Box of Stone" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Pebble of the Stone Prison"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 16
+            ^"Uses" STRING "2/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 3, +1 Touch, +2 Sun, +1 size; Modifications, +1 level 2 uses per day)"
+            ^"Printed Effect Line" STRING "CrTe 16 2/day R: Touch, D: Sun, T: Ind"
+            ^"Location" LIST [#td2148fcf5dddfa25c1b313 ^"Store Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 111
+        }
+        DESCRIPTION "When this effect is triggered, the floor, walls, and ceiling of the room containing the enchanted device are covered by a foot of stone. This stone interposes itself between the contents of the room and the walls, floor, and ceiling. The Pebble of the Stone Prison is deployed resting against a wall or the floor of a room so the created stone walls interpose themselves between the device and the targets that the designers hoped to catch. Objects affixed to the outside of the rooms such as tapestries and rugs end up outside of the stone. Objects resting on the floor or walls, such as people, tables, or tapestries, are pushed a foot toward the center of the room by the stone. Creatures and objects with Magic Resistance are not pushed by the stone box; rather the box grows around them and is created with holes at the locations of the protected creatures or objects.\n\nThis stone box is self-supporting and will not collapse under its own staggering weight, but the environment must be able to support it. Therefore, this justiciar can only be safely employed in a few rooms on the foundation level of Coeris without triggering a collapse of the building. Hermanus’s use of this device in his laboratory was unwise, but he was overwhelmed by paranoia by the time he set it up. Fortunately, it was not triggered before the laboratory was ripped into the Twilight Void, and the room is now resting on the seabed.\n\n(Effect: Base 3, +1 Touch, +2 Sun, +1 size; Modifications, +1 level 2 uses per day)"
+    }
+
+    #t5277baa75aa2d3ee46e3e0 ^"Alarm of Dissemblance" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Ear of Truth"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 55
+            ^"Penetration" STRING "34"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 10, +1 Diameter, +2 Room; Modifications, +17 levels 34 Penetration, +10 levels unlimited uses per day, +3 environmental trigger)"
+            ^"Printed Effect Line" STRING "InMe 55 Penetration 34 R: Touch, D: Diam, T: Room"
+            ^"Location" LIST [#t5ad52a3da429e109f54037 ^"Receiving Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 111
+        }
+        DESCRIPTION "This effect triggers the Herald of Imperative enchantment (see “The Laboratory of Hermanus and Surrounding Structures” earlier) if any lies are told within the room. Naturally, the limit of the infernal prevents this from being effective against demons.\n\n(Effect: Base 10, +1 Diameter, +2 Room; Modifications, +17 levels 34 Penetration, +10 levels unlimited uses per day, +3 environmental trigger)"
+    }
+
+    #t292c07d4351424d2ec52d3 ^"Chamber of Thorns" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Box of Vines"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 16
+            ^"Uses" STRING "2/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Effect: Base 1, +1 Touch, +2 Sun, +2 Group, +1 unnatural; Modifications, +1 level 2 activations per day)"
+            ^"Printed Effect Line" STRING "CrHe 16 2/day R: Touch, D: Sun, T: Group"
+            ^"Location" LIST [#t5ad52a3da429e109f54037 ^"Receiving Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 112
+        }
+        DESCRIPTION "The room where this enchantment is triggered is filled with woody, thorny bushes that grow from the walls, floor, and ceiling to completely occupy all of the open space in the room within the flash of an eye. The vines grow around creatures and other objects that occupy the room, leaving only a fraction of an inch of free space between the thorns and any creatures and objects. These plants are unnaturally resilient, having +15 Soak. They can be cut by edged weapons only. Cutting through requires inflicting a Heavy wound for every pace of distance. Bodily forcing one’s way through the plants requires a Strength stress roll against an Ease Factor of 9 for every pace moved and does +15 damage (soaked normally) whether the attempt succeeds or fails. If the roll botches, an additional 5 points of damage are suffered.\n\n(Effect: Base 1, +1 Touch, +2 Sun, +2 Group, +1 unnatural; Modifications, +1 level 2 activations per day)"
+    }
+
+    #tcfc7d80245f35e845656c1 ^"Pretense of Humanity" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Staves of the Wooden Soldiers"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 19
+            ^"Uses" STRING "12/day, item maintains concentration"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 1, +4 Arcane connection, +1 Concentration; Modifications, +5 levels item maintains concentration, +4 levels 12 uses per day)"
+            ^"Printed Effect Line" STRING "MuIm 19 12/day, item maintains concentration R: Arc, D: Conc, T: Ind"
+            ^"Location" LIST [#t5ad52a3da429e109f54037 ^"Receiving Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 112
+        }
+        DESCRIPTION "The target mannequin changes in appearance to resemble a human the same size as the mannequin.\n\n(Effect: Base 1, +4 Arcane connection, +1 Concentration; Modifications, +5 levels item maintains concentration, +4 levels 12 uses per day)"
+    }
+
+    #t6484bdbc3835ce8f8b360f ^"Animate Mannequin" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Staves of the Wooden Soldiers"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 34
+            ^"Uses" STRING "12/day, item maintains concentration"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 3, +4 Arcane connection, +1 Concentration, +1 complexity; Modifications, +5 levels item maintains concentration, +4 levels 12 uses per day)"
+            ^"Printed Effect Line" STRING "ReHe 34 12/day, item maintains concentration R: Arc, D: Conc, T: Ind"
+            ^"Location" LIST [#t5ad52a3da429e109f54037 ^"Receiving Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 112
+        }
+        DESCRIPTION "The target mannequin moves under the command of the staff’s holder. The mannequin moves as if it were the holder, it uses the holder’s Dexterity, Quickness, and Abilities. Mannequins have a Strength score of +3 and do not suffer damage in the same manner as living beings. However, it is possible to remove a limb from a mannequin (at least the ones used in Coeris and the laboratory complex) with any blow that has a damage value of 10 or more (19 or more on the armored mannequins in the complex). Weapons used in melee by the mannequins are resisted by Magic Resistance; mannequins are frequently armed with crossbows which are not hindered by Magic Resistance, because the bolts are not being driven by a magical force.\n\n(Effect: Base 3, +4 Arcane connection, +1 Concentration, +1 complexity; Modifications, +5 levels item maintains concentration, +4 levels 12 uses per day)"
+    }
+
+    #t66bb7383e8e72c6317fa0f ^"View from the Mannequin" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Staves of the Wooden Soldiers"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 34
+            ^"Uses" STRING "12/day, item maintains concentration"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Special"
+            ^"Effect Design" STRING "(Effect: Base 1, +4 Arcane connection, +1 Concentration, +3 Special target based on Room, and one grade higher; Modifications, +5 levels item maintains concentration, + 4 levels 12 uses per day)"
+            ^"Printed Effect Line" STRING "InIm 34 12/day, item maintains concentration R: Arc, D: Conc, T: Special"
+            ^"Location" LIST [#t5ad52a3da429e109f54037 ^"Receiving Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 113
+        }
+        DESCRIPTION "Upon activation, the holder’s sense of sight is transferred from his present location to the location of the object to which the staff carries an arcane connection. This effect allows the wearer to see his surroundings as though he were at the location of the targeted object (including being able to see creatures with Magic Resistance). The spell does not enhance the wielder’s natural sight, it only transfers the location of it.\n\nThe target is based on Room but is more complex as it allows the staff’s holder to see as if he were actually in the item’s location (into adjacent rooms, out of windows and such).\n\n(Effect: Base 1, +4 Arcane connection, +1 Concentration, +3 Special target based on Room, and one grade higher; Modifications, +5 levels item maintains concentration, + 4 levels 12 uses per day)"
+    }
+
+    #ta8dd134a9f21af1c1b3f17 ^"Ears of the Mannequin" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Staves of the Wooden Soldiers"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 34
+            ^"Uses" STRING "12/day, item maintains concentration"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Special"
+            ^"Effect Design" STRING "(Effect: Base 1, +4 Arcane connection, +1 Concentration, +3 Special target based on Room +1; Modifications, +5 levels item maintains concentration, + 4 levels 12 uses per day)"
+            ^"Printed Effect Line" STRING "InIm 34 12/day, item maintains concentration R: Arc, D: Conc, T: Special"
+            ^"Location" LIST [#t5ad52a3da429e109f54037 ^"Receiving Room"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 113
+        }
+        DESCRIPTION "Upon activation, the holder’s sense of hearing is transferred from his present location to the location of the object to which the staff carries an arcane connection. This effect allows the wearer to hear his surroundings as though he were at the location of the targeted object (including being able to hear creatures with Magic Resistance). The spell does not enhance the wielder’s natural hearing, it only transfers the location of it.\n\nThe target is based on Room but is more complex as it allows the staff’s holder to hear as if he were actually in the item’s location, into adjacent rooms, out of windows and such.\n\n(Effect: Base 1, +4 Arcane connection, +1 Concentration, +3 Special target based on Room +1; Modifications, +5 levels item maintains concentration, + 4 levels 12 uses per day)"
+    }
+
+    #t7e6f9c9d84ad7804386601 ^"Sense the Airy Trespass" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Hourglass of Airy Trespass"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 75
+            ^"Penetration" STRING "+32"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 30 +1 Touch, +2 Room, +2 Sun; Modifications, +1 level 2 uses per day. +3 levels environmental trigger, +16 levels 32 Penetration)"
+            ^"Printed Effect Line" STRING "InVi 75 Penetration +32, constant effect R: Touch D: Sun, T Room"
+            ^"Location" LIST [#t56592402b88bbfdf723dc8 ^"Spare Laboratory"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 113
+        }
+        DESCRIPTION "This enchantment detects the presence of any entities that have a Magic Might of 30 or lower. Herald of Imperative (see “The Laboratory of Hermanus and Surrounding Structures” earlier) is triggered every round during which there is a magical being in the same room as the hourglass.\n\n(Effect: Base 30 +1 Touch, +2 Room, +2 Sun; Modifications, +1 level 2 uses per day. +3 levels environmental trigger, +16 levels 32 Penetration)"
+    }
+
+    #ta6c72ae9186d18f3173c3a ^"Insubstantial Prison" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Prison of Audacious Spirits"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 71
+            ^"Penetration" STRING "30"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 30, +1 Touch, +2 Sun, +2 Room; Modifications, +16 levels 32 Penetration)"
+            ^"Printed Effect Line" STRING "ReVi 71 Penetration 30 R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#t56592402b88bbfdf723dc8 ^"Spare Laboratory"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 113
+        }
+        DESCRIPTION "Creatures with Magic Might of 30 or less are unable to move into out of the target room until this effect expires or is dispelled. Powers used by the target creatures are likewise unable to effect targets that are on the other side of the boundary of the target room. Despite the name of the device, the effect is not limited to spirits.\n\n(Effect: Base 30, +1 Touch, +2 Sun, +2 Room; Modifications, +16 levels 32 Penetration)"
+    }
+
+    #ta8ce72a6a298e5f9965538 ^"React to Naked Blades" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Ward against Foreign Steel"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Requisite" STRING "Imaginem"
+            ^"Level" INTEGER 45
+            ^"Penetration" STRING "42"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 4, +2 Sun +2 Room, no adjustment for requisite, Modifications, +21 levels 42 Penetration, +1 level 2 uses per day,+ 3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InTe(Im) 45 Penetration 42, constant effect R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#tc2c582807882d4aa2903e0 ^"Sanctum"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "This effect triggers the Herald of Imperative enchantment (see “The Laboratory of Hermanus and Surrounding Structures” earlier) if any metal weapons that do not bear the symbol of House Tremere on them in some way are drawn within the target room. The grogs of Coeris are equipped with such weapons, but not all Tremere magi have been informed of the nature of this particular sentinel, and accidents have occurred when visiting Tremere magi have displayed their weapons in a protected room.\n\n(Effect: Base 4, +2 Sun +2 Room, no adjustment for requisite, Modifications, +21 levels 42 Penetration, +1 level 2 uses per day,+ 3 levels environmental trigger)"
+    }
+
+    #tb9ae3ada4aadd332c9c957 ^"Interrogation of Interlopers" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Carpet of Loyalty"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 60
+            ^"Penetration" STRING "+60"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 15, +1 Touch; Modifications, +10 levels unlimited uses per day, +30 levels +60 Penetration)"
+            ^"Printed Effect Line" STRING "InMe 60 Penetration +60 R: Touch, D: Mom, T: Ind"
+            ^"Location" LIST [#tc2c582807882d4aa2903e0 ^"Sanctum"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "The Interrogation of Interlopers is triggered whenever the carpet is touched by a creature. This enchantment determines if the creature who touched it believes that the members of House Tremere would disapprove of his plans. Specifically, the item determines the answer to the question “Would the members of House Tremere disapprove of your plans?”. If the answer from any creature is “yes”, then the item triggers the Herald of Imperative enchantment. Naturally, characters who have no clue about how the Tremere would feel about their plans do not trigger the Herald of Imperative enchantment. This was less of a problem in the original setting; anyone in Coeris could be expected to have an opinion as to what House Tremere thought of their actions.\n\n(Effect: Base 15, +1 Touch; Modifications, +10 levels unlimited uses per day, +30 levels +60 Penetration)"
+    }
+
+    #t1603c1438c876af4ef9277 ^"Armoring the Intruder" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Turtle of Welcome Reflection"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Corpus"
+            ^"Requisite" STRING "Animal"
+            ^"Level" INTEGER 60
+            ^"Penetration" STRING "+50"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 10, +1 Touch, +2 Sun +2 Room; Modifications, +25 levels 50 Penetration)"
+            ^"Printed Effect Line" STRING "MuCo(An) 60 Penetration +50 R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#tc2c582807882d4aa2903e0 ^"Sanctum"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "Humans and other creatures that are subject to Corpus spells within the target room are changed into turtles until the next sunrise or set.\n\n(Effect: Base 10, +1 Touch, +2 Sun +2 Room; Modifications, +25 levels 50 Penetration)"
+    }
+
+    #t66c35404c16756738ece69 ^"Masking the Magical Chamber" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Oracle-Countering Tapestry"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 45
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 16 per *Masking the Odor of Magic,* ArM 5 page 160, +1 Touch, +2 Sun, +2 Room; Modifications, +1 level 2 activations per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "PeVi 45 constant effect R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#tc2c582807882d4aa2903e0 ^"Sanctum"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "This effect prevents the detection of magic effects by Hermetic Intellego Vim magic unless the level of the Intellego Vim spell exceeds 52.\n\n(Effect: Base 16 per *Masking the Odor of Magic,* ArM 5 page 160, +1 Touch, +2 Sun, +2 Room; Modifications, +1 level 2 activations per day, +3 levels environmental trigger)"
+    }
+
+    #t697d6ca954422318eaabc4 ^"Chamber of Heartwood" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Charm of the Herbam Padlock"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 29
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 3, +1 Touch, +2 Sun, +2 size, +1 complexity; Modifications, +1 level 2 uses per day +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "CrHe 29 Constant effect R: Touch D: Sun T: Ind"
+            ^"Location" LIST [#tc2c582807882d4aa2903e0 ^"Sanctum"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "The effect is triggered by touching the door of a room with the charm. A single block of wood completely fills the target room, fitting snugly around any objects that were in the room previously, but not moving them. This power is kept active upon all of the vaults in Coeris. Any person who opens a door to a vault will find a tremendous block of wood between himself and the rest of the room’s contents.\n\n(Effect: Base 3, +1 Touch, +2 Sun, +2 size, +1 complexity; Modifications, +1 level 2 uses per day +3 levels environmental trigger)"
+    }
+
+    #t688fee75fb654021a0893a ^"Insubstantial Wooden Foundation" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Charm of the Herbam Padlock"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 24
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 3, +1 Touch, +2 Sun, +2 size; Modifications, +1 level 2 uses per day +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "ReHe 24 Constant effect R: Touch, D: Sun, T: Ind"
+            ^"Location" LIST [#tc2c582807882d4aa2903e0 ^"Sanctum"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "This spell holds the block of wood created by Chamber of Heartwood in its location. Insubstantial Wooden Foundation prevents the block of wood created by Chamber of Heartwood from exerting any weight on the floor of the target room. This power is always active upon the block of wood that is created by Chamber of Heartwood.\n\n(Effect: Base 3, +1 Touch, +2 Sun, +2 size; Modifications, +1 level 2 uses per day +3 levels environmental trigger)"
+    }
+
+    #tefe2bbc34d08e2e78f139d ^"Assurance of Ownership" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Tapestry of Confident Possession"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 65
+            ^"Penetration" STRING "50"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 15, +1 Touch, +2 Room; Modifications, +10 levels unlimited uses per day, +25 levels Penetration 50)"
+            ^"Printed Effect Line" STRING "InMe 65 Penetration 50 R: Touch, D: Mom, T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "*Assurance of Ownership* is triggered whenever the tapestry is moved. The effect determines if there are any minds in the room that do not contain the belief that the laboratory belongs to them. If there are any such minds, the *Herald of Imperative* enchantment is triggered. This item was specifically enchanted so as not to warp Hermanus.\n\n(Effect: Base 15, +1 Touch, +2 Room; Modifications, +10 levels unlimited uses per day, +25 levels Penetration 50)"
+    }
+
+    #t85ca932c408267e58f88ff ^"Beneficent Gift of Loyalty" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Cross of the Preempted Conflict"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 65
+            ^"Penetration" STRING "+40"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 20, +1 Touch, +2 Room, +2 Sun; Modifications, +20 levels 40 Penetration)"
+            ^"Printed Effect Line" STRING "ReMe 65 Penetration +40 R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 116
+        }
+        DESCRIPTION "People within the room are compelled to do their utmost to protect and care for the laboratory, the items within it, and, most importantly, the room’s rightful owners. It was the hope of the Vexillation that intruders, realizing that this effect was only temporary, would turn themselves in to prevent their future selves stealing from the covenant. While this was originally intended to change thieves of Coeris into defenders, the present circumstances make the identity of the rightful owners of the laboratory somewhat questionable. Ferox and Fidelius will certainly inform any who care to hear that the laboratory complex belongs to House Tremere. But it is entirely possible that the player characters may disagree with one another regarding who the proper owners of the laboratory are. In any case, no character under the effects of this device will stand for any material to be removed from the laboratory complex.\n\n(Effect: Base 20, +1 Touch, +2 Room, +2 Sun; Modifications, +20 levels 40 Penetration)"
+    }
+
+    #t44415ea59c91cc6cba5da1 ^"Gaze of Maker’s Mark" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Butterfly’s Gaze"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 49
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 5, +1 Touch, +2 Sun, +2 Room +3 magnitudes determine sigil; Modifications, +1 level 2x day, + 3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InVi 49 Constant effect R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 117
+        }
+        DESCRIPTION "This enchantment detects if any magic in the room bears the sigil of Hermanus, the embattled lines. If it finds any magic that does not have Hermanus’ sigil upon it, the item triggers Counter Intruding Magics upon the spell, power or effect.\n\n(Effect: Base 5, +1 Touch, +2 Sun, +2 Room +3 magnitudes determine sigil; Modifications, +1 level 2x day, + 3 levels environmental trigger)"
+    }
+
+    #t8e14816d53b8b0f2e08ac9 ^"Counter Intruding Magics" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Butterfly’s Gaze"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 63
+            ^"Uses" STRING "Unlimited uses"
+            ^"Range" STRING "Special"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 35, +3 special range based on Voice +1 magnitude; Modifications, +10 levels unlimited uses day, +3 levels linked trigger)"
+            ^"Printed Effect Line" STRING "PeVi 63 Unlimited uses R: Special D: Momentary T: Ind"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 117
+        }
+        DESCRIPTION "Dispels a magical spell/power/effect if the level of the effect can be doubled on roll of stress die +55. This effect is triggered by the Gaze of Maker’s Mark effect and activates whenever a targeted spell enters the room or is cast within the room. A Duration Momentary spell may take effect before the Counter Intruding Magics spell activates. Counter Intruding Magics only triggers one time per round; if there is more than one possible target, the storyguide should randomly determine which source is targeted.\n\n(Effect: Base 35, +3 special range based on Voice +1 magnitude; Modifications, +10 levels unlimited uses day, +3 levels linked trigger)"
+    }
+
+    #t65f590c806ee24c4d172b7 ^"Awareness of Fire" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Wolf’s Gaze"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 14
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 1, +1 Touch, +2 Sun, +2 Room; Modifications, +1 level 2 activations per day, + 3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InIg 14 Constant effect R: Touch, D: Sun, T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 117
+        }
+        DESCRIPTION "This power detects any fires in the room. When a fire is detected, Protection of Cool and Dark is triggered.\n\n(Effect: Base 1, +1 Touch, +2 Sun, +2 Room; Modifications, +1 level 2 activations per day, + 3 levels environmental trigger)"
+    }
+
+    #tbcc79f8039ebb6614c2089 ^"Protection of Cool and Dark" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Wolf’s Gaze"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 28
+            ^"Uses" STRING "Unlimited uses"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 4, +1 Touch, +2 Room; Modifications, +10 levels unlimited uses, +3 linked trigger)"
+            ^"Printed Effect Line" STRING "PeIg 28 Unlimited uses R: Touch D: Momentary T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 117
+        }
+        DESCRIPTION "Extinguishes all fires in the room that do +5 damage per exposure or less (see ArM5 page 181).\n\n(Effect: Base 4, +1 Touch, +2 Room; Modifications, +10 levels unlimited uses, +3 linked trigger)"
+    }
+
+    #t2e2151b50289fade33f1cf ^"Obedient Sunlight" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Orb of Obedient Sunlight"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 20
+            ^"Uses" STRING "Unlimited uses, item maintains concentration"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 4, +1 Concentration; Modifications, +10 levels unlimited uses per day, +5 levels item maintains concentration)"
+            ^"Printed Effect Line" STRING "CrIg 20 Unlimited uses, item maintains concentration R: Per, D: Conc, T: Ind"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 117
+        }
+        DESCRIPTION "When commanded, the orb glows with bright light. This light is more than sufficient to illuminate the laboratory. Hermanus used this item as the source of illumination for his laboratory in order to eliminate the risk of fire, and the defensive risk that he saw in unprotected, open windows.\n\n(Effect: Base 4, +1 Concentration; Modifications, +10 levels unlimited uses per day, +5 levels item maintains concentration)"
+    }
+
+    #t01bfd12a0100c9b99f2b44 ^"Sight of Forming Spells" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Helm of Unravelling"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 60
+            ^"Penetration" STRING "+32"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Effect Design" STRING "(Effect: Base 5, +1 Touch, +2 Sun, + 4 Vision; Modifications, +1 level 2 uses per day, + 3 levels environmental trigger, +16 levels +32 Penetration)"
+            ^"Printed Effect Line" STRING "InVi 60 Penetration +32, constant effect R: Touch, D: Sun, T: Vision"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 118
+        }
+        DESCRIPTION "The wearer of the helm sees spells, powers, and effects that are with his or her field of vision as a violet glow. Spells powers and effects that are being cast show up very strongly to the wearer, while active magics are harder to notice, and residues of old spells, powers, and effects cannot be detected at all. If this effect does not penetrate the resistance of a target, the wearer can not see any magic active upon that target, nor can the wearer determine if the target is casting a spell.\n\n(Effect: Base 5, +1 Touch, +2 Sun, + 4 Vision; Modifications, +1 level 2 uses per day, + 3 levels environmental trigger, +16 levels +32 Penetration)"
+    }
+
+    #t7213e3da5dff8ba25fa7db ^"Shout of Unravelling" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Helm of Unravelling"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 60
+            ^"Penetration" STRING "+32"
+            ^"Uses" STRING "12/day"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 30, +2 Voice; Modifications, +4 levels twelve uses per day, +16 levels 32 Penetration)"
+            ^"Printed Effect Line" STRING "PeVi 60 +32 Penetration, 12/day R: Voice, D: Mom, T: Ind"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 118
+        }
+        DESCRIPTION "The targeted spell, power or effect is dispelled if its level can be doubled on a roll of stress die + 50. If the wearer of the helm has a higher Initiative than some of their opponents and they choose to wait to act, they can use Shout of Unravelling to counter spells cast by characters acting later in the round. Shout of Unravelling is triggered by the wearer shouting while staring at a magical power or effect; the specific words shouted are of no importance in regards to their effectiveness as a trigger. If this effect does not penetrate the resistance of a target, the wearer can not counter any magic active upon that target, nor can the wearer counter a spell that the target is casting.\n\n(Effect: Base 30, +2 Voice; Modifications, +4 levels twelve uses per day, +16 levels 32 Penetration)"
+    }
+
+    #t2eaaac61c2cf75609c2434 ^"Foreboding of Stones" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 19
+            ^"Uses" STRING "Constant use"
+            ^"Range" STRING "Pers"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Hearing"
+            ^"Effect Design" STRING "(Effect: Base 2, +2 Sun, +3 Hearing; Modifications, +1 level 2 uses per day +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InTe 19 Constant use R: Pers, D: Sun, T: Hearing"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 119
+        }
+        DESCRIPTION "The laboratory room detects the approach of any solid object that is likely to hit the room with enough force to damage it. The laboratory then triggers Skin of the Sapphire Tortoise.\n\n(Effect: Base 2, +2 Sun, +3 Hearing; Modifications, +1 level 2 uses per day +3 levels environmental trigger)"
+    }
+
+    #tfe7e1ca2e130a0ca343216 ^"Skin of the Sapphire Tortoise" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Terram"
+            ^"Requisite" STRING "Herbam"
+            ^"Level" INTEGER 35
+            ^"Uses" STRING "Unlimited uses"
+            ^"Range" STRING "Pers"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 5, +1 Diameter, +2 Room, +1 requisite; Modifications, +10 levels unlimited uses)"
+            ^"Printed Effect Line" STRING "MuTe(He) 35 Unlimited uses R: Pers, D: Diam, T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 119
+        }
+        DESCRIPTION "The walls, floor, or ceiling of the laboratory room become as hard as the hardest gemstone and as resilient as iron.\n\n(Effect: Base 5, +1 Diameter, +2 Room, +1 requisite; Modifications, +10 levels unlimited uses)"
+    }
+
+    #t8e7371022c8dc1c462b31e ^"Protection of the Mason’s Vision" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Requisite" STRING "Herbam"
+            ^"Level" INTEGER 28
+            ^"Uses" STRING "Unlimited uses"
+            ^"Range" STRING "Pers"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Special"
+            ^"Effect Design" STRING "(Effect: Base 3, +3 special based on room +1, +1 Herbam requisite; Modifications, +10 levels unlimited uses, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "ReTe(He) 28 Unlimited uses R: Pers, D: Mom, T: Special"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 119
+        }
+        DESCRIPTION "Any portion of the laboratory room’s structure that is removed or misplaced is moved back into position. Bricks are replaced, broken pieces of the ceiling return to their original positions, and so on. Note that if the room is destroyed this enchantment ceases to function. The room can not reassemble itself from a pile of rubble. The special target covers just the structure of the room, not its contents, and allows the magic to affect parts of the structure that fall outside of the room but remain within 5 paces.\n\n(Effect: Base 3, +3 special based on room +1, +1 Herbam requisite; Modifications, +10 levels unlimited uses, +3 levels environmental trigger)"
+    }
+
+    #t256944b31f7ec59e035552 ^"Invisible Eye Uncovered" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Requisite" STRING "Imaginem"
+            ^"Level" INTEGER 45
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Pers"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 16 per *The Invisible Eye Revealed, *ArM5** page 157, +2 Sun +2 Room, +1 requisite; Modifications, +1 level 2 activations per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InVi(Im) 45 Constant effect R: Pers, D: Sun, T: Room"
+            ^"Location" LIST [#t8ec11d93d3b167c41a5b1c ^"Laboratory (The Laboratory of Hermanus)"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 119
+        }
+        DESCRIPTION "Any magical means used to spy into this room is revealed as a flickering image within the room. For instance, if the room is looked upon with Enchantment of the Scrying Pool, the image of an eye that shimmers as if distorted by water might appear within the room. This enchantment detects Intellego spells of up to level 52.\n\n(Effect: Base 16 per *The Invisible Eye Revealed, *ArM5** page 157, +2 Sun +2 Room, +1 requisite; Modifications, +1 level 2 activations per day, +3 levels environmental trigger)"
+    }
+
+    #t9277b68cdd67cb026e92bd ^"Enchantment of Incorruptible Vellum" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Animal"
+            ^"Requisite" STRING "Herbam"
+            ^"Level" INTEGER 24
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Effect: Base 2 as CrCo, +1 Touch, +2 sun, +2 group, +1 requisite; Modifications, +1 level 2 uses per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "CrAn(He) 24 Constant effect R: Touch, D: Sun, T: Group"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 100
+        }
+        DESCRIPTION "The satchel and all of its animaland plant-derived contents are protected from experiencing any natural decay, including rot, mildew, and desiccation.\n\n(Effect: Base 2 as CrCo, +1 Touch, +2 sun, +2 group, +1 requisite; Modifications, +1 level 2 uses per day, +3 levels environmental trigger)"
+    }
+
+    #t7882951d20e6dd0a6a3e89 ^"Herald of Imperative" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 29
+            ^"Uses" STRING "50/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: Base 5, +1 Touch, +2 Room; Modifications +6 levels 50 uses per day, +3 levels linked trigger)"
+            ^"Printed Effect Line" STRING "ReVi 29 50/day R: Touch, D: Mom, T: Room"
+            ^"Location" LIST [#t39bfed3958c3619d4cbb37 ^"The Laboratory of Hermanus"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 106
+        }
+        DESCRIPTION "This effect simulates a single specific triggering action on all objects in the target room. Because this effect is designed to be triggered by a thoughtless enchanted device rather than a person, the specific triggering action must be selected at the time of enchantment. All of the justiciar-enchanted devices in Coeris use the same triggering action (described later).\n\n(Effect: Base 5, +1 Touch, +2 Room; Modifications +6 levels 50 uses per day, +3 levels linked trigger)"
+    }
+
+}

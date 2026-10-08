@@ -1,0 +1,110 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheFourAspectsOfConciatta_Templates" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Two: The Four Aspects of Conciatta templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1fc9e3e847713db6f98350 TEMPLATE "Hyena" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t03a9f380c44d10e900e7ea ^"The Caves"]
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 10
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -1
+            ^"Virtues and Flaws" STRING "Ferocity (against livestock), Improved Characteristics (×2), Long-Winded, Sharp Ears; Compulsion (killing), Infamous"
+            ^"Natural Qualities" STRING "Pack Animal, Thick Fur"
+            ^"Qualities and Inferiorities" STRING "Improved Powers (x2), Lesser Power"
+            ^"Reputations" LIST ["Bloodthirsty (Local) 4"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (21+)"
+            ^"Appearance" STRING "Powerful shoulders with a sloping back and shorter rear legs give the hyena a cowardly appearance. But on the hunt, the Narixa hyenas are far from cowardly. They relish the fear of their prey, as can be seen from their smile. Their eyes gleam yellow in the darkness."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 42
+        }
+        PERSONALITY_TRAITS {
+            "Brave When in a Pack" +3
+            "Cowardly When Alone" +3
+            "Hyena" +5
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 11 DEFENSE 9 DAMAGE 0
+        }
+        ABILITIES {
+            "Arabic" SCORE 5 SPECIALTY "taunts"
+            "Athletics" SCORE 5 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "smell"
+            "Brawl" SCORE 5 SPECIALTY "Bite"
+            "Hunt" SCORE 4 SPECIALTY "track by smell"
+            "Narixa Caves Lore" SCORE 3 SPECIALTY "regiones"
+            "Survival" SCORE 3 SPECIALTY "Narixa caves"
+        }
+        POWERS {
+            #t1cc61e64e0ad42422a3728 ^"Piercing the Infernal Veil" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Allows the Hyena to see through the boundaries between regio levels. The Improved Powers quality has been used to reduce the points cost to zero and to increase the initiative."
+            }
+        }
+        DESCRIPTION "The Narixa hyenas roam the cave system and are able to see through the regio levels. They leave the caves to hunt, being more like wolves in this respect than natural hyena. Their pack animal nature allows them to fight as a trained group; treat their Hyena personality trait as a score in Leadership."
+    }
+
+    #t6d09dcbc0bcb69f23b2ea4 TEMPLATE "Scorpion Swarm" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 1
+            ^"Virtues and Flaws" STRING "Lightning Reflexes; Infamous"
+            ^"Natural Qualities" STRING "Venomous"
+            ^"Reputations" LIST ["Deadly (Local) 4"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (21+)"
+            ^"Appearance" STRING "This great shifting sand of black chitinous noise swarms across the ground covering everything in its path."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 44
+        }
+        PERSONALITY_TRAITS {
+            "Scorpion" +5
+        }
+        COMBAT {
+            "Sting" INIT 8 ATTACK 9 DEFENSE 3 DAMAGE 3
+        }
+        ABILITIES {
+            "Area Lore: Narixa Caves" SCORE 4 SPECIALTY "regiones"
+            "Athletics (running)" SCORE 5
+            "Awareness" SCORE 2 SPECIALTY "prey"
+            "Brawl" SCORE 4 SPECIALTY "sting"
+            "Hunt" SCORE 4 SPECIALTY "rodents"
+            "Stealth" SCORE 4 SPECIALTY "stalking prey"
+            "Survival" SCORE 3 SPECIALTY "caves"
+        }
+        DESCRIPTION "The scorpion’s venomous quality (*House of Hermes: Mystery Cults*, page 43) is treated as the same level as an Asp’s bite (**ArM5**, page 180)."
+    }
+
+}

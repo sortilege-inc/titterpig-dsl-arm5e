@@ -1,0 +1,71 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheFlyingCastleOfThomae_ElementalBlizzard" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Elemental Blizzard"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # Elemental Blizzard (Chapter Six: The Flying Castle of Thomae, p129): one being, its printed stat lines verbatim fields.
+
+    #t0d319de3ce293b78e895d8 ^"Elemental Blizzard" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER -5
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 3
+            ^"Virtues and Flaws" STRING "Magic Thing; Ways of the Mountains; Poor Memory, Short Attention Span, Simple Minded"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Drown), Greater Power (Chill Touch), Greater Power (Charge of the Angry Winds), Major Virtue (Greater Immunity to Fire), Improved Abilities x 4, Improved Powers (Chill Touch cost –2, Charge of the Angry Winds cost –1, Init +2, Drown Init +5), Minor Virtues (Lightning Reflexes, Tough)"
+            ^"Soak" STRING "+11 Wound Penalties: –1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+) When injured elementals lose points from their Might pool equal to the Wound Penalty for their injury."
+            ^"Abilities" STRING "Area Lore 4 (local), Athletics 4 (flight), Awareness 4 (animals), Brawl 4 (suffocate), Hunt 2 (animals), Penetration 6 (Chill Touch power)."
+            ^"Vis" STRING "4 pawns of Auram, in body. Large pieces of the elemental broken off during combat contain a portion of this vis. The elemental always knows where such pieces are, and attempts to reunite them."
+            ^"Appearance" STRING "A grey and menacing fog that seems to contain human and animal shapes."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 129
+        }
+        PERSONALITY_TRAITS {
+            "Storm" +5
+        }
+        POWERS {
+            #td0cc0f5625b603fa2afe80 ^"Chill Touch (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Chill Touch"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The freezing touch of the snowstorm elemental inflicts +10 damage, which is Soaked without benefit from metal armor."
+            }
+            #t22c838b5e96d81279217a5 ^"Charge of the Angry Winds (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Charge of the Angry Winds"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+7"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "As the spell of the same name, add the elemental’s Strength to all Ease Factors for acting within the wind."
+            }
+            #t764eaf9ca410b8338fdb6c ^"Drown (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Drown"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The elemental envelops a victim and attempts to fill her lungs with ice, necessitating a Deprivation roll (see **ArM5** pages 180-181). Characters may break free of the elemental using the Grappling rules (see **ArM5** page 174)."
+            }
+        }
+        DESCRIPTION "This creature is designed as a water elemental using the rules found in *Realms of Power: Magic*.\n\nElementals are made of chunks of rarefied matter. They have no real personality or sense of personal identity, so the fury of this elemental is due to the fundamental nature of the violent weather it embodies. It attacks humans not because they are trespassing in its domain or because it hates humans; it attacks simply because it is filled with the tempestuous rage of a blizzard.\n\nThe elemental blizzard is designed as a foe for parties of characters traveling to the crash site. It may attack up to its Size in enemies each round. Its immunity to fire and ability to ignore many kinds of armor make it a formidable foe for groups with weak combat magic."
+    }
+
+}

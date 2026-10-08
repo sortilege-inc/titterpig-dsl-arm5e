@@ -1,0 +1,57 @@
+EXTENSION "ArM5_Legends_of_Hermes_FortunatasIslandOfBoundSpirits_FaxAFirebrandSpirit" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Fax, a Firebrand Spirit"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Fax, a Firebrand Spirit (Chapter Three: Fortunata’s Island of Bound Spirits, p66): one being, its printed stat lines verbatim fields.
+
+    #t25b66001a9b1b91ed0ddf9 ^"Fax, a Firebrand Spirit" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Ignem"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -10
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 8
+            }
+            ^"Size" INTEGER -5
+            ^"Virtues and Flaws" STRING "Magic Spirit; Tough; Proud (Minor)"
+            ^"Magical Qualities and Inferiorities" STRING "Focus Power (Crafter of Ignem), Greater Power (x2) (Arc of Fiery Ribbons, Continual Flame, Donning the Corporeal Veil, Hurl Flame), Improved Abilities, Improved Defense (x3), Improved Soak (x2), Personal Power (Flight of the Hummingbird); Miniature (x2)"
+            ^"Combat" STRING "Dodge: Init +8, Attach –, Defense +14, Damage – Fist of Flame: Init +8, Attack +3, Defense +8, Damage +5 (fire) Fax’s touch burns on contact, rather than hurting by impact."
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), -3 (2), -5 (3), Incapacitated (4)"
+            ^"Powers" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4) Arc of Fiery Ribbons, 1 point, Init +5, Ignem. R: Voice, D: Mom, T: Ind As the spell of the same name, Fax can throw out ribbons of fire doing +10 damage to all in a 60-degree arc as far as her voice carries. CrIg 25 (Base 5, +2 Voice, +2 Group) Greater Power (25 levels, -2 Might cost) Continual Flame, 1 point, Init +6, Ignem R: Touch, D: Moon, T: Ind Fax can touch anything and leave behind a flame (anywhere from candle-sized to torch sized) which will burn without fuel for a month. CrIg 15 (Base 3, +1 Touch, +3 Moon) Greater Power (15 levels, -1 Might cost) Crafter of Ignem, 1-3 points, Init +6, Ignem. Fax can duplicate any non-ritual Creo or Rego Ignem spell up to level 15, at a cost of 1 Might per spell magnitude. Focus Power (15 levels, +1 add 5 to max. level, +1 Init) Donning the Corporeal Veil, 2 points, Init +5, Ignem R: Touch, D: Sun, T: Ind Fax may produce and animate a body of elemental fire, which lasts until the duration expires or she dissolves it; if slain in material form she is killed, leaving behind 2 small rubies containing vis — but if injured she can dissolve her body to prevent death. Cr(Re)Ig 25 (Base 5, +1 Touch, +2 Sun, +1 requisite): Greater Power (25 levels, -1 Might cost) Flight of the Hummingbird, 0 points, Init +7, Ignem R: Per, D: Conc, T: Ind Fax can fly through the air in any direction simply by concentrating; if concentration is lost she stops but does not fall. ReIg 10 (Base 4, +2 Sun): Personal Power (10 levels, -1 Might cost). Hurl Flame, 0 points, Init +7, Ignem R: Voice, D: Mom, T: Ind Fax can hurl a torch-sized flame from her tiny hands, doing +5 damage where it strikes. CrIg 10 (Base 4, +2 Voice) Greater Power (10 levels, –1 Might cost)"
+            ^"Vis" STRING "2 Ignem, in her ruby eyes."
+            ^"Appearance" STRING "Fax appears as a tiny naked woman made of flame."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 66
+        }
+        PERSONALITY_TRAITS {
+            "Fiery" +3
+            "Proud" +3
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "run"
+            "Awareness" SCORE 3 SPECIALTY "alertness"
+            "Brawl" SCORE 4 SPECIALTY "fist"
+            "Concentration" SCORE 1 SPECIALTY "maintain powers"
+            "Finesse" SCORE 1 SPECIALTY "Ignem"
+            "Island Lore" SCORE 2 SPECIALTY "places"
+            "Latin" SCORE 3 SPECIALTY "fire"
+            "Magic Lore" SCORE 1 SPECIALTY "spirits"
+        }
+        DESCRIPTION "Fax is a spirit of the firebrand, bound by Fortunata to protect the island. She spends her days racing around the island, skipping from the tip of one bush to another, not stopping even to consume the wood; at night she sometimes settles for a while, flames as might a torch, then moves on again. Those wandering the interior of the island, or the villa itself, may find some of her *Continual Flame* torch-fires burning without fuel — she creates these whenever she gets bored, and they last long enough that there are many burning at any time.\n\nIf commanded by Lucida or such, or if she should remember her charge, then Fax uses her powers to harass and harm intruders. She is bound by a Spell Binding contained in a large ruby, hidden in Fortunata’s library."
+    }
+
+}

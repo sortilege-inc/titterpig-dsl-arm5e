@@ -1,0 +1,49 @@
+EXTENSION "ARMDef_Legends_of_Hermes_FortunatasIslandOfBoundSpirits_CantusASpiritOfSong" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Cantus, a Spirit of Song"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # Cantus, a Spirit of Song (Chapter Three: Fortunata’s Island of Bound Spirits, p67): one being, its printed stat lines verbatim fields.
+
+    #t34eea0973538e2c3a4d22f ^"Cantus, a Spirit of Song" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Imaginem"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 4
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Printed Size" STRING "—"
+            ^"Virtues and Flaws" STRING "Magic Spirit."
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Music of the Spheres)."
+            ^"Powers" STRING "Music of the Spheres, 0 points, Init +1, Imaginem R: Voice, D: Conc, T: Group Cantus can create music (or less complex sounds), from one to ten voices. It is fond of bell chimes, and plaintive melodies. CrIm 25 (Base 1, +2 Voice, +1 Conc, +2 Group, +2 move at command, +1 intricacy), Greater Power (25 levels, -3 Might, +2 Init)"
+            ^"Vis" STRING "1 Imaginem, in a chime which falls to the ground."
+            ^"Appearance" STRING "To those with Second Sight or similar abilities, Cantus appears as a set of chime bells or as some specific instrument it is sounding. It always sounds sweet and comely."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 67
+        }
+        PERSONALITY_TRAITS {
+            "Guileful" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 3 SPECIALTY "alertness"
+            "Finesse" SCORE 3 SPECIALTY "illusion"
+            "Music" SCORE 3 SPECIALTY "illusion"
+            "Island Lore" SCORE 2 SPECIALTY "inhabitants"
+            "Magic Lore" SCORE 2 SPECIALTY "spirits"
+        }
+        DESCRIPTION "Cantus is an example of one of the many Imagines that haunt the island. It wanders freely, not bound by Fortunata — it may be one of the native “sounds which fill the island” which Fortunata mentions in her writings."
+    }
+
+}

@@ -1,0 +1,84 @@
+EXTENSION "ArM5_Legends_of_Hermes_FortunatasIslandOfBoundSpirits_LapidosusASpiritOfStonyGround" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Lapidosus, a Spirit of Stony Ground"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Lapidosus, a Spirit of Stony Ground (Chapter Three: Fortunata’s Island of Bound Spirits, p69): one being, its printed stat lines verbatim fields.
+
+    #t67098d636202cd1080e22c ^"Lapidosus, a Spirit of Stony Ground" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Terram"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Magic Spirit."
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Sense the Feet That Tread The Earth), Greater Power (The Crystal Dart, The Earth’s Carbuncle, Hands of the Grasping Earth, Pit of the Gaping Earth), Great Strength, Great Stamina, Improved Powers (x2) (reduced Might cost)"
+            ^"Vis" STRING "2 Terram, in sharp flints."
+            ^"Appearance" STRING "Lapidosus is insubstantial, but appears as a very ugly, wrinkled, distorted man with a huge head and hands, and almost no body. His skin appears like old brown leather, but close up is like the earth itself."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 69
+        }
+        PERSONALITY_TRAITS {
+            "Stony" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 4 SPECIALTY "searching"
+            "Finesse" SCORE 4 SPECIALTY "Terram"
+            "Island Lore" SCORE 2 SPECIALTY "geography"
+            "Magic Lore" SCORE 1 SPECIALTY "spirits"
+        }
+        POWERS {
+            #t64283d1b856a6010df7e69 ^"The Crystal Dart (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Crystal Dart"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "As the spell of the same name, Mu(Re)Te 10. Greater Power (10 levels, –1 Might from Improved Powers, +1 Init from Improved Powers)"
+            }
+            #t373712a09769647c7dff9f ^"The Earth’s Carbuncle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "As the spell of the same name, Re(Mu)Te 15. Greater Power (15 levels, –2 Might from Improved Powers, +1 Init from Improved Powers)"
+            }
+            #tc5531c6bdc2f9c14b3dc77 ^"Hands of the Grasping Earth (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Hands of the Grasping Earth"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "As the spell of the same name, Re(Mu)Te 15. Greater Power (15 levels, –2 Might from Improved Powers, +1 Init from Improved Powers)"
+            }
+            #teaa0feb11931ef42d5c195 ^"Pit of the Gaping Earth (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Pit of the Gaping Earth"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "As the spell of the same name, reduced to R: Touch, PeTe 10. Greater Power (10 levels, –1 Might from Improved Powers, +1 Init from Improved Powers) *Sense the Feet That Tread the Earth*, 0 points, Init +0, Terram R: Touch, D: Mom, T: Part Merely by thinking about the question, Lapidosus can feel what is moving along the ground within a mile, which covers the whole of Fortunata’s island. He can tell the direction, distance, weight, number, and manner of movement of moving things. InTe 25 (Base 4, +1 Touch, +1 Part, +3 Size), Greater Power (25 levels, -3 Might cost, +2 Init)"
+            }
+        }
+        DESCRIPTION "Lapidosus is a spirit of stony ground, bound by Fortunata to guard the island against intruders. Any who walk unwarily over open ground (not solid rock) may be noticed and attacked. As an insubstantial spirit it can move freely through solid matter — but by choice Lapidosus always remains in soil, especially stony soil.\n\nHe is bound by a Spell Binding contained in a leaden plumb-weight hidden in Fortunata’s library.\n\nTime on the island has been so quiet, with so few intruders, that Lapidosus has become slack in his searches, so intruders may be able to move around for some while before he recalls the task he has been set."
+    }
+
+}

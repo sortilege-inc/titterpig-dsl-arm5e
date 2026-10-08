@@ -1,0 +1,100 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheFourAspectsOfConciatta_Spells" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Two: The Four Aspects of Conciatta spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1749512c1bee7b4bb463a7 ^"To See What Binds this Magical Place" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5, +1 Diameter, +4 Vision)"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Vision"
+            ^"Printed Stat Line" STRING "InVi 30 R: Personal, D: Diameter, T: Vision"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 17
+        }
+        DESCRIPTION "On casting this spell within a Magic aura, the maga sees a light emanating from any natural or supernatural tether currently feeding and binding the aura. The light is brighter the stronger the tether is, allowing the maga to estimate the relative importance of that tether to the aura.\n\n(Base 5, +1 Diameter, +4 Vision)"
+    }
+
+    #tea8255a996245b61a494d5 ^"This Heart of Darkness" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5, +1 Touch, +2 Room)"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Room"
+            ^"Printed Stat Line" STRING "InVi 20 R: Touch, D: Momentary, T: Room"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 17
+        }
+        DESCRIPTION "Cast within an Infernal aura, this spell reveals whether actions taken within this room were responsible for drawing in the Infernal. This could be through a personal evil or sin, or an Infernal ritual. Any event that induces a corruption roll (*Realms of Power: The Infernal*, page 11) taints the location and is equivalent to a tether. This spell cannot provide information about the evil that took place, nor even how long ago it was committed.\n\n(Base 5, +1 Touch, +2 Room)"
+    }
+
+    #t46cd64559e9cbb58e71623 ^"Dominance Over the Infernal" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base, +1 Touch, +4 Year, +4 Boundary)"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReVi General R: Touch, D: Year, T: Boundary, Ritual"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 18
+        }
+        DESCRIPTION "Causes the apparent Infernal aura of strength equal to (ritual magnitude – 9) to abate. The Infernal aura, though still present, is held at bay and its effects are not felt. Other auras present that may have been suppressed are now expressed.\n\n(Base, +1 Touch, +4 Year, +4 Boundary)"
+    }
+
+    #tc659c8e0f5844130e948e9 ^"Subsume the Apparent Dominion" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 15, +1 Touch, +4 Year, +2 Room)"
+            ^"Location" LIST [#taab60f4b7e2ad80249defb ^"La Torre No Vista"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 50
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Room"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReVi 50 R: Touch, D: Year, T: Room, Ritual"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 26
+        }
+        DESCRIPTION "This spell allows a subsumed aura to manifest by temporarily suppressing an apparent Dominion aura of strength less than or equal to three. It has a Room Target and so produces a localized effect, ideal for mimicking a weak lacuna. If there are any other auras present, the strongest of these manifests.\n\nCasting this ritual creates a preternatural tether of level one and provides a +1 yearly aura modifier, both as described in *Realms of Power: Magic*, page 10.\n\nThis laboratory text is for a level 50 ritual but the effect is general. By re-creating the spell from this laboratory text, the maga accumulates 10 points towards researching Confluence of the Realms (see earlier). To do this, Conciatta’s own code must first be broken (**ArM5**, page 102), which requires at least a season working with the text to decode it. The only available casting tablet for this spell is the one written into the cellar fresco.\n\n(Base 15, +1 Touch, +4 Year, +2 Room)"
+    }
+
+    #t56e3f7539a29c3b63e6b10 ^"Ward Against Woodland Spirits" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 10, +4 Vi representing each of the Realms; +11 for penetration)"
+            ^"Location" LIST [#taab60f4b7e2ad80249defb ^"La Torre No Vista"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 41
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Requisite" STRING "Vim"
+            ^"Printed Stat Line" STRING "ReHe(Vi) 41 R: Touch, D: Ring, T: Circle"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 27
+        }
+        DESCRIPTION "This experimental spell is a ward against all creatures with a Herbambased Might Score, irrespective of their supernatural realm, of 10 or less. The casting tablet has a penetration score built in, but magi recreating this spell do so without this and at a level of 30.\n\nRecreating this spell provides 9 points towards integrating *True Understanding of the Realms*.\n\n(Base 10, +4 Vi representing each of the Realms; +11 for penetration)"
+    }
+
+}

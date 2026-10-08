@@ -1,0 +1,52 @@
+EXTENSION "ARMDef_Legends_of_Hermes_FortunatasIslandOfBoundSpirits_ErrorASpiritOfRecollection" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Error, a Spirit of Recollection"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # Error, a Spirit of Recollection (Chapter Three: Fortunata’s Island of Bound Spirits, p68): one being, its printed stat lines verbatim fields.
+
+    #ta2a7cb407d188bd8d4458a ^"Error, a Spirit of Recollection" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Imaginem"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Magic Spirit, Second Sight; Meddler"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Image of the Beloved), Focus Power (Warper of Imaginem); Slow Power (Image of the Beloved)."
+            ^"Powers" STRING "Warper of Imaginem, 1 point, Init +1. Error can duplicate any Muto or Rego Imaginem spell up to level 5 at a cost of 1 Might. (Focus Power). Image of the Beloved, 1 points, Init -2, Imaginem R: Voice, D: Conc, T: Group Error can create a believable figure or figures, which interact with a victim and their associates. The spirit attempts to second-guess (using magic) what the figures should say or do, and may easily be caught out. (Compare its roll of Perception + Finesse against a victim’s roll — usually Perception + Awareness, but other Abilities may apply, considering familiarity with the image portrayed.) Error’s power must penetrate for it to pluck something familiar from a victim. This is a slow power, as Error must concentrate for a round to grasp what would best deceive the victim. Cr(In)Im(Me) 35 (Base 2, +2 Voice, +1 Conc, +2 Group, +2 move at command, +1 intricacy, +1 Intellego requisite; Mentem requisite adds no further ability and so is free), Greater Power (35 levels, -3 Might cost)"
+            ^"Vis" STRING "1 Imaginem, in a shard of glass."
+            ^"Appearance" STRING "Error has no fixed appearance, just that which it creates — Second Sight shows it as whatever figures it currently portrays."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 68
+        }
+        PERSONALITY_TRAITS {
+            "Meddler" +3
+            "Guileful" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "alertness"
+            "Finesse" SCORE 3 SPECIALTY "illusion"
+            "Folk Ken" SCORE 1 SPECIALTY "common folk"
+            "Guile" SCORE 3 SPECIALTY "illusion"
+            "Island Lore" SCORE 1 SPECIALTY "inhabitants"
+            "Magic Lore" SCORE 1 SPECIALTY "spirits"
+            "Second Sight" SCORE 3 SPECIALTY "illusion"
+        }
+        DESCRIPTION "Error (or “Delusion”) is another of the Imagines. It wanders freely, not bound to specific service; it creates (recalls) figures which talk and jest among themselves. Error *is* these images (or their spirit); it must conjures its own imaginings most of the time, but cares not whether there is any audience. The memories of others make an interesting change, so it will gleefully pursue and confuse any visitors it encounters.\n\nIf anyone comes across Error playing out some scene for itself, it will try to draw them into the scene, adjusting the scene to pull them in further. If Error detects suitable victims when not already engrossed in its own story, it will create figures from the memories of the new victims — these may be very plausible, such as fellow travelers cast onto the island, and so especially confusing to encounter."
+    }
+
+}

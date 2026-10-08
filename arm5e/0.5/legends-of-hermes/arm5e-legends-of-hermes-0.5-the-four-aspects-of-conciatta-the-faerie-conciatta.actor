@@ -1,0 +1,58 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheFourAspectsOfConciatta_TheFaerieConciatta" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - The Faerie Conciatta"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # The Faerie Conciatta (Chapter Two: The Four Aspects of Conciatta, p39): one being, its printed stat lines verbatim fields.
+
+    #t1337ce9cc8fc65f1a60343 ^"The Faerie Conciatta" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#ta7577edad62c09782b18cd ^"Tartessos"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "Appears in her late thirties"
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Humanoid Faerie; Ritual Power (x2); Sovereign Ward (cannot leave Tartessos); Incognizant"
+            ^"Qualities and Inferiorities" STRING "Focus Power (x3), Greater Power"
+            ^"Reputations" LIST ["Bonisagus House Acclaim (Magi Bonisagi) 3"]
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Animal Handling 2 (owls), Arabic 4 (poetry), Area Lore: Qadis 2 (ghostly personalities), Area Lore: Zaragoza 3 (lacunae), Area Lore: Narixa 2 (regiones), Area Lore: Toledo 2 (the convent), Artes Liberales 3 (ceremonial magic), Awareness 2 (spell effects), Aragonese 4 (poetry), Charm 2 (first impressions), Code of Hermes 1 (Bonisagus obligations), Concentration 3 (lab work), Dominion Lore 5 (divine places), Etiquette 2 (faeries), Faerie Lore 5 (ancient faeries), Finesse 2 (precision), Folk Ken 2 (magi), Infernal Lore 5+2 (regiones), Intrigue 1 (House Bonisagus), Latin 5 (Hermetic usage), Leadership 1 (laboratory work), La Torre no Vista Lore 3 (history), Magic Lore 5 (regiones), Magic Theory 15+2 (Vim), Order of Hermes Lore 2 (history), Parma Magica 2 (Vim), Penetration 2 (Vim), Philosophiae 3 (ceremonial magic), Teaching 3 (Magic Theory)"
+            ^"Appearance" STRING "Regally dressed in a tunic and a cloak that drapes down from her left shoulder."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 39
+        }
+        PERSONALITY_TRAITS {
+            "Protective of Arganthonios" +3
+            "Regretful" +2
+            "Sorrowful" +2
+        }
+        POWERS {
+            #t4ec17178e08c7245fc0244 ^"Grant (Insight of the Realms)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING ": 5 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power temporarily blesses the target with the *Insight of the Realms* Virtue. Conciatta only recovers Might Points spent on this power when its effects are withdrawn, which she may do at any time simply by choosing to. Until the Might Points are returned to Conciatta, she effectively does not exist and is only able to interact with the world through withdrawing her gift from its bearer. Special, No Hermetic equivalent (R: Touch, D: Mom, T: Ind, Ritual)"
+            }
+        }
+        DESCRIPTION "This faerie believes herself to be Conciatta and believes that she has deep knowledge of Hermetic Theory, hence the *Abilities* that Conciatta’s other spirits have are instead *Pretenses* for this faerie. But she also believes that she has sworn away her magic and she cannot now be made to use her former powers. She cannot accept the truth of her condition as she does not possess the cognizance to break this part of her role.\n\nHer Sovereign Ward against leaving Tartessos is imposed by Arganthonios. It is lifted when his bargain is accepted and fulfilled."
+    }
+
+}

@@ -1,0 +1,163 @@
+EXTENSION "ARMDef_Legends_of_Hermes_FortunatasIslandOfBoundSpirits_Spells" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Three: Fortunata’s Island of Bound Spirits spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t34ef7797ef17f5d006f98f ^"Coerce a Spirit of Auram" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5 +1 Touch, +1 Diam)"
+            ^"Location" LIST [#t6c1f57f21248799024ac6f ^"Fortunata’s Island"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReAu 15, R: Touch, D: Diam, T: Ind"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "For example, Fortunata bound Tempestas, spirit of the storm, with a *Coerce a Spirit of Auram* spell (ReAu 15, R: Touch, D: Diam, T: Ind (Base 5 +1 Touch, +1 Diam)), sustained by a *Sustain A Spell of Auram* (ReVi(Au) 20 R: Touch, D: Special, T: Ind, Ritual (Base effect (target spell level)) and a Might 20 Auram spirit.\n\n(Base 5 +1 Touch, +1 Diam)"
+    }
+
+    #tdab51b3dd7d54c430ab778 ^"Sustain A Spell of Auram" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base effect (target spell level))"
+            ^"Location" LIST [#t6c1f57f21248799024ac6f ^"Fortunata’s Island"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Special"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Auram"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReVi(Au) 20 R: Touch, D: Special, T: Ind, Ritual"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 59
+        }
+        DESCRIPTION "For example, Fortunata bound Tempestas, spirit of the storm, with a *Coerce a Spirit of Auram* spell (ReAu 15, R: Touch, D: Diam, T: Ind (Base 5 +1 Touch, +1 Diam)), sustained by a *Sustain A Spell of Auram* (ReVi(Au) 20 R: Touch, D: Special, T: Ind, Ritual (Base effect (target spell level)) and a Might 20 Auram spirit.\n\n(Base effect (target spell level))"
+    }
+
+    #teda3b986e84cd98f13d44a ^"Coerce the Spirit of (Form)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5, +2 Voice, +1 Diam)"
+            ^"Location" LIST [#tc482b9586e031a01166bd0 ^"Fortunata’s Laboratory and Library"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "(Form)" FIAT "the spell takes the Form of the spirit or spell it targets; the book prints the Form as a placeholder, 'Re(Form)' (p65)"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "Re(Form) 20, R: Voice, D: Diam, T: Ind."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "Make a disembodied spirit of (Form) obey the caster so long as she can coerce it with threats. The library has Lab Texts to Coerce the Spirit of Earth (Te), Fire (Ig), Illusion (Im), and to Coerce Ghosts (Me).\n\n(Base 5, +2 Voice, +1 Diam)"
+    }
+
+    #t4622155e0bc3d63c877fad ^"Incantation of Summoning the Dead (Legends of Hermes)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Printed Name" STRING "Incantation of Summoning the Dead"
+            ^"Spell Design" STRING "(Base 15, +4 Arcane, +1 Conc)"
+            ^"Location" LIST [#tc482b9586e031a01166bd0 ^"Fortunata’s Laboratory and Library"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Arcane"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReMe 40, R: Arcane, D: Conc, T: Ind, Ritual."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "Calls up a person’s ghost, You must be on the spot where they died or have the corpse. You can summon any ghost which is actively haunting the area you are in, if you know its full name — but a non-Ritual summoning spell can also summon such a spirit.\n\n(Base 15, +4 Arcane, +1 Conc)"
+    }
+
+    #td49fcabf6bfb832e35f821 ^"Summon the Spirit of (Form)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 15, +4 Arcane, +1 Conc)"
+            ^"Location" LIST [#tc482b9586e031a01166bd0 ^"Fortunata’s Laboratory and Library"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "(Form)" FIAT "the spell takes the Form of the spirit or spell it targets; the book prints the Form as a placeholder, 'Re(Form)' (p65)"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Arcane"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "Re(Form) 40, R: Arcane, D: Conc, T: Ind."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "Calls a disembodied (Form) spirit if the magus has an Arcane Connection or knows the non-magical name of the spirit. Elemental material of the type associated with the spirit serves as an Arcane Connection to any (Form) spirit which resides in the area. The library has Lab Texts to Summon the Spirit Of Earth (Te), Fire (Ig), Illusion (Im), and to Summon the Spirit of Man (Me). Summon the Spirit of Man is a lesser, nonritual version of Incantation of Summoning the Dead (ArM5, p.152), which can only affect a ghost which is actively haunting something, so many dead spirits remain unaffected by this call. It can affect any ghost that the caster has previously summoned by magic.\n\n(Base 15, +4 Arcane, +1 Conc)"
+    }
+
+    #t7ab211d4b77e5f91678e65 ^"Thoughts Within Babble (Legends of Hermes)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Printed Name" STRING "Thoughts Within Babble"
+            ^"Spell Design" STRING "(Base 5, +2 Sun, +3 Hearing)"
+            ^"Location" LIST [#tc482b9586e031a01166bd0 ^"Fortunata’s Laboratory and Library"]
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Hearing"
+            ^"Printed Stat Line" STRING "InMe 30, R: Per, D: Sun, T: Hearing."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "The magus understands the speech of those he can hear. Fortunata’s version is extended to Sun Duration, so she need not concentrate on the spell while studying from texts read out loud to her.\n\n(Base 5, +2 Sun, +3 Hearing)"
+    }
+
+    #t8a497901b17b9536b38d81 ^"Sustain a Spell of (Form) (Fortunata’s Lab Text)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Printed Name" STRING "Sustain a Spell of (Form)"
+            ^"Mystery" STRING "Mystery (Spell Binding)"
+            ^"Spell Design" STRING "(Base effect)"
+            ^"Location" LIST [#tc482b9586e031a01166bd0 ^"Fortunata’s Laboratory and Library"]
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "(Form)"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReVi(Form) Gen, R: Touch, D: Mom, T: Ind, Ritual, Mystery (Spell Binding)."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 65
+        }
+        DESCRIPTION "Cast on a container, the ritual spell binds to another spell (of the requisite Form) cast in the next round, allowing a (Form) spirit to be forced into the container where it must sustain the second spell indefinitely. The library has Lab Texts to sustain spells for Terram, Ignem, Imaginem and Mentem, at levels 20, 30, and 40. (See this chapter, Initiation of Spell Binding)\n\n(Base effect)"
+    }
+
+    #tee8c30e4ea0e499d46669b ^"Sustain a Spell of (Form)" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Guideline level)"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Special"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReVi Gen R: Touch, D: Special, T: Ind, Ritual Req: Form or Forms of the spell to be sustained."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 53
+        }
+        DESCRIPTION "Allows another spell to be entwined with this spell and bound to a physical container. The base level of this spell must equal or exceed the level of the spell to be sustained. Casting of the sustained spell must begin while this spell lasts, or the next round for Momentary duration, after which the two spells are entwined and only end after both durations expire. If a spirit of Might at least equal to the sustained spell is forced into a container while the spell is still active, then the spell is sustained indefinitely while the spirit is bound.\n\n(Guideline level)"
+    }
+
+}

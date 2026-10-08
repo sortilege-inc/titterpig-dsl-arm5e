@@ -1,0 +1,76 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheMagicalGardenOfHerisson_MalusACrabApple" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Malus, a Crab Apple"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Malus, a Crab Apple (Chapter Four: The Magical Garden of Hérisson, p86): one being, its printed stat lines verbatim fields.
+
+    #t8f3f5fe7d18cc8ea8538c6 ^"Malus, a Crab Apple" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t88f662629bf343de9473c4 ^"Hérisson’s Garden"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 7
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 3
+            ^"Season" STRING "Spring"
+            ^"Virtues and Flaws" STRING "Magic Thing; Magical Champion; Greater Immunity to Edged Weapons; Improved Characteristics, Tough, Voice of the Garden; Overconfident; Anchored to the Garden, Baneful Circumstances (fire), Clumsy, Weak-Willed Magic"
+            ^"Qualities and Inferiorities" STRING "Greater Power (Creeping Chasm), Greater Power (Rally the Wooden Troops); Improved Damage, Improved Soak x 3"
+            ^"Soak" INTEGER 12
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Vis" STRING "2 pawns of Herbam, in apples"
+            ^"Appearance" STRING "A small tree about 12’ tall, but very gnarled and spiny, with dark green foliage and almost black bark. Its bright red apples are slightly elongated."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 86
+        }
+        PERSONALITY_TRAITS {
+            "Reckless" +6
+            "Crab Apple" +3
+            "Paranoid" +3
+            "Brave" -1
+        }
+        COMBAT {
+            "Branch" INIT 9 ATTACK 9 DEFENSE 6 DAMAGE 12
+        }
+        ABILITIES {
+            "Brawl" SCORE 4 SPECIALTY "branch"
+            "Intrigue" SCORE 1 SPECIALTY "woodland politics"
+            "Leadership" SCORE 2 SPECIALTY "trees"
+            "Mastery of Rally the Wooden Troops" SCORE 4 SPECIALTY "fruit trees"
+        }
+        POWERS {
+            #t14039222b6e112fa2d57c6 ^"Rally the Wooden Troops" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Animates trees and plants in the immediate vicinity allowing them to walk. In the peculiar aura of Hérisson’s garden, they are also granted a Cunning score of 0. Up to 10 Groups of Herbam can be affected, which is equal to 10,000 herbs (Size –6), 100 bushes (Size 0), 10 small trees (Size +3), or one 25’ tall tree (Size +6). This power can be triggered multiple times in a single round, equal to the plant’s Mastery Ability. The Might cost must be paid each time. Malus can only affect the Curtilagium plants with this power. ReHe 35 (Base 5, +1 Touch, +2 Sun, +2 Group, +1 Size): Greater Power (35 levels, –2 Might cost, Multicast mastery power)"
+            }
+            #tdbf8f7c99a0895a9e6d828 ^"Creeping Chasm (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Creeping Chasm"
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "By thrusting its roots deep into the earth, Crab Apple can duplicate the effects of the spell of the same name. ReTe 35: Greater Power (35 levels, +3 Init)"
+            }
+        }
+        DESCRIPTION "The Crab Apple is the leader of the Curtilagium because of its extreme self-confidence in its immunity to axes and other edged weapons. However, it has a secret in that its powers fail it in the presence of fire, and it always avoids any sources of flame."
+    }
+
+}

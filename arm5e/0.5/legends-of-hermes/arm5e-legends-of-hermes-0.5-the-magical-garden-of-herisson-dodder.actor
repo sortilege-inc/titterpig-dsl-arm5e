@@ -1,0 +1,74 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheMagicalGardenOfHerisson_Dodder" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Dodder"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Dodder (Chapter Four: The Magical Garden of Hérisson, p90): one being, its printed stat lines verbatim fields.
+
+    #t684324c2de4ddc6b5f1f20 ^"Dodder" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t88f662629bf343de9473c4 ^"Hérisson’s Garden"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 25
+            ^"Form" STRING "Herbam"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 7
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Thing, Magical Monster; Great Strength x2, Great Stamina, Tough; Infamous, Poor Hearing"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Strangle the Life), Greater Power (Wear Corpse), Improved Strength x2; Improved Might x5, Improved Soak x2, Lesser Power (Sprout Limbs), Minor Virtue (Improved Characteristics) x2, Minor Virtue (Puissant Brawl); Monstrous Appearance"
+            ^"Reputations" LIST ["Assassin 4 (Local)"]
+            ^"Combat" STRING "Grapple: Init +2, Attack +13, Defense +13, Damage +7 By using its Sprout Limbs power, Dodder can act as a trained group and receive a bonus to either Attack or Defense of +12"
+            ^"Soak" INTEGER 13
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "5 pawns of Perdo, in tendrils"
+            ^"Appearance" STRING "In its natural state, a tangle of yellow and red tendrils lying in the grass and twined around plants. It has occasional clusters of pale pink, bell-like flowers. However, it can form into a horrid mass of writhing tendrils somewhat man-shaped, and weave many-fingered limbs from its body."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 90
+        }
+        PERSONALITY_TRAITS {
+            "Murderous" +4
+            "Brave" +3
+            "Dodder" +3
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "chase"
+            "Brawl" SCORE 8 BONUS 2 SPECIALTY "grapple"
+            "Leadership" SCORE 3 SPECIALTY "own limbs"
+            "Stealth" SCORE 5 SPECIALTY "undergrowth"
+        }
+        POWERS {
+            #t5064a3f3c1aebfad293d3c ^"Sprout Limbs" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "Dodder can weave up to eight limbs from the mass of tendrils which make up its body. It can therefore continue to attack and defend even when faced by multiple opponents, and should be treated as a trained group of four. Every two limbs used to strangle reduces the size of the group by one. Cr(Re)He 10 (Base 1, +2 Sun, +2 Group, +1 requisite): Lesser Power (10 levels, –2 Might cost, +1 Init) *Strangle the Life*, 0 points, Init +2, Cor- pus: The wiry fingers of Dodder wrap around the throat of its victim and begin to drain its life. Every round the victim must make a Deprivation roll, and the Ease Factor is equal to the result of a Strength roll made by Dodder. Dodder can strangle up to eight people simultaneously, one with each limb. Victims can struggle to escape, by beating Dodder’s Grapple Attack with their own Grapple Attack. PeCo 30 (Base 10, +1 Touch, +1 Conc, +2 Group): Greater Power (30 levels, –2 Might Cost, +2 Init)"
+            }
+            #t921a5579b84a12d4bff4f3 ^"Wear Corpse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Dodder can insinuate itself into a human corpse of Size –1 to Size +1 and animate it. This power also preserves the corpse from decay. It can use its other powers while within this skin, but cannot heal any damage inflicted on the corpse. It cannot maintain a convincing pretense at being human for very long. Re(Cr)Co 35 (Base 10, +1 Touch, +2 Sun, +1 constant, +1 requisite): Greater Power (35 levels, –3 Might Cost)"
+            }
+        }
+        DESCRIPTION "Dodder is a parasitic plant that grows over and strangles other plants, and this magical Dodder attacks more than just other plants. It often lies in wait for its victims, which it engulfs with its swiftly-moving strands and then sucks the life out of them. Dodder is incapable of speech, and does not respond to any form of communication, yet its tactics when hunting suggests that it has a baleful intellect driving it."
+    }
+
+}

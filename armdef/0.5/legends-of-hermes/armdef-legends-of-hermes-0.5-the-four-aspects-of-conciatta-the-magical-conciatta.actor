@@ -1,0 +1,109 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheFourAspectsOfConciatta_TheMagicalConciatta" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - The Magical Conciatta"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # The Magical Conciatta (Chapter Two: The Four Aspects of Conciatta, p26): one being, its printed stat lines verbatim fields.
+
+    #tf76f8f6feddaa22ab882c3 ^"The Magical Conciatta" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t90e23db6d63b395139b211 ^"Conciatta’s Sanctum"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "Appears in her late thirties"
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Hermetic Magus; Major Magical Focus (Auras), True Understanding of the Realms; Affinity with Magic Theory, Confluence of the Realms, Famous, Great Intelligence, Insight of the Realms, Inventive Genius, Puissant Magic Theory, Student of Infernal, Well-Traveled; Blatant Gift, The Constant Expression, Driven (Extend Hermetic Theory); Deleterious Circumstances (when not within a supernatural aura), Judged Unfairly, Study Requirement"
+            ^"Qualities and Inferiorities" STRING "Focus Power (x3), Greater Power"
+            ^"Personality Trait" STRING "Driven +3, Introverted +2, Scholar +3 (Essential Trait)"
+            ^"Reputations" LIST ["Bonisagus House Acclaim (Magi Bonisagi) 3"]
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Appearance" STRING "Conciatta is two steps away from being presentable. Her long hair is tied up but struggling to be free. Her fingers are ink stained, as is her once-valuable gown."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 26
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 2 SPECIALTY "owls"
+            "Arabic" SCORE 4 SPECIALTY "poetry"
+            "Area Lore: Qadis" SCORE 2 SPECIALTY "ghostly personalities"
+            "Area Lore: Zaragoza" SCORE 3 SPECIALTY "lacunae"
+            "Area Lore: Narixa" SCORE 2 SPECIALTY "regiones"
+            "Area Lore: Toledo" SCORE 2 SPECIALTY "the convent"
+            "Artes Liberales" SCORE 3 SPECIALTY "ceremonial magic"
+            "Awareness" SCORE 2 SPECIALTY "spell effects"
+            "Aragonese" SCORE 4 SPECIALTY "poetry"
+            "Charm" SCORE 2 SPECIALTY "first impressions"
+            "Code of Hermes" SCORE 1 SPECIALTY "Bonisagus obligations"
+            "Concentration" SCORE 3 SPECIALTY "lab work"
+            "Dominion Lore" SCORE 5 SPECIALTY "divine places"
+            "Etiquette" SCORE 2 SPECIALTY "faeries"
+            "Faerie Lore" SCORE 5 SPECIALTY "ancient faeries"
+            "Finesse" SCORE 2 SPECIALTY "precision"
+            "Folk Ken" SCORE 2 SPECIALTY "magi"
+            "Infernal Lore" SCORE 5 BONUS 2 SPECIALTY "regiones"
+            "Intrigue" SCORE 1 SPECIALTY "House Bonisagus"
+            "Latin" SCORE 5 SPECIALTY "Hermetic usage"
+            "Leadership" SCORE 1 SPECIALTY "laboratory work"
+            "La Torre no Vista Lore" SCORE 3 SPECIALTY "history"
+            "Magic Lore" SCORE 5 SPECIALTY "regiones"
+            "Magic Theory" SCORE 15 BONUS 2 SPECIALTY "Vim"
+            "Order of Hermes Lore" SCORE 2 SPECIALTY "history"
+            "Parma Magica" SCORE 2 SPECIALTY "Vim"
+            "Penetration" SCORE 2 SPECIALTY "Vim"
+            "Philosophiae" SCORE 3 SPECIALTY "ceremonial magic"
+            "Teaching" SCORE 3 SPECIALTY "Magic Theory"
+        }
+        POWERS {
+            #t1fabc18d75942de536a1b9 ^"Crafter of Vim" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "0 minus Might points spent"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Conciatta can spontaneously produce the effect of a Creo or Rego Vim spell of level 25 or less at a cost of 1 Might point per magnitude. (Focus Power)"
+            }
+            #ta4d9024fed016d6226a8c7 ^"Eidolon (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Eidolon"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Creates an illusionary form that can be both seen and heard. The body can be created and destroyed at will, though Conciatta always maintains this form. As the power in *Realms of Power: Magic*, page 102. (Focus Power)"
+            }
+            #t5d958241fe2333fc3f528a ^"Ghost Touch (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Ghost Touch"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "0 – Might points spent"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Moves objects that are neither held by another or fastened down. For 1 Might point, up to 5 pounds can be moved, and every additional Might point doubles the weight. This power is in constant use and is largely outside Conciatta’s control. Use of it often leaves her Might Pool drained. As the power in *Realms of Power: Magic*, page 102. (Greater Power)"
+            }
+            #tcea2beea4f0259702ac6b5 ^"Master of Vim" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "0 minus might points spent"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Conciatta can change or destroy weak sources of magic that she is able to perceive, spontaneously producing the effect of a Muto or Perdo Vim spell of level 25 or less at a cost of 1 Might point per magnitude. (Focus Power)"
+            }
+        }
+    }
+
+}

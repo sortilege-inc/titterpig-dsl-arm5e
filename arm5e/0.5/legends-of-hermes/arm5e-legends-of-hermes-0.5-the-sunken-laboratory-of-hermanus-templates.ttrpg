@@ -1,0 +1,178 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheSunkenLaboratoryOfHermanus_Templates" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Five: The Sunken Laboratory of Hermanus templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf7f5f582fd4d6857cbc605 TEMPLATE "Typical Ghost of an Ancient Sailor" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "Appears to be between 16 and 35 years old."
+            ^"Decrepitude" STRING "n/a"
+            ^"Confidence" STRING "0"
+            ^"Virtues and Flaws" STRING "Veteran, Delusion"
+            ^"Reputations" LIST ["None"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Leather scale armor, short sword, javelins, and other accoutrements of a sailor."
+            ^"Encumbrance" STRING "4 (2)"
+            ^"Vis" STRING "The spirit contains no vis in and of itself. However when it is destroyed — actually destroyed, as opposed to the phantasmal death the spirit experiences quite often — a single pawn of Mentem vis appears in the wreck of the spirit’s former ship. When this happens the ship alters itself to more closely resemble the condition it was in before it was sunk. The wood becomes less rotted, barnacles fall of the ship, and the structure becomes more solid."
+            ^"Appearance" STRING "The ghostly sailor appears as a pale, slightly transparent man dressed in 4th-century-BC armor. The sailor is consumed by desperation and fear as he struggles against his nearly identical opponents."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 102
+        }
+        PERSONALITY_TRAITS {
+            "Obsessed with the Battle" +3
+        }
+        COMBAT {
+            "Sword" INIT 0 ATTACK 7 DEFENSE 5 DAMAGE 6
+            " Javelin" INIT -1 ATTACK 4 DEFENSE 5 DAMAGE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "climbing"
+            "Carouse" SCORE 2 SPECIALTY "drinking songs"
+            "Dead Language (ancient Greek or Egyptian)" SCORE 5 SPECIALTY "nautical terms"
+            "Leadership" SCORE 3 SPECIALTY "sailors"
+            "Profession Fisherman" SCORE 4 SPECIALTY "net repair"
+            "Profession Sailor" SCORE 3 SPECIALTY "warships"
+            "Single Weapon" SCORE 3 SPECIALTY "short sword"
+            "Thrown Weapon" SCORE 3 SPECIALTY "javelin"
+        }
+        POWERS {
+            #t78473b6abc51b53c05f699 ^"Eidolon (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Eidolon"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "The spirit creates an illusory image of its former self. This image moves and speaks as directed by the spirit. The spirit does not have the awareness to refrain from creating this form. Rather the form is created anew every morning and exists until the spirit meets a temporary demise in battle with the other ghosts or until it is recreated the following morning. (See *Realms of Power: Magic* page 102 for more information.)"
+            }
+            #t2667abf34c6bcb71e79843 ^"Ghost Touch (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Ghost Touch"
+                    ^"Cost" STRING "variable cost"
+                    ^"Initiative" STRING "–1 minus Might points spent"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "This power moves objects that are not held by another person or fastened down. For 1 Might point a maximum of five pounds can be moved. Every additional Might point doubles this weight limit. If the item is hurled with force, the sailor uses his Thrown Weapon Ability and inflicts +5 damage per Might point spent. The spirit can enter combat with an object when using this power and uses its characteristics to calculate combat totals as normal. The sailor does typically not use this power to attack, instead it uses the Strike power and it employs Ghost Touch only to manipulate objects. (See *Realms of Power: Magi*c page 102 for more information.)"
+            }
+            #t61266df3cfa46e2c3f8355 ^"Strike" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "For one diameter the spirit makes attacks using its sword as if the sword were a material object. This attack is magical and must penetrate Magic Resistance. (Lesser Power, no direct Hermetic equivalent, but treated as level 15, 2 Mastery Points used to reduce cost)"
+            }
+        }
+        DESCRIPTION "This creature is a spirit, and both the spirit and its equipment are insubstantial. While combat statistics for the sailor have been computed, these numbers only apply if the ghost is made corporeal or when the ghost uses its strike power. In combat the ghosts can form trained groups of 4 individuals. These groups have a group bonus of +12."
+    }
+
+    #t2b7c459637eb254dc1a7be TEMPLATE "A Large Fish" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -3
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence" STRING "0"
+            ^"Qualities" STRING "Aquatic, Hardy, Herd Animal, Slippery, Thick scales"
+            ^"Combat" STRING "Teeth: Init –2, Attack +5, Defense +1 (+4 vs. grapple), Damage +3 Dodge: Init –2, Attack n/a, Defense +2 (+5 vs. grapple), Damage n/a"
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Encumbrance" STRING "0"
+            ^"Appearance" STRING "These statistics are meant to describe a fish of approximately human size, between 80 and 250 pounds."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 105
+        }
+        PERSONALITY_TRAITS {
+            "Phlegmatic" +2
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "food"
+            "Brawl" SCORE 2 SPECIALTY "dodge"
+            "Survival" SCORE 3 SPECIALTY "home territory"
+            "Swim" SCORE 5 SPECIALTY "home territory"
+        }
+        DESCRIPTION "If a group of large fish is attacked, the members of the group receive the Ferocity Virtue. The Ferocity Virtue grants the large fish a Confidence Score of 1 and 3 Confidence Points to spend. Large fish attacked while alone do not gain this benefit."
+    }
+
+    #t6f1c096d84cda67c5842a7 TEMPLATE "A Large Shark" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -3
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -3
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Ferocity (attacking prey), Improved Characteristics, Greedy (major), Wrathful (major)"
+            ^"Qualities" STRING "Aggressive, Aquatic, Large teeth, Pursuit predator, Slippery, Tough hide"
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Abilities" STRING "Awareness 2 (food), Brawl 5 (teeth), Hunt 4(prey), Survival 3 (home territory), Swim 5 (home territory)"
+            ^"Appearance" STRING "This set of statistics is intended to describe a shark of +2 size."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 105
+        }
+        PERSONALITY_TRAITS {
+            "Greedy" +3
+            "Wrathful" +3
+            "Phlegmatic" +2
+        }
+        COMBAT {
+            "Large Teeth" INIT -3 ATTACK 11 DEFENSE 8 DAMAGE 7
+            " Dodge" INIT -3 DEFENSE 2
+        }
+        DESCRIPTION "* Ferocity is a Virtue that allows the shark to use Confidence Points to alter its rolls, but only when the shark is attacking prey. The creature is not able to use Confidence in other circumstances (see *Houses of Hermes: Mystery Cults* page 40)."
+    }
+
+    #tc1b1e923b420c108e6f95f TEMPLATE "Animated Mannequin" DEF {
+        EXTENDS #tHoHTL05ExampleCharacterAA ^"Example Character"
+        PROPERTIES {
+            ^"Location" LIST [#ta8e00470c32e5247cc5d47 ^"Hallway"]
+            ^"Characteristics" STRING "Int +3, Per +2, Pre –3, Com –3, Str +3, Sta +3, Dex –1, Qik –1"
+            ^"Size" STRING "0"
+            ^"Combat" STRING "Pole Arm: Init +2, Attack +6, Defense +3, Damage +11 Crossbow: Init +4, Attack +4, Defense -1, Damage +7"
+            ^"Soak" STRING "n/a"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 109
+        }
+        DESCRIPTION "Here are the combat statistics for a mannequin animated by either Ferox or Fidelius"
+    }
+
+}

@@ -1,0 +1,161 @@
+EXTENSION "ARMDef_Legends_of_Hermes_TheFlyingCastleOfThomae_Devices" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Chapter Six: The Flying Castle of Thomae devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb1d37be426ba2c59203a86 ^"The Flight Disk" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 33
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Printed Effect Line" STRING "ReTe Level 33 Pen +0, Constant effect R: Personal, D: Diameter, T: Individual"
+            ^"Location" LIST [#t67b80fbadd88ee5f76b3d8 ^"The Flying Castle of Thomae"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "This item is controlled with colored lights displayed by the control chain, described later.\n\nThe spell causes the castle to fly at the running speed of a horse.\n\nThis effect is triggered whenever the spell is not active. This means that, every time the Duration expires, the effect is triggered again, and that the effect is also triggered if the magic is dispelled, so that the castle cannot be brought down with a single PeVi spell. Since the trigger is immediate, this does not make the flight jerky.\n\nEffect: Base 3, +1 Diameter, +3 size, +1 affects stone; Modifications +10 unlimited use, environmental trigger (this spell not working) +3."
+    }
+
+    #t82bcd5722eef454d3e0b22 ^"The Control Chain" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 9
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Printed Effect Line" STRING "CrIg Level 9 Pen +0, Constant effect R: Personal, D: Sun, T: Individual"
+            ^"Location" LIST [#t67b80fbadd88ee5f76b3d8 ^"The Flying Castle of Thomae"]
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 123
+        }
+        DESCRIPTION "This item is controlled by Latin commands given by a person touching the chain.\n\nThis effect causes the glowing ball at the end of the control chain to change to one of a variety of colors when a person touching any part of the chain uses one of the command words. The control chain is a separate magic item from the flying disk, but it is used to communicate the wishes of the controller in the main keep to the device. The different colors emitted by the chain control the castle’s flight. The chain was designed to also trigger later additions to the disk’s enchantments. It has many spare light patterns, triggered by speaking numbers, which have no current purpose.\n\nEffect: Base 1; Modifications +2 Sun, +2 complexity (caster control of color), +4 constant use."
+    }
+
+    #t7494dc998d1b6d303517c6 ^"Training Bell" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 35
+            ^"Penetration" STRING "+0"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "ReCo Level 35 Pen +0 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This bell is activated by holding its handle and ringing it.\n\nThe spell allows the user to fly, at a brisk walking pace, for the rest of the day. The bell may be tapped on a child as it rings, to allow guided flight. Theoretically it may also be used as a club, to cause a victim to fly.\n\nEffect: Base 10, +1 Touch, +2 Sun, Modifications +10 constant use."
+    }
+
+    #tdacd6cc99fcb123b6d7db9 ^"Thomae’s Tender" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 34
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "ReTe Level 34 Pen +0, Constant effect R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 125
+        }
+        DESCRIPTION "The tender is controlled by touching the moonstone that powers it, while speaking simple Latin commands.\n\nThis effect allows the tender to fly and carry as much cargo as can be piled upon its surface.\n\nEffect: Base 3, +1 Touch, +2 Sun, +2 size, +2 affects metal; Modifications +4 constant use."
+    }
+
+    #t6c6826c5caf0e882d674b6 ^"Aerial Dancer" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 35
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Effect: Base 10, +1 Touch, +2 Sun; Modifications +10 unlimited uses per day.)"
+            ^"Printed Effect Line" STRING "ReCo 35 Pen +0, unlimited/day R: Touch, D: Sun, T: Individual."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 127
+        }
+        DESCRIPTION "This power is activated by the medallion’s wearer speaking the word “Thomae”.\n\nThis effect allows the user to move at running pace through the air in any direction he wishes. It can be reactivated an unlimited number of times per day. Thomae’s bodyguards developed a strange, three-dimensional martial art based on the use of this power. The scent of frying onions—sigil of the Verditius who created the medallion— accompanies the character for the duration of the effect.\n\n(Effect: Base 10, +1 Touch, +2 Sun; Modifications +10 unlimited uses per day.)\n\nThe other medallions provide flight for two minutes, but at the speed of a running horse.\n\n(Base 15, +1 Touch, +1 Diameter; Modifications +10 unlimited uses per day.)"
+    }
+
+    #tb19d73f9f48b6e01ea9221 ^"Failure to Fall" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "0"
+            ^"Uses" STRING "unlimited/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Effect: Base 5, +1 Touch, +1 Diameter; Modifications +10 unlimited uses per day.)"
+            ^"Printed Effect Line" STRING "ReCo 25 Pen 0, unlimited/day R: Touch, D: Diameter, T: Individual"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 128
+        }
+        DESCRIPTION "This power is activated by free fall. This power gently lowers a falling person toward the ground for two minutes. The character falls at a steady rate of about one foot per second, without accelerating. The effect lasts three minutes, so the character can fall safely for 120 feet. If, at the end of this distance the character begins to freefall again, the device reactivates. Each time the device activates, there is a momentary lull in the scent of frying onions, and some covenfolk, back when the castle was still inhabited, claimed they could determine their fall distance using this as a measure.\n\n(Effect: Base 5, +1 Touch, +1 Diameter; Modifications +10 unlimited uses per day.)"
+    }
+
+    #t06cb4a4de194f219ff0690 ^"Veil of Invisibility (Legends of Hermes)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Veil of Invisibility"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24 uses/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Effect: Base 4, +1 Touch, +2 Sun, +1 moving; Modifications +5 24 uses/day)"
+            ^"Printed Effect Line" STRING "PeIm 25 Pen +0, 24 uses/day R: Touch, D: Sun, T: Individual"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 128
+        }
+        DESCRIPTION "This power is activated by the wearer saying the Latin word for word “help”.\n\nAs the Hermetic spell of the same name (**ArM5**, page 146). This power makes the user invisible, despite motion. The scent of frying onions—sigil of the Verditius who created the medallion—accompanies the character for the duration of the effect.\n\n(Effect: Base 4, +1 Touch, +2 Sun, +1 moving; Modifications +5 24 uses/day)"
+    }
+
+    #t2d4666be1602bf6c35852b ^"Whispering Winds (Legends of Hermes)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Whispering Winds"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 15
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1 use/day"
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concontration"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Effect: Unique)"
+            ^"Printed Effect Line" STRING "ReAu 15 Pen +0, 1 use/day R: Sight, D: Concontration, T: Individual"
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 128
+        }
+        DESCRIPTION "This power is activated by the wearer blowing on the medallion.\n\nAs the Hermetic spell of the same name (**ArM5** page 127). This power allows the user to eavesdrop on the conversations of a group of people that are visible.\n\n(Effect: Unique)"
+    }
+
+}

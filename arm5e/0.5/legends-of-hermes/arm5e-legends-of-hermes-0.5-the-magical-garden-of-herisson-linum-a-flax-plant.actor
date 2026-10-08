@@ -1,0 +1,75 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheMagicalGardenOfHerisson_LinumAFlaxPlant" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Linum, a Flax Plant"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Linum, a Flax Plant (Chapter Four: The Magical Garden of Hérisson, p84): one being, its printed stat lines verbatim fields.
+
+    #t8cca514d2bf03d624e0e17 ^"Linum, a Flax Plant" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#t88f662629bf343de9473c4 ^"Hérisson’s Garden"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -2
+            ^"Season" STRING "Spring"
+            ^"Virtues and Flaws" STRING "Magic Thing; Magical Champion; Entrancement; Arcane Lore, Gossip, Voice of the Garden; Compassionate; Anchored to the Garden, Fragile Constitution, Motion Sickness, Noncombatant Magic"
+            ^"Qualities and Inferiorities" STRING "Greater Power (Rally the Wooden Troops), Ritual Power x 2 (Healing); Improved Might x 5; Limited Movement, Reduced Fatigue x 2, Reduced Soak"
+            ^"Combat" STRING "Dodge: Init +3, Attack N/A, Defense +7, Damage N/A"
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "OK, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Vis" STRING "2 pawns of Herbam, in seeds"
+            ^"Appearance" STRING "A mass of thin stems about four feet tall, with small linear leaves and bright blue, five-petaled flowers."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 84
+        }
+        PERSONALITY_TRAITS {
+            "Caring" +6
+            "Peaceful" +3
+            "Flax" +2
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Charm" SCORE 1 SPECIALTY "obsequious"
+            "Entrancement" SCORE 4 SPECIALTY "keeping peace"
+            "Leadership" SCORE 1 SPECIALTY "herbs"
+            "Mastery of Rally the Wooden Troops" SCORE 3 SPECIALTY "flowers"
+            "Penetration" SCORE 4 SPECIALTY "Entrancement"
+        }
+        POWERS {
+            #t41451554e8301e435c8399 ^"Rally the Wooden Troops" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "see earlier; can only affect the Hortulus tribe."
+            }
+            #tc734a94cefb49bdbcf72a0 ^"Healing (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Healing"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–7"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The worst of the target’s wounds instantly improves by one level. The Might cost for this power comes from Flax’s Might Score, not Might pool. See *Realms of Power: Magic*, page 39 for more details. Ritual Power x2"
+            }
+        }
+        DESCRIPTION "Linum is the leader of the Hortulus tribe and venerated for its compassion and wisdom. However, it is deeply rooted into the soil, and has only a limited capacity for movement unaided. It also detests being moved, and becomes quite nauseated and unable to use any of its powers."
+    }
+
+}

@@ -1,0 +1,66 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheSunkenLaboratoryOfHermanus_GeniusLociOfTheAquaticValley" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Genius Loci of the Aquatic Valley"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Genius Loci of the Aquatic Valley (Chapter Five: The Sunken Laboratory of Hermanus, p103): one being, its printed stat lines verbatim fields.
+
+    #tbe865f8c3317ee9b7d7c87 ^"Genius Loci of the Aquatic Valley" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Season" STRING "Summer"
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit, Ways of the Sea"
+            ^"Magical Qualities and Inferiorities" STRING "Personality Traits: Grim+3, Sensitive to Insult +1, Hopeful –3"
+            ^"Vis" STRING "2 pawns of Aquam vis are manifested annually as stones buried within the grotto, if not harvested this vis will not accumulate."
+            ^"Appearance" STRING "The genius loci occasionally manifests a human-shaped conglomeration of sand and water to communicate. This shape is only a marionette controlled by the spirit. The genius loci itself is the aquatic valley."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 103
+        }
+        ABILITIES {
+            "Area Lore" SCORE 5 SPECIALTY "nearby undersea environs"
+            "Awareness" SCORE 5 SPECIALTY "submerged humans"
+            "Bargain" SCORE 5 SPECIALTY "sahirs"
+            "Folk Ken" SCORE 3 SPECIALTY "sailors) Guile 2(pretending to be mightier than it is"
+            "Intrigue" SCORE 2 SPECIALTY "assessing threats"
+            "Living Language: Greek" SCORE 5 SPECIALTY "Cypriot"
+        }
+        POWERS {
+            #tb3336305ddad1bf523c6ca ^"Crafter of Water (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Crafter of Water"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "The genius can duplicate any non-ritual Creo or Rego Aquam spell at a cost of one Might point per magnitude of the effect. The level of the spell can not be greater than 20. Within the valley the genius is present everywhere, and this allows it to create most effects with a Range of Personal or Touch. *Emissary of Foam and Sand *3 points Init –3 Aquam and Terram, The spirit constructs within itself a humanshaped form of sand and water that can interact with people by use of speech and the clumsy and slow manipulation of objects. While the shape is made of inanimate material and can not be damaged in the same manner as a creature, it is not particularly stable and can be dispersed by a strong current or being hit with a large object. This form can leave the location of the spirit, but the spirit can not perceive and control the form more than a small distance from its borders. (Base 5 +1 Concentration, +1 Part, +1 Rego requisite, Terram requisite is free, Lesser Power, 1 Mastery Point spent to lower Might, cost: 20)"
+            }
+            #t8100bead2bd919b77fa8e4 ^"Master of Water (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Master of Water"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "The genius can duplicate any non-ritual Muto or Perdo Aquam spell at a cost of one Might point per magnitude of the effect. The level of the spell can not be greater than 20. Within the valley the genius is present everywhere, and this allows it to create most effects with a Range of Personal or Touch. *Presence *0 points, Constant, Imaginem: The genius loci is aware of everything that goes on within the valley, and the genius is present at every location within the valley (see *Realms of Power: Magic* pages 103 and 106 for a more in-depth description)."
+            }
+        }
+        DESCRIPTION "A genius loci is a spirit of a place. The spirit inhabits the entire area — in this case the underwater valley — as if the area were a body for the spirit. A genius loci can not move from its location.\n\nThe genius loci of the grotto has been, over centuries, altered by the ghosts of the warring sailors. The spirit has a grim, dutiful mindset. For the genius, existence is something to be endured stoically rather than enjoyed. The spirit protects its locus with determination but has no hope of making it a better place, only of persevering."
+    }
+
+}

@@ -1,0 +1,102 @@
+EXTENSION "ArM5_Legends_of_Hermes_TheFourAspectsOfConciatta_SeiffeddinTheActor" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Seiffeddin the Actor"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Legends_of_Hermes_Core_Ext"
+
+    # Seiffeddin the Actor (Chapter Two: The Four Aspects of Conciatta, p32): one being, its printed stat lines verbatim fields.
+
+    #t85c4c734646594acc5880c ^"Seiffeddin the Actor" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tdcdef8a24e178330a26de0 ^"Qadis"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Mentem"
+            ^"Season" STRING "Autumn"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" STRING "Appears to be in his late fifties"
+            ^"Confidence" STRING "0"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Gossip, Inspirational, Puissant Profession: Actor; Baneful Circumstances (exposed to sunlight), Noncombatant, Soft-Hearted"
+            ^"Qualities and Inferiorities" STRING "Focus Power (x3)"
+            ^"Reputations" LIST ["Gossip (Ghosts of Qadis) 1", "Actor (Ghosts of Qadis) 3"]
+            ^"Combat" STRING "Dodge: Init +0, Attack N/A, Defense +0, Damage N/A"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "A long white toga and various ephemeral props and masks."
+            ^"Vis" STRING "Seiffeddin contains no vis."
+            ^"Appearance" STRING "Seiffeddin manifests as an aging man with the mobile features of a trained and experienced actor. His white hair and pale skin contrast with his dark and dazzling eyes. His movements are measured and purposeful. His hands, like his expressions, are rarely still, constantly ... marking every ... phrase."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 32
+        }
+        PERSONALITY_TRAITS {
+            "Artistic" +3
+            "Brave" -1
+            "Paternal" +2
+        }
+        ABILITIES {
+            "Arabic" SCORE 5 SPECIALTY "storytelling"
+            "Artes Liberales" SCORE 3 SPECIALTY "rhetoric"
+            "Awareness" SCORE 2 SPECIALTY "audience"
+            "Carouse" SCORE 4 SPECIALTY "with his audience"
+            "Charm" SCORE 2 SPECIALTY "being witty"
+            "Concentration" SCORE 3 SPECIALTY "recitals"
+            "Disguise" SCORE 4 SPECIALTY "masks"
+            "Dominion Lore" SCORE 1 SPECIALTY "Divine creatures"
+            "Etiquette" SCORE 3 SPECIALTY "Qadis ghosts"
+            "Faerie Lore" SCORE 2 SPECIALTY "places"
+            "Folk Ken" SCORE 2 SPECIALTY "the living"
+            "Greek" SCORE 5 SPECIALTY "storytelling"
+            "Guile" SCORE 3 SPECIALTY "subtle deceit"
+            "Infernal Lore" SCORE 1 SPECIALTY "undead"
+            "Intrigue" SCORE 3 SPECIALTY "the ghosts of Qadis"
+            "Latin" SCORE 5 SPECIALTY "ancient works"
+            "Magic Lore" SCORE 4 SPECIALTY "ghosts"
+            "Profession: Actor" SCORE 5 BONUS 2 SPECIALTY "plays of many parts"
+            "Qadis Lore" SCORE 5 SPECIALTY "history"
+            "Teaching" SCORE 4 SPECIALTY "Profession: Actor"
+        }
+        POWERS {
+            #t76d62db551576aa21bc18f ^"Crafter of Illusion (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Crafter of Illusion"
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "0 minus Might points spent"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Seiffeddin can create illusory props and sounds as the needs of his play dictate, spontaneously producing the effect of a Creo or Rego Imaginem spell of level 10 or less at a cost of one Might point per magnitude. His illusions are never truly lifelike, designed instead to convey an idea or an emotion. (Focus Power)"
+            }
+            #tbda5c2360188cf45de7d3d ^"Eidolon (Legends of Hermes)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Eidolon"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Creates an illusionary form that can be both seen and heard. The body can be created and destroyed at will. As the power in *Realms of Power: Magic*, page 102. (Focus Power)"
+            }
+            #td0c1765e3ef0772dd67b9f ^"Master of Illusion" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "0 minus might points spent"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Seiffeddin can alter the appearance of anything he touches, spontaneously producing the effect of a Muto or Perdo Imaginem spell of level 10 or less at a cost of 1 Might point per magnitude. The effects are never lifelike and always appear as mundane props, scenery, or costumes would within a play. (Focus Power)"
+            }
+        }
+        DESCRIPTION "Seiffeddin uses his powers to raise illusions that populate the theater with a backcloth, scenery, props, and sometimes even other actors. But the exertion, or rather the expenditure of his Might, leaves him drained at the end of each performance."
+    }
+
+}

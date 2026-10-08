@@ -1,0 +1,55 @@
+EXTENSION "ARMDef_Legends_of_Hermes_FortunatasIslandOfBoundSpirits_TempestasASpiritOfStorms" {
+    NAME "Ars Magica Fifth Edition, Legends of Hermes - Tempestas: a Spirit of Storms"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Legends_of_Hermes_Core_Ext"
+
+    # Tempestas: a Spirit of Storms (Chapter Three: Fortunata’s Island of Bound Spirits, p58): one being, its printed stat lines verbatim fields.
+
+    #te39c0ef6bbe5da4f246315 ^"Tempestas: a Spirit of Storms" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 35
+            ^"Form" STRING "Auram"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Magic Spirit, Improved Characteristics (x2), Keen Vision; Fury"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Raise the Tempest), Focus Power (Crafter of Weather), Improved Might (x15), Improved Powers (reduce Might cost); Slow Power (x2)"
+            ^"Vis" STRING "4 Auram, in storm spume."
+            ^"Appearance" STRING "Mundanely appearing as a great storm, but those with Second Sight or equivalent may see a huge disembodied blue head with bulging cheeks, blowing continuously. (Size applies to his head, which is the size of a man, not to the size of the storm.) Note that many weather effects are indirect (like capsizing boats), but Tempestas has a high enough Penetration (35) for Tempest that direct effects like lighting or rain may even affect magi."
+            ^"Source" STRING "Legends of Hermes"
+            ^"Page" INTEGER 58
+        }
+        PERSONALITY_TRAITS {
+            "Stormy" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 5 SPECIALTY "searching"
+            "Concentration" SCORE 5 SPECIALTY "maintain powers"
+            "Mediterranean Lore" SCORE 3 SPECIALTY "waters"
+        }
+        POWERS {
+            #tf430639821cc76b1f7cdec ^"Crafter of Weather" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1-5 points"
+                    ^"Initiative" STRING "-3"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "by spending Might points equal to the equivalent spell magnitude, Tempestas can create any weather related (non-Ritual) effect up to level 25. This is a Slow Power, taking an extra round to prepare. *Raise the Tempest*, 0 points, Init -6, Auram R: Sight, D: Conc, T: Group Calls up a storm, 10 miles across, of hurricane intensity, similar to the spell *Wrath of Whirling Winds and Water*. The storm builds up over several minutes, and dissipates shortly after the Power duration ends. CrAu 50 (Base 5, +3 Sight, +1 Conc, +2 Group, +3 Size): Greater Power (50 levels, -5 Might from Improved Powers)."
+            }
+        }
+    }
+
+}

@@ -1,0 +1,77 @@
+EXTENSION "ArM5_Magi_of_Hermes_HughOfFlambeau_BathildTheMagicalHorse" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Bathild the Magical Horse"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Magi_of_Hermes_Core_Ext"
+
+    # Bathild the Magical Horse (Chapter Five: Hugh of Flambeau, p47): one being, its printed stat lines verbatim fields.
+
+    #tdcc1d5a7f33b4132fa6a43 ^"Bathild the Magical Horse" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Bathild the Magical Horse"
+            ^"Printed Name" STRING "Familiar: Bathild the Magical Horse"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 8
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 2
+            ^"Season" STRING "Summer"
+            ^"Confidence" STRING "2 (6)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Friend; Improved Characteristics x 2, Long-Winded, True Friend; Proud from Familiar bond"
+            ^"Magic Qualities and Inferiorities" STRING "Greater Power (Beast and Rider As One); Improved Attack, Improved Confidence, Improved Initiative, Improved Soak, Minor Virtue: Wilderness Sense"
+            ^"Soak" INTEGER 5
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (16–21), Incapacitated (22–28), Dead (29+)"
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Vis" STRING "2 Animal, in hooves."
+            ^"Appearance" STRING "a roan charger whose pelt is the color of dried blood."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 47
+        }
+        PERSONALITY_TRAITS {
+            "Loyal to Hugh" +3
+            "Vain" +3
+            "Brave" +2
+            "Chatty" +1
+        }
+        COMBAT {
+            "Kick" INIT 7 ATTACK 8 DEFENSE 9 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "long distance running"
+            "Awareness" SCORE 3 SPECIALTY "noises"
+            "Brawl" SCORE 4 SPECIALTY "kick"
+            "Concentration" SCORE 2 SPECIALTY "powers"
+            "Faerie Lore" SCORE 2 SPECIALTY "faerie horses"
+            "Folk Ken" SCORE 3 SPECIALTY "soldiers"
+            "Local Area Lore" SCORE 3 SPECIALTY "roads"
+            "Magic Lore" SCORE 3 SPECIALTY "vis sources"
+            "Order of Hermes Lore" SCORE 2 SPECIALTY "House Flambeau"
+            "Leadership" SCORE 3 SPECIALTY "other horses"
+            "Swim" SCORE 2 SPECIALTY "fording rivers"
+            "Wilderness Sense" SCORE 4 SPECIALTY "forests"
+        }
+        POWERS {
+            #t96a78928e15cc3ae450ebe ^"Beast and Rider As One" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Bathild’s rider partially merges with her; his legs meld to her flesh and their minds work in concert. The rider no longer needs to concentrate on keeping his balance, and Ride rolls become unnecessary. When fighting from horseback, the bonus to Attack and Defense rolls provided by the Ride Ability of the rider is not limited to +3. Naturally the rider can’t be unhorsed, but neither can he dismount until the power ceases. MuCo(An, Me) 45; base 25, +1 Conc, +2 Group, +1 Mentem requisite): Greater Power (45 levels, –1 Might cost) *Ride of the Einherjar*: Granted by the familiar bond, see main text for details. *Gird the Steed for War*: Granted by the familiar bond, see main text for details."
+            }
+        }
+        DESCRIPTION "Bathild claims descent from Sleipnir, the fabled horse ridden by Odin. Hugh sought out an einheri (a ghostly warrior dedicated to Odin) and bargained with him. In exchange for the horse over which the einheri was guardian, Hugh was obliged to start a war between two villages. Since this occurred deep in the territory of the hypothesized Order of Odin, he does not consider that he broke the Code of Hermes in performing this duty.\n\nWhen Hugh forged the initial familiar bond with Bathild, his Rego Terram Lab Total (with the assistance of his apprentice) was 43, which was just sufficient for his purpose. He has the following Bond Scores: Gold +1, Silver +1, Bronze +3.\n\n(Bathild was created according to the rules in *Realms of Power: The Magic Realm*, Magical Characters)"
+    }
+
+}

@@ -1,0 +1,64 @@
+EXTENSION "ARMDef_Magi_of_Hermes_TolidesOfFlambeau_AnImp" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - An Imp"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # An Imp (Chapter Fourteen: Tolides of Flambeau, p130): one being, its printed stat lines verbatim fields.
+
+    #t0d08ad201688c3743200d7 ^"An Imp" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "An Imp"
+            ^"Printed Name" STRING "Familiar: An Imp"
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (Maligenii)"
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER -5
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER -5
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Keen Vision, Sharp Ears; Greedy, Nocturnal"
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4)"
+            ^"Powers" STRING "Coagulation, 1 point, Init –1, Corpus (Realms of Power: The Infernal, page 31) Obsession, 1 to 3 points, Init –5, Vim: Hopelessness (Realms of Power: The Infernal, page 31) Petrification, 1 point, Init –10, Corpus. The imp transforms its body into solid material, and slightly increases its weight. If lifted and touched in that form, it behaves and feels like a small figurine made of stone. While petrified, the gargoyle-like imp is unable to move, but can end its stasis at any time, or become incorporeal by dropping its Coagulation. It can slowly move its eyes to survey its surroundings, and anyone deliberately watching it doing so will notice it, if he succeeds at a Perception + Awareness roll against an Ease Factor of 6. See in Darkness, 0 points, Init n/a. Like Tolides, the imp is able to see in complete darkness. Unlike him, it is not affected by sunlight unless at noontime (see Weakness). Source of Tranquility, 3 points, Init 0, Ignem. The imp can evoke an effect that is similar to the one provided by Tolides’ enchanted item of the same name, but with Duration Diameter only."
+            ^"Weakness" STRING "The imp is unable to use any of its powers during noontime; that is, the Diameter around midday. When exposed to direct sunlight during that time, it automatically assumes the form described in Petrification, and can not change back until dusk."
+            ^"Vis" STRING "2 pawns of Vim, in its wings"
+            ^"Appearance" STRING "The imp appears as a vaguely humanoid creature of about the size of a small kitten. Two leathery wings spring from its back that enable it to fly and hover about. The fiend’s naked skin is a dirty, reddish gray, and feels cool to the touch. Its limbs end in wicked claws that are too small to effectively harm a human, but that greedily grab for small donations it is offered. Proffered food is quickly devoured with its wide, fanged maw. Like a cat, the gaze of its dark eyes constantly darts around, detecting the slightest movement."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 130
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +2
+            "Brave" -2
+            "Enduring" -1
+            "Insidious" +3
+            "Sneaking" +3
+        }
+        COMBAT {
+            "Bite" INIT 5 ATTACK 3 DEFENSE 14 DAMAGE -12
+        }
+        ABILITIES {
+            "Athletics" SCORE 1 SPECIALTY "contortions"
+            "Awareness" SCORE 5 SPECIALTY "keeping watch"
+            "Bargain" SCORE 1 SPECIALTY "bonds"
+            "Guile" SCORE 2 SPECIALTY "other demons"
+            "Hunt" SCORE 3 SPECIALTY "covering tracks"
+            "Stealth (shadowing)" SCORE 5
+        }
+        DESCRIPTION "One day, Tolides is approached by an imp — a lesser demon — that offers to watch his back while he pursues his studies, asking little in return. This incident, though not particularly improbable for someone who occasionally deals with the Infernal, is unlikely to be completely coincidental. The Infernal Realm is not renowned for its benevolence or generosity. Being able to survey and, if necessary, to manipulate a precious pawn first hand is too valuable a chance for the Infernal powers to let slip, especially if it helps to strengthen the mutual bond.\n\nTolides binds the imp that, like him, is primarily a creature of darkness, by calling upon his Perdo Ignem Lab Total. He establishes a Gold and Silver Cord of score 1 each, and a Bronze Cord of score 3."
+    }
+
+}

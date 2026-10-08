@@ -1,0 +1,424 @@
+EXTENSION "ArM5_Magi_of_Hermes_ConscientiaOfBonisagus_Devices" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Chapter Three: Conscientia of Bonisagus devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Magi_of_Hermes_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #ta440b9433e2bed6cdaf7e2 ^"Phantasmal Minstrels" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Apollo’s Lyre"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 10
+            ^"Penetration" STRING "0"
+            ^"Uses" STRING "3/Day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 1, +1 Conc, +1 tune, +2 3/day, +5 item maintains concentration)"
+            ^"Printed Effect Line" STRING "CrIm 10 Pen 0, 3/Day R: Per, D: Conc, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "Phantasmal Minstrels produces a specific song or melody when activated. The song plays until the magus plucks the same string again, or another string to start a new song. This effect is enchanted multiple times into the lyre, once for each song the magus wishes to hear. Each song is triggered by plucking a different string.\n\nConscientia’s effect requires a single pawn of vis to invest, allowing a greater variety of songs in a single lyre (eight for a wooden lyre, which counts as a large wooden object.)\n\n(Base 1, +1 Conc, +1 tune, +2 3/day, +5 item maintains concentration)"
+    }
+
+    #t17f5349593e2841e7f8c2e ^"Boil Water (Cooking Stone)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Boil Water"
+            ^"Part Of" STRING "Cooking Stone"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 15
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "CrIg 15 R: Touch, D: Mom, T: Ind Pen +0, Unlimited/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "This effect boils water on contact. (Base 4, +1 Touch, +10 unlimited uses)"
+    }
+
+    #t3d1f5b5e45d19f4bad655a ^"Perdo Parma" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Cultellus"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 37
+            ^"Penetration" STRING "+32"
+            ^"Uses" STRING "50/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 10, + 1 Touch, +6 50/day, +16 32 Penetration)"
+            ^"Printed Effect Line" STRING "PeVi 37 R: Touch, D: Mom, T: Ind Pen +32, 50/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "When this knife contacts a magus, it will dispel any Parma Magica with a score of 6 or lower (thus providing a Magic Resistance of 30 or lower), as long as it Penetrates. This version relies on the targeted magus being somewhat weak in Vim if his Parma is strong.\n\n(Base 10, + 1 Touch, +6 50/day, +16 32 Penetration)"
+    }
+
+    #tb8a87b6f45ca909404f602 ^"Impart the Words" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Dico Calculus"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 26
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +1 Conc, +5 item maintains concentration, +10 unlimited uses, +3 linked trigger)"
+            ^"Printed Effect Line" STRING "CrMe 26 R: Touch, D: Conc, T: Ind Pen +0, Unlimited/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "Transmits the images sensed by the object to the user’s mind.\n\n(Base 3, +1 Touch, +1 Conc, +5 item maintains concentration, +10 unlimited uses, +3 linked trigger)"
+    }
+
+    #t098919d1350db14ad31408 ^"Read the Words" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Dico Calculus"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 18
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Con"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 1, +1 Touch, +1 Conc, +5 item maintains concentration, +10 unlimited uses)"
+            ^"Printed Effect Line" STRING "InIm 18 R: Touch, D: Con, T: Ind Pen +0, Unlimited/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "When activated, the object senses the iconic species of whatever it’s touching.\n\n(Base 1, +1 Touch, +1 Conc, +5 item maintains concentration, +10 unlimited uses)"
+    }
+
+    #tbfb87b8d4add162a0ff56c ^"Touch of Ymir" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Ferramenta Glacies"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 14
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +10 unlimited uses)"
+            ^"Printed Effect Line" STRING "ReAq 14 R: Touch, D: Mom, T: Ind Pen +0, Unlimited/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "Instantly freezes surrounding water into ice. Further applications keep the ice frozen.\n\n(Base 3, +1 Touch, +10 unlimited uses)"
+    }
+
+    #tec1f3a1ceb714792f238ad ^"Herd the Passive Beasts" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Hermes’ Horn"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 40
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/Day"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Base 4, +2 Sun, +2 Group, +2 Voice, +2 size)"
+            ^"Printed Effect Line" STRING "ReAn 40 R: Voice, D: Sun, T: Group Pen +0, 1/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "This effect calms a herd of animals (up to 1,000 animals), making them far easier to tend, allowing a shepherd or farmer to manage a much larger herd than he could without magical assistance.\n\n(Base 4, +2 Sun, +2 Group, +2 Voice, +2 size)"
+    }
+
+    #t5a2db7d5b0dced79234cd3 ^"Sunder Warrior" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Mjolnir’s Equal"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Terram"
+            ^"Requisite" STRING "Herbam"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Unlimited/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Metal, +1 Herbam Req, +10 unlimited uses)"
+            ^"Printed Effect Line" STRING "PeTe(He) 25 R: Touch, D: Mom, T: Ind Pen +0, Unlimited/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "Upon activation, a metal or wooden item touching the hammer is utterly destroyed.\n\n(Base 3, +1 Touch, +2 Metal, +1 Herbam Req, +10 unlimited uses)"
+    }
+
+    #te87868f23e4d445daa9018 ^"Feed the Hungry (Magi of Hermes)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Feed the Hungry"
+            ^"Part Of" STRING "Shulpea’s Bowl"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 28
+            ^"Penetration" STRING "+3"
+            ^"Uses" STRING "Unlimited/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Base 2, +1 Touch, +1 Diam, +2 Group, +1 Size, + 10 unlimited uses, +3 environmental trigger: Diameter)"
+            ^"Printed Effect Line" STRING "CrHe 28 R: Touch, D: Diam, T: Group Pen +3, Unlimited/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "Every two minutes, this bowl fills itself with a specific food (determined when the item is enchanted). When the duration ends, any remaining pieces of food disappear and the bowl refills.\n\n(Base 2, +1 Touch, +1 Diam, +2 Group, +1 Size, + 10 unlimited uses, +3 environmental trigger: Diameter)"
+    }
+
+    #t1befc386e35e49718066e5 ^"Transform the Rigid Ground" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Traveler’s Cloak"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Terram"
+            ^"Requisite" STRING "Ignem"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +2 Sun, +1 Part, +1 Stone, +1 Ignem Req.)"
+            ^"Printed Effect Line" STRING "MuTe(Ig) 25 R: Touch, D: Sun, T: Part Pen +0, 1/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "This effect alters the earth under the cloak, softening it and warming it to the touch.\n\n(Base 3, +1 Touch, +2 Sun, +1 Part, +1 Stone, +1 Ignem Req.)"
+    }
+
+    #t754da43546808b1819246d ^"Harden the Eldritch Bond" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Vessel of Etain’s Children"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Aquam"
+            ^"Requisite" STRING "Terram"
+            ^"Level" INTEGER 23
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +1 2/say, +3 environmental trigger: sunrise/sunset)"
+            ^"Printed Effect Line" STRING "MuAq(Te) 23 R: Touch, D: Sun, T: Ind Pen +0, Constant Effect"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "When blood is placed within the enchanted fitting, it’s transformed into an attractive polished stone. This doesn’t alter the blood’s Arcane Connection, which is part of its essential nature and will still last for years.\n\n(Base 4, +1 Touch, +2 Sun, +1 2/say, +3 environmental trigger: sunrise/sunset)"
+    }
+
+    #tb62257c21eb5e9db42bef4 ^"Vulcan’s Favor" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Vulcan’s Favored"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 29
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 15, +2 Sun, +1 2/day, +3 environmental trigger: sunrise/sunset)"
+            ^"Printed Effect Line" STRING "CrTe 29 R: Per, D: Sun, T: Ind Pen +0, Constant Effect"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 32
+        }
+        DESCRIPTION "Constantly repairs the enchanted item, extending the item’s life and returning it to usefulness. The item always seems brand new.\n\n(Base 15, +2 Sun, +1 2/day, +3 environmental trigger: sunrise/sunset)"
+    }
+
+    #t31d9bfc38bdb70c7180153 ^"Pneum Flask" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 2, +3 sight)"
+            ^"Printed Effect Line" STRING "ReAu 5 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "Uncork this small bottle and you can steal the breath of an individual. The breath flows into the flask, which should be immediately corked. If the magus acts fast enough, the stolen breath can then be fixed as an Arcane Connection to the target.\n\n(Base 2, +3 sight)"
+    }
+
+    #t2c5cdbd5d96074ef831ca3 ^"Elixir of Morning’s Afterthought" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 15, +1 Touch)"
+            ^"Printed Effect Line" STRING "CrCo 20 R: Touch , D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION ", A quick draught of this elixir will wash away even the most serious hangovers. Popular among Jerbiton and Redcaps alike.\n\n(Base 15, +1 Touch)"
+    }
+
+    #ta2729074251c3564bfa9ed ^"Magic Spice" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 2, +1 Touch, +2 Sun)"
+            ^"Printed Effect Line" STRING "MuIm 5 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "Useful while traveling, or in delicate social situations, as a magus can simply pour a bit on even the most appalling food, and taste a delicious feast of his own devising. Adding a bit to the gruel in the soldiers’ mess can make for a significant improvement in the men’s morale.\n\n(Base 2, +1 Touch, +2 Sun)"
+    }
+
+    #tc840f325a51fb2f8416ac4 ^"Ink of the Unseen Circle" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +3 Moon)"
+            ^"Printed Effect Line" STRING "PeIm 15 R: Per, D: Moon, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "After listening to hordes of magi boasting about their latest “ingenious magical traps,” Conscientia realized they all shared the same common flaw … What idiot is going to willingly step into the creepy magic circle? This specialized ink was the answer. Once activated, the ink becomes invisible for the duration of the effect. When used to draw a Hermetic circle for Ring spells, this ink destroys the iconic species of the ring after activation, leaving it an invisible Hermetic landmine.\n\n(Base 4, +3 Moon)"
+    }
+
+    #t750077656a61c1c1b11607 ^"Potion of Vulcan’s Appeasement" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +3 Size)"
+            ^"Printed Effect Line" STRING "PeIg 20 R: Touch , D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "When exposed to open flame, this potion extinguishes a fire up to the size of a large house. Very useful for saving the covenant library from a fiery demise, leaving you valuable time to concoct a proper excuse.\n\n(Base 4, +1 Touch, +3 Size)"
+    }
+
+    #t862f5b6959280491e22426 ^"Message in a Bottle" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch)"
+            ^"Printed Effect Line" STRING "CrMe 5 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "Easily carried and completely inconspicuous, a Message in a Bottle is one of the most secure ways to deliver a clandestine message. When this potion is consumed, the drinker has a message of the creator’s design flash through his mind. Very few people would even think to check a vial of liquid for a message, and fewer would be foolish enough to drink an unknown potion just to discover what the suspected message might be.\n\n(Base 4, +1 Touch)"
+    }
+
+    #t6504aa3e6c840ca46370da ^"The Wakeful Nightmare" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +3 Moon)"
+            ^"Printed Effect Line" STRING "ReMe 20 R: Touch, D: Moon, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "This terrible liquid, if consumed, forbids the body from entering slumber, denying the unfortunate victim his daily rejuvenation. The target stays awake until the duration of the effect ends. Fatigue levels may not be restored, and slowly the sleep deprivation will start to drive the target insane. After every three successive days without rest, the target loses an additional Fatigue level from exhaustion. Once all the target’s Fatigue is lost, she starts taking physical wounds as her body shuts down. Each time the character loses another Fatigue level, she takes 5 + stress die in damage. These wounds cannot heal naturally until the character fully rests.\n\n(Base 4, +1 Touch, +3 Moon)"
+    }
+
+    #te7786a6e977e91690e90d4 ^"Whistle of Warning" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Base 10, +2 Voice, +1 Conc, +2 Group)"
+            ^"Printed Effect Line" STRING "ReMe 35 R: Voice, D: Conc, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "A particularly spiteful magus, with just a blow from this whistle, will inflict a group with Visions of the Infernal Terrors until the magus decides to release them from their torment.\n\n(Base 10, +2 Voice, +1 Conc, +2 Group)"
+    }
+
+    #teaac60761c14c4d298183e ^"Door in a Bottle" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +1 Stone)"
+            ^"Printed Effect Line" STRING "PeTe 5 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "Splashed onto a wall, Door in a Bottle dissolves away the stone into an instant exit. Using this potion for illegal purposes is, of course, highly discouraged.\n\n(Base 3, +1 Touch, +1 Stone)"
+    }
+
+    #t46d5e36b2257dcf24c0d0c ^"Disenchanting Concoction" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 40
+            ^"Penetration" STRING "+30"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "PeVi 40 Pen: +30 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "This useful potion acts as Winds of Mundane Silence. One of the most utilitarian items a magus can carry with him, it can be used in a variety of ways; it can remove a curse, disenchant a magical trap, or even be thrown on another to drop her Parma.\n\n(+1 Touch, +15 Penetration)"
+    }
+
+}

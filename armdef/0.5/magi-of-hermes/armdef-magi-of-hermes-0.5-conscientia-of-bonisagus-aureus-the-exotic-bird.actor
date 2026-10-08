@@ -1,0 +1,55 @@
+EXTENSION "ARMDef_Magi_of_Hermes_ConscientiaOfBonisagus_AureusTheExoticBird" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Aureus the Exotic Bird"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # Aureus the Exotic Bird (Chapter Three: Conscientia of Bonisagus, p27): one being, its printed stat lines verbatim fields.
+
+    #ted572e48c52185dbbc5130 ^"Aureus the Exotic Bird" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Aureus the Exotic Bird"
+            ^"Printed Name" STRING "Familiar: Aureus the Exotic Bird"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Ignem"
+            ^"Printed Might" STRING "20 (Ig)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -6
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER -3
+            ^"Soak" INTEGER 0
+            ^"Cord Scores" STRING "Gold +2, Silver +0, Bronze +2"
+            ^"Powers" STRING "Reincarnation: 15 points, Animal. If Aureus dies with 15 or more temporary Might, his body bursts into flames. Within one hour, a new body rises from the ashes, with 1 temporary Might point."
+            ^"Bond Empowerments" STRING "Speech (ArM5, page 105) Shared Senses (ArM5, page 105)"
+            ^"Appearance" STRING "Aureus is a beautiful and exotic bird, gifted to Conscientia from a particularly grateful patron. He has a fiery red hue with a long, feathery golden ruff, and exquisite wingtips of yellows, golds, and oranges."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 27
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "reading"
+            "Athletics" SCORE 6 SPECIALTY "flying"
+            "Bargain" SCORE 3 SPECIALTY "getting fed, again"
+            "Folk Ken" SCORE 3 SPECIALTY "Conscientia"
+            "French" SCORE 5 SPECIALTY "explanations"
+            "Latin" SCORE 4 SPECIALTY "reading"
+            "Magic Theory" SCORE 3 SPECIALTY "reading"
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Patient" +2
+            "Inquisitive" +1
+            "Terrified of Blue Potions" +1
+        }
+    }
+
+}

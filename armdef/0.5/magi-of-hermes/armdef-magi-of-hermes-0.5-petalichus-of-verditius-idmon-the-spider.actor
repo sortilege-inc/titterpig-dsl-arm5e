@@ -1,0 +1,65 @@
+EXTENSION "ARMDef_Magi_of_Hermes_PetalichusOfVerditius_IdmonTheSpider" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Idmon the Spider"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # Idmon the Spider (Chapter Eleven: Petalichus of Verditus, p99): one being, its printed stat lines verbatim fields.
+
+    #tddf6c4a882bd7928998143 ^"Idmon the Spider" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Idmon the Spider"
+            ^"Printed Name" STRING "Familiar: Idmon the Spider"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER -10
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -6
+            ^"Natural Qualities" STRING "Ambush Predator, Grapple, Loathsome Appearance, Venomous"
+            ^"Virtues and Flaws" STRING "True Friend (Petalichus), Piercing Gaze; Envious (Minor)"
+            ^"Reputations" LIST ["None"]
+            ^"Combat" STRING "Dodge: Init +4, Attack N/A, Defense +7, Damage N/A Teeth: Init +4, Attack +10, Defense +9, Damage –9 Grapple: Init +4, Attack +6, Defense +7, Damage N/A"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5)"
+            ^"Powers" STRING "Panic of the Trembling Heart (CrMe 15) 2 points, Init +3 Weaver’s Trap of Webs (CrAn 35) 4 points, Init +1"
+            ^"Vis" STRING "1 pawn of Rego in its legs."
+            ^"Gold Cord" STRING "2,"
+            ^"Silver Cord" STRING "1,"
+            ^"Bronze Cord" STRING "2"
+            ^"Bond Powers" STRING "Mental Communication, as per the level 15 effect in ArM5, page 105. This effect works on both Idmon and Petalichus. Shared Senses, as per the level 30 effect in ArM5, page 105. Only Idmon’s senses are shared with Petalichus."
+            ^"Appearance" STRING "Idmon is an unnaturally large, fragile-looking spider with long, angular legs jutting out from a smooth armored body. Idmon’s many eyes glitter and they reflect the bright patterns that cover its carapace."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 99
+        }
+        PERSONALITY_TRAITS {
+            "Sinister" +2
+            "Loyal (Petalichus)" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 4 SPECIALTY "prey"
+            "Brawl" SCORE 3 SPECIALTY "teeth"
+            "Climb" SCORE 5 SPECIALTY "webs"
+            "Hunt" SCORE 4 SPECIALTY "insects"
+            "Greek" SCORE 5 SPECIALTY "magical terms"
+            "Latin" SCORE 4 SPECIALTY "Hermetic usage"
+            "Penetration" SCORE 4 SPECIALTY "Mentem"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+            "Survival" SCORE 3 SPECIALTY "home area"
+            "Weaver" SCORE 5 SPECIALTY "webs"
+        }
+        DESCRIPTION "Petalichus named his familiar Idmon after the father of Arachne, but if the spider has a true name it has not yet revealed it even to Petalichus. Idmon often travels with Petalichus, but is aware of his physical limitations so prefers to remain close to his master. However, on many occasions the magus sends his familiar out into the night to find and retrieve an Arcane Connection to a new target.\n\nPetalichus found his familiar somewhat late in life, when he was into his mid-fifties."
+    }
+
+}

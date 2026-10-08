@@ -1,0 +1,184 @@
+EXTENSION "ArM5_Magi_of_Hermes_ScipioOfMerinita_FelixTheLuckyFox" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Felix the Lucky Fox"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Magi_of_Hermes_Core_Ext"
+
+    # Felix the Lucky Fox (Chapter Thirteen: Scipio of Merinita, p123): 5 stat blocks, one DEF each, as printed at each age, its printed stat lines verbatim fields.
+
+    #t56ca1bb7d8a5c83d9507ee ^"Felix the Lucky Fox" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Felix the Lucky Fox"
+            ^"Printed Name" STRING "Familiar: Felix the Lucky Fox"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Imaginem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -2
+            ^"Age" STRING "n/a"
+            ^"Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Friend; Great Quickness, Luck, Perfect Balance, Puissant Guile, Self-Confident, Well-Traveled; Wanderlust, Greedy (minor), Nocturnal"
+            ^"Magical Qualities and Inferiorities" STRING "Ritual Power, Gift of Speech, Improved Characteristics (x2), Improved Abilities (x3), Lesser Power, Personal Power; Reduced Attack"
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Bond Scores" STRING "Bronze +1, Silver +2, Gold +2"
+            ^"Powers" STRING "Perfect Liar, 4 points, Init +1, Corpus: (R: Voice, D: Sun, T: Group) Felix grants himself or someone else a +3 bonus on all Guile rolls. MuCo 20 (base 2, +2 Voice, +2 Sun, +2 Group): Lesser Power (20 levels, +1 Init) Grant Luck, 5 points, Init –6, Imaginem: (R: Touch, D: Mom, T: Ind, Ritual) Felix gives some of his luck to the target, granting him the Luck Virtue. No Hermetic equivalent: Ritual Power Human Form, 1 point, Init +2, Corpus: (R: Pe,r D: Sun, T: Ind) Gives the fox the body of a human. MuCo 20 (base 10, +2 Sun): Personal Power (20 levels, –1 Might cost)"
+            ^"Familiar Powers" STRING "none"
+            ^"Vis" STRING "2 pawns of Imaginem vis located in his twisted tail."
+            ^"Appearance" STRING "A small red fox with an exceptionally long, twisted tail. When he transforms into a human he speaks with a smooth voice, has red hair with a red beard, green eyes, and normal stature."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 123
+        }
+        PERSONALITY_TRAITS {
+            "Fox" +3
+            "Wanderlust" +5
+            "Greedy" +3
+            "Carefree" +2
+        }
+        COMBAT {
+            "Bite" INIT 4 ATTACK 5 DEFENSE 7 DAMAGE -2
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "sprinting"
+            "Area Lore (Normandy)" SCORE 3 SPECIALTY "towns"
+            "Artes Liberales" SCORE 1 SPECIALTY "reading"
+            "Awareness" SCORE 3 SPECIALTY "coins"
+            "Bargain" SCORE 3 SPECIALTY "hard sell"
+            "Brawl" SCORE 1 SPECIALTY "bite"
+            "Carouse" SCORE 3 SPECIALTY "drinking"
+            "Charm" SCORE 3 SPECIALTY "first impressions"
+            "Folk Ken" SCORE 3 SPECIALTY "peasants"
+            "Guile" SCORE 5 BONUS 2 SPECIALTY "fast talking"
+            "High French" SCORE 5 SPECIALTY "peasants"
+            "Hunt" SCORE 3 SPECIALTY "birds"
+            "Latin" SCORE 4 SPECIALTY "magi"
+            "Legerdemain" SCORE 3 SPECIALTY "picking pockets"
+            "Magical Lore" SCORE 3 SPECIALTY "forest"
+            "Magic Theory" SCORE 2 SPECIALTY "Imaginem"
+            "Music" SCORE 3 SPECIALTY "singing"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "forest"
+        }
+        DESCRIPTION "Felix stepped into this world with an intense urge to wander, visit the humans, and take part in their lives. In the great city of Paris he improved his skill at lying, gambling, and thieving, and felt as though he was now perfect. But the time away from his Magic aura weakened his powers, and he also attracted some demons who wanted to make him a member of their realm. But luckily Scipio (30 years out of his Gauntlet) found him before he was lured away, saving him from losing more of his powers and becoming Infernal. After this, both traveled to many countries, adventuring and getting into a great deal of trouble that they both survived thanks to their immense luck."
+    }
+
+    #t1f407504260ca58e5b28a8 ^"Felix +15 Years" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Felix the Lucky Fox"
+            ^"Magical Qualities and Inferiorities" STRING "Ritual Power, Gift of Speech, Improved Characteristics (x2), Improved Abilities (x4), Lesser Power, Personal Power; Reduced Attack"
+            ^"Abilities" STRING "Athletics 3 (sprinting), Area Lore (Normandy) 3 (towns), Artes Liberales 2 (reading), Awareness 3 (coins), Bargain 3 (hard sell), Brawl 1 (bite), Carouse 3 (drinking), Charm 3 (first impressions), Folk Ken 3 (peasants), Guile 5+2 (5) (fast talking), High French 5 (peasants), Hunt 3 (birds), Latin 4 (magi), Legerdemain 3 (picking pockets), Magical Lore 3 (forest), Magic Theory 4 (Imaginem), Music 3 (singing), Stealth 3 (hiding), Survival 3 (forest)"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 123
+        }
+    }
+
+    #t9193f6c02f0ab93eb331ed ^"Felix +30 Years" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Felix the Lucky Fox"
+            ^"Magical Qualities and Inferiorities" STRING "Ritual Power, Gift of Speech, Improved Characteristics (x2), Improved Abilities (x5), Lesser Power, Personal Power (2x); Reduced Attack"
+            ^"Powers" STRING "Sight Beyond Sight, 1 point, Animal (R: Per, D: Conc, T: Vision): All five senses operate at a distance, as far as he can see. This gives him supernatural awareness of everything that occurs, and it is exceptionally difficult to catch him by surprise, InIm 30 (base 5, +1 Conc, +4 Vision): Personal Power x 2 (20 levels, –2 Might cost, +2 Init)"
+            ^"Familiar Powers" STRING "Shared Senses"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 123
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "sprinting"
+            "Area Lore (Normandy)" SCORE 3 SPECIALTY "towns"
+            "Artes Liberales" SCORE 2 SPECIALTY "reading"
+            "Awareness" SCORE 3 SPECIALTY "coins"
+            "Bargain" SCORE 3 SPECIALTY "hard sell"
+            "Brawl" SCORE 1 SPECIALTY "bite"
+            "Carouse" SCORE 3 SPECIALTY "drinking"
+            "Charm" SCORE 3 SPECIALTY "first impressions"
+            "Folk Ken" SCORE 3 SPECIALTY "peasants"
+            "Guile" SCORE 6 BONUS 2 SPECIALTY "fast talking"
+            "High French" SCORE 5 SPECIALTY "peasants"
+            "Hunt" SCORE 3 SPECIALTY "birds"
+            "Latin" SCORE 4 SPECIALTY "magi"
+            "Legerdemain" SCORE 3 SPECIALTY "picking pockets"
+            "Magical Lore" SCORE 3 SPECIALTY "forest"
+            "Magic Theory" SCORE 5 SPECIALTY "Imaginem"
+            "Music" SCORE 3 SPECIALTY "singing"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "forest"
+        }
+    }
+
+    #t150798f1561d7a33e8488d ^"Felix +45 Years" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Felix the Lucky Fox"
+            ^"Magical Qualities and Inferiorities" STRING "Ritual Power, Gift of Speech, Improved Characteristics (x2), Improved Abilities (x6), Lesser Power, Personal Power (2x); Reduced Attack"
+            ^"Bond Scores" STRING "Bronze +1, Silver +3, Gold +3"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 123
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "sprinting"
+            "Area Lore (Normandy)" SCORE 3 SPECIALTY "towns"
+            "Artes Liberales" SCORE 2 SPECIALTY "reading"
+            "Awareness" SCORE 3 SPECIALTY "coins"
+            "Bargain" SCORE 3 SPECIALTY "hard sell"
+            "Brawl" SCORE 1 SPECIALTY "bite"
+            "Carouse" SCORE 4 SPECIALTY "drinking"
+            "Charm" SCORE 3 SPECIALTY "first impressions"
+            "Folk Ken" SCORE 3 SPECIALTY "peasants"
+            "Guile" SCORE 6 BONUS 2 SPECIALTY "fast talking"
+            "High French" SCORE 5 SPECIALTY "peasants"
+            "Hunt" SCORE 3 SPECIALTY "birds"
+            "Latin" SCORE 4 SPECIALTY "magi"
+            "Legerdemain" SCORE 3 SPECIALTY "picking pockets"
+            "Magical Lore" SCORE 4 SPECIALTY "forest"
+            "Magic Theory" SCORE 5 SPECIALTY "Imaginem"
+            "Music" SCORE 3 SPECIALTY "singing"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "forest"
+        }
+    }
+
+    #tc100c96d33c0bc088b4224 ^"Felix +60 Years" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Felix the Lucky Fox"
+            ^"Magical Qualities and Inferiorities" STRING "Ritual Power, Gift of Speech, Improved Characteristics (x2), Improved Abilities (x8), Lesser Power, Personal Power (2x); Reduced Attack"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 123
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "sprinting"
+            "Area Lore (Normandy)" SCORE 3 SPECIALTY "towns"
+            "Artes Liberales" SCORE 2 SPECIALTY "reading"
+            "Awareness" SCORE 3 SPECIALTY "coins"
+            "Bargain" SCORE 3 SPECIALTY "hard sell"
+            "Brawl" SCORE 1 SPECIALTY "bite"
+            "Carouse" SCORE 4 SPECIALTY "drinking"
+            "Charm" SCORE 3 SPECIALTY "first impressions"
+            "Folk Ken" SCORE 4 SPECIALTY "peasants"
+            "Guile" SCORE 7 BONUS 2 SPECIALTY "fast talking"
+            "High French" SCORE 5 SPECIALTY "peasants"
+            "Hunt" SCORE 3 SPECIALTY "birds"
+            "Latin" SCORE 4 SPECIALTY "magi"
+            "Legerdemain" SCORE 4 SPECIALTY "picking pockets"
+            "Magical Lore" SCORE 4 SPECIALTY "forest"
+            "Magic Theory" SCORE 6 SPECIALTY "Imaginem"
+            "Music" SCORE 3 SPECIALTY "singing"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "forest"
+        }
+    }
+
+}

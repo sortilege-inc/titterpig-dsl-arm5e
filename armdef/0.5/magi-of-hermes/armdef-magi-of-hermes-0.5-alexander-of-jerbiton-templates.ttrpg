@@ -1,0 +1,203 @@
+EXTENSION "ARMDef_Magi_of_Hermes_AlexanderOfJerbiton_Templates" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Chapter One: Alexander of Jerbiton templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t93ee3be40b6447e5f537a2 TEMPLATE "Asp (Egyptian Cobra)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER -6
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Ferocity (self defense), Lightning Reflexes, Infamous"
+            ^"Qualities" STRING "Ambush Predator, Loathsome Appearance, Venomous"
+            ^"Reputations" LIST ["Venomous +5 (much of Arabia)", "Venomous +3 (among the literati of Europe)"]
+            ^"Combat" STRING "Bite: Init +2, Attack +8, Defense +6, Damage –5 See Venomous Bite in Powers, below."
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1, (1–2), –3 (3–4), –5 (5–6) incapacitated (7+)"
+            ^"Powers" STRING "Venomous Bite, 0 Points, Init 0. When the cobra attacks, compare its Attack Advantage to the victim’s armor Protection (not his Soak). If the cobra’s advantage is higher, the victim suffers the effects of asp bite venom as listed in the Poison Table on page 180 of ArM5, regardless of whether the bite inflicts an actual wound. The Storyguide may adjust the required Attack Advantage for special circumstances: for instance, high boots might offer an effective Protection +3 against the cobra’s special attack even though they don’t protect against normal attacks."
+            ^"Appearance" STRING "The asp is a large snake, weighing up to 20 pounds and reaching three paces in length. When threatened it raises its hood, which is a hand wide, and sways. It does not spit its venom."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 10
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "prey"
+            "Brawl" SCORE 2 SPECIALTY "fangs"
+            "Hunt" SCORE 4 SPECIALTY "rodents"
+            "Stealth" SCORE 4 SPECIALTY "stalking prey"
+            "Survival" SCORE 3 SPECIALTY "local environment"
+        }
+        DESCRIPTION "Asps are generally nocturnal, but are not so disadvantaged by daylight as to earn the Flaw of the same name."
+    }
+
+    #tf7c6f2e6fec92664b509bb TEMPLATE "Bat" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -18
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 11
+            }
+            ^"Size" INTEGER -9
+            ^"Confidence Score" STRING "0"
+            ^"Virtues and Flaws" STRING "Eyes of the Bat (see Powers, below), Nocturnal"
+            ^"Qualities" STRING "Accomplished Flyer, Sharp Ears"
+            ^"Reputations" LIST ["Servant of evil +1 (much of Europe)"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3,–5, Unconscious"
+            ^"Wound Penalties" STRING "Incapacitated (1+)"
+            ^"Powers" STRING "Eyes of the Bat, 0 points, Init 0: Bats see in much the same way as magi using the spell Eyes of the Bat."
+            ^"Appearance" STRING "Leathery flying rodents, attractive for those used to the strange aesthetic of the creatures. Bats are able to find their way in complete darkness, but find sunlight unpleasant."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 10
+        }
+        COMBAT {
+            "Bite" INIT 11 ATTACK 7 DEFENSE 14 DAMAGE -17
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "flying"
+            "Awareness" SCORE 4 SPECIALTY "food"
+            "Brawl" SCORE 2 SPECIALTY "dodging"
+            "Survival" SCORE 3 SPECIALTY "home terrain"
+        }
+        DESCRIPTION "In emergency situations, where food has been scarce, Alexander has occasionally turned his group into bats, fed them insects or tiny amounts of fruit, and then allowed the spell to lapse in the morning. A well-nourished bat transforms into a well-nourished human, so this extends an expedition’s supplies markedly. Grogs find the thought of eating insects distasteful, but while in bat form their senses of smell and taste make insects a delicacy."
+    }
+
+    #td01f6f5cb5e611829082c3 TEMPLATE "Camel" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -2
+            }
+            ^"Printed Size" STRING "+2 Confidence Score: 0"
+            ^"Virtues and Flaws" STRING "Smell Water (see Powers, below), Survive Without Water (see Powers, below)."
+            ^"Qualities" STRING "Herd Animal"
+            ^"Reputations" LIST ["Cranky +1 (much of Arabia)"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1, (1–7), –3 (8–14), –5 (15–21) Incapacitated (22+)"
+            ^"Powers" STRING "Smell Water, 0 Points, Init 0: The camel can smell drinkable water for a distance of up to two miles. Survive Without Water, 0 points, Init 0: The camel can survive without water for up to two weeks."
+            ^"Appearance" STRING "Alexander becomes a dromedary, single-humped Arabian camel."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 10
+        }
+        COMBAT {
+            "Kick" INIT 0 ATTACK 4 DEFENSE 2 DAMAGE 2
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "predators"
+            "Brawl" SCORE 2 SPECIALTY "dodging"
+            "Survival" SCORE 3 SPECIALTY "home terrain"
+        }
+        DESCRIPTION "Camels are well adapted to arid environments. They can find water by smell: open water sources have the same distinct smell as the air after rain. Camels can survive without water for extended periods, and are able to travel in mild sandstorms without harm. Their hooves have a unique design that splays when they travel on loose-packed surfaces, like sand, so that they do not sink into it as deeply as a human or hoofed animal does. This allows them to travel more swiftly on sand than horses, and to be less fatigued by running on sand than other animals are."
+    }
+
+    #td6447d3f0f5b63a9d9fd52 TEMPLATE "Crocodile" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Ferocity (Ambush),"
+            ^"Qualities" STRING "Aggressive, Ambush Predator, Amphibious, Camouflage, Crushing jaws, Roll Attack, Tough Hide Crocodiles can hold their breath for half an hour if moderately active, and two hours if inactive. The ripple-dampening camouflage of crocodiles is effective even when they are moving slowly in water. See Powers section, below."
+            ^"Combat" STRING "Bite: Init +3, Attack +10, Defense +9, Damage +6 Gains +3 if it takes its prey by surprise, for the first round only (Ambush Predator). Includes a +3 bonus for Crushing Jaws: reflects the fact that although crocodiles are not particularly strong compared to humans, the muscles with which they bite down are tremendously powerful. The muscles which open its mouth are comparatively weak. A human may hold a crocodile’s jaws closed with a successful Grapple."
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1, (1–8), –3 (9–16), –5 (17–24) Incapacitated (25+)"
+            ^"Powers" STRING "Death Roll: 0 points, Init +3: A crocodile that has successfully bitten a foe may roll in the following round. When a crocodile rolls, it either twists away a chunk of the flesh of its victim (doing +6 damage) or, if possible, drags its victim beneath the surface of the water. It then uses its Amphibious Quality to wait for the victim to drown. To prevent injury or submersion from a roll, the victim must treat this as a successful grappling attack with an Attack Advantage of 10. If a character is being drowned by a crocodile, the character may attempt to break free of the crocodile’s jaws each round. This requires the character to overcome a successful Grapple attack with an Attack Advantage of 10. If the character does break free, the crocodile is likely to bite again."
+            ^"Appearance" STRING "Crocodiles are very difficult to spot in the water, as they have special scales that prevent them leaving surface ripples when they swim, and are colored to provide camouflage."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 11
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "short sprints and lunges"
+            "Awareness" SCORE 3 SPECIALTY "food"
+            "Brawl" SCORE 5 SPECIALTY "in water"
+            "Hunt" SCORE 4 SPECIALTY "prey"
+            "Stealth" SCORE 4 SPECIALTY "stalking prey"
+            "Survival" SCORE 3 SPECIALTY "river"
+            "Swim" SCORE 2 SPECIALTY "rivers"
+        }
+        DESCRIPTION "Crocodiles have a sense of the movement of water around their bodies, which allows them to track nearby moving objects without looking at them."
+    }
+
+    #ta7761cdc74c30fb538f0f2 TEMPLATE "Lion" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 2
+            ^"Confidence Score" STRING "2 (6)"
+            ^"Virtues and Flaws" STRING "Ferocity (self-defense), Improved Characteristics (x2), Puissant Brawl, Self-Confident, Tough, Proud, Weakness (submission)"
+            ^"Qualities" STRING "Aggressive, Ambush Predator, Crafty, Good Jumper, Hardy, Imposing Appearance, Large Claws, Large Teeth, Tough Hide, Vocal Tough Hide gives it a Protection of +2."
+            ^"Reputations" LIST ["Fierce (local) 4"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Appearance" STRING "The lion is a legendary beast more often depicted in artwork than encountered in the flesh. It can weigh up to 490 pounds and have a body length of over ten feet. It has a short, broad muzzle with powerful jaws and teeth. Its coat is tawny and the male lion has a dark, shaggy mane. The fearsome roar of the lion can be heard from a great distance."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 11
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +5
+            "Fierce" +5
+        }
+        COMBAT {
+            "Claws" INIT 1 ATTACK 15 DEFENSE 12 DAMAGE 10
+            " Bite" INIT 1 ATTACK 13 DEFENSE 9 DAMAGE 9
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "pouncing"
+            "Awareness" SCORE 2 SPECIALTY "smell"
+            "Brawl" SCORE 5 SPECIALTY "claws"
+            "Hunt" SCORE 4 SPECIALTY "deer"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+            "Survival" SCORE 5 SPECIALTY "arid climates"
+        }
+    }
+
+}

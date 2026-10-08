@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_Magi_of_Hermes_JuliaOfExMiscellanea_TetrixTheBlackcock" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Tetrix the Blackcock"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # Tetrix the Blackcock (Chapter Six: Julia of Ex Miscellanea, p55): one being, its printed stat lines verbatim fields.
+
+    #tf2f3812881280c504826f2 ^"Tetrix the Blackcock" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Tetrix the Blackcock"
+            ^"Printed Name" STRING "Familiar: Tetrix the Blackcock"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Season" STRING "Summer"
+            ^"Might" INTEGER 12
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            ^"Personality Trait" STRING "Brave +3, Loyal to Julia +3, Inquisitive +1, Grouse (essential trait) +3"
+            }
+            ^"Size" INTEGER -2
+            ^"Confidence" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Gossip, Student of Faerie; True Friend; Clumsy, Non-Combatant from Familiar bond"
+            ^"Magical Qualities" STRING "Greater Power, No Fatigue; Gift of Speech, Improved Abilities, Improved Defense, Improved Abilities, Improved Soak"
+            ^"Qualities" STRING "Camouflage, Ambush Predator, Hardy"
+            ^"Soak" STRING "+7 (includes Bronze Cord)"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Powers" STRING "No Fatigue, 0 points, constant effect, Animal: Tetrix never gets tired. He has no fatigue levels, need not sleep, and cannot fall unconscious. Stand Your Ground, 2 points, Init +4, Corpus or Animal: By confronting a person or animal and raising himself to his full height, Tetrix can freeze his target in her tracks. He can hold her still for as long as he confronts her, or else spend another point of might and leave her stuck until he is no longer in her presence. ReCo(An) 20 (base 5, +1 Eye, +1 Conc, +1 requisite); Greater Power (30 levels, +4 Init, +10 levels Penetration) Snap of Awakening: Granted by the familiar bond, see main text for details. Silent Speech: Granted by the familiar bond, see main text for details."
+            ^"Vis" STRING "3 pawns, in feathers"
+            ^"Appearance" STRING "Tetrix is a male black grouse (also called a blackcock). He is a handsome bird, with black plumage, red wattles, white wing-bars, and a lyreshaped tail. Like other game birds, his body is long and usually held horizontally, but when he stands upright he is about four feet tall."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 55
+        }
+        COMBAT {
+            "Beak" INIT 2 ATTACK 7 DEFENSE 7 DAMAGE -2
+            " Dodge" INIT 5 DEFENSE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "flying"
+            "Awareness" SCORE 4 SPECIALTY "food"
+            "Brawl" SCORE 4 SPECIALTY "dodging"
+            "Faerie Lore" SCORE 3 SPECIALTY "faerie animals"
+            "Hunt" SCORE 4 SPECIALTY "spiders"
+            "Low German" SCORE 3 SPECIALTY "Flemish"
+            "Magic Theory" SCORE 2 SPECIALTY "enchantment"
+            "Music" SCORE 2 SPECIALTY "grouse-songs"
+            "Penetration" SCORE 2 SPECIALTY "Stand Your Ground power"
+            "Stealth" SCORE 4 SPECIALTY "stalking insects"
+            "Survival" SCORE 5 SPECIALTY "moorland"
+        }
+        DESCRIPTION "Julia’s choice of familiar — a black grouse — was somewhat whimsical; she was struck by the pun of “textrix” (“weaver”) with “tetrix” (“grouse”), but discovered a bird who is a fierce hunter of spiders. They have become the closest of friends.\n\nTetrix is naturally expert at remaining hidden, and receives a +3 bonus to Stealth rolls whenever he is not moving. Grouse eat plant shoots and insects; when hunting the latter he has a +3 bonus to his Attack Total in the first round of combat if his opponent is unaware of his presence.\n\nThe Familiar Bond was forged with a Rego Animal Lab Total of 38: Gold Cord +2, Silver Cord +1, Bronze Cord +2 **(**Tetrix was created using the rules in *Realms of Power: Magic*, Chapter 4)"
+    }
+
+}

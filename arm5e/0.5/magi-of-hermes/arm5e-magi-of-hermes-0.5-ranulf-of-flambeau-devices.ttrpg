@@ -1,0 +1,234 @@
+EXTENSION "ArM5_Magi_of_Hermes_RanulfOfFlambeau_Devices" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Chapter Twelve: Ranulf of Flambeau devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Magi_of_Hermes_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb14c0e425275e959e332e4 ^"Preserved Connection" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Ribbon of Arcane Preservation"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 29
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Const"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 10, + 1 Touch, +2 Sun; Modifications +1 level 2 uses per day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "CrVi 29 Pen +0, constant effect R: Touch, D: Const, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 113
+        }
+        DESCRIPTION "When the Ribbon of Arcane Preservation is tied around an object, the magics in the ribbon work to delay the degradation of any Arcane Connections that the object has. Arcane Connections affected by the Effect will decay as if they had a duration two levels higher on the Arcane Connection chart (ArM5 page 84). Arcane Connections that normally decay in hours will instead decay in weeks while the ribbon is tied around them; Arcane Connections that normally decay in days instead decay in months. The penetration multiplier for an Arcane Connection is not altered by this affect.\n\n(Effect: Base 10, + 1 Touch, +2 Sun; Modifications +1 level 2 uses per day, +3 levels environmental trigger)"
+    }
+
+    #tdcd42e783dd8c2ef10c717 ^"Bed of the Resting Coal" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Chest of the Ember Seed"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 34
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "sun"
+            ^"Target" STRING "group"
+            ^"Effect Design" STRING "(Effect: Base 5, +2 Sun, +1 Touch, +2 Group; Modifications: +3 levels environmental trigger, +1 level 2 uses per day)"
+            ^"Printed Effect Line" STRING "Cr Ig 34 Pen +0, constant R: Touch, D: sun T:group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "Objects that are placed within this box are heated enough to glow red-hot. Ranulf’s apprentice uses this box to keep coals from a fire hot. These small portions of the original are Arcane Connections to the original fire with a Duration of Months (like a hair from a person or a feather from a bird). When a burning coal is grown into a larger fire this second fire remains an Arcane Connection to the first. While the Chest of the Ember Seed is in use, it becomes very hot over the course of hours and days. Ranulf’s apprentice regularly wraps up the apple-sized chest in an insulated box and uses cold water to cool the chest’s surface, and occasionally has had to resort to more drastic measures (such as Perdo Ignem spontaneous magic).\n\n(Effect: Base 5, +2 Sun, +1 Touch, +2 Group; Modifications: +3 levels environmental trigger, +1 level 2 uses per day)"
+    }
+
+    #tcd13a296aed7f71848e74e ^"Eyes of the Acolyte" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Laboratory of Ranulf"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 8
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Constant"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 2, +2 Sun; Modifications +1 level 2 uses per day +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InIg 8 Pen +0, constant effect R: Personal, D: Constant, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "This effect detects any fires in the laboratory larger than a lantern flame that are not in the fireplace or the product of the Facade of Pentecost power.\n\n(Effect: Base 2, +2 Sun; Modifications +1 level 2 uses per day +3 levels environmental trigger)"
+    }
+
+    #tf84522073b79a0d69136f6 ^"Laboratory that has Learned from Experience" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Laboratory of Ranulf"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 23
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 4, +3 more intense fires; Modifications +5 levels 24 uses per day +3 levels linked trigger)"
+            ^"Printed Effect Line" STRING "PeIg 23 Pen +0, 24/day R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "This effect is triggered by the Eyes of the Acolyte power. The Laboratory of Ranulf automatically extinguishes any fires that are detected by Eyes of the Acolyte. This effect is only capable of extinguishing fires that do +20 damage or less per round. This power can act to dispel Creo Ignem spells with Durations longer than Momentary, such as Coat of Flame, but it is not sufficiently quick to counter a spell as it is being cast. On those occasions where Ranulf desires to have fires in his laboratory that are larger than a lantern flame, not in the fireplace, or not the product of the Facade of Pentecost power, he exhausts the 24 daily uses of this effect.\n\n(Effect: Base 4, +3 more intense fires; Modifications +5 levels 24 uses per day +3 levels linked trigger)"
+    }
+
+    #t0c8c2e251e0ca9b76eb7ee ^"Facade of Pentecost" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Laboratory of Ranulf"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Requisite" STRING "Rego"
+            ^"Level" INTEGER 41
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "50/day, item maintains concentration"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Effect Design" STRING "(Effect: Base 10, +1 Rego requisite, +1 concentration, +2 group; Modifications +5 levels item maintains concentration, +6 levels 50/day)"
+            ^"Printed Effect Line" STRING "Cr(Re)Ig 41 Pen +0, 50/day, item maintains concentration R: Per D: Conc, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 114
+        }
+        DESCRIPTION "This effect calls into being up to ten flames that may appear at any specified point within the laboratory, even floating unsupported in mid-air. These flames burn without fuel until they are dismissed by the user or until sunrise/sunset. The flames move under the control of the user and can be used to flawlessly burn intricate patterns into objects, or to illuminate the laboratory in a myriad of ways. In theory, these flames could be used to defend the laboratory, with each flame doing +10 damage per round to a target. Ranulf has never had the need to defend his laboratory in this manner (although during the design of the item he did consider adding a linked trigger to an Intellego Animal effect so that any vermin intruding into the room would be automatically dispatched).\n\n(Effect: Base 10, +1 Rego requisite, +1 concentration, +2 group; Modifications +5 levels item maintains concentration, +6 levels 50/day)"
+    }
+
+    #tbeebcd487530e9f1e66a5b ^"Topiary of Flames" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Staff of Ranulf"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 44
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "12/day item maintains concentration"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind (+2 size)"
+            ^"Effect Design" STRING "(Effect: Base10, +2 Voice, +1 concentration, +2 size; Modifications +5 levels item maintains concentration, +4 levels 12x/day)"
+            ^"Printed Effect Line" STRING "ReIg 44 Pen +0, 12/day item maintains concentration R: Voice D: Conc, T: Ind (+2 size)"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "This effect re-shapes a single fire into a shape desired by the wielder. The fire may stretch and extend in any direction but it can not be pulled completely away from its source of fuel, nor can the volume of the fire be increased by this effect. Ranulf typically uses this effect to change large fires into walls, bridges, and staircases, often making these features very thin and delicate to stretch the fire as far as possible. No part of the fire’s new shape can be further than the range of the caster’s voice. A Finesse roll should be used if exceptional precision or targeting is required. This effect can target fires of tremendous size (up to 100 times the size of a standard Ignem individual fire).\n\n(Effect: Base10, +2 Voice, +1 concentration, +2 size; Modifications +5 levels item maintains concentration, +4 levels 12x/day)"
+    }
+
+    #t20397ef114d21b5b2d13ea ^"Flames of Stone" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Staff of Ranulf"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Ignem"
+            ^"Requisite" STRING "Terram"
+            ^"Level" INTEGER 38
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "3/day item maintains concentration"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind (+1 size)"
+            ^"Effect Design" STRING "(Effect: Base 10 +2 voice, +1 concentration, +1 size; Modifications +5 levels item maintains concentration, +3 levels 6 uses per day)"
+            ^"Printed Effect Line" STRING "MuIg(Te) 38 Pen +0, 3/day item maintains concentration R: Voice, D: Conc, T: Ind (+1 size)"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "This effect changes the flames of the target fire to be as hard and stable as stone. The flames still have no weight and the target fire still produces both heat and smoke. Ranulf often uses this effect in combination with the Topiary of Flames effect to create temporary structures. The target fire can be no larger than a small house or large hut (ten times the size of a standard Ignem individual).\n\n(Effect: Base 10 +2 voice, +1 concentration, +1 size; Modifications +5 levels item maintains concentration, +3 levels 6 uses per day)"
+    }
+
+    #t33dba7eab61a0e9d76ef02 ^"Shadow of Spring Times Departed" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Staff of Ranulf"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Requisite" STRING "Muto"
+            ^"Level" INTEGER 5
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1x/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 3, + 2 Sun)"
+            ^"Printed Effect Line" STRING "Cr(Mu)He 5 Pen +0, 1x/day R: Per, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "When Shadow of Spring Times Departed is active, the wooden sections of Ranulf’s talisman slowly repair themselves of damage by growing back to their original state. The talisman heals at the speed of well-watered grass growing, and only heals when exposed to sunlight and occasional water. Scratches in the wooden parts of the talisman disappear over the course of few days, while more-substantial damage to the staff could take months to heal. This instilled power naturally cannot be activated if the staff is completely broken. The Creo nature of this power makes the staff grow back to its ideal state rather than shooting forth roots, leaves, and limbs, while the Muto requisite allows dead wood to grow as if it were alive.\n\n(Effect: Base 3, + 2 Sun)"
+    }
+
+    #t8ac7d1e99ba21861158a19 ^"Surfeit of Fuel" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Staff of Ranulf"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 27
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "3/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group (+2 size)"
+            ^"Effect Design" STRING "(Effect: Base 4 +1 Touch +2 Sun, +2 size; Modifications +2 levels 3 uses per day)"
+            ^"Printed Effect Line" STRING "CrHe 27 Pen +0, 3/day R: Touch, D: Sun, T: Group (+2 size)"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "This effect conjures a pile of dry wood containing the mass of several large trees. While Ranulf does occasionally use this effect to provide an abundance of firewood, he more frequently finds the creation of a large pile of wood to be valuable for other reasons.\n\n(Effect: Base 4 +1 Touch +2 Sun, +2 size; Modifications +2 levels 3 uses per day)"
+    }
+
+    #t6b781ccb16adfe3b4c2214 ^"Shriek of the Impending Shafts (Magi of Hermes)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Shriek of the Impending Shafts"
+            ^"Part Of" STRING "Talisman: Staff of Ranulf"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 16
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "2x/day, item maintains concentration"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Hearing"
+            ^"Effect Design" STRING "(Effect: Base 2, +1 Concentration, +3 Hearing; Modifications +5 levels item maintains concentration, +1 level 2 uses per day)"
+            ^"Printed Effect Line" STRING "InHe 16 Pen +0, 2x/day, item maintains concentration R: Per, D: Conc T: Hearing"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "With the above exceptions, this effect functions as the spell Shriek of the Impending Shafts (ArM5, page 136).\n\n(Effect: Base 2, +1 Concentration, +3 Hearing; Modifications +5 levels item maintains concentration, +1 level 2 uses per day)"
+    }
+
+    #t9b3277f279c3fa262f89ab ^"Defense of the Roaring Furnace" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Staff of Ranulf"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 58
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses"
+            ^"Range" STRING "Special"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Effect: Base 30, + 3 Voice equivalent non-standard; Modifications +10 levels unlimited uses, +3 levels linked trigger)"
+            ^"Printed Effect Line" STRING "CrIg 58 Pen +0, unlimited uses R: Special D: Mom T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 115
+        }
+        DESCRIPTION "Defense of the Roaring Furnace burns any fast-moving wooden item that comes within a pace of the holder of Ranulf’s talisman with a blast of fire sufficiently intense to reduce arrows to ash and weaken pole arms to the point of snapping. Only wooden objects that are moving sufficiently fast to cause a person harm are targeted by this effect. The fires produced by this effect do +35 damage. The talisman will never target itself with this effect.\n\n(Effect: Base 30, + 3 Voice equivalent non-standard; Modifications +10 levels unlimited uses, +3 levels linked trigger)"
+    }
+
+}

@@ -1,0 +1,73 @@
+EXTENSION "ARMDef_Magi_of_Hermes_AurulentusOfJerbiton_ZenoTheTortoise" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Zeno the Tortoise"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # Zeno the Tortoise (Chapter Two: Aurulentus of Jerbiton, p19): one being, its printed stat lines verbatim fields.
+
+    #tad6b34aff1d34142c63443 ^"Zeno the Tortoise" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Zeno the Tortoise"
+            ^"Printed Name" STRING "Familiar: Zeno the Tortoise"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 15
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER -5
+            }
+            ^"Size" INTEGER -4
+            ^"Virtues and Flaws" STRING "Enduring Constitution, Long-Winded, Tough, Unaging; Noncombatant, Poor Eyesight, Reclusive"
+            ^"Qualities" STRING "Camouflage, Hardy, Shell, Timid, Tireless"
+            ^"Reputations" LIST ["Aurulentus’ Familiar (Covenant) 2"]
+            ^"Combat" STRING "Dodge: Init –5, Attack N/A, Defence: –5, Damage N/A"
+            ^"Soak" INTEGER 12
+            ^"Fatigue Levels" STRING "OK, 0/0, 0/0, –2/–2, –4, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Bond Scores" STRING "Bronze +3, Silver +1, Gold +1 (CrCo Lab Total 40)"
+            ^"Vis" STRING "Two pawns of Creo, in shell"
+            ^"Appearance" STRING "A turtle of about 20 cm in length with a brownish, slightly drably colored shell. Along the back of the shell, 15 lumps are visible, which could be mistaken for spine bones."
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 19
+        }
+        PERSONALITY_TRAITS {
+            "Reclusive" +3
+            "Timid" +2
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "food"
+            "Brawl" SCORE 2 SPECIALTY "dodge"
+            "High German" SCORE 5 SPECIALTY "Allemannisch"
+            "Latin" SCORE 5 SPECIALTY "Hermetic usage"
+            "Greek" SCORE 4 SPECIALTY "archaic vocabulary"
+            "Survival" SCORE 5 SPECIALTY "home terrain"
+        }
+        POWERS {
+            #t4ce261193c27b1f619d4b1 ^"Retreat of Invulnerability" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "By withdrawing completely into his shell, Zeno becomes invulnerable to all types of non-magical damage and attacks. He could be thrown off a 60-foot cliff, tossed into a huge bonfire, or hacked at with axes; he would emerge unscathed."
+            }
+            #tb5b831d053d8865035406b ^"Grant Virtue (Unaging)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Zeno can grant a single person the virtue Unaging for as long as he deems appropriate. Cancelling this effect takes one round of concentration and can be done without Zeno being able to sense the recipient and also without his consent. See *Guardians of the Forests, *page 32*. *Familiar Powers: * Mental Communication: *Zeno and Aurulentus are in constant mental contact, and can exchange words, images, and emotions. *(CrMe 15: Base 4, +1 Touch, +10 levels unlimited uses/day)*"
+            }
+        }
+    }
+
+}

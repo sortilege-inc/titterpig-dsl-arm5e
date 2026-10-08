@@ -1,0 +1,215 @@
+EXTENSION "ArM5_Magi_of_Hermes_PetalichusOfVerditius_Devices" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Chapter Eleven: Petalichus of Verditus devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Magi_of_Hermes_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tc0d09a3edee3380567e5b3 ^"The Cloak of Authority" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "12/day"
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "ReMe 24 R: Eye, D: Sun, T: Ind Pen +0, 12/day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "This exquisite ceremonial cloak, embroidered with majestic and astrological iconography, was designed for a mundane noble who, in the way of Byzantine politics, was uncertain of the loyalty of those around him. The cloak is invested with The Aura of Rightful Authority (ArM5, page 151) with 12 uses per day. The jeweled clasp at the cloak’s throat forms the focus for the Eye contact Range, and the device is activated through stroking this clasp.\n\nThis cloak brought Petalichus to the attention of the Tribunal. His handiwork was recognized and charges of interfering with mundanes were brought against him for giving such a device to a man known to have lofty ambitions. Petalichus defeated the charge by producing his Lab Text for the device and proving that he had imbued no Penetration, thereby ensuring that the Divinely ordained natural order (*Realms of Power: The Divine*, page 42) could not be upset.\n\n(base5, +1 Eye, +2 Sun; +4 12/day)"
+    }
+
+    #t803bcaabe64b84a8c4800e ^"Come No Further" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Sanctum Door Hanging"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 45
+            ^"Penetration" STRING "+12"
+            ^"Uses" STRING "Constant Effect Expires: 70 Years"
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Effect: base 4, +3 Sight, +2 Sun, +2 Room; Modifications: +1 2/day, +3 environmental trigger, +6 penetration)"
+            ^"Printed Effect Line" STRING "CrMe 45 Pen +12, Constant Effect Expires: 70 Years R: Sight, D: Sun, T: Room"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "This constant effect causes all those who pass in front of or approach the tapestry to feel distinctly uneasy in its presence. Those affected by the spell must succeed in a Brave (or other appropriate) personality trait stress roll against an Ease Factor of 9 in order to touch the tapestry. The effect has a Penetration of +12, sufficient perhaps to warn off apprentices or inexperienced magi.\n\n(Effect: base 4, +3 Sight, +2 Sun, +2 Room; Modifications: +1 2/day, +3 environmental trigger, +6 penetration)"
+    }
+
+    #t5122edf2ebe82f35d5ece7 ^"The Weight of All Perdition Be Upon You" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Sanctum Door Hanging"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Requisite" STRING "Perdo, Corpus"
+            ^"Level" INTEGER 35
+            ^"Penetration" STRING "+20"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "Cr(Pe)Me(Co) 35 R: Touch, D: Mom, T: Ind Pen +20"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION ", Unlimited use Expires: 70 Years On touching the tapestry, the target feels a scalding pain in whatever part of his body came into contact with it. The pain does no damage and fades over the next few seconds, but it feels like a deep burn and the memory lingers.\n\nAlongside the pain, the target hears a thousand demonic voices crying out for his soul inside his mind in some unholy language. The affected target must succeed in a Brave Personality Trait against an Ease Factor of 9 in order to pass the tapestry. If the target has previously been affected by the *Come No Further* effect, he receives a –3 penalty to the roll.\n\n(base 4, +1 Touch, +2 requisites; +10 unlimited/day, +10 penetration)"
+    }
+
+    #tad6c527ef2bd6e8fa9245a ^"The Light of Fell Disease" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 30
+            ^"Penetration" STRING "+0"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Room"
+            ^"Printed Effect Line" STRING "PeCo 30 R: Touch, D: Mom, T: Room Pen: +0"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "Byzantine politics can be as swift and brutal as any in Venice or Rome, and on more than one occasion Petalichus has resorted to baser measures to dispose of those who might stand in his way. This enchanted candle (created as a charged device with one charge per candle), when lit, unleashes the deadly disease Variola (Small Pox), affecting all in the same room as the candle.\n\nThis version of the device has no Penetration, so cannot affect any potential targets with Magic Resistance. And as the Duration is Momentary, the disease is not communicable (however, in their weakened state, victims may become infected with further plagues and these may be passed on to others).\n\nAll those affected by the effect must make a Stamina + Living Conditions Modifier + Wound Penalty + stress die roll against an Ease Factor of 9. Failing the roll means the target has contracted the disease.\n\nEach week that the target is attended to by a physician, he makes a Stamina + Medicine + (the worse of the Fatigue or Wound Penalty) + stress die roll against an Ease Factor of 9 to remain stable, or 15 to improve. If the target’s condition worsens, he loses a Long-term Fatigue level that cannot be regained except through medical treatment. An improvement is represented by regaining a Long-term Fatigue Level. If the character goes beyond the Unconscious level, there is nothing more that can be done except to call for a priest.\n\nThe candles that carry this effect are easily spotted by those who know what to look for. They bear small inscriptions that spiral up the shaft of the candle that may be recognized as having Perdo Corpus resonances, but to the untrained eye they may simply look more elaborate than is necessary for a simple candle.\n\nQuaesitor Valeria of the covenant of Donum Chanuti uncovered evidence that Petalichus had used such a device in the murder of Thomas Roxbury, a notary in the employ of House Guernicus, when his pursuit of Solar Magnus led him to Canterbury.\n\n(base 20 +1 Touch, +2 Room)"
+    }
+
+    #tf9c7357f1c2264277ec81e ^"Dreams You Shall Not Wake From" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 48
+            ^"Penetration" STRING "+30"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Room"
+            ^"Printed Effect Line" STRING "CrIg 48 R: Touch, D: Mom, T: Room Pen: +30"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 104
+        }
+        DESCRIPTION ", 1 charge This charged device, each charge in the form of a single bedsheet, is triggered through a target laying upon it. It contains a powerful Creo Ignem effect that creates a raging magical fire that starts at the sheet and instantly spreads to take in everything in the room (the extent of the magical target). The fire may spread beyond the room as the heat and flames burn naturally once the magical impetus finishes.\n\nIn the round the device is triggered, all targets within the room take +20 damage from the intense searing fire. This is a magical attack and can be resisted. Until the fire is put out or the target(s) leave the area, they continue to take +10 damage each round from natural fire. Storyguides may want to consider further effects on the target building after such an explosive blaze. The impact table in **ArM5**, page 181, may help.\n\nThrough subterfuge, Petalichus successfully deployed this device in his infamous defeat of Solar Magnus in Canterbury. He had learned of his enemy’s cyclic magic and knew when his magic resistance would be at its weakest.\n\n(base 15 +1 Touch, +2 Room; +15 penetration, +3 environmental trigger)"
+    }
+
+    #t67b6796b5ca872595f8e4f ^"The Map of Many Places" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Requisite" STRING "Rego, Animal"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/Day"
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Vision"
+            ^"Printed Effect Line" STRING "In(Re)Im(An) 25 R: Sight, D: Mom, T: Vision Pen: +0, 1/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 104
+        }
+        DESCRIPTION "This device is a woven cloth map that has the ability to re-weave itself, redrawing the map to fit with its current location. It works by taking the image of the immediate area, as though from 100 paces straight up, and then re-weaving the threads in the map to match what it has seen.\n\nThe effect is refined enough to pick out any constraining city walls and, if cast within those walls, will only map that area. The map is not accurate enough to represent smaller streets and alleys, or pick out individual buildings unless they are sizable, such as churches.\n\nIf used with Hermetic Geometry Arcane Line, Circle, and Ring spells, the map reduces the Distance Level by 1 (see *The Mysteries Revised Edition*, page 95). This is cumulative with other tools.\n\n(base 1, +3 Sight Range, +4 Sight Target, +1 complexity)"
+    }
+
+    #t436c6563a3d4c7432ec118 ^"The Convenient Door" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Requisite" STRING "Herbam"
+            ^"Level" INTEGER 25
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/Day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Structure"
+            ^"Printed Effect Line" STRING "ReTe(He) 25 R: Touch, D: Diam, T: Structure Pen: +0, 1/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 104
+        }
+        DESCRIPTION "The small cloth chalk bag hanging on Petalichus’ belt is another of his enchantments. By using the chalk from the bag to draw an outline on a wall, the magi triggers an effect that opens up a hole in that wall or structure by moving the Terram or Herbem components of the wall aside. The result is a direct line of sight between the caster and open air or to some substance that is not part of the structure.\n\nMinor obstacles such as chairs, tables, or other furniture do not obstruct the effect. The effect is strong enough to affect stone and glass but not metal. The size of the holes created by the effect are determined by the size of the chalk outline, but they cannot be made larger than is necessary for the caster to step comfortably through.\n\nThe Structure Target allows the effect to force holes through several walls in the same casting. This effect works no matter which surface the outline is drawn on — whether a wall, a ceiling, or a floor (though of course lead roofs cause this spell to fail at the last).\n\nThis is an unnatural movement and the walls knit back together at the end of the effect’s duration with little or no evidence of there having been a disturbance. Consistent with his sigil, the holes appear to be like tears through cloth.\n\nThe chalk in the bag is non-magical and is incidental, being used simply to activate the effect. The effect itself is generated by the bag, which is decorated with images of doors on each of its four panels.\n\n(base 4, +1 Touch, +1 Diameter, +3 Structure, +1 Herbam requisite, +1 affect stone)"
+    }
+
+    #t93e21e0b84845b09a81718 ^"The Worldly Halysis" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Greater Numerologist’s Book"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 10
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "3/Day"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "InTe 10 R: Arc, D: Mom, T: Ind Pen: +0, 3/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 104
+        }
+        DESCRIPTION "This effect informs the caster of the exact distance, expressed in paces, from his current location to the location described by the Arcane Connection.\n\nThis effect combines well with other spells using the Arcane Line Range, Arcane Circle Target and Arcane Ring Duration (all granted by the Hermetic Geometry Mystery Virtue) as it reduces the time the caster needs to spend calculating the distance between the caster and the target. Using this effect reduces the Distance Level (see *The Mysteries Revised Edition*, page 95) between the caster and his target by 3. So a target at Distance Level 8 (180 – 225 paces) can be targeted as though he were at Distance Level 5 (75 – 105 paces).\n\nAlthough the effect provides an accurate number of paces between caster and target, this number must still be included in the caster’s calculations for remote spell-casting, hence the reduction in the Distance Level rather than an outright negation of it.\n\nThe effect is named for the Halysis, an ancient Greek measuring chain used by mathematicians and engineers to ensure measurements were constant and correct.\n\n(base 2, +4 Arcane Connection; +2 3/day)"
+    }
+
+    #t469744bf3ca5789d1b89fc ^"The Bodily Halysis" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Greater Numerologist’s Book"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 32
+            ^"Penetration" STRING "+30"
+            ^"Uses" STRING "3/Day"
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Effect Line" STRING "InCo 32 R: Arcane Connection D: Momentary T: Individual Pen: +30, 3/Day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 105
+        }
+        DESCRIPTION "As The Worldly Halysis except that this effect operates through the form of Corpus and informs the caster of the exact number of paces between the caster and the target described by the Arcane Connection.\n\n(base 3, +4 Arcane Connection; +2 3/ day, +15 penetration)"
+    }
+
+    #t3d82b6bb3917c419ce450d ^"The Invisible Eye Revealed (variant)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Distaff of Petalichus"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 29
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Touch"
+            ^"Printed Effect Line" STRING "InVi 29 R: Per, D: Sun, T: Touch Pen: +0, Constant Effect"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 105
+        }
+        DESCRIPTION "This effect operates as per the spell of the same name (**ArM5**, page 157) with the exception that it has a constant effect, detecting scrying spells of up to level 30 (the base level of this effect is 15). Note that all scrying attempts are detected, whether they breach Petalichus’ Parma Magica or not.\n\nAs Petalichus enchanted this effect into his talisman, he feels the effect of the spell each time he takes up or carries his staff.\n\n(base 15, +2 Sun; +4 constant effect)"
+    }
+
+    #t9a008c98132f8e861f51e6 ^"The Gaze of Others" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: Distaff of Petalichus"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 17
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "50/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Effect Line" STRING "CrIg 17 R: Per, D: Conc, T: Ind, Pen: +0, 50/day"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 105
+        }
+        DESCRIPTION "Triggered by The Invisible Eye Revealed also installed in the talisman.\n\nWhen *The Invisible Eye Revealed* effect detects a scrying attempt, several of the white inscriptions on the staff glow with a soft light. The effect is subtle and barely noticeable in daylight, but Petalichus is a suspicious man and always keeps a watchful eye on his talisman when he doesn’t have it in his hand.\n\n(base 2, +1 Concentration; +6 levels 50/day, +5 item maintains concentration, +3 triggered effect)"
+    }
+
+}

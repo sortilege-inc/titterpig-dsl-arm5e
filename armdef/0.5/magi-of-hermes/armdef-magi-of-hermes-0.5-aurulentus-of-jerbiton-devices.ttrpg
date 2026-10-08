@@ -1,0 +1,366 @@
+EXTENSION "ARMDef_Magi_of_Hermes_AurulentusOfJerbiton_Devices" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Chapter Two: Aurulentus of Jerbiton devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t99ccf84e2f0db93fcac721 ^"Movement of the Toys" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Army of the Infant"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 20
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Diam, +2 Group, +10 levels unlimited uses per day)"
+            ^"Printed Effect Line" STRING "ReHe 20 Pen +0, unlimited uses/day R: Per, D: Diam, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "Enchants the wooden parts of the toys such that they are capable of small, controlled movements.\n\n(Base 3, +1 Diam, +2 Group, +10 levels unlimited uses per day)"
+    }
+
+    #t0f416c1631dba6d2718b37 ^"Sounds of the Toys" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Army of the Infant"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 20
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Diam"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 1, +1 Diam, +2 Group, +2 at command, +10 levels unlimited uses per day)"
+            ^"Printed Effect Line" STRING "CrIm 20 Pen +0, unlimited uses/day R: Per, D: Diam, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "Creates sounds appropriate for the toy. Full speech is not possible at this level of detail, so the soldiers just shout and yell rather than speak.\n\n(Base 1, +1 Diam, +2 Group, +2 at command, +10 levels unlimited uses per day)"
+    }
+
+    #tf63394f4ea27a4e0cc7515 ^"Identify the Lecherous Suitor" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Bachelor’s Door"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 5, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InMe 24 Pen +0, constant effect R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "Reads the emotions of any person passing through the doorway. If strong feelings of lust towards a female in the room are sensed, the second effect, Bar the Lecherous Suitor is triggered.\n\n(Base 5, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+    }
+
+    #tbfea9102f39b531a7de219 ^"Bar the Lecherous Suitor" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Bachelor’s Door"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 33
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 15, +1 Touch, +1 Conc, +5 levels device maintains concentration, +3 levels triggered effect)"
+            ^"Printed Effect Line" STRING "ReCo 33 Pen +0, 1/day R: Touch, D: Conc, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "If this effect penetrates, then no human target may pass the doorway into the antechamber.\n\n(Base 15, +1 Touch, +1 Conc, +5 levels device maintains concentration, +3 levels triggered effect)"
+    }
+
+    #tac805e4e2d774b2b57fcf3 ^"Bed of Rapid Convalescence" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 34
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 15, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "CrCo 34 Pen +0, constant effect R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "A leather sick-bed engraved with Creo and Corpus runes, as well as symbols of Apollon, the Greek god of healing. Anyone resting in this bed receives a +18 bonus to his recovery rolls, as long as he remains in the bed for the whole of the recovery period. Aurulentus created this item as a lesser enchanted device.\n\n(Base 15, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+    }
+
+    #tc044fb9d7135625a68e75d ^"Comb of Aphrodite" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 15
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +10 levels unlimited uses per day)"
+            ^"Printed Effect Line" STRING "PeAq 15 Pen +0, unlimited uses/day R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "This comb instantly dries any hair that passes through its teeth. Aurulentus contrived this lesser enchanted device for his wife as a birthday present, after she complained that he should use his magic for more practical purposes.\n\n(Base 4, +1 Touch, +10 levels unlimited uses per day)"
+    }
+
+    #t6f5c037da6b4f0c994b3b3 ^"Communication of the Lovers" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 21
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "2/day"
+            ^"Range" STRING "Arc"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 2, +4 Arc, +1 Conc, +5 levels item maintains concentration, +1 level 2 uses/day)"
+            ^"Printed Effect Line" STRING "InIm 21 Pen +0, 2/day R: Arc, D: Conc, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "Two matching silver amulets, each being an Arcane Connection to the other. When activated, this lesser enchanted device allows one to see and hear the person holding the matching amulet. Aurulentus uses these to communicate with his wife when they are separated. Because the device has no Penetration, Aurulentus must suppress his Parma in order to for his wife to be able to see him. The remaining problem, that both sides need to activate the amulets at the same time, was solved by casting a small CrIm spell at R: Arc, to indicate to his wife that he had the time to talk to her. Due to the hazards of leaving Arcane Connections in other persons’ hands and the constant scrying danger, few other magi think such devices are a good idea.\n\n(Base 2, +4 Arc, +1 Conc, +5 levels item maintains concentration, +1 level 2 uses/day)"
+    }
+
+    #t6ed47296ac17781d472430 ^"The Sound of Sound Sleep (Crib with a Mother’s Touch)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Sound of Sound Sleep"
+            ^"Part Of" STRING "Crib with a Mother’s Touch"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 8
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 1, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InIm 8 Pen +0, constant effect R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 23
+        }
+        DESCRIPTION "Listens to the baby in the crib. When the baby starts to scream, the second effect is triggered.\n\n(Base 1, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+    }
+
+    #te1f362b5fa82364a3e5c8a ^"Rocking into Sound Sleep" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Crib with a Mother’s Touch"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 17
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24 uses/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Conc, +5 levels item maintains concentration, +5 levels 24 uses/day, +3 levels triggered effect)"
+            ^"Printed Effect Line" STRING "ReHe 17 Pen +0, 24 uses/day R: Per, D: Conc, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Once triggered by the first effect, this effect will rock the crib slightly, hopefully resulting in a content and sleepy baby. Once the baby’s crying stops, the crib stops rocking.\n\n(Base 3, +1 Conc, +5 levels item maintains concentration, +5 levels 24 uses/day, +3 levels triggered effect)"
+    }
+
+    #t1c5ebfb4d9c860bd277500 ^"Who Touches my Daughter?" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Guardian of Decency"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 19
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InCo 19 Pen +0, constant effect R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Detects if the wearer is touched by a man, and then triggers the second effect.\n\n(Base 4, +1 Touch, +2 Sun, +1 level 2 uses/day, +3 levels environmental trigger)"
+    }
+
+    #t394efc1986b679893c0d18 ^"Dare Not Touch my Daughter!" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Guardian of Decency"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 30
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "3/day"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 5, +2 Voice, +2 Sun, +2 levels for 3 uses/day, +3 levels triggered effect)"
+            ^"Printed Effect Line" STRING "PeMe 30 Pen +0, 3/day R: Voice, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Once triggered by the first effect, this effect renders the target completely bereft of lust — he will no longer feel indecent passions towards the wearer of the necklace, or indeed, any woman.\n\n(Base 5, +2 Voice, +2 Sun, +2 levels for 3 uses/day, +3 levels triggered effect)"
+    }
+
+    #t9bbcfba6ef54f6c4a782b7 ^"A Guardian’s Voice" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Guardian of Decency"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 11
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 1, +10 levels for unlimited uses/day)"
+            ^"Printed Effect Line" STRING "CrIm 11 Pen +0, unlimited uses/day R: Per, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Emits a quiet, but audible humming, so that the effect Dare Not Touch my Daughter! can use the Range: Voice.\n\n(Base 1, +10 levels for unlimited uses/day)"
+    }
+
+    #t08c14c81f6dba34690b70c ^"Nappy without Nuisance" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 15
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4 (by analogy to the PeAn 4 guideline “destroy something made of animal products”), +1 Touch, +10 levels unlimited uses)"
+            ^"Printed Effect Line" STRING "PeCo 15 Pen +0, unlimited uses/day R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "These nappies are lesser enchanted devices embroidered with Perdo runes, making any magus think twice about using them. They destroy any human excreta that are contained within, thus eliminating the need to wash and replace the nappies often. Aurulentus had to promise to be extra careful while preparing this item, and had to conduct extensive tests before his wife allowed him to use them on any of their children.\n\n(Base 4 (by analogy to the PeAn 4 guideline “destroy something made of animal products”), +1 Touch, +10 levels unlimited uses)"
+    }
+
+    #t4a3ad498891d3fb6b4d62f ^"Reunion of Lovers" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 40
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "24/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 30, +1 Touch, +5 levels for 24 uses/ day)"
+            ^"Printed Effect Line" STRING "ReCo 40 Pen +0, 24/day R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Female boots made from finest calf skin, with small, intricately decorated wings on the side. They allow the wearer to duplicate the effects of the spell Seven Leagues Stride up to 24 times per day and were created as an invested device, due to the high level requirement. These items were crafted for Semira, and so do not cause her Warping.\n\n(Base 30, +1 Touch, +5 levels for 24 uses/ day)"
+    }
+
+    #td0819b8def69b5c0970f88 ^"The Sound of Sound Sleep (Soothe the Mother’s Anxiety)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Sound of Sound Sleep"
+            ^"Part Of" STRING "Soothe the Mother’s Anxiety"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 14
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Effect Design" STRING "(Base 1, +1 Touch, +2 Sun, +2 Room, +1 level 2 uses/day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "InIm 14 Pen +0, constant effect R: Touch, D: Sun, T: Room"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Listens to all sounds in the room that are louder than that of a whisper.\n\n(Base 1, +1 Touch, +2 Sun, +2 Room, +1 level 2 uses/day, +3 levels environmental trigger)"
+    }
+
+    #ta22260f40f1d51c89a0b86 ^"What Disturbs Sound Sleep?" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Soothe the Mother’s Anxiety"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 28
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 2, +1 Touch, +1 Diam, +2 move at command, +1 intricacy, +10 levels unlimited uses/day, +3 levels triggered effect)"
+            ^"Printed Effect Line" STRING "CrIm 28 Pen +0, unlimited uses/day R: Touch, D: Diameter, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "Displays the images and sounds of the room scryed into by the triggering effect on the mirror.\n\n(Base 2, +1 Touch, +1 Diam, +2 move at command, +1 intricacy, +10 levels unlimited uses/day, +3 levels triggered effect)"
+    }
+
+    #t296f28017792acd0734ed5 ^"The Face of Paris" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 14
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "unlimited uses/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 3, +1 Touch, +10 levels unlimited uses)"
+            ^"Printed Effect Line" STRING "PeCo 14 Pen +0, unlimited uses/day R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "This razor, although blunt, will remove any and all body hair where it touches the skin of a human. The item has no penetration built into it, so a magus has to suppress his Magic Resistance while shaving. Aurulentus’ wife had always complained that his beard growth was too strong; after a twilight experience his facial hair growth increased manyfold and Aurulentus invented this lesser enchanted device to keep it under control.\n\n(Base 3, +1 Touch, +10 levels unlimited uses)"
+    }
+
+    #tf71d6ce81ce9257cbf8a74 ^"Traveller’s Comfort" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Requisite" STRING "Ignem"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "constant effect"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Effect Design" STRING "(Base 4, +1 Touch, +2 Sun, +1 Ig requisite, +1 level 2 uses/day, +3 levels environmental trigger)"
+            ^"Printed Effect Line" STRING "ReAu(Ig) 24 Pen +0, constant effect R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 24
+        }
+        DESCRIPTION "This sturdy and nondescript travelling cloak protects the wearer from rain and keeps him comfortably warm by keeping bodily warmth inside the cloak. Aurulentus invented the cloak as an invested item after his wife caught a cold from walking in the rain to visit him.\n\n(Base 4, +1 Touch, +2 Sun, +1 Ig requisite, +1 level 2 uses/day, +3 levels environmental trigger)"
+    }
+
+}

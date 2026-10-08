@@ -1,0 +1,288 @@
+EXTENSION "ARMDef_Magi_of_Hermes_YestinOfJerbiton_Spells" {
+    NAME "Ars Magica Fifth Edition, Magi of Hermes - Chapter Fifteen: Yestin of Jerbiton spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Magi_of_Hermes_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t71ec2bb0262618da6d0db6 ^"The Magic Flute" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 3, +1 Touch, +1 Conc)"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrHe 5 R: Touch, D: Conc, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 139
+        }
+        DESCRIPTION "This spell conjures a carved wooden flute into the hands of the caster. The flute appears just as the caster wishes, although casting requisites are required for flutes decorated with materials belonging to forms other than Herbam, such as the animal horn often used for embellishments.\n\nHaving only Concentration Duration, the flute is entirely magical and will disappear at the end of the spell’s duration, essentially when Yestin finishes playing it. Yestin benefits from his Performance Magic Virtue when casting this spell, as the act of playing the flute stands in for his concentration.\n\n(Base 3, +1 Touch, +1 Conc)"
+    }
+
+    #t26a59440b9677b9b8022e0 ^"Heal Thy Broken Voice" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 15, +1 Touch)"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrHe 20 R: Touch, D: Mom, T: Ind, Ritual"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 139
+        }
+        DESCRIPTION "This ritual spell mends a damaged wooden musical instrument. The instrument is returned to the peak of its former condition; that is, the height of its playing life after the instrument had matured and settled, and before decay or accident had affected it. The instrument is also cleaned of all dirt by this spell, as that helps bring it closer to its ideal.\n\nInstruments that have more than one part, such as a fiddle and its original bow, are treated as the same item and are both repaired so long as all parts are present at the ritual’s casting.\n\nA badly made instrument cannot be repaired beyond the height of its playing life, so it retains any flaws it had before it was damaged. An enchanted instrument can be made whole again, but any magical enchantments lost as a result of damage are not restored.\n\nThis spell has a base level of 15 by analogy with the Creo Corpus guidelines, allowing the healing of “light” damage. Casting requisites are needed for instruments with any non-Herbam components (cat-gut, horse hair, metal pins, etc).\n\n(Base 15, +1 Touch)"
+    }
+
+    #t823ef1e32461c16cbbad32 ^"Mend Thy Broken Strings" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5, +1 Touch, +2 Complexity)"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReHe 20 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 139
+        }
+        DESCRIPTION "With all the required parts and/or materials of a musical instrument present, the caster uses Rego magic to repair it, including re-stringing, straightening warped wood, or any other fix that could be applied by a craftsman. The spell cannot repair splintered or broken wood, but it can reassemble or replace old parts if new materials are available. The spell cannot create any required materials that are not present.\n\nThis spell uses the Rego Craft Magic rules from *Covenants*, page 49, and so the results of the spell depend on the magus’s Finesse as described in the table.\n\nTask Complexity Finesse Roll Clean instrument Trivial 3+ Re-tune a crwth Simple 6+ Re-string a fiddle Easy 9+ Straighten a bow Average 12+ Re-glue a frame Hard 15+\n\nCasting requisites are required for non-Herbam components.\n\n(Base 5, +1 Touch, +2 Complexity)"
+    }
+
+    #t1ca47087464ab64efcf135 ^"Let This Fire Sing You to Sleep" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 4, +2 Voice, +2 Sun, +1 Part)"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Requisite" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "MuIg(Im) 25 R: Voice, D: Sun, T: Part"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 139
+        }
+        DESCRIPTION "This spell affects a single fire, turning the very tips of the flames into pleasing music. The caster decides the kind of music he wishes to hear (a ballad, a whirly jig, etc.), and the spell accommodates. The music of the flames always incorporates a signature refrain, as though a sigil, with each casting. But the mood of that same refrain is adapted to the needs of the song.\n\nThe flames play the same music all the while the fire burns, getting louder as the fire burns brighter, hotter, or larger, though the random nature of fire and differences in fuel mean that no two castings ever produce exactly the same performance.\n\nThe spell ends when the flame is extinguished, its original source is fully destroyed or, for particularly long-burning fires, when the spell’s Sun Duration naturally expires. This spell cannot affect a fire that is already larger than a campfire or a fire in a hearth (essentially, any fire doing +5 damage), but a fire that grows larger than this retains the magic.\n\nYestin originally designed this spell so that his fire, whether on the road or in his sanctum, could gently sing him to sleep. But the more he explored this new spell, the more he found new uses for it. It wasn’t just music that the flames could produce, but also speech (though limited in the range of words and voice to little more than those the caster imagines as he casts the spell) or other natural and unnatural sounds. These sounds always adopt the rhythm of the spell’s original melody, though. If left to sing (or talk) of its own volition, with no guidance from the caster, the fire sounds as though it is forming words, but this is an illusion; the sounds form true words by accident if at all.\n\nYestin has used this spell in his sanctum to experiment with different harmonies, and has on occasion established choirs of candles each quietly singing a different refrain or a different note. The effect can be mesmerizing.\n\nA Finesse Stress roll (Mastery of the spell reduces this to a simple roll) determines how pleasant the sound is, but the size of the fire determines how loud it is.\n\nSize of Fire Equivalent Sound A candle flame A whisper A burning torch A conversation A campfire A song or heated discussion\n\nThis spell has the side effect of reducing the intensity of the target fire by 1 as flame is turned to sound.\n\n(Base 4, +2 Voice, +2 Sun, +1 Part)"
+    }
+
+    #t5c794d6de92eb437e88c2a ^"Let the Sun Not Bother Me This Day" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 4, +2 Sun)"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeIg 10 R: Per, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 140
+        }
+        DESCRIPTION "This spell cools the caster to a comfortable level, no matter how hot the sun is or how long he stays out in it. As Yestin puts it, “the day becomes as pleasant as a spring afternoon, and loses the wrath of summer’s heat”. The target is still affected by the light of the sun, but its warmth is regulated. All other sources of heat affect the caster naturally.\n\nThis spell ends either when it reaches its natural duration, when the caster moves into a fully enclosed room (or cavern system or basement), or in the event of an eclipse; it ends when he goes anywhere that sunlight cannot reach him.\n\nPetalichus the Weaver of Verditius bought a copy of this spell from Yestin when the bard travelled to the Tribunal of Thebes one year. The Verditius claimed to be interested “from a research point of view.” Unknown to Yestin, Petalichus ultimately used the spell in a long-running feud with Solar Magnus of Tytalus, a feud that ended in Stonehenge with the death of Solar Magnus.\n\n(Base 4, +2 Sun)"
+    }
+
+    #t200e26a853f6e860d6e6b3 ^"Confound the Rival Singer" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 1, +3 Sight, +1 Conc)"
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 5
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "MuIm 5 R: Sight, D: Conc, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 140
+        }
+        DESCRIPTION "A somewhat mischievous spell, Yestin devised this in order to give himself an unfair advantage over his mundane rivals. The target of the spell is a singer’s voice (or the sound produced by a single musical instrument), and the spell allows the caster to pull that voice in all manner of directions. For example, it pulls notes higher, pushes them lower, draws them out longer, or cuts them off sharply.\n\nAs the caster must anticipate the music or song as it is being performed, the spell requires a Finesse roll to affect the sound to a greater or lesser degree. On a high Finesse roll (9 or higher), the caster is able to change words within the song, or change entire chords within the music. At the lowest level, the caster is able to at least change some of the music to bad notes or add a croak in the voice.\n\n**Finesse Roll:** 3+\n\n**Effect:** Causes occasional breaks in the voice or the random bad or missed note.\n\n**Finesse Roll:** 6+\n\n**Effect:** The caster can choose to manipulate the performance such that it appears to simply be a good player on a bad night. The target voice might sound strained or croaky, and instruments may sound in need of tuning.\n\n**Finesse Roll:** 9+\n\n**Effect:** The caster can make the singer sound tone deaf, flattening a performance or pitching the music off key.\n\n**Finesse Roll:** 12+\n\n**Effect:** The caster achieves a fine level of control, and can even change words within a song to any other words of his choosing.\n\nIf the caster is familiar with the song or the piece of music, he may add his Music score to his Finesse roll as there is less need to anticipate the performance.\n\nIt may be possible to apply the spell to the spoken word, perhaps to an orator or a tutor as he addresses an audience, although Yestin has not yet experimented with this.\n\n(Base 1, +3 Sight, +1 Conc)"
+    }
+
+    #td767db50b412be1b0bc3ab ^"The Welcome Stranger" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5, +1 Eye, +1 Diameter)"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrMe 15 R: Eye, D: Diameter, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 140
+        }
+        DESCRIPTION "This spell inserts a recollection of the caster into the target’s memory. The memory itself soon fades, but its fleeting presence is usually enough to reassure the target that he has met the caster before.\n\nThe nature and context of the memory is determined when the spell is cast.\n\nEven fond or favorable memories are not enough to counteract the effects of The Gift, but the guidelines in **ArM5**, page 76, give an idea how the memory of an established relationship influences behavior.\n\nIn later years, Yestin mastered this spell such that he can cast it both quietly and without the normal Hermetic gestures.\n\n(Base 5, +1 Eye, +1 Diameter)"
+    }
+
+    #t43d41f78281c6e351409be ^"Orpheus’ Ballad" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 4, +2 Voice, +2 Group)"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "CrMe 20 R: Voice, D: Mom, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 140
+        }
+        DESCRIPTION "The spell creates a momentary flash of intense unnatural fear, despair, and woe in the minds of the assailants, attacking their estimation (Art & Academe, page 32). Each target in turn, starting from the target closest to the caster, attempts a Brave Personality Roll against an Ease Factor of 9 or flees the scene. This roll is modified by –1 for each other member of the group who fails his roll; the more who flee, the less resolve the others have.\n\nThe magic of the spell is carried on the caster’s own scream, and extends out as far as the caster’s voice would normally carry at a high volume (in excess of 50 paces). The magic of the spell affects the group of individuals in front of and closest to the caster. The individuals must still constitute a group as per **ArM5**, page 113.\n\nYestin devised the spell after he was set upon by brigands along the road from Winchester to the Isle of Oxney near Rye. He was lucky to escape their clutches after their first meeting, and ensured that he was prepared for their next.\n\nThe spell is named for all the grief suffered by Orpheus, who lost so much on leaving the underworld.\n\n(Base 4, +2 Voice, +2 Group)"
+    }
+
+    #t73805b6c6a70d02fa16114 ^"To Sing of Good Meat and Drink" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 4, +2 Voice, +1 Conc, +2 Room)"
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Room"
+            ^"Printed Stat Line" STRING "CrMe 25 R: Voice, D: Conc, T: Room"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 141
+        }
+        DESCRIPTION "Yestin invented this spell in order to reward innkeepers and taverners who showed generosity to him as he explored Stonehenge and beyond. He often weaves this spell into his evening’s performance, using his Performance Magic to hide the casting within his music.\n\nIt has the effect of making those in the room somewhat thirsty and hungry. Those with a Compulsion (Personality Flaw) for eating and/or drinking are powerless to resist and must eat or drink as soon as they can. Others need to make a Personality Check against an Ease Factor of 6 to resist the temptation, assuming they wish to resist it.\n\nThe effect is largely gentle and is designed to go unnoticed, beyond the takings over the bar seeing a marked increase. Yestin always uses forceless casting to ensure the spell has no Penetration, and so will not affect magi.\n\n(Base 4, +2 Voice, +1 Conc, +2 Room)"
+    }
+
+    #ta2b52f33e22dc410e07b96 ^"Lay Your Burdens on Me" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 5, +1 Eye, +2 Sun)"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReMe 20 R: Eye, D: Sun, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 141
+        }
+        DESCRIPTION "This spell brings the target’s secrets bubbling to the top of his consciousness, playing on his mind and making him more inclined to disclose them.\n\nFor the purposes of this spell, secrets are those things that gnaw at the target’s conscience in the face of questioning — those things that the target would normally strive to keep hidden because of guilt or shame or fear. Secrets kept for noble reasons are not affected by this spell, which was a conscious design decision made by Yestin. This spell does not make the target susceptible to questioning on other matters, and so cannot be used to assist directed interrogation.\n\nAt the end of the spell’s duration, the target must make a personality roll against an Ease Factor of 6. If the target succeeds, she maintains control over her secret and keeps it hidden. The troupe should agree which Personality trait the target uses in the roll.\n\nFor each subsequent day that the spell is cast on the target, the Ease Factor increases by 1. Virtues and Flaws may modify the roll and/or the Ease Factor, with the Storyguide’s agreement.\n\nIf the personality check fails, the target falls prey to his conscience and seeks someone to confide in. That person may not necessarily be the caster of the spell, and will most likely be someone the target feels he can trust.\n\nThe Infernal and the Dominion have a strong impact on this spell, dealing as they do with the moral aspects of human life. If the target spends time in the Dominion, the light of the Lord helps to release the truth and the level of the aura is subtracted from the target’s roll. The aura’s Temper (see *Realms of Power: The Divine*, page 38) also has an effect with Brave, Wise, Strong, or Just Tempers, increasing the aura’s effect by 1.\n\nIf the target spends the duration of the spell within an Infernal aura, the corrupting influence of the aura reinforces the target’s resolve to keep the secret. The level of the aura is added to the target’s roll. The Storyguide may impose a further bonus to the roll based on any Tarnish or Corruption of the Infernal aura (see *Realms of Power: The Infernal*, page 13).\n\nYestin invented this spell as a means to more easily solve those mysteries that the spirit Taliesin led him into; mysteries often solved by knowing what those involved wished to hide.\n\n(Base 5, +1 Eye, +2 Sun)"
+    }
+
+    #t93377378a567485e972db3 ^"The Wisdom of Sleep" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 15, +1 Touch, +1 Vim Requisite)"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Vim"
+            ^"Printed Stat Line" STRING "InTe(Vi) 25 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 141
+        }
+        DESCRIPTION "The caster sleeps with the target object beneath his pillow, and his dreams then inform him of all mundane properties of that object. The magic is of Momentary Duration, but the sleeping mind is more able to assimilate the huge amount of information that might be called up, weaving it into the caster’s dreams throughout the night. Note that this spell does not allow the caster to actually talk with the object or divine any secrets that the object may store in whatever passes for its intelligence.\n\nThis spell uses Terram in its all-encompassing form referencing all solid objects, and requires casting requisites appropriate for the target object.\n\nThe Vim requisite allows the spell to inform the caster of any active or any recent magical effects on the object. This spell is restricted to effects originating from the Magic Realm. Enchantments inherent to the object are not learned beyond a knowledge that some form of enchantment exists.\n\nYestin’s version of this spell sees him conversing with the object within his dreams, wherein the object adopts a persona (or rather, Yestin’s dream ascribes a personality to the object). Multiple castings of this spell on multiple objects are possible, though the caster’s pillow as well as his dreams may become a little crowded.\n\nThe quirkiness of the spell effect is due to experimentation. Yestin had intended for a more conventional spell, but he found towards the end of his experiments that the spell’s incantation wasn’t complete until the caster fell asleep. His Laboratory Text for this spell carries the same flaw. It’s possible that practitioners and researchers of Dream Magic may be interested in Yestin’s text for this spell, as it may further their own magical aims.\n\n(Base 15, +1 Touch, +1 Vim Requisite)"
+    }
+
+    #tc5f85ff6e8882b248cdaa6 ^"The Well-Trodden Path" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 2, +1 Touch, +1 Conc, +1 Part, +1 stone)"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 10
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "ReTe 10 R: Touch, D: Conc, T: Part"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 141
+        }
+        DESCRIPTION "As the caster walks, this spell shifts the earth underfoot allowing him to travel over rutted paths and uneven roads as though they were flat and even. The earth returns to its prior position after the target of the spell has passed. The spell ends when the caster comes to a stop, such as to rest, or crosses terrain unaffected by this spell, such as a wooden bridge or a ford.\n\nThis spell has little effect on soft or muddy paths, as the earth must still be able to bear the target’s weight. The spell is potent enough to move stones and cobbles in the road.\n\nA traveler using this spell does not suffer undue delay for traveling over poor roads. Traveling at speed to cover more ground in the day still costs the stated Long-Term Fatigue level. *City & Guild*, page 85, provides more detail on travel speeds. Targets affected by this spell use speeds close to the top end of the applicable travel speeds.\n\n(Base 2, +1 Touch, +1 Conc, +1 Part, +1 stone)"
+    }
+
+    #t14ff03459d9da69c0ba4a9 ^"Nature’s Kindest Seat" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 3, +1 Touch, +2 Sun, +2 Group, +1 Complexity)"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "ReTe 25 R: Touch, D: Sun, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 142
+        }
+        DESCRIPTION "This spell conjures a group of seats from the ground, centered on the point the user touches. The number of chairs the spell produces can be controlled by the caster, summoning up to ten.\n\nThe chairs rise from the ground and each molds itself to the nearest person as he sits back. Each chair is always at least passably comfortable, but notably more so when cast in a meadow with lush grass. Each chair sinks slowly back into the ground, leaving no trace, as the spell nears the end of its duration. The spell only works on sand or soil, a limitation Yestin aims to fix some time in the future.\n\nYestin decided that, to better capture an audience and draw them into the music, there was nothing like a little peripheral magic to increase anticipation. Yestin has never been shy about using his magic.\n\nYestin’s sigil manifesting in this spell can occasionally take his audience by surprise, as at first nothing seems to happen … and then the chairs spring from the ground.\n\n(Base 3, +1 Touch, +2 Sun, +2 Group, +1 Complexity)"
+    }
+
+    #t8ccff815862b116b14adde ^"A Song of All These Faerie Places" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 3, +1 Touch, +1 Conc, +2 Group, +1 Creo requisite, +1 Imaginem requisite)"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Creo, Imaginem"
+            ^"Printed Stat Line" STRING "In(Cr)Vi(Im) 25 R: Touch, D: Conc, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 142
+        }
+        DESCRIPTION "When the caster stands at a place where the boundary between levels of a faerie regio can be crossed easily, he is able to sing a song or play music that describes the scene on the other side of the regio boundary.\n\nAs the song sings of each feature on the other side of the boundary, they become clearer in the visual illusion. They then fade slightly as the song moves onto the next feature. For example, where the first line of the song describes the lush grass, in the higher level the grass becomes visible through the boundary, bright and clear. As the next line describes the dry stone wall surrounding the meadow, the wall appears in the illusion but the grass becomes more misty and distant.\n\nThose able to see the illusion are also able to pass through from one regio level to the next, as they can see the necessary method. If crossing the regio boundary requires other conditions (help from a resident or a particular date, for example), the spell does not work.\n\nAs the caster must be standing exactly at the point where the regio layers meet and form a boundary, this spell can rarely be used to actually discern the location of that boundary.\n\n(Base 3, +1 Touch, +1 Conc, +2 Group, +1 Creo requisite, +1 Imaginem requisite)"
+    }
+
+    #t0f23e538f720bc97599461 ^"A Song of All These Infernal Places" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 3, +1 Touch, +1 Conc, +2 Group, +1 Creo requisite, +1 Imaginem requisite)"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Creo, Imaginem"
+            ^"Printed Stat Line" STRING "In(Cr)Vi(Im) 25 R: Touch, D: Conc, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 142
+        }
+        DESCRIPTION "As A Song of All These Faerie Places but affecting Infernal regio boundaries.\n\n(Base 3, +1 Touch, +1 Conc, +2 Group, +1 Creo requisite, +1 Imaginem requisite)"
+    }
+
+    #t1f3a6331e544db59e2a4d2 ^"A Song of All These Magical Places" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Spell Design" STRING "(Base 3, +1 Touch, +1 Conc, +2 Group, +1 Creo requisite, +1 Imaginem requisite)"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Creo, Imaginem"
+            ^"Printed Stat Line" STRING "In(Cr)Vi(Im) 25 R: Touch, D: Conc, T: Group"
+            ^"Source" STRING "Magi of Hermes"
+            ^"Page" INTEGER 142
+        }
+        DESCRIPTION "As A Song of All These Faerie Places but affecting Magic regio boundaries.\n\n(Base 3, +1 Touch, +1 Conc, +2 Group, +1 Creo requisite, +1 Imaginem requisite)"
+    }
+
+}

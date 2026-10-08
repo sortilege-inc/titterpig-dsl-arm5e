@@ -1,11 +1,31 @@
 EXTENSION "ArM5_Magi_of_Hermes_Core_Ext" {
     NAME "Ars Magica Fifth Edition, Magi of Hermes - core type extensions"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-10-08"
     DEPENDS_ON "ArM5_Core_Base"
 
-    # Magi of Hermes is an EXTENSION on the arm5e edition (spec S13 composition). It defines no type of its own:
-    # its magi and their companions are .actor files, its records the corpus's types.
+    # Magi of Hermes is an EXTENSION on the arm5e edition (spec S13 composition). The two types below are the ones its
+    # records need that the corpus lacks; its magi and their companions are .actor files, its other records the corpus's types.
+
+    #td7ced4f60ac4664256d622 ^"Talisman" DEF {
+        PROPERTIES {
+            ^"Owner" STRING
+            ^"Table Columns" LIST OF STRING
+            ^"Source" STRING DEFAULT "Magi of Hermes"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A magus’s talisman as Magi of Hermes prints it: the item and its owner, with its attunements as rows (bonus, attunement, the shape or material that grants it where printed, the heading it is printed under). The effects instilled in it are Enchanted Device records naming it as their Part Of; the rules for talismans and their attunements are the core’s Talisman Attunement."
+    }
+
+    #tc5d94e298a42b8096c879d ^"Item of Quality" DEF {
+        PROPERTIES {
+            ^"Bonus" INTEGER
+            ^"Bonus To" STRING
+            ^"Source" STRING DEFAULT "Magi of Hermes"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "An Item of Quality (Houses of Hermes: Mystery Cults, page 124): an item whose inherent quality has been brought out, granting a bonus; its bonus and what the bonus is to are as the item’s text prints them."
+    }
 
 }

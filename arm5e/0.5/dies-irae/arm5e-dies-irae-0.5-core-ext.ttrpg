@@ -1,0 +1,36 @@
+EXTENSION "ArM5_Dies_Irae_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Core_Base"
+
+    # Dies Irae is an EXTENSION on the arm5e edition (spec S13 composition). The types below are the two the book's
+    # records need that the corpus lacks: an animal Quality and the Muspelli's utiseta.
+
+    # An animal Quality, as a creature's 'Qualities:' line lists them (Dies Irae's Lunar, box p34).
+    #t2ac5f4ca4cbe2a528fb261 ^"Animal Quality" DEF {
+        APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Dies Irae"
+            ^"Page" INTEGER
+        }
+    }
+
+    #ta802193baa1091f6e9f4ee ^"Utiseta" DEF {
+        APPLIES TO [#tjKDQ2zRgZi5Yztl7zubyRlI ^"Entity"]
+        PROPERTIES {
+            ^"Ability" STRING REQUIRED
+            ^"Ease Factor" INTEGER
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Effect Design" STRING
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Dies Irae"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "The Penetration of an utiseta is calculated as shown on page 90 of *Rival Magic.* It differs every time, so you should roll it anew for each encounter. Note that the roll for the Casting Total is made at the *end* of the utiseta ritual, after the Muspelli has gathered the necessary energy. A failure on this roll means that nothing happens, and the energy gathered is safely dissipated, while a botch causes Warping as if the Muspelli had failed to gather any energy for the utiseta (*Rival Magic, *page 91), in addition to any other effects."
+    }
+
+}

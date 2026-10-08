@@ -1,0 +1,79 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_Guidelines" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Four: The Great Pestilence guidelines"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The chapter's guidelines, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t8561084a3b4805504ea76f ^"Rego Herbam Guidelines (Dies Irae, New Guidelines: Rego Herbam)" DEF {
+        EXTENDS #tARMDefCompatSpellGuideline ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Printed Name" STRING "New Guidelines: Rego Herbam"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 85
+        }
+        GUIDELINES {
+            "General" "Ward against magical plant diseases associated with one realm (Divine, Faerie, Infernal, or Magic), with a Might of less than the level of the Spell. (Range Touch, Duration Ring, Target Circle)"
+            "Level 5" "Ward a plant against mundane plant diseases."
+        }
+    }
+
+    #t36371c19a24afc67947b9e ^"Creo Herbam Guidelines (Dies Irae, New Guidelines: Creo Herbam)" DEF {
+        EXTENDS #tARMDefCompatSpellGuideline ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Printed Name" STRING "New Guidelines: Creo Herbam"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 85
+        }
+        GUIDELINES {
+            "Base 1" "Heal a Light Wound to a plant. Cure a Minor plant disease"
+            "Base 2" "Heal a Medium Wound to a plant. Cure a Serious plant disease"
+            "Base 3" "Heal a Heavy Wound to a plant. Cure a Major plant disease"
+            "Base 4" "Heal an Incapacitating Wound to a plant. Cure a Critical plant disease"
+            "Base 5" "Heal all Wounds to a plant."
+            "Base 10" "Heal all damage to a plant, including wounds, disease, and poison."
+        }
+        DESCRIPTION "Just like human diseases, plant diseases come in a variety of severities. The type of severity, Mild, Serious, etc., is the same as the severity of the human disease or animal disease that effects the eater of the diseased plant. Like Creo Corpus healing spells, a healing spell cast other than as a Momentary Duration Ritual actually suspends the healing process so that upon the spell’s expiration wounds are as fresh as they were when the spell was cast."
+    }
+
+    #t6bb807bf0c3d4ba70412d7 ^"Creo Animal Guidelines (Dies Irae, New Guidelines: Creo Animal)" DEF {
+        EXTENDS #tARMDefCompatSpellGuideline ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Printed Name" STRING "New Guidelines: Creo Animal"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 102
+        }
+        GUIDELINES {
+            "Base 5" "Cure a Minor animal disease"
+            "Base 10" "Cure a Serious animal disease"
+            "Base 15" "Cure a Major animal disease"
+            "Base 20" "Cure a Critical animal disease"
+            "Base 25" "Stop the progress of any disease. Cure any disease countering its effects."
+        }
+        DESCRIPTION "Just like human and plant diseases, animal diseases come in a variety of severities. The type of severity, Minor, Serious, etc., is the same as the severity of the plant disease that infects the plant and affects its eater. Like Creo Corpus healing spells, a healing spell cast other than as a Momentary Duration Ritual actually suspends the healing process so that upon the spell’s expiration, wounds are as fresh as they were when the spell was cast."
+    }
+
+    #t4987a3223477af814366d6 ^"Perdo Vim Guidelines (Dies Irae, New Guideline: Perdo Vim)" DEF {
+        EXTENDS #tARMDefCompatSpellGuideline ^"Spell Guideline"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Printed Name" STRING "New Guideline: Perdo Vim"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 106
+        }
+        GUIDELINES {
+            "General" "Destroy an amount of raw vis equal to the level of the spell."
+        }
+        DESCRIPTION "Leaving the Arcana Centrum is as easy as entering it. The traveler pictures a distant location in a Form province or boundary and walks to that location. The player makes another Twilight Void Travel roll against the same Ease Factor used to enter the Twilight Void from the location that the character entered from. Use the roll’s total to calculate the character’s Speed Level to see how long the journey back takes."
+    }
+
+}

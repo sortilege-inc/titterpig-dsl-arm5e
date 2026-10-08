@@ -1,0 +1,63 @@
+EXTENSION "ARMDef_Dies_Irae_TheTwilightOfTheGods_Skidbladnir" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Skidbladnir"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # Skidbladnir (Chapter Five: The Twilight of the Gods, p122): one being, its printed stat lines verbatim fields.
+
+    #t7a273a4016c9e38f1ea7f5 ^"Skidbladnir" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 21
+            ^"Form" STRING "Herbam"
+            ^"Season" STRING "Autumn"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 12
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -7
+            }
+            ^"Size" INTEGER 6
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Thing; Magical Friend; Essential Virtue; Great Bearer, Sea Regio Network, Well-Traveled, Wilderness Sense; Mistaken Identity, Overconfident, Temporary Might Heroic Virtue, see Houses of Hermes: True Lineages, page 105 Free with the Magic Thing Virtue"
+            ^"Magic Qualities and Inferiorities" STRING "Greater Powers; Aquam Resistance, Improved Abilities x 4, Improved Might, Improved Powers, Improved Soak x 5, Minor Virtue (Essential Virtue), Minor Virtue (Second Sight), Personal Powers x 3"
+            ^"Personality Trait" STRING "Instinctual Knowledge of the Sea (Cunning) +6, Dead Reckoning (Perception) +3, Ship +6 Essential Trait, replaces listed Characteristic (where present) whenever Trait applies."
+            ^"Reputations" LIST ["The Best of Boats 2 (Local)"]
+            ^"Soak" INTEGER 18
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–11), –3 (12–22), –5 (23–33), Incapacitated (34–44), Dead (45+)"
+            ^"Powers" STRING "Fair Winds, 0 points, constant effect, Vim: Skidbladnir can see through Magical regio boundaries and therefore divine the path to the next level. InVi 30 (Base 3, +2 Sun, +4 Vision, +1 constant) Personal Power x 2 (30 levels, –3 Might cost) Cunningly Crafted, 0 points, Init –12, Herbam: Skidbladnir can adjust its size to accommodate up to 1000 passengers (Size +9), or else shrink down to a hundredth of a cubic foot (Size –7). When at its smallest size, Skidbladnir can be disassembled and packed into a pouch for easy transport. MuHe 45 (Base 4, +1 Conc, +3 Structure, +1 allow growing and shrinking, +3 to allow drastic change in size, +1 constant) Greater Power (45 levels, –5 Might cost with 4 mastery points from Improved Powers) Changeable Sails, 0 points, Init –7, Herbam: Skidbladnir can take the shape of any ship. This transformation affects all of its components, including ropes, sails, and masts. MuHe 15 (Base 3, +1 Conc, +3 Structure) Personal Power (15 levels, –2 Might cost, +2 Init with 1 mastery point from Improved Powers)"
+            ^"Vis" STRING "4 pawns, in deck boards."
+            ^"Appearance" STRING "Skidbladnir can take the shape of any boat or ship, from an immense Byzantine trireme right down to a fishing smack. Most commonly, it takes the form of a viking longboat with a sail striped in red and white."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 122
+        }
+        COMBAT {
+            "Bludgeon" INIT -6 ATTACK 3 DEFENSE -6 DAMAGE 14
+        }
+        ABILITIES {
+            "Aquam Resistance" SCORE 6 SPECIALTY "krakens"
+            "Area Lore: Arabian Sea" SCORE 5 SPECIALTY "avoiding pirates"
+            "Area Lore: Atlantic Sea" SCORE 7 SPECIALTY "Bay of Biscay"
+            "Area Lore: Black Sea" SCORE 3 SPECIALTY "shallow waters"
+            "Area Lore: Caspian Sea" SCORE 3 SPECIALTY "islands"
+            "Area Lore: Indian Sea" SCORE 3 SPECIALTY "avoiding pirates"
+            "Area Lore: Magic Realm" SCORE 4 SPECIALTY "magical seas"
+            "Area Lore: Mediterranean Sea" SCORE 5 SPECIALTY "Western sea"
+            "Area Lore: North Sea" SCORE 7 SPECIALTY "5) (Scandinavian harbors"
+            "Profession: Navigator" SCORE 5 SPECIALTY "plotting courses"
+            "Profession: Pilot" SCORE 3 SPECIALTY "outrunning pursuit"
+            "Second Sight" SCORE 5 SPECIALTY "boundary travel"
+            "Wilderness Sense" SCORE 5 SPECIALTY "dead reckoning"
+        }
+        DESCRIPTION "You might wish to use the rules for Damaging Objects on page 77 of *City & Guild* rather than using Soak and Wound Penalties. In this case, Skidbladnir has fifteen damage levels and when an event could damage it, make a stress roll + 5 (Wondrous item) + 15 (bonus from Improved Soak Magic Qualities). If the result is equal to or greater than the Ease Factor of 15, the ship avoids losing a damage level. Damage levels do not impose penalties, they simply indicate how much punishment an object can take until it is broken beyond use. Damage levels can be restored by a competent shipwright; although if the ship is completely broken it may not still be a Magic Thing once repaired."
+    }
+
+}

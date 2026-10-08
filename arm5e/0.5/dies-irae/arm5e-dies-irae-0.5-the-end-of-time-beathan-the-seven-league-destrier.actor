@@ -1,0 +1,69 @@
+EXTENSION "ArM5_Dies_Irae_TheEndOfTime_BeathanTheSevenLeagueDestrier" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Beathan, the Seven-league Destrier"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # Beathan, the Seven-league Destrier (Chapter Two: The End of Time, p12): one being, its printed stat lines verbatim fields.
+
+    #t791bba54397ecba8d136ee ^"Beathan, the Seven-league Destrier" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 8
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 3
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Ferocity (when ridden in battle), Improved Characteristics, Long-Winded, Proud (minor), True Friend (Brighde)"
+            ^"Magic Qualities and Inferiorities" STRING "Gift of Speech, Greater Power, Improved Abilities, Improved Might, Improved Power (The Long Road Made Shorter), Minor Virtue (x3) (Improved Characteristics, Tough, Unaffected by The Gift)"
+            ^"Qualities" STRING "Domesticated, Fast Runner, Herd Animal, Imposing Appearance, Tireless"
+            ^"Familiar Cords" STRING "Gold +2, Silver +1, Bronze +1"
+            ^"Reputations" LIST ["Aggressive (local) 1"]
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Natural Weapons" STRING "The weapon statistics for a destrier’s kick are Init +2, Atk +2, Def +2, Dam +1."
+            ^"Powers" STRING "The Long Road Made Shorter, 0 points, Init –6, Animal (R: Touch, D: Mom, T: Group) Beathan may transport himself and anyone touching him to a point up to seven leagues away which he can see. Level 50 effect (Base ReAn 30, +1 Touch, +2 Group, +1 Co requisite), Greater Power (45 levels, cost –1)"
+            ^"Equipment" STRING "comfortable harness, ornate and expensively tooled saddle"
+            ^"Vis" STRING "2 Animal, in head."
+            ^"Appearance" STRING "Beathan is a heavy war horse standing over 16 hands high at the withers. His neck is thick and heavy with a graceful curve and his chest is broad and deep. He has a white coat, turning grey and black around the nose and mouth."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 12
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +2
+            "Taciturn" +2
+            "Brave" +1
+        }
+        COMBAT {
+            "Hooves" INIT 1 ATTACK 7 DEFENSE 5 DAMAGE 7
+        }
+        ABILITIES {
+            "Area Lore: Tribunal" SCORE 3 SPECIALTY "Covenants"
+            "Artes Liberales" SCORE 1 SPECIALTY "rhetoric"
+            "Athletics" SCORE 5 SPECIALTY "balancing"
+            "Awareness" SCORE 3 SPECIALTY "ambushes"
+            "Brawl" SCORE 5 SPECIALTY "hooves"
+            "Folk Ken" SCORE 1 SPECIALTY "magi"
+            "Latin" SCORE 4 SPECIALTY "Hermetic"
+            "Organization Lore: Order of Hermes" SCORE 3 SPECIALTY "magi"
+            "Profession: Mount" SCORE 4 SPECIALTY "courier"
+            "Stealth" SCORE 3 SPECIALTY "moving quietly"
+            "Survival" SCORE 3 SPECIALTY "woods"
+        }
+        DESCRIPTION "Brighde traveled far to find her familiar, Beathan, having found no such beast in her home Tribunal.\n\nThose traveling with Beathan when he uses his Long Road Made Shorter power experience the full distance of the journey made shorter rather than simply appearing in the target location."
+    }
+
+}

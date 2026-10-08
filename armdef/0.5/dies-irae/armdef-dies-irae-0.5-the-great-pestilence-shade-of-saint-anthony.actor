@@ -1,0 +1,92 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_ShadeOfSaintAnthony" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Shade of Saint Anthony"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # Shade of Saint Anthony (Chapter Four: The Great Pestilence, p79): one being, its printed stat lines verbatim fields.
+
+    #tf5c2f0eced7f75ef7b58d5 ^"Shade of Saint Anthony" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER -1
+            ^"Virtues and Flaws" STRING "Small Frame"
+            ^"Reputation" STRING "Fatal Disease 2 (Infernal)"
+            ^"Hierarchy" INTEGER 2
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–0 (1–4), –1 (5–8), –3 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Weakness" STRING "Abhorrent Material: holy water."
+            ^"Vis" STRING "One pawn of Mentem vis infesta in the shade’s head"
+            ^"Appearance" STRING "A black silhouette of a short, hairy human with no discernible features."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 79
+        }
+        PERSONALITY_TRAITS {
+            "Persistent" +6
+            "Merciless" +3
+        }
+        COMBAT {
+            "Dodge" INIT 3 DEFENSE 4
+            " Fist" INIT 3 ATTACK 2 DEFENSE 5 DAMAGE -1
+        }
+        ABILITIES {
+            "Brawl" SCORE 1 SPECIALTY "fist"
+            "Riding" SCORE 2 SPECIALTY "staying mounted"
+            "Stealth" SCORE 5 SPECIALTY "hiding against a black wolf’s fur"
+        }
+        POWERS {
+            #tc1ce7b926fd312c4ff5425 ^"Coagulation (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power allows the shade to take physical form."
+            }
+            #t21c17139cc918362ad682a ^"Diseased Possession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Using a special form of the demonic *Possession* power, the demon can inflict its disease upon a single target."
+            }
+            #t564f4e8a161afbae4495c4 ^"Obsession (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can impose a temporary personality trait of Merciless +1 on a person engaged in sinful thoughts or actions."
+            }
+            #t0549c7da884f12392df958 ^"Necrotic Touch" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "With a touch the shade can inflict the disease necrosis on an Individualsized plant, blackening and clogging its root system and immediately killing the plant."
+            }
+        }
+        DESCRIPTION "A shade typically rides on the back of a black wolf, clinging to its hairy back and hiding in its fur. It is nearly impossible to see. Allow players Perception + Awareness + a stress die roll against an Ease Factor of 15, with success revealing the demon hidden on the wolf’s back.\n\nWhen the demon spots a likely human target it abandons its physical form for its spiritual form, which costs no Might points, and possesses the human. If the *Diseased Possession* power penetrates the target’s Magic Resistance, the target immediately succumbs to the St. Anthony’s Fire disease. The shade must continue to possess the victim for the course of the disease, requiring that it temporarily decrease its Might Pool by 3 points. The victim is allowed an immediate Disease Avoidance roll (see later). If the roll fails the disease progresses using the same rules as natural diseases. While possessing a victim, the demon cannot regain Might points. Once the victim dies or the demon is exorcized, it returns to its fellows waiting in the nearby woods."
+    }
+
+}

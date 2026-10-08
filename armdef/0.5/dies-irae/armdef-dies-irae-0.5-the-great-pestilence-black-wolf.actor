@@ -1,0 +1,56 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_BlackWolf" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Black Wolf"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # Black Wolf (Chapter Four: The Great Pestilence, p80): one being, its printed stat lines verbatim fields.
+
+    #tbcef1e650b731958ebb74f ^"Black Wolf" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Improved Characteristics (x2), Ferocity (when hungry), Long-Winded, Sharp Ears; Compulsion (killing), Corrupted Beast, Infamous, Tainted with Evil"
+            ^"Qualities" STRING "Aggressive, Hardy, Keen Sense of Smell, Pack Animal/Pack Leader, Pursuit Predator, Sharp Ears, Thick Fur, Vocal"
+            ^"Reputations" LIST ["Bloodthirsty 4 (local)"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/ –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–0 (1–5), –1 (6–10), –3 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "1 pawn of Perdo vis in the beast’s tongue"
+            ^"Appearance" STRING "A savage wolf with shaggy, matted fur. The creature is entirely black except for its baleful red eyes."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 80
+        }
+        PERSONALITY_TRAITS {
+            "Savage" +6
+            "Brave" +1
+        }
+        COMBAT {
+            "Teeth" INIT 2 ATTACK 11 DEFENSE 9 DAMAGE 0
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "smell"
+            "Brawl" SCORE 5 SPECIALTY "teeth"
+            "Hunt" SCORE 4 SPECIALTY "track by smell"
+            "Survival" SCORE 3 SPECIALTY "winter"
+        }
+        DESCRIPTION "A black wolf is not a demon but a corrupted beast. Though it has Might it cannot take spiritual form nor does it have any magical powers. The Quality Pack Leader grants a wolf Leadership 5 (wolves), so that up to six wolves can fight as a trained group."
+    }
+
+}

@@ -1,0 +1,87 @@
+EXTENSION "ArM5_Dies_Irae_TheTwilightOfTheGods_Vidofnir" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Vidofnir"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # Vidofnir (Chapter Five: The Twilight of the Gods, p137): one being, its printed stat lines verbatim fields.
+
+    #t40d161dce4982ce0771b22 ^"Vidofnir" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 3
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Magical Champion; Essential Virtue (Powerful Voice); Improved Characteristics x 4; Oath of Fealty (to Urdur), Proud; Overconfident (minor), Restricted Power (Ear-Shattering Cry, only during the day), Restricted Power (Earth-Shattering Cry, only during the day)"
+            ^"Magic Qualities and Inferiorities" STRING "Gigantic, Greater Powers x 4; Improved Might x 3, Improved Soak, Minor Virtue (Puissant Music)"
+            ^"Personality Traits" STRING "Powerful Voice (Communication) +6, Cockerel +3, Proud +3, Imperturbable +2 Essential Trait, replaces listed Characteristic (where present) whenever Trait applies."
+            ^"Soak" INTEGER 5
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Vis" STRING "4 pawns of Imaginem, in tongue"
+            ^"Appearance" STRING "An immense cockerel, ten feet tall from toes to comb and with a twenty foot wingspan. His feathers are a glossy black with sooty-red highlights; his comb, wattles, and eyes are fiery red. His powerful voice mean that R: Voice and T: Sound effects extend as far as 300 paces."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 137
+        }
+        COMBAT {
+            "Spurs" INIT -1 ATTACK 9 DEFENSE 7 DAMAGE 8
+            " Beak" INIT 0 ATTACK 9 DEFENSE 5 DAMAGE 8
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "balancing"
+            "Awareness" SCORE 6 SPECIALTY "dawn and dusk"
+            "Brawl" SCORE 4 SPECIALTY "spurs"
+            "Music" SCORE 7 BONUS 2 SPECIALTY "crowing"
+            "Penetration" SCORE 4 SPECIALTY "Corpus effects"
+        }
+        POWERS {
+            #t51fbb1ec5886def78e5b9f ^"Ear-Shattering Cry" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "An individual in direct line of Vidofnir’s crowing has his hearing destroyed. This damage heals as a Heavy Wound, and inflicts the effects of the Deaf Flaw until it heals to a Light Wound, at which point it becomes equivalent to Poor Hearing until totally healed. A deaf magus suffers the –15 penalty to spellcasting for using no words (but no penalty to Voice Range) until he adjusts to his new condition (which takes about a day). PeCo 30 (Base 20, +2 Voice) Greater Power (30 levels, –3 Might cost, +4 Init)"
+            }
+            #t3ff3c8424d781198523ee6 ^"Earth-Shattering Cry" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Vidofnir’s cry is so loud that it can shatter stone and weaker material. This effect can burst open doors and break open graves. PeTe(He) 25 (Base 3, +2 Voice, +2 Group, +1 affect stone, +1 requisite) Greater Power (25 levels, –3 Might cost)"
+            }
+            #t701aa7cf3709e85193e62f ^"Rouse the Dead" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Vidofnir’s crow is loud enough to literally wake the dead. Any human corpse in the vicinity is animated, although the cockerel rarely directs them to do anything other than stumble about. ReCo 45 (Base 10, +2 Voice, + 2 Sun, +2 Group, +1 size) Greater Power (45 levels, –2 Might cost)"
+            }
+            #t8605ce36e4fdf3ce888278 ^"Stunning Cry" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Everyone hearing Vidofnir crow is stunned by the sheer volume. This leaves them confused as if affected by *Confusion of the Numbed Will* (ArM5, page 151). This power activates simultaneously with any of his other three powers. ReMe 20 (Base 4, +1 Diam, +3 Sound) Greater Power (20 levels, –2 Might cost, +2 Init)"
+            }
+        }
+    }
+
+}

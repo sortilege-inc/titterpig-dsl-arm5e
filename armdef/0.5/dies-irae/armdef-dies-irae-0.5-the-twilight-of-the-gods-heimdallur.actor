@@ -1,0 +1,51 @@
+EXTENSION "ARMDef_Dies_Irae_TheTwilightOfTheGods_Heimdallur" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Heimdallur"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # Heimdallur (Chapter Five: The Twilight of the Gods, p119): one being, its printed stat lines verbatim fields.
+
+    #t217a472c8ca82d575e253d ^"Heimdallur" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 50
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 8
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 6
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 1
+            ^"Confidence Score" STRING "1 (4)"
+            ^"Virtues and Flaws" STRING "Focus Power x 2, Ostentatious, Shapeshifter; Faerie Sight, Faerie Speech, Famous, Highly Cognizant, Humanoid Faerie, Improved Damage, Improved Initiative, Improved Powers, Improved Soak x 3, Large, Lesser Powers x 2, Personal Powers x 4, Positive Folk Tales, Reputation as Confidence; Feud (Loki), Proud; Dutybound, Higher Purpose, Traditional Ward (the blind)"
+            ^"Reputations" LIST ["God of Light 4 (Local)"]
+            ^"Soak" INTEGER 22
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Pretenses" STRING "Athletics 3 (climbing), Awareness 15 (danger), Concentration 5 (on watch), Faerie Speech 5 (Norse), Folk Ken 3 (motives), Jarl’s Leisure 5 (riding), Karl’s Labor 5 (trade), Leadership 5 (noblemen), Music 5 (horn), Shapeshifter 5 (ram), Single Weapon 10 (long sword), Thrall’s Toil 5 (farming) As the god of the social hierarchy, Heimdallur appears competent with a wide range of crafts, professions and leisure pursuits appropriate to the thralls (serfs), karls (freemen), and jarls (noblemen) which he represents."
+            ^"Powers" STRING "See the Grass Sprout, 0 points, constant power, Imaginem: Heimdallur can see several miles away, day or night; otherwise the same as Eyes of the Eagle, ArM5 page 145. InIm 35 (Base 3, +2 Sun, +4 Vision, +1 see in the dark, +1 constant) Personal Power x 2 (35 levels, –4 Might cost with 1 intricacy point from Improved Powers) Hear the Wool Grow, 0 points, constant power, Imaginem: When he concentrates, Heimdallur can hear the grass growing, the wool growing on the back of sheep, and everything louder than that. InIm 40 (Base 3, +2 Sun, +4 Vision, +1 constant) Personal Power x 2 (30 levels, –3 Might cost) Ten Thousand Yard Stare, 0 points, Init –12, Imaginem: Heimdallur can see and hear what is going on at any location to which he has an Arcane Connection. He can perceive anything and everything that occurs within a 100 pace diameter, whether or not this constitutes an actual Boundary. This does not need to be a ritual effect for this god. He can use his enhanced senses through this power, allowing him to extend his hearing and sight to hundreds of miles. There are numerous runestones across Scandinavia made by rune wizards to which Heimdallur has an Arcane Connection. InIm 35 (Base 2, +4 Arc, +1 Conc, +4 Boundary) Lesser Power x 2 (35 levels, –7 Might cost with 4 intricacy points from Improved Powers) World Illuminator, 1–10 points, Init –8, Ignem: Heimdallur can create any non-ritual effect of 50th level or less involving light, at a cost of 1 Might point per magnitude of the effect. Focus Power x 2"
+            ^"Vis" STRING "10 pawns of Ignem vis, in teeth"
+            ^"Appearance" STRING "A pale skinned warrior with shining white hair and beard despite his youthful mien. He wears a chain hauberk, a gleaming helmet, a white leather belt, and a cloak made from the skin of a mighty snow-bear. His teeth are made from solid gold. When he wields Hofud, his massive sword, in combat it glows with a pure white light. He can take the form of an immense ram with snow-white fleece and golden horns, a pure-white cockerel with a golden comb, a huge russet squirrel with sharp teeth, a crude but honestlooking serf, or a jolly fisherman."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 119
+        }
+        PERSONALITY_TRAITS {
+            "Watchful" +6
+            "Cautious" +5
+            "Vain" +5
+            "Loyal to the Gods" +4
+        }
+        COMBAT {
+            "Long Sword and Round Shield" INIT 7 ATTACK 18 DEFENSE 14 DAMAGE 13
+        }
+    }
+
+}

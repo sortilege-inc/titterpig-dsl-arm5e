@@ -1,0 +1,79 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_AirElemental" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Air Elemental"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # Air Elemental (Chapter Four: The Great Pestilence, p107): one being, its printed stat lines verbatim fields.
+
+    #t62730dd2d580257f888962 ^"Air Elemental" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 15
+            ^"Form" STRING "Auram"
+            ^"Season" STRING "Spring"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER -4
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Magic Thing; Ways of the Storm; Poor Memory, Short Attention Span, Simple Minded."
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (Suffocate), Greater Power (Jupiter’s Touch), Greater Power (Charge of the Angry Winds), Major Virtue (Shapeshifter); Improved Abilities, Improved Powers (+3 Init to Jupiter’s Touch Power), Minor Virtue (Keen Vision)"
+            ^"Combat" STRING "Jupiter’s Touch Power: Init +5, Attack +5, Defense n/a, Damage +30 Includes Way of the Storms"
+            ^"Soak: Wound Penalties" STRING "–1 & 1 Might point (1–5), –3 & 3 Might points (6–10), –5 & 5 Might points (11–15), Incapacitated & 5 Might points (16–20), Dead & all Might points (21+)"
+            ^"Vis" STRING "3 pawns of Auram, in body"
+            ^"Appearance" STRING "A roughly human-shaped collection of wind, densely collected so that they are visible to the naked eye Reprinted from Realms of Power: Magic, page 138."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 107
+        }
+        PERSONALITY_TRAITS {
+            "Storm" +3
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "high points"
+            "Athletics" SCORE 3 SPECIALTY "storm force winds"
+            "Awareness" SCORE 3 SPECIALTY "metal objects"
+            "Brawl" SCORE 3 SPECIALTY "Jupiter’s Touch Power"
+            "Penetration" SCORE 2 SPECIALTY "Jupiter’s Touch Power"
+            "Shapeshifter" SCORE 4 SPECIALTY "birds"
+        }
+        POWERS {
+            #t52fafc8f28648b9a5a2946 ^"Suffocate (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Suffocate"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The elemental surrounds its opponent and enters its lungs, necessitating a roll to avoid deprivation (**ArM5,** pages 180–181). Escaping the elemental requires the victim to get away from the elemental; its airy body can be simply walked through, but the elemental usually pursues its victim. Compare Quickness + Athletics stress rolls of the victim and the elemental (using Might/5 for the elemental’s Athletics); the highest wins. Trying to escape requires a Fatigue roll for the strenuous actions (ArM5, page 178)"
+            }
+            #t0af3fd927b9b3b5b29c0b7 ^"Jupiter’s Touch (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Jupiter’s Touch"
+                    ^"Cost" STRING "5 point"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The touch of the elemental causes a flash of coruscating lightning, causing +30 damage."
+            }
+            #t763a1682eb525f3976fdd4 ^"Charge of the Angry Winds (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Charge of the Angry Winds"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "As the spell of the same name; add the elemental’s Strength to all the Ease Factors for acting within the wind. CrAu 15 (base 3, +2 Voice, +1 Conc, +1 unnatural): Greater Power (35 levels, –1 Might cost, +4 Init, +15 experience points in Penetration)"
+            }
+        }
+    }
+
+}

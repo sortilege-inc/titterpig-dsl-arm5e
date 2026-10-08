@@ -1,0 +1,309 @@
+EXTENSION "ARMDef_Dies_Irae_TheEndOfTime_Spells" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Two: The End of Time spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t3d82f3fc1655784486e3ed ^"The White Salve" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "PeCo 15 R: Touch, D: Moon, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 12
+        }
+        DESCRIPTION "This salve of white clay destroys skin flakes and hair that falls or is brushed from the individual in order to prevent the easy acquisition of Arcane Connections to the bearer of the salve. The salve is applied all over the body as where it is not the skin and hair is vulnerable to shedding. The salve fades only at the end of the duration, at which point a new dose must be reapplied. Brighde wears the salve, on average, for less than half the year.\n\nThis is a charged device and Brighde has a steady supply created for her by House Criamon.\n\n(Base 3, +1 Touch, +3 Moon)"
+    }
+
+    #tce94e0ac84f01ab8da5cb5 ^"Sense of the Moon’s Presence" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Printed Stat Line" STRING "InAe 20 R: Personal, D: Sun, T: Vision"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "Aether is intangible and invisible, which makes it hard for Hermetic magic to affect. This effect gives the caster the ability to see aether, which is sufficient then to target that aether with further spells and effects.\n\n(Base 1, +1 Touch, +2 Sun, +4 Vision)"
+    }
+
+    #t4222dfb8a1543f7c2ab849 ^"Hold the Sky in Thrall" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 145
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "PeAe 145 R: Sight, D: Momentary, T: Individual, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 31
+        }
+        DESCRIPTION "This ritual destroys the target aether’s fundamental property of movement. Upon completion of the ritual, the effect is instant and irrevocable.\n\nThis ritual, given the nature of the power concerned, is unique. It has been designed to target the moon, or rather the aether behind what those below the Lunar Sphere perceive as the moon. Once cast, there is no other target that this ritual can then target.\n\n(Base 5, +3 Sight, +5 density, +20 size)"
+    }
+
+    #t64fe1b4825f0281fcbc27d ^"The Gift of Moonlight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrIg 25 R: Touch, D: Moon, T: Boundary, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "This ritual illuminates a standard boundary with moonlight equivalent to a full moon throughout a standard Moon Duration. Those brought within the boundary who would normally experience any effects or changes due to the full moon experience those while within the affected boundary.\n\nThis demonstrates greater power than simple CrIg spells that just create light; the light created is *moon*light carrying the aether that so affects people.\n\n(Base 1, +1 Touch, +3 Moon, +4 Boundary)"
+    }
+
+    #te22dfd773ed1965410fcad ^"Endurance of the Witch Moon" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Muto"
+            ^"Printed Stat Line" STRING "Cr(Mu)Vi 35 R: Voice, D: Momentary, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "Similar to the common spell The Enigma’s Gift (ArM5, page 157), this spell causes the target to gain four Warping Points. However, in the case of characters with a specific response to Warping, the effect of these points is to force the target to undergo the Witch Moon just as if the affected target were a member of the Folk Witch hedge tradition, as described in Hedge Magic: Revised Edition, page 42. Enduring the Witch Moon is automatic. This replaces the normal effects of gaining two or more Warping Points, which for Hermetic magi is a roll for Twilight.\n\nThis effect is inspired by observing the Witch Moon endured by a subject Folk Witch.\n\nIf you are not using the *Hedge Magic: Revised Edition* rules, then the following should suffice:\n\nThe target immediately develops a fever, treated as a Medium Wound. For the period of a month, the target is unable to draw upon their Gift either to use Supernatural Abilities or to cast spells. This potentially disrupts laboratory work, although the use of enchanted devices is unaffected. At the end of the month, make a roll to see if the Witch Moon has passed:\n\n**To End Witch Moon:**\n\n**Stamina – Warping Score + stress die vs **\n\n**Ease Factor 6**\n\nIf this roll fails, then the target gains another Warping Point and the Witch Moon lasts for another month, inflicting another Medium Wound on the due to fever. Roll again at the end of the second month and so forth, until the target recovers. If the roll to end the Witch Moon is botched, the target gains an additional number of Warping Points equal to the number of 0s of the botch die. Note that the penalties due to wounds do not affect this roll.\n\n(Base 20, +2 Voice, +1 special)"
+    }
+
+    #t410ae20e8dd4048bcd034a ^"Know the Quality of the Man" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "InCo 35 R: Touch, D: Year, T: Individual, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "The caster of this ritual gains information on the target’s location and the state of the humors within the target Individual, who must be present throughout the casting of the ritual, across the duration of a year. This allows the magus to record the changes in the target’s humors in response to celestial events and circumstances appropriate for their location. In doing so, the magus learns more about the effects of aether upon the humors, ultimately enough to detect the very aether itself once the final breakthrough has been made.\n\n(Base 10, +1 Touch, +4 year)"
+    }
+
+    #t260c468cae6ee42fdef2ec ^"Know the Moon’s Influence" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 15
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "InMe 15 R: Sight, D: Momentary, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "Determines the extent to which the moon and its pull upon earthly aether is affecting the target individual. This may reveal, for instance, whether an individual with lycanthropy is close to undergoing a change, an individual with Cyclic Magic tied to the moon is experiencing a bonus or a penalty, or any Personality Traits are under lunar influence.\n\n(Base: 4, +3 Sight)"
+    }
+
+    #t42d17abe2a2596f461a2bd ^"Curse of the Werewolf" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal, Mentem"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "MuCo(An, Me) 45 R: Touch, D: Year, T: Individual, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "Over the course of a year, the target suffers from lycanthropy: the curse of the werewolf. With each full moon, the target transforms into the semblance of a wolf, losing both human body and mind to be replaced by lupine savagery. The effect goes beyond Hermetic understanding through the continued response to the moon without recourse to a device effect or linked trigger.\n\nThis effect is inspired by observing the repeated transformations of a werewolf.\n\n(Base 10, +1 Touch, +4 Year, +1 for Mentem requisite, +1 special effect)"
+    }
+
+    #t45c39c09f86b72986ad2a8 ^"Alteration of the Birth Horoscope" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 55
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Vim"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "MuCo(Vi) 55 R: Touch, D: Year, T: Individual, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "Using insight from the observations of three-score horoscopes, this spell masks the essential birth horoscope for the given target, altering the effects of the heavens upon the target. Horoscopes created for this individual fail unless calculated using new birth information defined during the ritual, including the place, date, and time of birth, among other factors. Effects that derive a horoscope from a magical understanding of the target function as normal, but any information gained relates to the altered birth information.\n\nThe original horoscope reasserts itself at the end of the spell’s duration.\n\nThe effect is inspired by taking horoscopes for three-score individuals, each related to one or more of the others.\n\n(Base 30, +1 Touch, +4 Year)"
+    }
+
+    #t5edda8fed92546e3cad06e ^"The Becalmed Harbor" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 55
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Part"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "PeAq 55 R: Touch, D: Moon, T: Part, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "This project removes the naturally-occurring aether from within the waters of a harbor or bay. In doing so, the aether in the heavens is unable to influence the motion of the waters and all tides stop throughout the Moon Duration. The ocean neither rises nor falls as before, but rather retains the level at the point it occupies when the ritual concludes.\n\n(Base 15, +1 Touch, +3 Moon, +1 Part, +3 Size)"
+    }
+
+    #td3aab9cdff709489c69d13 ^"Heighten the Mind" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "PeMe 35 R: Voice, D: Moon, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "Removes four points of Personality Traits from the individual, which return one-by-one across the Duration. They are taken from weakest Personality Trait first.\n\nWhen that reaches zero, the next least prominent Trait is affected. Negative Traits are similarly affected, but their scores are increased toward zero.\n\nThis has the effect of removing the checks and balances afforded by the lesser Personality Traits, leaving the mind influenced by its most prominent Traits only.\n\n(Base 10, +2 Voice, +3 Moon)"
+    }
+
+    #t886ea8d97ba375ed1f07e1 ^"The Strengthening Tide" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Part"
+            ^"Printed Stat Line" STRING "ReAq 40 R: Touch, D: Moon, T: Part"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "This spell makes the movement of the tides more extreme throughout a port or natural bay, forcing them to rise higher and fall lower, and with greater speed. The effects are to impose a –1 penalty to all swimming and sea-faring rolls and totals along the affected coast.\n\nBy observing the motion of the tides for a season or more in conjunction with the brightness of the moon, the magus gains insight into the effect that heavenly aether has upon the aether resident within the oceans. By replicating and strengthening that effect across the Moon Duration, the magus learns more about how aether behaves.\n\n(Base 4, +1 Touch, +3 Moon, +1 Part, +3 Size)"
+    }
+
+    #t32663cce710cba867c28f8 ^"The Mania of Others" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "ReMe 30 R: Touch, D: Moon, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "This spell moves the mania or other mental illness from one individual to another for Moon Duration. The two individuals must have different dominant humors (Sanguine, Choleric, Melancholic, and Phlegmatic) for the effect. The mania returns to the originating individual after this point. This provides the magus with an understanding of how shifts in these humors, as might be induced by the movement of the heavens, affect the mind.\n\n(Base 10, +1 Touch, +2 Moon, +1 special)"
+    }
+
+    #t2722a716a2290b76655e16 ^"The Unseen Barrier" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "CrAe 35 R: Touch, D: Concentration, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 39
+        }
+        DESCRIPTION "This spell creates a wall of aether, anchored to the ground, in an arc described by the caster. The wall has the density of tightly-packed earth and is four paces wide, by two paces tall, and about one pace thick, enough to arrest the charge of any assailants or projectiles. Like all aether, the wall itself is invisible, but it does give off a glow.\n\n(Base 25, +1 Touch, +1 Concentration)"
+    }
+
+    #t070da4056046f231c292c2 ^"The Fall" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "CrAe 35 R: Voice, D: Momentary, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 39
+        }
+        DESCRIPTION "Creates an amount of aether with the density of earth that travels 50 paces in an arc during the round in which the spell is cast. If this aether is aimed at an individual, a Perception + Finesse roll is made against the target’s Defense roll. If successful, the target takes +30 damage.\n\n(Base 5, +4 for density of stone, +2 Voice)"
+    }
+
+    #t0542f18953b96033640edc ^"The Edge of Reason" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Corpus"
+            ^"Printed Stat Line" STRING "CrAe(Co) 20 R: Sight, D: Moon, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 39
+        }
+        DESCRIPTION "Creates an amount of intangible aether within a target person. This influences the individual’s most prominent humor, which increases the individual’s strongest Personality Trait by 3 points and grants a new +3\n\nPersonality Trait for the spell’s duration according to the character’s dominant humor.\n\nSanguine Hysteric Choleric Psychotic Melancholic Neurotic Phlegmatic Fearful (Base 1, +3 Sight, +3 Moon, +1 Corpus Requisite)"
+    }
+
+    #t29d0010be31f32e443736c ^"The Invisible Revealed" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Printed Stat Line" STRING "InAe 20 R: Personal, D: Concentration, T: Vision"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 39
+        }
+        DESCRIPTION "Allows the caster to see all aether in his presence, whether that aether is unbounded, intangible or dense, or manifest within another object or individual. This is sufficient to allow the caster to then affect that aether with further spells.\n\n(Base 3, +1, +4 Vision)"
+    }
+
+    #t4e83b5622a5da0f9ac0b08 ^"Aetheric Fire" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto"
+            ^"Form" STRING "Aether"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Ignem"
+            ^"Printed Stat Line" STRING "MuAe(Ig) 35 R: Sight, D: Concentration, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 39
+        }
+        DESCRIPTION "This spell gives the target intangible aether the unnatural quality of heat. The default quality makes the aether noticeably warm, but does no damage. However, this effect increases the intensity of the heat such that it does +10 damage to those within the area of effect.\n\nThis effect has a number of advantages over the much lower level equivalent CrIg effect. First, the aetheric fire cannot itself be affected by non-aetheric effects, second if the aether is intangible it can pass through physical barriers in its way, and third those caught in the fire do not benefit from any Ignem Form bonus they might possess.\n\n(Base 10, +3 Sight, +1 Concentration, +1 intensity)"
+    }
+
+}

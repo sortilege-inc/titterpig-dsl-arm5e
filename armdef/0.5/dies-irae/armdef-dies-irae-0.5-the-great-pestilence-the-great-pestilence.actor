@@ -1,0 +1,79 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_TheGreatPestilence" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - The Great Pestilence"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The Great Pestilence (Chapter Four: The Great Pestilence, p108): one being, its printed stat lines verbatim fields.
+
+    #t05a5f4bc046b4cfd1c72fa ^"The Great Pestilence" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 50
+            ^"Printed Might" STRING "50 (Special)"
+            ^"Characteristics" STRING "Int +3, Per +2x, Pre –4, Com –3, Str +17, Sta +5, Dex +2, Qik –5"
+            ^"Size" INTEGER 6
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Thing; Magical Monster; Affinity with Brawl, Affinity with Penetration, Arable Fields Regio Network, Great Stamina (x2), Great Strength (x2), Improved Characteristics (x2), Premonitions; Blatant Magical Air, Bound to Magic; Poor Presence"
+            ^"Qualities and Inferiorities" STRING "Focus Power (x2), Gigantic (x5), Greater Power (x5), Ritual Power (x2); Gift of Speech, Improved Attack (x3), Improved Initiative (x3), Improved Soak (x3), No Fatigue (Free); Temporary Might"
+            ^"Combat" STRING "Large Claws: Init +4 Attack +29, Defense +14, Damage +21"
+            ^"Soak" INTEGER 11
+            ^"Wound Penalties" STRING "–1 (1–11), –3 (12–22), –5 (23–33), Incapacitated (34–44), Dead (45+)"
+            ^"Natural Weapons" STRING "Large Claws: Init 0, Atk +5, Def +3, Dam +4."
+            ^"Vis" STRING "10 pawns of vis of the Form that the Great Pestilence has taken when it is destroyed."
+            ^"Appearance" STRING "A great black swath of putrescence in a shape appropriate to the Form it is infecting, such as dreary fungus and moss (Herbam, Imaginem), piles of dead bodies (Corpus, Animal), black sand (Terram), oily water (Aquam), black cloud (Auram) Design Notes: The powers Crafter of (Form) and Master of (Forms) were bought with two applications of the Greater Magical Quality: Focus Power (Realms of Power: Magic, page 57). The other 6 powers were designed using 5 applications of Greater Power (Realms of Power: Magic, page 58), which provided 300 spell levels for formulaic spells. The 6 powers total 170 spell levels, leaving 130 spell levels to convert into 26 mastery points."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 108
+        }
+        PERSONALITY_TRAITS {
+            "Tenacious" +3
+            "Determined" +2
+        }
+        ABILITIES {
+            "Awareness" SCORE 10 SPECIALTY "Arcane Connections"
+            "Brawl" SCORE 15 SPECIALTY "claws"
+            "Latin" SCORE 3 SPECIALTY "Hermetic usage"
+            "Magic Lore" SCORE 9 SPECIALTY "Boundaries"
+            "Penetration" SCORE 10 SPECIALTY "Plague Touch power"
+            "Premonitions" SCORE 6 SPECIALTY "danger to self"
+        }
+        POWERS {
+            #t20849416df1bb22e0515cd ^"Scent of the Sympathetic" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–7"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "With this power the Great Pestilence can detect arcane connections. (InVi 10, +1 Touch, +1 Dia, 2 mastery points used to reduce Might cost to 0)"
+            }
+            #t0b717cff6457c28dbaa416 ^"Open the Intangible Tunnel" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–12"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "As the Hermetic spell (**ArM5, **page 162), allowing spells of level 40 or less to pass through it. (ReVi 40, +4 Arc, +1 Dia, 7 master points used to reduce Might cost to 0) *Crafter of (Form)*, Variable points, Init (Qik – magnitude), Special: The Great Pestilence can duplicate any Creo or Rego non-ritual effect of level 25 or less in the Form that it currently infects. The cost of the power is the magnitude of the effect. (Cr(Form) or Re(Form)) *Master of (Form)*, Variable points, Init (Qik – magnitude), Special: The Great Pestilence can duplicate any Muto or Perdo non-ritual effect of level 25 or less in the Form that it currently infects. The cost of the power is the magnitude of the effect. (Mu(Form) or Pe(Form))"
+            }
+            #t08bccdedee3359d58361d9 ^"Plague Touch" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power creates the Great (Form) Pestilence plague in an individual. This power changes as the Great Pestilence changes, transforming so that the specific type of plague targets the Form the Great Pestilence is infecting, allowing Herbam plagues, Animal plagues, etc. (PeForm 20, +1 Touch, +1 Moon, 4 mastery points used to reduce Might cost to 0)"
+            }
+            #t3d25fe02281e6282bde7dd ^"Waste the Essence of the Realm" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–7"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power destroys 10 pawns of raw vis at a time. (PeVi 10, +1 Touch, 2 mastery points used to reduce Might cost to 0) *Amorphous Ambulations*, 2 points, Init –7, Special: This power allows the Great Pestilence to move, slowly sliding its entire bulk from one location to another. The base effect is an average of the Rego effect used to slowly move an Individual target of the Form that that the Great Pestilence currently infects. (ReForm 3, +1 Conc, +4 Size increase) *Monstrous Metamorphosis*, 0 points, Init +2, Special: This power creates a Size +6 human torso, arms, and head, which the Great Pestilence uses in personal combat. The Great Pestilence can speak when it assumes this form. The power only lasts 2 minutes, which is 20 combat rounds. The base effect is an average Muto effect used to change the shape of the Form in question. (MuForm 3, +1 Dia, +2 Size increase, 1 mastery point used to reduce Might cost to 0, 8 mastery points used to improve Initiative) *Form Transfiguration*, 10 points, –21, Special: This power changes the Great Pestilence from one Form to another. The process takes only a few seconds, but it takes a season for the Great Pestilence to recover the 10 points of Might lost during the transformation. (Special, no Hermetic equivalent, requires two applications of the Greater Magical Quality: Ritual Power)"
+            }
+        }
+        DESCRIPTION "The Great Pestilence’s Form depends on the Form it is currently infecting.\n\nThe Great Pestilence does not have individual powers representing its effects on Mythic Europe as a whole. Those are, rather, part of its nature as a magical disease, and cannot be used in any other way. They are still magical effects of the Pestilence, however, and thus can be blocked by Magic Resistance or warded off, as discussed earlier."
+    }
+
+}

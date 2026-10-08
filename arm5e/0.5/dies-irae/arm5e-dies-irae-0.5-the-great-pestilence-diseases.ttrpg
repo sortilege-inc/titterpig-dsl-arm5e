@@ -1,0 +1,147 @@
+EXTENSION "ArM5_Dies_Irae_TheGreatPestilence_Diseases" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Four: The Great Pestilence diseases"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # The chapter's diseases, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb755386ed6da68ef4d6eae ^"The Great (Form) Pestilence" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Critical"
+            ^"Humor" STRING "Phlegmatic"
+            ^"Severity" INTEGER 21
+            ^"Stable Ease Factor" STRING "12"
+            ^"Improvement Ease Factor" STRING "18"
+            ^"Interval" STRING "Day" FIAT "the book prints an interval of a day; the type lists Art & Academe's (Week, Month, Season, Lifelong)"
+            ^"Symptoms" STRING "Once acquired, the disease advances quickly. Initial signs in humans and animals are fatigue and fever, followed by coughing and sneezing. Within an hour coughing leads to bloody expectoration, and within two hours puss-filled buboes appear on the throat, armpits, and groin. For objects, minerals, and plants, the symptoms are a general encompassing of the surface with a blue-black mold. Firm textures becoming spongy and exude a foul odor. The Disease Penalty is –5."
+            ^"Printed Stat Line" STRING "Critical Phlegmatic Disease, Severity 21 Stable: 12, Improve: 18, Interval: Day"
+            ^"Rules Section" STRING "The Great (Form) Pestilence"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 88
+        }
+    }
+
+    #t0404e7e70f8d71e3f04916 ^"The Great Corpus Pestilence" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Critical"
+            ^"Humor" STRING "Phlegmatic"
+            ^"Severity" INTEGER 21
+            ^"Stable Ease Factor" STRING "12"
+            ^"Improvement Ease Factor" STRING "18"
+            ^"Interval" STRING "Day" FIAT "the book prints an interval of a day; the type lists Art & Academe's (Week, Month, Season, Lifelong)"
+            ^"Symptoms" STRING "Once acquired the disease progresses quickly. Initial signs are fatigue and fever, followed by coughing and sneezing. Within an hour coughing leads to bloody expectoration, and within two hours puss-filled buboes appear on the throat, armpits, and groin. The Disease Penalty is –5."
+            ^"Printed Stat Line" STRING "Critical Phlegmatic Disease, Severity 21 Stable: 12, Improve: 18, Interval: Day"
+            ^"Rules Section" STRING "The Great Corpus Pestilence"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "As the Autumn season begins, on the new moon in October, Magic auras and regiones produce a Corpus miasma. Like the Herbam miasma, the Corpus miasma carries a lethal blight. Instead of targeting plants, these noxious pockets of poisoned air target people. Each person touched by the Corpus miasma is infected with a dire disease. While it is not instantly fatal, the infected has only a few days to survive."
+    }
+
+    #t13b3c85c9b3cb35317d07e ^"St. Anthony’s Fire" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Minor"
+            ^"Humor" STRING "Sanguine"
+            ^"Severity" INTEGER 12
+            ^"Stable Ease Factor" STRING "6"
+            ^"Improvement Ease Factor" STRING "18"
+            ^"Interval" STRING "Season"
+            ^"Printed Stat Line" STRING "Minor Sanguine Disease, Severity 12 Stable: 6, Improve 18, Interval: Season"
+            ^"Rules Section" STRING "St. Anthony’s Fire"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 81
+        }
+        DESCRIPTION "An excess of blood caused by a demon of disease, St. Anthony’s Fire follows slightly different rules for recovery. There is no Disease Avoidance Roll. If the demon’s *disease possession* power penetrates the Magic Resistance of the victim, the victim immediately suffers the effects of the disease. The patient is still allowed a Disease Recovery Roll at the appropriate interval, and if the roll is successful the sickness lessens in severity by one step. If the demon is exorcised or destroyed by magic, the victim instantly recovers.\n\nSymptoms include a red rash, intestinal pain, visions, muscle spasms, and a burning sensation in the limbs. Eventually the feet and hands wither and become useless. The disease worsens each season, eventually killing the victim."
+    }
+
+    #taa4fb2adb915194d5f0563 ^"Sun Scorch" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Minor"
+            ^"Humor" STRING "not printed" FIAT "a plant disease (Dies Irae, p84): the book prints no humor for it"
+            ^"Severity" INTEGER 6
+            ^"Stable Ease Factor" STRING "6"
+            ^"Improvement Ease Factor" STRING "10"
+            ^"Interval" STRING "Week"
+            ^"Printed Stat Line" STRING "Minor Disease, Severity 6 Stable: 6, Improve 10, Interval: Week"
+            ^"Rules Section" STRING "Common Plant Diseases"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 84
+        }
+        DESCRIPTION "Sun scorch can be cured by increasing a plant’s water source and, if possible, providing shade. If left unattended for a month sun scorch will kill the plant. Sun scorch is the most common plant ailment in Mythic Europe and is often the first killer in areas of drought."
+    }
+
+    #t42833556a9fe7f6de67d08 ^"Grubs" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Major"
+            ^"Humor" STRING "not printed" FIAT "a plant disease (Dies Irae, p84): the book prints no humor for it"
+            ^"Severity" INTEGER 12
+            ^"Stable Ease Factor" STRING "10"
+            ^"Improvement Ease Factor" STRING "10"
+            ^"Interval" STRING "Week"
+            ^"Printed Stat Line" STRING "Major Disease, Severity 12 Stable: 10, Improve 10, Interval: Week"
+            ^"Rules Section" STRING "Common Plant Diseases"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 84
+        }
+        DESCRIPTION "Grubs destroy the field within a month."
+    }
+
+    #t99977273a37ff56ba28f2b ^"Kambros" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Minor"
+            ^"Humor" STRING "not printed" FIAT "a plant disease (Dies Irae, p84): the book prints no humor for it"
+            ^"Severity" INTEGER 6
+            ^"Stable Ease Factor" STRING "n/a"
+            ^"Improvement Ease Factor" STRING "9"
+            ^"Interval" STRING "Week"
+            ^"Printed Stat Line" STRING "Minor Disease, Severity 6 Stable n/a, Improve 9, Interval: Week"
+            ^"Rules Section" STRING "Common Plant Diseases"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 84
+        }
+        DESCRIPTION "Kambros prevents a plant from producing fruit, but will not necessarily kill the plant if left unattended. The disease will not worsen, but it is a persistent blight until cured."
+    }
+
+    #td26acb89afa503fbd2bead ^"Mold" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Serious"
+            ^"Humor" STRING "not printed" FIAT "a plant disease (Dies Irae, p84): the book prints no humor for it"
+            ^"Severity" INTEGER 9
+            ^"Stable Ease Factor" STRING "6"
+            ^"Improvement Ease Factor" STRING "15"
+            ^"Interval" STRING "Day" FIAT "the book prints an interval of a day; the type lists Art & Academe's (Week, Month, Season, Lifelong)"
+            ^"Printed Stat Line" STRING "Serious Disease, Severity 9 Stable 6, Improve 15, Interval: Day"
+            ^"Rules Section" STRING "Common Plant Diseases"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 84
+        }
+        DESCRIPTION "Mold is a determined ailment and will destroy an Individual-sized plant in 7 days. Larger plants take longer to die, but are no more resistant to the disease. Multiply the length of time it takes to destroy the plant by 10 for every +1 size increment."
+    }
+
+    #tb2a6d35e03b2a1648da8b0 ^"Necrosis" DEF {
+        EXTENDS #t52385d670620f6b4d70ab1 ^"Disease"
+        PROPERTIES {
+            ^"Disease Penalty" STRING "Critical"
+            ^"Humor" STRING "not printed" FIAT "a plant disease (Dies Irae, p84): the book prints no humor for it"
+            ^"Severity" INTEGER 15
+            ^"Stable Ease Factor" STRING "12"
+            ^"Improvement Ease Factor" STRING "18"
+            ^"Interval" STRING "Hour" FIAT "the book prints an interval of a hour; the type lists Art & Academe's (Week, Month, Season, Lifelong)"
+            ^"Printed Stat Line" STRING "Critical Disease, Severity 15 Stable 12, Improve 18, Interval: Hour"
+            ^"Rules Section" STRING "Common Plant Diseases"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 84
+        }
+        DESCRIPTION "The dreaded “black root” disease will kill a plant in 12 hours, regardless of the plant’s Size."
+    }
+
+}

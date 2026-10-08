@@ -1,0 +1,76 @@
+EXTENSION "ArM5_Dies_Irae_Fimbulwinter_SlidrTheMercilessBlizzard" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Slidr, the Merciless Blizzard"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # Slidr, the Merciless Blizzard (Chapter Three: Fimbulwinter: The Cold Doom, p61): one being, its printed stat lines verbatim fields.
+
+    #td7f331938d10f78049d723 ^"Slidr, the Merciless Blizzard" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 50
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 4
+            }
+            ^"Season" STRING "Winter"
+            ^"Size: 0 Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Magic Spirit, Daimon; Great Quickness, Great Stamina, Improved Characteristics x6, Wilderness Sense; Blatant Magical Air, Driven (To Make the World Winter), Magical Monster; Anchored to the Sky, Deleterious Circumstances (Summer), Overconfident, Susceptible to the Divine"
+            ^"Magical Qualities and Inferiorities" STRING "Focus Power: Auram x2, Greater Power (Donning the Corporeal Veil, Eidolon, Madness of the Perpetual Winter), Ritual Power (Eternal Snows) x2; Ignem Resistance, Improved Confidence, Improved Might x5, Improved Powers (Breath of Unfathomable Cold, Eternal Snows x2, Madness of the Perpetual Winter), Improved Recovery, Improved Soak, Lesser Power x2 (Breath of Unfathomable Cold), Magical Meditation, No Fatigue, Personal Power (Flight of the Biting Zephyr, Sight Beyond Sight x2)"
+            ^"Reputations" LIST ["Awesome Force of Nature (local) 5"]
+            ^"Soak" INTEGER 6
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Powers" STRING "Breath of Unfathomable Cold 3 points, Init –14, Ignem R: Voice, D: Mom, T: Part Cools the air within 1000 paces of the target, leaving it freezing. All nonliving things are chilled thoroughly, not just on the surface. All living things, except the Aspect, suffer +5 damage. Armor does not add to Soak against this spell. House fires become as small as campfires, bonfires become as small as torch fires, and campfires and smaller fires go out. PeIg 45 (Base 5, +2 Voice, +1 Part, +4 size): Lesser Power (x2, 45 levels; 1pt Mastery for –2 Might cost); Improved Powers (–4 Might cost) Donning the Corporeal Veil, 0 points, Init +3, Corpus: Slidr can assume material form. Cr(Re)Co 25 (Base 5 +1 Touch, +2 Sun, +1 requisite): Greater Power (25 levels, –3 Might cost, +10xp Penetration) Eidolon, 0 points, Init +4, Imaginem R: Touch, D: Conc, T: Ind Creates an illusionary form visible and audible to material beings. The image can move and speak as directed by the spirit and lasts until the spirit has no use for it. CrIm 15 (Base 2, +1 Touch, +2 Conc, +2 Move on command, +1 intricacy): Greater Power (15 levels, –2 Might cost, +2 Init, +15xp Penetration) Eternal Snows 1 point, Init –16, Auram R: Voice, D: Year, T: Group Creates clouds dropping snow over an area about 10 miles across. The clouds gather over a few seconds at the beginning of the spell, and dissipate over the same sort of time when duration concludes. The spell does affect temperature, chilling the air thoroughly. Cr(Pe)Au(Ig) 50 (Base 2, +2 Voice, +4 Year, +2 Group, +2 Size, +2 Requisites): Ritual Power (50 levels): Improved Powers (x2, –9 Might cost, +5 xp Penetration) Flight of the Biting Zephyr 1 points, Init +2, Corpus R: Per, D: Sun, T: Ind Slidr can fly through the air in any direction, simply by concentrating. If distracted, this control is lost but the power still holds the spirit aloft indefinitely. ReCo 25 (Base 15, +2 Sun, constant): Personal Power (25 levels); Improved Powers (–1 Might cost) Madness of the Perpetual Winter 0 points, Init –8, Mentem R: Sight, D: Moon, T: Group Groups of up to 1000 people within sight of Slidr are filled with anger and resentment, looking for any excuse to take it out on those around them. In almost all cases, this quickly develops into violence. CrMe 45 (Base 4, +3 Sight, +3 Moon, +2 Group, +2 size): Greater Power (50 levels); Improved Powers (–5 Might cost) Master of Winter’s Cloak, up to 8 points, Init +4–Magnitude, Aquam Slidr may create non-ritual Creo/Muto/ Rego Aquam effects pertaining to snow and ice up to 8th magnitude. (Focus power x2; 2 Mastery points spent on Ignem prerequisites, 1pt Perdo prerequisites) Through the Winds of the Storm, 1 point, Init +4, Corpus R: Per, D: Conc, T: Vision All five of Slidr’s senses operate at a distance, as far as the Aspect can see. This gives Slidr supernatural awareness of everything which occurs, and it is exceptionally difficult to catch it by surprise. InIm 30 (Base 5, +1 Conc, +4 Vision): Personal Power x 2 (20 levels, –2 Might cost, +2 Init)"
+            ^"Vis" STRING "There are three pawns of Aquam and Auram vis in the frost on the Slidr’s clothes, and there are two pawns of Ignem and Mentem vis in its eyes."
+            ^"Appearance" STRING "Slidr looks like a platinumblonde Nordic man with an extremely pale complexion and a white, ice-encrusted beard stretching down to his chest. He wears heavy, fur-lined hide armor coated in frost and carries a battle axe with a head and haft of pale blue ice."
+            ^"Design Note" STRING "This is only one example of an Aspect of Fimbulwinter. Others may have different powers associated with the particular Aspect’s reputation or specialties."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 61
+        }
+        PERSONALITY_TRAITS {
+            "Driven" +6
+            "Fierce" +3
+            "Persistent" +3
+            "Uncaring" +3
+            "Winter" +3
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 9
+            " Fist" INIT 2 ATTACK 8 DEFENSE 8 DAMAGE 2
+            " Icy Battleaxe" INIT 3 ATTACK 12 DEFENSE 9 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "charging"
+            "Awareness" SCORE 5 SPECIALTY "sneak attacks"
+            "Area Lore" SCORE 1 SPECIALTY "local region"
+            "Brawl" SCORE 5 SPECIALTY "dodge"
+            "Concentration" SCORE 5 SPECIALTY "Auram effects"
+            "Finesse" SCORE 5 SPECIALTY "shaping effects"
+            "Etiquette" SCORE 1 SPECIALTY "Muspelli"
+            "Folk Ken" SCORE 5 SPECIALTY "first impressions"
+            "Guile" SCORE 5 SPECIALTY "misleading"
+            "Hunt" SCORE 4 SPECIALTY "tracking"
+            "Ignem Resistance" SCORE 3 SPECIALTY "ice"
+            "Living Language: Local Language" SCORE 2 SPECIALTY "warnings"
+            "Living Language: Norse" SCORE 5 SPECIALTY "warnings"
+            "Magic Lore" SCORE 5 SPECIALTY "Regiones"
+            "Organization Lore: Muspelli" SCORE 5 SPECIALTY "Jotnar"
+            "Penetration" SCORE 6 SPECIALTY "Auram effects"
+            "Second Sight" SCORE 5 SPECIALTY "invisible things"
+            "Single Weapon" SCORE 6 SPECIALTY "axe"
+            "Stealth" SCORE 5 SPECIALTY "stalking"
+            "Wilderness Sense" SCORE 6 SPECIALTY "finding settlements"
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_AnimatedTree" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Animated Tree"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # Animated Tree (Chapter Four: The Great Pestilence, p92): one being, its printed stat lines verbatim fields.
+
+    #tc8312228c5a6b01655ea23 ^"Animated Tree" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#tf4e2359c3dc0ddc232e44a ^"The Fen"]
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Magic Might" STRING "None (Herbam)"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -3
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -5
+            }
+            ^"Size" INTEGER 5
+            ^"Virtues and Flaws" STRING "Clumsy"
+            ^"Magic Qualities and Inferiorities" STRING "No Fatigue"
+            ^"Soak" INTEGER 15
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Vis" STRING "None Reprinted from Realms of Power: Magic, page 129."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 92
+        }
+        PERSONALITY_TRAITS {
+            "Tree" +3
+        }
+        COMBAT {
+            "Branch" INIT 5 ATTACK 7 DEFENSE 1 DAMAGE 10
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "branch"
+        }
+    }
+
+}

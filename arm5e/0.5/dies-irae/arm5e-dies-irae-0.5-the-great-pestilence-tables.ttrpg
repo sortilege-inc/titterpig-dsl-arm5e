@@ -1,0 +1,69 @@
+EXTENSION "ArM5_Dies_Irae_TheGreatPestilence_Tables" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Four: The Great Pestilence tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1e8c36ca211aafe1c3b508 ^"Handling Multiple Miasmas (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Simple Die", "Wind Direction"]
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 89
+        }
+        TABLE {
+            "1" "No wind, check for length of time between miasmas (below)"
+            "2" "North"
+            "3" "Northeast"
+            "4" "East"
+            "5" "Southeast"
+            "6" "South"
+            "7" "Southwest"
+            "8" "West"
+            "9" "Northwest"
+            "10" "Becalmed. Roll a simple die to determine how many days before the wind blows"
+        }
+    }
+
+    #t76d54f66e84062f883df37 ^"The Path to the Arcana Centrum: Familiarity (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Familiarity", "Modifier"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for its section and its first column"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 105
+        }
+        TABLE {
+            "Enigmatic Wisdom" "score"
+            "Magic Lore" "score"
+            "Knows of destination" "1"
+            "Has seen destination" "3"
+            "Has visited destination" "6"
+            "Arcane Connection to destination" "15"
+        }
+    }
+
+    #t98660c8e672cf84448dec4 ^"The Path to the Arcana Centrum: Speed Level (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Speed Level", "Length of Journey"]
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for its section and its first column"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 105
+        }
+        TABLE {
+            "0" "seven plus a stress die (no botch) number of years"
+            "3" "seven years"
+            "6" "Year"
+            "9" "one season"
+            "12" "Moon"
+            "15" "day (24 hours)"
+            "18" "Sun"
+            "21" "two hours"
+            "24" "Diameter (2 minutes)"
+            "27" "one minute"
+            "30+" "Momentary"
+        }
+    }
+
+}

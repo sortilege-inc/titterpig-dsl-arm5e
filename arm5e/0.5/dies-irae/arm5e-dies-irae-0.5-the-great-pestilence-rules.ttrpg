@@ -1,0 +1,97 @@
+EXTENSION "ArM5_Dies_Irae_TheGreatPestilence_Rules" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Four: The Great Pestilence rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t1a6d796b8ac2b932e2eb2c ^"Prognosis Total (Dies Irae)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Prognosis Total"
+            ^"Rules Section" STRING "Fangs in the Night"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 77
+        }
+        FORMULAS {
+            "Prognosis Total" "Intelligence + Medicine + Diet modifier + Medication modifier + Surgery modifier"
+        }
+    }
+
+    #t3b1ff90ab1a4aa2facbb75 ^"Modifiers to Prognosis Total (Dies Irae)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Modifiers to Prognosis Total"
+            ^"Rules Section" STRING "Fangs in the Night"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 77
+        }
+        FORMULAS {
+            "Modifiers to Prognosis Total" "Diet modifier + Living Condition (0 in this case) Medication modifier + Profession: Apothecary (maximum 3) Surgery modifier + Chirurgy (maximum 3)"
+        }
+    }
+
+    #t43b9b582a5d981a65f697d ^"Spot a Miasma" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "“We are Doomed!”"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 89
+        }
+        FORMULAS {
+            "Spot a Miasma" "Perception + Second Sight + stress die vs. 9"
+        }
+    }
+
+    #t45fd17fcccd52723f89ae2 ^"Viewing a Twilight Tear" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Twilight Tear"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 93
+        }
+        FORMULAS {
+            "Viewing a Twilight Tear" "Perception + Second Sight or Magical Sensitivity + stress die vs. 12"
+        }
+    }
+
+    #t8157a3ac1f2e7bc7f38724 ^"Boundary and Vestige Travel" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Path to the Arcana Centrum"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Boundary and Vestige Travel" "Stress die + Perception + appropriate Ability + Form bonus vs. ((10 – level of boundary or vestige) x 3) – Familiarity modifier"
+        }
+    }
+
+    #t039be0353b6cf706b85092 ^"Twilight Void Travel" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Path to the Arcana Centrum"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Twilight Void Travel" "stress die + Stamina + Concentration + Form bonus"
+        }
+    }
+
+    #tfe2046e56984bc522b989c ^"Disease Avoidance Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Ease Factor" STRING " Stable Ease Factor of the disease (see later)"
+            ^"Rules Section" STRING "Dealing with Disease"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 81
+        }
+        FORMULAS {
+            "Disease Avoidance Roll" "Stamina + Living Condition Modifier + (Corpus/5) + Wound Penalty + stress die"
+        }
+    }
+
+}

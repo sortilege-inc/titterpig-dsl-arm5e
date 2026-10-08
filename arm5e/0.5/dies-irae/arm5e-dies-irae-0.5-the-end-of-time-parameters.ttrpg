@@ -1,0 +1,54 @@
+EXTENSION "ArM5_Dies_Irae_TheEndOfTime_Parameters" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Two: The End of Time parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # The chapter's parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tff5532b399ddff3fdcb41f ^"The Burning of a Taper (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Burning of a Taper"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "Effects last for the duration of a lit taper, equivalent to the two minutes represented by standard Diameter effects. There is no requirement to light a taper during spells or effects with this Duration."
+    }
+
+    #t2f102829352e22757577d0 ^"At the Waking or the Sleeping (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "At the Waking or the Sleeping"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "Lasts until either the caster or the target next sleeps or wakes. Equivalent to Sun."
+    }
+
+    #t0bef97e3a35376470b190f ^"300 Miles (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "300 Miles"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "Lasts until the caster or any of the targets travels a total distance of 300 miles. Any distance moved at all adds to the accumulated distance. This is based on the distance on good roads that could be traveled during the standard Moon Duration. Equivalent to Moon."
+    }
+
+    #t5821fd2fa3197a40f98fec ^"The Weight of Years (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "The Weight of Years"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 37
+        }
+        DESCRIPTION "The effect lasts until either the caster or the target is forced to make an aging roll. Where the caster and target are both younger than 35, this means that the effect may last several years. Artificially-induced aging rolls, through magic or other trauma, are sufficient to end the effect. Equivalent of Year. Requires a Ritual."
+    }
+
+}

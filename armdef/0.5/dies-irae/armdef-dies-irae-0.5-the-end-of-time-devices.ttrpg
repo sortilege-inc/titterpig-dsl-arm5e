@@ -1,0 +1,90 @@
+EXTENSION "ARMDef_Dies_Irae_TheEndOfTime_Devices" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Two: The End of Time devices"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The chapter's devices, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t00f193217789946ce5ede5 ^"Opening the Intangible Tunnel (Dies Irae)" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Printed Name" STRING "Opening the Intangible Tunnel"
+            ^"Part Of" STRING "Talisman: The White Bow"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 53
+            ^"Penetration" STRING "+30"
+            ^"Uses" STRING "6/day"
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Effect: Base +4 Arcane Connection, +1 Concentration; Modifications: +5 device maintains concentration, +3 6/day, +15 for +30 Penetration)"
+            ^"Printed Effect Line" STRING "Pen +30, 6/day ReVi 53 R: Arcane Connection, D: Concentration, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 12
+        }
+        DESCRIPTION "As per the spell described in ArM5, page 162. Allows spells of up to level 30 to be cast through the connection. The Penetration is a little low for use against opponents of great power, but the device is useful against mundanes and minor powers."
+    }
+
+    #t3dfaea66ca0d3a3351541a ^"The Fetid Arrow" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Talisman: The White Bow"
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 41
+            ^"Penetration" STRING "+30"
+            ^"Uses" STRING "2/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Effect: Base 20, +1 Touch; Modifications: +1 2/day, +15 for +30 Penetration)"
+            ^"Printed Effect Line" STRING "Pen +30, 2/day PeCo 41 R: Touch, D: Momentary, T: Individual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 12
+        }
+        DESCRIPTION "Cast through the Intangible Tunnel, this effect causes the target to contract Febris Semitertiana, which becomes apparent after a week. The disease is debilitating, causing fever, rash, and crippling abdominal pain.\n\nThis spell uses the Perdo Corpus guidelines from *Art & Academe*, page 57 and the disease rules from page 45 of that supplement."
+    }
+
+    #t4631274276b053ad37fb28 ^"The Searing Light of Heaven" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 38
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "Constant Effect"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Spectacle"
+            ^"Effect Design" STRING "(Effect: Base 5, +2 Sun, +4 Spectacle; Modifications: +1 for 2/day, +3 triggered at sunrise/set)"
+            ^"Printed Effect Line" STRING "CrIg 38 Pen +0, Constant Effect R: Personal, D: Sun, T: Spectacle"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 25
+        }
+        DESCRIPTION "Anyone looking directly at the fallen star is blinded by its brilliant light. Those affected must make a Stamina stress roll against an Ease Factor of 9 to avoid blindness. Magi benefit from their Ignem Form bonus on this roll. Those possessing the Form of Aether may instead use their Aether Form bonus to this roll. On a botch, the blinding is permanent and the character gains the Blind Flaw, otherwise a Stamina stress roll (no botch) against an Ease Factor of 9 can be attempted every diameter until recovered.\n\nThis effect uses the Spectacle Target, more commonly associated with magic known to magi of House Bjornaer, which affects any who look at the object in question, in this case the fallen star."
+    }
+
+    #tc635adb54435806cec9cd1 ^"Observe the Color of the (Sphere) Sphere" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Intellego Projects"
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 50
+            ^"Penetration" STRING "+0"
+            ^"Uses" STRING "1 use per Day"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Effect Design" STRING "(Base: 5, +1 Concentration, +4 vision, +1 for non-Hermetic, +2 Technique and Form; Modifications: +5 Device maintains concentration)"
+            ^"Printed Effect Line" STRING "InVi 50 Pen +0, 1 use per Day R: Personal, D: Concentration, T: Vision"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 40
+        }
+        DESCRIPTION "Enchanted into a lens, this effect detects subtle variations in light emitted by the specified sphere, with each lens designed for a particular celestial sphere as denoted by the symbols engraved around its edge.\n\nThe effect is designed to detect the active magical influence of the spheres, so the base level is relatively low. The effect must collect as much separate information as possible and so the additional magnitudes required increase the level of the effect."
+    }
+
+}

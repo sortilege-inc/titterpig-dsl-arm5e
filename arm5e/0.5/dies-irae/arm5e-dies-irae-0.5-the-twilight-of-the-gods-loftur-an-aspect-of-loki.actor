@@ -1,0 +1,149 @@
+EXTENSION "ArM5_Dies_Irae_TheTwilightOfTheGods_LofturAnAspectOfLoki" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Loftur, An Aspect of Loki"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # Loftur, An Aspect of Loki (Chapter Five: The Twilight of the Gods, p114): one being, its printed stat lines verbatim fields.
+
+    #t3a0554ec1feadaa2e601a5 ^"Loftur, An Aspect of Loki" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 49
+            ^"Form" STRING "Corpus"
+            ^"Season" STRING "Winter"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 7
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Magical Monster; Essential Virtue; Affinity with Guile, Great Intelligence x 2, Light Touch, Improved Characteristics x3, Puissant Stealth; Indiscreet, Meddler, Magical Air; Fear (thunderstorms), Reckless free with Magic Spirit"
+            ^"Magic Qualities and Inferiorities" STRING "Greater Powers x 7, Improved Intelligence x 2, Major Virtue (Shapeshifter), Ritual Powers x 4; Improved Confidence, Improved Abilities, Improved Powers x 7, Improved Soak; Major Flaw (Restriction: can’t use powers he has granted)"
+            ^"Personality Traits" STRING "Consummate Liar (Communication) +6, Sly +6, Boastful +3, Brave 0 Essential Trait, replaces listed Characteristic whenever Trait applies."
+            ^"Reputations" LIST ["Foe of the World 3 (Local)"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "5 pawns of Mentem vis in tongue, 5 pawns of Corpus vis in hair."
+            ^"Appearance" STRING "A tall lithe man with bright red hair, clean-shaven. His lips are scarred with a series of holes (remnants of when his mouth was once sewed shut); this twists his otherwise handsome face into a disconcerting leer. He wears clothes appropriate to the situation in which he finds himself, typically dark brown leggings and a buff-colored overtunic. Loki is an unusual shapeshifter in that he can change his sex as well as his shape, and he can turn into creatures smaller than the usual limit of –5. He can assume the following forms: mare, salmon, spider, wolverine."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 114
+        }
+        COMBAT {
+            "Short sword" INIT 3 ATTACK 11 DEFENSE 9 DAMAGE 4
+            " Short bow" INIT 1 ATTACK 8 DEFENSE 5 DAMAGE 5
+        }
+        ABILITIES {
+            "Area Lore: Local" SCORE 5 SPECIALTY "hiding places"
+            "Athletics" SCORE 3 SPECIALTY "balancing"
+            "Awareness" SCORE 4 SPECIALTY "traps"
+            "Bows" SCORE 3 SPECIALTY "mistletoe arrows"
+            "Carouse" SCORE 2 SPECIALTY "with giants"
+            "Etiquette" SCORE 5 SPECIALTY "among Germans"
+            "Charm" SCORE 6 SPECIALTY "women"
+            "Faerie Lore" SCORE 4 SPECIALTY "gods"
+            "Folk Ken" SCORE 6 SPECIALTY "kings"
+            "Guile" SCORE 10 SPECIALTY "lying to gods"
+            "Intrigue" SCORE 4 SPECIALTY "court) Leadership 4 (Muspelli"
+            "Native Language" SCORE 5 SPECIALTY "local dialect"
+            "Single Weapon" SCORE 5 SPECIALTY "short sword"
+            "Shapeshifter" SCORE 4 SPECIALTY "fast transformation"
+            "Stealth" SCORE 7 BONUS 2 SPECIALTY "when others are asleep"
+            "Teaching" SCORE 2 SPECIALTY "bows"
+            "West Norse" SCORE 5 SPECIALTY "Icelandic"
+        }
+        POWERS {
+            #te1cf60dba926afd95c9784 ^"Donning the Corporeal Veil (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "See *Realms of Power: Magic*, page 102 Cr(Re)Co 25 (Base 5, +1 Touch, +2 Sun, +1 requisite) Greater Power (25 levels, –3 Might, +2 Init)"
+            }
+            #t9e8ebf813665aea4c93fbb ^"Loan the Purloined Treasures" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–18"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Loki can grant a mortal the ability to use one of his other Powers by giving the respective treasure to the character. The mortal gains the power as the Greater Power Major Virtue, and if she lacks a Might score, must expend 1 Fatigue level for each 2 points (or fraction) of the power’s Might cost. Loki has a Restriction as a Magic Inferiority, that he cannot use his own power while he has lent it to another character and must physically reclaim the treasure to regain control over it. No Hermetic equivalent. Ritual Power x 2 (–5 Might cost (with 5 mastery points from Improved powers))"
+            }
+            #t564f4dd971a23acfc63a5e ^"Odin’s Spear of Victory" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Brandishing the spear allows Loki to grant a group of up to 1000 men a +3 bonus to their Single Weapon Ability. This power is the same as Grant Puissance in (Ability) (*Realms of Power: Magic* page 38) with a Size modifier. MuCo 30 (Base 2, +1 Eye, +2 Sun, +2 Group, +3 Size) Greater Power (30 levels)"
+            }
+            #tba0b6cc0921d3b24ca1dbe ^"Odin’s Spear of Triumph" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Brandishing the spear allows Loki to grant a group of up to 1000 men a +2 bonus to their Soak Totals. MuCo 45 (Base 10, +1 Eye, +2 Sun, +2 Group, +2 Size) Greater Power (45 levels, –2 Might cost, +1 Init with 2 mastery points from Improved Powers)"
+            }
+            #tf69478b076c3f6f6af4c23 ^"Odin’s Spear of Rage" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Brandishing the spear allows Loki to grant a group of up to 1000 men the ability to ignore Wound and Fatigue penalties. Affected characters still collapse when reaching Unconscious or Incapacitated, at which point they are no longer affected by this power. ReCo 45 (Base 10, +1 Eye, +2 Sun, +2 Group, +2 Size) Greater Power (45 levels, –2 Might cost, +2 Init with 4 mastery points from Improved Powers)"
+            }
+            #te97feaccbb5ac60ce4bbf8 ^"Thor’s Belt" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Buckling this belt around the waist increases Loki’s Strength by 5 points. MuCo 50 (No Hermetic equivalent) Greater Power (50 levels, –3 Might cost with 3 mastery points from Improved Powers)"
+            }
+            #t36cb6ee8459f377c617b2e ^"Freyja’s Cloak" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "By donning this cloak of gray feathers, Loki is transformed into a falcon. The effect can be ended at any time by removing the cloak. MuCo(An) 30 (Base 20, +2 Sun) Greater Power (30 levels, –1 Might, +6 Init with 5 mastery points from Improved Powers)"
+            }
+            #te46f27545852d57ade785f ^"Ullur’s Bow" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "Any creature or person struck with an arrow shot from this bow takes an Incapacitating Wound. Firing an actual arrow is a purely cosmetic effect; the arrow always appears to hit, unless Magic Resistance applies. PeCo(An) 35 (Base 20, +2 Voice, +1 requisite) Greater Power (35 levels, –2 Might cost, +6 Init with 6 mastery points from Improved Powers)"
+            }
+            #t61a1355c650a290c215113 ^"Idun’s Apple" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1–4 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "When Loki takes a bite of this apple he is healed from all Light Wounds, three bites heals all his Medium Wounds, and five bites heals all his Heavy Wounds. Eating the whole apple cures all Incapacitating Wounds. This power costs him 1, 2, 3, or 4 Might points respectively. If given as a gift, an apple offers six bites in total. CrCo 35 (Base 35) Ritual Power x 2 (35 levels, –3 Might cost, +10 Init with 10 mastery points from Improved Powers)"
+            }
+            #te3c8b9f604065cea536dbd ^"Ran’s Net" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "When this fishing net is cast over a Group of Individuals, they become hopelessly tangled within it and cannot move at all. Loki must hold onto the net to keep people entrapped; if he lets go they can free themselves within a round. ReCo 30 (Base 5, +2 Voice, +1 Conc, +2 Group) Greater Power (30 levels, –2 Might Cost)"
+            }
+        }
+    }
+
+}

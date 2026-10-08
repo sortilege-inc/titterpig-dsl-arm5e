@@ -1,0 +1,58 @@
+EXTENSION "ArM5_Dies_Irae_TheTwilightOfTheGods_Gambanteinn" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Gambanteinn"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Dies_Irae_Core_Ext"
+
+    # Gambanteinn (Chapter Five: The Twilight of the Gods, p131): one being, its printed stat lines verbatim fields.
+
+    #t8213d005aa6f1b25ec0688 ^"Gambanteinn" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Terram"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER -4
+            ^"Virtues and Flaws" STRING "Magic Thing; Magical Friend; Shapeshifter; Puissant Great Weapon, Strong-Willed, Hatred, Temporary Might; Small Frame Free with Magic Thing"
+            ^"Magic Qualities and Inferiorities" STRING "Greater Powers; Improved Attack x 2, Improved Damage, Improved Defense, Improved Initiative x 2, Improved Soak x 2; Limited Movement"
+            ^"Reputations" LIST ["Foe of Man 1 (Local)"]
+            ^"Combat" STRING "Great sword: Init +9, Attack +20, Defense +16, Damage +16 see Guided Strike Power, below"
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Powers" STRING "Guided Strike: If wielded in combat, the Gambanteinn can guide its own blows. This is not a power, but the result of the sword being aware and capable of limited movement. If its wielder has no Great Weapon Ability then use the statistics above but with a –3 penalty to Attack and Defense Totals to account for the lack of coordination between wielder and weapon. If the bearer has the Great Weapon Ability and is acting in accordance with the sword, then use the highest of the wielder’s Combat Totals and the sword’s. However, the sword is willful and may resist the wielder, desiring to continue fighting when the wielder stops, or to attack a different foe. If this occurs, then make a Strength stress roll for the wielder and the sword. If the wielder’s roll is higher then he uses the weapon with his own Combat Totals. If the sword’s roll is higher then it attacks using the statistics above. The sword cannot attack at all unless someone is holding it; a character can resist the sword’s actions by simply letting go, although this leaves him disarmed. The Woeful Bite, 0 points, Init –1, Corpus: If this power Penetrates, any wound inflicted by the Gambanteinn festers and death is inevitable without magical intervention. Affected characters always fail Wound Recovery rolls for the wounds inflicted by this sword, so even a Light Wound eventually worsens to a fatal one. Wound Recovery rolls that include any magical aid are not affected by this power. This power uses the guidelines for inflicting a major disease. PeCo 25 (Base 20, +1 Touch) Greater Power (25 levels, –3 Might cost, 10 xp into Penetration)"
+            ^"Vis" STRING "2 pawns of Terram, in blade"
+            ^"Appearance" STRING "A sword of superb manufacture. Designed in the Viking style, it has a guard without quillons, a grip wrapped in red-dyed shagreen, and a cocked-hat pommel. Its blade is three finger-widths and has parallel sides and a rounded tip. The 50 inch blade has a single deep fuller running its entire length. The metal has a gold and brass pattern imbedded within it that resembles flames, and always feels warm to the touch."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 131
+        }
+        PERSONALITY_TRAITS {
+            "Hateful" +6
+            "Rebellious" +3
+            "Selfish" +3
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "foes"
+            "Great Weapon" SCORE 6 BONUS 2 SPECIALTY "great sword"
+            "Faerie Lore" SCORE 4 SPECIALTY "smiths"
+            "Magic Lore" SCORE 5 SPECIALTY "smiths"
+            "Penetration" SCORE 4 SPECIALTY "The Woeful Bite"
+            "Shapeshifter" SCORE 3 SPECIALTY "giant-sized"
+            "Teaching" SCORE 4 SPECIALTY "martial Abilities"
+        }
+        DESCRIPTION "The Gambanteinn is a typical Viking sword but sized for a larger-than-normal warrior; in the hands of a human it should be treated as a great sword and must be wielded with both hands unless it changes size (see later). Due to the excellent quality of its manufacture, the Gambanteinn has +2 Initiative and +2 Damage bonuses above and beyond those of a standard great sword; these are figured into the totals above and should be included in the Combat Totals of any character wielding the sword. Unless under an active spell, the Gambanteinn’s blows do not need to Penetrate any more than the claws of a magical wolf need to penetrate.\n\nThe Shapeshifter Virtue allows the sword to become different weapons rather than adopting different animal forms. In theory the Gambanteinn could become any weapon but the shapes currently known to it are all different-sized swords: a short sword with a 25 inch blade; a long sword with a 40 inch blade; and a 16 foot-long sword suitable for a giant. Like the Shapeshifter Virtue, the sword has no continuing magic beyond the point of actual transformation and therefore is not stopped by Magic Resistance when at a different size.\n\nYou might instead wish to use the rules for Damaging Objects on page 77 of *City & Guild* rather than using Soak and Wound Penalties. In this case, the Gambanteinn has five damage levels and adds +11 to any Stress check. See Skidbladnir (earlier) for more details."
+    }
+
+}

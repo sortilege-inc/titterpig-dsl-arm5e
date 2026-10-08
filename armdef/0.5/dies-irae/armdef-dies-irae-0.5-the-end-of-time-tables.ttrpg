@@ -1,0 +1,75 @@
+EXTENSION "ARMDef_Dies_Irae_TheEndOfTime_Tables" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Two: The End of Time tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t740397c9a1952a84f3b4ca ^"Enigmatic Wisdom/Knowledge, House Criamon Lore (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Score", "Knowledge"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Printed Head" STRING "Enigmatic Wisdom/Knowledge House Criamon Lore"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 10
+        }
+        TABLE {
+            "5" "The end of time shall be House Criamon’s gift to the cosmos."
+            "6" "House Criamon has been actively working to bring about the end of time."
+            "7" "House Criamon will cause the moon to stop in its rotations and time will end."
+            "8" "The world will escape all time with the coming conjunction on December 23rd in the year 1277."
+        }
+    }
+
+    #t08a22e66a1f293adf95e46 ^"Summary of Durations (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Standard Duration", "Status", "Alternative"]
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 37
+        }
+        TABLE {
+            "Momentary" "Functioning" "This duration remains as it is"
+            "Ring" "Functioning" "This duration remains as it is a form of conditional duration"
+            "Concentration" "Functioning" "This duration remains as it is a form of conditional duration"
+            "Diameter" "Non-Functioning" "The Burning of a Taper"
+            "Sun" "Non-Functioning" "At the Waking or the Sleeping"
+            "Moon" "Non-Functioning" "300 Miles"
+            "Year" "Non-Functioning" "The Weight of Years (until the caster or the target makes an aging roll)"
+        }
+    }
+
+    #t5b07ba5f698b92d95cb119 ^"New Realm Interaction Table (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Aura", "Lunar Power", "Magic Power", "Divine Power", "Faerie Power", "Infernal Power"]
+            ^"Table Columns Source" STRING "editorial: the book prints no head for the first column; named Aura for what it lists"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 37
+        }
+        TABLE {
+            "Lunar Aura" "+ aura" "– (5 x aura)" "no effect" "– (5 x aura)" "– aura"
+            "Magic Aura" "– aura" "+ aura" "no effect" "+ (1/2 aura)" "– aura"
+            "Divine Aura" "– (3 x aura)" "– (3 x aura)" "+ aura" "– (4 x aura)" "– (5 x aura)"
+            "Faerie Aura" "– aura" "+ (1/2 aura)" "no effect" "+ aura" "– aura"
+            "Infernal Aura" "– aura" "– aura" "no effect" "– (2 x aura)" "+ aura"
+        }
+    }
+
+    #tf1947f198c62b963c32a6f ^"The Edge of Reason (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Humor", "Personality Trait"]
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Table Name Source" STRING "editorial: the book prints no title for this table; named for the spell whose text it completes (The Edge of Reason, p40)"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 39
+        }
+        TABLE {
+            "Sanguine" "Hysteric"
+            "Choleric" "Psychotic"
+            "Melancholic" "Neurotic"
+            "Phlegmatic" "Fearful"
+        }
+    }
+
+}

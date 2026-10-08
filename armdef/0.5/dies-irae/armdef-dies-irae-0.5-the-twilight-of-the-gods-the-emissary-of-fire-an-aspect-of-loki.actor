@@ -1,0 +1,101 @@
+EXTENSION "ARMDef_Dies_Irae_TheTwilightOfTheGods_TheEmissaryOfFireAnAspectOfLoki" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - The Emissary of Fire, an Aspect of Loki"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The Emissary of Fire, an Aspect of Loki (Chapter Five: The Twilight of the Gods, p117): one being, its printed stat lines verbatim fields.
+
+    #tb3b8ec699227fc203489d9 ^"The Emissary of Fire, an Aspect of Loki" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 27
+            ^"Form" STRING "Ignem"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 10
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 5
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Spirit; Magical Champion; Essential Virtue, Puissant Brawl; Gluttonous; Clumsy"
+            ^"Magic Qualities and Inferiorities" STRING "Greater Powers x 2, Focus Power; Aquam Resistance, Improved Abilities, Improved Attack (fiery bludgeon) x 2, Improved Attack (grapple) x 3, Improved Characteristics x 2, Improved Damage (fiery bludgeon) x 2, Improved Defense (fiery bludgeon) x 2, Improved Initiative (grapple), Improved Might x2, Improved Powers, Lesser Powers x 2"
+            ^"Personality Trait" STRING "Brave +3, Hungry +3, Intimidating (Presence) +3 Essential Trait, replaces listed Characteristic whenever Trait applies."
+            ^"Reputations" LIST ["none"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Vis" STRING "6 pawns of Ignem vis, in hands"
+            ^"Appearance" STRING "A twenty foot tall giant made of flames. It has two pits of darkness for eyes and a huge gaping maw occupying the rest of its neckless head."
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 117
+        }
+        COMBAT {
+            "Fiery Bludgeon" INIT -2 ATTACK 17 DEFENSE 11 DAMAGE 28
+            " Grapple" INIT 1 ATTACK 17 DEFENSE 7 DAMAGE 10
+        }
+        ABILITIES {
+            "Aquam Resistance" SCORE 4 SPECIALTY "5) (immersion"
+            "Athletics" SCORE 5 SPECIALTY "pursuit"
+            "Awareness" SCORE 4 SPECIALTY "terrain features"
+            "Brawl" SCORE 6 BONUS 2 SPECIALTY "bludgeon"
+            "Concentration" SCORE 3 SPECIALTY "Feed the Fire power"
+            "Leadership" SCORE 4 SPECIALTY "fire spirits"
+            "Native Language" SCORE 5 SPECIALTY "commands"
+        }
+        POWERS {
+            #td812af99102a7cb9e9ee3e ^"Donning the Corporeal Veil (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–6"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "See *Realms of Power: Magic*, page 102. This Aspect’s body is made of fire and cannot be harmed with normal weapons; they pass through it and possibly catch fire. Cr(Re)Ig 35 (Base 5, +1 Touch, +2 Sun, +1 requisite, +2 Size) Greater Power (35 levels, –4 Might cost)"
+            }
+            #tb2e14818267d5b9513862a ^"Burn (Dies Irae)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Burn"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Anyone touching or being touched by the Emissary of Fire takes +10 damage (this is cumulative with any Brawl damage). This is the usual melee attack of the Aspect. Any flammable material catches fire on contact; typically, clothes inflict +10 damage per round on their wearer until extinguished. Any metal coming in contact with its body for more than a round heats up, causing the effects of *Heat of the Searing Forge *(ArM5, page 140); this does not include weapons used to strike it in combat. Cr(Re) Ig 30 (Base 5, +1 Touch, +2 Sun, +1 requisite, +1 constant effect): Greater Power (30 levels, –3 Might cost with 1 mastery point from Improved Powers)"
+            }
+            #tdf8661ccee97ef935063fd ^"Crafter of Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1–5 points"
+                    ^"Initiative" STRING "– 7"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The Emissary of Fire can duplicate any non-Ritual Creo Ignem or Rego Ignem spells up to 25th level at a cost of 1 Might point per magnitude. CrIg or ReIg 25. Focus Power"
+            }
+            #tf588a799ac075eb9c5a03d ^"Feed the Flames" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The Emissary of Fire can increases the size of any conflagration that does +10 damage or less. One use of this power can affect a fire up to ten cubic paces (approximately Size +6) and increase it to a maximum size of one hundred cubic paces (approximately Size +9). The increase in size only lasts as long as it concentrates, and when the effect ends the fire returns to its former size but may now be spread over a wider area as several smaller fires. Any flammable materials that caught fire when the target was at its larger size remain aflame. The Emissary can affect its own created body with this effect; at Size +9 it stands about 55 feet tall; increasing its Strength by 8 but reducing its Quickness by 4. It cannot combine this power with *Stoke the Fire*. MuIg 20 (Base 2, +2 Voice, +1 Conc, +2 size, +1 to affect a fire doing +10 damage) Lesser Power (20 levels, –2 Might cost, +1 Init with 2 mastery points from Improved Powers)"
+            }
+            #tb93793b873cf5086001733 ^"Stoke the Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The Emissary of Fire can increase the intensity of any fire doing +10 damage or less, adding +5 to the amount of damage it inflicts. A wood fire (normally +5 damage) will now melt lead and heat iron; a forge fire (normally +10 damage) will now melt iron. This power can affect a fire up to 10 cubic paces (approximately Size +6) and includes the fire that composes the Emissary of Fire’s body. It cannot combine this effect with *Feed the Flames.* MuIg 20 (Base 2, +2 Voice, +1 Conc, +1 size, +2 to increase damage to +15) Lesser Power (20 levels, –2 Might cost, +2 Init with 2 mastery points from Improved Powers)"
+            }
+        }
+        DESCRIPTION "It is not necessary for this character to buy the Gigantic Magic Quality since its body is created with a power that creates an appropriately-sized target."
+    }
+
+}

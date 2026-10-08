@@ -1,0 +1,403 @@
+EXTENSION "ARMDef_Dies_Irae_TheGreatPestilence_Spells" {
+    NAME "Ars Magica Fifth Edition, Dies Irae - Chapter Four: The Great Pestilence spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Dies_Irae_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t387b4c1235bc8dc2318cc8 ^"Ward against Natural Imbalances of Nutrition" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 55
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReHe 55 R: Touch, D: Year, T: Boundary, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 86
+        }
+        DESCRIPTION "This ritual spell keeps natural plant diseases from a sizable crop field. It does not aid growth, fecundity, or yield, but will keep the plant healthy despite imbalances in its food, water, and effects from atmospheric conditions. It offers no protection from magical diseases emanating from supernatural causes.\n\n(Base 5, +1 Touch, +4 Year, +4 Boundary, +1 size)"
+    }
+
+    #tcda80b008550969e7df5ea ^"Ward against Unnatural Imbalances of Nutrition" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIAT "the book prints no Technique and Form ('General R: Touch, D: Ring, T: Circle'); read as the new Rego Herbam General guideline's spell, its parameters that guideline's (box p85)"
+            ^"Form" STRING "Herbam" FIAT "the book prints no Technique and Form ('General R: Touch, D: Ring, T: Circle'); read as the new Rego Herbam General guideline's spell, its parameters that guideline's (box p85)"
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Printed Stat Line" STRING "General R: Touch, D: Ring, T: Circle"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 86
+        }
+        DESCRIPTION "This ritual spell keeps supernatural magical plant diseases of a particular Realm, those originating from a supernatural source or creature with a Might score, from a small garden. It does not aid growth, or otherwise invigorate the crop. The selected base level of effect must be greater than the Might of the source of the magical plant disease, or of the disease itself if the disease has a Might score. In addition to the base effect level, the spell needs to penetrate the Magic Resistance of the magical plant disease, or more likely its source.\n\n(Base effect)"
+    }
+
+    #t6189ec8b69779595dc7cbd ^"Shade the Scorched Earth" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIAT "the book prints 'CeHe' (a misprint), read as Creo Herbam"
+            ^"Form" STRING "Herbam" FIAT "the book prints 'CeHe' (a misprint), read as Creo Herbam"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CeHe 20 R: Touch, D: Mom, T: Boundary, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 86
+        }
+        DESCRIPTION "This spell heals a crop infested with sun scorch.\n\n(Base 1, +1 Touch, +4 Boundary, +1 size)"
+    }
+
+    #tbcdc5e30453c6d0c185ea4 ^"Herbam Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Herbam"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeHe 30 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 88
+        }
+        DESCRIPTION "This spell destroys any plant that falls within the confines of the miasma. It affects every plant, from a blade of grass to a towering oak. Visually, plants become blighted and rot within a matter of minutes. As the miasma touches the area, the entire bounded zone withers and dies.\n\n(Base 5, +1 Touch, +4 Boundary)"
+    }
+
+    #t1f3af19291624cf6cb20a0 ^"Corpus Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeCo 40 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 94
+        }
+        DESCRIPTION "This spell inflicts the Great Corpus Pestilence on every human target within the miasma. The Great Corpus Pestilence is the same disease that earlier targeted Magic creatures.\n\n(Base 20, +4 Boundary)"
+    }
+
+    #t236e8b208beef34187047e ^"The Soothing Balm of Telesphorus" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "CrCo 20 R: Touch, D: Sun, T: Ind"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 95
+        }
+        DESCRIPTION "This spell grants a sick person a +15 bonus to Disease Recovery rolls. It must be in effect throughout the entire recovery period, but can be reapplied every sunrise and sunset to continue its effectiveness. Son of the mythical healer Asclepius, Telesphorus was the Greek god of recuperation.\n\n(Base 10, +1 Touch, +1 Sun)"
+    }
+
+    #tfaa585f06b649308525a83 ^"Mentem Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Mentem"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeMe 30 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 95
+        }
+        DESCRIPTION "This spell-like effect reduces the mental capabilities of every person within the miasma, effectively diminishing them to animal-like intelligence. Substitute Cunning for Intelligence to those affected. Characters cannot use any Ability that combines with Intelligence. Without magical assistance, this condition is irreversible.\n\n(Base 10, +1 Boundary)"
+    }
+
+    #ta92b3537e73bec75e432cd ^"Vim Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeVi 40 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 96
+        }
+        DESCRIPTION "This spell-like effect destroys magical effects, both existing spells and enchanted items. It cancels any spell or spell-like effect of level 30 or less. It destroys every power in any magic item whose spell-like total is 30 or less. The Vim Blight has a Penetration Total of 0, but most spells and enchanted items do not have Magic Resistance. Some carried items may be protected by the wielder’s Parma Magica and are immune from the Vim Blight for as long as they are so protected.\n\n(Base 15, +1 Touch, +4 Boundary)"
+    }
+
+    #tb16dd1f00f44d3bbc9f213 ^"Aquam Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeAq 35 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 96
+        }
+        DESCRIPTION "This spell-like effect destroys any water that the miasma touches. Water in lakes and seas is replenished from the same larger body of water. Rivers will have portions of them destroyed, but once the miasma moves on new water coming from the river’s source refills the river.\n\n(Base 10, +1 Touch, +4 Boundary)"
+    }
+
+    #t6f2765c33bddc9c5764dba ^"Embracing the Downy Arms of the Nephelae" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "ReAu 25 R: Sight, D: Conc, T: Ind"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 96
+        }
+        DESCRIPTION "This spell lets the caster control the movements of a cloud. Designed to affect rain clouds, which are especially large and necessitate two additional magnitudes due to size, the caster can direct the cloud in any direction she wishes, including down to the ground. The Nephelae are Greek cloud nymphs.\n\n(Base 3, +3 Sight, +1 Conc, +2 size adjustment)"
+    }
+
+    #t835253cc3394446076f110 ^"Wringing Free the Tears of Zeus" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "ReAq 35 R: Touch, D: Conc, T: Group"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 96
+        }
+        DESCRIPTION "This spell transfers the collected water in a cloud to a distant barrel, jar, or similar holding vessel. The stream of water can be controlled, so that several vessels can be filled. It takes approximately 5 minutes to empty a rain cloud of its watery contents. Because the rain drops are individual, the Target must be Group, increased 10,000 fold (3 magnitudes)\n\n(Base 4, +1 Touch, +1 Conc, +2 Group, +3 size adjustment)"
+    }
+
+    #tca8df89e86a54cb9ffb9e3 ^"Auram Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Boundary"
+            ^"Printed Stat Line" STRING "PeAu 20 R: Touch, D: Mom, T: Boundary"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 97
+        }
+        DESCRIPTION "A large-scale version of Room of Stale Air (ArM5, page 128), anyone standing in an Aquam miasma has difficulty breathing and suffers a –3 penalty on all rolls involving physical activity. For each round a character exerts himself, the player must succeed at a simple Stamina roll vs. an Ease Factor of 6 or the character loses a Fatigue Level.\n\n(Base 3, +1 Touch, +4 Boundary)"
+    }
+
+    #t07c82d90cd7b05db168eed ^"Animal Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeAn 45 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 97
+        }
+        DESCRIPTION "This spell-like effect inflicts an Incapacitating Wound on an animal. The beast isn’t killed automatically, but it is unlikely to survive without medical help.\n\n(Base 20, +1 Touch, +4 Boundary)"
+    }
+
+    #tea92c39a0c6f7e177aaf00 ^"Imaginem Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Imaginem"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Boundary"
+            ^"Printed Stat Line" STRING "PeIm 25 R: Touch, D: Mom, T: Boundary"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 97
+        }
+        DESCRIPTION "This spell-like effect destroys an object’s ability to affect sight, and the object immediately stops producing an image.\n\n(Base 4, +1 Touch, +4 Boundary)"
+    }
+
+    #t3c3b085e1d70b7ca376266 ^"Terram Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Boundary"
+            ^"Printed Stat Line" STRING "PeTe 20 R: Touch, D: Mom, T: Boundary"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This spell-like effect destroys the topsoil and upper dirt of an area, permanently removing the dirt and leaving a pit 9 feet deep. Wooden buildings and small trees collapse on a simple roll against an Ease Factor of 3. Wooden fortifications, small stone buildings, and medium-sized trees fall on a simple roll against an Ease Factor of 6. For stone fortifications, castles and cathedrals, and large trees, the Ease Factor is 9.\n\n(Base 3, +1 Touch, +4 Boundary)"
+    }
+
+    #t6a2f803da576b71dc4a93a ^"Ignem Blight" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Ignem"
+            ^"Level" INTEGER 30
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Bound"
+            ^"Printed Stat Line" STRING "PeIg 30 R: Touch, D: Mom, T: Bound"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 98
+        }
+        DESCRIPTION "This spell-like effect covers everything it touches in frost, chilling living thing and killing small plants. Animals and humans take +5 damage.\n\n(Base 5, +1 Touch, +4 Boundary)"
+    }
+
+    #t16f5ec5859ce4a63238f36 ^"Viewing the Herbam Miasma" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Per"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Vision"
+            ^"Requisite" STRING "Herbam"
+            ^"Printed Stat Line" STRING "InVi (He) 20 R: Per, D: Conc, T: Vision"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 101
+        }
+        DESCRIPTION "This spell allows the caster to see any Herbam miasmas in the area.\n\n(Base 3, +1 Conc, +4 Vision)"
+    }
+
+    #t460b60fe284f9241192614 ^"Moving the Herbam Miasma" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Herbam"
+            ^"Printed Stat Line" STRING "ReAu (He) 25 R: Voice, D: Conc, T: Ind"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 101
+        }
+        DESCRIPTION "This spell allows the caster to move an Herbam miasma according to her wishes. The caster must first sense the miasma before she can move it.\n\n(Base 4, +2 Voice, +1 Conc, +2 size)"
+    }
+
+    #t8791ce5854afd66166ef8f ^"Destroy the Herbam Miasma" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Auram"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Requisite" STRING "Herbam, Vim"
+            ^"Printed Stat Line" STRING "PeAu (He, Vi) 35 R: Voice, D: Mom, T: Ind"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 101
+        }
+        DESCRIPTION "This spell destroys an Herbam miasma. (Base 15, +2 Voice, +2 size) A second laboratory solution is to investigate destroyed vis and dead magic creatures for insights into how the Great Pestilence is affecting every magic aura and regio. This is further detailed later (see Inventing the Great Barrier). If your players opt for this solution, their magi can ask for and receive assistance from other magi at the emergency Grand Tribunal."
+    }
+
+    #t942b6086f881736c0f258d ^"Suture Gaia’s Wound" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIAT "the book prints 'CrVm' (a misprint), read as Creo Vim"
+            ^"Form" STRING "Vim" FIAT "the book prints 'CrVm' (a misprint), read as Creo Vim"
+            ^"Level" INTEGER 45
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Herbam"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CrVm (He) 45 R: Touch, D: Mom, T: Boundary, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 102
+        }
+        DESCRIPTION "This spell repairs the damage done by the Great Pestilence to the aura and the Herbam Form in a specific area. It does not prevent future impairments from the sentient fungus.\n\n(Base 20, +1 Touch, +4 Boundary)"
+    }
+
+    #t21939fa63dfc8c57b3f7ba ^"The Balm of St Francis" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIAT "the book prints 'CeAn' (a misprint), read as Creo Animal"
+            ^"Form" STRING "Animal" FIAT "the book prints 'CeAn' (a misprint), read as Creo Animal"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "CeAn 35 R: Touch, D: Mom, T: Ind, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 102
+        }
+        DESCRIPTION "This spell heals any animal disease, instantly easing the beast’s suffering. St Francis was a legendary healer of animals. This spell works on animals Size +2 or smaller.\n\n(Base 25, +1 Touch, +1 size adjustment)"
+    }
+
+    #td3524b51946e2c5fd435e7 ^"Seeking the Thread of Power" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Conc"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "InVi 20 R: Touch, D: Conc, T: Ind"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 102
+        }
+        DESCRIPTION "This spell indicates the arcane connection between two objects, allowing the magus to sense the mystical link that connects the smaller to the larger.\n\n(Base 10, +1 Touch, +1 Conc)"
+    }
+
+    #t369914856d0085c102d353 ^"Snipping the Thread of Power" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Mom"
+            ^"Target" STRING "Ind"
+            ^"Printed Stat Line" STRING "PeVi 35 R: Touch, D: Mom, T: Ind"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "This spell destroys the Arcane Connection between two items.\n\n(Base 30, +1 Touch)"
+    }
+
+    #t367b4fa1ffb960ef6415a4 ^"Magna Claustra" DEF {
+        EXTENDS #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 95
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Printed Stat Line" STRING "ReVi 95 R: Touch, D: Year, T: Boundary, Ritual"
+            ^"Source" STRING "Dies Irae"
+            ^"Page" INTEGER 103
+        }
+        DESCRIPTION "The Magna Claustra (Latin: Great Barrier) protects an area from the Great Pestilence, providing the Penetration Total of the spell exceeds 60.\n\n(Base 50, +1 Touch, +4 Year, +4 Boundary)"
+    }
+
+}

@@ -1,0 +1,90 @@
+EXTENSION "ARMDef_Hooks_SmallGame_AilurosSilverCat" {
+    NAME "Ars Magica Fifth Edition, Hooks - Ailuros (Silver Cat)"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Hooks_Core_Ext"
+
+    # Ailuros (Silver Cat) (Chapter Seven: Small Game, p68): one being, its printed stat lines verbatim fields.
+
+    #ta08ab96b4b806dab57d920 ^"Ailuros (Silver Cat)" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 9
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -7
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Perfect Balance, Puissant Awareness, Sharp Ears, Tough; Nocturnal."
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "None, see “Mechanica & Damage” insert."
+            ^"Abilities" STRING "Arabic 5 (cultured discourse), Area Lore: Alexandria 4 (libraries), Area Lore: Eastern Roman Empire 6 (history), Area Lore: Town 2 (personalities), Artes Liberales 5 (rhetoric), Athletics 3 (jumping), Awareness 4+2 (at night), Brawl 2 (claws), Classical Greek 6 (Koine), Folk Ken 5 (scholars), French 3 (peasants), Guile 5 (obfuscation), Hunt 6 (birds), Intrigue 3 (elaborate schemes), Latin 5 (eastern), Magic Lore 2 (magic users), Organization Lore: Order of Hermes 2 (Verditius), Organization Lore: Imprisoning Covenant 2 (wards), Philosophiae 3 (sympathies), Stealth 4 (stalking). Cats are excellent climbers and jumpers, gaining a +3 bonus on appropriate rolls."
+            ^"Vis" STRING "None."
+            ^"Appearance" STRING "Ailuros is a lithe silver cat with sparkling emerald eyes, built to resemble an Egyptian Mau. Mischievous by nature, she appreciates the sobering effect Maahes’ presence has on her, curbing her more capricious impulses and helping to keep her focused. She enjoys the thrill of the hunt, and Justinian’s nightingale (an anima described on page 84 of Ancient Magic) still holds a grudge against her for damaging its wing on more than one occasion. She is smarter than Maahes and acts as his adviser on important matters, but defers to his authority completely as she feels a wife should. The sound of a silver wind chime (Celmis’ sigil) can be heard when she uses her powers."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 68
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +4
+            "Mischievous" +3
+            "Timid" +2
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 8 DEFENSE 10 DAMAGE -5
+            " Teeth" INIT 4 ATTACK 8 DEFENSE 7 DAMAGE -6
+        }
+        POWERS {
+            #t74ef8bd1cb098b38e14716 ^"Child of Hephaestus" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The anima is able to move under its own power in a manner appropriate to its shape. Ailuros & Maaes are somewhat heavier than flesh and blood felines, but not by enough to affect their mobility. ReTe 20: Base 2, +1 Concentration, +2 metal; +5 levels for device to maintain concentration, +10 levels for unlimited uses. (Mechanica Level: 12)"
+            }
+            #t9cc2f8185690057f630826 ^"Gift of the Muses" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The anima has a sophisticated panpipe system in its neck. By selectively opening and closing vents to expose different reeds, the cat can approximate human speech. CrAu 20: Base 2, +1 Concentration, +2 highly unnatural; +5 levels for device to maintain concentration, +10 levels for unlimited uses. (Mechanica Level: 12)"
+            }
+            #tb6b43851ba3daa3fe111ca ^"Gown of the Night Predator" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The anima can camouflage itself by altering the coloration and pattern of its “coat”, conferring a +3 bonus on Stealth or Hunt totals. MuTe 13: Base 2, +2 Sun, +2 metal; +3 levels for six uses per day. (Mechanica Level: 9)"
+            }
+            #t224cee37db5ebf9cd34e00 ^"Unbound Stalker" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The anima can temporarily become incorporeal, allowing it to pass through walls unhindered or slip free from ropes and fetters. The magic only persists for a few seconds, but this is sufficient for the intended purpose. PeTe 20: Base 5, +2 metal; +5 levels for 24 uses per day. (Mechanica Level: 12)"
+            }
+            #t925322fee0e23ea0d753ab ^"The Wish of Your Mistress" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The anima is able to implant a single complex suggestion into the target’s mind, which must be obeyed to the best of the victim’s ability. Combined with Maahes’ “Voice of the Demagogue” power, the cats are able to rapidly recruit a host of servants. ReMe 50: Base 20, +1 Touch, +3 Moon; +5 levels for a Penetration of 10, +5 levels for 24 uses per day. (Mechanica Level: 30)"
+            }
+        }
+    }
+
+}

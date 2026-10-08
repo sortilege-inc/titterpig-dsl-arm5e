@@ -1,0 +1,44 @@
+EXTENSION "ArM5_Hooks_BirthRight_FaerieQueenBlegen" {
+    NAME "Ars Magica Fifth Edition, Hooks - Faerie Queen Blegen"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # Faerie Queen Blegen (Chapter Two: Birth Right, p9): one being, its printed stat lines verbatim fields.
+
+    #tad187ec2c8e5e27ca16284 ^"Faerie Queen Blegen" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Focus Power (forest queen), Increased Might; Faerie Sight, Faerie Speech, Humanoid Faerie, Personal Power (castle eyes); Narrowly Cognizant; Enemies (loyalists, Old Nanny), Proud, Sovereign Ward (faerie kingdom); Obsessed (outside faerie kingdom)"
+            ^"Reputations" LIST ["Forest Queen (local) +5"]
+            ^"Soak" INTEGER -1
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Area Lore: Local 4 (forest), Awareness 5 (castle eyes), Bargain 6 (mortal men), Charm 4 (mortal men), Etiquette 5 (courtly), Folk Ken 3 (nobles), Guile 4 (mortal men), Intrigue 6 (plotting), Leadership 5 (faeries), Magic Lore 1 (court wizards), Music 5 (harp), Organization Lore: Order of Hermes 1 (House Merinita), Penetration 5 (castle eyes), Ride 3 (faerie beasts), Stealth 1 (courts)"
+            ^"Powers" STRING "Faerie Sight: This power allows the faerie to automatically distinguish mundane things from glamor, and to automatically identify another faerie’s glamor, and to automatically see an Arcane Connection (and know to whom it is an Arcane Connection, if that person is present). The faerie can also use faerie sight to determine the motives and goals of other faeries (Awareness + Perception roll against an Ease Factor equal to Might of other faerie / 5). See Realms of Power: Faerie, page 50 for more details. Faerie Speech: This power allows the faerie to duplicate the language spoken by her human audience. See Realms of Power: Faerie, page 50 for more details. Forest Queen, 1 point per magnitude of effect, Init –4, Herbam or Animal: The faerie queen can duplicate any Hermetic Herbam or Animal effect, up to level 25, that affects the forest, or its inhabitants. The power costs 1 point per magnitude of effect. Castle Eyes, 0 point, constant, Mentem: While the faerie queen is within her castle she is aware of everything happening within the castle. To determine whether she notices something make a Perception + Awareness roll against an Ease Factor of 9. If she is specifically looking for the thing, the Ease Factor is only 3. Mundane and magical attempts to hide from the faerie queen have no effect, but this power needs to Penetrate the Magic Resistance of those sensed."
+            ^"Equipment" STRING "Long lace dress, silver tiara, wedding ring."
+            ^"Vis" STRING "4 pawns of Herbam vis in a wooden heart."
+            ^"Appearance" STRING "The faerie queen Blegen appears as a beautiful pale-skinned woman wearing a delicate silver tiara. Her voice is crisp and authoritative, and it is difficult to judge her apparent age: mid-thirties seems plausible. Blegen usually wears a dark-green, long, translucent, lace dress, but she sometimes changes the dress’ color. Her hair changes with the seasons: in spring it is short and white; in summer her hair is long, sleek, and golden; in autumn wild, twisted and red; finally, in winter it hangs in black ringlets."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 9
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+        }
+    }
+
+}

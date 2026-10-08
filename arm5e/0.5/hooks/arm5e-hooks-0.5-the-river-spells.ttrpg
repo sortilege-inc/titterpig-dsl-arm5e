@@ -1,0 +1,123 @@
+EXTENSION "ArM5_Hooks_TheRiver_Spells" {
+    NAME "Ars Magica Fifth Edition, Hooks - Chapter Eight: The River spells"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # The chapter's spells, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tdc37a85c7515ab05e99458 ^"Tongue of the Fishes" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Animal"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "InAn 20 R: Eye, D: Concentration, T: Individual"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "This spell allows Trajan to speak with any animal whose natural habitat is the river. Despite the spell name this includes animals other than fishes.\n\n(Base 10, +1 Eye, +1 Concentration)"
+    }
+
+    #tfd9f98abf80fbc7c6cea0f ^"Wizard’s Flood" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "CrAq 35 R: Touch, D: Momentary, T: Individual"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION ", ritual\n\nThis ritual, when cast in a river, causes it to rapidly rise and burst its banks. This floods the terrain about half a mile from either bank, for a length of about 20 miles, to a depth of two paces. The area inundated depends on the local geography (cliffs, gorges and dams may direct the flow, for example). The flood waters are natural, cannot be resisted by Magic Resistance, and may take days to recede, evaporate, and drain. The flood drowns people and animals, ruins crops, and washes away most wooden structures (and ruins the lower level of stone ones). This ritual is Trajan’s master work. He is well known for it in the Rhine.\n\n(Base 3, +1 Touch, +7 size)"
+    }
+
+    #tff1a4930752e68a2653508 ^"Eyes of Danibus" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 20
+            ^"Range" STRING "Arcane"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Imaginem"
+            ^"Printed Stat Line" STRING "InAq(Im) 20 R: Arcane, D: Concentration, T: Individual"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "Trajan can see from any vantage point along a river that he holds an Arcane Connection to. He can see the river itself, anything on or in the river, and anything within a pace of the river banks (subject to the normal limitations of sight).\n\n(Base 3, +4 Arcane, +1 Concentration, +1 Requisite)"
+    }
+
+    #td574ccae93817c149b0541 ^"Danibus’ Favor" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Aquam"
+            ^"Level" INTEGER 35
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Printed Stat Line" STRING "ReAq 35 R: Touch, D: Sun, T: Structure"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "Wards a building against flooding. Trajan can use this spell to save a building from the worst of the *Wizard’s Flood* damage.\n\n(Base 5, +1 Touch, +2 Sun, +3 Structure)"
+    }
+
+    #tced597522dc787ba14a56d ^"Return to the Flow" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 40
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Printed Stat Line" STRING "ReCo 40 R: Personal, D: Momentary, T: Individual"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "This spell instantly transports Trajan to a point that he has an Arcane Connection to. He often uses his tattoos as the Arcane Connections for this spell; his tattoos are fixed Arcane Connections to the river (see character insert).\n\n(Base 35, +1 size modifier)"
+    }
+
+    #t58a8f4e1ad2b64cbce2ba2 ^"Arms of Neptune" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo"
+            ^"Form" STRING "Terram"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Group"
+            ^"Printed Stat Line" STRING "CrTe 25 R: Touch, D: Diameter, T: Group"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 79
+        }
+        DESCRIPTION "This spell creates, in Trajan’s outstretched hands, an intricately wrought trident and a metal shield engraved with the image of a raging river. The weapons have standard game statistics. When the spell is cast make an Intelligence + Finesse roll against an Ease Factor of 6. If the roll succeeds the weapons are beautiful, if it fails the weapons are serviceable but ugly. If the Finesse roll botches the weapons are flawed and break when used. Record the Penetration of this spell, as the weapons must Penetrate the Magic Resistance of opponents.\n\n(Base 5, +1 Touch, +1 Diameter, +2 Group)"
+    }
+
+    #tb2740131f7813d39bd73ba ^"Stench of Magic" DEF {
+        EXTENDS #t1Chugsx6nUdFUJJvS7FueYL ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego"
+            ^"Form" STRING "Vim"
+            ^"Level" INTEGER 25
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Smell"
+            ^"Printed Stat Line" STRING "InVi 25 R: Personal, D: Concentration, T: Smell"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 82
+        }
+        DESCRIPTION "The caster can smell the presence of spell traces down to magnitude zero. See Detecting Spell Traces insert.\n\n(Base 10, +1 Concentration, +2 Smell)"
+    }
+
+}

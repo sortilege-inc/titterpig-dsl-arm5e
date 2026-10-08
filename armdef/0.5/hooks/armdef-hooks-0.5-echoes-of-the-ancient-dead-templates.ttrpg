@@ -1,0 +1,57 @@
+EXTENSION "ARMDef_Hooks_EchoesOfTheAncientDead_Templates" {
+    NAME "Ars Magica Fifth Edition, Hooks - Chapter Three: Echoes of the Ancient Dead templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Hooks_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t0e01c8853f20e7d8a81d29 TEMPLATE "Veteran Kataphraktos Spectre" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 18
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" STRING "Int 0, Per +1, Pre 0, Com 0, Str +3, Sta +2 Dex +2, Qik +1"
+            ^"Size" INTEGER 1
+            ^"Age" STRING "Appears to be in his late twenties"
+            ^"Decrepitude" STRING "n/a"
+            ^"Warping" STRING "n/a"
+            ^"Virtues and Flaws" STRING "Improved Characteristics x3, Large, Puissant Single Weapon"
+            ^"Reputations" LIST ["n/a"]
+            ^"Combat" STRING "Spatha and Shield: Init +3, Attack +15, Defense +14, Damage +10 Bow: Init 0, Attack +12, Defense +8, Damage +7 The spatha is a cavalry blade with no thrusting tip. Game statistics for a longsword are used. Soak: +11 (full chain mail)"
+            ^"Fatigue" STRING "Tireless"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Powers" STRING "Incorporeal, 0 points, Mentem: The spectre cannot be affected by or affect any physical object. By spending 1 Might point it can make a chilling attack that causes a single Fatigue level instead of damage, disregarding Soak. A weapon affected by a MuTe(Me) effect of Base 25 will affect it. Note the kataphraktos’ power Reaching Through the Veil. Their bodies may be affected by physical magic (e.g. Creo Ignem) with a Mentem casting requisite, as may their spectral mounts. This power is always active. Reaching Through the Veil, 1 point, Init +1, Mentem/Terram: The kataphraktos can affect the mundane world and corporeal objects with his entire array of weapons for Duration: Sun, making him very efficient. Against a mundane opponent with wholly mundane gear the kataphraktos has +3 Attack, Defense, and Soak, which is not included in the calculated statistics. Defense against the kataphraktos is as normal, but physical attacks still do not affect him. Fearsome Appearance, 1 point, Init +1, Mentem: Anyone seeing the ghost must succeed in a Stress Roll against an Ease Factor of 6, modified by Brave Personality Trait, to avoid cowering in fear. Affected victims miss their next action and need to roll again the following round until successful. Power affects a group of up to 10 people. Spectral Mount, 1 point, Init +1, Animal: The kataphraktos may conjure up a spectral horse as a prop for Duration Sun. He may ride across any terrain, including water, faster than any mundane horse can run on level ground. Affecting the mount is effectively affecting the rider, so it uses the kataphraktos’ Might for Resistance. When the kataphraktos is mounted, modify all Attack totals by +3."
+            ^"Appearance" STRING "Mounted warriors of impressive stature clad in archaic mail and helmets, from within a skull with thin, wilted skin can sometimes be seen staring with hollow eye sockets."
+            ^"Equipment" STRING "Full chain mail, spatha, shield, bow, camping equipment, and sometimes a warhorse if that power is used"
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Vis" STRING "3 pawns Mentem, finger bones from right hand The kataphraktoi were the cavalry fighters of the Rhomanoi Eastern Empire. Statistics are given for veteran spectres from an elite unit; they have excellent training and years worth of experience. This unit consisting of an officer, two sergeants, and 12 soldiers were killed to the last man in the sixth century while on a mission to drive the pagans away. They have not received a Christian burial and have unfinished business."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 23
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Loyal" +2
+            "Proud" +2
+        }
+        ABILITIES {
+            "Animal handling" SCORE 3 SPECIALTY "horses"
+            "Byzantine Lore" SCORE 3 SPECIALTY "roads"
+            "Athletics" SCORE 3 SPECIALTY "hiking"
+            "Awareness" SCORE 4 SPECIALTY "battle"
+            "Bow" SCORE 6 SPECIALTY "short bow"
+            "Brawl" SCORE 3 SPECIALTY "dagger"
+            "Chirurgy" SCORE 2 SPECIALTY "sword cuts"
+            "Etiquette" SCORE 3 SPECIALTY "Rhomanoi"
+            "Leadership" SCORE 5 SPECIALTY "soldiers"
+            "Roman Army Lore" SCORE 3 SPECIALTY "elite forces"
+            "Greek" SCORE 5 SPECIALTY "military"
+            "Ride" SCORE 6 SPECIALTY "battle"
+            "Single Weapon" SCORE 6 BONUS 2 SPECIALTY "spatha"
+            "Survival" SCORE 2 SPECIALTY "desert"
+        }
+    }
+
+}

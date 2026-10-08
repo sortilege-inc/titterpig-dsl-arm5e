@@ -1,0 +1,48 @@
+EXTENSION "ArM5_Hooks_BirthRight_Templates" {
+    NAME "Ars Magica Fifth Edition, Hooks - Chapter Two: Birth Right templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tdc60e7ea15d19e00fececd TEMPLATE "Faerie Knights" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te36a20b00607a3f376d52e ^"The Faerie Court"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Faerie Sight, Humanoid Faerie, Lesser Power; Passes for Human; Dutybound, Incognizant, Tradition Ward (garlic)"
+            ^"Reputations" LIST ["Knight (local) +4"]
+            ^"Combat" STRING "Long Sword + Heater Shield: Init +4, Attack +14, Defense +14, Damage +8 Add +3 if mounted."
+            ^"Soak" STRING "+12 (Stamina + chain mail)"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Animal Handling 2 (horses), Area Lore: Local 2 (forest), Athletics 2 (running), Awareness 4 (weapons), Etiquette 3 (courtly), Leadership 3 (faerie knights), Single Weapon 7 (long sword), Speak Living Language: German 3 (courtly), Ride 3 (combat)"
+            ^"Powers" STRING "Faerie Sight, see Blegen. Each of the four knights has one of the following powers. Javelin of Earth, 1 point, Init –4, Terram: The knight throws a javelin made of earth at his target. The javelin automatically hits and does +10 damage, but must Penetrate Magic Resistance to be effective. (Lesser Power; 25 spell levels) (Base 3, +3 Sight, +1 Rego Requisite; +10 two intricacy points to reduce Might Cost) Flame Sword, 1 point, Init –4, Ignem: The knight’s sword is wreathed in flickering blue flames. This adds +6 to damage with the sword, and the blade can be used to start fires. (Lesser Power; 25 spell levels) (Base 5, +1 Touch, +1 Diameter; +10 two intricacy points to reduce Might Cost) The Quaffing Knight, 0 points, Init –1, Aquam: This power vastly increases the alcohol content of wine or beer. The power can affect over 3,000 gallons — but has to be used multiple times to affect multiple vessels. (Lesser Power; 25 spell levels) (Base 2, +1 Touch, +2 Sun, +1 size; +10 two intricacy points to reduce Might Cost, +5 increase Init) Fog of War, 4 points, Init –4, Auram: This power creates a bank of thick fog that covers an area of 16 acres (an area about 160 paces across). (Lesser Power; 25 spell levels) (Base 3, +1 Touch, +3 Moon, +1 size; +5 one intricacy point to reduce Might Cost)"
+            ^"Equipment" STRING "Full chain armor, long sword, shield, warhorse."
+            ^"Vis" STRING "1 pawn of Corpus vis (in sword)."
+            ^"Appearance" STRING "The knights appear identical to the murdered knights of the baron. They are armored, carry swords, and ride the horses of the murdered knights."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 14
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +6
+            "Chivalrous" +3
+        }
+        DESCRIPTION "The speech of the knights is slurred and accented. This is because the faeries have concentrated their Pretenses in weapon skills rather than language — in fact, the faeries are marginally better swordsmen than the original mortals they are simulating. The unusual speech pattern of the faerie knights makes them sound slightly drunk.\n\nApart from murdering and kidnapping for the faerie queen, the knights are dutybound to act in a chivalrous manner. However, being faeries, the knights are only simulating their chivalry, so a careful observer may notice something false.\n\nThese knights are warded against with garlic. The knights cannot touch or harm a target carrying garlic and take +6 Damage if forced into contact with garlic."
+    }
+
+}

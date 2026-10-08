@@ -1,0 +1,83 @@
+EXTENSION "ArM5_Hooks_EchoesOfTheAncientDead_Rites" {
+    NAME "Ars Magica Fifth Edition, Hooks - Chapter Three: Echoes of the Ancient Dead rites"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # The chapter's rites, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t57100cfb9c4dc33ea1b318 ^"Eyes of the Dead" DEF {
+        EXTENDS #t37cb05b8622384ee0bd1a5 ^"Rite"
+        PROPERTIES {
+            ^"Ability" STRING "Lore of the Dead"
+            ^"Ease Factor" STRING "6"
+            ^"Form" STRING "Mentem"
+            ^"Vis Cost" STRING "no vis cost"
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Vision"
+            ^"Effect Design" STRING "(Non-Hermetic, magnitude 1)"
+            ^"Printed Stat Line" STRING "Ease Factor: 6, Mentem, no vis cost R: Personal, D: Moon, T: Vision"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "This effect mimics Second Sight (ArM5, pages 48 & 67), and as such does not need to Penetrate."
+    }
+
+    #t1c52fa58abe1d436515cce ^"Touch of Ghostly Calling" DEF {
+        EXTENDS #t37cb05b8622384ee0bd1a5 ^"Rite"
+        PROPERTIES {
+            ^"Ability" STRING "Lore of the Dead"
+            ^"Ease Factor" STRING "12"
+            ^"Form" STRING "Corpus"
+            ^"Vis Cost" STRING "1 pawn of Rego or Corpus vis"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Special"
+            ^"Target" STRING "Individual"
+            ^"Effect Design" STRING "(Non-Hermetic, magnitude 3)"
+            ^"Printed Stat Line" STRING "Ease Factor: 12, Corpus, 1 pawn of Rego or Corpus vis R: Touch, D: Special, T: Individual"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 29
+        }
+        DESCRIPTION "When the target of this ritual dies, he returns the following night as a spectre, a specific kind of ghost (see insert) that keeps living out the role or vocation he had in life. The rite fails if target is given a proper burial. Other types of ghosts are beyond the scope of this ritual. It is treated as an ongoing magical effect until target dies, and causes Warping as a continuous mystical effect. The ritual can be dispelled prior to the target’s death, but not once he has risen."
+    }
+
+    #t86c067e0b40627aaddd8f2 ^"Dirge" DEF {
+        EXTENDS #t37cb05b8622384ee0bd1a5 ^"Rite"
+        PROPERTIES {
+            ^"Ability" STRING "Lore of the Dead"
+            ^"Ease Factor" STRING "9"
+            ^"Form" STRING "Vim"
+            ^"Vis Cost" STRING "1 pawn of Creo or Vim vis"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room or Group"
+            ^"Effect Design" STRING "(Non-Hermetic, magnitude 2)"
+            ^"Printed Stat Line" STRING "Ease Factor: 9, Vim, 1 pawn of Creo or Vim vis R: Touch, D: Sun, T: Room or Group"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 30
+        }
+        DESCRIPTION "The Might scores and pools of undead creatures are increased by five. Creatures do not regain Might points while under the influence of this effect."
+    }
+
+    #te2a2e9b1d460ca1bb50375 ^"Anchored in the Veil" DEF {
+        EXTENDS #t37cb05b8622384ee0bd1a5 ^"Rite"
+        PROPERTIES {
+            ^"Ability" STRING "Lore of the Dead"
+            ^"Ease Factor" STRING "12+"
+            ^"Form" STRING "Mentem"
+            ^"Vis Cost" STRING "no vis cost"
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun (may be varied)"
+            ^"Target" STRING "Group (may be varied)"
+            ^"Ease Factor Modifiers" LIST OF STRING ["Ease Factor Modifier: –3 Effect: Decrease target to Circle (all armaments of all individuals inside)", "Ease Factor Modifier: +3 Effect: Increase Target to Room or a Group of 10 individuals", "Ease Factor Modifier: +6 Effect: Increase Target to Structure", "Ease Factor Modifier: +3 Effect: Increase Duration to Moon +3 Ease Factor increase per tenfold increase in size of targets Individual, Group, Room or Structure."]
+            ^"Effect Design" STRING "(Non-Hermetic, magnitude varies)"
+            ^"Printed Stat Line" STRING "Ease Factor: 12+, Mentem, no vis cost R: Voice, D: Sun (may be varied); T: Group (may be varied)"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 30
+        }
+        DESCRIPTION "The caster can alter the nature of physical objects, anchoring them for a time in the veil between the world of the living and the dead. Physical objects now affect ghosts as if they were corporeal, or ghosts may affect physical targets without using any powers, so that it counts as a natural attack regarding Magic Resistance. Against a wholly mundane opponent or item an anchored object is superior and has +3 on relevant rolls, e.g. +3 Attack for a sword or +3 to open a lock for a lockpick. Objects are seen as shimmering and semi-transparent. Base Target covers an individual ghost and all its equipment since this is formed by the ghost. For a mundane, physical target the power affects one person or a single piece of equipment."
+    }
+
+}

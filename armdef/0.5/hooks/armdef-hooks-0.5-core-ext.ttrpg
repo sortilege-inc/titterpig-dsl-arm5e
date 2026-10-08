@@ -1,0 +1,30 @@
+EXTENSION "ARMDef_Hooks_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Hooks - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # Hooks is an EXTENSION on the arm5e edition (spec S13 composition). The type below is the one the book's records
+    # need that the corpus lacks: a rite of Lore of the Dead.
+
+    #t37cb05b8622384ee0bd1a5 ^"Rite" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Ability" STRING REQUIRED
+            ^"Ease Factor" STRING
+            ^"Form" STRING
+            ^"Vis Cost" STRING
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Ease Factor Modifiers" LIST OF STRING
+            ^"Effect Design" STRING
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Hooks"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "The character can perform certain necromantic spell-like effects called rites, representing powers that are relatively common among cults of the dead, although not very widespread in Hermetic circles. This Virtue gives the character a Score of 1 in the Supernatural Ability *Lore of the Dead.*"
+    }
+
+}

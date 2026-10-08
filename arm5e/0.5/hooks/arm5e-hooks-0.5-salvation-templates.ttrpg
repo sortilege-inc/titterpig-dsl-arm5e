@@ -1,0 +1,91 @@
+EXTENSION "ArM5_Hooks_Salvation_Templates" {
+    NAME "Ars Magica Fifth Edition, Hooks - Chapter Six: Salvation templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tf16f30ece43338efbf241f TEMPLATE "Burned Monks" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Tempters (maligenii)"
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "None"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Robes, torn shreds of bible."
+            ^"Weakness" STRING "The Lord’s Prayer."
+            ^"Vis" STRING "1 pawn of Ignem in ash (the images contain no vis)."
+            ^"Appearance" STRING "The screaming, burned monks rush backwards and forth, leaving a taste of ash and fluttering torn pages from the bible in their wake. The monks are transparent and colored in smoky, orange sepia tones. Each demonic monk has produced nearly half a dozen images of itself, so the relatively small number of demons appear to be a larger crowd of panicked ghosts."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 63
+        }
+        PERSONALITY_TRAITS {
+            "Hysterical" +6
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 4
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "run"
+            "Brawl" SCORE 1 SPECIALTY "dodge"
+            "Concentration" SCORE 5 SPECIALTY "A Problem Shared Is A Problem Doubled"
+        }
+        POWERS {
+            #t95f3fb1ae564719b0c4353 ^"Coagulation (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Allows the demon to form a physical body (see *Realms of Power: Infernal* page 31). The “physical” body manifested by the burned monks is immaterial (made of hot air, ash, and smoke) and cannot be damaged by normal physical means."
+            }
+            #t3770cd08993da0af23979b ^"Envisioning (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Allows the demon to appear in the dreams of a character (see *Realms of Power: Infernal* page 32)."
+            }
+            #t74713e3f46c56da4bf3ec2 ^"Obsession (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Whenever a character sins in the presence of the demon it can use this power to infect the character with the Personality Trait: Hysterical +1; see *Realms of Power: Infernal* page 31. Whenever a stress roll is made for a character with a Hysterical Personality, roll an additional number of botch die equal to the value of the Personality Trait."
+            }
+            #t769aeb2a3810753c02a5e8 ^"A Problem Shared Is A Problem Doubled" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "This power allows the demon to create a duplicate image of itself. The demon can do this multiple times, but it can only control a number of images equal to his Perception + Concentration Ability Score. If the demon ceases to concentrate, the images remain but continue repeating their recent actions. The images are of Imaginem Form, have no powers, and can be dispelled. The images must remain within Sight Range of the demon."
+            }
+        }
+    }
+
+}

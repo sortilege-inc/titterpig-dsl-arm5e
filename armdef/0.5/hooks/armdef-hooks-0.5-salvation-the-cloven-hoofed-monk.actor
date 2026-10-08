@@ -1,0 +1,114 @@
+EXTENSION "ARMDef_Hooks_Salvation_TheClovenHoofedMonk" {
+    NAME "Ars Magica Fifth Edition, Hooks - The Cloven Hoofed Monk"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ARMDef_Hooks_Core_Ext"
+
+    # The Cloven Hoofed Monk (Chapter Six: Salvation, p61): one being, its printed stat lines verbatim fields.
+
+    #tb544e45dcc73796370b4b7 ^"The Cloven Hoofed Monk" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Order" STRING "Lord Abbot of the Unholy Order of Tempters (tentator)"
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Corpus"
+            ^"Printed Might" STRING "20(19) (Corpus) (1 Might Point used to possess the black cockerel)."
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Size" INTEGER 0
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Greater Immunity (fire); Tough"
+            ^"Reputations" LIST ["Profane Abbot +3"]
+            ^"Hierarchy" INTEGER 3
+            ^"Soak" STRING "+5 (+2 Sta + 3 Tough)"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Red robes, long sword, book, black cockerel tail-feather on a silver chain."
+            ^"Weakness" STRING "Abhorrent Material: salt."
+            ^"Vis" STRING "4 pawns of Corpus in book cover."
+            ^"Appearance" STRING "The demon abbot wears dark red robes and carries (in a leather harness) a large book bound in flayed human skin. Unlike a mortal Christian monk, the abbot follows no prohibition against the shedding of blood and carries a plain-looking yet finely made long sword. Around the monk’s neck is a silver chain with a black feather (from the cockerel) woven into it."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 61
+        }
+        PERSONALITY_TRAITS {
+            "Deceitful" +3
+            "Depraved" +3
+        }
+        COMBAT {
+            "Fist" INIT 3 ATTACK 8 DEFENSE 8 DAMAGE 2
+            " Long Sword" INIT 5 ATTACK 14 DEFENSE 11 DAMAGE 8
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "grace"
+            "Awareness" SCORE 4 SPECIALTY "sin"
+            "Bargain" SCORE 5 SPECIALTY "infernal"
+            "Brawl" SCORE 4 SPECIALTY "fist"
+            "Civil and Canon Law" SCORE 3 SPECIALTY "heresy"
+            "Code of Hermes" SCORE 1 SPECIALTY "infernalism"
+            "Guile" SCORE 6 SPECIALTY "infernalists"
+            "Infernal Lore" SCORE 3 SPECIALTY "demons"
+            "Leadership" SCORE 3 SPECIALTY "demons"
+            "Penetration" SCORE 3 SPECIALTY "ball of hellfire"
+            "Single Weapon" SCORE 6 SPECIALTY "sword"
+            "Stealth" SCORE 4 SPECIALTY "urban"
+        }
+        POWERS {
+            #tfd5d74d040870cd6c171ba ^"Ball of Hellfire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The demon launches a ball of black flame at the target (within Voice Range), which automatically hits and causes +30 damage."
+            }
+            #t93171490fd220cbd1c6042 ^"Coagulation (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Coagulation"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Allows the demon to form the physical body described below. He can return to his spiritual form at will. When the demon is in his spiritual form he is invisible and undetectable by Hermetic magic (and if he cannot be sensed he cannot usually be targeted by Hermetic magic). In his physical form the demon can be killed, but in his spiritual form the demon can only be destroyed by destroying his Might (see *Realms of Power: Infernal* page 31)."
+            }
+            #tcfb53e4461130569e3ee6e ^"Envisioning (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Envisioning"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Allows the demon to appear in the dreams of a character (see *Realms of Power: Infernal* page 32)."
+            }
+            #t55ce2521cbe4b392338abd ^"Obsession (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Obsession"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Whenever a character sins in the presence of the demon he can use this power to infect the character with the Personality Trait: Depraved +1; see *Realms of Power: Infernal* page 31."
+            }
+            #t42825b14fb10d209ee2417 ^"Possession (Hooks)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Possession"
+                    ^"Cost" STRING "Variable"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The demon uses this power to possess the black cockerel; see *Realms of Power: Infernal*, page 32."
+            }
+        }
+        DESCRIPTION "The book the monk carries is *The Book of the Morning Star* (Infernal Lore Ability Summa; Quality 10, Level 4).\n\nA character who makes a Perception + Awareness roll against an Ease Factor of 6 notices that the monk has cloven hoofs instead of feet. He otherwise appears to be a normal middleaged man."
+    }
+
+}

@@ -1,0 +1,49 @@
+EXTENSION "ArM5_Hooks_SmallGame_MaahesTyreosGoldenCat" {
+    NAME "Ars Magica Fifth Edition, Hooks - Maahes Tyreos (Golden Cat)"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # Maahes Tyreos (Golden Cat) (Chapter Seven: Small Game, p69): one being, its printed stat lines verbatim fields.
+
+    #t393a34974809ed125dae42 ^"Maahes Tyreos (Golden Cat)" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 13
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -7
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER -3
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Perfect Balance, Puissant Awareness, Sharp Ears, Tough; Nocturnal, Proud."
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "None, see “Mechanica and Damage” insert."
+            ^"Abilities" STRING "Arabic 5 (cultured), Area Lore: Alexandria 3 (Library of Alexandria), Area Lore: Eastern Roman Empire 5 (history), Area Lore: Town 1 (geography), Artes Liberales 3 (rhetoric), Athletics 3 (jumping), Awareness 4+2 (at night), Brawl 2 (claws), Classical Greek 5 (Koine), Folk Ken 3 (nobility), French 3 (merchants), Hunt 4 (mice), Intrigue 2 (alliances), Latin 5 (academic usage), Leadership 4 (servants), Magic Lore 3 (items of quality), Normandy Lore 2 (cities), Organization Lore: Order of Hermes 2 (hierarchy), Philosophiae 6 (reagents), Stealth 4 (stalking). Cats are excellent climbers and jumpers, gaining a +3 bonus to appropriate rolls. Powers: Child of Hephaestus, 0 points, Init +0, Terram. See Ailuros. Gift of the Muses, 0 points, Init +0, Auram. See Ailuros. Gown of the Night Predator, 0 points, Init +0, Terram. See Ailuros. Unbound Stalker, 0 points, Init +0, Terram. See Ailuros. Voice of the Demagogue, 0 points, Init +0, Mentem: The anima appears more intelligent and majestic than it actually is. Those affected by this power are inclined to regard the caster as their natural superior, to be respected and obeyed to the best of their ability. Targets do not find it particularly unusual or noteworthy that their superior is a metal cat. ReMe 40: Base 5, +2 Voice, +2 Sun, +2 Group; +3 levels for a Penetration of 6, +2 levels for three uses per day. (Mechanica Level: 24) Tranquility of the Purring Cat, 0 points, Init +0, Mentem: The anima can inspire a sense of supernatural calm in a small group of people by purring. Those affected are oblivious to strange goings on (rhinoceroses crashing through the door, a pair of animated metal cats walking down the street, and so on.) The targets perceive events normally, but while Maahes purrs, they react to even the most outlandish events as if they were perfectly normal occurrences unworthy of comment. The power persists for as long as Maahes keeps purring and, with repeated applications, can affect several groups simultaneously. ReMe 34: Base 4, +2 Voice, +1 Concentration, +2 Group; +5 levels for device to maintain concentration, +4 levels for 12 uses per day. (Mechanica Level: 21)"
+            ^"Vis" STRING "None."
+            ^"Appearance" STRING "Maahes is a golden cat with dazzling ruby eyes who was designed to look like a majestic Persian. Larger and more heavily built than Ailuros, Maahes attracts even more attention than his lovely mate, something he secretly enjoys. Given to indolence and pride, he values his wife’s keen intellect and enjoys the sense of whimsy she injects into his life, which prevents him from getting too complacent. Maahes enjoys sunning himself and has a passion for academic debate, particularly on his pet topic of alchemy. Whenever Maahes uses his powers, those in his immediate vicinity can feel the spring sun shining upon their shoulders regardless of the time of day or meteorological conditions."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 69
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +4
+            "Prideful" +3
+            "Hedonistic" +2
+            "Timid" +2
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 8 DEFENSE 10 DAMAGE -5
+            " Teeth" INIT 4 ATTACK 8 DEFENSE 7 DAMAGE -6
+        }
+    }
+
+}

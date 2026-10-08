@@ -1,0 +1,62 @@
+EXTENSION "ArM5_Hooks_EchoesOfTheAncientDead_Rules" {
+    NAME "Ars Magica Fifth Edition, Hooks - Chapter Three: Echoes of the Ancient Dead rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tecacfaace27642a321dd6f ^"Ceremonial Rite (Lore of the Dead)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ceremonial Rite"
+            ^"Rules Section" STRING "New Supernatural Ability: Lore of the Dead"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 29
+        }
+        FORMULAS {
+            "Ceremonial Rite" "Stamina + Lore of the Dead + Shape & Material bonus + stress die"
+        }
+    }
+
+    #ta5ae60fc6c5e388aa31646 ^"Casual Rite, Non-Fatiguing (Lore of the Dead)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casual Rite, Non-Fatiguing"
+            ^"Rules Section" STRING "New Supernatural Ability: Lore of the Dead"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 29
+        }
+        FORMULAS {
+            "Casual Rite, Non-Fatiguing" "(Stamina + Lore of the Dead + stress die)/2"
+        }
+    }
+
+    #tca86b18c8db50d139fd8c4 ^"Casual Rite, Fatiguing (Lore of the Dead)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casual Rite, Fatiguing"
+            ^"Rules Section" STRING "New Supernatural Ability: Lore of the Dead"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 29
+        }
+        FORMULAS {
+            "Casual Rite, Fatiguing" "Stamina + Lore of the Dead + stress die"
+        }
+    }
+
+    #tc835e1410c9a655d61bfbd ^"Penetration (Lore of the Dead)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration"
+            ^"Rules Section" STRING "New Supernatural Ability: Lore of the Dead"
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 29
+        }
+        FORMULAS {
+            "Penetration" "Casting Total – Ease Factor + Penetration ability"
+        }
+    }
+
+}

@@ -1,0 +1,48 @@
+EXTENSION "ArM5_Hooks_BirthRight_OldNanny" {
+    NAME "Ars Magica Fifth Edition, Hooks - Old Nanny"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-08"
+    DEPENDS_ON "ArM5_Hooks_Core_Ext"
+
+    # Old Nanny (Chapter Two: Birth Right, p16): one being, its printed stat lines verbatim fields.
+
+    #tc6d2d25c43b2cd9d0876d0 ^"Old Nanny" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Location" LIST [#te36a20b00607a3f376d52e ^"The Faerie Court"]
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 4
+            ^"Virtues and Flaws" STRING "Huge, Ritual Power (Web Weaver); Increased Might, Faerie Beast, Faerie Sight, Faerie Speech; Narrowly Cognizant; Driven (create webs), Enemies (faerie Queen), Monstrous Appearance; Reclusive"
+            ^"Qualities" STRING "Aggressive, Ambush Predator, Skilled Climber (+3 Climb rolls), Tough Hide, Venomous"
+            ^"Reputations" LIST ["Ancient Nightmare (local) +1"]
+            ^"Combat" STRING "Bite: Init –1, Attack +12, Defense +6, Damage +9 Claws: Init –2, Attack +10, Defense +7, Damage +10 Old Nanny’s bite is venomous. If a character takes any Wound from her bite, check to see whether the character is poisoned too. Old Nanny’s venom is equivalent to an Asp bite (see ArM5, page 180). Due to Old Nanny’s many clawed legs she inflicts 3 Wounds when she strikes. If you are using the Group combat rules these Wounds are distributed about the opposing Group as normal."
+            ^"Soak" STRING "+3 (Stamina + Tough Hide)"
+            ^"Wound Penalties" STRING "–1 (1–9), –3 (10–18), –5 (19–27), Incapacitated (28–36), Dead (37+)"
+            ^"Pretenses" STRING "Area Lore: Local 5 (forest), Athletics 3 (climbing), Awareness 3 (things in web), Brawl 5 (bite), Hunt 4 (prey), Profession: Weaver 10 (web), Stealth 4 (ambush), Survival 3 (forest)"
+            ^"Powers" STRING "Faerie Sight, see the description given with the faerie queen Blegen. Faerie Speech, see the description given with the faerie queen Blegen. Web Weaver, 3 points, Init –9, Animal, ritual: This ritual power creates a thick rope of spider silk half a foot in diameter and two and a half miles long. The spider silk is as tough as iron and can entrap people as described in the text. It takes an hour for all the silk to be created, and Old Nanny uses her Profession: Weaver Pretense to fashion the silk into webs (or other items). (Lesser Power; 25 spell levels) (Base 5, +1 Touch, +2 Size; +5 one intricacy points to reduce Might Cost)"
+            ^"Vis" STRING "2 pawns of Animal vis (in spider silk gland)."
+            ^"Appearance" STRING "Old Nanny is an enormous spider. She is a black, scuttling, primitive nightmare."
+            ^"Source" STRING "Hooks"
+            ^"Page" INTEGER 16
+        }
+        PERSONALITY_TRAITS {
+            "Secretive" +3
+            "Jealous" +1
+        }
+        DESCRIPTION "Her usual tactic is to wait until prey is snared in her web, and then she moves in to deliver an incapacitating, poisonous bite to the comparatively defenseless victim. If a snared victim appears to be too tough (or armored), then Old Nanny merely waits for the victim to starve.\n\nOld Nanny flees from characters who are not affected by her webs and hides in a dark corner of the Nursery."
+    }
+
+}

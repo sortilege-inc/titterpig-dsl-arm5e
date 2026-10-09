@@ -1,6 +1,6 @@
 EXTENSION "ArM5_Through_the_Aegis_Jardin_Devices" {
     NAME "Ars Magica Fifth Edition, Through the Aegis - Chapter Three: Jardin, A Summer Covenant devices"
-    VERSION "0.5.0"
+    VERSION "0.5.1"
     SPEC_VERSION "0.5"
     RELEASE_DATE "2026-10-06"
     DEPENDS_ON "ArM5_Through_the_Aegis_Core_Ext"
@@ -141,7 +141,7 @@ EXTENSION "ArM5_Through_the_Aegis_Jardin_Devices" {
             ^"Source" STRING "Through the Aegis"
             ^"Page" INTEGER 47
         }
-        DESCRIPTION "As per the spell of the same name in\n\n**ArM5**, page 130. (Effect: Base 5, +1 Concentration, +1\n\nTouch,)\n\nThe talisman also has the following attunements: +3 Corpus +4 affect breathing and speaking +4 affect Dead Wood\n\nBeatriz is under the influence of a –5 longevity ritual."
+        DESCRIPTION "As per the spell of the same name in\n\n**ArM5**, page 130. (Effect: Base 5, +1 Concentration, +1\n\nTouch,)\n\nBeatriz is under the influence of a –5 longevity ritual."
     }
 
     #t674bdaed0079540493beae ^"The Touch Of Morpheus" DEF {
@@ -179,7 +179,7 @@ EXTENSION "ArM5_Through_the_Aegis_Jardin_Devices" {
             ^"Source" STRING "Through the Aegis"
             ^"Page" INTEGER 50
         }
-        DESCRIPTION "As Leap of Homecoming ArM5, page 135.\n\nThe wand’s base contains an Arcane Connection to Ahenobarbus’ laboratory. (Effect: Base 35, +4 levels Penetration)\n\nThe talisman also has the following attunements: Wand: +4 control things at a distance Amber +3 Corpus"
+        DESCRIPTION "As Leap of Homecoming ArM5, page 135.\n\nThe wand’s base contains an Arcane Connection to Ahenobarbus’ laboratory. (Effect: Base 35, +4 levels Penetration)"
     }
 
     #t7b82f4dd48a4429ad2c774 ^"Enslave the Mortal Mind (Through the Aegis)" DEF {
@@ -219,6 +219,26 @@ EXTENSION "ArM5_Through_the_Aegis_Jardin_Devices" {
             ^"Page" INTEGER 62
         }
         DESCRIPTION "When the user slaps the symbol of the panpipe and calls out to visible targets “Lost your way have you?”, they suddenly feel the urge to avoid the covenant, and instead seek out a place holding special significance for them. At the end of the duration the targets may remember intending to go to the covenant, but not why they did not."
+    }
+
+    #tefebcabd89c249895f1e00 ^"Endure Pain & Fatigue" DEF {
+        EXTENDS #tYiQyfVMioMALqPGoncvpTfY ^"Enchanted Device"
+        PROPERTIES {
+            ^"Part Of" STRING "Alyssa’s Ring"
+            ^"Technique" STRING "Rego"
+            ^"Form" STRING "Corpus"
+            ^"Level" INTEGER 24
+            ^"Penetration" STRING "0"
+            ^"Uses" STRING "12/day"
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual" FIAT "the book prints no Target (its text is 'As Endurance of the Berserkers but Range: Touch and Duration: Diameter'); read from its design line '(Base 10: Touch +1, Diameter +1, +4 12 Uses/day)', which adds no Target step: Individual"
+            ^"Effect Design" STRING "(Base 10: Touch +1, Diameter +1, +4 12 Uses/day)"
+            ^"Printed Effect Line" STRING "ReCo 24 Pen 0, 12/day"
+            ^"Source" STRING "Through the Aegis"
+            ^"Page" INTEGER 52
+        }
+        DESCRIPTION "As Endurance of the Berserkers but Range: Touch and Duration: Diameter. Alyssa uses this power to bestow the ability on any grogs accompanying her if combat appears imminent.\n\n(Base 10: Touch +1, Diameter +1, +4 12 Uses/day)"
     }
 
 }

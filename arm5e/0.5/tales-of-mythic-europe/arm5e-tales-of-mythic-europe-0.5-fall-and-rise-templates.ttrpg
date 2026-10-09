@@ -1,0 +1,82 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_FallAndRise_Templates" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Chapter Four: Fall and Rise templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t860f23abe860cdcfdb3ae7 TEMPLATE "Entanglements" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 5
+            ^"Printed Might" STRING "5 (Varies by discarded mortal object at core.)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Printed Size" STRING "Varies from –5 to –1. These statistics assume Size –1."
+            ^"Virtues and Flaws" STRING "Faerie Beast, Faerie Sight, Faerie Speech, Lesser Faerie Power (Damaging Effect); Monstrous Appearance, Incognizant, Traditional Ward (running water)"
+            ^"Combat" STRING "Brawl (Teeth): Init +2, Attack +10, Defense +8, Damage +6 Brawl (Claws): Init +3, Attack +9, Defense +10, Damage +7 All Attack and Defense scores include +1 for Brawl specialization and +5 Damage for Damaging Effect power. These fairies will not use the Damaging Effect power against wizards, since they know it makes their attacks slide off their magical defenses."
+            ^"Soak" STRING "+4, pelt"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Pretenses" STRING "Athletics 6 (while in pursuit), Awareness 6 (Severin), Brawl 5 (humans), Faerie Speech 5 (threats), Hunt (Severin) 5."
+            ^"Powers" STRING "Damaging Effect, 0 points, –2 Init (2 intricacy points on cost): Adds +5 Damage to Brawl attacks by shredding the skin that the entanglement touches. This also destroys mundane possessions like clothing. Costs 15 spell levels (Base 5 +1 Part +1 Diameter) Invisibility, 2 points, Init –2, Imaginem: A personal version of Veil of Invisibility, as per ArM5, p.146. Costs 15 spell levels. (Base 4 +2 Sun +1 for moving image) Supernatural Agility, 3 points, constant: This power allows the character to perform minor supernatural feats when using its Athletics Pretense. These include swiftly scaling walls, leaping from the ground onto the back of a galloping horse, and dropping great distances to the ground without harm. Costs 25 spell levels (Base 10 +2 Sun +1 constant)."
+            ^"Vis" STRING "1 pawn, discarded mortal object at core, in the Form of the object."
+            ^"Appearance" STRING "Entanglements are made predominantly of lint, dust, and discarded objects. Entanglements vary in size from a hand span to waist height. They are vaguely human in shape, but are reminiscent of porcupines. Their eyes shine like bright pennies. They have teeth like lost needles and claws like broken pottery. They are able to converse, but prefer to taunt. Entanglements are made from the mortal things humans discard accidentally when they are frightened by other entanglements, so most entanglements contain a discarded mortal object at their core, like a bucket, a tooth, or sack of clothes."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 58
+        }
+        DESCRIPTION "Entanglements are the servants of Cruciator, and through him Peripeteia. They make Severin’s life increasingly abject, constrained, and painful."
+    }
+
+    #tcacad3494b5e90e1e8bb61 TEMPLATE "Faerie Knight (Tales of Mythic Europe)" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Printed Name" STRING "Faerie Knight"
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Printed Might" STRING "10 (Terram in this case: the suit is hollow.)"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 1
+            ^"Virtues and Flaws" STRING "Cognizant Within Role, Faerie Sight, Faerie Speech, Humanoid Faerie, Increased Might (minor), Large, 2 x Lesser Faerie Powers; Oath of Fealty, Overconfident, Sovereign Ward (the blood of women, in this case), Vow (Chivalrous conduct)"
+            ^"Lance and heater Shield" STRING "Init +3, Attack +17, Defense +15, Damage +9 Does not include the +3 to Attack and Defense for being mounted."
+            ^"Soak" STRING "+9 Faerie metal scale, made of glamour using the Shift Human Shapes Power. Wound Penalties: –1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–25), Dead (26+)"
+            ^"Pretenses" STRING "Awareness 1 (enemies), Brawl 7 (knights), Carouse 3 (feasts), Charm 1 (ladies), Etiquette 3 (chivalrous combat), Faerie Speech 5 (boasting), Hunt 2 (humans), Leadership 2 (guards), Ride 3 (horses), Single Weapon 8 (long sword)."
+            ^"Powers" STRING "Damaging Effect, 1 point, Init.+1, varies. (1 intricacy point on cost) Flight, 1 point, Init +1, Terram (2 intricacy points on cost)"
+            ^"Equipment" STRING "Arms and armor. Has a faerie horse constructed of the knight’s own glamour, so it flies when the knight does, and shares the knight’s Magic Resistance."
+            ^"Vis" STRING "2 pawns Terram, a rusty piece of armor."
+            ^"Appearance" STRING "A knight clad in silver leaves of metal, astride a fine horse. This knight displays a red fret on gold on his arms and saddle blanket."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 67
+        }
+        PERSONALITY_TRAITS {
+            "Arrogant" +3
+            "Courteous" +3
+        }
+        COMBAT {
+            "Brawl (gauntlet)" INIT 1 ATTACK 10 DEFENSE 10 DAMAGE 5
+            "Long sword and heater shield" INIT 8 ATTACK 18 DEFENSE 16 DAMAGE 9
+            "Mace and heater shield" INIT 2 ATTACK 16 DEFENSE 15 DAMAGE 11
+        }
+        DESCRIPTION "Faerie Knights are more bound to the rules of chivalry than real knights, and so they do not use Damaging Effect powers on their weapons against worthy foes. Use the statistics of the Viking warriors in Chapter Eight: The Return of the Raiders for the knight’s attendant men at arms, changing the physical descriptions of the faeries. Their Sovereign Ward is that they cannot harm noblewomen. The Damaging Effect for all of these faeries is that threadlike things unravel or snap when struck by the weapons of these faeries. This includes the fibres in muscles, ligaments, tendons. Being struck by one of these faeries also makes all of the victim’s hair fall out, although it regrows."
+    }
+
+}

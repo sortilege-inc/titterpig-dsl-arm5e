@@ -1,0 +1,49 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_ReturnOfTheRaiders_PellewTheFaerieTinker" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Pellew: The Faerie Tinker"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Pellew: The Faerie Tinker (Chapter Eight: Return of the Raiders, p126): one being, its printed stat lines verbatim fields.
+
+    #td5e8a5aea845609eddb29f ^"Pellew: The Faerie Tinker" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Greater Faerie Powers (Guide and Send Message), Cognizant Within Role, Faerie Sight, Faerie Speech, Humanoid Faerie, Increased Might (minor), Infiltrator (minor – prosperous tinker); Traditional Ward (fire from a hearth)."
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Athletics 4 (walking), Awareness 2 (opportunities to “steal”), Brawl 1 (fist), Carouse 3 (feasts), Faerie Speech 5, Folk Ken 3 (trading), Profession: Tinker 6 (bargaining), Great Weapon 2 (staff), Swim 1 (fords), Trading Route Lore (food and shelter) 3"
+            ^"Powers" STRING "Guide, 5 points, Init -3, Mentem, 1 intricacy point spent on cost: Subtly influences a group of beings towards a specific course of action. Some creatures can use this power to direct the movement of a group, taking it to a desired location. Other creatures can guide humans towards rash or brave or wise actions. Each time this power is used, it can subtly influence the actions of a single person for a day. The storyguide provides advice to the player in a similar way to the Common Sense Virtue, except that the advice serves the creature’s agenda, not that of the character. There is no compulsion to follow this advice. Send Message, 3 points, Init –2, Imaginem: This power allows the faerie to send short verbal messages to beings for which it has Arcane Connections."
+            ^"Equipment" STRING "Poor tinkers, Pellew’s role models, carry their tools and wares in a backpack. His clothes are sturdy and well made, but of undyed wool. He wears cheap shoes. Highly perceptive humans (Awareness + Faerie Lore of against an Ease Factor of 15+, after seeing Pellew over a period of months) may detect his faerie nature because his clothes never wear out. He carries a staff, and uses it as a weapon, but this is mostly for show."
+            ^"Vis" STRING "1 pawn Terram, a tarnished spoon; and 1 pawn Corpus, a tooth."
+            ^"Appearance" STRING "He appears to be of middle age, with a full beard for warmth on the road. He is stooped, but wiry."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 126
+        }
+        PERSONALITY_TRAITS {
+            "Deceptive" +3
+            "Jovial" +3
+        }
+        COMBAT {
+            "Brawl (fist)" INIT 0 ATTACK 1 DEFENSE 1 DAMAGE 1
+            "Single Weapon (staff)" INIT 2 ATTACK 6 DEFENSE 6 DAMAGE 3
+        }
+        DESCRIPTION "Pellew appears to be a human tinker, a poor sort of traveling merchant who also does odd jobs, like harvesting and craftwork, to earn extra money. His mission is to spread stories of the ghostly attack that occurs every hundred years at the village, giving the precise date. He understands that it is important he never contact powerful people — priests, nobles, magi — by himself. He wants to pass the story to their servants and retainers, then send a message to similar faeries in other communities, so that no more than a single band of rescuers appears.\n\nStoryguides should place Pellew as background color in earlier stories, or include him as the source of useful folklore. Pellew’s group of faeries has been planning to steal this story for many years, but must act covertly. Faeries treasure human vitality, which is harvested when humans express passionate emotions. Pellew’s group cannot merely fight the other band of faeries with a human audience: they need humans to feel a passionate connection to the outcome of the battle.\n\nPellew’s faeries want the Viking raiders to be driven off, after a battle filled with terror and heroism and blood. They feed on the thrill of victory felt by the humans on the winning side. Pellew, personally, favors the relish humans feel when they kill their enemies in creative ways. There’s little he can do to encourage this directly, but a character spending any amount of time near him will find that he is fervently concerned with safety. He is continually warning about the dangers inherent in medieval industry, in the hope that this will lead people to kill their rivals in unnecessarily complicated ways."
+    }
+
+}

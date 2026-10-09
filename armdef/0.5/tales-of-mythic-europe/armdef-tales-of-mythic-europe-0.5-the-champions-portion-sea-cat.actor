@@ -1,0 +1,67 @@
+EXTENSION "ARMDef_Tales_of_Mythic_Europe_TheChampionsPortion_SeaCat" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Sea-cat"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Sea-cat (Chapter Two: The Champion’s Portion, p19): one being, its printed stat lines verbatim fields.
+
+    #t7ca167a847811c2a1e553b ^"Sea-cat" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 11
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 7
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 1
+            ^"Season" STRING "Summer"
+            ^"Ferocity" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magic Animal; Ferocity, Lightning Reflexes, Tough; Nocturnal"
+            ^"(Animal) Qualities" STRING "Ambush Predator, Hardy, Think Fur"
+            ^"Qualities and Inferiorities" STRING "Gigantic; Improved Attack (claws) (x2), Improved Soak (x3), Lesser Power, Ulster Regio Network"
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Vis" STRING "2 pawn Aquam in its eyes"
+            ^"Appearance" STRING "The sea-cat looks like a monstrous lynx, with unkempt gray fur and red prickly eyes. It exudes a putrid aroma, reminiscent of fish guts and dead seaweed at low tide."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 19
+        }
+        PERSONALITY_TRAITS {
+            "Aggressive" +3
+        }
+        COMBAT {
+            "Claws" INIT -2 ATTACK 15 DEFENSE 12 DAMAGE 2
+            "Bite" INIT -1 ATTACK 11 DEFENSE 9 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 7 SPECIALTY "climbing"
+            "Awareness" SCORE 6 SPECIALTY "prey"
+            "Brawl" SCORE 9 SPECIALTY "claws"
+            "Stealth" SCORE 7 SPECIALTY "stalking"
+            "Hunt" SCORE 6 SPECIALTY "tracking"
+        }
+        POWERS {
+            #t9c8cf9b51d641d23a5cf99 ^"Stench of Putridity" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "At will, the sea-cat can exude a noxious stench that mimics the effects of *Wreaths of Foul Smoke* (**ArM5**, page 125). The sea-cat is itself immune to the malodorous vapors. (Base 3, +2 Sun, excess mastery points increase Init.)"
+            }
+        }
+        DESCRIPTION "The sea-cat is a magical creature native to Ireland. It has the ability to travel from regio to regio within the province of Ulster, favoring the costal areas, and may occasionally wander the Twilight Void paths connecting Ulster to the Magic Realm.\n\nThe sea-cat’s preferred attack is its claws. Because of its Quality: Ambush Predator, it gets a +3 on the first round of a surprise attack. Exerting at the same time gives the sea-cat an Attack of +28. This could be quite lethal, and the storyguide should take care who the sea-cat ambushes. It won’t be much fun for the players if a magus is killed before stepping foot in Ulster. A grog is the ideal candidate, and slaying a grog at this point in the adventure would indicate how deadly the upcoming tale will be."
+    }
+
+}

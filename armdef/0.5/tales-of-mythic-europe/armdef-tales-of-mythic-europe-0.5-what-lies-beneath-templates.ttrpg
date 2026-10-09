@@ -1,0 +1,125 @@
+EXTENSION "ARMDef_Tales_of_Mythic_Europe_WhatLiesBeneath_Templates" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Chapter Ten: What Lies Beneath templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Tales_of_Mythic_Europe_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t179d815c8e8e422298ea0f TEMPLATE "Marsh Crows, Spirits of Illness" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Order" STRING "Tempters"
+            ^"Might" INTEGER 5
+            ^"Size" INTEGER -5
+            ^"Virtues and Flaws" STRING "Lightning Reflexes (Initiative on Surprise Attack: +9), Puissant Teaching; Cruel, Weak-Willed"
+            ^"Reputations" LIST ["Cowardly (Infernal) 1"]
+            ^"Hierarchy" INTEGER 1
+            ^"Combat" STRING "Dodge: Init +3, Attack N/A, Defense +7, Damage N/A Bite: Init +3, Attack +6, Defense +6, Damage –3"
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "Dead (1+)"
+            ^"Abilities" STRING "Brawl 3 (dodge), English 5, Guile 4 (elaborate lies), Latin 4 (medical terms), Medicine 5 (disease), Stealth 3 (hide), Teaching 5 +2 (Medicine)"
+            ^"Weakness" STRING "They cannot stand the taste of Sea Wormwood (a plant found on the marsh)."
+            ^"Vis" STRING "The left claw of a Marsh Crow provides 1 pawn of Corpus vis."
+            ^"Appearance" STRING "Ragged crows with leering human eyes, they are never seen individually. They prefer to remain at a distance when in physical form, and are often seen as dark shapes flitting in the distance. Their presence on the marsh is unusual, as they usually remain close to Infernal auras. On an Intelligence + Area (Romney Marsh) Lore + Simple Die against an Ease Factor of 9, characters will find the presence of the crows strange as they are not natural marsh birds."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 159
+        }
+        PERSONALITY_TRAITS {
+            "Brave" -2
+            "Selfish" +5
+            "Spiteful" +3
+        }
+        POWERS {
+            #t4f0dbdd31111b856b767b4 ^"Diseased Possession (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Diseased Possession"
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem (–15 base penetration)"
+                }
+                DESCRIPTION "See insert."
+            }
+        }
+        DESCRIPTION "These spirits of illness have a power, Diseased Possession (described in the nearby insert box), that inflicts an illness on their victim. They are able to suspend the symptoms of the disease if the host curses God or Christ for his bad luck. In this way, the host is taught to take the Lord’s name in vain, and the tiny demon achieves a small victory over God.\n\nMarsh Crows are cowardly, and obey if commanded by a more-powerful demon or its agent. They have an incredible knowledge of Medicine and are, if controlled, superb teachers of the subject. Becoming the student of a Marsh Crow, however, corrupts the student’s Medicine Ability (*Realms of Power: The Infernal*, page 87)."
+    }
+
+    #ta67f319f1722367e74f850 TEMPLATE "The Vengeful Dead" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Might" INTEGER 10
+            ^"Size" INTEGER 0
+            ^"Age" STRING "N/A"
+            ^"Decrepitude" STRING "N/A"
+            ^"Warping Score" STRING "N/A"
+            ^"Confidence Score" STRING "0 (0)"
+            ^"Virtues and Flaws" STRING "Tough, Puissant Single Weapon, Piercing Gaze"
+            ^"Reputations" LIST ["None"]
+            ^"Hierarchy" INTEGER 0
+            ^"Combat" STRING "Dodge: Init +3, Attack N/A, Defense +6, Damage N/A Claws: Init +3, Attack +6, Defense +7, Damage +1 Spear, Short: Init +5, Attack +11, Defense +10, Damage +6 Sword, Long: Init +5, Attack +14, Defense +12, Damage +7"
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "2 pawn of Corpus, in its eyes."
+            ^"Appearance" STRING "These cadaverous foes have bright white eyes that shine out from their stretched skin, naturally tanned by centuries submerged in the marsh. They wield their broken and bent swords with proficiency that belies their condition. Their movements are both fluid and ragged, as though some invisible controlling spirit controls their limbs, leaving their bodies to follow."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 160
+        }
+        PERSONALITY_TRAITS {
+            "Feral" +1
+            "Violent" +2
+            "Bitter" +3
+        }
+        ABILITIES {
+            "Athletics (running)" SCORE 3
+            "Brawl (claws)" SCORE 3
+            "Romney Marsh Lore (geography)" SCORE 2
+            "Single Weapon (long sword)" SCORE 5
+        }
+        POWERS {
+            #t2d9bdecb0c0d751414a90a ^"The Forgiving Earth (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "The Forgiving Earth"
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "This power allows the body hosting the vengeful dead to move beneath the ground unhindered by the earth. The power ends when the host body surfaces."
+            }
+            #tbd09f9bf7a57949667d7d5 ^"A Watery Grave" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "This power rapidly moves the earth aside from under the feet of a target. The space fills with water and the target drops into the marsh. The vengeful dead use this power when they are under their target, after traveling beneath the surface. When the target falls into the marsh, the vengeful dead grapples him, attempting to drown him."
+            }
+        }
+        DESCRIPTION "These spirits are not true demons, but are instead ghosts that have long since embraced the Infernal out of a desire for vengeance on the world that left them behind. They have been summoned and bound by Tobias, and have taken control of their own corpses."
+    }
+
+}

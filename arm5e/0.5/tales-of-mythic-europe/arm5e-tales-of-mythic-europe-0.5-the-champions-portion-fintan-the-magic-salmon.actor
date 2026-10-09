@@ -1,0 +1,67 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_TheChampionsPortion_FintanTheMagicSalmon" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Fintan the Magic Salmon"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Fintan the Magic Salmon (Chapter Two: The Champion’s Portion, p21): one being, its printed stat lines verbatim fields.
+
+    #tc41a94a34962dacd65a0a6 ^"Fintan the Magic Salmon" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Aquam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER -1
+            ^"Season" STRING "Summer"
+            ^"Virtues and Flaws" STRING "Magic Animal; Improved Characteristics (x2), Intuition; Compassionate"
+            ^"(Animal) Qualities" STRING "Aquatic, Slippery"
+            ^"Qualities and Inferiorities" STRING "Gift of Speech, Ritual Power (x2); Large, Unaffected by Gift; Bound to Magic, Reduced Presence"
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Vis" STRING "1 pawn Aquam in right eye"
+            ^"Appearance" STRING "Fintan is a large, silver-scaled salmon, with large, lazy eyes and long drooping whiskers."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 21
+        }
+        PERSONALITY_TRAITS {
+            "Compassionate" +6
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 8
+        }
+        ABILITIES {
+            "Awareness" SCORE 5 SPECIALTY "spying"
+            "Brawl" SCORE 7 SPECIALTY "dodge"
+            "Irish" SCORE 3 SPECIALTY "songs"
+            "Music" SCORE 3 SPECIALTY "singing"
+            "Stealth" SCORE 3 SPECIALTY "hiding"
+            "Survival" SCORE 3 SPECIALTY "home pool"
+            "Swim" SCORE 5 SPECIALTY "endurance"
+        }
+        POWERS {
+            #t52cd79231416ac1297a517 ^"The Gift of Wisdom" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–14"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power is exactly like the Hermetic spell, *Gift of Reason* (**ArM5**, page 148). Using it permanently drains 4 points from Fintan’s Might score."
+            }
+        }
+        DESCRIPTION "Fintan is content to live in his pool, lazily swimming at the bottom and watching any who come to partake of the pool’s solitude. He will approach if beckoned, especially by a song, and chat with those interested. If presented with a problem, he will do his best to think out the best solution. Fintan is wise, although not especially smart. He’ll urge the questioner to think back over all preceding events to help answer his question. This provides a tool for the storyguide to assist players who seem confused as to what they are supposed to do next.\n\nFintan pities those less intelligent than him, and will offer to increase a character’s Intelligence if it is below 0. Since this power drains his Might Score, he will ask the intended recipient for 4 pawns of vis to replenish his Might. The vis can be of any type. Once it is eaten, Fintan will regain his lost Might in a week."
+    }
+
+}

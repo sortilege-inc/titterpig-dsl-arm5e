@@ -1,0 +1,83 @@
+EXTENSION "ARMDef_Tales_of_Mythic_Europe_TheChampionsPortion_BricriuTheMagicHuman" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Bricriu the Magic Human"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Bricriu the Magic Human (Chapter Two: The Champion’s Portion, p15): one being, its printed stat lines verbatim fields.
+
+    #t22972167c0e15fa720b83d ^"Bricriu the Magic Human" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Corpus"
+            ^"Season" STRING "Autumn"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 6
+                ^"Strength" INTEGER 9
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "2 (5)"
+            ^"Virtues and Flaws" STRING "Magic Human; Great Communication (x2), Increased Characteristics, Self-Confident; Bound to Magic; Infamous"
+            ^"Qualities and Inferiorities" STRING "Gigantic (x2), Greater Power (x2), Improved Communication"
+            ^"Reputations" LIST ["Malcontent 4 (Ulster)"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Equipment" STRING "Expensive clothes with gold embroidery, a solid gold torc, gold rings, a short spear, and a round shield."
+            ^"Vis" STRING "6 pawns of Mentem in tongue."
+            ^"Appearance" STRING "Bricriu is wild eyed and crazy looking, with an uncombed mane of hair and a bushy red beard. One eye is larger than another, and his teeth are the size of window shutters. His size makes him imposing but his lunatic manner is offset by his continuous mirth."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 15
+        }
+        PERSONALITY_TRAITS {
+            "Troublemaker" +6
+            "Jovial" +3
+        }
+        COMBAT {
+            "Dodge" INIT -2 DEFENSE 4
+            "Short spear and round shield" INIT 0 ATTACK 8 DEFENSE 10 DAMAGE 14
+        }
+        ABILITIES {
+            "Area Lore: Dún Rudraige regio" SCORE 4 SPECIALTY "monster lairs"
+            "Brawl" SCORE 3 SPECIALTY "grappling"
+            "Carouse" SCORE 5 SPECIALTY "staying sober"
+            "Etiquette" SCORE 5 SPECIALTY "hosting"
+            "Guile" SCORE 4 SPECIALTY "lying to magi"
+            "Leadership" SCORE 6 SPECIALTY "intimidation"
+            "Irish" SCORE 5 SPECIALTY "poetry"
+            "Magic Lore" SCORE 3 SPECIALTY "Ulster monsters"
+            "Music" SCORE 3 SPECIALTY "drums"
+            "Single Weapon" SCORE 5 SPECIALTY "short spear"
+            "Stealth" SCORE 6 SPECIALTY "spying"
+        }
+        POWERS {
+            #t3bba27de9e83bf8c5237d8 ^"Extolling the Champion" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power causes a target to become obsessed with the desire to win the champion’s portion, or any prize in any competition. The target can not refuse to compete. Greater Power: Base 4, +2 Voice, +2 Sun. 30 remaining spell levels covert to 6 mastery points, which decrease Might cost to 0 and raise Initiative by four."
+            }
+            #te3de84bc88a275dc5c8827 ^"A Brother’s Vengeance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power causes a target to turn against a former ally, no matter how strong his allegiance, and attempt to defeat him. Bricriu can decide how the target must defeat his new enemy, from a simple off-hand remark made in public to murder. Greater Power: Base 4, +2 Voice, +2 Sun. 30 remaining spell levels covert to 6 mastery points, which decrease Might cost to 0 and raise Initiative by four."
+            }
+        }
+        DESCRIPTION "Bricriu cannot leave the regio of Dún Rudraige. This does not displease him, as he is content to run his challenges and watch the competitors."
+    }
+
+}

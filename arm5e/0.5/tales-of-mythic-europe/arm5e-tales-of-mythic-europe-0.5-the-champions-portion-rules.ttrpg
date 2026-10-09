@@ -1,0 +1,46 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_TheChampionsPortion_Rules" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Chapter Two: The Champion’s Portion rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tae858a2f7b1a378ee4098c ^"Minor Advantage" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Meeting Warriors"
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 22
+        }
+        FORMULAS {
+            "Minor Advantage" "+3 Major Advantage: +6"
+        }
+    }
+
+    #t69a426ed8249912b22adf0 ^"Scáth" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Contests"
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 31
+        }
+        FORMULAS {
+            "Scáth" "an Irish Giant"
+        }
+    }
+
+    #teb77d3c7ec972eb8961f15 ^"Embitterment Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Embitterment"
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 35
+        }
+        FORMULAS {
+            "Embitterment Roll" "Communication + Embitterment + stress die"
+        }
+    }
+
+}

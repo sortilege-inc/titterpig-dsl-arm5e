@@ -1,0 +1,60 @@
+EXTENSION "ARMDef_Tales_of_Mythic_Europe_TheChampionsPortion_VaferTheMagicalFox" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Vafer the Magical Fox"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Vafer the Magical Fox (Chapter Two: The Champion’s Portion, p14): one being, its printed stat lines verbatim fields.
+
+    #t45c2ab850c36c3b2623e6f ^"Vafer the Magical Fox" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 12
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER -5
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 5
+            }
+            ^"Size" INTEGER -2
+            ^"Season" STRING "Summer"
+            ^"Confidence Score" STRING "1 (3)"
+            ^"Virtues and Flaws" STRING "Magical Animal; Perfect Balance; Nocturnal"
+            ^"(Animal) Qualities" STRING "Ambush Predator, Crafty, Good Jumper, Keen Sense of Smell"
+            ^"Qualities and Inferiorities" STRING "Greater Power; Gift of Speech, Lesser Power (x2)"
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Powers" STRING "Tread the Paths of the Magic Realm, 2 points, Init +4, Variable. Vafer can see connections between regiones and the Twilight Void, and pass through them. The entrance stays open after his passing, typically for a number of days equal to the boundary’s level, allowing others to follow him. Skirt the Territories of the Twilight Void, 2 points, Init +4, Variable. Vafer can find and pass through mystical portals that connect the various provinces of the Twilight Void. The passageway stays open after Vafer passes. The Impatient Hunter, 4 points, Init +3, Vim. Vafer can decrease the time it takes him to travel through the Twilight Void. A journey that regularly takes a year can be traveled in half a day (Sun Duration). If you are using the rules regarding Magical Travel in The Realms of Power: The Magic Realm (Chapter Three), this power increases Vafer’s travel by three Speed Levels. This power includes any group that is traveling with Vafer."
+            ^"Vis" STRING "2 pawns of Animal in tail."
+            ^"Appearance" STRING "Vafer is a red fox, with an immaculate red coat and a bushy tail that is twice as long as it should be."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 14
+        }
+        PERSONALITY_TRAITS {
+            "Sly" +3
+        }
+        COMBAT {
+            "Dodge" INIT 5 DEFENSE 8
+            "Bite" INIT 5 ATTACK 9 DEFENSE 10 DAMAGE -4
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "food"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "French" SCORE 4 SPECIALTY "poetry"
+            "Hunt" SCORE 4 SPECIALTY "prey"
+            "Stealth" SCORE 4 SPECIALTY "stalking prey"
+            "Survival" SCORE 4 SPECIALTY "meadows"
+        }
+        DESCRIPTION "Vafer’s speed along a Twilight Void path is determined by his Perception + Hunt score. On average, it takes him a year to travel from one point to another, but he can quicken his pace using *The Impatient Hunter* power (see earlier).\n\nVafer likes traveling through the Twilight Void and doesn’t mind dragging Eustace along. Vafer would prefer to travel through the Void more, but Eustace is reluctant to make frequent forays through the mysterious realm. Vafer might consider abandoning Eustace if he could find a maga more willing to travel the Twilight Void than the Flambeau."
+    }
+
+}

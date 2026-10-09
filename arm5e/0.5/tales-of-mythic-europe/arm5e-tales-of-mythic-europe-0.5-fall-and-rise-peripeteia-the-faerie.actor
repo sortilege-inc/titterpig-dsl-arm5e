@@ -1,0 +1,65 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_FallAndRise_PeripeteiaTheFaerie" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Peripeteia the Faerie"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Peripeteia the Faerie (Chapter Four: Fall and Rise, p56): one being, its printed stat lines verbatim fields.
+
+    #taef681dbde0df892c00a04 ^"Peripeteia the Faerie" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 45
+            ^"Form" STRING "Vim"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "External Vis Source (major – allows the characters to keep a tame entanglement), (3 x Greater Faerie Power), Increased Faerie Might (2 major, 2 minor), Faerie Sight, Faerie Speech, Humanoid Faerie, Passes For Human, Highly Cognizant; Traditional Ward (Humans with royal blood)"
+            ^"Combat" STRING "Peripeteia uses entanglements for physical combat, and draws them effortlessly from her spindle. Has the ability to allow her body to dissipate, fade into Arcadia, and then return after 5 months with a new body, which may look dissimilar to her previous one. This ability cannot be used in combat, but requires only a round of concentration."
+            ^"Soak" INTEGER 3
+            ^"Wound Penalties" STRING "-1 (1-5), -3 (6-10), -5 (11-15), Incapacitated (16-20), Dead (21+)"
+            ^"Pretenses" STRING ", Awareness 5 (human weaknesses), Carouse 3 (theatre), Charm 6 (ambitious mortals), Etiquette 5 (her victims), Faerie Speech 6 (to her victims), Intrigue 9 (to cause the fall and rise), Order of Hermes Lore 6 (causing the fall, then rise), Penetration 5 (current victim)"
+            ^"Equipment" STRING "Dresses as noblewoman, carries a spindle that she works when not engaged in other things, from which she can spin a seemingly endless stream of entanglements. This costs her no Might."
+            ^"Vis" STRING "9 pawns Rego, spindle. Any character who holds the spindle can produce a small, tame entanglement each new moon. If the vis is extracted from the spindle it loses this property. If the spindle is not destroyed, Peripeteia reassembles her body. This takes (45 / Faerie Aura) weeks, after which time she returns with a convoluted plan and faerie allies to seek her spindle."
+            ^"Appearance" STRING "A regal woman, apparently of Norman extraction, clad in an expensive white dress of the finest linen."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 56
+        }
+        PERSONALITY_TRAITS {
+            "Calculating" +3
+            "Brave" +2
+        }
+        POWERS {
+            #te1865cc3c41944ed3366c2 ^"Guide (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Guide"
+                    ^"Cost" STRING "6 points"
+                    ^"Initiative" STRING "-3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION ". Subtly influences a group of beings towards a specific course of action. Each time this power is used, it can subtly influence the actions of a group for a day. The storyguide should provide advice to the characters in a similar way to the Common Sense Virtue, except that the advice serves the faerie’s agenda, not that of the character. There is no compulsion to follow this advice. Costs 30 spell levels (ReMe Base 5, +2 Voice, +1 Conc, +2 Group)"
+            }
+            #t5333a03aab69dfa3a71a05 ^"Hound (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Hound"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "-2"
+                    ^"Form" STRING "Corpus (4 intricacy points spent on cost)"
+                }
+                DESCRIPTION "Allows Peripeteia to know the direction and distance to Severin. She can overcome his Magic Resistance because her minion has Severin’s talisman, which provides a Penetration multiplier of 4. Costs 20 spell levels (InCo Base 3, +4 Arc, +1 Conc) *Spirit Away,* Variable points, n/a, Vim: Allows the faerie to act as a threshold guardian. This role is too complicated to explain in this scenario (and is treated in depth in *Realms of Power: Faerie*), but it allowed Peripeteia to trap Severin in Arcadia. She will not use it during this scenario. Costs 50 spell levels (Special) *Steal Judgment,* 0 points, Init –2, (3 intricacy points on cost) Mentem: The target believes almost any lie that Peripeteia tells, although an Intelligence roll against an Ease Factor of 6 is permitted to resist, with easier rolls for truly incredible lies. Costs 15 spell levels (Base 4 +1 Eye +2 Sun)"
+            }
+        }
+        DESCRIPTION "Peripeteia has wanted a child for decades, and has worked toward that goal with the patience of a creature both immortal and fascinated by intricate games. She appears charming, but humans are an amusing form of prey to her, and she causes them harm without remorse.\n\nPeripeteia is designed using the rules in *Realms of Power: Faerie. *For an overview of terms defined in that book, please see the introduction of this one."
+    }
+
+}

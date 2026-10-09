@@ -1,0 +1,59 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_TheShipOfDesire_ArgosusTheFaerieWatchman" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - Argosus the Faerie Watchman"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # Argosus the Faerie Watchman (Chapter Three: The Ship of Desire, p39): one being, its printed stat lines verbatim fields.
+
+    #t5ed70398f87b3f4bba8fa6 ^"Argosus the Faerie Watchman" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 10
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 1
+            ^"Virtues and Flaws" STRING "Greater Power; Faerie Sight, Faerie Speech: Great Perception (x2), Humanoid Faerie, Increased Might, Large; Monstrous Appearance, Vulnerable to Iron; Incognizant, Reclusive, Simple-Minded, Traditional Ward (flute playing)"
+            ^"Soak" INTEGER 3
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Pretenses" STRING "Animal Handling 1 (sheep), Awareness 6 (guarding), Brawl 5 (dodge), Concentration 4 (maintaining power), Great Weapon 6 (cudgel), Penetration 2 (Faerie Speech), Survival 1 (mountain pastures)"
+            ^"Equipment" STRING "Loincloth and a large shepherd’s crook (this acts as a cudgel)"
+            ^"Vis" STRING "2 pawns of Corpus, shepherd’s crook"
+            ^"Appearance" STRING "Argosus is a monstrous giant. Eight feet tall and nearly 400 pounds, Argosus has fifty eyes set all about his head, although this is currently masked by Æthelburh’s enchantment. He is normally dressed in a shaggy loincloth and holds a large shepherd’s crook."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 39
+        }
+        PERSONALITY_TRAITS {
+            "Watchful" +3
+            "Withdrawn" +3
+            "Brooding" +2
+        }
+        COMBAT {
+            "Dodge" INIT 1 DEFENSE 7
+            "Cudgel" INIT 2 ATTACK 14 DEFENSE 11 DAMAGE 9
+        }
+        POWERS {
+            #tac563d13d658fb24e2ee01 ^"The Eyes of Argos" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "This power mimics a level-40 version of the Hermetic spell *Discern the Images of Truth and Falsehood*, (**ArM5**, page 144). (Base effect 35, +1 Conc. Intricacy points reduce Might cost by 2.)"
+            }
+        }
+        DESCRIPTION "Argosus claims to be the son of Argos Panoptes, the hundred-eyed herdsman who protected Zeus’s flocks and was slain by Hermes. It is hard to say if this is true, considering the mercurial nature of faeries, but Argosus certainly looks the part. He is nearly eight feet tall with fifty eyes set all about his head. Fearing that he wouldn’t get ten paces across Mythic Europe with such a grotesque companion, Piccardo asked Lady Æthelburh to disguise Argosus’s features. She complied, and a faerie illusion masks Argosus’s fifty eyes, making him look like a mundane man with just two eyes. The illusion does not further alter his appearance. Piccardo has draped a grey cloak around Argosus, hoping not to draw attention to his great height and powerful build. He calls Argosus *Bue*, which is Italian for “ox”.\n\nArgosus is a watchman, and little else interests him. He is obliged to travel with Piccardo, and happy to follow his chaperone’s orders. He is an incognizant faerie, meaning that he does not know that he gains his vitality from interacting with humans. He needs to guard, to receive the trust instilled in him from a mortal overlord. Without this, he is listless and morose, making him a docile traveling companion. Piccardo has no understanding of this, and just assumes that Argosus’ languid nature is his natural state.\n\nArgosus is a companion-equivalent faerie character. He has 10 points of balanced Virtues and Flaws and 360 points to buy Pretenses."
+    }
+
+}

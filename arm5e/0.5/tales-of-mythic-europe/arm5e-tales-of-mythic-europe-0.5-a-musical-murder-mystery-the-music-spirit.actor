@@ -1,0 +1,59 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_AMusicalMurderMystery_TheMusicSpirit" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - The Music Spirit"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # The Music Spirit (Chapter Seven: A Musical Murder Mystery, p122): one being, its printed stat lines verbatim fields.
+
+    #td59e745026f7449f4a8c8c ^"The Music Spirit" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 30
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" STRING "Int n/a, Per 0, Pre n/a, Com NA, Str +3, Sta +3, Dex –3, Qik –3"
+            ^"Size" INTEGER 3
+            ^"Confidence Score" STRING "0 (0)"
+            ^"Combat" STRING "Sound blast: Init –3, Attack 0, Defense 0, Damage (see Powers below)"
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–0 (1–8), –0 (9–16), –1 (17–24), –2 (25–32), Banished (33+)"
+            ^"Vis" STRING "6 pawns of Mentem vis."
+            ^"Appearance" STRING "The music spirit is a great morass of chaotic, swirling sound in material form. It is visible only though its distortion of things around it, and the terrible music that emanates from it. Note: the music spirit moves as fast as a running person, but is neither dexterous nor nimble."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 122
+        }
+        PERSONALITY_TRAITS {
+            "Hatred of all other music" +5
+        }
+        POWERS {
+            #t979a72ba4b417dfe25e298 ^"Sound Blast" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "As per the flute’s Undulation power."
+            }
+            #t79465271197d548114a7c8 ^"Madness" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "As per the flute’s Madness power."
+            }
+            #tdf49267871c0a364f829ce ^"Disharmony" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "As per the flute’s Disharmony power."
+            }
+        }
+        DESCRIPTION "If summoned, the music spirit goes on a mindless rampage. The spirit only spends a short time (approximately an hour) manifested before returning to the Realm of Magic.\n\nIn that time, however, there is considerable damage that it can do. Its mere presence causes death or madness in all who hear it, animal and human alike, and its mindless wanders will take it to the village, and potentially the covenant if it is close.\n\nIf there are any sources of music, such as someone who sings a song, plays a musical instrument, or otherwise makes even one musical sound (this excludes animal noises), the music spirit will home in on the source and try to destroy it if it is within a day’s walk (about 30 miles)."
+    }
+
+}

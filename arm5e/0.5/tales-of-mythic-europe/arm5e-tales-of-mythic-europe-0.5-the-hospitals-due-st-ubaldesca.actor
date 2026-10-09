@@ -1,0 +1,66 @@
+EXTENSION "ArM5_Tales_of_Mythic_Europe_TheHospitalsDue_StUbaldesca" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - St. Ubaldesca"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Tales_of_Mythic_Europe_Core_Ext"
+
+    # St. Ubaldesca (Chapter Five: The Hospital’s Due, p74): one being, its printed stat lines verbatim fields.
+
+    #te8370a55198033ab9888b3 ^"St. Ubaldesca" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Divine" FIXED
+            ^"Might" INTEGER 30
+            ^"Characteristics" STRING "Int +5, Per +5, Pre +5, Com +5, Str n/a, Sta n/a, Dex n/a, Qik n/a"
+            ^"Confidence Score" STRING "2 (10)"
+            ^"Reputations" LIST ["Patron of the Knights Hospitaller +4 (local and ecclesiastic)"]
+            ^"Appearance" STRING "St. Ubaldesca appears as a middle-aged nun with the Hospitaller cross on her breast. She carries a bowl of water and a palm leaf."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 74
+        }
+        PERSONALITY_TRAITS {
+            "Chaste" +4
+            "Penurious" +4
+            "Rebellious" -3
+        }
+        POWERS {
+            #tc6c48a0313646955b3751b ^"Grant of Serenity (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Grant of Serenity"
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power calms an agitated or worried mind, soothing fears and calming anxiety, as per the Hermetic spell *Enchantment of Detachment*. It also nullifies any malign Mentem (or similar) spell currently affecting the target."
+            }
+            #tf3959cb574143b0b3583e2 ^"Mass Healing (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Mass Healing"
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Heals a crowd of people from all their diseases, including wounds, blindness, lameness, deafness, and any afflictions caused by age or disease. It does not remove Decrepitude points or restore Characteristics lowered by aging."
+            }
+            #tbb04cc3afe3772bb65e564 ^"Straighten the Cripple" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power completely heals the lame or crippled, including those caused by a Flaw, although not from Decrepitude or Warping."
+            }
+            #t45b76336258dd80739e681 ^"Water to Wine" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Turns an amount of water, equal to a pitcher or jug, into wine."
+            }
+        }
+        DESCRIPTION "One of Knights Hospitallers’ patron saints, St. Ubaldesca became a nun of the Order after she was visited by an angel at the age of fifteen. She performed a number of miracles during her life, including turning water to wine. Her soul was taken to heaven by a multitude of angels in 1207, and during her funeral procession 22 invalids were cured. Her feast day is the 28th of May, which was the day of her ascension to heaven.\n\nSt. Ubaldesca generally performs a miracle once a year on her feast day — typically healing someone who is lame. She is very protective of Constable Gerald, and often responds to his prayers."
+    }
+
+}

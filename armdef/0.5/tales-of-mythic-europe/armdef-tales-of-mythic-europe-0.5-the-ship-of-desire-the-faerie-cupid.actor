@@ -1,0 +1,77 @@
+EXTENSION "ARMDef_Tales_of_Mythic_Europe_TheShipOfDesire_TheFaerieCupid" {
+    NAME "Ars Magica Fifth Edition, Tales of Mythic Europe - The Faerie Cupid"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Tales_of_Mythic_Europe_Core_Ext"
+
+    # The Faerie Cupid (Chapter Three: The Ship of Desire, p43): one being, its printed stat lines verbatim fields.
+
+    #tfa587b5284dbf573fdaa0f ^"The Faerie Cupid" DEF {
+        EXTENDS #taDz3ITq9fRoE374AgiL8VE4 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Mentem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Virtues and Flaws" STRING "Positive Folktales; Greater Power (Cause Love), Increased Faerie Might; Faerie Speech, Greater Presence (x2), Cognizant within Role, Humanoid Faerie, Increased Characteristics, Lesser Power (Flight), Personal Power (Disguise); Meddler; Traditional Ward (wax candles)"
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Pretenses" STRING "Athletics 4 (flying), Bows 6 (short bow), Charm 5 (women), Faerie Lore 3 (wards), Penetration 4 (Cause Love), Stealth 4 (hide)"
+            ^"Equipment" STRING "Cupid carries a golden bow and a quiver that’s full of arrows."
+            ^"Vis" STRING "4 pawns of Mentem, a golden bow."
+            ^"Appearance" STRING "Cupid naturally appears as a nude, eighteen-year-old man, with bright curly hair and gleaming eyes. For much of this adventure he is disguised as as a sailor in his mid-twenties, with a face blotched from too much salt spray and alcohol."
+            ^"Source" STRING "Tales of Mythic Europe"
+            ^"Page" INTEGER 43
+        }
+        PERSONALITY_TRAITS {
+            "Meddlesome" +3
+            "Mischievous" +3
+            "Amorous" +2
+        }
+        COMBAT {
+            "Dodge" INIT 1 DEFENSE 1
+            "Short Bow" INIT 0 ATTACK 11 DEFENSE 8 DAMAGE 7
+        }
+        POWERS {
+            #t24085bc97558c2d43f27c1 ^"Cause Love" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Cupid can cause any mortal to fall in love with a target of his choosing. This is not true love, but a temporary, enflaming passion for someone. Costs 25 spell levels. (Base 4, +3 Sight, +2 Sun) Intricacy points used to decrease Might cost and increase Init."
+            }
+            #t5ab7aa506e117713810dba ^"Flight (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Flight"
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "-7constant"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Cupid can fly and can make others fly as well. He cannot carry anyone. Costs 20 spell levels. (ReCo Base 4, +1 Touch, +2 Sun, +1 constant) Intricacy points used to decrease Might cost."
+            }
+            #t0360ac9c5cdeabaedd6797 ^"Disguise of the Transformed Image (Tales of Mythic Europe)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Disguise of the Transformed Image"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "A personal version of the Hermetic spell, **ArM5**, p.146. Costs 10 spell levels. (Base 4, +2 Sun) Intricacy points used to decrease Might cost and increase Init."
+            }
+        }
+        DESCRIPTION "Cupid is a faerie, styling himself after the Roman god, with appropriate powers to warrant his name. He is another member of Lady Æthelburh’s faerie court. Unlike Argosus, Cupid is a fairly cognizant faerie, knowing that he gains vitality from human emotions. Having discovered Argosus’ journey, he is secretly tagging along in hope of entwining new victims in his snares of love, ultimately to increase his own Might. Cupid is mischievous, and delights in the effects his arrows create among the passengers. He has a sense of irony and enjoys seeing the bittersweet results of his efforts. His Might increases if he can get two people to actually fall in love, or if a person kills himself or another due to unrequited love.\n\nCupid is a magus-level character, meaning he gets 10 points of Virtues free and has to balance additional Virtues with an equal number of Flaws. He has 360 points to buy starting Pretenses.\n\nCupid is not a sailor. He knows his disguise will ultimately fail if he spends too much time trying to do sailing things. Consequently, he makes himself look busy, rather than doing any actual work. He may try to assume another guise while aboard. To do so, he will need to get rid of the character he plans to mimic. The easy solution is to lure a character into the hold, overpower him, tie him up, then return to the deck looking like him."
+    }
+
+}

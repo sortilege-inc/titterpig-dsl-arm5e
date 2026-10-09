@@ -1,0 +1,126 @@
+EXTENSION "ARMDef_Rival_Magic_Muspelli_Guidelines" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Four: Muspelli guidelines"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's guidelines, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t79a2b3481fae6252e9e400 ^"Hex Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Hex"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 95
+        }
+        GUIDELINES {
+            "Ease Factor 6+" "Severity: Minor (1 botch) Example: Automatic failure at an important task"
+            "Ease Factor 12+" "Severity: Serious (2 botches) Example: Struck blind"
+            "Ease Factor 18+" "Severity: Major (3 botches) Example: Debilitating illness"
+            "Ease Factor 24+" "Severity: Critical (4 botches) Example: All Characteristics reduced by 3"
+            "Ease Factor 30+" "Severity: Terminal (5 botches) Example: Sudden death A potential victim can avoid the effects of a hex by seeking out supernatural protection of some sort, usually from the Divine. If a character receives absolution in a religious ceremony, all hexes that have targeted him are permanently undone. Characters can also remove hexes with other supernatural effects, such as a Perdo Vim spell, a faerie blessing, or a holy miracle. Treat the hex as having a spell level equal to the number of botch dice it approximates, multiplied by 10, so that a Serious hex is a level 20 effect, and a Critical hex is level 40."
+        }
+    }
+
+    #t674ef3a4ae807d6ad56009 ^"Sjonhverfing Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Sjonhverfing"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 96
+        }
+        GUIDELINES {
+            "Ease Factor 9" "Effect: Simple static illusion; e.g. a rock."
+            "Ease Factor 12" "Effect: Illusion moving in a simple repetitive manner; e.g. a fire, or a tree moving in the wind."
+            "Ease Factor 15" "Effect: Illusion moving in a natural or complex manner; e.g. a horse."
+        }
+    }
+
+    #t34d60043cdad5b656fdb66 ^"Storm’s Eye Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Storm’s Eye"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 98
+        }
+        GUIDELINES {
+            "Ease Factor 6" "Effect Over Land: Thick fog; visibility drops to 10 feet; Effect On Water: A sudden squall; any boat’s pilot must make a Dexterity + Profession: Sailor roll of Ease Factor 9 every hour or drift off course."
+            "Ease Factor 9" "Effect Over Land: Light rain; clothing becomes sodden after a quarter hour, and an extra Fatigue level is lost for more than two hours of travel; Effect On Water: A downpour; any boat’s pilot must make a Dexterity + Profession: Sailor roll of Ease Factor 12 every hour to keep on course."
+            "Ease Factor 12" "Effect Over Land: Heavy rain; clothing becomes sodden after a few minutes, and travel times are reduced by on half. An extra Fatigue level is lost for more than two hours of travel; Effect On Water: A violent storm; any boat’s pilot must make a Dexterity + Profession: Sailor roll of Ease Factor 12 every hour just to keep afloat as the waves crash into the sides of the craft. Each failure results in a damage level; most ships have 6 to 12 damage levels depending on workmanship. When all damage levels are gone, the ship sinks. See City & Guild, page 77 for more details on damaging objects."
+            "Ease Factor 15" "Effect Over Land: Torrential rain; becoming soaked through takes mere seconds, and travel times are reduced to a quarter. Anyone in the rain loses a Long Term Fatigue level for every hour they are exposed. Crops lashed by this rain lose half their produce. Effect On Water: A gale; boats and ships cannot leave harbor; those caught on the open water take a damage level every hour. Anyone in the water must make Strength + Swim rolls of Ease Factor 15 or start to drown."
+            "Ease Factor 18" "Effect Over Land: A deluge; like torrential rain, except that rivers will burst their banks, roads will be washed out, and crops are destroyed. Towns close to rivers will be flooded. Effect On Water: A tempest; boats and ships in harbor suffer one damage level per hour if the harbormaster or ship’s crew fail a Dexterity + Profession: Sailor of Ease Factor 15; those caught on the open water take two damage levels per hour with no chance of avoiding. Anyone washed overboard has no chance of survival."
+        }
+    }
+
+    #t80a5303bbcdf3282c18e9d ^"Threads of Fate Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Threads of Fate"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 100
+        }
+        GUIDELINES {
+            "Ease Factor 3" "+ simple die Effect: Luck of the Woof: In an event that relies on luck rather than skill, the character will be favored. For example, if she and a companion have an equal chance of being targeted by a bowman, a character with a Luck thread would instead be targeted if the storyguide rolls a 1–3 on a simple die, rather than 1–5 (which would be the default)."
+            "Ease Factor 6" "+ simple die Effect: Hint of the Weave: When the character activates the effect, she gets an inkling of how things will turn out in the immediate future. The player rolls a stress die, and leaves the result before her. The next stress action that the character takes will use that die, giving the player a chance to decide her next action depending on the result of the die. She should not wait too long to use the die, else the storyguide will ask for a frivolous action to remove the hint."
+            "Ease Factor 9" "+ simple die Effect: Avoid the Shears: This thread is activated before rolling any botch dice. The player rolls one less botch die for every point difference between her Casting Total and the Ease Factor. This can result in zero botch dice."
+            "Ease Factor 12" "+ simple die Effect: Tilting the Spindle: The fates favor the character; this thread is activated before an action is taken. The player rolls the dice for the action twice, and may take whichever result she prefers."
+            "Ease Factor 15" "+ simple die Effect: Spinning the Fate: The character receives an extra Confidence Point that she can use in the normal manner at any point during the specified event. If this Confidence Point remains unspent once the event is over, it is lost."
+            "Ease Factor 18" "+ simple die Effect: Fortune’s Weft: The character can reroll a failed or botched roll. The decision must be made after the result is known, but before the consequences are revealed. In the case of a botch, she can use this thread when the initial zero is rolled, or when the botch is confirmed. She must accept the second result."
+        }
+    }
+
+    #tc3ad7b8933a42f9715b7d2 ^"Valgaldrar Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Valgaldrar"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 102
+        }
+        GUIDELINES {
+            "Ease Factor 12" "Outcome: Speak to the dead and compel it to speak truly. Protect a corpse from being affected by further valgaldrar. Any attempt to do so has the Ease Factor increased by the Valgaldrar score of the character."
+            "Ease Factor 15" "Outcome: Animate a corpse. Orders will be followed to the best of the corpse’s abilities, but the character must remain in sight of the corpse else it will cease all movement until he returns."
+            "Ease Factor 18" "Outcome: Animate a corpse and place it under the direct mental control of the character; if he can see the corpse he can issue it orders. He can leave the presence of the corpse and it will continue to obey its orders, but once they are complete it remains motionless until given another order by its creator. Specialities: kings, soldiers, compelling truth, animating the dead"
+        }
+    }
+
+    #tbe6c2173f4be269e741bd3 ^"Wildfire Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Wildfire"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 103
+        }
+        GUIDELINES {
+            "Ease Factor 9" "Effect: Cause a fire to spread in a natural fashion. Double the amount of smoke produced by a fire. The smoke lingers until dispersed."
+            "Ease Factor 12" "Effect: Increase the intensity of a fire, adding +5 to its damage. Halve the size of a fire. This extinguishes some of the fire, and it is not restored to its previous size once the magic has passed."
+            "Ease Factor 15" "Effect: Double the size of a fire; if there is no fuel to support the new size it returns to its previous size after a round. Cause a fire to move in a slightly unnatural fashion; for example, leaping between two buildings."
+            "Ease Factor 18" "Effect: Increase the intensity of a fire, adding +10 to its damage. Cause a fire to act in a very unusual fashion; for example, hovering in the air or burning a different color."
+        }
+    }
+
+    #t4159aa78b00476ff66ac5d ^"Winter’s Breath Ease Factors" DEF {
+        EXTENDS #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines"
+        PROPERTIES {
+            ^"Tradition" STRING "Muspelli"
+            ^"Arts" STRING "Winter’s Breath"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 104
+        }
+        GUIDELINES {
+            "Ease Factor 6" "Weather Summoned: A mild chill, which makes breath steam in the air and wilts tender plants."
+            "Ease Factor 9" "Weather Summoned: A heavy frost, enough to form a crust of ice on small bodies of water."
+            "Ease Factor 12" "Weather Summoned: A snow flurry, which inflicts the effects of a minor level of exposure; a half inch of snow falls per hour."
+            "Ease Factor 15" "Weather Summoned: A snow fall, which inflicts the effects of a serious level of exposure; one inch of snow falls per hour.Freeze a sufficient thickness of a lake (or other still body of water) to walk on. However, if the whole lake is not frozen then the ice sheet will tip."
+            "Ease Factor 18" "Weather Summoned: A snow storm, which inflicts the effects of a major level of exposure; four inches of snow falls per hour. Freeze a sufficient thickness of river to cross."
+            "Ease Factor 21" "Weather Summoned: A blizzard, which inflicts the effects of a critical level of exposure; a foot of snow falls per hour. Freeze sea water into ice floes."
+        }
+    }
+
+}

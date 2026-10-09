@@ -1,0 +1,84 @@
+EXTENSION "ArM5_Rival_Magic_Amazons_StylianeAnAmazonSorceressSpirit" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Styliane, an Amazon Sorceress Spirit"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # Styliane, an Amazon Sorceress Spirit (Chapter Two: Amazons, p40): one being, its printed stat lines verbatim fields.
+
+    #tb7ebff9a28cbeeb8fb6e6a ^"Styliane, an Amazon Sorceress Spirit" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Styliane, an Amazon Sorceress Spirit"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 20
+            ^"Form" STRING "Corpus"
+            ^"Season" STRING "Autumn"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" STRING "Magic Spirit; Magical Master; Baneful Circumstances (being outside), Offensive to People, Slow Power (Donning the Corporeal Veil)"
+            ^"Magical Qualities and Inferiorities" STRING "Greater Power (x4); Increased Might (x3), Improved Recovery (x2)"
+            ^"Vis" STRING "4 pawn of Corpus vis in the eyes of her fleshy form."
+            ^"Appearance" STRING "When in corporeal form, Styliane appears as a tall, ravenhaired woman of advanced age, dressed in Amazon armor and carrying an ivory scepter."
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 40
+        }
+        PERSONALITY_TRAITS {
+            "Wicked" +3
+            "Brave" +2
+        }
+        ABILITIES {
+            "Amazon" SCORE 5 SPECIALTY "military terms"
+            "Amazonian Chant" SCORE 4 SPECIALTY "rites"
+            "Amazonian Spellcraft" SCORE 4 SPECIALTY "inventing incantations"
+            "Amazonian Cult Lore" SCORE 5 SPECIALTY "Soma rites"
+            "Finesse" SCORE 4 SPECIALTY "Soma incantations"
+            "Penetration 3 (Soma) Arts: Al" SCORE 12
+            "Ma" SCORE 4
+            "Pa" SCORE 10
+            "Ap" SCORE 3
+            "Ka" SCORE 6
+            "Nu" SCORE 1
+            "So" SCORE 17
+            "Zo" SCORE 11 SPECIALTY "Note that as a spirit Styliane cannot use these Arts to cast spells, but can teach these Arts to the sorceress who summoned her."
+        }
+        POWERS {
+            #t9be49968a668570b28fb85 ^"Cripple the Pestering Cousin" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Gives an Amazon a Heavy Wound. R: Cousin, D: Mom, T: Ind AlSo 20 (base 15, +1 Cousin): Greater Power (20 levels, –1 Might Cost, +5 Init)."
+            }
+            #tb51e86204ceb4b3142f68a ^"Cripple the Pestering Stranger" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power gives a human target a Heavy Wound. It will not work on Amazons. R: Seen Stranger, D: Mom, T: Ind AlSo 15 (base 15): Greater Power (15 levels, –1 Might Cost, +5 Init)"
+            }
+            #tee22f244aa6ab0e8de9f04 ^"Donning the Corporeal Veil (Rival Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Styliane can create a body for herself, made out of flesh (common spirit greater power). *Presence*, 0 points, constant, Imaginem. The common spirit power described in *Realms of Magic: Magic*, page 103. Styliane is aware of everything that happens in her cave complex."
+            }
+        }
+        DESCRIPTION "Styliane is recently dead, having succumbed to the Sacred Sickness in the late twelfth century. She haunts her former temple — a small system of caves in the eastern end of the Pontic Mountains. Styliane is ill-disposed towards summoners. But if properly cajoled, she will teach Arts and Abilities. She could also serve as a bodyguard to the sorceress for the duration of the spell that summoned her."
+    }
+
+}

@@ -1,0 +1,52 @@
+EXTENSION "ARMDef_Rival_Magic_Core_Ext" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - core type extensions"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    # Rival Magic is an EXTENSION on the arm5e edition (spec S13 composition). The types below are the ones its four
+    # traditions' magic needs that the corpus lacks.
+
+    #t84f3dcd1d0f74f963f8079 ^"Rival Magic Art" DEF {
+        PROPERTIES {
+            ^"Tradition" STRING REQUIRED
+            ^"Art Class" STRING REQUIRED
+            ^"Abbreviation" STRING
+            ^"Meaning" STRING
+            ^"Source" STRING DEFAULT "Rival Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "An Art of one of Rival Magic’s non-Hermetic traditions: the class the book gives it (an Amazon Vowel or Consonant, an Augustan Practice or School), its abbreviation and printed meaning where given."
+    }
+
+    #td931d483daa342b4ebd03c ^"Rival Magic Effect" DEF {
+        PROPERTIES {
+            ^"Tradition" STRING REQUIRED
+            ^"Spell Type" STRING
+            ^"Arts" STRING
+            ^"Level" INTEGER
+            ^"Ease Factor" INTEGER
+            ^"Ritual" BOOLEAN
+            ^"Range" STRING
+            ^"Duration" STRING
+            ^"Target" STRING
+            ^"Effect Design" STRING
+            ^"Printed Stat Line" STRING
+            ^"Source" STRING DEFAULT "Rival Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A spell of one of Rival Magic’s traditions: the Arts or Ability it uses, its level or Ease Factor, its Range, Duration and Target in that tradition’s own terms, its design line and printed stat line."
+    }
+
+    #tc2ea2e84749d5ec33ebac2 ^"Rival Magic Guidelines" DEF {
+        PROPERTIES {
+            ^"Tradition" STRING REQUIRED
+            ^"Arts" STRING
+            ^"Source" STRING DEFAULT "Rival Magic"
+            ^"Page" INTEGER
+        }
+        DESCRIPTION "A guideline box of one of Rival Magic’s traditions: its levels (or Ease Factors) and what can be done at each, as GUIDELINES rows; the box’s prose its description."
+    }
+
+}

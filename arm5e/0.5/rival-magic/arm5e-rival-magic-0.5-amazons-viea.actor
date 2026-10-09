@@ -1,0 +1,140 @@
+EXTENSION "ArM5_Rival_Magic_Amazons_Viea" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Viea"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # Viea (Chapter Two: Amazons, p42): one being, its printed stat lines verbatim fields.
+
+    #t4c146e7d5d38ea4ebbd4cf ^"Viea" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Viea"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 40
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -3
+                ^"Communication" INTEGER 4
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 0
+            ^"Season" STRING "Winter"
+            ^"Confidence Score" STRING "4 (9)"
+            ^"Virtues and Flaws" STRING "Magic Human; Magical Monster; Arcane Lore, Famous, Great Communication, Great Quickness, Increased Characteristics (x2), Keen Vision, Piercing Gaze, Self-Confident, Warrior; Enemies (Order of Hermes), Wrathful; Driven (Destroy the Order)"
+            ^"Qualities and Inferiorities" STRING "Fatigue Mastery, Gifted, Greater Power (x3); Improved Confidence (x2), Improved Might (x5), Improved Fatigue (x5), Improved Soak (x4), Lesser Power (x4); Monstrous Appearance"
+            ^"Reputations" LIST ["Living Goddess 4 (Amazons)", "Trianoma’s Sister 1 (Order of Hermes)"]
+            ^"Combat" STRING "Dodge: Init +4, Attack n/a, Defense –3, Damage n/a Labrys: Init +5, Attack +8, Defense +8, Damage +7 Sagaris: Init ++6, Attack +10, Defense +9, Damage +12 Scythian bow: Init +3, Attack +10, Defense +11, Damage +7"
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0, –1/–1/–1, –3/– 3/–3, –5/–5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Besides her clothing, Viea often carries a bow and a quiver full of arrows."
+            ^"Vis" STRING "8 pawns of Corpus vis in her skull"
+            ^"Appearance" STRING "Viea appears as a bent old crone, her spine nearly bent double making her ragged nails nearly scrape the ground. She wears tattered, filthy robes, made all the more obvious by the gold tiara she places on her head. Her skin is pock-marked and blistered."
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 42
+        }
+        PERSONALITY_TRAITS {
+            "Wrathful" +3
+            "Jealous" +3
+            "Blood-thirsty" +2
+        }
+        ABILITIES {
+            "Amazon" SCORE 5 SPECIALTY "military phrases"
+            "Amazon Cult Lore" SCORE 7 SPECIALTY "Zoi rites"
+            "Amazonian Chant" SCORE 5 SPECIALTY "Kardia"
+            "Amazonian Spellcraft" SCORE 6 SPECIALTY "inventing incantations"
+            "Artes Liberales" SCORE 2 SPECIALTY "logic"
+            "Athletics" SCORE 2 SPECIALTY "running"
+            "Awareness" SCORE 2 SPECIALTY "spying"
+            "Bows" SCORE 6 SPECIALTY "Scythian bow"
+            "Brawl" SCORE 3 SPECIALTY "dodge"
+            "Concentration" SCORE 3 SPECIALTY "ignoring pain"
+            "Finesse" SCORE 4 SPECIALTY "aiming"
+            "Greek" SCORE 5 SPECIALTY "poetry"
+            "Guile" SCORE 2 SPECIALTY "secret motivations"
+            "Great Weapon" SCORE 4 SPECIALTY "Sagaris"
+            "Hermetic Magic Theory" SCORE 1 SPECIALTY "original research"
+            "Infernal Lore" SCORE 3 SPECIALTY "demons"
+            "Latin" SCORE 5 SPECIALTY "Hermetic usage"
+            "Leadership" SCORE 3 SPECIALTY "raiding party"
+            "Magic Lore" SCORE 3 SPECIALTY "magic animals"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "House Bonisagus"
+            "Penetration" SCORE 5 SPECIALTY "Corpus"
+            "Ride" SCORE 2 SPECIALTY "charging"
+            "Scythia Lore" SCORE 3 SPECIALTY "geography"
+            "Scythian" SCORE 3 SPECIALTY "local dialect"
+            "Single Weapon" SCORE 3 SPECIALTY "labrys"
+            "Stealth" SCORE 5 SPECIALTY "sneak"
+            "Survival" SCORE 3 SPECIALTY "steppes"
+            "Teaching" SCORE 3 SPECIALTY "apprentices"
+            "Thessaly Lore" SCORE 2 SPECIALTY "The Witches of Thessaly"
+        }
+        POWERS {
+            #tee15d6a837effad5ee2e0b ^"Call the Night" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power plunges a target 100 paces wide, 100 paces deep, and 100 paces high into complete darkness. R: Seen Stranger, D: Hour, T: Ind AlAp 10 (base 3, +1 Seen Stranger, +3 Size) Lesser Power (10 levels, +3 Init)"
+            }
+            #te76a57b8431f945c35e485 ^"Destroy the Son of Bonisagus" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power destroys a wizard’s Gift, permanently. R: Seen Stranger, D: Hour, T: Ind AlSo 35 (base 30, +1 Seen Stranger) Greater Power (30 levels, –2 point cost, +2 Init)"
+            }
+            #t4ffcd114da9bb1af5c4c5b ^"Find our Enemies" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+7"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Viea can sense the vibrations of moving creatures through the ground, as per the incantation. R: Cousin, D: Hour, T: Ind MalAp 5 (base 5, +2 Size) Lesser Power (5 levels, +4 Init)"
+            }
+            #t0c1f5e219ac2de04d775ac ^"Gag the Son of Bonisagus" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power mutes a targeted wizard’s Gift for five hours, robbing him of the ability to cast spells. R: Seen Stranger, D: Hour, T: Ind AlSo 20 (base 15, +1 Seen Stranger) Greater Power (20 levels, –1 point cost, +5 Init)"
+            }
+            #ta39beab30eccf7f2f1b715 ^"Terrorize the Shield Grog" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power reduces a target’s Brave Personality Trait by –3, lasting for 5 hours. R: Seen Stranger, D: Hour, T: Ind PaKa 20 (base 15, +1 Seen Stranger) Lesser Power (20 levels, –1 point cost)"
+            }
+            #t9623a42a91d9eceaa2e65f ^"The Mouth of Hades" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+7"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "A pit opens in the ground, as per the incantation. R: Cousin, D: Hour, T: Ind AlAp 5 (base 5) Lesser Power (5 levels, +4 Init)"
+            }
+            #t5d2b7fbe13fcbb4386f21d ^"The Stare of Death" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Viea’s stare can kill. This power instantly kills the target. R: Seen Stranger, D: Mom, T: Ind AlSo 20 (base 20) Greater Power (20 levels, –1 point cost, +5 Init)"
+            }
+        }
+        DESCRIPTION "For all intents and purposes, Viea is a monster. Her mind, once human, is now consumed with vengeance. Since her nemesis Bonisagus is destroyed, this hatred is focused on the Order of Hermes, his “children.” She is a ghastly figure, a creature of dark crawl spaces and shadowy tombs, horrible of visage and temperament. While the Amazons as a whole might be converted from their animosity towards men, Viea will never be swayed from her murderous intentions.\n\nViea started her magical career as a Witch of Thessaly — a practitioner of the Goetic Arts. She lost her powers to command and summon spirits through those Arts when she was opened to Amazon magic, and then lost more Amazonian magic capabilities when she was transformed into a magic human. On the plus side, she is immortal and, finally, has Magic Resistance.\n\nMany things changed when Viea the sorceress transformed into Viea the Magic Human. She no longer has Amazon Arts and her main incantations have changed into powers.\n\nViea is able to expend Fatigue levels instead of Might points to cast her powers, and her Improved Fatigue Qualities give her more Fatigue Levels to do this. Each spent Fatigue level equals 8 Might Points. However, since Might Points cannot be carried over to the next round, and since Viea may only use one power per round, most of these points are wasted because her powers do not cost very many Might points. Still, this combination of Qualities allows her to use her Fatigue levels instead of her Might, giving her maximum Penetration against her enemies.\n\nStill lying in her secret tomb are the notebooks of Bonisagus. Troupes should decide for themselves how to handle these items. The notebooks would be helpful in allowing Corpus magic to restore Fatigue Levels, and in integrating aspects of Amazon magic into Hermetic magic. Retrieving these items would certainly make any magus famous throughout the Order."
+    }
+
+}

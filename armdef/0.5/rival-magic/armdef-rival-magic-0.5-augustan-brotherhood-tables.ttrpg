@@ -1,0 +1,64 @@
+EXTENSION "ARMDef_Rival_Magic_AugustanBrotherhood_Tables" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Three: Augustan Brotherhood tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t24c363d8f129ee9f1895a3 ^"The Practice of Sortes Virgilianae (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Question Concerning", "Bonus"]
+            ^"Printed Name" STRING "The Practice of Sortes Virgilianae"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 53
+        }
+        TABLE {
+            "Personages*" "+3"
+            "Ships" "+2"
+            "Sieges" "+3"
+            "Cities" "+3"
+            "Kingdoms" "+3"
+            "Carthage" "+5"
+            "Rome" "+5"
+            "Troy" "+5"
+        }
+        DESCRIPTION "* A person with any Reputation 5 or above."
+    }
+
+    #t74091191b82b4c1187fd07 ^"Inscribing Sortes Virgilianae Divination Effect in an Animation: (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ease Factor", "Uses"]
+            ^"Printed Name" STRING "Inscribing Sortes Virgilianae Divination Effect in an Animation:"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 64
+        }
+        TABLE {
+            "+3" "Twice a day"
+            "+6" "Up to 6 times a day"
+            "+9" "Up to 24 times a day"
+            "+12" "Unlimited uses."
+        }
+    }
+
+    #tc9b678d0ed4d6f5128d60d ^"Magical Defenses (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Practice/School", "Equiv. Vis"]
+            ^"Printed Name" STRING "Magical Defenses"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 64
+        }
+        TABLE {
+            "Animo Practice" "Vim"
+            "School of Boreas" "Auram"
+            "School of the Naiads" "Aquam"
+            "School of Prometheus" "Ignem"
+            "School of the Stones" "Terram"
+            "School of the Sylvan Nymphs" "Herbam"
+            "School of the Vigilant Bees" "Animal"
+            "Sortes Virgilianae Practice" "Any Intellego or divination"
+        }
+    }
+
+}

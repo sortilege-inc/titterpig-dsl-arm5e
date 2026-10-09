@@ -1,0 +1,60 @@
+EXTENSION "ARMDef_Rival_Magic_SorcerersOfSoqotra_Rules" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Five: Sorcerers of Soqotra rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #td71d36204d09715e84953f ^"Casting Total (Sorcerers of Soqotra)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Magical Abilities"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 115
+        }
+        FORMULAS {
+            "Casting Total" "Stress die + Aura + Communication + Magical Ability + additional sparks of vis spent + points due to spent Might from spirit ally or aide (+ Artes Liberales for ceremonial magic)"
+        }
+    }
+
+    #tc2d86d766abb11d61e9590 ^"Levels Gained Under Spirit Teacher Each Season" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Levels Gained Under Spirit Teacher Each Season:"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 133
+        }
+        FORMULAS {
+            "Levels Gained Under Spirit Teacher Each Season" "Communication + (3 x Magical Ability) + Teaching + Aura + Might Pool"
+        }
+    }
+
+    #t3483dfa557a332e2be5dbb ^"Transformation Avoidance Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Warping"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 133
+        }
+        FORMULAS {
+            "Transformation Avoidance Roll" "Stamina + Magic Ability + stress die"
+        }
+    }
+
+    #t4060cbc7e39a9f69ecbf19 ^"Ease Factor (Sorcerers of Soqotra)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Warping"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 133
+        }
+        FORMULAS {
+            "Ease Factor" "Warping Score + number of Warping Points gained + aura modifier + stress die (no botch)"
+        }
+    }
+
+}

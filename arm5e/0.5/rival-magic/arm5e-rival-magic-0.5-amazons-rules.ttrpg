@@ -1,0 +1,170 @@
+EXTENSION "ArM5_Rival_Magic_Amazons_Rules" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Two: Amazons rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #ted43b15e9e53ebbbe05b56 ^"Actual Duration" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Ranges, Durations, and Targets"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 23
+        }
+        FORMULAS {
+            "Actual Duration" "Incantation Duration x Amazonian Chant"
+        }
+    }
+
+    #t077b7c982a06893c220095 ^"Casting Total (Amazons)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Incantations"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 25
+        }
+        FORMULAS {
+            "Casting Total" "Communication + Vowel + Consonant + aura + stress die"
+        }
+    }
+
+    #t4832abce5826f9c78c5909 ^"Aiming a Spell" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Aiming Spells"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 26
+        }
+        FORMULAS {
+            "Aiming a Spell" "Casting Total – Spell Level + Finesse"
+        }
+    }
+
+    #t80a6c03889a45f977e4edf ^"Resistance Roll" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Resisting Spells"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 26
+        }
+        FORMULAS {
+            "Resistance Roll" "Stamina + stress die vs. 6 + magnitude of spell + caster’s Amazonian Chant score"
+        }
+    }
+
+    #tc1202ed275c4f3ebc2f49d ^"Penetration Total (Amazons)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration Total"
+            ^"Rules Section" STRING "Penetrating Magic Resistance"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 26
+        }
+        FORMULAS {
+            "Penetration Total" "Casting Total – Spell Level + Penetration Ability"
+        }
+    }
+
+    #t8f90a89f012e69d379f36f ^"Temple Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Temple Activities"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 27
+        }
+        FORMULAS {
+            "Temple Total" "Intelligence + Vowel + Consonant + Amazonian Spellcraft + Aura Modifier"
+        }
+    }
+
+    #t5cb001e75518d100aa06a0 ^"Teaching Source Quality" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Teaching Arts and Arcane Abilities"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 27
+        }
+        FORMULAS {
+            "Teaching Source Quality" "Teacher’s Communication + Teaching + 3 + bonus"
+        }
+    }
+
+    #tc1583fadb34ac08a39eb01 ^"Contemplation Source Quality" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Contemplation"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 27
+        }
+        FORMULAS {
+            "Contemplation Source Quality" "4 + Magic Aura"
+        }
+    }
+
+    #tae7ea2d86c77b037a65196 ^"Overcoming the Sacred Sickness" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Sacred Sickness"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 29
+        }
+        FORMULAS {
+            "Overcoming the Sacred Sickness" "Intelligence + stress die vs. Warping Score + stress die"
+        }
+    }
+
+    #t672a98e5c3d1d3088b15fa ^"Opening Ease Factor (Amazons)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Opening Ease Factor"
+            ^"Rules Section" STRING "Apprenticeship"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 30
+        }
+        FORMULAS {
+            "Opening Ease Factor" "twice apprentice’s Supernatural Ability + Art scores (+ 12 if Gift already Opened by another magic tradition)"
+        }
+    }
+
+    #t5961929b5e0a65f6a1fb2a ^"Script Viability" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Additional Mysteries"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 30
+        }
+        FORMULAS {
+            "Script Viability" "Simple die + Risk Modifier + Intelligence + Amazon Cult Lore vs. Ease Factor of (9 + Proposed bonus)"
+        }
+    }
+
+    #t8ac7edb663d9f40d3d2de3 ^"Initiation Total (Rival Magic)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Initiation Total"
+            ^"Rules Section" STRING "Additional Mysteries"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 30
+        }
+        FORMULAS {
+            "Initiation Total" "Presence + Amazon Cult Lore + Amazon Script Bonus + Risk Modifier"
+        }
+    }
+
+    #t81a7912a5267aa09c22a1e ^"Amazon Magical Defense Bonus" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Magical Defenses"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 31
+        }
+        FORMULAS {
+            "Amazon Magical Defense Bonus" "Art divided by 5 (round up)"
+        }
+    }
+
+}

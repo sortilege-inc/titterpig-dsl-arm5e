@@ -1,0 +1,63 @@
+EXTENSION "ArM5_Rival_Magic_Amazons_HeleneAnAmazonWarriorSpirit" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Helene, an Amazon Warrior Spirit"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # Helene, an Amazon Warrior Spirit (Chapter Two: Amazons, p41): one being, its printed stat lines verbatim fields.
+
+    #tbf1a5b9bf0a5de59266a4b ^"Helene, an Amazon Warrior Spirit" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Character" STRING "Helene, an Amazon Warrior Spirit"
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 5
+            ^"Form" STRING "Terram"
+            ^"Season" STRING "Summer"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" STRING "Magic Spirit; Magical Champion, Famous, Good Teacher; Proud"
+            ^"Magical Qualities and Inferiorities" STRING "Improved Abilities (x3), Improved Recovery, Lesser Power"
+            ^"Reputations" LIST ["Fierce Warrior 4 (Amazons)"]
+            ^"Vis" STRING "1 pawn of Terram vis in the dirt used to make her material form"
+            ^"Appearance" STRING "Helene is invisible in her spirit form. In her coporeal form, she appears as an Amazon warrior carrying a sagaris."
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 41
+        }
+        PERSONALITY_TRAITS {
+            "Haughty" +3
+            "Loyal" +2
+        }
+        ABILITIES {
+            "Amazon" SCORE 5 SPECIALTY "military terms"
+            "Amazonia Lore" SCORE 3 SPECIALTY "generals"
+            "Bow" SCORE 6 SPECIALTY "Scythian bow"
+            "Ride" SCORE 3 SPECIALTY "mounted combat"
+            "Hunt" SCORE 2 SPECIALTY "tracking"
+            "Single Weapon" SCORE 9 SPECIALTY "sagaris"
+            "Teaching" SCORE 3 SPECIALTY "single student"
+        }
+        POWERS {
+            #t9938325c62d5a4866c7f66 ^"Donning the Corporeal Veil (Rival Magic)" DEF {
+                PROPERTIES {
+                    ^"Printed Name" STRING "Donning the Corporeal Veil"
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "- 2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Helene can create a body made out of dirt to interact with others, pulling the dirt from the ground to form her body."
+            }
+        }
+        DESCRIPTION "Helene was a famous raider who fought Achilles and died by his sword. She is most often summoned to teach martial abilities, but can also serve as an invisible scout to spy on an enemy."
+    }
+
+}

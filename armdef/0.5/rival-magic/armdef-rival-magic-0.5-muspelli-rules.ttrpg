@@ -1,0 +1,374 @@
+EXTENSION "ARMDef_Rival_Magic_Muspelli_Rules" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Four: Muspelli rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t8be612ff00c9a2e4ce4249 ^"Heipt Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Gleipnir, Warping, and Heipt"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 85
+        }
+        FORMULAS {
+            "Heipt Roll" "Stamina + (Realm) Lore + stress die"
+        }
+    }
+
+    #t40748c9db9712675573e51 ^"Ease Factor (Muspelli)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Gleipnir, Warping, and Heipt"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 86
+        }
+        FORMULAS {
+            "Ease Factor" "Warping Score + number of Warping Points gained + aura modifier + stress die (no botch)"
+        }
+    }
+
+    #t970a8f2ac2e0378487fe17 ^"Casting Total (Muspelli)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Casting Total"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 90
+        }
+        FORMULAS {
+            "Casting Total" "Characteristic + ((Ability – Gleipnir) x Power Modifier) + Aura bonus + stress die"
+        }
+    }
+
+    #t4f0ecda163a2254663d4b2 ^"Penetration Total (Muspelli)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration Total"
+            ^"Rules Section" STRING "Casting Total"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 90
+        }
+        FORMULAS {
+            "Penetration Total" "Casting Total – Ease Factor + Penetration Bonus"
+        }
+    }
+
+    #tee6b75ea425e6eaae07195 ^"Gathering Power" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Gathering the Power"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 91
+        }
+        FORMULAS {
+            "Gathering Power" "Characteristic + Supernatural Ability + simple die, versus Ease Factor of 9"
+        }
+    }
+
+    #t05fc9da4febd5217bf9c29 ^"Vis Use (Utiseta)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vis Use"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 92
+        }
+        FORMULAS {
+            "Vis Use (Utiseta)" "+1 to ritual total per pawn"
+        }
+    }
+
+    #t420e6d19b7b96f93f043cf ^"Vis Use (Supernatural Abilities)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vis Use"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 92
+        }
+        FORMULAS {
+            "Vis Use (Supernatural Abilities)" "+1 to Casting Total per pawn"
+        }
+    }
+
+    #tf160d118f5381f64e5f612 ^"Vis Limit" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Vis Use"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 92
+        }
+        FORMULAS {
+            "Vis Limit" "Score in Supernatural Ability used"
+        }
+    }
+
+    #t8abde3b083816a7f09b7cf ^"Summoning Total (Rival Magic)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Summoning Total"
+            ^"Rules Section" STRING "Summoning the Jotun Patron"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 93
+        }
+        FORMULAS {
+            "Summoning Total" "Intelligence + Muspelli Lore + bonuses"
+        }
+    }
+
+    #td6edc1e7075420da46d1ca ^"Bonus to Summoning Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Opening The Gift"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 93
+        }
+        FORMULAS {
+            "Bonus to Summoning Total" "Aura Modifier"
+        }
+    }
+
+    #tfbd8a922296932e2191fd2 ^"Ease Factor (Opening The Gift)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Opening The Gift"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 93
+        }
+        FORMULAS {
+            "Ease Factor" "Varies (see Introduction)"
+        }
+    }
+
+    #ta55fc2dcb2810d35c4ffc6 ^"Bonus to Summoning Total (Sacrifice of Power)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Bonus to Summoning Total"
+            ^"Rules Section" STRING "Sacrifice of Power"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Bonus to Summoning Total" "Aura Modifier"
+        }
+    }
+
+    #tac4d3602b4e79002c94ef4 ^"Ease Factor (Sacrifice of Power)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Sacrifice of Power"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Ease Factor" "15 – Warping Score"
+        }
+    }
+
+    #t2b8a96814a120bb74ec514 ^"Bonus to Summoning Total (Advice and Teaching)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Bonus to Summoning Total"
+            ^"Rules Section" STRING "Advice and Teaching"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Bonus to Summoning Total" "Result of the stress die rolled"
+        }
+    }
+
+    #t90900003903f95f0247266 ^"Ease Factor (Advice and Teaching)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Advice and Teaching"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Ease Factor" "6 + Source Quality desired; minimum 9"
+        }
+    }
+
+    #t5625663c0d87396e97aa0e ^"Bonus to Summoning Total (Improving the Etin-Mod)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Bonus to Summoning Total"
+            ^"Rules Section" STRING "Improving the Etin-Mod"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Bonus to Summoning Total" "Script Bonus"
+        }
+    }
+
+    #ted6821ff8473411b35e2e5 ^"Ease Factor (Improving the Etin-Mod)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Ease Factor"
+            ^"Rules Section" STRING "Improving the Etin-Mod"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        FORMULAS {
+            "Ease Factor" "Varies (see table)"
+        }
+    }
+
+    #t60098d393dcd4ffc1d1bad ^"Hex Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Hex"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 96
+        }
+        FORMULAS {
+            "Hex Total" "stress die + Intelligence + Hex + Aura bonus + modifiers"
+        }
+    }
+
+    #t3a0aefc899d0fbd30c597e ^"Sjonhverfing Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Sjonhverfing"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 97
+        }
+        FORMULAS {
+            "Sjonhverfing Total" "Intelligence + Sjonhverfing + Aura modifier + stress die"
+        }
+    }
+
+    #t85d50f5889c201f03ed09a ^"Spadomur Casting Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Spadomur"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 97
+        }
+        FORMULAS {
+            "Spadomur Casting Total" "Perception + Spadomur + Reflection bonus + Aura modifiers + stress die"
+        }
+    }
+
+    #tc00df987299844c051561d ^"Casting Total (Storm’s Eye)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Storm’s Eye"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 99
+        }
+        FORMULAS {
+            "Casting Total" "Strength + Storm’s Eye + Aura modifier + stress die"
+        }
+    }
+
+    #t07dbe99eae9e7e3cfd6270 ^"Casting Total (Threads of Fate)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Threads of Fate"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 101
+        }
+        FORMULAS {
+            "Casting Total" "Intelligence + Threads of Fate + Aura modifier + stress die"
+        }
+    }
+
+    #t4eb9f4c599dd8269f01f9e ^"Number of Uses" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Threads of Fate"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 101
+        }
+        FORMULAS {
+            "Number of Uses" "Threads of Fate/2, rounded up"
+        }
+    }
+
+    #tf3acdd0639764571afd13b ^"Casting Total (Valgaldrar)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Valgaldrar"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 102
+        }
+        FORMULAS {
+            "Casting Total" "Communication + Valgaldrar + Aura modifier + stress die"
+        }
+    }
+
+    #t561c0e3f454ad759e78bbb ^"Commanding Roll" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Valgaldrar"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 102
+        }
+        FORMULAS {
+            "Commanding Roll" "Communication + Leadership + stress die; Leadership may be limited by Language Ability"
+        }
+    }
+
+    #t30d9d7d433eb1e8a709a77 ^"Casting Total (Wildfire)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Wildfire"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 104
+        }
+        FORMULAS {
+            "Casting Total" "Presence + Wildfire + Aura modifier + stress die"
+        }
+    }
+
+    #t9105f550079dea4bd6c827 ^"Casting Total (Winter’s Breath)" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Casting Total"
+            ^"Rules Section" STRING "Winter’s Breath"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Casting Total" "Stamina + Winter’s Breath + Aura Modifier + stress die"
+        }
+    }
+
+    #tb175b670d8a3a4acb8a20b ^"Exposure Deprivation Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Exposure and Frostbite"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Exposure Deprivation Total" "Stamina + Condition Modifier + stress die"
+        }
+    }
+
+    #tb76762544ccecef6e7c1dd ^"Frostbite Soak Total" DEF {
+        APPLIES TO [#tuEORFO4LOe9AEX2mqsQW26W ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Exposure and Frostbite"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 105
+        }
+        FORMULAS {
+            "Frostbite Soak Total" "Stamina + Survival + Condition Modifier + stress die"
+        }
+    }
+
+}

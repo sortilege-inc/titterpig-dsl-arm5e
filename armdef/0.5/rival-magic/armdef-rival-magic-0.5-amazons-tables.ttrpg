@@ -1,0 +1,102 @@
+EXTENSION "ARMDef_Rival_Magic_Amazons_Tables" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Two: Amazons tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tc5cd00d191342340bf1187 ^"Amazon Armor (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Armor Material", "Prot", "Load", "Cost"]
+            ^"Printed Name" STRING "Amazon Armor & Weapons"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 20
+        }
+        TABLE {
+            "Amazon Armor" "4" "4" "Std."
+        }
+    }
+
+    #t89f037335c358d86181780 ^"Amazon Weapons (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Weapon", "Ability", "Init", "Atk", "Def", "Dam", "Range", "Str", "Load", "Cost"]
+            ^"Printed Name" STRING "Amazon Armor & Weapons"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 20
+        }
+        TABLE {
+            "Labrys" "Single" "+1" "+4" "+0" "+6" "n/a" "0" "1" "Std."
+            "Sagaris" "Great" "+1" "+5" "+0" "+11" "n/a" "+1" "2" "Std."
+            "Pelta" "Single" "0" "0" "+2" "0" "n/a" "–1" "2" "Inexp."
+            "Scythian Bow" "Bow" "–1" "+3" "0" "+6" "15" "–1" "2" "Std."
+        }
+    }
+
+    #t416458feee4b0f4ca3ea78 ^"Ranges and Durations List (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Ranges", "Durations"]
+            ^"Printed Name" STRING "Ranges and Durations List"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 23
+        }
+        TABLE {
+            "Personal" "Momentary"
+            "Sister" "Exchange"
+            "Cousin" "Hour"
+            "Seen Stranger" "Day"
+            "Unseen Stranger" "Month"
+        }
+        DESCRIPTION "* Each step up or down adds +1 to the final magnitude of the incantation."
+    }
+
+    #t6efbabf3cc8a8f7edabc6a ^"Consonant Base Range and Duration List (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Consonant", "Base Range", "Base Duration", "Base Target Size*"]
+            ^"Printed Name" STRING "Consonant Base Range and Duration List"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 23
+        }
+        TABLE {
+            "Api" "Cousin" "Hour" "-1 to +1"
+            "Kardia" "Sister" "Day" "-1 to +1"
+            "Nux" "Seen Stranger" "Hour" "-1 to +1"
+            "Soma" "Seen Stranger" "Momentary" "-1 to +1"
+            "Zoi" "Cousin" "Hour" "-1 to +1"
+        }
+        DESCRIPTION "* Amazons can only use Target: Individual."
+    }
+
+    #tbf8022b2eb05d0cebe6ed9 ^"Aiming Spells (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Range", "Ease Factor"]
+            ^"Printed Name" STRING "Aiming Spells"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "Personal" "0 (Automatic)"
+            "Sister" "3"
+            "Cousin" "6"
+            "Seen Stranger" "9"
+            "Unseen Stranger" "15"
+        }
+    }
+
+    #teb9619e23aa14f01967d19 ^"Resisting Spells (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Material or Weather Type", "Sta"]
+            ^"Printed Name" STRING "Resisting Spells"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 26
+        }
+        TABLE {
+            "Clay, Minor Weather Phenomenon" "+2"
+            "Dirt, Normal Weather Phenomenon" "+3"
+            "Glass, Stone, Severe Weather Phenomenon" "+4"
+            "Metal, Gems, Very Severe Weather Phenomenon" "+5"
+        }
+    }
+
+}

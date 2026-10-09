@@ -1,0 +1,276 @@
+EXTENSION "ArM5_Rival_Magic_AugustanBrotherhood_Rules" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Three: Augustan Brotherhood rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t846ea488626101e5f61340 ^"Sortes Virgilianae Divination Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Sortes Virgilianae"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 53
+        }
+        FORMULAS {
+            "Sortes Virgilianae Divination Total" "Perception + Sortes Virgilianae + Aura Modifier + Bonuses + stress die vs. Ease Factor"
+        }
+    }
+
+    #t37fd0e1a2ad1888ce838ab ^"Penetration (Rival Magic)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Penetration"
+            ^"Rules Section" STRING "The Practice of Sortes Virgilianae"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 53
+        }
+        FORMULAS {
+            "Penetration" "Sortes Virgilianae Divination Total + Penetration Ability – Ease Factor"
+        }
+    }
+
+    #t290d19688e531a54b1c84c ^"Vigilo Casting Score" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Vigilo"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 54
+        }
+        FORMULAS {
+            "Vigilo Casting Score" "Communication + School + rite + Aura Modifier versus Ease Factor of rite"
+        }
+    }
+
+    #t72eb3472ecbdfc8849d33c ^"Vigilo Casting Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Vigilo"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 54
+        }
+        FORMULAS {
+            "Vigilo Casting Total" "Casting Score + Stress die"
+        }
+    }
+
+    #t6ae0eb08c0399a4564b0a9 ^"Vigilo Penetration Total" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Vigilo"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 54
+        }
+        FORMULAS {
+            "Vigilo Penetration Total" "Casting Total + Penetration Score – Ease Factor"
+        }
+    }
+
+    #t44b14345aca4f6eabcb8e7 ^"Vigilo Rite Casting Time" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Vigilo"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 54
+        }
+        FORMULAS {
+            "Vigilo Rite Casting Time" "(Ease Factor/6) x 15 minutes"
+        }
+    }
+
+    #t65eeb470fe201975d25d39 ^"Vigilo Rite Vis Expenditure Required" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Vigilo"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 54
+        }
+        FORMULAS {
+            "Vigilo Rite Vis Expenditure Required" "(Ease Factor/6) pawns of appropriate vis"
+        }
+    }
+
+    #tf53974f5b2c2433b7f2bf8 ^"Vigilo Rite Fatigue Loss" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "The Practice of Vigilo"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 54
+        }
+        FORMULAS {
+            "Vigilo Rite Fatigue Loss" "One Long Term Fatigue Level + if failed (Ease Factor – Casting Total + Stamina)/3 in additional normal Long Term Fatigue Level"
+        }
+    }
+
+    #t31692d8494474de2d33ddf ^"Experience Gained" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Laboratory Research"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 61
+        }
+        FORMULAS {
+            "Experience Gained" "Intelligence + Virgilian Theory + similar rite bonus +Aura Modifier"
+        }
+    }
+
+    #t750a10c6b134754e63a0f8 ^"Perceive Vulnerability in a Specific Animation" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Perceive Vulnerability in"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 62
+        }
+        FORMULAS {
+            "Perceive Vulnerability in a Specific Animation" "Perception + Magic Lore vs. Ease Factor 12, or Ease Factor 6 if Animo Ability known"
+        }
+    }
+
+    #t1f746ec1ca3dcb32eb9f4a ^"Animation Base Magic Might" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Preparing an Item for Animation"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 62
+        }
+        FORMULAS {
+            "Animation Base Magic Might" "(10 + Size + Material Base Points)/2"
+        }
+    }
+
+    #ta5b74749015a9fffb9bdbd ^"Maximum Vis Use per Season" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Preparing an Item for Animation"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 62
+        }
+        FORMULAS {
+            "Maximum Vis Use per Season" "(Animo + Virgilian Theory) x2"
+        }
+    }
+
+    #te4c1d32148ebddced31d24 ^"Awakening the Animation’s Spirit" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Awakening the Animation"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 63
+        }
+        FORMULAS {
+            "Awakening the Animation’s Spirit" "Presence + Animo + Virgilian Theory + Aura Modifier + Stress Die vs. Ease Factor of animation’s Magic Might + Complexity Penalties (+6 if mobile, +6 if aware of environs)"
+        }
+    }
+
+    #tba852eee63664d90adc5b0 ^"Limit on Animation Abilities" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Further Refinements"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 63
+        }
+        FORMULAS {
+            "Limit on Animation Abilities" "Magic Might + Intelligence"
+        }
+    }
+
+    #t91001cd2575f464efc67db ^"Inscribing Vigilo Effect in an Animation" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Inscribing Magic in Animations"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 64
+        }
+        FORMULAS {
+            "Inscribing Vigilo Effect in an Animation" "Intelligence + Virgilian Theory + School + Animo + Shape & Material bonuses + Aura Modifier"
+        }
+    }
+
+    #t5a6af963cd601e515ba246 ^"Inscribing Sortes Virgilianae Divination Effect in an Animation" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Inscribing Sortes Virgilianae Divination Effect in an Animation:"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 64
+        }
+        FORMULAS {
+            "Inscribing Sortes Virgilianae Divination Effect in an Animation" "Intelligence + Virgilian Theory + Sortes Virgilianae + Animo + Shape & Material bonuses + Aura Modifier"
+        }
+    }
+
+    #t47c6e4e440f944674e4a10 ^"Limit on Effects Inscribed" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Inscribing Sortes Virgilianae Divination Effect in an Animation:"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 64
+        }
+        FORMULAS {
+            "Limit on Effects Inscribed" "Ease Factor may not exceed twice Magic Might."
+        }
+    }
+
+    #te58e543f893460e2f5659a ^"Vis Cost of “Instilling” Effect" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Inscribing Sortes Virgilianae Divination Effect in an Animation:"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 64
+        }
+        FORMULAS {
+            "Vis Cost of “Instilling” Effect" "Ease Factor divided by 6 (round up)"
+        }
+    }
+
+    #te76abbe60ef1fe6248966b ^"Attention Avoidance" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Fated Destiny"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 65
+        }
+        FORMULAS {
+            "Attention Avoidance" "Intelligence + (Realm Lore) + stress die vs. Warping Score + Number of Warping Points Gained + aura + stress die"
+        }
+    }
+
+    #t66478f89ae94eeb4a378e3 ^"Entreating the Fates" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Fated Destiny"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 65
+        }
+        FORMULAS {
+            "Entreating the Fates" "Communication + stress die vs. Warping Score + stress die"
+        }
+    }
+
+    #t5084d216146cc5f1d90237 ^"Opening the Gift" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Opening the Gift: The Tomb of Virgil"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 67
+        }
+        FORMULAS {
+            "Opening the Gift" "Intelligence + Virgilian Theory + Sortes Virgilianae + Animo + Aura Modifier"
+        }
+    }
+
+    #t04d03cec4c5d51b251dfa4 ^"Opening Ease Factor (Augustan Brotherhood)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Opening Ease Factor"
+            ^"Rules Section" STRING "Opening the Gift: The Tomb of Virgil"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 67
+        }
+        FORMULAS {
+            "Opening Ease Factor" "Twice apprentice’s Supernatural Ability + (Art scores if applicable) + (+ 12 if Gift already Open)"
+        }
+    }
+
+}

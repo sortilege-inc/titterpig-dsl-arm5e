@@ -1,0 +1,83 @@
+EXTENSION "ArM5_Rival_Magic_AugustanBrotherhood_Templates" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Three: Augustan Brotherhood templates"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # The chapter's templates, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t0748ea5fb9b01eaaed932b TEMPLATE "The Silver Hammer Men" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 13
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Soak" STRING "+10 (soft metal)"
+            ^"Fatigue Levels" STRING "Not applicable."
+            ^"Wound Penalties" STRING "OK, –1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Each statue is armed with a wooden warhammer with a stone head."
+            ^"Encumbrance" STRING "Not applicable"
+            ^"Vis" STRING "Each animation required 30 pawns to produce, and if destroyed contains 2 pawns of Terram vis."
+            ^"Appearance" STRING "The muscular statues are carved in ancient Roman clothes appropriate to blacksmiths, with Latin verses as “embroidered” trim."
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 70
+        }
+        COMBAT {
+            "Great Hammer" INIT 0 ATTACK 16 DEFENSE 9 DAMAGE 21
+        }
+        ABILITIES {
+            "Great Weapon" SCORE 8 SPECIALTY "hammer"
+        }
+        DESCRIPTION "Animations, mobile."
+    }
+
+    #tffbbe12fcfb0c75a4f6f08 TEMPLATE "Trojan Warriors" DEF {
+        EXTENDS #tOmeyTfuLwkiC9FmXsz8PTO6 ^"Creature"
+        PROPERTIES {
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Might" INTEGER 13
+            ^"Form" STRING "Terram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Soak" STRING "+12 (Bronze)"
+            ^"Fatigue Levels" STRING "Not applicable."
+            ^"Wound Penalties" STRING "OK, –1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Equipment" STRING "Each statue is armed with a bronze flail."
+            ^"Encumbrance" STRING "Not applicable"
+            ^"Vis" STRING "Each animation required 25 pawns to create, but if destroyed yields two pawns of Terram vis."
+            ^"Appearance" STRING "The martial statues are carved in ancient Trojan clothing and armed with flails."
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 70
+        }
+        COMBAT {
+            "Flail" INIT 2 ATTACK 10 DEFENSE 9 DAMAGE 11
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "intruders"
+            "Great Weapon" SCORE 6 SPECIALTY "flail"
+        }
+        DESCRIPTION "Animations, mobile."
+    }
+
+}

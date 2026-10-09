@@ -1,0 +1,156 @@
+EXTENSION "ARMDef_Rival_Magic_Muspelli_Tables" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Four: Muspelli tables"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's tables, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t6d81404324b7d54074b5ec ^"Pronunciation and Glossary (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Word", "Pronunciation", "Meaning"]
+            ^"Printed Name" STRING "Pronunciation and Glossary"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 77
+        }
+        TABLE {
+            "Aegir" "ACH-eer" "jotun of the sea"
+            "blot" "BLOAT" "“sacrifice,” a power modifier"
+            "draugur" "DROWCH-uh" "an animated corpse"
+            "Fenrir" "FEN-reer" "the jotun-wolf"
+            "gandur" "GAND-uh" "“wand,” a magical talisman; plural “gandar”"
+            "gipt" "GIFT" "“gift,” the beneficial consequences of Heipt"
+            "gleipnir" "GLAYF-neer" "“binding,” a score representing restrictions on the character’s magic"
+            "Gullveig" "GOOL-vayg" "jotun of witchcraft"
+            "Gymir" "GÜM-eer" "jotun of storms"
+            "hamur" "HARM-uh" "“shape,” a power modifier"
+            "heipt" "HAYFT" "“deadly war,” the Muspelli’s form of warping"
+            "hreppur" "HREP-puh" "organization of Norse wizards; plural “hreppar”"
+            "jotun" "YORT-oon" "primeval giant of Norse Mythology; plural “jotnar”"
+            "Leikin" "LAKE-een" "jotun of death"
+            "litur" "LEET-uh" "“appearance,” a power modifier"
+            "Loki" "LOW-kee" "chief enemy of the gods, leader of the jotnar"
+            "Muspelli" "MOOSE-pell-ee" "wielder of jotun magic"
+            "Nidhogg" "NEETH-horg" "the jotun-serpent"
+            "ond" "AUND" "“breath,” a power modifier"
+            "orlog-thattur" "ER-lorg THART-uh" "“thread of fate;” plural “orlog-thaettir”"
+            "Raudskinna" "ROWD-SKIN-nar" "“Red-Skin,” the founding principles of the hreppar"
+            "sjonhverfing" "SYOAN-VER-ving" "“twisting the sight,” illusion magic"
+            "spadomur" "SPAR-DOME-uh" "prophetic magic"
+            "stjori" "STYOR-ee" "a leader of a hreppur; plural “stjorir”"
+            "Surtur" "SOORT-uh" "jotun of fire"
+            "Urdur" "OORTH-uh" "jotun of fate"
+            "utiseta" "OOT-ee SET-ah" "“sitting out,” ritual jotun magic"
+            "valgaldrar" "VAHL-GARLD-rar" "“corpse-spells,” necromantic magic"
+        }
+    }
+
+    #te45c057b34df326d410c0d ^"Breaking the Jotnar’s Chains (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Aura", "Utiseta Ease Factor to Weaken"]
+            ^"Printed Name" STRING "Breaking the Jotnar’s Chains"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 92
+        }
+        TABLE {
+            "Faerie" "Aura level x 5"
+            "Magic" "Aura level x 10"
+            "Infernal" "Aura level x 20"
+        }
+    }
+
+    #t9e8929dc96d7560333fc42 ^"Improving the Etin-Mod (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Desired Improvement", "Ease Factor"]
+            ^"Printed Name" STRING "Improving the Etin-Mod"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 94
+        }
+        TABLE {
+            "Increase Size by 1, up to +5" "18"
+            "Increase Size by 1, over +5" "30"
+            "Increase Characteristic by 1, up to +5 (other than Int)" "18"
+            "Increase Characteristic by 1, over +5 (other than Int)" "30"
+            "Improve Attack or Defense modifier of a natural weapon by +2*" "18"
+            "Improve Initiative or Damage | modifier of a natural weapon by +3*" "18"
+            "Acquire a new Quality" "15"
+            "Acquire a Minor Virtue**" "18"
+            "Acquire a Major Virtue***" "30"
+        }
+        DESCRIPTION "* Modifiers do not stack; if Initiated more than once, the character must affect a different modifier and/or a different natural weapon. ** Minor Virtues available: Enduring Constitution, Keen Eyesight, Lesser Immunity, Lightning Reflexes, Long-Winded, Perfect Balance, Piercing Gaze, Rapid Convalescence, Reserves of Strength, Sharp Hearing. *** Major Virtues available: Greater Immunity, Ways of the (Land)."
+    }
+
+    #tc36f378604545c3a4a7f27 ^"Hex (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Delay", "Modifier"]
+            ^"Printed Name" STRING "Hex"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 95
+        }
+        TABLE {
+            "moment" "–12"
+            "hour" "–9"
+            "day" "–6"
+            "week" "–3"
+            "month" "0"
+            "season" "+3"
+            "year" "+6"
+            "generation" "+9"
+            "lifetime" "+12"
+        }
+    }
+
+    #tea7995d208c0a51ab8e995 ^"Exposure and Frostbite (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Armor Type", "Condition Modifier"]
+            ^"Printed Name" STRING "Exposure and Frostbite"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 105
+        }
+        TABLE {
+            "Partial quilted or fur armor" "+1"
+            "Full quilted or fur armor" "+3"
+            "Thick Fur mundane quality" "+3"
+            "Damp" "–3"
+            "Soaking wet" "–6"
+            "Partial metal scale or chainmail armor" "–3"
+            "Full metal scale or chainmail armor" "–6"
+        }
+    }
+
+    #tad7774ac7e1de8480c3152 ^"Supernatural Abilities by Jotun Patron (table)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Jotun Patron", "Supernatural Abilities"]
+            ^"Printed Name" STRING "Supernatural Abilities by Jotun Patron"
+            ^"Table Columns Source" STRING "editorial: the book prints no column heads for this table"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 82
+        }
+        TABLE {
+            "Aegir" "Sjonhverfing, Storm’s Eye, Threads of Fate, and Dowsing; plus EITHER Wildfire and Winter’s Breath (from Gymir) OR Hex and Summon Animals (from Gullveig)."
+            "Gullveig" "Entrancement, Hex, Summon Animals, and Magic Sensitivity; plus EITHER Valgaldrar and Spadomur (from Leiken) OR Shapeshifter and Winter’s Breath (from Nidhogg & Fenrir)."
+            "Gymir" "Storm’s Eye, Winter’s Breath, Wildfire; plus EITHER Shapeshifter and Sjonhverfing (from Surtur) OR Sjonhverfing and Threads of Fate (from Aegir)."
+            "Leikin" "Hex, Spadomur, Valgaldrar, and Second Sight; plus EITHER Entrancement and Summon Animals by Jotun Patron (from Gullveig) OR Entrancement and Threads of Fate (from Urdur)."
+            "Nidhogg & Fenrir" "Summon Animals, Shapeshifter, Winter’s Breath, and Animal Ken; plus EITHER Storm’s Eye and Wildfire (from Gymir) OR Sjonhverfing and Wildfire (from Surtur)."
+            "Surtur" "Shapeshifter, Sjonhverfing, Wildfire, and Lesser Craft Magic; plus EITHER Storm’s Eye and Winter’s Breath (from Gymir) OR Summon Animals and Winter’s Breath (from Nidhogg & Fenrir)."
+            "Urdur" "Entrancement, Spadomur, Threads of Fate, and Premonitions; plus EITHER Hex and Summon Animals (from Gullveig) OR Sjonverfing and Storm’s Eye (from Aegir)."
+        }
+    }
+
+    #t547b83ada4325b5ca18054 ^"Exposure and Frostbite (intensities)" DEF {
+        PROPERTIES {
+            ^"Table Columns" LIST ["Intensity", "Interval", "Ease Factor of Survival Rolls", "Frostbite Damage", "Temperature"]
+            ^"Printed Name" STRING "Exposure and Frostbite"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 105
+        }
+        TABLE {
+            "Minor" "3 hours" "6" "–3" "around 40°F / 4°C"
+            "Serious" "1 hour" "9" "+3" "around 0°F / –18°C"
+            "Major" "30 minutes" "12" "+9" "around –20°F / –29°C"
+            "Critical" "15 minutes" "15" "+15" "around –40°F / –40°C"
+        }
+    }
+
+}

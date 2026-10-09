@@ -1,0 +1,82 @@
+EXTENSION "ArM5_Rival_Magic_SorcerersOfSoqotra_SpellParameters" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Five: Sorcerers of Soqotra spell parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # The chapter's spell parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #tb709bafe48675ee1e044f9 ^"Censer (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Censer"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Tradition" STRING "Sorcerers of Soqotra"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This Duration allows a magical effect to continue while a censer of incense, lit during its casting, remains alight. Only the caster may add additional fuel to the censer: if another person adds fuel, the spell expires when the original fuel would otherwise have burned away. The censer may be extinguished or have its fuel spilled by anyone, using normal mechanical means. Censer is treated as being equivalent to Diameter duration.\n\nPlayers mostly familiar with modern, directly burned incense of the Indian style should note that Soqotran incense is indirectly burned. That is, to burn Soqotran incense it is either mixed with fuel and burns as the fuel burns, or it is placed in a container that burns fuel to heat a metal plate, and the incense rests on that plate. Charcoal is the usual fuel for censers.\n\nSoqotran magicians use three styles of censer. **Braziers** are used when casting a spell with Censer Duration. The dish-like shape of braziers allows extra fuel to be added easily. **Censers with handles** allow for easy movement, such as when casting Boundary effects on rough ground. **Censers with chains** allow the caster to widely scatter the smoke of the incense, which is useful for spells with Incensed Target, or Scent Range."
+    }
+
+    #t6d4bc365ea58c21857d350 ^"Incense (Target)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Incense"
+            ^"Parameter" STRING "Target" FIXED
+            ^"Tradition" STRING "Sorcerers of Soqotra"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This special Target for Soqotran magicians is treated as one magnitude lower than Individual. It affects only unburned incense, traditional containers for unburned incense, or tools used to prepare incense. It also, necessarily, includes every form of vis that Soqotran sorcerers use."
+    }
+
+    #t97f748d00517a674b6761c ^"Incensed (Target)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Incensed"
+            ^"Parameter" STRING "Target" FIXED
+            ^"Tradition" STRING "Sorcerers of Soqotra"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This Target affects all things touched by the smoke of a censer that the sorcerer has touched or carried during the casting of the spell. It is treated as Group."
+    }
+
+    #te7f6ada9dd2926d1ddce6f ^"Perpetual (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Perpetual"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Tradition" STRING "Sorcerers of Soqotra"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "Soqotran sorcerers believe, and are taught, that magic does not expire unless specifically designed to do so. It is possible to dispel magical effects by crushing them with more powerful magic, by having a spirit consume its own magic (described later), or by bringing magical objects into contact with items close to the Divine, but these are exceptions. Spellcasting in general is thought of, by Soqotran sorcerers, as the creation of a naturally self-perpetuating process, like planting a seed. Perpetual is treated as Year duration for the purposes of calculating the magnitudes of effects, but does not necessarily require that the spell be cast as a Ritual."
+    }
+
+    #tdd22abc4cda7b2edb12018 ^"Regrowth (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Regrowth"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Tradition" STRING "Sorcerers of Soqotra"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This Duration, which is equivalent to Diameter, allows magic to linger in an object, allowing it to heal so that it is restored at sunrise. Spells begun after midnight complete their healing at the second following sunrise. Every Regrowth spell is cast with the lighting of a censer. The censer must burn for that complete period until the sunrise, or the restoration will be partial in proportion to the censer’s burning time and the time to the sunrise."
+    }
+
+    #tc00029fc5dc1c6e3c77bf0 ^"Scent (Range)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "Scent"
+            ^"Parameter" STRING "Range" FIXED
+            ^"Tradition" STRING "Sorcerers of Soqotra"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 124
+        }
+        DESCRIPTION "This Range affects all people who can smell incense that was ignited by the caster during the recitation of this spell. It is treated as an alternative to Voice. Hermetic magic already has a Smell Target, although its use is rare compared with Soqotran practice."
+    }
+
+}

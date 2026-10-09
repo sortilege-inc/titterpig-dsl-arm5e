@@ -1,0 +1,38 @@
+EXTENSION "ARMDef_Rival_Magic_Figures" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - maps"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The book's two maps (The Island of Amazonia p14; The Island of Soqotra p134), as ^"Figure" records. Their labels
+    # were read by eye; the transcription, its uncertain readings and how it was made: rival-magic/figures.json.
+
+    # source: page 14, read by eye from the art (figures.json)
+    #tc6c8a9c66b185b3ed94a23 ^"The Island of Amazonia (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "The Island of Amazonia"
+            ^"Lettering" LIST OF STRING ["The Island of Amazonia", "North to the Cumans", "N", "W", "E", "S", "Poliochni", "Caspian Sea", "South to the Sultanate of Khwarezm"]
+            ^"Shows" STRING "a map of Amazonia, the Amazons' island in the Caspian Sea: its forests, hills, mountains and rivers, Poliochni and the island's other settlements drawn as buildings, with the ways north to the Cumans and south to the Sultanate of Khwarezm"
+            ^"Lettering Source" STRING "read by eye from the page rendered at 200 dpi (raster labels); labels as printed"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 14
+        }
+    }
+
+    # source: page 134, read by eye from the art (figures.json)
+    #tb78365d8213e96483297d4 ^"The Island of Soqotra (map)" DEF {
+        EXTENDS #tc349347caf3213a90237bd ^"Figure"
+        PROPERTIES {
+            ^"Title" STRING "The Island of Soqotra"
+            ^"Lettering" LIST OF STRING ["Arabian Peninsula", "Arabian Sea", "Gulf of Aden", "To the Red Sea", "Soqotra", "Horn of Africa", "Indian Ocean", "The Island of Soqotra", "N", "W", "E", "S", "Panara", "Tamara", "Shiq", "Haggier Mountains", "Soqotra", "Abd al Kuri", "Darsah", "Samhah", "Indian Ocean", "30 Kilometers", "SCM"]
+            ^"Shows" STRING "a map of Soqotra and its neighbouring islets, with an inset locating it between the Arabian Peninsula and the Horn of Africa"
+            ^"Uncertain Readings" LIST OF STRING ["Haggier Mountains: the lettering reads HAGGIER over the range; the book's text never names it, so the spelling cannot be checked"]
+            ^"Lettering Source" STRING "read by eye from the page rendered at 200 dpi (raster labels); labels as printed"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 134
+        }
+    }
+
+}

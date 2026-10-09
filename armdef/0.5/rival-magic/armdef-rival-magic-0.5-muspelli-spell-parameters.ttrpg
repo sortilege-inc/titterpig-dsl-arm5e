@@ -1,0 +1,34 @@
+EXTENSION "ARMDef_Rival_Magic_Muspelli_SpellParameters" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter Four: Muspelli spell parameters"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ARMDef_Rival_Magic_Core_Ext"
+
+    # The chapter's spell parameters, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t8b39c3977cae07a286efe3 ^"Decade (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Duration: Decade"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Tradition" STRING "Muspelli"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 90
+        }
+        DESCRIPTION "The spell’s effects expire on the tenth anniversary of its casting. This Duration adds five magnitudes to the spell’s level."
+    }
+
+    #t028830a51fc4163f7f77dc ^"Lifetime (Duration)" DEF {
+        EXTENDS #tcff0104e131e6468aca4da ^"Spell Parameter"
+        PROPERTIES {
+            ^"Printed Name" STRING "New Duration: Lifetime"
+            ^"Parameter" STRING "Duration" FIXED
+            ^"Tradition" STRING "Muspelli"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 90
+        }
+        DESCRIPTION "The spell’s effects last until every target has died. This Duration cannot be used if the target is an inanimate object. If the target is immortal, then the spell has an indefinite duration. This Duration adds six magnitudes to the spell’s level."
+    }
+
+}

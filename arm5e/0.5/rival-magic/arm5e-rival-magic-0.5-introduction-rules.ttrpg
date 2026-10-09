@@ -1,0 +1,35 @@
+EXTENSION "ArM5_Rival_Magic_Introduction_Rules" {
+    NAME "Ars Magica Fifth Edition, Rival Magic - Chapter One: Introduction rules"
+    VERSION "0.5.0"
+    SPEC_VERSION "0.5"
+    RELEASE_DATE "2026-10-09"
+    DEPENDS_ON "ArM5_Rival_Magic_Core_Ext"
+
+    # The chapter's rules, structured; each DESCRIPTION the source's text, verbatim.
+
+    #t4bce39661f64b70ec38a45 ^"Opening Ease Factor (Introduction)" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Printed Name" STRING "Opening Ease Factor"
+            ^"Rules Section" STRING "Opening The Gift"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 6
+        }
+        FORMULAS {
+            "Opening Ease Factor" "twice apprentice’s Supernatural Ability + Art scores (+12 if Gift already Open)."
+        }
+    }
+
+    #tc616413832db5c3eb56a02 ^"Magical Defense Bonus" DEF {
+        APPLIES TO [#tXIGEBIb23ZWLcjrSW3X7dQY ^"Character"]
+        PROPERTIES {
+            ^"Rules Section" STRING "Magic Defenses"
+            ^"Source" STRING "Rival Magic"
+            ^"Page" INTEGER 9
+        }
+        FORMULAS {
+            "Magical Defense Bonus" "Art divided by 5 (round up) or Ability Score."
+        }
+    }
+
+}
